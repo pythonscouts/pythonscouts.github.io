@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+      <title>
+  Python Scouts - Cómo Configurar Django y Crear tu Primer Proyecto
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- RSS feeds -->
+    <link href="https://pythonscouts.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Full Atom Feed" />
+    <link href="https://pythonscouts.github.io/feeds/guias.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Categories Atom Feed" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://pythonscouts.github.io/theme/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://pythonscouts.github.io/theme/styles.css">
+    <!-- Stork Search -->
+    <link rel="stylesheet" href="https://pythonscouts.github.io/theme/css/stork.css">
+
+
+
+    <meta name="tags" content="Django" />
+    <meta name="tags" content="Web" />
+
+
+</head>
+
+<body class="d-flex flex-column h-100">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-md bg-white fixed-top border-bottom">
+    <div class="container-md content-px">
+      <a class="navbar-brand" href="/">
+        <img
+        src="https://pythonscouts.github.io/theme/images/icons/header.png"
+        alt="Python Scouts"
+        width="150"
+        height="50"
+      >
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav m-auto">
+              <li class="nav-item px-3">
+                <a href="https://pythonscouts.github.io/category/guias.html" class="active" aria-current="page">
+                  Guías
+                </a>
+              </li>
+              <li class="nav-item px-3">
+                <a href="https://pythonscouts.github.io/category/tutoriales.html" class="" aria-current="page">
+                  Tutoriales
+                </a>
+              </li>
+              <li class="nav-item px-3">
+                <a href="https://pythonscouts.github.io/pages/acerca.html" class="" aria-current="page">
+                  Acerca
+                </a>
+              </li>
+              <li class="nav-item px-3">
+                <a href="https://pythonscouts.github.io/pages/contacto.html" class="" aria-current="page">
+                  Contacto
+                </a>
+              </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <div class="stork-wrapper">
+            <input
+            class="stork-input"
+            type="search"
+            placeholder="Buscar"
+            aria-label="Search"
+            data-stork="sitesearch"
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container-md content-px py-3">
+    <div class="stork-wrapper">
+      <div data-stork="sitesearch-output" class="stork-output"></div>
+    </div>
+      <div class="row">
+          <div class="col">
+          </div>
+    </div>
+
+  <!-- Article Header -->
+  <div class="row pt-3 pb-5">
+    <div class="col-md-6">
+        <h1 class="display-5">
+          <strong>Cómo Configurar Django y Crear tu Primer Proyecto</strong>
+        </h1>
+        <div class="text-muted small">
+          Publicado el 22/03/2023
+        </div>
+        <div class="author-link pt-5">
+            <img src="../theme/images/profile.jpg" alt=Leodanis Pozo Ramos class="rounded-circle border" style="width: 70px; height: 70px;">
+            <a href="https://pythonscouts.github.io/author/leodanis-pozo-ramos.html" style="padding-left: 10px;">
+            Leodanis Pozo Ramos
+            </a>
+        </div>
+    </div>
+    <div class="col-md-6">
+      <a href="https://pythonscouts.github.io/django-first-project.html">
+          <img src="https://picsum.photos/id/29/200/150" class="img-fluid w-100">
+      </a>
+  </div>
+  </div>
+      <!-- Article Content -->
+    <article>
+      <div class="row">
+        <div class="col">
+            <p>Django is a popular Python-based web framework used for building dynamic web applications. In this article, we will guide you through the process of setting up Django and creating a first project.</p>
+<div class="toc"><span class="toctitle">Tabla de contenido</span><ul>
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#setting-up-django">Setting up Django</a></li>
+<li><a href="#creating-a-django-project">Creating a Django Project</a></li>
+<li><a href="#creating-a-django-app">Creating a Django app</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul>
+</div>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before we begin, make sure you have the following prerequisites installed on your computer:</p>
+<ul>
+<li>Python (version 3.6 or above)</li>
+<li>pip (Python package manager)</li>
+<li>virtual environment (recommended)</li>
+</ul>
+<h2 id="setting-up-django">Setting up Django</h2>
+<p>There are different ways to set up Django, but we recommend using a virtual environment to avoid conflicts with other Python packages on your computer. Here's how to set up Django using a virtual environment:</p>
+<ol>
+<li>Open your terminal or command prompt and create a new directory for your project. For example, mkdir myproject to create a new directory called "myproject".</li>
+<li>Navigate to the newly created directory using cd myproject.</li>
+<li>Create a new virtual environment using python -m venv env. This will create a new directory called "env" with the virtual environment files.</li>
+<li>Activate the virtual environment using source env/bin/activate on Unix-based systems or env\Scripts\activate.bat on Windows.</li>
+<li>Install Django using pip by running pip install django.</li>
+</ol>
+<h2 id="creating-a-django-project">Creating a Django Project</h2>
+<p>Now that we have Django installed, we can create our first Django project:</p>
+<ol>
+<li>Run the command django-admin startproject myproject. This will create a new Django project with the name "myproject".</li>
+<li>Navigate to the newly created project directory using cd myproject.</li>
+<li>Start the development server by running python manage.py runserver. This will start the server on the default port 8000.</li>
+<li>Open your web browser and go to http://localhost:8000. You should see the default Django welcome page.</li>
+</ol>
+<h2 id="creating-a-django-app">Creating a Django app</h2>
+<p>A Django project consists of one or more apps. Let's create a new app within our project:</p>
+<ol>
+<li>Run the command python manage.py startapp myapp. This will create a new Django app with the name "myapp".</li>
+<li>Open the views.py file within the "myapp" directory and add a simple view:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">HttpResponse</span>
+
+<span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="s2">&quot;Hello, world!&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<ol>
+<li>Create a urls.py file within the "myapp" directory and add the following code:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">views</span>
+
+<span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;hello/&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">hello</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;hello&#39;</span><span class="p">),</span>
+<span class="p">]</span>
+</code></pre></div>
+
+<ol>
+<li>Open the urls.py file within the project directory and add the following code:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
+<span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">include</span><span class="p">,</span> <span class="n">path</span>
+
+<span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;admin/&#39;</span><span class="p">,</span> <span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">urls</span><span class="p">),</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;myapp/&#39;</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s1">&#39;myapp.urls&#39;</span><span class="p">)),</span>
+<span class="p">]</span>
+</code></pre></div>
+
+<ol>
+<li>Restart the development server by stopping it with Ctrl+C and running python manage.py runserver again.</li>
+<li>Open your web browser and go to http://localhost:8000/myapp/hello/. You should see the message "Hello, world!".</li>
+</ol>
+<h2 id="conclusion">Conclusion</h2>
+<p>You have successfully set up Django and created a simple project with an app. From here, you can start building more complex applications using Django's powerful features. To learn more about Django, check out the official documentation and various online resources.</p>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <footer class="footer mt-auto secondary text-center py-3">
+      <div class="container">
+        <span class="lead text-white">&copy; 2023 Leodanis Pozo Ramos</span>
+      </div>
+      <p class="pt-3">Imágenes aleatórias cortesía de <a href="https://picsum.photos/" style="color: white">Picsum</a></p>
+  </footer>
+  <!-- JS Script -->
+  <script src="https://pythonscouts.github.io/theme/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/e25359b950.js" crossorigin="anonymous"></script>
+  <!-- Stroke Scripts -->
+  <script src="https://pythonscouts.github.io/theme/js/stork.js"></script>
+  <script>
+      stork.initialize("https://pythonscouts.github.io/theme/js/stork.wasm")
+      stork.register("sitesearch", "https://pythonscouts.github.io/search-index.st")
+      stork.downloadIndex("sitesearch", "https://pythonscouts.github.io/search-index.st")
+      stork.attach("sitesearch")
+  </script>
+</body>
+</html>

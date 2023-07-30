@@ -1,0 +1,33 @@
+[input]
+html_selector = "main"
+base_directory = "output"
+
+[[input.files]]
+path = "pages/acerca.html"
+url = "/pages/acerca.html"
+title = "Acerca"
+
+[[input.files]]
+path = "pages/contacto.html"
+url = "/pages/contacto.html"
+title = "Contacto"
+
+[[input.files]]
+path = "django-first-project.html"
+url = "/django-first-project.html"
+title = "Cómo Configurar Django y Crear tu Primer Proyecto"
+
+[[input.files]]
+path = "python-coding-style-pep8.html"
+url = "/python-coding-style-pep8.html"
+title = "El Estilo de Codificación de Python Sugún PEP 8"
+
+[[input.files]]
+path = "python-features.html"
+url = "/python-features.html"
+title = "Qué es Python y Cuáles Son sus Características Fundamentales"
+
+[[input.files]]
+path = "python-zen.html"
+url = "/python-zen.html"
+title = "El Zen de Python Según PEP 20"
