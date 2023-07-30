@@ -1,9 +1,9 @@
 # Python Scouts
 
-This repository holds the source for the Python Scouts website. There, you'll find multiple resources that will help you in your way through learning to program with the Python programming language.
+Este repositorio contiene la fuente del sitio web Python Scouts. En Python Scouts encontrará múltiples recursos que te ayudarán a aprender a programar con el lenguaje de programación Python.
 
-Visit the site at [Python Scouts](https://lpozo.github.io)!
+Visita el sitio en [Python Scouts](https://pythonscouts.github.io)!
 
-See you around and happy learning!
+Nos vemos allí!
 
 Leodanis

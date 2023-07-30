@@ -13,21 +13,21 @@ url = "/pages/contacto.html"
 title = "Contacto"
 
 [[input.files]]
-path = "django-first-project.html"
-url = "/django-first-project.html"
-title = "Cómo Configurar Django y Crear tu Primer Proyecto"
+path = "python-caracteristicas.html"
+url = "/python-caracteristicas.html"
+title = "Qué es Python y cuáles son sus características fundamentales?"
 
 [[input.files]]
-path = "python-coding-style-pep8.html"
-url = "/python-coding-style-pep8.html"
-title = "El Estilo de Codificación de Python Sugún PEP 8"
+path = "python-django-primer-proyecto.html"
+url = "/python-django-primer-proyecto.html"
+title = "Cómo configurar Django y crear tu primer proyecto"
 
 [[input.files]]
-path = "python-features.html"
-url = "/python-features.html"
-title = "Qué es Python y Cuáles Son sus Características Fundamentales"
+path = "python-estilo-codigo-pep8.html"
+url = "/python-estilo-codigo-pep8.html"
+title = "El estilo de codificación de python sugún el PEP 8"
 
 [[input.files]]
-path = "python-zen.html"
-url = "/python-zen.html"
-title = "El Zen de Python Según PEP 20"
+path = "python-zen-pep20.html"
+url = "/python-zen-pep20.html"
+title = "El Zen de Python Según el PEP 20"

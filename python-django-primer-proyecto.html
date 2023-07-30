@@ -3,7 +3,7 @@
 
 <head>
       <title>
-  Python Scouts - Cómo Configurar Django y Crear tu Primer Proyecto
+  Python Scouts - Cómo configurar Django y crear tu primer proyecto
     </title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +20,8 @@
 
 
     <meta name="tags" content="Django" />
-    <meta name="tags" content="Web" />
+    <meta name="tags" content="web" />
+    <meta name="tags" content="python" />
 
 
 </head>
@@ -91,7 +92,7 @@
   <div class="row pt-3 pb-5">
     <div class="col-md-6">
         <h1 class="display-5">
-          <strong>Cómo Configurar Django y Crear tu Primer Proyecto</strong>
+          <strong>Qué es Python y cuáles son sus características fundamentales?</strong>
         </h1>
         <div class="text-muted small">
           Publicado el 22/03/2023
@@ -104,8 +105,8 @@
         </div>
     </div>
     <div class="col-md-6">
-      <a href="https://pythonscouts.github.io/django-first-project.html">
-          <img src="https://picsum.photos/id/22/200/150" class="img-fluid w-100">
+      <a href="https://pythonscouts.github.io/python-caracteristicas.html">
+          <img src="https://picsum.photos/id/55/200/150" class="img-fluid w-100">
       </a>
   </div>
   </div>
@@ -113,44 +114,44 @@
     <article>
       <div class="row">
         <div class="col">
-            <p>Django is a popular Python-based web framework used for building dynamic web applications. In this article, we will guide you through the process of setting up Django and creating a first project.</p>
+            <p>Django es un framework web popular basado en Python que se utiliza para crear aplicaciones web dinámicas. En este artículo, lo guiaremos a través del proceso de configuración de Django y la creación de un primer proyecto.</p>
 <div class="toc"><span class="toctitle">Tabla de contenido</span><ul>
-<li><a href="#prerequisites">Prerequisites</a></li>
-<li><a href="#setting-up-django">Setting up Django</a></li>
-<li><a href="#creating-a-django-project">Creating a Django Project</a></li>
-<li><a href="#creating-a-django-app">Creating a Django app</a></li>
-<li><a href="#conclusion">Conclusion</a></li>
+<li><a href="#requisitos-previos">Requisitos previos</a></li>
+<li><a href="#configurando-django">Configurando Django</a></li>
+<li><a href="#creando-un-proyecto-django">Creando un Proyecto Django</a></li>
+<li><a href="#creando-una-aplicacion-django">Creando una aplicación Django</a></li>
+<li><a href="#conclusiones">Conclusiones</a></li>
 </ul>
 </div>
-<h2 id="prerequisites">Prerequisites</h2>
-<p>Before we begin, make sure you have the following prerequisites installed on your computer:</p>
+<h2 id="requisitos-previos">Requisitos previos</h2>
+<p>Antes de comenzar, asegúrese de tener los siguientes requisitos previos instalados en su computadora:</p>
 <ul>
-<li>Python (version 3.6 or above)</li>
-<li>pip (Python package manager)</li>
-<li>virtual environment (recommended)</li>
+<li>Python (versión 3.6 o superior)</li>
+<li>pip (gestor de paquetes de Python)</li>
+<li>entorno virtual (recomendado)</li>
 </ul>
-<h2 id="setting-up-django">Setting up Django</h2>
-<p>There are different ways to set up Django, but we recommend using a virtual environment to avoid conflicts with other Python packages on your computer. Here's how to set up Django using a virtual environment:</p>
+<h2 id="configurando-django">Configurando Django</h2>
+<p>Hay diferentes formas de configurar Django, pero recomendamos usar un entorno virtual para evitar conflictos con otros paquetes de Python en su computadora. Aquí se explica cómo configurar Django utilizando un entorno virtual:</p>
 <ol>
-<li>Open your terminal or command prompt and create a new directory for your project. For example, mkdir myproject to create a new directory called "myproject".</li>
-<li>Navigate to the newly created directory using cd myproject.</li>
-<li>Create a new virtual environment using python -m venv env. This will create a new directory called "env" with the virtual environment files.</li>
-<li>Activate the virtual environment using source env/bin/activate on Unix-based systems or env\Scripts\activate.bat on Windows.</li>
-<li>Install Django using pip by running pip install django.</li>
+<li>Abra su terminal o símbolo del sistema y cree un nuevo directorio para su proyecto. Por ejemplo, mkdir myproject para crear un nuevo directorio llamado "myproject".</li>
+<li>Navegue al directorio recién creado usando cd myproject.</li>
+<li>Cree un nuevo entorno virtual usando python -m venv env. Esto creará un nuevo directorio llamado "env" con los archivos del entorno virtual.</li>
+<li>Active el entorno virtual usando fuente env/bin/activate en sistemas basados en Unix o env\Scripts\activate.bat en Windows.</li>
+<li>Instale Django usando pip ejecutando pip install django.</li>
 </ol>
-<h2 id="creating-a-django-project">Creating a Django Project</h2>
-<p>Now that we have Django installed, we can create our first Django project:</p>
+<h2 id="creando-un-proyecto-django">Creando un Proyecto Django</h2>
+<p>Ahora que tenemos instalado Django, podemos crear nuestro primer proyecto Django:</p>
 <ol>
-<li>Run the command django-admin startproject myproject. This will create a new Django project with the name "myproject".</li>
-<li>Navigate to the newly created project directory using cd myproject.</li>
-<li>Start the development server by running python manage.py runserver. This will start the server on the default port 8000.</li>
-<li>Open your web browser and go to http://localhost:8000. You should see the default Django welcome page.</li>
+<li>Ejecute el comando django-admin startproject myproject. Esto creará un nuevo proyecto Django con el nombre "myproject".</li>
+<li>Navegue al directorio del proyecto recién creado usando cd myproject.</li>
+<li>Inicie el servidor de desarrollo ejecutando python manage.py runserver. Esto iniciará el servidor en el puerto predeterminado 8000.</li>
+<li>Abra su navegador web y vaya a http://localhost:8000. Debería ver la página de bienvenida predeterminada de Django.</li>
 </ol>
-<h2 id="creating-a-django-app">Creating a Django app</h2>
-<p>A Django project consists of one or more apps. Let's create a new app within our project:</p>
+<h2 id="creando-una-aplicacion-django">Creando una aplicación Django</h2>
+<p>Un proyecto de Django consta de una o más aplicaciones. Vamos a crear una nueva aplicación dentro de nuestro proyecto:</p>
 <ol>
-<li>Run the command python manage.py startapp myapp. This will create a new Django app with the name "myapp".</li>
-<li>Open the views.py file within the "myapp" directory and add a simple view:</li>
+<li>Ejecute el comando python manage.py startapp myapp. Esto creará una nueva aplicación Django con el nombre "myapp".</li>
+<li>Abra el archivo views.py dentro del directorio "myapp" y agregue una vista simple:</li>
 </ol>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">HttpResponse</span>
 
@@ -159,7 +160,7 @@
 </code></pre></div>
 
 <ol>
-<li>Create a urls.py file within the "myapp" directory and add the following code:</li>
+<li>Cree un archivo urls.py dentro del directorio "myapp" y agregue el siguiente código:</li>
 </ol>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span>
 <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">views</span>
@@ -170,7 +171,7 @@
 </code></pre></div>
 
 <ol>
-<li>Open the urls.py file within the project directory and add the following code:</li>
+<li>Abra el archivo urls.py dentro del directorio del proyecto y agregue el siguiente código:</li>
 </ol>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
 <span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">include</span><span class="p">,</span> <span class="n">path</span>
@@ -182,11 +183,11 @@
 </code></pre></div>
 
 <ol>
-<li>Restart the development server by stopping it with Ctrl+C and running python manage.py runserver again.</li>
-<li>Open your web browser and go to http://localhost:8000/myapp/hello/. You should see the message "Hello, world!".</li>
+<li>Reinicie el servidor de desarrollo deteniéndolo con Ctrl+C y ejecutando python manage.py runserver nuevamente.</li>
+<li>Abra su navegador web y vaya a http://localhost:8000/myapp/hello/. Debería ver el mensaje "¡Hola, mundo!".</li>
 </ol>
-<h2 id="conclusion">Conclusion</h2>
-<p>You have successfully set up Django and created a simple project with an app. From here, you can start building more complex applications using Django's powerful features. To learn more about Django, check out the official documentation and various online resources.</p>
+<h2 id="conclusiones">Conclusiones</h2>
+<p>Configuró Django con éxito y creó un proyecto simple con una aplicación. Desde aquí, puede comenzar a crear aplicaciones más complejas utilizando las potentes funciones de Django. Para obtener más información sobre Django, consulte la documentación oficial y varios recursos en línea.</p>
         </div>
       </div>
     </article>
