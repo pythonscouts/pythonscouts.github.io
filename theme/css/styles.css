@@ -19,12 +19,12 @@ a {
 }
 
 a:hover {
-    color: #94B53C;
+    color: #008800;
 }
 
 
 .author-link a {
-    color: #94B53C;
+    color: #008800;
 }
 
 .author-link a:hover {
@@ -37,7 +37,7 @@ a:hover {
 }
 
 .secondary {
-    background: #94B53C;
+    background: #008800;
 }
 
 .tertiary {
@@ -53,7 +53,7 @@ a:hover {
 }
 
 .text-green {
-    color: #94B53C;
+    color: #008800;
 }
 
 /* Table of Contents */
@@ -81,7 +81,7 @@ a:hover {
 }
 
 .toc a {
-    color: #94B53C;
+    color: #008800;
 }
 
 .toc a:hover {
@@ -89,13 +89,13 @@ a:hover {
 }
 
 .custom-button {
-    background: #94B53C;
+    background: #008800;
     color: white;
     border-radius: 5px;
 }
 
 .custom-button:hover {
-    background: #94B53C;
+    background: #008800;
     color: white;
 }
 
