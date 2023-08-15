@@ -13,21 +13,6 @@ url = "/pages/contacto.html"
 title = "Contacto"
 
 [[input.files]]
-path = "python-caracteristicas.html"
-url = "/python-caracteristicas.html"
-title = "Qué es Python y cuáles son sus características fundamentales?"
-
-[[input.files]]
-path = "python-django-primer-proyecto.html"
-url = "/python-django-primer-proyecto.html"
-title = "Cómo configurar Django y crear tu primer proyecto"
-
-[[input.files]]
-path = "python-estilo-codigo-pep8.html"
-url = "/python-estilo-codigo-pep8.html"
-title = "El estilo de codificación de python sugún el PEP 8"
-
-[[input.files]]
-path = "python-zen-pep20.html"
-url = "/python-zen-pep20.html"
-title = "El Zen de Python según el PEP 20"
+path = "python-hola-mundo.html"
+url = "/python-hola-mundo.html"
+title = "Hola, mundo! Bienvenidos a Python Scouts!"
