@@ -11,6 +11,11 @@ body {
     padding-right: 10%;
 }
 
+h2, h3, h4, h5, h6 {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
 /* Links */
 a {
     text-decoration: none;
@@ -22,7 +27,6 @@ a:hover {
     color: #008800;
 }
 
-
 .author-link a {
     color: #008800;
 }
@@ -31,20 +35,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Color palette */
-.primary {
-    background: #323F48;
-}
-
-.secondary {
-    background: #008800;
-}
-
-.tertiary {
-    background: #9FE870;
-}
-
-.quaternary {
+.bg-gray {
     background: #F3F3F3;
 }
 
@@ -69,15 +60,14 @@ a:hover {
 }
 
 .toc ul {
-    font-size: 1.1em;
-    font-weight: 500;
-    margin: .5em;
+    font-size: 1em;
+    margin: .2em;
 }
 
 .toctitle {
-    font-size: 1.5em;
+    font-size: 1.1em;
     font-weight: 500;
-    margin-left: .5em;
+    margin: 1em;
 }
 
 .toc a {
