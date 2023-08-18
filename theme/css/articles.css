@@ -1,4 +1,85 @@
-/* Syntax highlighter Python code */
+/* Quotations */
+blockquote {
+    background: #F3F3F3;
+    border-left: 5px solid #dfe4ea;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+    color: #dfe4ea;
+    content: open-quote;
+    font-size: 3em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+blockquote a {
+    color: #008800;
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #F3F3F3;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+table td, table th {
+    border: 1px solid #F3F3F3;
+    padding: 0.5em;
+}
+
+caption {
+    font-weight: bold;
+    padding: 1em;
+}
+  
+thead {
+    background-color: #F3F3F3;
+}
+
+/* Table of Contents */
+.toc {
+    border: 1px solid #dfe4ea;
+    border-radius: 0px;
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+}
+
+.toc ul li {
+    padding: .25em;
+}
+
+.toc ul {
+    font-size: 1em;
+    margin: .2em;
+}
+
+.toctitle {
+    font-size: 1.1em;
+    font-weight: 500;
+    margin: 1em;
+}
+
+.toc a {
+    color: #008800;
+}
+
+.toc a:hover {
+    text-decoration: underline;
+}
+
+code {
+    font-family: "Source Code Pro", monospace;
+    font-size: 1em;
+    background-color: #F3F3F3;
+    padding: 0.1em 0.3em;
+    border-radius: 3px;
+    color: #000000;
+}
+
+/* Syntax highlighter for code */
 pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
 span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }

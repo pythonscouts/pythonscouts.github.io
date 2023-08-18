@@ -6,35 +6,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://pythonscouts.com/</loc>
-<lastmod>2023-08-17T21:12:45-00:00</lastmod>
+<lastmod>2023-08-18T17:15:01-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/archives.html</loc>
-<lastmod>2023-08-17T21:12:45-00:00</lastmod>
+<lastmod>2023-08-18T17:15:01-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/author/leodanis-pozo-ramos.html</loc>
-<lastmod>2023-08-17T21:12:45-00:00</lastmod>
+<lastmod>2023-08-18T17:15:01-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/authors.html</loc>
-<lastmod>2023-08-17T21:12:45-00:00</lastmod>
+<lastmod>2023-08-18T17:15:01-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/categories.html</loc>
-<lastmod>2023-08-17T21:12:45-00:00</lastmod>
+<lastmod>2023-08-18T17:15:01-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -61,8 +61,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://pythonscouts.com/python-palabras-clave.html</loc>
+<lastmod>2023-08-17T05:15:00+02:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://pythonscouts.com/tags.html</loc>
-<lastmod>2023-08-17T21:12:45-00:00</lastmod>
+<lastmod>2023-08-18T17:15:01-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

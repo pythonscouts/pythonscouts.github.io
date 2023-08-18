@@ -13,6 +13,11 @@ url = "/pages/contacto.html"
 title = "Contacto"
 
 [[input.files]]
+path = "python-palabras-clave.html"
+url = "/python-palabras-clave.html"
+title = "Palabras clave o reservadas en Python"
+
+[[input.files]]
 path = "python-hola-mundo.html"
 url = "/python-hola-mundo.html"
 title = "Hola, mundo! Bienvenidos a Python Scouts!"

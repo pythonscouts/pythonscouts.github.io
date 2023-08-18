@@ -1,0 +1,61 @@
+body {
+    padding-top: 5em;
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: #323F48;
+    background-color: white;
+}
+
+.content-px {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+h2, h3, h4, h5, h6 {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+/* Links */
+a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #323F48;
+}
+
+a:hover {
+    color: #008800;
+}
+
+.author-link a {
+    color: #008800;
+}
+
+.author-link a:hover {
+    text-decoration: underline;
+}
+
+.bg-gray {
+    background: #F3F3F3;
+}
+
+.bg-white {
+    background: white;
+}
+
+.text-green {
+    color: #008800;
+}
+
+/* Custom button */
+button {
+    background: #008800;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 0.3em 0.6em;
+}
+
+button:hover {
+    background: #008800;
+    color: white;
+}
