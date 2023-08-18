@@ -3,21 +3,21 @@ html_selector = "main"
 base_directory = "output"
 
 [[input.files]]
-path = "pages/acerca.html"
-url = "/pages/acerca.html"
+path = "acerca/index.html"
+url = "/acerca/"
 title = "Acerca"
 
 [[input.files]]
-path = "pages/contacto.html"
-url = "/pages/contacto.html"
+path = "contacto/index.html"
+url = "/contacto/"
 title = "Contacto"
 
 [[input.files]]
-path = "python-palabras-clave.html"
-url = "/python-palabras-clave.html"
+path = "python-palabras-clave/index.html"
+url = "/python-palabras-clave/"
 title = "Palabras clave o reservadas en Python"
 
 [[input.files]]
-path = "python-hola-mundo.html"
-url = "/python-hola-mundo.html"
+path = "python-hola-mundo/index.html"
+url = "/python-hola-mundo/"
 title = "Hola, mundo! Bienvenidos a Python Scouts!"

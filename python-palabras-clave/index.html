@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="es-es" class="h-100">
+
+<head>
+        <title>
+  Python Scouts - Palabras clave o reservadas en Python
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Una web en Español para aprender a programar con Python.">
+    <!-- RSS feeds -->
+    <link href="https://pythonscouts.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Full Atom Feed" />
+    <link href="https://pythonscouts.com/feeds/tutoriales.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Categories Atom Feed" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css">
+    <!-- Stork Search -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css">
+
+
+
+    <meta name="tags" content="python" />
+    <meta name="tags" content="fundamentos" />
+
+    <!-- Social cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://picsum.photos/id/11/300/200.webp">
+    <meta property="og:image" content="https://picsum.photos/id/11/300/200.webp">
+    <meta name="twitter:creator" content="@lpozo78">
+    <meta name="twitter:site" content="@lpozo78">
+    <meta property="og:title" content="Palabras clave o reservadas en Python – Python Scouts">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="python-palabras-clave/">
+    <meta property="og:description" content="<p>En este tutorial aprenderás acerca de las palabras clave o reservadas de Python. ¿Cúales son? ¿Cómo consultarlas? y ¿Cómo obtener ayuda sobre ellas?</p>">
+
+    <!-- Custom CSS for article -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-R3C5PFSQ1S');
+</script>
+
+<body class="d-flex flex-column h-100">
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-md bg-white fixed-top border-bottom">
+        <div class="container-md content-px">
+            <a class="navbar-brand" href="/">
+            <img
+            src="https://pythonscouts.com/theme/images/icons/header.png"
+            alt="Python Scouts"
+            width="150"
+            height="50"
+            >
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Menú de Navegación">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav m-auto">
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/guias/" class="" aria-current="page">
+                    Guías
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/tutoriales/" class="active" aria-current="page">
+                    Tutoriales
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/acerca/" class="" aria-current="page">
+                    Acerca
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/contacto/" class="" aria-current="page">
+                    Contacto
+                </a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <div class="stork-wrapper">
+                <input
+                class="stork-input"
+                type="search"
+                placeholder="Buscar"
+                aria-label="Search"
+                data-stork="sitesearch"
+                >
+                </div>
+            </form>
+            </div>
+        </div>
+    </nav>
+    <main class="container-md content-px py-3">
+        <div class="stork-wrapper">
+            <div data-stork="sitesearch-output" class="stork-output"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+            </div>
+        </div>
+
+    <!-- Article Header -->
+    <div class="row pt-3 pb-5">
+        <div class="col-md-6 py-3">
+            <h1 class="display-5">
+                <strong>Palabras clave o reservadas en Python</strong>
+            </h1>
+            <div class="text-muted small py-3">
+                Publicado el 17/08/2023
+            </div>
+            <div class="author-link py-3">
+                <img src="https://pythonscouts.com/theme/images/profile.jpg" alt="Leodanis Pozo Ramos" class="rounded-circle border" width="70" height="70">
+                <a href="https://pythonscouts.com/author/leodanis-pozo-ramos.html" style="padding-left: 10px;">
+                    Leodanis Pozo Ramos
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6 py-3">
+            <img src="https://picsum.photos/id/11/200/150.webp" class="img-fluid w-100">
+        </div>
+    </div>
+          <!-- Article Content -->
+        <article>
+            <div class="row">
+                <div class="col">
+                  <p>Como otros lenguaje de programación, Python también tiene lo que se conoce como <strong>palabras clave</strong> o <strong>palabras reservadas</strong> (<em>keywords</em>). Se trata de un conjunto de palabras en idioma Inglés que tienen un significado especial en Python. Estas palabras forman parte de la sintaxis de Python y, en la mayoría de los casos, no las puedes emplear como identificadores o nombres variables, funciones, u objetos.</p>
+<p><strong>En este tutorial, aprenderás:</strong></p>
+<ul>
+<li>Qué son las <strong>palabras clave</strong> o <strong>reservadas</strong>?</li>
+<li>Cuáles son las <strong>palabras clave de Python</strong>?</li>
+<li>Cómo obtener <strong>ayuda sobre las palabras clave</strong> de Python?</li>
+</ul>
+<p>Con estos conocimientos, mejorarás tu comprensión de Python y estarás mejor preparado para enfrentar el aprendizaje del mismo.</p>
+<div class="toc"><span class="toctitle">Contenidos</span><ul>
+<li><a href="#que-son-las-palabras-clave-o-reservadas-en-python">Qué son las palabras clave o reservadas en Python?</a></li>
+<li><a href="#cuales-son-las-palabras-clave-de-python">Cuáles son las palabras clave de Python?</a></li>
+<li><a href="#como-obtengo-ayuda-sobre-palabras-clave-especificas">Cómo obtengo ayuda sobre palabras clave específicas?</a></li>
+<li><a href="#puedo-emplear-palabras-clave-como-nombres">Puedo emplear palabras clave como nombres?</a></li>
+<li><a href="#resumiendo">Resumiendo</a></li>
+<li><a href="#lecturas-sugeridas">Lecturas sugeridas</a></li>
+</ul>
+</div>
+<h2 id="que-son-las-palabras-clave-o-reservadas-en-python">Qué son las palabras clave o reservadas en Python?</h2>
+<p>Python cuenta con lo que se conoce como <a href="https://docs.python.org/es/3/reference/lexical_analysis.html#keywords">palabras clave</a> o <strong>palabras reservadas</strong> (<em>keywords</em>). Se trata de un conjunto reducido de palabras, en idioma Inglés, que tienen un significado especial en el lenguaje y que forman parte de su sintaxis.</p>
+<p>Tal y como refiere la documentación oficial de Python en Español:</p>
+<blockquote>
+<p>[Las palabras clave] Deben escribirse exactamente como están escritas aquí: (<a href="https://docs.python.org/es/3/reference/lexical_analysis.html#keywords">Fuente</a>)</p>
+</blockquote>
+<p>Cuando la documentación dice que deben escribirse de esta forma, esto incluye el detalle de las mayúsculas, como en los casos de <a href="https://docs.python.org/es/3/library/constants.html#None"><code>None</code></a>, <a href="https://docs.python.org/es/3/library/constants.html#False"><code>False</code></a> y <a href="https://docs.python.org/es/3/library/constants.html#True"><code>True</code></a>. Sí, Python discrimina entre mayúsculas y minúsculas, de modo que las variantes <code>True</code> y <code>true</code> no son equivalentes.</p>
+<p>Cualquier error de escritura en una palabra clave provoca una excepción del tipo <a href="https://docs.python.org/es/3/library/exceptions.html#NameError"><code>NameError</code></a>. Este comportamiento se debe a que como la palabra está mal escrita, Python asume que se trata de un identificador o nombre y al no encontrar el nombre, levanta la excepción.</p>
+<p>Con esta breve introducción al concepto de palabras clave, estás listo para conocer cúales son las palabras clave de Python.</p>
+<h2 id="cuales-son-las-palabras-clave-de-python">Cuáles son las palabras clave de Python?</h2>
+<p>Dependiendo de la versión, Python tiene un conjunto de palabras clave o reservadas que ronda las 30 palabras. Estas palabras constituyen el núcleo de las sintaxis del lenguaje. Para conocer o consultar cuáles son estas palabras, puedes abrir una sesión interactiva de Python y ejecutar el siguiente código:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="c1"># Python 3.11</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">keyword</span> <span class="kn">import</span> <span class="n">kwlist</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">kwlist</span>
+<span class="p">[</span>
+    <span class="s1">&#39;False&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;None&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;True&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;and&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;as&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;assert&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;async&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;await&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;break&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;class&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;continue&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;def&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;del&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;elif&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;else&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;except&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;finally&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;for&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;from&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;global&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;if&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;import&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;in&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;is&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;lambda&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;nonlocal&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;not&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;or&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;pass&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;raise&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;return&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;try&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;while&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;with&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;yield&#39;</span>
+<span class="p">]</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">kwlist</span><span class="p">)</span>
+<span class="mi">35</span>
+</code></pre></div>
+
+<p>El módulo <a href="https://docs.python.org/es/3/library/keyword.html#module-keyword"><code>keyword</code></a> de la <a href="https://docs.python.org/es/3/library/index.html">biblioteca estándar</a> exporta una lista denominada <a href="https://docs.python.org/es/3/library/keyword.html#keyword.kwlist"><code>kwlist</code></a> que contiene todas las palabras clave de Python. En el código anterior, primeramente importas <code>kwlist</code> desde <code>keyword</code> y luego muestras su contenido. En Python 3.11, obtienes 35 palabras clave, tal y como resulta de ejecutar <code>len(kwlist)</code> en la última línea de código del ejemplo.</p>
+<p>Debes tener en cuenta que el número de palabras clave varia en dependencia de la versión de Python que estés usando actualmente.</p>
+<p>Otra manera de consultar las palabras clave de Python es mediante la función <code>help()</code>. Se trata de una función incluida (<em>built-in</em>) que te permite consultar la documentación y obtener ayuda rápida sobre cualquier objeto en Python.</p>
+<p>Para consultar las palabras clave de Python por esta vía, primeramente ejecuta <code>help()</code> para entrar al <strong>sistema de ayuda integrado</strong> de Python. Luego consulta el contenido de la página de palabras clave usando el comando <code>keywords</code> como en el ejemplo siguiente:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">help</span><span class="p">()</span>
+
+<span class="go">Welcome to Python 3.11&#39;s help utility!</span>
+
+<span class="go">...</span>
+
+<span class="go">help&gt; keywords</span>
+
+<span class="go">Here is a list of the Python keywords.  Enter any keyword to get more help.</span>
+
+<span class="go">False               class               from                or</span>
+<span class="go">None                continue            global              pass</span>
+<span class="go">True                def                 if                  raise</span>
+<span class="go">and                 del                 import              return</span>
+<span class="go">as                  elif                in                  try</span>
+<span class="go">assert              else                is                  while</span>
+<span class="go">async               except              lambda              with</span>
+<span class="go">await               finally             nonlocal            yield</span>
+<span class="go">break               for                 not</span>
+</code></pre></div>
+
+<p>En este caso, cuando ejecutas <code>help()</code> en una sesión interactiva de Python, entras inmediatamente al sistema de ayuda integrado del lenguaje. El indicador (<em>prompt</em>) <code>help&gt;</code> te hace saber que estás dentro. Una vez allí, tecleas el comando <code>keywords</code> y presionas <em>Enter</em>. Esta acción te devuelve el listado de palabras clave de tu versión específica del lenguaje.</p>
+<p>Es importante que domines las palabras clave o reservadas de Python, y sobre todo que conozcas su significado en Español. A continuación, un resumen que incluye la traducción al español y una breve descripción de cada palabra clave:</p>
+<table>
+<thead>
+<tr>
+<th>Palabra clave</th>
+<th>Traducción</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>False</code></td>
+<td>Falso</td>
+<td>Representa el valor booleano falso</td>
+</tr>
+<tr>
+<td><code>None</code></td>
+<td>Ninguno</td>
+<td>Representa un objeto nulo</td>
+</tr>
+<tr>
+<td><code>True</code></td>
+<td>Verdadero</td>
+<td>Representa el valor booleano verdadero</td>
+</tr>
+<tr>
+<td><code>and</code></td>
+<td>y</td>
+<td>Operador lógico <code>AND</code></td>
+</tr>
+<tr>
+<td><code>as</code></td>
+<td>como</td>
+<td>Permite crear aliases de módulos, clases o funciones</td>
+</tr>
+<tr>
+<td><code>assert</code></td>
+<td>afirmar</td>
+<td>Verifica si una expresión es verdadera y lanza un error si es falsa</td>
+</tr>
+<tr>
+<td><code>async</code></td>
+<td>Asíncrono</td>
+<td>Define una función o estructura asíncrona</td>
+</tr>
+<tr>
+<td><code>await</code></td>
+<td>esperar</td>
+<td>Espera a que se complete una función o estructure asíncrona</td>
+</tr>
+<tr>
+<td><code>break</code></td>
+<td>romper</td>
+<td>Sale de un bucle <code>for</code> o <code>while</code></td>
+</tr>
+<tr>
+<td><code>class</code></td>
+<td>clase</td>
+<td>Define una clase</td>
+</tr>
+<tr>
+<td><code>continue</code></td>
+<td>continuar</td>
+<td>Salta a la siguiente iteración en un bucle</td>
+</tr>
+<tr>
+<td><code>def</code></td>
+<td>definir</td>
+<td>Define una función</td>
+</tr>
+<tr>
+<td><code>del</code></td>
+<td>borrar</td>
+<td>Elimina nombres, elementos de listas, claves de diccionarios</td>
+</tr>
+<tr>
+<td><code>elif</code></td>
+<td>entonces si</td>
+<td>Cláusula <code>else if</code> para una sentencia <code>if</code></td>
+</tr>
+<tr>
+<td><code>else</code></td>
+<td>entonces</td>
+<td>Cláusula <code>else</code> para una sentencia <code>if</code></td>
+</tr>
+<tr>
+<td><code>except</code></td>
+<td>excepto</td>
+<td>Captura y maneja excepciones en un bloque <code>try</code></td>
+</tr>
+<tr>
+<td><code>finally</code></td>
+<td>finalmente</td>
+<td>Se ejecuta siempre en un bloque <code>try</code>, independientemente de si se produjo una excepción o no</td>
+</tr>
+<tr>
+<td><code>for</code></td>
+<td>para</td>
+<td>Inicia un bucle <code>for</code></td>
+</tr>
+<tr>
+<td><code>from</code></td>
+<td>desde</td>
+<td>Importa objetos específicos desde un módulo</td>
+</tr>
+<tr>
+<td><code>global</code></td>
+<td>global</td>
+<td>Indica que una variable se define en el ámbito global</td>
+</tr>
+<tr>
+<td><code>if</code></td>
+<td>si</td>
+<td>Inicia una <a href="https://docs.python.org/es/3/glossary.html#term-statement">sentencia</a> condicional</td>
+</tr>
+<tr>
+<td><code>import</code></td>
+<td>importar</td>
+<td>Importa un módulo o elementos específicos de un módulo</td>
+</tr>
+<tr>
+<td><code>in</code></td>
+<td>en</td>
+<td>Verifica si un valor se encuentra en una lista, diccionario o cualquier objeto iterable</td>
+</tr>
+<tr>
+<td><code>is</code></td>
+<td>es</td>
+<td>Compara si dos objetos son el mismo objeto</td>
+</tr>
+<tr>
+<td><code>lambda</code></td>
+<td>lambda</td>
+<td>Crea una función anónima</td>
+</tr>
+<tr>
+<td><code>nonlocal</code></td>
+<td>no local</td>
+<td>Indica que una variable se encuentra en el ámbito externo a una función</td>
+</tr>
+<tr>
+<td><code>not</code></td>
+<td>no</td>
+<td>Operador lógico <code>NOT</code></td>
+</tr>
+<tr>
+<td><code>or</code></td>
+<td>o</td>
+<td>Operador lógico <code>OR</code></td>
+</tr>
+<tr>
+<td><code>pass</code></td>
+<td>pasar</td>
+<td>Es una sentencia que no hace nada</td>
+</tr>
+</tbody>
+</table>
+<p>Concer las palabras reservadas de Python te facilitará la comprensión y la escritura de código. Recuerda que este conjunto de palabras es el núcleo de toda la sintaxis del lenguaje.</p>
+<h2 id="como-obtengo-ayuda-sobre-palabras-clave-especificas">Cómo obtengo ayuda sobre palabras clave específicas?</h2>
+<p>En determinadas situaciones, sobre todo cuando estás comenzando con Python, necesitarás consultar rápidamente el objetivo de determinada palabra clave. En esos casos, puedes auxiliarte de <code>help()</code> nuevamente.</p>
+<p>Una vez que entras al sistema de ayuda integrado usando <code>help()</code>, puedes introducir la palabra clave que deseas consultar y presionar <em>Enter</em>. De inmediato te aparecerá en pantalla la documentación de la palabra en cuestión.</p>
+<p>Por ejemplo, si introduces <code>if</code> y presionas Enter, entonces el sistema de ayuda entrará directamente a la página que documenta esta sentencia y mostrará la salida siguiente:</p>
+<div class="highlight"><pre><span></span><code><span class="go">The &quot;if&quot; statement</span>
+<span class="go">******************</span>
+
+<span class="go">The &quot;if&quot; statement is used for conditional execution:</span>
+
+<span class="go">   if_stmt ::= &quot;if&quot; assignment_expression &quot;:&quot; suite</span>
+<span class="go">               (&quot;elif&quot; assignment_expression &quot;:&quot; suite)*</span>
+<span class="go">               [&quot;else&quot; &quot;:&quot; suite]</span>
+
+<span class="go">It selects exactly one of the suites by evaluating the expressions one</span>
+<span class="go">by one until one is found to be true (see section Boolean operations</span>
+<span class="go">for the definition of true and false); then that suite is executed</span>
+<span class="go">(and no other part of the &quot;if&quot; statement is executed or evaluated).</span>
+<span class="go">If all expressions are false, the suite of the &quot;else&quot; clause, if</span>
+<span class="go">present, is executed.</span>
+
+<span class="go">Related help topics: TRUTHVALUE</span>
+</code></pre></div>
+
+<p>Si introduces una palabra clave o palabra reservada cualquiera (<code>if</code> en el ejemplo anterior) en el indicador (<em>prompt</em>) del sistema de ayuda de Python, obtienes acceso directo a la documentación de la misma. Esta documentación solo aparece en idioma inglés. Si desea obtener ayuda en idioma español, entonces puedes usar la <a href="https://docs.python.org/es/3/index.html">documentación oficial en español</a>.</p>
+<p>Es importante que sepas que cuando consultas una página de documentación específica en el sistema de ayuda integrado, tendrás que presionar la tecla <em>Q</em> en tu teclado para poder salir de la página y regresar a la ayuda.</p>
+<p>El sistema de ayuda integrado te ofrece además una guía de temas relacionados con la palabra clave que estés consultando. En la última línea del ejemplo anterior puedes leer <code>Related help topics: TRUTHVALUE</code>. Si introduces <code>TRUTHVALUE</code> y presionas <em>Enter</em>, obtendrás la página de ayuda correspondiente. Adelántate y experiméntalo tú mismo!</p>
+<h2 id="puedo-emplear-palabras-clave-como-nombres">Puedo emplear palabras clave como nombres?</h2>
+<p>En la mayoría de los casos, si tratas de emplear una palabra clave o reservada para definir una variable o nombre, recibirás un error de sintaxis:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="err">= &quot;</span><span class="nc">Economy</span><span class="s2">&quot;</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;input&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span>
+    <span class="k">class</span> <span class="err">= &quot;</span><span class="nc">Economy</span><span class="s2">&quot;</span>
+          <span class="o">^</span>
+<span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">syntax</span>
+</code></pre></div>
+
+<p>En este ejemplo, cuando tratas de usar <code>class</code> como un nombre de variable, recibes una excepción de tipo <code>SyntaxError</code>. Sin embargo, este no es siempre el caso. Python también tiene <a href="https://docs.python.org/es/3/reference/lexical_analysis.html#soft-keywords">palabras clave suaves</a> que en determinado contexto, puedes emplear como nombres. Las más comunes son <code>match</code> y <code>case</code>, que solo están restringidas en el contexto de sentencias <a href="https://docs.python.org/es/3/reference/compound_stmts.html#match"><code>match</code></a>:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">match</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">match</span>
+<span class="kc">True</span>
+</code></pre></div>
+
+<p>Este ejemplo demustra que puedes emplear la palabra reservada <code>match</code> como un nombre de variable. En este caso, Python no levanta una excepción como lo hace con otras palabras reservadas.</p>
+<p>En cualquier caso, debes evitar emplear palabras clave como nombres o identificadores de variables, funciones, clases, módulos, paquetes o de cualquier otra estructura u objeto Python. Еmplearlas de esta forma podría generar problemas difíciles de identificar y resolver en tu código.</p>
+<h2 id="resumiendo">Resumiendo</h2>
+<p>Ya has adquirido conocimientos elementales sobre las palabras clave o palabras reservadas de Python. Sabes cómo obtener la lista de palabras reservadas disponibles en tu entorno Python y cómo obtener ayuda sobre estas palabras y su papel en la sintaxis del lenguaje.</p>
+<p><strong>Ahora conoces:</strong></p>
+<ul>
+<li>La definición de <strong>palabra clave</strong> o <strong>reservada</strong></li>
+<li>Las <strong>palabras clave de Python</strong> y su significado</li>
+<li>Como usar la función <code>help()</code> para objeter <strong>ayuda</strong> sobre las palabras clave</li>
+</ul>
+<p>Con estos conocimientos tienes las bases y las herramientas necesarias para profundizar en los conceptos y definiciones que encierra cada una de las palabras clave de Python.</p>
+<h2 id="lecturas-sugeridas">Lecturas sugeridas</h2>
+<p>Para afianzar tus conocimientos sobre las palabras clave o reservadas de Python, consulta los siguientes recursos en linea:</p>
+<ul>
+<li><a href="https://docs.python.org/es/3/reference/lexical_analysis.html#identifiers">Identificadores y palabras clave</a></li>
+<li><a href="https://realpython.com/python-keywords/">Python Keywords: An Introduction</a></li>
+</ul>
+<p>Ten en cuenta que algunos de estos recursos están en idioma inglés.</p>
+              </div>
+            </div>
+        </article>
+
+
+      <!-- Disqus -->
+      <div id="disqus_thread" class="py-5"></div>
+      <script type="text/javascript">
+          var disqus_shortname = 'pythonscouts';
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+      </script>
+
+    </main>
+
+    <!-- Page footer -->
+    <footer class="footer mt-auto bg-gray text-center py-3 border-top border-1">
+        <div class="container">
+        <span class="lead">&copy; 2023 Leodanis Pozo Ramos</span>
+        </div>
+        <p class="pt-3">Imágenes aleatórias cortesía de <a href="https://picsum.photos/" target="_blank">Picsum</a></p>
+    </footer>
+
+    <!-- JS Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Stroke Scripts -->
+    <script src="https://pythonscouts.com/theme/js/stork.js"></script>
+    <script>
+        stork.initialize("https://pythonscouts.com/theme/js/stork.wasm")
+        stork.downloadIndex("sitesearch", "https://pythonscouts.com/search-index.st")
+        stork.attach("sitesearch")
+    </script>
+
+</body>
+</html>
