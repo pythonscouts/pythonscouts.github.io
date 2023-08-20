@@ -19,19 +19,22 @@ h2, h3, h4, h5, h6 {
 a {
     text-decoration: none;
     font-weight: 500;
-    color: #323F48;
+    color: #008800;
 }
 
 a:hover {
-    color: #008800;
-}
-
-.author-link a {
-    color: #008800;
-}
-
-.author-link a:hover {
     text-decoration: underline;
+}
+
+.nav-link a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #323F48;
+}
+
+.nav-link a:hover {
+    text-decoration: none;
+    color: #008800;
 }
 
 .bg-gray {
