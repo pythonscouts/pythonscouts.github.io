@@ -100,13 +100,13 @@
 <p>Hola! Soy Leodanis y mantengo este espacio sobre Python. Deseas contactarme? Envianos un mensaje:</p>
 <div class="row">
   <div class="col-md-12">
-    <form action="https://formspree.io/your@email.com" method="POST">
+    <form action="https://formspree.io/f/mrgwqqee" method="POST">
       <label for="name" class="form-label">Nombre:</label>
-      <input type="text" id="name" name="user_name" placeholder="Tu nombre" class="form-control"/>
+      <input type="text" id="name" name="user_name" placeholder="Tu nombre" class="form-control" pattern="[A-Za-z]+" required/>
       <label for="mail" class="form-label">E-mail:</label>
-      <input type="email" id="mail" name="user_mail" placeholder="Tu e-mail" class="form-control"/>
+      <input type="email" id="email" name="user_mail" placeholder="Tu e-mail" class="form-control" required/>
       <label for="msg" class="form-label">Message:</label>
-      <textarea id="msg" name="user_message" class="form-control" placeholder="Tu message"></textarea>
+      <textarea id="msg" name="user_message" class="form-control" placeholder="Tu message" required></textarea>
       <button type="submit" class="my-3">Enviar</button>
     </form>
   </div>
