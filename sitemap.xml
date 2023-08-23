@@ -6,7 +6,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://pythonscouts.com/</loc>
-<lastmod>2023-08-23T08:31:28-00:00</lastmod>
+<lastmod>2023-08-23T09:07:12-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -20,21 +20,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://pythonscouts.com/archives/</loc>
-<lastmod>2023-08-23T08:31:28-00:00</lastmod>
+<lastmod>2023-08-23T09:07:12-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/author/leodanis-pozo-ramos.html</loc>
-<lastmod>2023-08-23T08:31:28-00:00</lastmod>
+<lastmod>2023-08-23T09:07:12-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/guias/</loc>
-<lastmod>2023-08-23T08:31:28-00:00</lastmod>
+<lastmod>2023-08-23T09:07:12-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -55,7 +55,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://pythonscouts.com/tutoriales/</loc>
-<lastmod>2023-08-23T08:31:28-00:00</lastmod>
+<lastmod>2023-08-23T09:07:12-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
