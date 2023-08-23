@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"></link><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"></link><id>https://pythonscouts.com/</id><updated>2023-08-17T05:15:00+02:00</updated><subtitle>Una web en Español para aprender a programar con Python.</subtitle><entry><title>Palabras clave o reservadas en Python</title><link href="https://pythonscouts.com/python-palabras-clave/" rel="alternate"></link><published>2023-08-17T05:15:00+02:00</published><updated>2023-08-17T05:15:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2023-08-17:/python-palabras-clave/</id><summary type="html">&lt;p&gt;En este tutorial aprenderás acerca de las palabras clave o reservadas de Python. ¿Cúales son? ¿Cómo consultarlas? y ¿Cómo obtener ayuda sobre ellas?&lt;/p&gt;</summary><content type="html">&lt;p&gt;Como otros lenguaje de programación, Python también tiene lo que se conoce como &lt;strong&gt;palabras clave&lt;/strong&gt; o &lt;strong&gt;palabras reservadas&lt;/strong&gt; (&lt;em&gt;keywords&lt;/em&gt;). Se trata de un conjunto de palabras en idioma Inglés que tienen un significado especial en Python. Estas palabras forman parte de la sintaxis de Python y, en la mayoría de los casos, no las puedes emplear como identificadores o nombres variables, funciones, u objetos.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"></link><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"></link><id>https://pythonscouts.com/</id><updated>2023-08-17T05:15:00+02:00</updated><subtitle>Una web en Español para aprender a programar con Python.</subtitle><entry><title>Palabras clave o reservadas de Python: cuáles son?</title><link href="https://pythonscouts.com/python-palabras-clave/" rel="alternate"></link><published>2023-08-17T05:15:00+02:00</published><updated>2023-08-17T05:15:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2023-08-17:/python-palabras-clave/</id><summary type="html">&lt;p&gt;Las &lt;strong&gt;palabras clave&lt;/strong&gt; o &lt;strong&gt;palabras reservadas&lt;/strong&gt; (&lt;em&gt;keywords&lt;/em&gt;) de Python son un conjunto de palabras en idioma Inglés que tienen un significado especial para el lenguaje. Estas palabras constituyen la base de la sintaxis de Python.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Por esta razón, es importante que las conozcas y sepas su rol en el lenguaje. Con ellas, podrás escribir diferentes tipos de sentencias que, en su conjunto, conformarán tus programas y aplicaciones Python.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;En este tutorial, aprenderás:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Qué son las &lt;strong&gt;palabras clave&lt;/strong&gt; o &lt;strong&gt;reservadas&lt;/strong&gt;?&lt;/li&gt;
-&lt;li&gt;Cuáles son las &lt;strong&gt;palabras clave de Python&lt;/strong&gt;?&lt;/li&gt;
-&lt;li&gt;Cómo obtener &lt;strong&gt;ayuda sobre las palabras clave&lt;/strong&gt; de Python?&lt;/li&gt;
+&lt;li&gt;Cuáles son las &lt;strong&gt;palabras clave&lt;/strong&gt; de Python?&lt;/li&gt;
+&lt;li&gt;Cómo obtener &lt;strong&gt;ayuda&lt;/strong&gt; sobre las palabras clave de Python?&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Con estos conocimientos, mejorarás tu comprensión de Python y estarás mejor preparado para enfrentar el aprendizaje del mismo.&lt;/p&gt;
+&lt;p&gt;Con estos conocimientos, mejorarás tu comprensión del lenguaje y estarás mejor preparado para enfrentar el aprendizaje del mismo.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#que-son-las-palabras-clave-o-reservadas-en-python"&gt;Qué son las palabras clave o reservadas en Python?&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#cuales-son-las-palabras-clave-de-python"&gt;Cuáles son las palabras clave de Python?&lt;/a&gt;&lt;/li&gt;
@@ -315,11 +315,13 @@
 &lt;li&gt;&lt;a href="https://docs.python.org/es/3/reference/lexical_analysis.html#identifiers"&gt;Identificadores y palabras clave&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://realpython.com/python-keywords/"&gt;Python Keywords: An Introduction&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Ten en cuenta que algunos de estos recursos están en idioma inglés.&lt;/p&gt;</content><category term="Tutoriales"></category><category term="python"></category><category term="fundamentos"></category></entry><entry><title>Hola, mundo! Bienvenidos a Python Scouts!</title><link href="https://pythonscouts.com/python-hola-mundo/" rel="alternate"></link><published>2023-08-15T20:00:00+02:00</published><updated>2023-08-15T20:00:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2023-08-15:/python-hola-mundo/</id><summary type="html">&lt;p&gt;Python Scouts te da la bienvenida! Este es nuestra primera pubicación. En ella aprenderás cómo escribir tu Hola Mundo! en Python.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hola, mundo Python en español! Mi nombre es Leodanis Pozo Ramos. Soy programador Python autodidacta y llevo varios años aprendiendo y usando Python. He creado &lt;a href="https://realpython.com/team/lpozoramos/"&gt;contenido&lt;/a&gt; Python para aquellos que desean aprender este popular y amigable lenguage de programación.&lt;/p&gt;
-&lt;p&gt;Mi trabajo hasta hoy ha sido casi exclusivamente en idioma inglés. Sin embargo, el inglés es mi segunda lengua. De mis padres aprendí el español, un idioma maravilloso que muchos compartimos en este mundo.&lt;/p&gt;
-&lt;p&gt;Por esa razón, hoy estoy comenzando este proyecto para ayudar a muchos programadores y profesionales de otros campos que día a día ponen su empeño en aprender Python en un idioma distinto al suyo.&lt;/p&gt;
+&lt;p&gt;Ten en cuenta que algunos de estos recursos están en idioma inglés.&lt;/p&gt;</content><category term="Tutoriales"></category><category term="python"></category><category term="fundamentos"></category></entry><entry><title>Cómo escribir tu primer programa en Python: Hola, mundo!</title><link href="https://pythonscouts.com/python-hola-mundo/" rel="alternate"></link><published>2023-08-15T20:00:00+02:00</published><updated>2023-08-15T20:00:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2023-08-15:/python-hola-mundo/</id><summary type="html">&lt;p&gt;El &lt;em&gt;Hola, mundo!&lt;/em&gt; es el típico primer programa que escribirás cuando comienzas a aprender un lenguaje de programación como Python. El programa consiste en imprimir la frase &lt;em&gt;Hola, mundo!&lt;/em&gt; en la pantalla de tu ordenador. En esta guía, aprenderás cómo escribir tu &lt;em&gt;Hola, mundo!&lt;/em&gt; en Python.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;Aquí aprenderás:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Qué es Python y para qué puedes emplearlo&lt;/li&gt;
+&lt;li&gt;Cómo escribir el &lt;em&gt;Hola, mundo!&lt;/em&gt; en Python&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Para seguir esta guía, deberías tener conocimientos básicos de trabajo en la línea de comandos o terminal de tu sistema operativo actual.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href="#que-es-python-scouts"&gt;Qué es Python Scouts?&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#que-es-python"&gt;Qué es Python?&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#como-escribo-el-hola-mundo-en-python"&gt;Como escribo el Hola, mundo! en Python?&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#hola-mundo-desde-una-sesion-interactiva"&gt;Hola, mundo! desde una sesión interactiva&lt;/a&gt;&lt;/li&gt;
@@ -329,10 +331,6 @@
 &lt;li&gt;&lt;a href="#resumiendo"&gt;Resumiendo&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;h2 id="que-es-python-scouts"&gt;Qué es Python Scouts?&lt;/h2&gt;
-&lt;p&gt;Python Scouts es un sitio web en español (mayormente 😜) para aquellos que desean o necesitan aprender Python en este idioma.&lt;/p&gt;
-&lt;p&gt;Si ya sabes otro lenguaje de programación, hablas español, y quieres comenzar con Python, entonces aquí encontrarás recursos que te ayudarán en tus metas personales. Casi todo en español. El código, será mayormente en idioma inglés, pues esto te ayudará a expandir tus horizontes y participar en proyectos internacionales.&lt;/p&gt;
-&lt;p&gt;Si eres un profesional de otra rama, si estás pensando en un cambio de profesión, o si simplemente te gusta porgramar como un hobby, este puede ser un buen lugar para comenzar también. Aquí encontrarás contenidos creados desde la perpectiva de un programador autodidacta que no estudió ciencias de la computación.&lt;/p&gt;
 &lt;h2 id="que-es-python"&gt;Qué es Python?&lt;/h2&gt;
 &lt;p&gt;Python es un lenguaje de programación de alto nivel. Su sintaxis es muy clara y legible. Sus construcciones sintácticas se asemejan mucho al idioma inglés. Estas, y otras características, han propiciado que Python se convierta en un lenguaje muy popular, llegando a convertirse en una herramienta imprescindible para muchos profesionales de distintas disciplinas e industrias.&lt;/p&gt;
 &lt;p&gt;He aquí como la &lt;a href="https://docs.python.org/es/3/index.html"&gt;documentatión oficial&lt;/a&gt; define a Python:&lt;/p&gt;
@@ -395,6 +393,11 @@ Hola,&lt;span class="w"&gt; &lt;/span&gt;mundo!
 
 &lt;p&gt;En este caso, el interprete Python corre en modo script usando tú archivo &lt;code&gt;hola.py&lt;/code&gt; como entrada. El interprete lee tu código y lo ejecuta línea por línea produciendo la salida deseada.&lt;/p&gt;
 &lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
-&lt;p&gt;Aprender a programar es una meta compleja y que demanda de estudio y dedicación. Cumplir esta meta en un idioma que no es el tuyo implica un esfuerzo aún mayor. En Python Scouts encontrarás recursos para aprender a programar en Python en idioma español. Ese es el primer objetivo del sitio.&lt;/p&gt;
-&lt;p&gt;Hoy comienza el viaje! Has comenzado por aprender qué es Python y para qué puedes emplearlo. También has aprendido como escribir tu primer programa usuando el lenguaje. Más importante aún, has aprendido como ejecutar código Python desde una sesión interactiva y como un programa ejecutable. Estos conocimientos te servirán de base en tu empeño de aprender a programar con Python.&lt;/p&gt;
-&lt;p&gt;Bienvenido a Python Scouts!&lt;/p&gt;</content><category term="Guías"></category><category term="python"></category></entry></feed>
+&lt;p&gt;Has aprendido a escribir tu primer programa, el &lt;em&gt;Hola, mundo!&lt;/em&gt; usuando Python. Los pasos necesarios para escribir y ejecutar este programa se resumen en:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Crea un archivo Python (&lt;code&gt;hola.py&lt;/code&gt;) en tu editor de código favorito&lt;/li&gt;
+&lt;li&gt;Añade la línea de código &lt;code&gt;print("Hola, mundo!")&lt;/code&gt; y salva los cambios&lt;/li&gt;
+&lt;li&gt;Abre una ventana de línea de comandos o terminal en tu carpeta de trabajo&lt;/li&gt;
+&lt;li&gt;Ejecuta el comando &lt;code&gt;python hola.py&lt;/code&gt; para correr el programa&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Una vez que hayas ejecutado estos pasos, verás la frase &lt;em&gt;Hola, mundo!&lt;/em&gt; en la pantalla de tu ordenador. Eso es todo! Ya has escrito tu primer programa en Python! Más importante aún, has aprendido a ejecutar código Python. Estos conocimientos te servirán de base en tu empeño de aprender el lenguaje.&lt;/p&gt;</content><category term="Guías"></category><category term="python"></category></entry></feed>

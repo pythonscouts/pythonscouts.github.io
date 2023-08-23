@@ -15,9 +15,9 @@ title = "Contacto"
 [[input.files]]
 path = "python-palabras-clave/index.html"
 url = "/python-palabras-clave/"
-title = "Palabras clave o reservadas en Python"
+title = "Palabras clave o reservadas de Python: cuáles son?"
 
 [[input.files]]
 path = "python-hola-mundo/index.html"
 url = "/python-hola-mundo/"
-title = "Hola, mundo! Bienvenidos a Python Scouts!"
+title = "Cómo escribir tu primer programa en Python: Hola, mundo!"
