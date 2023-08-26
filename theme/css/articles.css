@@ -1,3 +1,5 @@
+@import "inline_code.css"
+
 /* Quotations */
 blockquote {
     background: #F3F3F3;
@@ -68,15 +70,6 @@ thead {
 
 .toc a:hover {
     text-decoration: underline;
-}
-
-code {
-    font-family: "Source Code Pro", monospace;
-    font-size: 1em;
-    background-color: #F3F3F3;
-    padding: 0.1em 0.3em;
-    border-radius: 3px;
-    color: #000000;
 }
 
 /* Syntax highlighter for code */
