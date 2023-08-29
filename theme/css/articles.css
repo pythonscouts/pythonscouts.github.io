@@ -2,21 +2,42 @@
 
 /* Quotations */
 blockquote {
-    background: #F3F3F3;
+    background-color: #F3F3F3;
+    border: 1px solid #dfe4ea;
     border-left: 5px solid #dfe4ea;
-    padding: 0.5em 10px;
-    quotes: "\201C""\201D""\2018""\2019";
+    color: black;
+    padding: 1em;
+    margin-top: 1.3em;
+    margin-bottom: 1.3em;
+    font-style: italic;
 }
 blockquote:before {
     color: #dfe4ea;
-    content: open-quote;
+    content: "\201C";
     font-size: 3em;
     line-height: 0.1em;
     margin-right: 0.25em;
     vertical-align: -0.4em;
 }
-blockquote a {
+
+/* Note */
+article aside {
+    background-color: #D1E6DD;
+    border: 1px solid #008800;
+    border-left: 5px solid #008800;
+    color: black;
+    padding: 1em;
+    margin-top: 1.3em;
+    margin-bottom: 1.3em;
+    font-style: italic;
+}
+article aside:before {
     color: #008800;
+    content: "NOTA:";
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 0.1em;
+    margin-right: 0.25em;
 }
 
 /* Tables */

@@ -1,5 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"></link><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"></link><id>https://pythonscouts.com/</id><updated>2023-08-17T05:15:00+02:00</updated><subtitle>Una web en Español para aprender a programar con Python.</subtitle><entry><title>Palabras clave o reservadas de Python: cuáles son?</title><link href="https://pythonscouts.com/python-palabras-clave/" rel="alternate"></link><published>2023-08-17T05:15:00+02:00</published><updated>2023-08-17T05:15:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2023-08-17:/python-palabras-clave/</id><summary type="html">&lt;p&gt;Las &lt;strong&gt;palabras clave&lt;/strong&gt; o &lt;strong&gt;palabras reservadas&lt;/strong&gt; (&lt;em&gt;keywords&lt;/em&gt;) de Python son un conjunto de palabras en idioma Inglés que tienen un significado especial para el lenguaje. Estas palabras constituyen la base de la sintaxis de Python.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Por esta razón, es importante que las conozcas y sepas su rol en el lenguaje. Con ellas, podrás escribir diferentes tipos de sentencias que, en su conjunto, conformarán tus programas y aplicaciones Python.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"></link><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"></link><id>https://pythonscouts.com/</id><updated>2023-08-29T19:00:00+02:00</updated><subtitle>Una web en Español para aprender a programar con Python.</subtitle><entry><title>Cómo instalar Python en tu sistema operativo macOS?</title><link href="https://pythonscouts.com/instalar-python-macos/" rel="alternate"></link><published>2023-08-29T19:00:00+02:00</published><updated>2023-08-29T19:00:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2023-08-29:/instalar-python-macos/</id><summary type="html">&lt;p&gt;Instalar Python en tu odenador es el primer paso para aprender el lenguaje. Si tienes una computadora Mac, aquí aprenderás los pasos necesarios para instalar Python de manera rápida y confiable en el sistema operativo macOS.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Para instalar Python, emplearás el &lt;strong&gt;instalador oficial&lt;/strong&gt; para macOS que puedes descargar desde &lt;a href="https://www.python.org/"&gt;&lt;code&gt;Python.org&lt;/code&gt;&lt;/a&gt;. Es recomendable que tengas experiencia de trabajo en sistemas macOS para poder seguir esta guía de instalación de Python. Es especialmente importante tener conocimientos básicos sobre la terminal del sistema y cómo emplearla.&lt;/p&gt;
+&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#prerequisitos"&gt;Prerequisitos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#instalar-python-en-macos-usando-el-instalador-oficial"&gt;Instalar Python en macOS usando el instalador oficial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#paso-1-descargar-el-instalador-de-python-para-macos"&gt;Paso 1: Descargar el instalador de Python para macOS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#paso-2-ejecutar-el-instalador-de-python"&gt;Paso 2: Ejecutar el instalador de Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#paso-3-verificar-la-instalacion"&gt;Paso 3: Verificar la instalación&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#resumiendo"&gt;Resumiendo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="prerequisitos"&gt;Prerequisitos&lt;/h2&gt;
+&lt;p&gt;Para completar los pasos de esta guía de instalación de Python en macOS, necesitas una computadora con este sistema operativo. Además, requieres tener privilegios root y una conexión a Internet.&lt;/p&gt;
+&lt;p&gt;Lo demás es solo seguir las instrucciones más abajo!&lt;/p&gt;
+&lt;h2 id="instalar-python-en-macos-usando-el-instalador-oficial"&gt;Instalar Python en macOS usando el instalador oficial&lt;/h2&gt;
+&lt;p&gt;La manera recomendada para instalar Python en una computadora Mac es emplear el instalador oficial que provee la &lt;a href="https://www.python.org/psf-landing/"&gt;Python Sofware Foundation (PSF)&lt;/a&gt; en el sitio web del lenguaje, &lt;a href="https://www.python.org/"&gt;&lt;code&gt;Python.org&lt;/code&gt;&lt;/a&gt;. Los pasos para completar la instalación son los siguientes:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Descargar el instalador de Python para macOS dede la &lt;a href="https://www.python.org/downloads/"&gt;página de descargas&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Ejecutar el instalador y seguir las instrucciones en pantalla.&lt;/li&gt;
+&lt;li&gt;Verificar que la instalación se completó con éxito.&lt;/li&gt;
+&lt;li&gt;🐍&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;A continuación encontrarás una explicación detallada de estos pasos. Presta especial atención al paso número dos. De él dependerá el éxito de la instalación.&lt;/p&gt;
+&lt;h2 id="paso-1-descargar-el-instalador-de-python-para-macos"&gt;Paso 1: Descargar el instalador de Python para macOS&lt;/h2&gt;
+&lt;p&gt;Lo primero que debes hacer es descargar el instalador de Python para macOS desde el sitio oficial del lenguaje, &lt;a href="https://www.python.org/"&gt;Python.org&lt;/a&gt;, que luce de la manera siguiente:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/articles/instalar-python-macos/sitio-python.org.png" class="img-fluid mt-2" alt="Sitio oficial de Python"&gt;&lt;/p&gt;
+&lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Sitio oficial de Python&lt;/em&gt;&lt;/div&gt;
+
+&lt;p&gt;Una vez en esta página, selecciona la opción &lt;em&gt;Downloads&lt;/em&gt;. Generalmente, cuando seleccionas esta opción, el sitio reconoce tu sistema operativo actual y te lleva directamente a la página de descargas correspondiente.&lt;/p&gt;
+&lt;p&gt;Deberás ver la siguiente página en tu pantalla:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/articles/instalar-python-macos/pagina-descargas-python.png" class="img-fluid mt-2" alt="Página de descargas de Python para macOS"&gt;&lt;/p&gt;
+&lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Página de descargas de Python para macOS&lt;/em&gt;&lt;/div&gt;
+
+&lt;p&gt;Una vez en la página de descargas, es recomendable que descargues la versión más reciente que aparecerá como la primera opción. De esta manera, tendrás acceso a las últimas novedades del lenguaje y estarás al día con las correcciones de errores y los parches de seguridad.&lt;/p&gt;
+&lt;p&gt;También puedes seleccionar una versión más antigua si lo deseas. Para esto, desplazate hacia abajo en la página de descargas e identifica la versión deseada.&lt;/p&gt;
+&lt;aside&gt;
+En esta guía, emplearás el instalador universal (&lt;code&gt;.pkg&lt;/code&gt;) de 64-bit para macOS 10.9 o superior. Este instalador provee la versión 3.11.5 de Python. Puedes descargarlo directamente haciendo click en el botón amarillo.
+&lt;/aside&gt;
+
+&lt;p&gt;Luego de estas consideraciones, has click en la versión de tu preferencia para comenzar la descarga del instalador de Python. Una vez concluida la descarga, estás listo para el próximo paso.&lt;/p&gt;
+&lt;h2 id="paso-2-ejecutar-el-instalador-de-python"&gt;Paso 2: Ejecutar el instalador de Python&lt;/h2&gt;
+&lt;p&gt;Ejecuta el instalador de Python ya sea desde tu carpeta de descargas, desde tu navegador, o desde el dock de tu escritorio macOS. Al ejecutar el programa, aparecerá la ventana siguiente en tu pantalla:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/articles/instalar-python-macos/instalador-python-ventana-inicial.png" class="img-fluid mt-2" alt="Instalador de Python, ventana inicial"&gt;&lt;/p&gt;
+&lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Instalador de Python, ventana inicial&lt;/em&gt;&lt;/div&gt;
+
+&lt;p&gt;Es la ventana inicial del instalador de Python. Sí, está en inglés, pero no hay de qué preocuparse. Tómalo como una práctica necesaria. Además, es probable que en tu ordenador te aparezca todo en español.&lt;/p&gt;
+&lt;p&gt;En esta pantalla, Python 3.11.5 te da la beinvenida a su instalador. Se trata de la versión diseñada para macOS 10.9 o superior.&lt;/p&gt;
+&lt;p&gt;Puedes hacer click en el botón &lt;em&gt;Continue&lt;/em&gt; (Continuar) para proseguir con la instalación. Esta acción te lleva a la segunda ventana del instalador, &lt;em&gt;Read Me&lt;/em&gt;, la cual luce de la manera siguiente:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/articles/instalar-python-macos/instalador-python-segunda-ventana-readme.png" class="img-fluid mt-2" alt="Instalador de Python, segunda ventana: Readme"&gt;&lt;/p&gt;
+&lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Instalador de Python, segunda ventana: Readme&lt;/em&gt;&lt;/div&gt;
+
+&lt;p&gt;En esta ventana, encontrarás información importante sobre la instalación. Puedes leer todo el contenido si lo deseas. Una vez que concluyas la lectura, haz click nuevamente en el botón &lt;em&gt;Continue&lt;/em&gt;. Accederás a la tercera ventana del instalador:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/articles/instalar-python-macos/instalador-python-tercera-ventana-licencia.png" class="img-fluid mt-2" alt="Instalador de Python, tercera ventana: Licencia"&gt;&lt;/p&gt;
+&lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Instalador de Python, tercera ventana: Licencia&lt;/em&gt;&lt;/div&gt;
+
+&lt;p&gt;Aquí encontrarás informción sobre la licencia de software bajo la cual se distribuye Python. Nuevamente, puedes leerla si es un tema que te interesa. Para tu tranquilidad, la licencia de Python pertime el uso del lenguaje tanto en aplicaciones de &lt;a href="https://es.wikipedia.org/wiki/C%C3%B3digo_abierto"&gt;código abierto&lt;/a&gt;, como en proyectos comerciales.&lt;/p&gt;
+&lt;p&gt;Haz click en el botón &lt;em&gt;Continue&lt;/em&gt; y acepta los términos de la licencia para proseguir. La siguiente ventana te permitirá seleccionar el disco de tu Mac donde deseas instalar Python. Si tu Mac tiene la configuración de discos por defecto, entonces el disco destino será &lt;strong&gt;Macintosh HD&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/articles/instalar-python-macos/instalador-python-cuarta-ventana-hd-destino.png" class="img-fluid mt-2" alt="Instalador de Python, cuarta ventana: Disco destino"&gt;&lt;/p&gt;
+&lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Instalador de Python, cuarta ventana: Disco destino&lt;/em&gt;&lt;/div&gt;
+
+&lt;p&gt;Con la configuración de discos por defecto, no tienes que realizar ningún paso adicional. Solo has click nuevamente en el botón &lt;em&gt;Continue&lt;/em&gt; del instalador.&lt;/p&gt;
+&lt;p&gt;La próxima ventana te permitirá seleccionar el tipo de instalación. Aquí tienes dos opciones:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Instalación &lt;strong&gt;estándard&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Instalcaión &lt;strong&gt;personalizada&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;La ventana de instalación estándard luce como se muestra a continuación:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/articles/instalar-python-macos/instalador-python-quinta-ventana-instalacion-estandard.png" class="img-fluid mt-2" alt="Instalador de Python, quinta ventana: Instalación estándard"&gt;&lt;/p&gt;
+&lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Instalador de Python, quinta ventana: Instalación estándard&lt;/em&gt;&lt;/div&gt;
+
+&lt;p&gt;Este tipo de instalación incluye todas las funcionalidades de Python para macOS. Por lo tanto, es la instalación recomendada si estás comenzando con Python.&lt;/p&gt;
+&lt;p&gt;Si deseas personalizar tu instalación, puedes seleccionar el botón &lt;em&gt;Customize&lt;/em&gt; para acceder a la vista siguiente:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/articles/instalar-python-macos/instalador-python-quinta-ventana-instalacion-personalizada.png" class="img-fluid mt-2" alt="Instalador de Python, quinta ventana: Instalación personalizada"&gt;&lt;/p&gt;
+&lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Instalador de Python, quinta ventana: Instalación personalizada&lt;/em&gt;&lt;/div&gt;
+
+&lt;p&gt;En esta ventana, puedes hacer click en cada una de las opciones para obtener información adicional. Por ejemplo, si pinchas la opción &lt;em&gt;GUI Applications&lt;/em&gt;, obtendrás la sigiuente vista:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/articles/instalar-python-macos/instalador-python-quinta-ventana-instalacion-personalizada-opciones.png" class="img-fluid mt-2" alt="Instalador de Python, quinta ventana: Instalación personalizada, opciones"&gt;&lt;/p&gt;
+&lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Instalador de Python, quinta ventana: Instalación personalizada, opciones&lt;/em&gt;&lt;/div&gt;
+
+&lt;p&gt;Si no tienes pensado emplear IDLE en tu proceso de aprendizaje y desarrollo, entonces puedes desmarcar esta opción. El resto de las opciones son recomendables para evitar futuros problemas, así que no deberías desmarcarlas.&lt;/p&gt;
+&lt;aside&gt;
+IDLE es el entorno de desarrollo integrado (IDE) por defecto de Python. Este programa provee una interfaz gráfica para trabajo con el lenguaje y su intérprete. Como regla general, está includido en el instalador oficial en todas sus versiones.
+&lt;/aside&gt;
+
+&lt;p&gt;Una vez que hayas personalizado tu instalación, puedes hacer click en el botón &lt;em&gt;Install&lt;/em&gt; para comenzar. Deberás introducir tu nombre de usuario y tu contraseña. Ten en cuenta que debes tener privilegios administrativos para concluir la instalación.&lt;/p&gt;
+&lt;p&gt;El proceso de instalación comenzará:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/articles/instalar-python-macos/instalador-python-sexta-ventana-instalacion.png" class="img-fluid mt-2" alt="Instalador de Python, sexta ventana: Instalación"&gt;&lt;/p&gt;
+&lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Instalador de Python, sexta ventana: Instalación&lt;/em&gt;&lt;/div&gt;
+
+&lt;p&gt;La instalación no debe tomar mucho tiempo. En cualquier caso, puedes recostarte y relajarte mientra el instalador de Python hace su trabajo. Una vez concluido el proceso, recibirás un resumen de la instalación:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/articles/instalar-python-macos/instalador-python-septima-ventana-resumen.png" class="img-fluid mt-2" alt="Instalador de Python, séptima ventana: Resumen instalación"&gt;&lt;/p&gt;
+&lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Instalador de Python, séptima ventana: Resumen instalación&lt;/em&gt;&lt;/div&gt;
+
+&lt;p&gt;Esta ventana es la confirmación de que ha concluido la instalación de Python en tu sistema operativo macOS. Es importante que instales los &lt;a href="https://es.wikipedia.org/wiki/Seguridad_de_la_capa_de_transporte"&gt;certificados SSL&lt;/a&gt; para evitar problemas de conexión cuando emplees algunas de las herramientas de Python.&lt;/p&gt;
+&lt;p&gt;Para instalar los certificados, ve a la carpeta de aplicaciones de tu Mac, localiza la carpeta Python 3.11, has click derecho sobre el archivo &lt;code&gt;Install Certificates.command&lt;/code&gt; y selecciona la opción &lt;code&gt;Abrir con -&amp;gt; Terminal.app&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="paso-3-verificar-la-instalacion"&gt;Paso 3: Verificar la instalación&lt;/h2&gt;
+&lt;p&gt;Una vez que hayas ejecutados los pasos anteriores, Python estará instalado en tu sistema operativo. Para confirmar que lo tienes, abre una ventana de Terminal y ejecuta el comando siguiente:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;--version&lt;span class="w"&gt; &lt;/span&gt;
+Python&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.11.5
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Este comando imprime la versión de Python que tienes instalada por defecto. Con esto has concluido la instalación de Python usando el instalador oficial para masOS. Ahora estás listo para escribit tu &lt;a href="https://pythonscouts.com/python-hola-mundo/"&gt;primer programa&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
+&lt;p&gt;Instalar Python en tu ordenador es el primer paso en tu empeño de aprender a programar con el lenguaje. Nuevamente, recuerda que los pasos a seguir para completar la instalación son los siguientes:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Descargar el instalador de Python para macOS dede la &lt;a href="https://www.python.org/downloads/"&gt;página de descargas&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Ejecutar el instalador y seguir las instrucciones en pantalla.&lt;/li&gt;
+&lt;li&gt;Verificar que la instalación se completó con éxito.&lt;/li&gt;
+&lt;li&gt;🐍&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Luego de completados estos pasos, estás listo para comenzar a explorar las bondades de Python como lenguaje de programación.&lt;/p&gt;</content><category term="Guías"></category><category term="python"></category><category term="macos"></category></entry><entry><title>Palabras clave o reservadas de Python: cuáles son?</title><link href="https://pythonscouts.com/python-palabras-clave/" rel="alternate"></link><published>2023-08-17T05:15:00+02:00</published><updated>2023-08-17T05:15:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2023-08-17:/python-palabras-clave/</id><summary type="html">&lt;p&gt;Las &lt;strong&gt;palabras clave&lt;/strong&gt; o &lt;strong&gt;palabras reservadas&lt;/strong&gt; (&lt;em&gt;keywords&lt;/em&gt;) de Python son un conjunto de palabras en idioma Inglés que tienen un significado especial para el lenguaje. Estas palabras constituyen la base de la sintaxis de Python.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Por esta razón, es importante que las conozcas y sepas su rol en el lenguaje. Con ellas, podrás escribir diferentes tipos de sentencias que, en su conjunto, conformarán tus programas y aplicaciones Python.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;En este tutorial, aprenderás:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Qué son las &lt;strong&gt;palabras clave&lt;/strong&gt; o &lt;strong&gt;reservadas&lt;/strong&gt;?&lt;/li&gt;
