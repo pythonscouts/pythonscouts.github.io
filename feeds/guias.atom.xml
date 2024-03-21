@@ -107,8 +107,8 @@ IDLE es el entorno de desarrollo integrado (IDE) por defecto de Python. Este pro
 &lt;p&gt;Esta ventana es la confirmación de que ha concluido la instalación de Python en tu sistema operativo Windows. Es recomendable que visites el link a la página sobre &lt;a href="https://docs.python.org/es/3.11/using/windows.html"&gt;cómo usar Python en Windows&lt;/a&gt;. Allí encontrás información valiosa que puede servirte de mucho.&lt;/p&gt;
 &lt;h3 id="paso-3-verificar-la-instalacion-de-python"&gt;Paso 3: Verificar la instalación de Python&lt;/h3&gt;
 &lt;p&gt;Una vez que hayas ejecutado los pasos anteriores, Python estará instalado en tu sistema operativo. Para confirmar que lo tienes, abre una ventana de PowerShell y ejecuta el comando siguiente:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;PS&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;--version
-Python&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.11.5
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;PS&amp;gt; python --version
+Python 3.11.5
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Este comando imprime la versión de Python que tienes instalada por defecto. Con esto has concluido la instalación de Python usando el instalador oficial para Windows. Ahora estás listo para escribit tu &lt;a href="https://pythonscouts.com/python-hola-mundo/"&gt;primer programa&lt;/a&gt;.&lt;/p&gt;
@@ -122,7 +122,8 @@ Python&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.1
 &lt;li&gt;Has click en el &lt;em&gt;Obtener&lt;/em&gt; (&lt;em&gt;Get&lt;/em&gt;) para descargar e instalar la versión seleccionada.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Una vez ejecutados esto pasos, deberás tener Python instalado en tu sistema operativo. Nuevamente, para confirmar que la instalación fue exitosa, abre tu PowerShell y ejecutal el comando siguiente:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt; &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="n"&gt;-version&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;PS&amp;gt; Python --version
+Python 3.11.5
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;El instalador de Python disponible en la tienda de aplicaciones Microsoft Store también incluye &lt;a href="https://pip.pypa.io/en/stable/"&gt;&lt;code&gt;pip&lt;/code&gt;&lt;/a&gt;, el gestor de paquetes por defecto de Python. Puedes confirmar que &lt;code&gt;pip&lt;/code&gt; también está instalado ejecutando &lt;code&gt;pip --version&lt;/code&gt; en tu sesión de PowerShell.&lt;/p&gt;
@@ -230,8 +231,8 @@ IDLE es el entorno de desarrollo integrado (IDE) por defecto de Python. Este pro
 &lt;p&gt;Para instalar los certificados, ve a la carpeta de aplicaciones de tu Mac, localiza la carpeta Python 3.11, has click derecho sobre el archivo &lt;code&gt;Install Certificates.command&lt;/code&gt; y selecciona la opción &lt;code&gt;Abrir con -&amp;gt; Terminal.app&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="paso-3-verificar-la-instalacion"&gt;Paso 3: Verificar la instalación&lt;/h2&gt;
 &lt;p&gt;Una vez que hayas ejecutados los pasos anteriores, Python estará instalado en tu sistema operativo. Para confirmar que lo tienes, abre una ventana de Terminal y ejecuta el comando siguiente:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;--version&lt;span class="w"&gt; &lt;/span&gt;
-Python&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.11.5
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;--version&lt;span class="w"&gt; &lt;/span&gt;
+&lt;span class="go"&gt;Python 3.11.5&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Este comando imprime la versión de Python que tienes instalada por defecto. Con esto has concluido la instalación de Python usando el instalador oficial para masOS. Ahora estás listo para escribit tu &lt;a href="https://pythonscouts.com/python-hola-mundo/"&gt;primer programa&lt;/a&gt;.&lt;/p&gt;
@@ -293,7 +294,7 @@ Python&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.1
 &lt;h3 id="hola-mundo-desde-una-sesion-interactiva"&gt;&lt;code&gt;Hola, mundo!&lt;/code&gt; desde una sesión interactiva&lt;/h3&gt;
 &lt;p&gt;Para comenzar una sesión interactiva de Python, abre una ventana de línea de comandos o terminal en tu computadora. Los pasos para abrir una terminal variarán en dependencia de tu sistema operativo. En macOS y Linux, generalmente encontrarás una aplicación llamada &lt;em&gt;Terminal&lt;/em&gt;. Si trabajas en Windows, entonces puedes usar algo como PowerShell.&lt;/p&gt;
 &lt;p&gt;Una vez que tengas tu terminal abierta, ejecuta el siguiente comando:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;python
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;python
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Este comando inicia el interprete Python. El interprete es el programa que te permite interpretar y ejecutar código escrito en lenguaje Python.&lt;/p&gt;
@@ -315,8 +316,8 @@ Python&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.1
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Una vez que hayas creado tu archivo &lt;code&gt;hola.py&lt;/code&gt; y añadido el código necesario, puedes abrir una nueva terminal y ejecutar el siguiente comando:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;hola.py
-Hola,&lt;span class="w"&gt; &lt;/span&gt;mundo!
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;hola.py
+&lt;span class="go"&gt;Hola, mundo!&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;En este caso, el interprete Python corre en modo script usando tú archivo &lt;code&gt;hola.py&lt;/code&gt; como entrada. El interprete lee tu código y lo ejecuta línea por línea produciendo la salida deseada.&lt;/p&gt;

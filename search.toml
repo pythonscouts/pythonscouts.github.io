@@ -13,6 +13,11 @@ url = "/contacto/"
 title = "Contacto"
 
 [[input.files]]
+path = "ejecutar-script-python/index.html"
+url = "/ejecutar-script-python/"
+title = "Cómo ejecutar un script Python?"
+
+[[input.files]]
 path = "instalar-python-windows/index.html"
 url = "/instalar-python-windows/"
 title = "Cómo instalar Python en tu sistema operativo Windows?"

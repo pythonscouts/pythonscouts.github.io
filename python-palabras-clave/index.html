@@ -218,25 +218,25 @@
 <p>Debes tener en cuenta que el número de palabras clave varia en dependencia de la versión de Python que estés usando actualmente.</p>
 <p>Otra manera de consultar las palabras clave de Python es mediante la función <code>help()</code>. Se trata de una función incluida (<em>built-in</em>) que te permite consultar la documentación y obtener ayuda rápida sobre cualquier objeto en Python.</p>
 <p>Para consultar las palabras clave de Python por esta vía, primeramente ejecuta <code>help()</code> para entrar al <strong>sistema de ayuda integrado</strong> de Python. Luego consulta el contenido de la página de palabras clave usando el comando <code>keywords</code> como en el ejemplo siguiente:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">help</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">help</span><span class="p">()</span>
 
-<span class="go">Welcome to Python 3.11&#39;s help utility!</span>
+<span class="n">Welcome</span> <span class="n">to</span> <span class="n">Python</span> <span class="mf">3.11</span><span class="s1">&#39;s help utility!</span>
 
-<span class="go">...</span>
+<span class="o">...</span>
 
-<span class="go">help&gt; keywords</span>
+<span class="n">help</span><span class="o">&gt;</span> <span class="n">keywords</span>
 
-<span class="go">Here is a list of the Python keywords.  Enter any keyword to get more help.</span>
+<span class="n">Here</span> <span class="ow">is</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">the</span> <span class="n">Python</span> <span class="n">keywords</span><span class="o">.</span>  <span class="n">Enter</span> <span class="nb">any</span> <span class="n">keyword</span> <span class="n">to</span> <span class="n">get</span> <span class="n">more</span> <span class="n">help</span><span class="o">.</span>
 
-<span class="go">False               class               from                or</span>
-<span class="go">None                continue            global              pass</span>
-<span class="go">True                def                 if                  raise</span>
-<span class="go">and                 del                 import              return</span>
-<span class="go">as                  elif                in                  try</span>
-<span class="go">assert              else                is                  while</span>
-<span class="go">async               except              lambda              with</span>
-<span class="go">await               finally             nonlocal            yield</span>
-<span class="go">break               for                 not</span>
+<span class="kc">False</span>               <span class="k">class</span>               <span class="nc">from</span>                <span class="ow">or</span>
+<span class="kc">None</span>                <span class="k">continue</span>            <span class="k">global</span>              <span class="k">pass</span>
+<span class="kc">True</span>                <span class="k">def</span>                 <span class="nf">if</span>                  <span class="k">raise</span>
+<span class="ow">and</span>                 <span class="k">del</span>                 <span class="kn">import</span>              <span class="nn">return</span>
+<span class="k">as</span>                  <span class="nn">elif</span>                <span class="ow">in</span>                  <span class="k">try</span>
+<span class="k">assert</span>              <span class="k">else</span>                <span class="ow">is</span>                  <span class="k">while</span>
+<span class="k">async</span>               <span class="k">except</span>              <span class="k">lambda</span>              <span class="k">with</span>
+<span class="k">await</span>               <span class="k">finally</span>             <span class="k">nonlocal</span>            <span class="k">yield</span>
+<span class="k">break</span>               <span class="k">for</span>                 <span class="ow">not</span>
 </code></pre></div>
 
 <p>En este caso, cuando ejecutas <code>help()</code> en una sesión interactiva de Python, entras inmediatamente al sistema de ayuda integrado del lenguaje. El indicador (<em>prompt</em>) <code>help&gt;</code> te hace saber que estás dentro. Una vez allí, tecleas el comando <code>keywords</code> y presionas <em>Enter</em>. Esta acción te devuelve el listado de palabras clave de tu versión específica del lenguaje.</p>
@@ -402,23 +402,23 @@
 <p>En determinadas situaciones, sobre todo cuando estás comenzando con Python, necesitarás consultar rápidamente el objetivo de determinada palabra clave. En esos casos, puedes auxiliarte de <code>help()</code> nuevamente.</p>
 <p>Una vez que entras al sistema de ayuda integrado usando <code>help()</code>, puedes introducir la palabra clave que deseas consultar y presionar <em>Enter</em>. De inmediato te aparecerá en pantalla la documentación de la palabra en cuestión.</p>
 <p>Por ejemplo, si introduces <code>if</code> y presionas Enter, entonces el sistema de ayuda entrará directamente a la página que documenta esta sentencia y mostrará la salida siguiente:</p>
-<div class="highlight"><pre><span></span><code><span class="go">The &quot;if&quot; statement</span>
-<span class="go">******************</span>
+<div class="highlight"><pre><span></span><code>The &quot;if&quot; statement
+******************
 
-<span class="go">The &quot;if&quot; statement is used for conditional execution:</span>
+The &quot;if&quot; statement is used for conditional execution:
 
-<span class="go">   if_stmt ::= &quot;if&quot; assignment_expression &quot;:&quot; suite</span>
-<span class="go">               (&quot;elif&quot; assignment_expression &quot;:&quot; suite)*</span>
-<span class="go">               [&quot;else&quot; &quot;:&quot; suite]</span>
+   if_stmt ::= &quot;if&quot; assignment_expression &quot;:&quot; suite
+               (&quot;elif&quot; assignment_expression &quot;:&quot; suite)*
+               [&quot;else&quot; &quot;:&quot; suite]
 
-<span class="go">It selects exactly one of the suites by evaluating the expressions one</span>
-<span class="go">by one until one is found to be true (see section Boolean operations</span>
-<span class="go">for the definition of true and false); then that suite is executed</span>
-<span class="go">(and no other part of the &quot;if&quot; statement is executed or evaluated).</span>
-<span class="go">If all expressions are false, the suite of the &quot;else&quot; clause, if</span>
-<span class="go">present, is executed.</span>
+It selects exactly one of the suites by evaluating the expressions one
+by one until one is found to be true (see section Boolean operations
+for the definition of true and false); then that suite is executed
+(and no other part of the &quot;if&quot; statement is executed or evaluated).
+If all expressions are false, the suite of the &quot;else&quot; clause, if
+present, is executed.
 
-<span class="go">Related help topics: TRUTHVALUE</span>
+Related help topics: TRUTHVALUE
 </code></pre></div>
 
 <p>Si introduces una palabra clave o palabra reservada cualquiera (<code>if</code> en el ejemplo anterior) en el indicador (<em>prompt</em>) del sistema de ayuda de Python, obtienes acceso directo a la documentación de la misma. Esta documentación solo aparece en idioma inglés. Si desea obtener ayuda en idioma español, entonces puedes usar la <a href="https://docs.python.org/es/3/index.html">documentación oficial en español</a>.</p>

@@ -1,5 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"></link><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"></link><id>https://pythonscouts.com/</id><updated>2023-09-25T17:30:00+02:00</updated><subtitle>Una web en Español para aprender a programar con Python.</subtitle><entry><title>Cómo instalar Python en tu sistema operativo Windows?</title><link href="https://pythonscouts.com/instalar-python-windows/" rel="alternate"></link><published>2023-09-25T17:30:00+02:00</published><updated>2023-09-25T17:30:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2023-09-25:/instalar-python-windows/</id><summary type="html">&lt;p&gt;Instalar Python en tu computador es el primer paso para aprender el lenguaje. Si usas Windows 10 o superior, aquí encontrarás los pasos necesarios para hacerlo.&lt;/p&gt;</summary><content type="html">&lt;p&gt;En esta guía, emplearás el &lt;strong&gt;instalador oficial&lt;/strong&gt; para Windows que puedes descargar desde &lt;a href="https://www.python.org/"&gt;&lt;code&gt;Python.org&lt;/code&gt;&lt;/a&gt;. También conocerás como Instalar Python desde la tienda de aplicaciones &lt;strong&gt;Microsoft Store&lt;/strong&gt;. Esta última opción es la recomendada por Microsoft, aunque el instalador oficial funciona perfectamente.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"></link><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"></link><id>https://pythonscouts.com/</id><updated>2024-03-21T18:40:00+01:00</updated><subtitle>Una web en Español para aprender a programar con Python.</subtitle><entry><title>Cómo ejecutar un script Python?</title><link href="https://pythonscouts.com/ejecutar-script-python/" rel="alternate"></link><published>2024-03-21T18:40:00+01:00</published><updated>2024-03-21T18:40:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2024-03-21:/ejecutar-script-python/</id><summary type="html">&lt;p&gt;Un script Python es un archivo que contiene una secuencia de código Python ejecutable. Este tipo de archivo está diseñado para ser ejecutado directamente, de la misma manera que un programa o aplicación.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ser capaz de ejecutar tus scripts y programas es una de las habilidades más importantes que debes tener como programador Python. En realidad ejecutar el código es la única forma de asegurarte que funciona como esperas. Además, para qué escribir código sino para ejecutarlo y que haga cosas por tí?&lt;/p&gt;
+&lt;p&gt;En este tutorial, aprenderás qué es un script o programa ejecutable en Python, cómo ejecutar scripts usando el comando &lt;code&gt;python&lt;/code&gt; o el propio script como un comando. Finalmente, aprenderás que también es posible ejecutar tus scripts desde tu IDE o editor de texto favorito, lo cual es muy conveniente durante el proceso de desarrollo.&lt;/p&gt;
+&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#scripts-y-programas-en-python"&gt;Scripts y programas en Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#ejecutar-scripts-con-el-comando-python"&gt;Ejecutar scripts con el comando python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#ejecutar-scripts-directamente-como-un-comando"&gt;Ejecutar scripts directamente como un comando&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#en-sistemas-unix"&gt;En sistemas Unix&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#en-sistemas-windows"&gt;En sistemas Windows&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#ejecutar-scripts-desde-un-ide-o-editor-de-texto"&gt;Ejecutar scripts desde un IDE o editor de texto&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#resumiendo"&gt;Resumiendo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="scripts-y-programas-en-python"&gt;Scripts y programas en Python&lt;/h2&gt;
+&lt;p&gt;En informática, el término &lt;strong&gt;script&lt;/strong&gt; se emplea para designar un archivo que contiene una secuencia lógica de órdenes o comandos que un ordenador puede ejecutar. Con esto en mente, puedes definir un &lt;strong&gt;script Python&lt;/strong&gt; como una secuencia de instrucciones escritas en este lenguaje y que se almacena en un archivo de texto plano. Este archivo está diseñado para ser ejecutado directamente por el usuario.&lt;/p&gt;
+&lt;p&gt;El término script también suele emplearse para designar archivos que contienen código &lt;strong&gt;interpretado&lt;/strong&gt;. Es decir, código que require un intérprete que lo ejecute. Por ejemplo, los scripts que regularmente se emplean en sistemas Unix y que son escritos en lenguaje &lt;a href="https://es.wikipedia.org/wiki/Bash"&gt;Bash&lt;/a&gt; u otro lenguaje &lt;a href="https://es.wikipedia.org/wiki/Shell_de_Unix"&gt;shell&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Los scripts pueden categorizarse como programas ejecutables. La diferencia es que los scripts son más simples que los programas o aplicaciones. Generalmente, se encargan de tareas específicas y poco complejas. Por ejemplo, puedes tener scripts para renombrar archivos en tu disco duro, automatizar la descarga de archivos, actualizar tu sistema, u otras tareas similares.&lt;/p&gt;
+&lt;p&gt;En contraste, los programas suelen ser más complejos y tener muchas más funcionalidades. Un editor de texto, un navegador, un particionador de discos son todos ejemplos de programas o aplicaciones. En cualquier caso, si usas Python para crear proyectos complejos como estos, tendrás un script de entrada (entry-point script) que te permite ejecutar el programa en cuestión.&lt;/p&gt;
+&lt;h2 id="ejecutar-scripts-con-el-comando-python"&gt;Ejecutar scripts con el comando &lt;code&gt;python&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Probablemente la manera más comúnmente empleada para ejecutar un script Python es usando el comando &lt;code&gt;python&lt;/code&gt; desde la línea de comandos o terminal del sistema operativo. Antes de entrar en el comando específico, abre tu editor de texto favorito, crea un nuevo archivo &lt;code&gt;.py&lt;/code&gt; y escribe el código siguiente en él:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Hola, Mundo!&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Este script es el típico programa &lt;a href="https://pythonscouts.com/python-hola-mundo/"&gt;&lt;code&gt;"Hola, Mundo!"&lt;/code&gt;&lt;/a&gt; que generalmente escribes cuando comienzas a aprender un lenguaje de programación. Guarda el archivo en tu directorio de trabajo y asígnale el nombre &lt;code&gt;script.py&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Abre una ventana de terminal en tu directorio de trabajo actual y ejecuta el siguiente comando:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;script.py
+&lt;span class="go"&gt;Hola, Mundo!&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Inmediatamente después de presionar &lt;em&gt;Enter&lt;/em&gt;, verás en pantalla la frase &lt;code&gt;Hola, Mundo!&lt;/code&gt;. Con eso acabas de ejecutar tu primer script Python! Es muy probable que uses esta forma de ejecutar scripts a menudo en tu ciclo de desarrollo o incluso en tus tareas diarias.&lt;/p&gt;
+&lt;p&gt;En sistemas Windows, además del comando &lt;code&gt;python&lt;/code&gt;, también puedes emplear el lanzador &lt;code&gt;py&lt;/code&gt; desde &lt;a href="https://es.wikipedia.org/wiki/PowerShell"&gt;PowerSell&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;PS&amp;gt; py script.py
+Hola, Mundo!
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;El lanzador &lt;code&gt;py&lt;/code&gt; está disponible en todas las versiones de Python a partir de 3.3, así que no debes tener problemas para emplearlo.&lt;/p&gt;
+&lt;h2 id="ejecutar-scripts-directamente-como-un-comando"&gt;Ejecutar scripts directamente como un comando&lt;/h2&gt;
+&lt;p&gt;Si estas acostumbrado a crear scripts Python utilitarios para automatizar tareas repetitivas en tu entorno de trabajo, entonces es probable que desees simplificar el proceso de ejecución. En la mayoría de los casos sería más práctico ejecutar el script directamente como un comando independiente sin el auxilio del comando &lt;code&gt;python&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;En las secciones siguientes, aprenderás cómo preparar tus scripts Python para ejecución directa desde la terminal de tu sistema operativo.&lt;/p&gt;
+&lt;h3 id="en-sistemas-unix"&gt;En sistemas Unix&lt;/h3&gt;
+&lt;p&gt;En sistemas Unix, como macOS y Linux, es posible ejecutar un script directamente desde la línea de comandos con unos pequeños arreglos. Primeramente, debes añadir un comentario especial a tu script justo en la primera línea:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/usr/bin/env python3&lt;/span&gt;
+
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Hola, Mundo!&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Este comentario especial es conocido como &lt;a href="https://es.wikipedia.org/wiki/Shebang"&gt;shebang&lt;/a&gt; y lo puede incluir en tu código fuente para decirle al shell de tu sistema operativo dónde puede encontrar el intérprete requerido para ejecutar el código del archivo.&lt;/p&gt;
+&lt;p&gt;Para ejecutar un script Python que ya incluye el shebang apropiado, debes también asignarle permisos de ejecución con el siguiente comando:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;chmod&lt;span class="w"&gt; &lt;/span&gt;+x&lt;span class="w"&gt; &lt;/span&gt;script.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Con este comando, le asignas permisos de ejecución a tu script. Ahora estás listo para ejecutarlo directamente empleando el nombre del archivo en la terminal:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;./script.py
+&lt;span class="go"&gt;Hola, Mundo!&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Listo! Tu script ahora funciona como si fuese un comando. Si deseas que tu script se parezca aún más a un comando estándar, puedes remover de su nombre la extensión &lt;code&gt;.py&lt;/code&gt;. Adicionalmente, puedes añadir el directorio que contiene tu script en el &lt;a href="https://es.wikipedia.org/wiki/PATH_(inform%C3%A1tica)"&gt;&lt;code&gt;PATH&lt;/code&gt;&lt;/a&gt; de tu sistema y lo tendrás disponible como un comando real desde cualquier directorio de trabajo.&lt;/p&gt;
+&lt;h3 id="en-sistemas-windows"&gt;En sistemas Windows&lt;/h3&gt;
+&lt;p&gt;En sistemas Windows con Python &lt;a href="https://pythonscouts.com/instalar-python-windows/"&gt;instalado&lt;/a&gt;, puedes ejecutar un script directamente desde una ventana de PowerShell abierta en el directorio que contiene el script:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;PS&amp;gt; .\script.py
+Hola, Mundo!
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Esta técnica funciona gracias a que Windows automáticamente asocia los archivos &lt;code&gt;.py&lt;/code&gt; y &lt;code&gt;.pyw&lt;/code&gt; con los programas &lt;code&gt;python.exe&lt;/code&gt; y &lt;code&gt;pythonw.exe&lt;/code&gt;, respectivamente.&lt;/p&gt;
+&lt;h2 id="ejecutar-scripts-desde-un-ide-o-editor-de-texto"&gt;Ejecutar scripts desde un IDE o editor de texto&lt;/h2&gt;
+&lt;p&gt;Otra vía que puedes emplear para ejecutar tus scripts Python es usar un IDE (Integrated Development Environment, por sus siglas en inglés) como &lt;a href="https://www.jetbrains.com/es-es/pycharm/"&gt;PyCharm&lt;/a&gt; o un editor de código avanzado, como puede ser &lt;a href="https://code.visualstudio.com/"&gt;Visual Studio Code&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Existe una amplia variedad de estos programas, muchos de ellos disponibles para las distintas plataformas (Windows, Linux, macOS) y que además, se pueden descargar libremente desde Internet.&lt;/p&gt;
+&lt;p&gt;El IDE por defecto incluido en cualquier instalación estándar de Python es &lt;a href="https://docs.python.org/es/3/library/idle.html#idle"&gt;IDLE&lt;/a&gt; y lo puedes emplear para escribir, ejecutar, depurar y modificar tus scripts.&lt;/p&gt;
+&lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
+&lt;p&gt;Ya sabes como correr o ejecutar scripts Python por diferentes vías y en diferentes plataformas. Ahora puedes ejecutar tus scripts desde la línea de comandos o terminal de tu sistema, ya sea usando el comando &lt;code&gt;python&lt;/code&gt; o usando el script directamente como un programa ejecutable. También aprendiste que los IDEs y editor de código generalmente incluyen opciones para la ejecución de tus scripts y programas.&lt;/p&gt;</content><category term="Tutoriales"></category><category term="python"></category></entry><entry><title>Cómo instalar Python en tu sistema operativo Windows?</title><link href="https://pythonscouts.com/instalar-python-windows/" rel="alternate"></link><published>2023-09-25T17:30:00+02:00</published><updated>2023-09-25T17:30:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2023-09-25:/instalar-python-windows/</id><summary type="html">&lt;p&gt;Instalar Python en tu computador es el primer paso para aprender el lenguaje. Si usas Windows 10 o superior, aquí encontrarás los pasos necesarios para hacerlo.&lt;/p&gt;</summary><content type="html">&lt;p&gt;En esta guía, emplearás el &lt;strong&gt;instalador oficial&lt;/strong&gt; para Windows que puedes descargar desde &lt;a href="https://www.python.org/"&gt;&lt;code&gt;Python.org&lt;/code&gt;&lt;/a&gt;. También conocerás como Instalar Python desde la tienda de aplicaciones &lt;strong&gt;Microsoft Store&lt;/strong&gt;. Esta última opción es la recomendada por Microsoft, aunque el instalador oficial funciona perfectamente.&lt;/p&gt;
 &lt;p&gt;Para seguir esta guía de instalación de Python, es recomendable que tengas experiencia de trabajo en Windows. Es también importante que tengas experiencia de trabajo con la terminal del sistema, PowerShell.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#prerequisitos"&gt;Prerequisitos&lt;/a&gt;&lt;/li&gt;
@@ -107,8 +177,8 @@ IDLE es el entorno de desarrollo integrado (IDE) por defecto de Python. Este pro
 &lt;p&gt;Esta ventana es la confirmación de que ha concluido la instalación de Python en tu sistema operativo Windows. Es recomendable que visites el link a la página sobre &lt;a href="https://docs.python.org/es/3.11/using/windows.html"&gt;cómo usar Python en Windows&lt;/a&gt;. Allí encontrás información valiosa que puede servirte de mucho.&lt;/p&gt;
 &lt;h3 id="paso-3-verificar-la-instalacion-de-python"&gt;Paso 3: Verificar la instalación de Python&lt;/h3&gt;
 &lt;p&gt;Una vez que hayas ejecutado los pasos anteriores, Python estará instalado en tu sistema operativo. Para confirmar que lo tienes, abre una ventana de PowerShell y ejecuta el comando siguiente:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;PS&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;--version
-Python&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.11.5
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;PS&amp;gt; python --version
+Python 3.11.5
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Este comando imprime la versión de Python que tienes instalada por defecto. Con esto has concluido la instalación de Python usando el instalador oficial para Windows. Ahora estás listo para escribit tu &lt;a href="https://pythonscouts.com/python-hola-mundo/"&gt;primer programa&lt;/a&gt;.&lt;/p&gt;
@@ -122,7 +192,8 @@ Python&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.1
 &lt;li&gt;Has click en el &lt;em&gt;Obtener&lt;/em&gt; (&lt;em&gt;Get&lt;/em&gt;) para descargar e instalar la versión seleccionada.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Una vez ejecutados esto pasos, deberás tener Python instalado en tu sistema operativo. Nuevamente, para confirmar que la instalación fue exitosa, abre tu PowerShell y ejecutal el comando siguiente:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt; &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="n"&gt;-version&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;PS&amp;gt; Python --version
+Python 3.11.5
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;El instalador de Python disponible en la tienda de aplicaciones Microsoft Store también incluye &lt;a href="https://pip.pypa.io/en/stable/"&gt;&lt;code&gt;pip&lt;/code&gt;&lt;/a&gt;, el gestor de paquetes por defecto de Python. Puedes confirmar que &lt;code&gt;pip&lt;/code&gt; también está instalado ejecutando &lt;code&gt;pip --version&lt;/code&gt; en tu sesión de PowerShell.&lt;/p&gt;
@@ -230,8 +301,8 @@ IDLE es el entorno de desarrollo integrado (IDE) por defecto de Python. Este pro
 &lt;p&gt;Para instalar los certificados, ve a la carpeta de aplicaciones de tu Mac, localiza la carpeta Python 3.11, has click derecho sobre el archivo &lt;code&gt;Install Certificates.command&lt;/code&gt; y selecciona la opción &lt;code&gt;Abrir con -&amp;gt; Terminal.app&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="paso-3-verificar-la-instalacion"&gt;Paso 3: Verificar la instalación&lt;/h2&gt;
 &lt;p&gt;Una vez que hayas ejecutados los pasos anteriores, Python estará instalado en tu sistema operativo. Para confirmar que lo tienes, abre una ventana de Terminal y ejecuta el comando siguiente:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;--version&lt;span class="w"&gt; &lt;/span&gt;
-Python&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.11.5
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;--version&lt;span class="w"&gt; &lt;/span&gt;
+&lt;span class="go"&gt;Python 3.11.5&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Este comando imprime la versión de Python que tienes instalada por defecto. Con esto has concluido la instalación de Python usando el instalador oficial para masOS. Ahora estás listo para escribit tu &lt;a href="https://pythonscouts.com/python-hola-mundo/"&gt;primer programa&lt;/a&gt;.&lt;/p&gt;
@@ -321,25 +392,25 @@ Python&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.1
 &lt;p&gt;Debes tener en cuenta que el número de palabras clave varia en dependencia de la versión de Python que estés usando actualmente.&lt;/p&gt;
 &lt;p&gt;Otra manera de consultar las palabras clave de Python es mediante la función &lt;code&gt;help()&lt;/code&gt;. Se trata de una función incluida (&lt;em&gt;built-in&lt;/em&gt;) que te permite consultar la documentación y obtener ayuda rápida sobre cualquier objeto en Python.&lt;/p&gt;
 &lt;p&gt;Para consultar las palabras clave de Python por esta vía, primeramente ejecuta &lt;code&gt;help()&lt;/code&gt; para entrar al &lt;strong&gt;sistema de ayuda integrado&lt;/strong&gt; de Python. Luego consulta el contenido de la página de palabras clave usando el comando &lt;code&gt;keywords&lt;/code&gt; como en el ejemplo siguiente:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="n"&gt;help&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;help&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 
-&lt;span class="go"&gt;Welcome to Python 3.11&amp;#39;s help utility!&lt;/span&gt;
+&lt;span class="n"&gt;Welcome&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt; &lt;span class="mf"&gt;3.11&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;s help utility!&lt;/span&gt;
 
-&lt;span class="go"&gt;...&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
 
-&lt;span class="go"&gt;help&amp;gt; keywords&lt;/span&gt;
+&lt;span class="n"&gt;help&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;keywords&lt;/span&gt;
 
-&lt;span class="go"&gt;Here is a list of the Python keywords.  Enter any keyword to get more help.&lt;/span&gt;
+&lt;span class="n"&gt;Here&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt; &lt;span class="n"&gt;keywords&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;  &lt;span class="n"&gt;Enter&lt;/span&gt; &lt;span class="nb"&gt;any&lt;/span&gt; &lt;span class="n"&gt;keyword&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;more&lt;/span&gt; &lt;span class="n"&gt;help&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
 
-&lt;span class="go"&gt;False               class               from                or&lt;/span&gt;
-&lt;span class="go"&gt;None                continue            global              pass&lt;/span&gt;
-&lt;span class="go"&gt;True                def                 if                  raise&lt;/span&gt;
-&lt;span class="go"&gt;and                 del                 import              return&lt;/span&gt;
-&lt;span class="go"&gt;as                  elif                in                  try&lt;/span&gt;
-&lt;span class="go"&gt;assert              else                is                  while&lt;/span&gt;
-&lt;span class="go"&gt;async               except              lambda              with&lt;/span&gt;
-&lt;span class="go"&gt;await               finally             nonlocal            yield&lt;/span&gt;
-&lt;span class="go"&gt;break               for                 not&lt;/span&gt;
+&lt;span class="kc"&gt;False&lt;/span&gt;               &lt;span class="k"&gt;class&lt;/span&gt;               &lt;span class="nc"&gt;from&lt;/span&gt;                &lt;span class="ow"&gt;or&lt;/span&gt;
+&lt;span class="kc"&gt;None&lt;/span&gt;                &lt;span class="k"&gt;continue&lt;/span&gt;            &lt;span class="k"&gt;global&lt;/span&gt;              &lt;span class="k"&gt;pass&lt;/span&gt;
+&lt;span class="kc"&gt;True&lt;/span&gt;                &lt;span class="k"&gt;def&lt;/span&gt;                 &lt;span class="nf"&gt;if&lt;/span&gt;                  &lt;span class="k"&gt;raise&lt;/span&gt;
+&lt;span class="ow"&gt;and&lt;/span&gt;                 &lt;span class="k"&gt;del&lt;/span&gt;                 &lt;span class="kn"&gt;import&lt;/span&gt;              &lt;span class="nn"&gt;return&lt;/span&gt;
+&lt;span class="k"&gt;as&lt;/span&gt;                  &lt;span class="nn"&gt;elif&lt;/span&gt;                &lt;span class="ow"&gt;in&lt;/span&gt;                  &lt;span class="k"&gt;try&lt;/span&gt;
+&lt;span class="k"&gt;assert&lt;/span&gt;              &lt;span class="k"&gt;else&lt;/span&gt;                &lt;span class="ow"&gt;is&lt;/span&gt;                  &lt;span class="k"&gt;while&lt;/span&gt;
+&lt;span class="k"&gt;async&lt;/span&gt;               &lt;span class="k"&gt;except&lt;/span&gt;              &lt;span class="k"&gt;lambda&lt;/span&gt;              &lt;span class="k"&gt;with&lt;/span&gt;
+&lt;span class="k"&gt;await&lt;/span&gt;               &lt;span class="k"&gt;finally&lt;/span&gt;             &lt;span class="k"&gt;nonlocal&lt;/span&gt;            &lt;span class="k"&gt;yield&lt;/span&gt;
+&lt;span class="k"&gt;break&lt;/span&gt;               &lt;span class="k"&gt;for&lt;/span&gt;                 &lt;span class="ow"&gt;not&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;En este caso, cuando ejecutas &lt;code&gt;help()&lt;/code&gt; en una sesión interactiva de Python, entras inmediatamente al sistema de ayuda integrado del lenguaje. El indicador (&lt;em&gt;prompt&lt;/em&gt;) &lt;code&gt;help&amp;gt;&lt;/code&gt; te hace saber que estás dentro. Una vez allí, tecleas el comando &lt;code&gt;keywords&lt;/code&gt; y presionas &lt;em&gt;Enter&lt;/em&gt;. Esta acción te devuelve el listado de palabras clave de tu versión específica del lenguaje.&lt;/p&gt;
@@ -505,23 +576,23 @@ Python&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.1
 &lt;p&gt;En determinadas situaciones, sobre todo cuando estás comenzando con Python, necesitarás consultar rápidamente el objetivo de determinada palabra clave. En esos casos, puedes auxiliarte de &lt;code&gt;help()&lt;/code&gt; nuevamente.&lt;/p&gt;
 &lt;p&gt;Una vez que entras al sistema de ayuda integrado usando &lt;code&gt;help()&lt;/code&gt;, puedes introducir la palabra clave que deseas consultar y presionar &lt;em&gt;Enter&lt;/em&gt;. De inmediato te aparecerá en pantalla la documentación de la palabra en cuestión.&lt;/p&gt;
 &lt;p&gt;Por ejemplo, si introduces &lt;code&gt;if&lt;/code&gt; y presionas Enter, entonces el sistema de ayuda entrará directamente a la página que documenta esta sentencia y mostrará la salida siguiente:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="go"&gt;The &amp;quot;if&amp;quot; statement&lt;/span&gt;
-&lt;span class="go"&gt;******************&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;The &amp;quot;if&amp;quot; statement
+******************
 
-&lt;span class="go"&gt;The &amp;quot;if&amp;quot; statement is used for conditional execution:&lt;/span&gt;
+The &amp;quot;if&amp;quot; statement is used for conditional execution:
 
-&lt;span class="go"&gt;   if_stmt ::= &amp;quot;if&amp;quot; assignment_expression &amp;quot;:&amp;quot; suite&lt;/span&gt;
-&lt;span class="go"&gt;               (&amp;quot;elif&amp;quot; assignment_expression &amp;quot;:&amp;quot; suite)*&lt;/span&gt;
-&lt;span class="go"&gt;               [&amp;quot;else&amp;quot; &amp;quot;:&amp;quot; suite]&lt;/span&gt;
+   if_stmt ::= &amp;quot;if&amp;quot; assignment_expression &amp;quot;:&amp;quot; suite
+               (&amp;quot;elif&amp;quot; assignment_expression &amp;quot;:&amp;quot; suite)*
+               [&amp;quot;else&amp;quot; &amp;quot;:&amp;quot; suite]
 
-&lt;span class="go"&gt;It selects exactly one of the suites by evaluating the expressions one&lt;/span&gt;
-&lt;span class="go"&gt;by one until one is found to be true (see section Boolean operations&lt;/span&gt;
-&lt;span class="go"&gt;for the definition of true and false); then that suite is executed&lt;/span&gt;
-&lt;span class="go"&gt;(and no other part of the &amp;quot;if&amp;quot; statement is executed or evaluated).&lt;/span&gt;
-&lt;span class="go"&gt;If all expressions are false, the suite of the &amp;quot;else&amp;quot; clause, if&lt;/span&gt;
-&lt;span class="go"&gt;present, is executed.&lt;/span&gt;
+It selects exactly one of the suites by evaluating the expressions one
+by one until one is found to be true (see section Boolean operations
+for the definition of true and false); then that suite is executed
+(and no other part of the &amp;quot;if&amp;quot; statement is executed or evaluated).
+If all expressions are false, the suite of the &amp;quot;else&amp;quot; clause, if
+present, is executed.
 
-&lt;span class="go"&gt;Related help topics: TRUTHVALUE&lt;/span&gt;
+Related help topics: TRUTHVALUE
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Si introduces una palabra clave o palabra reservada cualquiera (&lt;code&gt;if&lt;/code&gt; en el ejemplo anterior) en el indicador (&lt;em&gt;prompt&lt;/em&gt;) del sistema de ayuda de Python, obtienes acceso directo a la documentación de la misma. Esta documentación solo aparece en idioma inglés. Si desea obtener ayuda en idioma español, entonces puedes usar la &lt;a href="https://docs.python.org/es/3/index.html"&gt;documentación oficial en español&lt;/a&gt;.&lt;/p&gt;
@@ -609,7 +680,7 @@ Python&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.1
 &lt;h3 id="hola-mundo-desde-una-sesion-interactiva"&gt;&lt;code&gt;Hola, mundo!&lt;/code&gt; desde una sesión interactiva&lt;/h3&gt;
 &lt;p&gt;Para comenzar una sesión interactiva de Python, abre una ventana de línea de comandos o terminal en tu computadora. Los pasos para abrir una terminal variarán en dependencia de tu sistema operativo. En macOS y Linux, generalmente encontrarás una aplicación llamada &lt;em&gt;Terminal&lt;/em&gt;. Si trabajas en Windows, entonces puedes usar algo como PowerShell.&lt;/p&gt;
 &lt;p&gt;Una vez que tengas tu terminal abierta, ejecuta el siguiente comando:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;python
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;python
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Este comando inicia el interprete Python. El interprete es el programa que te permite interpretar y ejecutar código escrito en lenguaje Python.&lt;/p&gt;
@@ -631,8 +702,8 @@ Python&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.1
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Una vez que hayas creado tu archivo &lt;code&gt;hola.py&lt;/code&gt; y añadido el código necesario, puedes abrir una nueva terminal y ejecutar el siguiente comando:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;hola.py
-Hola,&lt;span class="w"&gt; &lt;/span&gt;mundo!
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;hola.py
+&lt;span class="go"&gt;Hola, mundo!&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;En este caso, el interprete Python corre en modo script usando tú archivo &lt;code&gt;hola.py&lt;/code&gt; como entrada. El interprete lee tu código y lo ejecuta línea por línea produciendo la salida deseada.&lt;/p&gt;
