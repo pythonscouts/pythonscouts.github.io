@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es-es" class="h-100">
+
+<head>
+        <title>
+  Python Scouts - Python a través de ejemplos: Valores
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Python tiene una serie de tipos de datos incorporados para representar números y cadenas de caracteres. Para crear instancias de los tipos de datos, comúnmente usarás valores que también son llamados literales en Python.">
+    <meta name="keywords" content="valores python">
+    <!-- RSS feeds -->
+    <link href="https://pythonscouts.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Full Atom Feed" />
+    <link href="https://pythonscouts.com/feeds/series.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Categories Atom Feed" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://pythonscouts.com/valores-python/">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css">
+    <!-- Stork Search -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css">
+
+
+    <!-- Article tags -->
+    <meta name="article:tag" content="python" />
+    <meta name="article:tag" content="windows" />
+    <meta name="article:tag" content="macos" />
+    <meta name="article:tag" content="fundamentos" />
+
+    <!-- Twitter cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lpozo78">
+    <meta name="twitter:creator" content="@lpozo78">
+    <meta name="twitter:title" content="Python a través de ejemplos: Valores - Python Scouts">
+    <meta name="twitter:description" content="Python tiene una serie de tipos de datos incorporados para representar números y cadenas de caracteres. Para crear instancias de los tipos de datos, comúnmente usarás valores que también son llamados literales en Python.">
+    <meta name="twitter:image" content="https://picsum.photos/id/34/300/200.webp">
+    <!-- Linkedin card -->
+    <meta property="og:title" content="Python Scouts">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="valores-python/">
+    <meta property="og:description" content="Python tiene una serie de tipos de datos incorporados para representar números y cadenas de caracteres. Para crear instancias de los tipos de datos, comúnmente usarás valores que también son llamados literales en Python.">
+    <meta property="og:image" content="https://picsum.photos/id/34/300/200.webp">
+    <!-- Custom CSS for article -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-R3C5PFSQ1S');
+</script>
+
+<body class="d-flex flex-column h-100">
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-md bg-white fixed-top border-bottom">
+        <div class="container-md content-px">
+            <a class="navbar-brand" href="/">
+            <img
+            src="https://pythonscouts.com/images/identity/header.webp"
+            alt="Python Scouts"
+            width="150"
+            height="50"
+            >
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Menú de Navegación">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav m-auto nav-link">
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/guias/" aria-current="page">
+                    Guías
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/series/" aria-current="page">
+                    Series
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/tutoriales/" aria-current="page">
+                    Tutoriales
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/acerca/" aria-current="page">
+                    Acerca
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/contacto/" aria-current="page">
+                    Contacto
+                </a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <div class="stork-wrapper">
+                <input
+                class="stork-input"
+                type="search"
+                placeholder="Buscar"
+                aria-label="Search"
+                data-stork="sitesearch"
+                >
+                </div>
+            </form>
+            </div>
+        </div>
+    </nav>
+    <main class="container-md content-px py-3">
+        <div class="stork-wrapper">
+            <div data-stork="sitesearch-output" class="stork-output"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+            </div>
+        </div>
+
+    <!-- Article Header -->
+    <div class="row pt-3 pb-5">
+        <div class="col-md-6 py-3">
+            <h1 class="display-5">
+                <strong>Python a través de ejemplos: Valores</strong>
+            </h1>
+            <div class="text-muted small py-3">
+                Publicado el jueves, 03 de octubre del 2024
+            </div>
+            <div class="py-3">
+                <img src="https://pythonscouts.com/images/authors/leodanis-pozo-ramos.webp" alt="Leodanis Pozo Ramos" class="rounded-circle border" width="70" height="70">
+                <a href="https://pythonscouts.com/author/leodanis-pozo-ramos.html" style="padding-left: 10px;">
+                    Leodanis Pozo Ramos
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6 py-3">
+            <img src="https://picsum.photos/id/34/200/150.webp" class="img-fluid w-100">
+        </div>
+    </div>
+          <!-- Article Content -->
+        <article>
+          <p>Python tiene una serie de tipos de datos incorporados para representar números y cadenas de caracteres. Para crear instancias de los tipos de datos, comúnmente usarás valores que también son llamados literales en Python.</p>
+            <div class="row">
+                <div class="col">
+                  <p>Los valores o literales más comunes son los valores numéricos. También encontrarás valores para definir cadenas de caracteres que te sirven para representar texto.</p>
+<div class="toc"><span class="toctitle">Contenidos</span><ul>
+<li><a href="#valores-numericos">Valores numéricos</a><ul>
+<li><a href="#numeros-enteros">Números enteros</a></li>
+<li><a href="#numeros-decimales">Números decimales</a></li>
+<li><a href="#numeros-complejos">Números complejos</a></li>
+</ul>
+</li>
+<li><a href="#valores-de-cadena-de-caracteres">Valores de cadena de caracteres</a><ul>
+<li><a href="#literales-de-cadena">Literales de cadena</a></li>
+<li><a href="#literales-de-cadena-sin-formato">Literales de cadena sin formato</a></li>
+</ul>
+</li>
+<li><a href="#conclusiones">Conclusiones</a></li>
+</ul>
+</div>
+<h2 id="valores-numericos">Valores numéricos</h2>
+<p>Los números son una parte fundamental de cualquier programa de computadoras. En la mayoría de los lenguajes de programación, los valores numéricos son representados de manera muy similar a la que se emplea en las matemáticas.</p>
+<h3 id="numeros-enteros">Números enteros</h3>
+<p>Para definir valores enteros, puedes emplear números positivos y negativos tal y como los usarías en tu clase de matemáticas:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mi">0</span>  <span class="c1"># Cero como un entero</span>
+<span class="mi">0</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">42</span>  <span class="c1"># Un entero positivo</span>
+<span class="mi">42</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="o">-</span><span class="mi">100</span>  <span class="c1"># Un entero negativo</span>
+<span class="o">-</span><span class="mi">100</span>
+</code></pre></div>
+
+<p>También puedes añadir un guión bajo como separador de miles en números de más de tres cifras:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mi">1000000</span>  <span class="c1"># Sin separador de miles en el literal</span>
+<span class="mi">1000000</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">1_000_000</span>  <span class="c1"># Con separador de miles en el literal</span>
+<span class="mi">1000000</span>
+</code></pre></div>
+
+<p>Esta forma de escribir números enteros mejora significativamente la legibilidad del código.</p>
+<h3 id="numeros-decimales">Números decimales</h3>
+<p>Para crear valores de coma flotante o decimales, debes añadir un punto (<code>.</code>) luego de la parte entera y finalmente la fracción decimal:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mf">3.14</span>  <span class="c1"># Un decimal positivo</span>
+<span class="mf">3.14</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="o">-</span><span class="mf">0.001</span>  <span class="c1"># Un decimal negativo</span>
+<span class="o">-</span><span class="mf">0.001</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="mf">0.0</span>  <span class="c1"># Cero como número decimal</span>
+<span class="mf">0.0</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="mf">1.23e3</span>  <span class="c1"># Equivalente a 1.23 * 10^3</span>
+<span class="mf">1230.0</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="mf">5.67E-2</span>  <span class="c1"># Equivalente a 5.67 * 10^-2</span>
+<span class="mf">0.0567</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="mf">.5</span>  <span class="c1"># Sin cero a la izquierda del punto</span>
+<span class="mf">0.5</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="mf">10.</span>  <span class="c1"># Sin fracción decimal specificada</span>
+<span class="mf">10.0</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="mf">1_000_000.02</span>  <span class="c1"># Con separador de miles en el literal</span>
+<span class="mf">1000000.02</span>  <span class="c1"># Sin separador de miles en la salida</span>
+</code></pre></div>
+
+<p>Dependiendo del contexto, puedes escribir los números decimales de diferentes maneras, que son muy similares a como los escribes en matemáticas.</p>
+<p>Sin embargo, la notación científica es un poco diferente. Para expresar un número en esta notación, debes usar la letra <code>e</code> o <code>E</code> seguida del exponente.</p>
+<h3 id="numeros-complejos">Números complejos</h3>
+<p>Finalmente, tienes los valores de números complejos:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span><span class="n">j</span>
+<span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="mi">3</span><span class="n">j</span><span class="p">)</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span><span class="n">j</span>
+<span class="mi">5</span><span class="n">j</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="mf">2.5</span> <span class="o">+</span> <span class="mf">7.8</span><span class="n">j</span>
+<span class="p">(</span><span class="mf">2.5</span><span class="o">+</span><span class="mf">7.8</span><span class="n">j</span><span class="p">)</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">3</span><span class="n">j</span> <span class="o">+</span> <span class="mi">6</span>
+<span class="p">(</span><span class="mi">6</span><span class="o">+</span><span class="mi">3</span><span class="n">j</span><span class="p">)</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">3</span><span class="n">j</span>
+<span class="p">(</span><span class="mi">2</span><span class="o">-</span><span class="mi">3</span><span class="n">j</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Los números complejos tienen una parte real y otra imaginaria. En notación matemática, generalmente se emplea la letra <code>i</code> para la parte imaginaria, pero en Python se usa la <code>j</code>.</p>
+<h2 id="valores-de-cadena-de-caracteres">Valores de cadena de caracteres</h2>
+<p>Cuando necesitas trabajar con cadenas de caracteres o texto, puedes emplear valores o literales que generalmente se forman con el texto entre comillas.</p>
+<h3 id="literales-de-cadena">Literales de cadena</h3>
+<p>En Python, puedes usar diferentes tipos de comillas para definir literales de cadenas de caracteres:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;Texto entre comillas simples&#39;</span>
+<span class="s1">&#39;Texto entre comillas simples&#39;</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;Texto entre comillas dobles&quot;</span>
+<span class="s1">&#39;Texto entre comillas dobles&#39;</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;&#39;&#39;Texto entre comillas simples triplicadas</span>
+<span class="s1">... que ocupa varias líneas físicas&#39;&#39;&#39;</span>
+<span class="s1">&#39;Texto entre comillas simples triplicadas</span><span class="se">\n</span><span class="s1">que ocupa varias líneas físicas&#39;</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;&quot;&quot;Texto entre comillas dobles triplicadas</span>
+<span class="s2">... que ocupa varias líneas físicas&quot;&quot;&quot;</span>
+<span class="s1">&#39;Texto entre comillas dobles triplicadas</span><span class="se">\n</span><span class="s1">que ocupa varias líneas físicas&#39;</span>
+</code></pre></div>
+
+<p>Para crear cadenas de texto que ocupen una única línea física, puedes emplear comillas simples o dobles. Para crear cadenas de texto que ocupen múltiples líneas, emplea comillas simples o dobles triplicadas.</p>
+<p>Ahora bien, ¿qué puedes hacer si necesitas incluir los caracteres de comillas en una cadena de texto? En este caso, puedes alternar las comillas:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;Alterna &quot;comillas&quot; para incluirlas en el texto&#39;</span>
+<span class="s1">&#39;Alterna &quot;comillas&quot; para incluirlas en el texto&#39;</span>
+</code></pre></div>
+
+<p>En este caso, usaste las comillas simples para delimitar la cadena y así poder incluir las comillas dobles en el texto.</p>
+<p>Otra forma de hacerlo es escapar las comillas con una barra invertida (<code>\</code>) como en el siguiente ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;Escapa las </span><span class="se">\&quot;</span><span class="s2">comillas</span><span class="se">\&quot;</span><span class="s2"> con un backslash&quot;</span>
+<span class="s1">&#39;Escapa las &quot;comillas&quot; con un backslash&#39;</span>
+</code></pre></div>
+
+<p>Python tiene varias otras <a href="https://docs.python.org/es/3/reference/lexical_analysis.html#escape-sequences">secuencias de escape</a> que puedes emplear en tus cadenas de caracteres. Estas secuencias implican el uso de la barra invertida y son útiles cuando necesitas incluir caracteres con significado especial en tus cadenas.</p>
+<h3 id="literales-de-cadena-sin-formato">Literales de cadena sin formato</h3>
+<p>Los literales de cadenas pueden tener como prefijo la letra <code>r</code> o <code>R</code>. Estos son literales de cadena sin formato (raw strings) y tratan las barras invertidas como caracteres literales, por lo que son muy útiles y comunes en expresiones regulares.</p>
+<p>Por ejemplo, la expresión regular siguiente te permite identificar direcciones de correo electrónico:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="sa">r</span><span class="s2">&quot;\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b&quot;</span>
+<span class="s1">&#39;</span><span class="se">\\</span><span class="s1">b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+</span><span class="se">\\</span><span class="s1">.[A-Z|a-z]{2,}</span><span class="se">\\</span><span class="s1">b&#39;</span>
+</code></pre></div>
+
+<p>Cuando necesitas incluir barras invertidas y otros caracteres que pueden tener significados especiales en tus cadenas, puedes usar cadenas sin formato.</p>
+<p>Finalmente, están las f-strings o literales formateados. Estos te permiten interpolar y formatear valores en tus cadenas empleando campos de reemplazo delimitados por llaves (<code>{}</code>) en el literal:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">balance</span> <span class="o">=</span> <span class="mf">5425.9292</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="sa">f</span><span class="s2">&quot;Balance general: $</span><span class="si">{</span><span class="n">balance</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="s1">&#39;Balance general: $5,425.93&#39;</span>
+</code></pre></div>
+
+<p>El campo de reemplazo en esta f-string contiene una variable llamada <code>balance</code>. Esta variable provee el valor que necesitamos interpolar en la cadena. Luego tenemos el especificador de formato que comienza con el caracter dos puntos (<code>:</code>). En este caso, formateas el valor como un valor decimal con dos lugares después del punto y empleando una coma (<code>,</code>) como separador de miles.</p>
+<h2 id="conclusiones">Conclusiones</h2>
+<p>Ahora sabes lo básico sobre los valores o literales en Python, incluidos valores numéricos como los números enteros, decimales y complejos. También aprendiste sobre los valores de cadenas de caracteres.</p>
+<p>Entender los valores y cómo crearlos es fundamental para cualquier desarrollador de Python, pues estos son la base sobre la que se construyen expresiones y sentencias más elaboradas.</p>
+<p>Ahora que dominas estos conceptos, tienes las puertas abiertas para explorar temas más avanzados en Python.</p>
+              </div>
+            </div>
+        </article>
+
+
+      <!-- Disqus -->
+      <div id="disqus_thread" class="py-5"></div>
+      <script type="text/javascript">
+          var disqus_shortname = 'pythonscouts';
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+      </script>
+
+    </main>
+
+    <!-- Page footer -->
+    <footer class="footer mt-auto bg-gray text-center py-3 border-top border-1">
+        <div class="container">
+        <span class="lead">&copy; 2023 Leodanis Pozo Ramos</span>
+        </div>
+        <p class="pt-3">Imágenes cortesía de <a href="https://picsum.photos/" target="_blank">Picsum</a></p>
+    </footer>
+
+    <!-- JS Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Stroke Scripts -->
+    <script src="https://pythonscouts.com/theme/js/stork.js"></script>
+    <script>
+        stork.initialize("https://pythonscouts.com/theme/js/stork.wasm")
+        stork.downloadIndex("sitesearch", "https://pythonscouts.com/search-index.st")
+        stork.attach("sitesearch")
+    </script>
+
+</body>
+</html>

@@ -1,5 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"></link><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"></link><id>https://pythonscouts.com/</id><updated>2024-03-21T18:40:00+01:00</updated><subtitle>Una web en Español para aprender a programar con Python.</subtitle><entry><title>Cómo ejecutar un script Python?</title><link href="https://pythonscouts.com/ejecutar-script-python/" rel="alternate"></link><published>2024-03-21T18:40:00+01:00</published><updated>2024-03-21T18:40:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2024-03-21:/ejecutar-script-python/</id><summary type="html">&lt;p&gt;Un script Python es un archivo que contiene una secuencia de código Python ejecutable. Este tipo de archivo está diseñado para ser ejecutado directamente, de la misma manera que un programa o aplicación.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ser capaz de ejecutar tus scripts y programas es una de las habilidades más importantes que debes tener como programador Python. En realidad ejecutar el código es la única forma de asegurarte que funciona como esperas. Además, para qué escribir código sino para ejecutarlo y que haga cosas por tí?&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"></link><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"></link><id>https://pythonscouts.com/</id><updated>2024-10-03T20:20:00+02:00</updated><subtitle>Una web en Español para aprender a programar con Python.</subtitle><entry><title>Python a través de ejemplos: Valores</title><link href="https://pythonscouts.com/valores-python/" rel="alternate"></link><published>2024-10-03T20:20:00+02:00</published><updated>2024-10-03T20:20:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2024-10-03:/valores-python/</id><summary type="html">&lt;p&gt;Python tiene una serie de tipos de datos incorporados para representar números y cadenas de caracteres. Para crear instancias de los tipos de datos, comúnmente usarás valores que también son llamados literales en Python.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Los valores o literales más comunes son los valores numéricos. También encontrarás valores para definir cadenas de caracteres que te sirven para representar texto.&lt;/p&gt;
+&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#valores-numericos"&gt;Valores numéricos&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#numeros-enteros"&gt;Números enteros&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#numeros-decimales"&gt;Números decimales&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#numeros-complejos"&gt;Números complejos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#valores-de-cadena-de-caracteres"&gt;Valores de cadena de caracteres&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#literales-de-cadena"&gt;Literales de cadena&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#literales-de-cadena-sin-formato"&gt;Literales de cadena sin formato&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#conclusiones"&gt;Conclusiones&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="valores-numericos"&gt;Valores numéricos&lt;/h2&gt;
+&lt;p&gt;Los números son una parte fundamental de cualquier programa de computadoras. En la mayoría de los lenguajes de programación, los valores numéricos son representados de manera muy similar a la que se emplea en las matemáticas.&lt;/p&gt;
+&lt;h3 id="numeros-enteros"&gt;Números enteros&lt;/h3&gt;
+&lt;p&gt;Para definir valores enteros, puedes emplear números positivos y negativos tal y como los usarías en tu clase de matemáticas:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;  &lt;span class="c1"&gt;# Cero como un entero&lt;/span&gt;
+&lt;span class="mi"&gt;0&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;42&lt;/span&gt;  &lt;span class="c1"&gt;# Un entero positivo&lt;/span&gt;
+&lt;span class="mi"&gt;42&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;  &lt;span class="c1"&gt;# Un entero negativo&lt;/span&gt;
+&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;También puedes añadir un guión bajo como separador de miles en números de más de tres cifras:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;1000000&lt;/span&gt;  &lt;span class="c1"&gt;# Sin separador de miles en el literal&lt;/span&gt;
+&lt;span class="mi"&gt;1000000&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;1_000_000&lt;/span&gt;  &lt;span class="c1"&gt;# Con separador de miles en el literal&lt;/span&gt;
+&lt;span class="mi"&gt;1000000&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Esta forma de escribir números enteros mejora significativamente la legibilidad del código.&lt;/p&gt;
+&lt;h3 id="numeros-decimales"&gt;Números decimales&lt;/h3&gt;
+&lt;p&gt;Para crear valores de coma flotante o decimales, debes añadir un punto (&lt;code&gt;.&lt;/code&gt;) luego de la parte entera y finalmente la fracción decimal:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mf"&gt;3.14&lt;/span&gt;  &lt;span class="c1"&gt;# Un decimal positivo&lt;/span&gt;
+&lt;span class="mf"&gt;3.14&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;0.001&lt;/span&gt;  &lt;span class="c1"&gt;# Un decimal negativo&lt;/span&gt;
+&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;0.001&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mf"&gt;0.0&lt;/span&gt;  &lt;span class="c1"&gt;# Cero como número decimal&lt;/span&gt;
+&lt;span class="mf"&gt;0.0&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mf"&gt;1.23e3&lt;/span&gt;  &lt;span class="c1"&gt;# Equivalente a 1.23 * 10^3&lt;/span&gt;
+&lt;span class="mf"&gt;1230.0&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mf"&gt;5.67E-2&lt;/span&gt;  &lt;span class="c1"&gt;# Equivalente a 5.67 * 10^-2&lt;/span&gt;
+&lt;span class="mf"&gt;0.0567&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mf"&gt;.5&lt;/span&gt;  &lt;span class="c1"&gt;# Sin cero a la izquierda del punto&lt;/span&gt;
+&lt;span class="mf"&gt;0.5&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mf"&gt;10.&lt;/span&gt;  &lt;span class="c1"&gt;# Sin fracción decimal specificada&lt;/span&gt;
+&lt;span class="mf"&gt;10.0&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mf"&gt;1_000_000.02&lt;/span&gt;  &lt;span class="c1"&gt;# Con separador de miles en el literal&lt;/span&gt;
+&lt;span class="mf"&gt;1000000.02&lt;/span&gt;  &lt;span class="c1"&gt;# Sin separador de miles en la salida&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Dependiendo del contexto, puedes escribir los números decimales de diferentes maneras, que son muy similares a como los escribes en matemáticas.&lt;/p&gt;
+&lt;p&gt;Sin embargo, la notación científica es un poco diferente. Para expresar un número en esta notación, debes usar la letra &lt;code&gt;e&lt;/code&gt; o &lt;code&gt;E&lt;/code&gt; seguida del exponente.&lt;/p&gt;
+&lt;h3 id="numeros-complejos"&gt;Números complejos&lt;/h3&gt;
+&lt;p&gt;Finalmente, tienes los valores de números complejos:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;
+&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mf"&gt;2.5&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;7.8&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;2.5&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mf"&gt;7.8&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Los números complejos tienen una parte real y otra imaginaria. En notación matemática, generalmente se emplea la letra &lt;code&gt;i&lt;/code&gt; para la parte imaginaria, pero en Python se usa la &lt;code&gt;j&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="valores-de-cadena-de-caracteres"&gt;Valores de cadena de caracteres&lt;/h2&gt;
+&lt;p&gt;Cuando necesitas trabajar con cadenas de caracteres o texto, puedes emplear valores o literales que generalmente se forman con el texto entre comillas.&lt;/p&gt;
+&lt;h3 id="literales-de-cadena"&gt;Literales de cadena&lt;/h3&gt;
+&lt;p&gt;En Python, puedes usar diferentes tipos de comillas para definir literales de cadenas de caracteres:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Texto entre comillas simples&amp;#39;&lt;/span&gt;
+&lt;span class="s1"&gt;&amp;#39;Texto entre comillas simples&amp;#39;&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Texto entre comillas dobles&amp;quot;&lt;/span&gt;
+&lt;span class="s1"&gt;&amp;#39;Texto entre comillas dobles&amp;#39;&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;#39;&amp;#39;Texto entre comillas simples triplicadas&lt;/span&gt;
+&lt;span class="s1"&gt;... que ocupa varias líneas físicas&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="s1"&gt;&amp;#39;Texto entre comillas simples triplicadas&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s1"&gt;que ocupa varias líneas físicas&amp;#39;&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&amp;quot;Texto entre comillas dobles triplicadas&lt;/span&gt;
+&lt;span class="s2"&gt;... que ocupa varias líneas físicas&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="s1"&gt;&amp;#39;Texto entre comillas dobles triplicadas&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s1"&gt;que ocupa varias líneas físicas&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Para crear cadenas de texto que ocupen una única línea física, puedes emplear comillas simples o dobles. Para crear cadenas de texto que ocupen múltiples líneas, emplea comillas simples o dobles triplicadas.&lt;/p&gt;
+&lt;p&gt;Ahora bien, ¿qué puedes hacer si necesitas incluir los caracteres de comillas en una cadena de texto? En este caso, puedes alternar las comillas:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Alterna &amp;quot;comillas&amp;quot; para incluirlas en el texto&amp;#39;&lt;/span&gt;
+&lt;span class="s1"&gt;&amp;#39;Alterna &amp;quot;comillas&amp;quot; para incluirlas en el texto&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este caso, usaste las comillas simples para delimitar la cadena y así poder incluir las comillas dobles en el texto.&lt;/p&gt;
+&lt;p&gt;Otra forma de hacerlo es escapar las comillas con una barra invertida (&lt;code&gt;\&lt;/code&gt;) como en el siguiente ejemplo:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Escapa las &lt;/span&gt;&lt;span class="se"&gt;\&amp;quot;&lt;/span&gt;&lt;span class="s2"&gt;comillas&lt;/span&gt;&lt;span class="se"&gt;\&amp;quot;&lt;/span&gt;&lt;span class="s2"&gt; con un backslash&amp;quot;&lt;/span&gt;
+&lt;span class="s1"&gt;&amp;#39;Escapa las &amp;quot;comillas&amp;quot; con un backslash&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Python tiene varias otras &lt;a href="https://docs.python.org/es/3/reference/lexical_analysis.html#escape-sequences"&gt;secuencias de escape&lt;/a&gt; que puedes emplear en tus cadenas de caracteres. Estas secuencias implican el uso de la barra invertida y son útiles cuando necesitas incluir caracteres con significado especial en tus cadenas.&lt;/p&gt;
+&lt;h3 id="literales-de-cadena-sin-formato"&gt;Literales de cadena sin formato&lt;/h3&gt;
+&lt;p&gt;Los literales de cadenas pueden tener como prefijo la letra &lt;code&gt;r&lt;/code&gt; o &lt;code&gt;R&lt;/code&gt;. Estos son literales de cadena sin formato (raw strings) y tratan las barras invertidas como caracteres literales, por lo que son muy útiles y comunes en expresiones regulares.&lt;/p&gt;
+&lt;p&gt;Por ejemplo, la expresión regular siguiente te permite identificar direcciones de correo electrónico:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b&amp;quot;&lt;/span&gt;
+&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;.[A-Z|a-z]{2,}&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;b&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Cuando necesitas incluir barras invertidas y otros caracteres que pueden tener significados especiales en tus cadenas, puedes usar cadenas sin formato.&lt;/p&gt;
+&lt;p&gt;Finalmente, están las f-strings o literales formateados. Estos te permiten interpolar y formatear valores en tus cadenas empleando campos de reemplazo delimitados por llaves (&lt;code&gt;{}&lt;/code&gt;) en el literal:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;balance&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;5425.9292&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Balance general: $&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;balance&lt;/span&gt;&lt;span class="si"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;,.2f&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+&lt;span class="s1"&gt;&amp;#39;Balance general: $5,425.93&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;El campo de reemplazo en esta f-string contiene una variable llamada &lt;code&gt;balance&lt;/code&gt;. Esta variable provee el valor que necesitamos interpolar en la cadena. Luego tenemos el especificador de formato que comienza con el caracter dos puntos (&lt;code&gt;:&lt;/code&gt;). En este caso, formateas el valor como un valor decimal con dos lugares después del punto y empleando una coma (&lt;code&gt;,&lt;/code&gt;) como separador de miles.&lt;/p&gt;
+&lt;h2 id="conclusiones"&gt;Conclusiones&lt;/h2&gt;
+&lt;p&gt;Ahora sabes lo básico sobre los valores o literales en Python, incluidos valores numéricos como los números enteros, decimales y complejos. También aprendiste sobre los valores de cadenas de caracteres.&lt;/p&gt;
+&lt;p&gt;Entender los valores y cómo crearlos es fundamental para cualquier desarrollador de Python, pues estos son la base sobre la que se construyen expresiones y sentencias más elaboradas.&lt;/p&gt;
+&lt;p&gt;Ahora que dominas estos conceptos, tienes las puertas abiertas para explorar temas más avanzados en Python.&lt;/p&gt;</content><category term="Series"></category><category term="python"></category></entry><entry><title>Cómo ejecutar un script Python?</title><link href="https://pythonscouts.com/ejecutar-script-python/" rel="alternate"></link><published>2024-03-21T18:40:00+01:00</published><updated>2024-03-21T18:40:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2024-03-21:/ejecutar-script-python/</id><summary type="html">&lt;p&gt;Un script Python es un archivo que contiene una secuencia de código Python ejecutable. Este tipo de archivo está diseñado para ser ejecutado directamente, de la misma manera que un programa o aplicación.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ser capaz de ejecutar tus scripts y programas es una de las habilidades más importantes que debes tener como programador Python. En realidad ejecutar el código es la única forma de asegurarte que funciona como esperas. Además, para qué escribir código sino para ejecutarlo y que haga cosas por tí?&lt;/p&gt;
 &lt;p&gt;En este tutorial, aprenderás qué es un script o programa ejecutable en Python, cómo ejecutar scripts usando el comando &lt;code&gt;python&lt;/code&gt; o el propio script como un comando. Finalmente, aprenderás que también es posible ejecutar tus scripts desde tu IDE o editor de texto favorito, lo cual es muy conveniente durante el proceso de desarrollo.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#scripts-y-programas-en-python"&gt;Scripts y programas en Python&lt;/a&gt;&lt;/li&gt;
