@@ -1,5 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts - Series</title><link href="https://pythonscouts.com/" rel="alternate"></link><link href="https://pythonscouts.com/feeds/series.atom.xml" rel="self"></link><id>https://pythonscouts.com/</id><updated>2024-10-03T20:20:00+02:00</updated><subtitle>Una web en Español para aprender a programar con Python.</subtitle><entry><title>Python a través de ejemplos: Valores</title><link href="https://pythonscouts.com/valores-python/" rel="alternate"></link><published>2024-10-03T20:20:00+02:00</published><updated>2024-10-03T20:20:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2024-10-03:/valores-python/</id><summary type="html">&lt;p&gt;Python tiene una serie de tipos de datos incorporados para representar números y cadenas de caracteres. Para crear instancias de los tipos de datos, comúnmente usarás valores que también son llamados literales en Python.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Los valores o literales más comunes son los valores numéricos. También encontrarás valores para definir cadenas de caracteres que te sirven para representar texto.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts - Series</title><link href="https://pythonscouts.com/" rel="alternate"></link><link href="https://pythonscouts.com/feeds/series.atom.xml" rel="self"></link><id>https://pythonscouts.com/</id><updated>2024-10-12T06:00:00+02:00</updated><subtitle>Una web en Español para aprender a programar con Python.</subtitle><entry><title>Python a través de ejemplos: Variables</title><link href="https://pythonscouts.com/variables-python/" rel="alternate"></link><published>2024-10-12T06:00:00+02:00</published><updated>2024-10-12T06:00:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2024-10-12:/variables-python/</id><summary type="html">&lt;p&gt;En Python, una variable es un nombre simbólico que te permite referenciar un objeto concreto almacenado en la memoria de tu computadora.&lt;/p&gt;</summary><content type="html">&lt;p&gt;En Python, las variables no almacenan objetos concretos. Las variables son como etiquetas que puedes asociar con un valor determinado en la memoria de tu computadora para luego acceder al valor empleando un nombre descriptivo.&lt;/p&gt;
+&lt;p&gt;Python utiliza asignación basada en referencias, donde las variables son nombres que apuntan a objetos en la memoria.&lt;/p&gt;
+&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#variables-en-python"&gt;Variables en Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#tipos-de-datos-y-variables"&gt;Tipos de datos y variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#nombres-de-variables"&gt;Nombres de variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#conclusiones"&gt;Conclusiones&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="variables-en-python"&gt;Variables en Python&lt;/h2&gt;
+&lt;p&gt;Para crear una variable en Python, se emplea el operador de asignación (&lt;code&gt;=&lt;/code&gt;) como se muestra a continuación:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;42&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;temperature&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;76.7&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;language&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Python&amp;quot;&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;message&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Bienvenidos a pythonscouts.com&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En estos ejemplos, has creado algunas variables mediante la asignación de valores numéricos o de cadena de caracteres.&lt;/p&gt;
+&lt;aside&gt;
+Como regla general, emplearemos nombres de variables en idioma inglés puesto que este es el idioma base para la programación actualmente.
+&lt;/aside&gt;
+
+&lt;p&gt;A partir de este momento, puedes usar el nombre de estas variables cuando quieras referirte al valor asignado en tu código:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt;
+&lt;span class="mi"&gt;42&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;temperature&lt;/span&gt;
+&lt;span class="mf"&gt;76.7&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;language&lt;/span&gt;
+&lt;span class="s1"&gt;&amp;#39;Python&amp;#39;&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;message&lt;/span&gt;
+&lt;span class="s1"&gt;&amp;#39;Bienvenidos a pythonscouts.com&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Puedes usar las variables para referirte a los valores que estas referencian. Estos valores se encuentran almacenados en posiciones específicas de la memoria de tu computadora. La variable solo es una vía para llegar al valor referenciado.&lt;/p&gt;
+&lt;p&gt;Durante la ejecución de tu código, tus variables pueden variar el valor referenciado. Es por eso que las llamamos &lt;em&gt;variables&lt;/em&gt;. Por ejemplo, el siguiente contador incrementa su valor de uno en uno durante la ejecución del código:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;count&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;count&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;count&lt;/span&gt;
+&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;count&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;count&lt;/span&gt;
+&lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;count&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;count&lt;/span&gt;
+&lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Para cambiar el valor referenciado por una variable, lo que hacemos es reasignar la variable para que apunte a otro valor u objeto.&lt;/p&gt;
+&lt;h2 id="tipos-de-datos-y-variables"&gt;Tipos de datos y variables&lt;/h2&gt;
+&lt;p&gt;Python es un lenguaje de &lt;strong&gt;tipado dinámico&lt;/strong&gt;, lo que significa que el tipo de objeto al que una variable hace referencia puede cambiar durante la ejecución del programa.&lt;/p&gt;
+&lt;p&gt;En realidad, las variables en Python no tienen tipo de dato. Los que tienen tipo de dato asociado son los objetos a los que las variables se refieren o apuntan.&lt;/p&gt;
+&lt;p&gt;Debido a esto, una variable en Python puede referirse a una cadena en un momento determinado, a un valor numérico en otro momento, y a cualquier otro objeto más tarde:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;42&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;
+&lt;span class="mi"&gt;42&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;# Más tarde...&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Una cadena&amp;quot;&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;
+&lt;span class="s1"&gt;&amp;#39;Una cadena&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Aunque esto es posible hacer que una variable se refiera a objetos de diferentes tipos de dato en diferentes momentos de su vida, esta práctica no es recomendable pues puede ocasionar errores durante la ejecución del código:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;upper&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="s1"&gt;&amp;#39;UNA CADENA&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este ejemplo, puedes ver cómo inicialmente la variable referencia un objeto de tipo cadena al cual le puedes aplicar el método &lt;code&gt;.upper()&lt;/code&gt; para convertir todas las letras en mayúsculas.&lt;/p&gt;
+&lt;p&gt;Ahora supongamos que un rato más tarde, el código reasigna la variable para referirse a un valor numérico entero. Cuando tratas de aplicar el método &lt;code&gt;.upper()&lt;/code&gt;, recibes una excepción &lt;code&gt;AttributeError&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;42&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;upper&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;Traceback&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;most&lt;/span&gt; &lt;span class="n"&gt;recent&lt;/span&gt; &lt;span class="n"&gt;call&lt;/span&gt; &lt;span class="n"&gt;last&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="ne"&gt;AttributeError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;int&amp;#39;&lt;/span&gt; &lt;span class="nb"&gt;object&lt;/span&gt; &lt;span class="n"&gt;has&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;attribute&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;upper&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Los enteros no implementan el método &lt;code&gt;.upper()&lt;/code&gt; y esto provoca que tu código falle. Debido a problemas como este, es recomendable que tus variables no cambien el tipo de objetos al que apuntan durante su vida.&lt;/p&gt;
+&lt;h2 id="nombres-de-variables"&gt;Nombres de variables&lt;/h2&gt;
+&lt;p&gt;Los nombres de variables en Python pueden tener cualquier longitud y consistir en letras mayúsculas (A-Z) y minúsculas (a-z), dígitos (0-9) y el carácter de guión bajo (_). La única restricción es que, aunque un nombre de variable puede contener dígitos, el primer carácter de un nombre de variable no puede ser un dígito.&lt;/p&gt;
+&lt;p&gt;La guía de estilo de programación de Python, el PEP 8, recomienda que escribas los nombres de variables en minúsculas con guiones bajos para separar las palabras:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Juan&amp;quot;&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;family_name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Valdés&amp;quot;&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;age&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;19&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;birth_day&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;02-10-2008&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Las variables identifican objetos y, por esta razón, generalmente se emplean sustantivos para los nombres de variables.&lt;/p&gt;
+&lt;p&gt;En el caso de nombres que requieren más de una palabra, se emplea un guión bajo para separar las palabras. En este caso, es común emplear un adjetivo junto con un sustantivo.&lt;/p&gt;
+&lt;p&gt;Las variables que apuntan a valores Booleanos (&lt;code&gt;True&lt;/code&gt; o &lt;code&gt;False&lt;/code&gt;) generalmente usan los prefijos &lt;code&gt;is_*&lt;/code&gt; y &lt;code&gt;has_*&lt;/code&gt; en inglés:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;is_active&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;has_permission&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;El uso de estos prefijos es una convención de estilo que ayuda a mejorar la legibilidad del código. No es un requisito estricto del lenguaje.&lt;/p&gt;
+&lt;h2 id="conclusiones"&gt;Conclusiones&lt;/h2&gt;
+&lt;p&gt;Has aprendido cómo funcionan las variables en Python, incluyendo su creación, asignación y uso. También has explorado el concepto de tipado dinámico y cómo gestionar los nombres de variables según las convenciones más empleadas en Python.&lt;/p&gt;
+&lt;p&gt;Comprender las variables es esencial para cualquier desarrollador de Python, pues ellas son fundamentales para manipular y gestionar datos en tus programas.&lt;/p&gt;
+&lt;p&gt;Con estas habilidades, estás preparado para explorar conceptos más avanzados y desarrollar aplicaciones más complejas.&lt;/p&gt;</content><category term="Series"></category><category term="python"></category></entry><entry><title>Python a través de ejemplos: Valores</title><link href="https://pythonscouts.com/valores-python/" rel="alternate"></link><published>2024-10-03T20:20:00+02:00</published><updated>2024-10-03T20:20:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2024-10-03:/valores-python/</id><summary type="html">&lt;p&gt;Python tiene una serie de tipos de datos incorporados para representar números y cadenas de caracteres. Para crear instancias de los tipos de datos, comúnmente usarás valores que también son llamados literales en Python.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Los valores o literales más comunes son los valores numéricos. También encontrarás valores para definir cadenas de caracteres que te sirven para representar texto.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#valores-numericos"&gt;Valores numéricos&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#numeros-enteros"&gt;Números enteros&lt;/a&gt;&lt;/li&gt;
