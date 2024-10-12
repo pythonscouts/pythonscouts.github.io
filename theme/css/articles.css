@@ -94,20 +94,20 @@ thead {
 }
 
 /* Syntax highlighter for code */
-pre { line-height: 125%; }
+/* pre { line-height: 125%; white-space: pre-wrap; } */
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
 span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
 td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
 span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
 .highlight .hll { background-color: #ffffcc }
-.highlight { background: #F3F3F3; border: 1px solid #dfe4ea; border-radius: 0px; padding: 1em; margin-top: 1em; margin-bottom: 1em; font-size: 1em; }
+.highlight { background: #F3F3F3; border: 1px solid #dfe4ea; border-radius: 0px; padding: 1em 1em 0em 1em; margin-top: 1em; margin-bottom: 1em; font-size: 1em; }
 .highlight .c { color: #8f5902; font-style: italic } /* Comment */
 .highlight .err { color: #a40000; border: 1px solid #ef2929 } /* Error */
 .highlight .g { color: #000000 } /* Generic */
 .highlight .k { color: #204a87; font-weight: bold } /* Keyword */
 .highlight .l { color: #000000 } /* Literal */
 .highlight .n { color: #000000 } /* Name */
-.highlight .o { color: #ce5c00; font-weight: bold } /* Operator */
+.highlight .o { color: #ce5c00; } /* Operator */
 .highlight .x { color: #000000 } /* Other */
 .highlight .p { color: #000000; font-weight: bold } /* Punctuation */
 .highlight .ch { color: #8f5902; font-style: italic } /* Comment.Hashbang */
