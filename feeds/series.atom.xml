@@ -50,7 +50,7 @@ Como regla general, emplearemos nombres de constantes en idioma inglés puesto q
 &lt;h2 id="nombres-de-constantes"&gt;Nombres de constantes&lt;/h2&gt;
 &lt;p&gt;Los nombres de constantes en Python pueden tener cualquier longitud y consistir en letras mayúsculas (A-Z), dígitos (0-9) y el carácter de subrayado o guión bajo (&lt;code&gt;_&lt;/code&gt;). La única restricción es que, aunque un nombre de constante puede contener dígitos, el primer carácter del nombre no puede ser un dígito.&lt;/p&gt;
 &lt;aside&gt;
-Para una comprensión más profunda de las convenciones de estilo en Python, puedes consultar la [Guía de Estilo para el Código Python (PEP 8)](https://www.python.org/dev/peps/pep-0008/).
+Para una comprensión más profunda de las convenciones de estilo en Python, puedes consultar la &lt;a href="https://www.python.org/dev/peps/pep-0008/" target="_blank"&gt;Guía de Estilo para el Código Python (PEP 8)&lt;/a&gt;.
 &lt;/aside&gt;
 
 &lt;p&gt;El uso de mayúsculas sostenidas es una convención y no una restricción del lenguaje. Python no te restringe en este sentido. Es decir, técnicamente, puedes nombrar una constante usando minúsculas, pero estarías violando la convención generalmente aceptada.&lt;/p&gt;
