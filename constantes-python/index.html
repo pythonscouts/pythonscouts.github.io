@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es-es" class="h-100">
+
+<head>
+        <title>
+  Python Scouts - Python a través de ejemplos: Constantes
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="En Python, una constante es un nombre simbólico que permite referenciar un objeto cuyo valor no cambia durante la ejecución del programa. Como las variables, las constantes referencian objetos en memoria.">
+    <meta name="keywords" content="constantes python">
+    <!-- RSS feeds -->
+    <link href="https://pythonscouts.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Full Atom Feed" />
+    <link href="https://pythonscouts.com/feeds/series.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Categories Atom Feed" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://pythonscouts.com/constantes-python/">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css">
+    <!-- Stork Search -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css">
+
+
+    <!-- Article tags -->
+    <meta name="article:tag" content="python" />
+    <meta name="article:tag" content="windows" />
+    <meta name="article:tag" content="macos" />
+    <meta name="article:tag" content="fundamentos" />
+
+    <!-- Twitter cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lpozo78">
+    <meta name="twitter:creator" content="@lpozo78">
+    <meta name="twitter:title" content="Python a través de ejemplos: Constantes - Python Scouts">
+    <meta name="twitter:description" content="En Python, una constante es un nombre simbólico que permite referenciar un objeto cuyo valor no cambia durante la ejecución del programa. Como las variables, las constantes referencian objetos en memoria.">
+    <meta name="twitter:image" content="https://picsum.photos/id/87/300/200.webp">
+    <!-- Linkedin card -->
+    <meta property="og:title" content="Python Scouts">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="constantes-python/">
+    <meta property="og:description" content="En Python, una constante es un nombre simbólico que permite referenciar un objeto cuyo valor no cambia durante la ejecución del programa. Como las variables, las constantes referencian objetos en memoria.">
+    <meta property="og:image" content="https://picsum.photos/id/87/300/200.webp">
+    <!-- Custom CSS for article -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-R3C5PFSQ1S');
+</script>
+
+<body class="d-flex flex-column h-100">
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-md bg-white fixed-top border-bottom">
+        <div class="container-md content-px">
+            <a class="navbar-brand" href="/">
+            <img
+            src="https://pythonscouts.com/images/identity/header.webp"
+            alt="Python Scouts"
+            width="150"
+            height="50"
+            >
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Menú de Navegación">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav m-auto nav-link">
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/guias/" aria-current="page">
+                    Guías
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/series/" aria-current="page">
+                    Series
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/tutoriales/" aria-current="page">
+                    Tutoriales
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/acerca/" aria-current="page">
+                    Acerca
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/contacto/" aria-current="page">
+                    Contacto
+                </a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <div class="stork-wrapper">
+                <input
+                class="stork-input"
+                type="search"
+                placeholder="Buscar"
+                aria-label="Search"
+                data-stork="sitesearch"
+                >
+                </div>
+            </form>
+            </div>
+        </div>
+    </nav>
+    <main class="container-md content-px py-3">
+        <div class="stork-wrapper">
+            <div data-stork="sitesearch-output" class="stork-output"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+            </div>
+        </div>
+
+    <!-- Article Header -->
+    <div class="row pt-3 pb-5">
+        <div class="col-md-6 py-3">
+            <h1 class="display-5">
+                <strong>Python a través de ejemplos: Constantes</strong>
+            </h1>
+            <div class="text-muted small py-3">
+                Publicado el sábado, 26 de octubre del 2024
+            </div>
+            <div class="py-3">
+                <img src="https://pythonscouts.com/images/authors/leodanis-pozo-ramos.webp" alt="Leodanis Pozo Ramos" class="rounded-circle border" width="70" height="70">
+                <a href="https://pythonscouts.com/author/leodanis-pozo-ramos.html" style="padding-left: 10px;">
+                    Leodanis Pozo Ramos
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6 py-3">
+            <img src="https://picsum.photos/id/87/200/150.webp" class="img-fluid w-100">
+        </div>
+    </div>
+          <!-- Article Content -->
+        <article>
+          <p>En Python, una constante es un nombre simbólico que permite referenciar un objeto cuyo valor no cambia durante la ejecución del programa. Como las variables, las constantes referencian objetos en memoria.</p>
+            <div class="row">
+                <div class="col">
+                  <p>Python no tiene una sintaxis específica para las constantes como otros lenguajes de programación sí la tienen. Por esta razón, las constantes en Python son realmente <a href="https://pythonscouts.com/variables-python/">variables</a> que no cambian su <a href="https://pythonscouts.com/valores-python/">valor</a> durante la ejecución del código.</p>
+<p>Al igual que las variables, las constantes consisten en dos cosas: un nombre y un valor asociado. El nombre describe claramente de qué trata la constante. El valor es la expresión concreta de la constante.</p>
+<div class="toc"><span class="toctitle">Contenidos</span><ul>
+<li><a href="#constantes-comunes">Constantes comunes</a></li>
+<li><a href="#constantes-en-python">Constantes en Python</a></li>
+<li><a href="#tipos-de-datos-y-constantes">Tipos de datos y constantes</a></li>
+<li><a href="#nombres-de-constantes">Nombres de constantes</a></li>
+<li><a href="#ventajas-de-usar-constantes">Ventajas de usar constantes</a></li>
+<li><a href="#conclusiones">Conclusiones</a></li>
+</ul>
+</div>
+<h2 id="constantes-comunes">Constantes comunes</h2>
+<p>La vida, y particularmente la ciencia, está llena de ejemplos de valores constantes, o valores que nunca cambian. Algunos ejemplos incluyen los siguientes:</p>
+<ul>
+<li><strong>3.141592653589793</strong>: Una constante denotada por <code>π</code>, conocida como Pi, que representa la relación entre la circunferencia de un círculo y su diámetro.</li>
+<li><strong>2.718281828459045</strong>: Una constante denotada por e y conocida como el número de Euler, que está estrechamente relacionada con el logaritmo natural y el interés compuesto.</li>
+<li><strong>-273.15</strong>: Una constante que representa el cero absoluto en grados Celsius, que es igual a 0 kelvins en la escala de temperatura Kelvin.</li>
+</ul>
+<p>Estos ejemplos son valores constantes que se utilizan comúnmente en la vida cotidiana como en la ciencia. En programación, a menudo te encontrarás manejando estos y muchos otros valores similares.</p>
+<h2 id="constantes-en-python">Constantes en Python</h2>
+<p>Para crear una constante en Python, se emplea la misma sintaxis que para crear una <a href="https://pythonscouts.com/variables-python/">variable</a>. Esto es, el operador de asignación (<code>=</code>) separando el nombre de la constante a la izquierda y el valor a la derecha.</p>
+<p>Como Python no tiene una sintaxis dedicada para definir constantes, la comunidad Python ha asumido y establecido una convención para definir los nombres de las constantes: emplear letras en mayúsculas separando las palabras con guiones bajos o caracteres de subrayado:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">PI</span> <span class="o">=</span> <span class="mf">3.1416</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">EULER_NUMBER</span> <span class="o">=</span> <span class="mf">2.718281828459045</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">LIGHT_SPEED</span> <span class="o">=</span> <span class="mi">299792458</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">BASE_PATH</span> <span class="o">=</span> <span class="s2">&quot;/proyectos&quot;</span>
+</code></pre></div>
+
+<p>En estos ejemplos, has creado algunas variables mediante la asignación de valores numéricos o de cadena de caracteres.</p>
+<aside>
+Como regla general, emplearemos nombres de constantes en idioma inglés puesto que este es el idioma base para la programación actualmente.
+</aside>
+
+<p>A partir de este momento, puedes usar los nombres de estas constantes cuando quieras referirte a sus respectivos valores en tu código:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">PI</span>
+<span class="mf">3.1416</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">EULER_NUMBER</span>
+<span class="mf">2.718281828459045</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">LIGHT_SPEED</span>
+<span class="mi">299792458</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">BASE_PATH</span>
+<span class="s1">&#39;/proyectos&#39;</span>
+</code></pre></div>
+
+<p>Puedes usar las constantes para referirte a los valores que estas referencian. Estos valores se encuentran almacenados en posiciones específicas de la memoria de tu computadora. La constante es solo una vía para llegar al valor referenciado a través de un nombre legible.</p>
+<p>Es importante notar que durante la ejecución de tu código, las constantes que has definido no deben cambiar su valor. Es decir, no <em>deberías</em> reasignar una constante luego de haberla creado. Aunque técnicamente puedes asignar un nuevo valor a estas variables, hacerlo violaría la intención de usarlas como constantes.</p>
+<h2 id="tipos-de-datos-y-constantes">Tipos de datos y constantes</h2>
+<p>Al igual que las variables, las constantes no tienen un tipo de dato estático. Cuando se habla del tipo de dato de una constante, en realidad se trata del tipo de dato del objeto al que la constante apunta, ya sea un valor numérico o cualquier otro tipo de valor. Python determina este tipo de dato dinámicamente.</p>
+<h2 id="nombres-de-constantes">Nombres de constantes</h2>
+<p>Los nombres de constantes en Python pueden tener cualquier longitud y consistir en letras mayúsculas (A-Z), dígitos (0-9) y el carácter de subrayado o guión bajo (<code>_</code>). La única restricción es que, aunque un nombre de constante puede contener dígitos, el primer carácter del nombre no puede ser un dígito.</p>
+<aside>
+Para una comprensión más profunda de las convenciones de estilo en Python, puedes consultar la [Guía de Estilo para el Código Python (PEP 8)](https://www.python.org/dev/peps/pep-0008/).
+</aside>
+
+<p>El uso de mayúsculas sostenidas es una convención y no una restricción del lenguaje. Python no te restringe en este sentido. Es decir, técnicamente, puedes nombrar una constante usando minúsculas, pero estarías violando la convención generalmente aceptada.</p>
+<h2 id="ventajas-de-usar-constantes">Ventajas de usar constantes</h2>
+<p>Algunas ventajas de usar constantes en lugar de sus valores directamente en tu código incluyen:</p>
+<table>
+<thead>
+<tr>
+<th>Ventaja</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mejora en la legibilidad</strong></td>
+<td>Un nombre descriptivo que representa un valor en un programa siempre es más legible y explícito que el valor en sí.</td>
+</tr>
+<tr>
+<td><strong>Mejor mantenibilidad</strong></td>
+<td>Las constantes te permiten usar un único nombre para identificar un valor en todo el código. Si necesitas actualizar el valor de la constante, solo debes modificar el valor en la definición de la constante.</td>
+</tr>
+<tr>
+<td><strong>Menor riesgo de errores</strong></td>
+<td>Una constante que representa un valor en todo un programa es menos propensa a errores que tener múltiples instancias explícitas del valor en sí.</td>
+</tr>
+<tr>
+<td><strong>Menos necesidad de depuración</strong></td>
+<td>Las constantes permanecen sin cambios durante la ejecución del programa. Dado que siempre tendrán el mismo valor, no deberían causar errores ni bugs.</td>
+</tr>
+</tbody>
+</table>
+<p>Como ves en esta tabla, las constantes son un concepto importante en programación. Ellas pueden hacer que tu vida sea más fácil y tu código más confiable, mantenible y legible.</p>
+<h2 id="conclusiones">Conclusiones</h2>
+<p>Has aprendido cómo funcionan las constantes en Python, incluyendo su creación y uso. También has explorado cómo gestionar los nombres de constantes según las convenciones de nombrado empleadas en Python.</p>
+<p>Comprender las constantes es esencial para cualquier desarrollador de Python, pues ellas son fundamentales para manipular y gestionar datos en tus programas.</p>
+<p>Con estas habilidades, estás preparado para explorar conceptos más avanzados y desarrollar aplicaciones más complejas.</p>
+              </div>
+            </div>
+        </article>
+
+
+      <!-- Disqus -->
+      <div id="disqus_thread" class="py-5"></div>
+      <script type="text/javascript">
+          var disqus_shortname = 'pythonscouts';
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+      </script>
+
+    </main>
+
+    <!-- Page footer -->
+    <footer class="footer mt-auto bg-gray text-center py-3 border-top border-1">
+        <div class="container">
+        <span class="lead">&copy; 2023 Leodanis Pozo Ramos</span>
+        </div>
+        <p class="pt-3">Imágenes cortesía de <a href="https://picsum.photos/" target="_blank">Picsum</a></p>
+    </footer>
+
+    <!-- JS Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Stroke Scripts -->
+    <script src="https://pythonscouts.com/theme/js/stork.js"></script>
+    <script>
+        stork.initialize("https://pythonscouts.com/theme/js/stork.wasm")
+        stork.downloadIndex("sitesearch", "https://pythonscouts.com/search-index.st")
+        stork.attach("sitesearch")
+    </script>
+
+</body>
+</html>

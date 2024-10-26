@@ -13,6 +13,11 @@ url = "/contacto/"
 title = "Contacto"
 
 [[input.files]]
+path = "constantes-python/index.html"
+url = "/constantes-python/"
+title = "Python a través de ejemplos: Constantes"
+
+[[input.files]]
 path = "variables-python/index.html"
 url = "/variables-python/"
 title = "Python a través de ejemplos: Variables"

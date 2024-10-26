@@ -6,7 +6,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://pythonscouts.com/</loc>
-<lastmod>2024-10-12T21:13:49-00:00</lastmod>
+<lastmod>2024-10-26T14:31:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -20,29 +20,36 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://pythonscouts.com/archivos/</loc>
-<lastmod>2024-10-12T21:13:49-00:00</lastmod>
+<lastmod>2024-10-26T14:31:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/author/leodanis-pozo-ramos.html</loc>
-<lastmod>2024-10-12T21:13:49-00:00</lastmod>
+<lastmod>2024-10-26T14:31:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/autores/</loc>
-<lastmod>2024-10-12T21:13:49-00:00</lastmod>
+<lastmod>2024-10-26T14:31:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/categorias/</loc>
-<lastmod>2024-10-12T21:13:49-00:00</lastmod>
+<lastmod>2024-10-26T14:31:42-00:00</lastmod>
 <changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://pythonscouts.com/constantes-python/</loc>
+<lastmod>2024-10-26T06:00:00+02:00</lastmod>
+<changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
@@ -55,14 +62,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://pythonscouts.com/etiquetas/</loc>
-<lastmod>2024-10-12T21:13:49-00:00</lastmod>
+<lastmod>2024-10-26T14:31:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/guias/</loc>
-<lastmod>2024-10-12T21:13:49-00:00</lastmod>
+<lastmod>2024-10-26T14:31:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -97,42 +104,42 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://pythonscouts.com/series/</loc>
-<lastmod>2024-10-12T21:13:49-00:00</lastmod>
+<lastmod>2024-10-26T14:31:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/tag/fundamentos.html</loc>
-<lastmod>2024-10-12T21:13:49-00:00</lastmod>
+<lastmod>2024-10-26T14:31:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/tag/macos.html</loc>
-<lastmod>2024-10-12T21:13:49-00:00</lastmod>
+<lastmod>2024-10-26T14:31:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/tag/python.html</loc>
-<lastmod>2024-10-12T21:13:49-00:00</lastmod>
+<lastmod>2024-10-26T14:31:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/tag/windows.html</loc>
-<lastmod>2024-10-12T21:13:49-00:00</lastmod>
+<lastmod>2024-10-26T14:31:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/tutoriales/</loc>
-<lastmod>2024-10-12T21:13:49-00:00</lastmod>
+<lastmod>2024-10-26T14:31:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
