@@ -13,6 +13,11 @@ url = "/contacto/"
 title = "Contacto"
 
 [[input.files]]
+path = "elementos-iguales-lista-python/index.html"
+url = "/elementos-iguales-lista-python/"
+title = "Cómo saber si todos los elementos en una lista son iguales en Python?"
+
+[[input.files]]
 path = "constantes-python/index.html"
 url = "/constantes-python/"
 title = "Python a través de ejemplos: Constantes"

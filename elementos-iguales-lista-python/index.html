@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es-es" class="h-100">
+
+<head>
+        <title>
+  Python Scouts - Cómo saber si todos los elementos en una lista son iguales en Python?
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="En Python, puede ser útil determinar si todos los elementos en una lista son iguales. Esto es lo que estarás aprendiendo en esta guía rápida.">
+    <meta name="keywords" content="elementos iguales lista python">
+    <!-- RSS feeds -->
+    <link href="https://pythonscouts.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Full Atom Feed" />
+    <link href="https://pythonscouts.com/feeds/guias.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Categories Atom Feed" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://pythonscouts.com/elementos-iguales-lista-python/">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css">
+    <!-- Stork Search -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css">
+
+
+    <!-- Article tags -->
+    <meta name="article:tag" content="python" />
+    <meta name="article:tag" content="windows" />
+    <meta name="article:tag" content="macos" />
+    <meta name="article:tag" content="fundamentos" />
+
+    <!-- Twitter cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lpozo78">
+    <meta name="twitter:creator" content="@lpozo78">
+    <meta name="twitter:title" content="Cómo saber si todos los elementos en una lista son iguales en Python? - Python Scouts">
+    <meta name="twitter:description" content="En Python, puede ser útil determinar si todos los elementos en una lista son iguales. Esto es lo que estarás aprendiendo en esta guía rápida.">
+    <meta name="twitter:image" content="https://picsum.photos/id/171/300/200.webp">
+    <!-- Linkedin card -->
+    <meta property="og:title" content="Python Scouts">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="elementos-iguales-lista-python/">
+    <meta property="og:description" content="En Python, puede ser útil determinar si todos los elementos en una lista son iguales. Esto es lo que estarás aprendiendo en esta guía rápida.">
+    <meta property="og:image" content="https://picsum.photos/id/171/300/200.webp">
+    <!-- Custom CSS for article -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-R3C5PFSQ1S');
+</script>
+
+<body class="d-flex flex-column h-100">
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-md bg-white fixed-top border-bottom">
+        <div class="container-md content-px">
+            <a class="navbar-brand" href="/">
+            <img
+            src="https://pythonscouts.com/images/identity/header.webp"
+            alt="Python Scouts"
+            width="150"
+            height="50"
+            >
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Menú de Navegación">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav m-auto nav-link">
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/guias/" aria-current="page">
+                    Guías
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/series/" aria-current="page">
+                    Series
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/tutoriales/" aria-current="page">
+                    Tutoriales
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/acerca/" aria-current="page">
+                    Acerca
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/contacto/" aria-current="page">
+                    Contacto
+                </a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <div class="stork-wrapper">
+                <input
+                class="stork-input"
+                type="search"
+                placeholder="Buscar"
+                aria-label="Search"
+                data-stork="sitesearch"
+                >
+                </div>
+            </form>
+            </div>
+        </div>
+    </nav>
+    <main class="container-md content-px py-3">
+        <div class="stork-wrapper">
+            <div data-stork="sitesearch-output" class="stork-output"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+            </div>
+        </div>
+
+    <!-- Article Header -->
+    <div class="row pt-3 pb-5">
+        <div class="col-md-6 py-3">
+            <h1 class="display-5">
+                <strong>Cómo saber si todos los elementos en una lista son iguales en Python?</strong>
+            </h1>
+            <div class="text-muted small py-3">
+                Publicado el martes, 29 de octubre del 2024
+            </div>
+            <div class="py-3">
+                <img src="https://pythonscouts.com/images/authors/leodanis-pozo-ramos.webp" alt="Leodanis Pozo Ramos" class="rounded-circle border" width="70" height="70">
+                <a href="https://pythonscouts.com/author/leodanis-pozo-ramos.html" style="padding-left: 10px;">
+                    Leodanis Pozo Ramos
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6 py-3">
+            <img src="https://picsum.photos/id/171/200/150.webp" class="img-fluid w-100">
+        </div>
+    </div>
+          <!-- Article Content -->
+        <article>
+          <p>En Python, puede ser útil determinar si todos los elementos en una lista son iguales. Esto es lo que estarás aprendiendo en esta guía rápida.</p>
+            <div class="row">
+                <div class="col">
+                  <div class="toc"><span class="toctitle">Contenidos</span><ul>
+<li><a href="#convertir-la-lista-en-un-conjunto-y-comprobar-si-contine-un-unico-elemento">Convertir la lista en un conjunto y comprobar si contine un único elemento</a></li>
+<li><a href="#usar-la-funcion-all-para-comparar-el-primer-elemento-con-los-restantes">Usar la función all() para comparar el primer elemento con los restantes</a></li>
+<li><a href="#ordenar-la-lista-y-comparar-el-primer-y-el-ultimo-elemento">Ordenar la lista y comparar el primer y el último elemento</a></li>
+<li><a href="#en-resumen">En resumen</a></li>
+</ul>
+</div>
+<h2 id="convertir-la-lista-en-un-conjunto-y-comprobar-si-contine-un-unico-elemento">Convertir la lista en un conjunto y comprobar si contine un único elemento</h2>
+<p>Una vía rápida para determinar si todos los elementos de una lista son iguales es convertir la lista en un conjunto usando la clase <a href="https://docs.python.org/es/3/library/functions.html#func-set"><code>set()</code></a>.</p>
+<aside>
+Como premisa y en aras de la simplicidad, asumiremos que se trata de una lista no vacía que contiene elementos del mismo tipo de dato, ya sea números, cadenas, u otros.
+</aside>
+
+<p>Los conjuntos son tipos de datos que no pueden contener elementos repetidos. Por tanto, si conviertes tu lista en un conjunto y terminas con un conjunto de un único elemento, entonces puedes concluir que todos los elementos de tu lista son iguales:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">numbers</span><span class="p">))</span> <span class="o">==</span> <span class="mi">1</span>
+<span class="kc">True</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">letters</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">letters</span><span class="p">))</span> <span class="o">==</span> <span class="mi">1</span>
+<span class="kc">False</span>
+</code></pre></div>
+
+<p>En estos ejemplos, combinas las funciones <code>set()</code> y <a href="https://docs.python.org/es/3/library/functions.html#len"><code>len()</code></a>. Si terminas con un conjunto de uno solo elemento, entonces sabes que todos los elementos de tu lista original son iguales.</p>
+<h2 id="usar-la-funcion-all-para-comparar-el-primer-elemento-con-los-restantes">Usar la función <code>all()</code> para comparar el primer elemento con los restantes</h2>
+<p>Puedes emplear la función <a href="https://docs.python.org/es/3/library/functions.html#all"><code>all()</code></a> para determinar si todos los elementos de una lista son iguales. Esta función te permite comprobar si todos los elementos de un iterable son verdaderos. Para cumplir con tu tarea, puedes comparar el primer elemento de tu lista con el resto de los elementos.</p>
+<p>A continuación el código que te permite hacerlo:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">all</span><span class="p">(</span><span class="n">item</span> <span class="o">==</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+<span class="kc">True</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">letters</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">all</span><span class="p">(</span><span class="n">item</span> <span class="o">==</span> <span class="n">letters</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">letters</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+<span class="kc">False</span>
+</code></pre></div>
+
+<p>Esta técnica para determinar si todos los elementos de una lista son iguales emplea una expresión generadora que produce valores booleanos que resultan de evaluar la expresión <code>item == letters[0]</code>. Luego, <code>all()</code> verifica si todos los elementos resultantes son <code>True</code>.</p>
+<h2 id="ordenar-la-lista-y-comparar-el-primer-y-el-ultimo-elemento">Ordenar la lista y comparar el primer y el último elemento</h2>
+<p>Otra manera de saber si todos los elementos de una lista son iguales es ordenar la lista y comparar el primer y el último elemento.</p>
+<aside>
+Debes saber que esta técnica puedes ser muy ineficiente especialmente cuando tienes una lista muy larga, pues el algoritmo de ordenamiento puede tomar un tiempo considerable. Además, ordenar la lista modifica el orden original de los elementos, lo cual puede no ser deseado.
+</aside>
+
+<p>Considera los siguientes ejemplos:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">numbers</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">numbers</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="kc">True</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">letters</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">letters</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">letters</span>
+<span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">letters</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">letters</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="kc">False</span>
+</code></pre></div>
+
+<p>En este ejemplo, ordenas la lista con el método <a href="https://docs.python.org/es/3/library/stdtypes.html#list.sort"><code>.sort()</code></a> y luego comparas el primer y el último elemento usando una comparación de igualdad. Si estos elementos son iguales, entonces todos los elementos de tu lista son iguales.</p>
+<h2 id="en-resumen">En resumen</h2>
+<p>En esta guía, has aprendido tres técnicas diferentes para determinar si todos los elementos en una lista de Python son iguales:</p>
+<ol>
+<li>Convertir la lista en un conjunto y verificar su longitud</li>
+<li>Utilizar la función <code>all()</code> con una expresión generadora</li>
+<li>Ordenar la lista y comparar el primer y el último elemento</li>
+</ol>
+<p>Cada técnica ofrece una forma útil de abordar el problema, proporcionando flexibilidad según las necesidades específicas de tu programa. Con estas habilidades, puedes implementar verificaciones de uniformidad de manera eficiente y rápida en tus proyectos de Python.</p>
+              </div>
+            </div>
+        </article>
+
+
+      <!-- Disqus -->
+      <div id="disqus_thread" class="py-5"></div>
+      <script type="text/javascript">
+          var disqus_shortname = 'pythonscouts';
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+      </script>
+
+    </main>
+
+    <!-- Page footer -->
+    <footer class="footer mt-auto bg-gray text-center py-3 border-top border-1">
+        <div class="container">
+        <span class="lead">&copy; 2023 Leodanis Pozo Ramos</span>
+        </div>
+        <p class="pt-3">Imágenes cortesía de <a href="https://picsum.photos/" target="_blank">Picsum</a></p>
+    </footer>
+
+    <!-- JS Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Stroke Scripts -->
+    <script src="https://pythonscouts.com/theme/js/stork.js"></script>
+    <script>
+        stork.initialize("https://pythonscouts.com/theme/js/stork.wasm")
+        stork.downloadIndex("sitesearch", "https://pythonscouts.com/search-index.st")
+        stork.attach("sitesearch")
+    </script>
+
+</body>
+</html>
