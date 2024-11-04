@@ -133,7 +133,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .kr { color: #204a87; font-weight: bold } /* Keyword.Reserved */
 .highlight .kt { color: #204a87; font-weight: bold } /* Keyword.Type */
 .highlight .ld { color: #000000 } /* Literal.Date */
-.highlight .m { color: #0000cf; font-weight: bold } /* Literal.Number */
+.highlight .m { color: #0000cf } /* Literal.Number */
 .highlight .s { color: #4e9a06 } /* Literal.String */
 .highlight .na { color: #c4a000 } /* Name.Attribute */
 .highlight .nb { color: #204a87 } /* Name.Builtin */
