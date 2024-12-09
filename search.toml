@@ -8,11 +8,6 @@ url = "/acerca/"
 title = "Acerca"
 
 [[input.files]]
-path = "contacto/index.html"
-url = "/contacto/"
-title = "Contacto"
-
-[[input.files]]
 path = "expresiones-python/index.html"
 url = "/expresiones-python/"
 title = "Python a través de ejemplos: Expresiones"
