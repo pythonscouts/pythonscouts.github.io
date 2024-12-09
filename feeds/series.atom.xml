@@ -1,5 +1,236 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts - Series</title><link href="https://pythonscouts.com/" rel="alternate"></link><link href="https://pythonscouts.com/feeds/series.atom.xml" rel="self"></link><id>https://pythonscouts.com/</id><updated>2024-11-04T06:00:00+01:00</updated><subtitle>Una web en Español para aprender a programar con Python.</subtitle><entry><title>Python a través de ejemplos: Operadores</title><link href="https://pythonscouts.com/operadores-python/" rel="alternate"></link><published>2024-11-04T06:00:00+01:00</published><updated>2024-11-04T06:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2024-11-04:/operadores-python/</id><summary type="html">&lt;p&gt;En Python, un operador es un símbolo que te permite realizar una determinada operación. Por ejemplo, los operadores aritméticos te permiten realizar operaciones con valores numéricos.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Python tiene varios tipos de operadores que se pueden emplear en diferentes contextos. En este tutorial, aprenderás lo básico sobre cómo funcionan y cómo emplear cada tipo de operador.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts - Series</title><link href="https://pythonscouts.com/" rel="alternate"></link><link href="https://pythonscouts.com/feeds/series.atom.xml" rel="self"></link><id>https://pythonscouts.com/</id><updated>2024-12-09T18:00:00+01:00</updated><subtitle>Una web en Español para aprender a programar con Python.</subtitle><entry><title>Python a través de ejemplos: Expresiones</title><link href="https://pythonscouts.com/expresiones-python/" rel="alternate"></link><published>2024-12-09T18:00:00+01:00</published><updated>2024-12-09T18:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2024-12-09:/expresiones-python/</id><summary type="html">&lt;p&gt;En Python, una expresión es una combinación de valores y operadores que retorna un resultado o valor espcífico cuando es evaluada.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Python te permite crear diferentes tipos de expresiones que podrás emplear para obtener valores requeridos en tu código. En este tutorial, aprenderás lo básico sobre cómo funcionan y cómo crear expresiones en Python.&lt;/p&gt;
+&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#aritmeticas"&gt;Aritméticas&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#comparacion"&gt;Comparación&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#logicas-o-booleanas"&gt;Lógicas o booleanas&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#concatenacion-y-repeticion"&gt;Concatenación y repetición&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#precedencia-de-operadores"&gt;Precedencia de operadores&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#conclusiones"&gt;Conclusiones&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="aritmeticas"&gt;Aritméticas&lt;/h2&gt;
+&lt;p&gt;Las expresiones aritméticas son aquellas expresiones basadas en operadores aritméticos que relacionan &lt;a href="https://pythonscouts.com/valores-python/"&gt;valores&lt;/a&gt; numéricos y funciones que retornan números:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;12&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;
+&lt;span class="mi"&gt;6&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;150&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="mi"&gt;300&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;42&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nb"&gt;pow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="mi"&gt;142&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;abs&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="mf"&gt;5.0&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;200&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="mf"&gt;164.0&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En estos ejemplos, construyes expresiones usando &lt;a href="https://pythonscouts.com/operadores-python/#aritmeticos"&gt;operadores aritméticos&lt;/a&gt; para combinar valores numéricos y funciones que dan como resultado un número.&lt;/p&gt;
+&lt;p&gt;Las expresiones aritméticas también pueden emplear &lt;a href="https://pythonscouts.com/variables-python/"&gt;variables&lt;/a&gt; y &lt;a href="https://pythonscouts.com/constantes-python/"&gt;constantes&lt;/a&gt; en lugar de literales numéricos:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;radius&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;PI&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;3.142&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;circle_area&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;PI&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="nb"&gt;pow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;radius&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;circle_area&lt;/span&gt;
+&lt;span class="mf"&gt;314.2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este ejemplo, utilizamos una variable y una constante para crear una expresión que retorna el área de un círculo a partir del radio. Como las expresiones siempre retornan un valor, puedes emplear una variable para mantener una referencia al resultado.&lt;/p&gt;
+&lt;h2 id="comparacion"&gt;Comparación&lt;/h2&gt;
+&lt;p&gt;Por su parte, las expresiones de comparación son aquellas que nos permiten comparar objetos entre sí. Estas expresiones son útiles para decidir el flujo de ejecución de tus programas en función del cumplimiento de determinadas condiciones.&lt;/p&gt;
+&lt;p&gt;Por ejemplo, las expresiones siguientes comparan valores empleando &lt;a href="https://pythonscouts.com/operadores-python/#comparacion"&gt;operadores de comparación&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;
+&lt;span class="kc"&gt;False&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;
+&lt;span class="kc"&gt;True&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;
+&lt;span class="kc"&gt;True&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;
+&lt;span class="kc"&gt;False&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;
+&lt;span class="kc"&gt;True&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;
+&lt;span class="kc"&gt;False&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Todas las expresiones de comparación retornan un valor lógico, ya sea &lt;code&gt;True&lt;/code&gt; o &lt;code&gt;False&lt;/code&gt;.&lt;/p&gt;
+&lt;aside&gt;
+Los ejemplos anteriores comparan valores numéricos, sin embargo, también es posible comparar cadenas, tuplas, listas y cualquier otro objeto que soporte los operadores de comparación.
+&lt;/aside&gt;
+
+&lt;h2 id="logicas-o-booleanas"&gt;Lógicas o booleanas&lt;/h2&gt;
+&lt;p&gt;Se pueden formar expresiones lógicas o booleanas empleando los &lt;a href="https://pythonscouts.com/operadores-python/#logicos"&gt;operadores lógicos&lt;/a&gt; &lt;code&gt;and&lt;/code&gt;, &lt;code&gt;or&lt;/code&gt;, y &lt;code&gt;not&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="kc"&gt;True&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="kc"&gt;True&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;
+&lt;span class="kc"&gt;False&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En estos ejemplos las expresiones retornan valores booleanos. Es decir, &lt;code&gt;True&lt;/code&gt; o &lt;code&gt;False&lt;/code&gt;. Sin embargo, no todas las expresiones lógicas retornan valores booleanos.&lt;/p&gt;
+&lt;p&gt;Si los operandos involucrados son objetos o expresiones con un valor no booleano, entonces los operadores &lt;code&gt;and&lt;/code&gt; y &lt;code&gt;or&lt;/code&gt; retornan uno de los operandos dependiendo de sus valores de verdad:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Hola&amp;quot;&lt;/span&gt;
+&lt;span class="s1"&gt;&amp;#39;Hola&amp;#39;&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="mi"&gt;42&lt;/span&gt;
+&lt;span class="mi"&gt;42&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="mf"&gt;3.14&lt;/span&gt;
+&lt;span class="mi"&gt;0&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Hola&amp;quot;&lt;/span&gt;
+&lt;span class="mi"&gt;5&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="mi"&gt;42&lt;/span&gt;
+&lt;span class="mi"&gt;10&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="mf"&gt;3.14&lt;/span&gt;
+&lt;span class="mf"&gt;3.14&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;La siguiente tabla resume el comportamiento de los operadores &lt;code&gt;and&lt;/code&gt; y &lt;code&gt;or&lt;/code&gt; con operandos cuyos valores no son booleanos:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style="text-align: left;"&gt;Operación&lt;/th&gt;
+&lt;th style="text-align: left;"&gt;Resultado&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left;"&gt;&lt;code&gt;x and y&lt;/code&gt;&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;Si &lt;code&gt;x&lt;/code&gt; es falso, entonces retorna &lt;code&gt;x&lt;/code&gt;, si no, retorna &lt;code&gt;y&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left;"&gt;&lt;code&gt;x or y&lt;/code&gt;&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;Si &lt;code&gt;x&lt;/code&gt; es verdadero, entonces retorna &lt;code&gt;x&lt;/code&gt;, si no, retorna &lt;code&gt;y&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Estos resultados se obtienen con una evaluación cortocircuitada (short-circuit evaluation). Por ejemplo, si &lt;code&gt;x&lt;/code&gt; es falso entonces &lt;code&gt;x and y&lt;/code&gt; retorna &lt;code&gt;x&lt;/code&gt;, pero no evalúa a &lt;code&gt;y&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Para poder funcionar de esta forma estos operadores siguen una serie de reglas que Python usa internamente para determinar el valor de verdad de cualquier objeto. Estas reglas son las siguientes:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Por defecto, un objeto se considera verdadero a menos que su clase defina un método &lt;code&gt;.__bool__()&lt;/code&gt; que devuelva &lt;code&gt;False&lt;/code&gt; o un método &lt;code&gt;.__len__()&lt;/code&gt; que devuelva cero cuando se llama con el objeto. Aquí están los objetos integrados considerados falsos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Constantes definidas como falsas: &lt;code&gt;None&lt;/code&gt; y &lt;code&gt;False&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Cero en cualquiera de los diferentes tipos numéricos: &lt;code&gt;0&lt;/code&gt;, &lt;code&gt;0.0&lt;/code&gt;, &lt;code&gt;0j&lt;/code&gt;, &lt;code&gt;Decimal(0)&lt;/code&gt;, &lt;code&gt;Fraction(0, 1)&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Cualquier colección o secuencia vacía: &lt;code&gt;''&lt;/code&gt;, &lt;code&gt;()&lt;/code&gt;, &lt;code&gt;[]&lt;/code&gt;, &lt;code&gt;{}&lt;/code&gt;, &lt;code&gt;set()&lt;/code&gt;, &lt;code&gt;range(0)&lt;/code&gt;. (&lt;a href="https://docs.python.org/es/3.13/library/stdtypes.html#truth-value-testing"&gt;Fuente&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="concatenacion-y-repeticion"&gt;Concatenación y repetición&lt;/h2&gt;
+&lt;p&gt;Las expresiones de concatenación se forman con el operador de adición (&lt;code&gt;+&lt;/code&gt;). En este caso, los operandos deben ser cadenas de caracteres, listas, o tuplas:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Hola,&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot; Mundo&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;!&amp;quot;&lt;/span&gt;
+&lt;span class="s1"&gt;&amp;#39;Hola, Mundo!&amp;#39;&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Juan&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;25&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Programador&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;España&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Juan&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;25&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Programador&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;España&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En el primer ejemplo, concatenas varias cadenas para formar una cadena final. De modo similar, haces con listas y con tuplas. Sin embargo, debes notar que los operandos deben ser del mismo tipo de datos. Considera el ejemplo siguiente:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Juan&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;25&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Programador&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;España&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;Traceback&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;most&lt;/span&gt; &lt;span class="n"&gt;recent&lt;/span&gt; &lt;span class="n"&gt;call&lt;/span&gt; &lt;span class="n"&gt;last&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="ne"&gt;TypeError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;can&lt;/span&gt; &lt;span class="n"&gt;only&lt;/span&gt; &lt;span class="n"&gt;concatenate&lt;/span&gt; &lt;span class="nb"&gt;tuple&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;list&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="nb"&gt;tuple&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Si tratas de concatenar una tupla con una lista, entonces recibirás una excepción &lt;code&gt;TypeError&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;En lo que respecta a las expresiones de repetición, debes emplear el operador de repetición (&lt;code&gt;*&lt;/code&gt;). Uno de los operandos será un número entero que representa el número de veces que deseas repetir el segundo operando. Este último puede ser una cadena, una lista, o una tupla:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Hola!&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="s1"&gt;&amp;#39;Hola!Hola!Hola!&amp;#39;&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;uno&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;dos&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;uno&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;dos&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;uno&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;dos&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;uno&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;dos&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;uno&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;dos&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;El operador de repetición te permite repetir un objeto un determinado número de veces. Debes notar que el orden de los operandos no altera el resultado.&lt;/p&gt;
+&lt;h2 id="precedencia-de-operadores"&gt;Precedencia de operadores&lt;/h2&gt;
+&lt;p&gt;Cuando trabajas con expresiones que combinan diferentes tipos de operadores, debes considerar que los operadores tienen un orden de precedencia que define cuál operación se evalúa primero. A continuación un breve resumen de este orden.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Paréntesis&lt;/strong&gt; &lt;code&gt;()&lt;/code&gt;. Los paréntesis tienen la mayor precedencia y se evalúan primero:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;
+&lt;span class="mi"&gt;20&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En esta expresión, se evalúa &lt;code&gt;(2 + 3)&lt;/code&gt; primero y se obtiene &lt;code&gt;5&lt;/code&gt;. Luego, se desarrolla la multiplicación y resulta en &lt;code&gt;20&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Exponenciación&lt;/strong&gt; &lt;code&gt;**&lt;/code&gt;. El operador de potencia tiene la segunda mayor precedencia:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="mi"&gt;18&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Se evalúa primero la exponenciación &lt;code&gt;(3**2)&lt;/code&gt; y se obtiene &lt;code&gt;9&lt;/code&gt;. Luego, se realiza la multiplicación y se obtiene &lt;code&gt;18&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Operadores unarios&lt;/strong&gt; &lt;code&gt;+x&lt;/code&gt;, &lt;code&gt;-x&lt;/code&gt;, &lt;code&gt;~x&lt;/code&gt;. Los operadores unarios como el negativo &lt;code&gt;-&lt;/code&gt; y el positivo &lt;code&gt;+&lt;/code&gt; se aplican antes que la mayoría de los operadores. Sin embargo, su precedencia es menor que la del operador de exponenciación:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;9&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="mi"&gt;9&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;La primera expresión se evalúa como &lt;code&gt;-(3**2) = -9&lt;/code&gt; en lugar de como &lt;code&gt;(-3)**2 = 9&lt;/code&gt; que sería lo esperado en matemáticas.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Multiplicación&lt;/strong&gt;, &lt;strong&gt;División&lt;/strong&gt;, &lt;strong&gt;Módulo&lt;/strong&gt; y &lt;strong&gt;División entera&lt;/strong&gt; &lt;code&gt;*&lt;/code&gt;, &lt;code&gt;/&lt;/code&gt;, &lt;code&gt;%&lt;/code&gt;, &lt;code&gt;//&lt;/code&gt;. Todos estos operadores tienen la misma precedencia y se evalúan de izquierda a derecha según aparecen en las expresiones:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="mi"&gt;20&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Se evalúa primero la multiplicación y luego la suma &lt;code&gt;10 + (5 * 2)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Suma&lt;/strong&gt; y &lt;strong&gt;Resta&lt;/strong&gt; &lt;code&gt;+&lt;/code&gt;, &lt;code&gt;-&lt;/code&gt;. Tienen precedencia menor que la multiplicación y se evalúan después de ella:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="mi"&gt;11&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Se evalúa de izquierda a derecha: primero &lt;code&gt;10 - 2&lt;/code&gt; y luego &lt;code&gt;8 + 3&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Operadores de desplazamiento de bits&lt;/strong&gt; &lt;code&gt;&amp;lt;&amp;lt;&lt;/code&gt;, &lt;code&gt;&amp;gt;&amp;gt;&lt;/code&gt;. Los operadores de desplazamiento tienen menor precedencia que los aritméticos:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="mi"&gt;12&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Se evalúa como &lt;code&gt;(1 + 2) &amp;lt;&amp;lt; 2&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Operadores de comparación&lt;/strong&gt; &lt;code&gt;&amp;lt;&lt;/code&gt;, &lt;code&gt;&amp;lt;=&lt;/code&gt;, &lt;code&gt;&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;gt;=&lt;/code&gt;. Los operadores de comparación se evalúan después de los aritméticos y de los de desplazamiento:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
+&lt;span class="kc"&gt;True&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Se evalúa como &lt;code&gt;(3 * 2) &amp;lt; 10&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Operadores de igualdad&lt;/strong&gt; &lt;code&gt;==&lt;/code&gt;, &lt;code&gt;!=&lt;/code&gt;. Tienen menor precedencia que los operadores de comparación:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
+&lt;span class="kc"&gt;True&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Se evalúa primero &lt;code&gt;3 + 2&lt;/code&gt; y luego &lt;code&gt;5 == 5&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Operadores de bits&lt;/strong&gt; &lt;code&gt;&amp;amp;&lt;/code&gt;, &lt;code&gt;^&lt;/code&gt;, &lt;code&gt;|&lt;/code&gt;. Se evalúan en el siguiente orden: &lt;code&gt;&amp;amp;&lt;/code&gt; (AND bit a bit), &lt;code&gt;^&lt;/code&gt; (XOR bit a bit), &lt;code&gt;|&lt;/code&gt; (OR bit a bit):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Se evalúa como &lt;code&gt;(3 &amp;amp; 2) | 1&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Operadores lógicos&lt;/strong&gt; &lt;code&gt;not&lt;/code&gt;, &lt;code&gt;and&lt;/code&gt;, &lt;code&gt;or&lt;/code&gt;. El operador &lt;code&gt;not&lt;/code&gt; tiene mayor precedencia que &lt;code&gt;and&lt;/code&gt;, que a su vez tiene mayor precedencia que &lt;code&gt;or&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;
+&lt;span class="kc"&gt;False&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Se evalúa como &lt;code&gt;(not True) or (False and True)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Operadores de pertenencia e identidad&lt;/strong&gt; &lt;code&gt;in&lt;/code&gt;, &lt;code&gt;not in&lt;/code&gt;, &lt;code&gt;is&lt;/code&gt;, &lt;code&gt;is not&lt;/code&gt;. Estos operadores tienen precedencia baja y se evalúan antes que los operadores lógicos:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;m&amp;quot;&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;mango&amp;quot;&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
+&lt;span class="kc"&gt;False&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Se evalúa como &lt;code&gt;("m" in "mango") and (None is not None)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Operadores de asignación&lt;/strong&gt; &lt;code&gt;=&lt;/code&gt;, &lt;code&gt;+=&lt;/code&gt;, &lt;code&gt;-=&lt;/code&gt;, &lt;code&gt;*=&lt;/code&gt;, &lt;code&gt;/=&lt;/code&gt;, &lt;code&gt;//=&lt;/code&gt;, &lt;code&gt;**=&lt;/code&gt;, y &lt;code&gt;%=&lt;/code&gt;. Los operadores de asignación tienen la menor precedencia, lo cual permite que los cálculos se realicen antes de asignar el valor final:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;
+&lt;span class="mi"&gt;13&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Primero se evalúa &lt;code&gt;3 + (2 * 5)&lt;/code&gt; y luego se asigna el resultado a la variable &lt;code&gt;x&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="conclusiones"&gt;Conclusiones&lt;/h2&gt;
+&lt;p&gt;Has aprendido sobre las expresiones en Python y cómo formarlas usando diferentes tipos de operadores, como los aritméticos, de comparación, lógicos, de concatenación y repetición. También has conocido la importancia de la precedencia de operadores en la evaluación de expresiones complejas.&lt;/p&gt;
+&lt;p&gt;Entender cómo formar expresiones en Python es fundamental, pues es la base de para una manipulación y transformación efectiva de datos.&lt;/p&gt;
+&lt;p&gt;Ahora que dominas estos conceptos, puedes continuar explorando el uso de expresiones y operadores para maximizar la eficiencia y legibilidad de tu código Python.&lt;/p&gt;</content><category term="Series"></category><category term="python"></category></entry><entry><title>Python a través de ejemplos: Operadores</title><link href="https://pythonscouts.com/operadores-python/" rel="alternate"></link><published>2024-11-04T06:00:00+01:00</published><updated>2024-11-04T06:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2024-11-04:/operadores-python/</id><summary type="html">&lt;p&gt;En Python, un operador es un símbolo que te permite realizar una determinada operación. Por ejemplo, los operadores aritméticos te permiten realizar operaciones con valores numéricos.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Python tiene varios tipos de operadores que se pueden emplear en diferentes contextos. En este tutorial, aprenderás lo básico sobre cómo funcionan y cómo emplear cada tipo de operador.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#aritmeticos"&gt;Aritméticos&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#asignacion"&gt;Asignación&lt;/a&gt;&lt;/li&gt;

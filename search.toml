@@ -13,6 +13,11 @@ url = "/contacto/"
 title = "Contacto"
 
 [[input.files]]
+path = "expresiones-python/index.html"
+url = "/expresiones-python/"
+title = "Python a través de ejemplos: Expresiones"
+
+[[input.files]]
 path = "operadores-python/index.html"
 url = "/operadores-python/"
 title = "Python a través de ejemplos: Operadores"
