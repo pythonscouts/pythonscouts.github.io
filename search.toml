@@ -8,6 +8,11 @@ url = "/acerca/"
 title = "Acerca"
 
 [[input.files]]
+path = "patron-mvc-python/index.html"
+url = "/patron-mvc-python/"
+title = "Patrones de diseño en Python: Modelo-Vista-Controlador (MVC)"
+
+[[input.files]]
 path = "expresiones-python/index.html"
 url = "/expresiones-python/"
 title = "Python a través de ejemplos: Expresiones"

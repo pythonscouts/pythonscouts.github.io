@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es-es" class="h-100">
+
+<head>
+        <title>
+  Python Scouts - Patrones de diseño en Python: Modelo-Vista-Controlador (MVC)
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="El patrón Modelo-Vista-Controlador (MVC) es usado en la industria del software para definir la arquitectura general de una aplicación.">
+    <meta name="keywords" content="mvc python">
+    <!-- RSS feeds -->
+    <link href="https://pythonscouts.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Full Atom Feed" />
+    <link href="https://pythonscouts.com/feeds/series.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Categories Atom Feed" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://pythonscouts.com/patron-mvc-python/">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css">
+    <!-- Stork Search -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css">
+
+
+    <!-- Article tags -->
+    <meta name="article:tag" content="python" />
+    <meta name="article:tag" content="windows" />
+    <meta name="article:tag" content="macos" />
+    <meta name="article:tag" content="fundamentos" />
+
+    <!-- Twitter cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lpozo78">
+    <meta name="twitter:creator" content="@lpozo78">
+    <meta name="twitter:title" content="Patrones de diseño en Python: Modelo-Vista-Controlador (MVC) - Python Scouts">
+    <meta name="twitter:description" content="El patrón Modelo-Vista-Controlador (MVC) es usado en la industria del software para definir la arquitectura general de una aplicación.">
+    <meta name="twitter:image" content="https://picsum.photos/id/136/300/200.webp">
+    <!-- Linkedin card -->
+    <meta property="og:title" content="Python Scouts">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="patron-mvc-python/">
+    <meta property="og:description" content="El patrón Modelo-Vista-Controlador (MVC) es usado en la industria del software para definir la arquitectura general de una aplicación.">
+    <meta property="og:image" content="https://picsum.photos/id/136/300/200.webp">
+    <!-- Custom CSS for article -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-R3C5PFSQ1S');
+</script>
+
+<body class="d-flex flex-column h-100">
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-md bg-white fixed-top border-bottom">
+        <div class="container-md content-px">
+            <a class="navbar-brand" href="/">
+            <img
+            src="https://pythonscouts.com/images/identity/header.webp"
+            alt="Python Scouts"
+            width="150"
+            height="50"
+            >
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Menú de Navegación">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav m-auto nav-link">
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/guias/" aria-current="page">
+                    Guías
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/series/" aria-current="page">
+                    Series
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/tutoriales/" aria-current="page">
+                    Tutoriales
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/acerca/" aria-current="page">
+                    Acerca
+                </a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <div class="stork-wrapper">
+                <input
+                class="stork-input"
+                type="search"
+                placeholder="Buscar"
+                aria-label="Search"
+                data-stork="sitesearch"
+                >
+                </div>
+            </form>
+            </div>
+        </div>
+    </nav>
+    <main class="container-md content-px py-3">
+        <div class="stork-wrapper">
+            <div data-stork="sitesearch-output" class="stork-output"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+            </div>
+        </div>
+
+    <!-- Article Header -->
+    <div class="row pt-3 pb-5">
+        <div class="col-md-6 py-3">
+            <h1 class="display-5">
+                <strong>Patrones de diseño en Python: Modelo-Vista-Controlador (MVC)</strong>
+            </h1>
+            <div class="text-muted small py-3">
+                Publicado el jueves, 12 de diciembre del 2024
+            </div>
+            <div class="py-3">
+                <img src="https://pythonscouts.com/images/authors/leodanis-pozo-ramos.webp" alt="Leodanis Pozo Ramos" class="rounded-circle border" width="70" height="70">
+                <a href="https://pythonscouts.com/author/leodanis-pozo-ramos.html" style="padding-left: 10px;">
+                    Leodanis Pozo Ramos
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6 py-3">
+            <img src="https://picsum.photos/id/136/200/150.webp" class="img-fluid w-100">
+        </div>
+    </div>
+          <!-- Article Content -->
+        <article>
+          <p>El patrón Modelo-Vista-Controlador (MVC) es usado en la industria del software para definir la arquitectura general de una aplicación.</p>
+            <div class="row">
+                <div class="col">
+                  <p>Este patrón permite separar la lógica específica de cada uno de los componentes de la aplicación. El <strong>modelo</strong> maneja la lógica de negocio, la <strong>vista</strong> es el componente visual y el <strong>controlador</strong> se ocupa de conectar y controlar el funcionamiento de los dos anteriores.</p>
+<p><strong>En este tutorial aprenderá:</strong></p>
+<ul>
+<li>Qué es <strong>MVC</strong> y cómo funciona</li>
+<li>Qué <strong>rol</strong> desempeña cada uno de los componentes del MVC</li>
+<li>Cuáles son los <strong>beneficios</strong> de emplear el MVC en tus aplicaciones</li>
+</ul>
+<div class="toc"><span class="toctitle">Contenidos</span><ul>
+<li><a href="#que-es-el-patron-modelo-vista-controlador">¿Qué es el patrón Modelo-Vista-Controlador?</a></li>
+<li><a href="#como-funciona-el-patron-mvc">¿Cómo funciona el patrón MVC?</a></li>
+<li><a href="#que-responsabilidades-tiene-cada-componente-del-patron-mvc">¿Qué responsabilidades tiene cada componente del patrón MVC?</a></li>
+<li><a href="#como-implementar-el-mvc-un-demo-con-tkinter-y-python">¿Cómo implementar el MVC? Un demo con Tkinter y Python?</a><ul>
+<li><a href="#el-modelo">El modelo</a></li>
+<li><a href="#la-vista">La vista</a></li>
+<li><a href="#el-controlador">El controlador</a></li>
+</ul>
+</li>
+<li><a href="#que-beneficios-ofrece-el-patron-mvc">¿Qué beneficios ofrece el patrón MVC?</a></li>
+<li><a href="#resumiendo">Resumiendo</a></li>
+</ul>
+</div>
+<h2 id="que-es-el-patron-modelo-vista-controlador">¿Qué es el patrón Modelo-Vista-Controlador?</h2>
+<p>El Modelo-Vista-Controlador (MVC) más que un patrón de diseño, puede ser considerado un patrón de arquitectura de software. La diferencia entre el primero y el segundo es que el segundo tiene un alcance mucho mayor, pues define la arquitectura fundamental de la aplicación o sistema que estés desarrollando.</p>
+<p>Este patrón tiene tres componentes:</p>
+<ol>
+<li>
+<p><strong>Modelo</strong> es el componente central y representa el conocimiento. El modelo contiene y gestiona la lógica del negocio, los datos, el estado y demás reglas fundamentales de la aplicación. Los datos pueden ser almacenados en el propio modelo o en una base de datos. En este último caso solo el modelo puede tener acceso a esta base de datos.</p>
+</li>
+<li>
+<p><strong>Vista</strong> es el componente visual pues debe proveer una representación visual del modelo que el usuario generalmente puede ver en pantalla. Por ejemplo, las Interfaces Gráficas de Usuario (GUI por sus siglas en Inglés), o las salidas de texto en una consola o terminal, los gráficos de barras o de pastel, los documentos, las hojas de cálculo, y similares. La vista se limita a mostrar los datos contenidos en el modelo, sin tener la capacidad de manipularlos o modificarlos.</p>
+</li>
+<li>
+<p><strong>Controlador</strong> es el enlace o medio de comunicación entre el modelo y la vista. El encargado de controlar todo el funcionamiento de ambos. Todo el flujo de comunicación entre el modelo y la vista es gestionado a través del controlador, por tanto, no existirá comunicación directa entre estos. Normalmente, el controlador acepta las acciones y entradas del usuario y delega la representación de los datos en la vista y la manipulación en el modelo.</p>
+</li>
+</ol>
+<p>El MVC permite la aplicación práctica del principio de <a href="https://es.wikipedia.org/wiki/Separaci%C3%B3n_de_intereses">Separación de intereses</a> (Separation of Concern) al diseño de aplicaciones, donde cada uno de los componentes del patrón tiene una responsabilidad bien definida y única.</p>
+<h2 id="como-funciona-el-patron-mvc">¿Cómo funciona el patrón MVC?</h2>
+<p>La lógica de funcionamiento del MVC puede ser más fácil de comprender con un ejemplo práctico. Supón que tienes una aplicación con una interfaz gráfica de usuario (GUI) donde puedes realizar acciones o eventos, incluidos hacer click, presionar teclas, tocar el display táctil, entre otros.</p>
+<p>Cuando ejecutas la aplicación, inmediatamente ves su ventana principal en tu escritorio. Si la aplicación está implementada usando el MVC, entonces debe funcionar del siguiente modo:</p>
+<ul>
+<li>
+<p>Ejecutas una acción (evento) sobre la vista o ventana de la aplicación.</p>
+</li>
+<li>
+<p>La vista recibe la acción e inmediatamente informa o notifica al controlador sobre la acción realizada.</p>
+</li>
+<li>
+<p>El controlador a su vez, delega la solicitud al modelo y actualizar la vista en consecuencia.</p>
+</li>
+<li>
+<p>El modelo realiza toda la validación de los datos y las entradas y luego procesa los requerimientos y realiza los cambios de estado solicitados, para finalmente informar al controlador que el cambio de estado correspondiente ha sido realizado.</p>
+</li>
+<li>
+<p>El controlador recibe la información de cambio de estado generada por el modelo y se la envía a la vista, quien se encargará de mostrarla en pantalla.</p>
+</li>
+</ul>
+<p>Haciendo una analogía puedes comparar el MVC con un restaurante. La carta sería la vista que contiene la información sobre el menú, el mesero sería el controlador que recibe la orden del cliente y se la transmite al chef quien representa al modelo y se encarga de confeccionar el plato solicitado por el cliente.</p>
+<aside>
+En muchas implementaciones de MVC, especialmente en aplicaciones web, las acciones del usuario no son directamente manejadas por la vista, sino que pasan primero por el controlador. La vista debería ser lo más pasiva posible, simplemente renderizando lo que el controlador le proporciona. El controlador debe ser quien maneje las acciones del usuario y decida qué hacer con ellas, incluyendo actualizar el modelo o cambiar lo que se muestra en la vista.
+</aside>
+
+<p>Una vez que el plato está listo, el chef se lo hace saber al mesero, quien finalmente sirve la comida al cliente en forma de un plato terminado que sería la nueva representación de la vista.</p>
+<p>El chef y el cliente no tienen contacto directo, pues todo es gestionado por el mesero. Este es un principio básico de este patrón de diseño.</p>
+<h2 id="que-responsabilidades-tiene-cada-componente-del-patron-mvc">¿Qué responsabilidades tiene cada componente del patrón MVC?</h2>
+<p>Para implementar el patrón MVC desde cero, debes asegurarte de crear modelos autónomos que recojan todo el conocimiento y la lógica del negocio. Los controladores deberán ser ligeros y limitarse a canalizar el flujo de información de la vista al modelo y viceversa. Las vistas deben limitarse a mostrar la información de estado del modelo.</p>
+<p>Para que el modelo pueda ser considerado autónomo debe:</p>
+<ul>
+<li>Contener todas las reglas de validación de entradas y la lógica del negocio</li>
+<li>Manipular el estado de la aplicación</li>
+<li>Tener acceso directo a los datos de la aplicación (bases de datos, nube, archivos de configuración, etc.)</li>
+<li>No depender de la interfaz de usuario</li>
+</ul>
+<p>Un controlador es considerado ligero cuando:</p>
+<ul>
+<li>Actualiza el modelo cuando el usuario interactúa con la vista</li>
+<li>Actualiza la vista cuando hay cambios en el modelo</li>
+<li>No muestra datos directamente</li>
+<li>No tiene acceso directo a los datos de la aplicación</li>
+<li>No contiene reglas de validación ni lógica de negocio</li>
+</ul>
+<p>Una vista debe:</p>
+<ul>
+<li>Mostrar los datos contenidos en el modelo</li>
+<li>Permitir que el usuario interactúe con ella</li>
+<li>Realizar un mínimo procesamiento de datos con el fin de mostrarlos al usuario</li>
+<li>No almacenar datos</li>
+<li>No tener acceso directo a los datos de la aplicación</li>
+<li>No contener reglas de validación ni lógica de negocio</li>
+</ul>
+<h2 id="como-implementar-el-mvc-un-demo-con-tkinter-y-python">¿Cómo implementar el MVC? Un demo con Tkinter y Python?</h2>
+<p>En las secciones siguientes, desarrollarás una aplicación con una GUI escrita en Tkinter, que es el paquete de desarrollo de aplicaciones de escritorio por defecto de Python y que la puedes encontrar en la <a href="https://docs.python.org/es/3.13/library/index.html">biblioteca estándar</a> del lenguaje.</p>
+<p>Para este ejemplo, desarrollarás una aplicación sencilla que te permitirá mostrar saludos aleatorios en una ventana.</p>
+<h3 id="el-modelo">El modelo</h3>
+<p>Lo primero que debes definir es el modelo de tu aplicación. Crea un archivo Python llamado <code>model.py</code> y escribe el siguiente código en él:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
+
+<span class="k">class</span> <span class="nc">Model</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">greetings</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="s2">&quot;Hola, Python!&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Hola, Mundo!&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Hola, Python Scouts!&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_greeting</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">choice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">greetings</span><span class="p">)</span>
+</code></pre></div>
+
+<p>La class <code>Model</code> maneja una serie de saludos almacenados en el atributo <code>.greetings</code>. El método <code>.get_greeting()</code> permite seleccionar un saludo aleatorio empleando la función <code>choice()</code> del módulo <code>random</code>.</p>
+<p>Este modelo funciona independientemente de la vista que emplees. Para esto, cuenta con sus propios datos y los métodos necesarios para manipular adecuadamente estos datos.</p>
+<h3 id="la-vista">La vista</h3>
+<p>La vista es la representación gráfica de tu aplicación. Es lo que el usuario ve y con lo que interactúa directamente. La vista recibe las acciones del usuario, las notifica al controlador y luego refleja los cambios del modelo que resultan de las acciones del usuario.</p>
+<p>Crea un archivo llamado <code>view.py</code> y pon en él el siguiente código:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
+
+<span class="k">class</span> <span class="nc">Window</span><span class="p">(</span><span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;MVC Demo&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">geometry</span><span class="p">(</span><span class="s2">&quot;160x70&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">greetings_label</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Hola, Python Scouts!&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">greetings_label</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">greetings_button</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Saludar&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">greetings_button</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">show_greeting</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">greeting</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">greetings_label</span><span class="p">[</span><span class="s2">&quot;text&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">greeting</span>
+</code></pre></div>
+
+<p>En la vista <code>Window</code> solo incluyes código <code>Tkinter</code>. La vista debe ser autosuficiente, es decir, debe tener todos los métodos necesarios para actualizarse. En este caso, solo necesitas el método <code>.show_greeting()</code>.</p>
+<h3 id="el-controlador">El controlador</h3>
+<p>El controlador permite conectar la vista y el modelo. Es el único que debe tener conocimiento del resto de los componentes, vista y modelo. El controlador debe encargarse de guiar y gestionar las operaciones de acceso, modificación y actualización del modelo y de la vista.</p>
+<p>Para el controlador, crea un archivo con el nombre <code>app.py</code> y escribe el siguiente código en él:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">model</span> <span class="kn">import</span> <span class="n">Model</span>
+<span class="kn">from</span> <span class="nn">view</span> <span class="kn">import</span> <span class="n">Window</span>
+
+<span class="k">class</span> <span class="nc">Controller</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">view</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">model</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_view</span> <span class="o">=</span> <span class="n">view</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_view</span><span class="o">.</span><span class="n">greetings_button</span><span class="p">[</span><span class="s2">&quot;command&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_greet</span>
+
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_view</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_greet</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_view</span><span class="o">.</span><span class="n">show_greeting</span><span class="p">(</span><span class="n">greeting</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">get_greeting</span><span class="p">())</span>
+
+<span class="c1"># Client code</span>
+<span class="n">controller</span> <span class="o">=</span> <span class="n">Controller</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">Model</span><span class="p">(),</span> <span class="n">view</span><span class="o">=</span><span class="n">Window</span><span class="p">())</span>
+<span class="n">controller</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</code></pre></div>
+
+<p>En este archivo, defines una clase llamada <code>Controller</code>. En el método <code>.__init__()</code>, tomas como argumentos el modelo y la vista a emplear. Luego creas atributos para almacenar estos elementos y finalmente, conectas el botón Saludar de la vista con el método <code>._greet()</code> del controlador.</p>
+<p>El método <code>._greet()</code> es lo que se conoce como un callback. Este método se ejecuta cuando haces click en el botón <em>Saludar</em>. En este método, primeramente accedes al modelo con el fin de obtener el saludo usando el método <code>.get_greeting()</code>. Luego, le indicas a la vista que muestre el saludo llamando el método <code>.show_greeting()</code>.</p>
+<p>Fíjate que el controlador usa los métodos del modelo o de la vista en función de la tarea a realizar. El controlador no debe implemente lógica de negocio o manipule directamente los datos del modelo. Su papel es coordinar las interacciones entre la vista y el modelo.</p>
+<p>Además, debes notar que el controlador solo tiene un método público, <code>.run()</code>. El resto de sus métodos y atributos no son públicos pues sus nombres comienzan con un guión bajo.</p>
+<p>Una vez definido el controlador, viene el código cliente donde creas una instancia del controlador y llamas el método <code>.run()</code> para ejecutar la aplicación. Para probar cómo funciona tu aplicación, ejecuta el siguiente comando en una ventana del terminal. Asegúrate de estar en el directorio que contiene el archivo <code>app.py</code> de tu aplicación:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>python<span class="w"> </span>app.py
+</code></pre></div>
+
+<p>Al presionar <em>Enter</em>, verás en pantalla una ventana similar a la siguiente:</p>
+<p><img src="../images/articles/patron-mvc-python/mvc-demo-python-tkinter.png" class="mx-auto d-block mt-2" alt="MVC demo app with Tkinter and Python"></p>
+<div class="text-center mb-5 lead"><em>MVC demo app with Tkinter and Python</em></div>
+
+<p>Si presionas continuamente el botón <em>Saludar</em>, verás que aparecen los diferentes saludos de forma aleatoria uno tras otro. En este ejemplo puedes ver como cada clase realiza su trabajo y únicamente su trabajo.</p>
+<h2 id="que-beneficios-ofrece-el-patron-mvc">¿Qué beneficios ofrece el patrón MVC?</h2>
+<p>Si empleas coherentemente el patrón de diseño MVC en el desarrollo de tus proyectos de software, obtendrás las ventajas siguiente:</p>
+<ul>
+<li>
+<p>La separación entre la vista y el modelo permite que los diseñadores gráficos puedan dedicarse al diseño de la interfaz a la vez que los programadores se encargan de programar y probar el modelo, sin ninguna interferencia entre ellos. Luego, solo será necesario programar el controlador adecuado y la aplicación quedaría lista.</p>
+</li>
+<li>
+<p>La poca o nula interdependencia entre el modelo y la vista, permite que cada parte pueda ser modificada de manera independiente sin que se afecte la otra, lo que mejora considerablemente la mantenibilidad de tus aplicaciones.</p>
+</li>
+<li>
+<p>El proceso de añadir nuevas vistas solo demanda de implementar el controlador adecuado.</p>
+</li>
+<li>
+<p>El modelo no tiene conocimiento de las vistas, por tanto, es posible tener vistas diferentes para un único modelo. Por ejemplo, puedes crear una vista web, otra para el escritorio, y otra para dispositivos móviles.</p>
+</li>
+<li>
+<p>El trabajo de mantener cada parte es mucho más fácil, debido a que las responsabilidades están claramente definidas.</p>
+</li>
+</ul>
+<h2 id="resumiendo">Resumiendo</h2>
+<p>Ahora conoces conceptos fundamentales sobre el patrón Modelo-Vista-Controlador. Tienes una idea clara de qué cosa es el patrón de diseño Modelo-Vista-Controlador (MVC), cuáles son sus componentes fundamentales y qué función tiene cada uno de ellos.</p>
+<p><strong>Ahora conoces</strong>:</p>
+<ul>
+<li>Qué es <strong>MVC</strong> y cómo funciona</li>
+<li>Qué <strong>rol</strong> desempeña cada uno de los componentes del MVC</li>
+<li>Cuáles son los <strong>beneficios</strong> de emplear el MVC en tus aplicaciones</li>
+</ul>
+<p>Aplicando estos conocimientos a tus proyectos Python, podrás darles una mejor organización de manera que sean más fáciles de modificar y mantener.</p>
+              </div>
+            </div>
+        </article>
+
+
+      <!-- Disqus -->
+      <div id="disqus_thread" class="py-5"></div>
+      <script type="text/javascript">
+          var disqus_shortname = 'pythonscouts';
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+      </script>
+
+    </main>
+
+    <!-- Page footer -->
+    <footer class="footer mt-auto bg-gray text-center py-3 border-top border-1">
+        <div class="container">
+        <span class="lead">&copy; 2023 Leodanis Pozo Ramos</span>
+        </div>
+        <p class="pt-3">Imágenes cortesía de <a href="https://picsum.photos/" target="_blank">Picsum</a></p>
+    </footer>
+
+    <!-- JS Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Stroke Scripts -->
+    <script src="https://pythonscouts.com/theme/js/stork.js"></script>
+    <script>
+        stork.initialize("https://pythonscouts.com/theme/js/stork.wasm")
+        stork.downloadIndex("sitesearch", "https://pythonscouts.com/search-index.st")
+        stork.attach("sitesearch")
+    </script>
+
+</body>
+</html>
