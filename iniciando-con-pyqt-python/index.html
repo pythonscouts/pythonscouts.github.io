@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="es-es" class="h-100">
+
+<head>
+        <title>
+  Python Scouts - Iniciando con PyQt para desarrollo GUI
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="En Python, PyQt es una biblioteca que proporciona un enlace con Qt, que es un framework de desarrollo de aplicaciones de interfaz gráfica de usuario (GUI).">
+    <meta name="keywords" content="pyqt python">
+    <!-- RSS feeds -->
+    <link href="https://pythonscouts.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Full Atom Feed" />
+    <link href="https://pythonscouts.com/feeds/tutoriales.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Categories Atom Feed" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://pythonscouts.com/iniciando-con-pyqt-python/">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css">
+    <!-- Stork Search -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css">
+
+
+    <!-- Article tags -->
+    <meta name="article:tag" content="gui" />
+    <meta name="article:tag" content="pyqt" />
+    <meta name="article:tag" content="python" />
+    <meta name="article:tag" content="windows" />
+    <meta name="article:tag" content="macos" />
+    <meta name="article:tag" content="fundamentos" />
+
+    <!-- Twitter cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lpozo78">
+    <meta name="twitter:creator" content="@lpozo78">
+    <meta name="twitter:title" content="Iniciando con PyQt para desarrollo GUI - Python Scouts">
+    <meta name="twitter:description" content="En Python, PyQt es una biblioteca que proporciona un enlace con Qt, que es un framework de desarrollo de aplicaciones de interfaz gráfica de usuario (GUI).">
+    <meta name="twitter:image" content="https://picsum.photos/id/159/300/200.webp">
+    <!-- Linkedin card -->
+    <meta property="og:title" content="Python Scouts">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="iniciando-con-pyqt-python/">
+    <meta property="og:description" content="En Python, PyQt es una biblioteca que proporciona un enlace con Qt, que es un framework de desarrollo de aplicaciones de interfaz gráfica de usuario (GUI).">
+    <meta property="og:image" content="https://picsum.photos/id/159/300/200.webp">
+    <!-- Custom CSS for article -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-R3C5PFSQ1S');
+</script>
+
+<body class="d-flex flex-column h-100">
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-md bg-white fixed-top border-bottom">
+        <div class="container-md content-px">
+            <a class="navbar-brand" href="/">
+            <img
+            src="https://pythonscouts.com/images/identity/header.webp"
+            alt="Python Scouts"
+            width="150"
+            height="50"
+            >
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Menú de Navegación">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav m-auto nav-link">
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/guias/" aria-current="page">
+                    Guías
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/series/" aria-current="page">
+                    Series
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/tutoriales/" aria-current="page">
+                    Tutoriales
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/acerca/" aria-current="page">
+                    Acerca
+                </a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <div class="stork-wrapper">
+                <input
+                class="stork-input"
+                type="search"
+                placeholder="Buscar"
+                aria-label="Search"
+                data-stork="sitesearch"
+                >
+                </div>
+            </form>
+            </div>
+        </div>
+    </nav>
+    <main class="container-md content-px py-3">
+        <div class="stork-wrapper">
+            <div data-stork="sitesearch-output" class="stork-output"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+            </div>
+        </div>
+
+    <!-- Article Header -->
+    <div class="row pt-3 pb-5">
+        <div class="col-md-6 py-3">
+            <h1 class="display-5">
+                <strong>Iniciando con PyQt para desarrollo GUI</strong>
+            </h1>
+            <div class="text-muted small py-3">
+                Publicado el martes, 31 de diciembre del 2024
+            </div>
+            <div class="py-3">
+                <img src="https://pythonscouts.com/images/authors/leodanis-pozo-ramos.webp" alt="Leodanis Pozo Ramos" class="rounded-circle border" width="70" height="70">
+                <a href="https://pythonscouts.com/author/leodanis-pozo-ramos.html" style="padding-left: 10px;">
+                    Leodanis Pozo Ramos
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6 py-3">
+            <img src="https://picsum.photos/id/159/200/150.webp" class="img-fluid w-100">
+        </div>
+    </div>
+          <!-- Article Content -->
+        <article>
+          <p>En Python, PyQt es una biblioteca que proporciona un enlace con Qt, que es un framework de desarrollo de aplicaciones de interfaz gráfica de usuario (GUI).</p>
+            <div class="row">
+                <div class="col">
+                  <p>Para desarrollar este tipo de aplicaciones en Python, puedes emplear una amplia variedad de bibliotecas y frameworks, incluyendo <a href="https://docs.python.org/3/library/tkinter.html">Tkinter</a>, <a href="https://realpython.com/python-gui-with-wxpython/">wxPython</a>, <a href="https://www.riverbankcomputing.com/software/pyqt/intro">PyQt</a>, <a href="https://wiki.qt.io/Qt_for_Python">PySide</a>, entre otras. Sin embargo, PyQt es una de las bibliotecas más populares y sólidas disponibles.</p>
+<p>En este tutorial, aprenderás los conceptos básicos para construir aplicaciones GUI usando Python y PyQt.</p>
+<p><strong>En este tutorial, aprenderás cómo:</strong></p>
+<ul>
+<li><strong>Instalar</strong> PyQt y configurarlo en tu computadora</li>
+<li>Crear aplicaciones con <strong>interfaces gráficas de usuario</strong> basadas en PyQt</li>
+<li>Organizar una GUI usando <strong>gestores de disposición</strong></li>
+<li>Crear <strong>ventanas principales</strong> y <strong>diálogos</strong> en tus aplicaciones PyQt</li>
+</ul>
+<p>Para este tutorial, crearás una calculadora con Python y PyQt. Este pequeño proyecto te ayudará a comprender los fundamentos y a empezar con esta biblioteca de GUI.</p>
+<div class="toc"><span class="toctitle">Contenidos</span><ul>
+<li><a href="#conociendo-pyqt">Conociendo PyQt</a></li>
+<li><a href="#instalando-pyqt">Instalando PyQt</a></li>
+<li><a href="#creando-una-aplicacion-pyqt">Creando una aplicación PyQt</a></li>
+<li><a href="#explorando-widgets-comunes-de-pyqt">Explorando widgets comunes de PyQt</a><ul>
+<li><a href="#botones">Botones</a></li>
+<li><a href="#campos-de-entrada-de-texto">Campos de entrada de texto</a></li>
+<li><a href="#listas-desplegables">Listas desplegables</a></li>
+<li><a href="#botones-radiales">Botones radiales</a></li>
+</ul>
+</li>
+<li><a href="#usando-gestores-de-disposicion">Usando gestores de disposición</a><ul>
+<li><a href="#disposicion-horizontal">Disposición horizontal</a></li>
+<li><a href="#disposicion-vertical">Disposición vertical</a></li>
+<li><a href="#disposicion-en-cuadricula">Disposición en cuadrícula</a></li>
+<li><a href="#disposicion-de-formulario">Disposición de formulario</a></li>
+</ul>
+</li>
+<li><a href="#creando-ventanas-y-dialogos">Creando ventanas y diálogos</a><ul>
+<li><a href="#ventanas-principales">Ventanas principales</a></li>
+<li><a href="#dialogos-y-formularios">Diálogos y formularios</a></li>
+<li><a href="#mensajes-y-dialogos-estandar">Mensajes y diálogos estándar</a></li>
+</ul>
+</li>
+<li><a href="#conclusion">Conclusión</a></li>
+</ul>
+</div>
+<h2 id="conociendo-pyqt">Conociendo PyQt</h2>
+<p>PyQt es una biblioteca que proporciona un enlace entre Python y <a href="https://wiki.qt.io/About_Qt">Qt</a>, el cual es un framework de desarrollo en <a href="https://realpython.com/python-vs-cpp/">C++</a> para crear interfaces gráficas de usuario (GUIs). Proporciona <a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/sip-classes.html">clases</a> y herramientas para la creación de GUIs, manejo de <a href="https://realpython.com/python-xml-parser/">XML</a>, comunicación de red, expresiones regulares, hilos, bases de datos SQL, navegación web y otras tecnologías disponibles en Qt. </p>
+<p>PyQt es compatible con Windows, Unix, Linux, macOS, iOS y Android, por lo que puedes emplearla para desarrollar aplicaciones multiplataforma que tengan una apariencia nativa en cada plataforma.</p>
+<p>Si deseas usar PyQt para crear aplicaciones comerciales, entonces necesitas una licencia comercial. También puedes emplear PyQt para proyectos de código abierto, en cuyo caso la licencia de tu proyecto debe ser compatible con la licencia de Qt que estés empleando.</p>
+<h2 id="instalando-pyqt">Instalando PyQt</h2>
+<p>Para instalar PyQt en tu computadora, la opción recomendada es instalar desde el índice de paquetes de Python, <a href="https://realpython.com/pypi-publish-python-package/">PyPI</a>, usando el comando <code>pip</code>. Para esto, puedes crear un <a href="https://docs.python.org/es/3.13/glossary.html#term-virtual-environment">entorno virtual de Python</a> y luego instalar el paquete <code>pyqt6</code>, ejecuta lo siguiente en tu línea de comandos, dependiendo de tu sistema operativo.</p>
+<p>En Windows:</p>
+<div class="highlight"><pre><span></span><code><span class="go">PS&gt; python -m venv venv</span>
+<span class="go">PS&gt; venv\Scripts\activate</span>
+<span class="gp gp-VirtualEnv">(venv)</span> <span class="go">PS&gt; python -m pip install pyqt6</span>
+</code></pre></div>
+
+<p>En Linux y macOS:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
+<span class="gp">$ </span><span class="nb">source</span><span class="w"> </span>venv/bin/activate
+<span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>pyqt6
+</code></pre></div>
+
+<p>Con estos comandos, primero creas un entorno virtual usando el módulo <code>venv</code> de la biblioteca estándar de Python. Luego lo activas, y finalmente instalas PyQt.</p>
+<h2 id="creando-una-aplicacion-pyqt">Creando una aplicación PyQt</h2>
+<p>Con PyQt instalado, estás listo para crear tu primera aplicación GUI. Para comenzar, crearás una aplicación de <code>Hola, Mundo!</code>. Aquí están los pasos a seguir:</p>
+<ol>
+<li>Importa <a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qapplication.html"><code>QApplication</code></a> y todos los widgets necesarios desde <a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qtwidgets-module.html"><code>PyQt6.QtWidgets</code></a>.</li>
+<li>Crea una instancia de <code>QApplication</code>.</li>
+<li>Define la GUI de la aplicación.</li>
+<li>Muestra la GUI de la aplicación.</li>
+<li>Ejecuta el <a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtcore/qcoreapplication.html?highlight=main%20loop#the-event-loop-and-event-handling">bucle de eventos</a> de la aplicación.</li>
+</ol>
+<p>Crea un nuevo archivo Python llamado <code>app.py</code> en tu directorio de trabajo actual:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PyQt6.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QLabel</span><span class="p">,</span> <span class="n">QWidget</span>
+</code></pre></div>
+
+<p>En esta línea de código, importas <code>QApplication</code>, <a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qlabel.html"><code>QLabel</code></a>, y <a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qwidget.html"><code>QWidget</code></a> desde <a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qtwidgets-module.html"><code>QtWidgets</code></a>. Con esto, has cumplido con el primer paso.</p>
+<p>Para completar el segundo paso, necesitas crear una instancia de <code>QApplication</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PyQt6.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QLabel</span><span class="p">,</span> <span class="n">QWidget</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">([])</span>
+</code></pre></div>
+
+<p>En esta línea de código, creas la instancia de <code>QApplication</code>. Es necesario crear esta instancia antes de crear cualquier objeto GUI en PyQt.</p>
+<p>El tercer paso consiste en crear la GUI o ventana principal de la aplicación. Para este ejemplo, la GUI se basará en la clase <code>QWidget</code>, que es la clase base de todos los objetos de interfaz de usuario en PyQt.</p>
+<p>Así es como puedes crear la GUI de la app:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PyQt6.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QLabel</span><span class="p">,</span> <span class="n">QWidget</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">([])</span>
+
+<span class="n">window</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">()</span>
+<span class="n">window</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s2">&quot;PyQt Demo&quot;</span><span class="p">)</span>
+<span class="n">window</span><span class="o">.</span><span class="n">setGeometry</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">280</span><span class="p">,</span> <span class="mi">80</span><span class="p">)</span>
+<span class="n">hello</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot;&lt;h1&gt;Hola, Mundo!&lt;/h1&gt;&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">window</span><span class="p">)</span>
+<span class="n">hello</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+</code></pre></div>
+
+<p>En este código, <code>window</code> es una instancia de <code>QWidget</code>, la cual proporciona todas las características que necesitarás para crear la ventana de la aplicación.</p>
+<p>Como su nombre sugiere, el método <code>.setWindowTitle()</code> te permite establecer el título de la ventana en tu aplicación. En este ejemplo, la ventana de la app mostrará <code>PyQt Demo</code> en su barra de título.</p>
+<p>Puedes usar <code>.setGeometry()</code> para definir el tamaño de la ventana y la posición en la pantalla. Los dos primeros argumentos son las coordenadas de pantalla <code>x</code> y <code>y</code> donde se colocará la ventana. El tercer y cuarto argumentos son el ancho y alto de la ventana.</p>
+<p>Cada aplicación GUI necesita <strong>widgets</strong>. Estos son los componentes gráficos que conforman la GUI de la app. En este ejemplo, usas un widget <code>QLabel</code> llamado<code>hello</code> que te permitirá mostrar el mensaje <code>Hola, Mundo!</code> en la ventana de tu aplicación.</p>
+<p>Los objetos <code>QLabel</code> pueden mostrar texto formateado en HTML, por lo que puedes usar el elemento <a href="https://es.wikipedia.org/wiki/HTML">HTML</a> <code>"&lt;h1&gt;Hola, Mundo!&lt;/h1&gt;"</code> para proporcionar el texto deseado como un encabezado <code>h1</code>. Finalmente, usas el método <code>.move()</code> para colocar el mensaje en las coordenadas <code>(60, 15)</code> en la ventana de la aplicación.</p>
+<p>Has finalizado el tercer paso, así que puedes continuar con los dos últimos pasos y preparar tu aplicación GUI PyQt para ejecutarse:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PyQt6.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QLabel</span><span class="p">,</span> <span class="n">QWidget</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">([])</span>
+
+<span class="n">window</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">()</span>
+<span class="n">window</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s2">&quot;PyQt Demo&quot;</span><span class="p">)</span>
+<span class="n">window</span><span class="o">.</span><span class="n">setGeometry</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">280</span><span class="p">,</span> <span class="mi">80</span><span class="p">)</span>
+<span class="n">hello</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot;&lt;h1&gt;Hola, Mundo!&lt;/h1&gt;&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">window</span><span class="p">)</span>
+<span class="n">hello</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+
+<span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span>
+</code></pre></div>
+
+<p>En las dos últimas líneas, llamas el método <code>.show()</code> en <code>window</code> para mostrar la ventana en la pantalla. Luego, inicias el bucle de eventos de la aplicación ejecutando <code>.exec()</code> y ya está.</p>
+<p>Puedes ejecutar tu primera aplicación PyQt con el siguiente comando:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>python<span class="w"> </span>app.py
+</code></pre></div>
+
+<p>Al ejecutar este comando, verás una ventana que lucirá como la siguiente:</p>
+<p><img src="../images/articles/iniciando-con-pyqt-python/pyqt-demo-app.png" class="mx-auto d-block mt-2" alt="Aplicación 'Hola, Mundo!' con PyQt y Python"></p>
+<div class="text-center mb-5 lead"><em>Aplicación "Hola, Mundo!" con PyQt y Python</em></div>
+
+<p>Tu aplicación muestra una ventana basada en <code>QWidget</code>. La ventana muestra el mensaje <code>Hola, Mundo!</code> usando un widget <code>QLabel</code>. ¡Y con eso, has escrito tu primera aplicación de escritorio GUI usando PyQt y Python!</p>
+<h2 id="explorando-widgets-comunes-de-pyqt">Explorando widgets comunes de PyQt</h2>
+<p>Los <strong>widgets</strong> son componentes gráficos rectangulares que colocas en las ventanas de tu aplicación para construir la GUI. Los widgets tienen atributos y métodos que te permiten ajustar su apariencia y comportamiento.</p>
+<p>Los widgets también detectan clics del mouse, pulsaciones de teclas y otros eventos del usuario, el sistema de ventanas y otras fuentes. Cada vez que un widget captura un evento, emite una señal para anunciar su cambio de estado.</p>
+<p>PyQt tiene una colección variada de widgets, cada uno de los cuales tiene un propósito diferente. Algunos de los widgets más comunes incluyen botones, etiquetas o labels, campos de entrada de texto, listas desplegables, y botones radiales.</p>
+<h3 id="botones">Botones</h3>
+<p>Puedes crear un botón con la clase <a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qpushbutton.html"><code>QPushButton</code></a>, la cual proporciona un botón de comando clásico. Algunos botones típicos son <em>Ok</em>, <em>Cancelar</em>, <em>Aplicar</em>, <em>Sí</em>, <em>No</em>, <em>Cerrar</em>, similares. </p>
+<p>Crea un archivo llamado <code>buttons.py</code> y pon el siguiente código en él:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PyQt6.QtWidgets</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">QApplication</span><span class="p">,</span>
+    <span class="n">QPushButton</span><span class="p">,</span>
+    <span class="n">QVBoxLayout</span><span class="p">,</span>
+    <span class="n">QWidget</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">([])</span>
+
+<span class="n">window</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">()</span>
+<span class="n">window</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s2">&quot;Botones PyQt&quot;</span><span class="p">)</span>
+<span class="n">window</span><span class="o">.</span><span class="n">setGeometry</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">layout</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">()</span>
+<span class="n">window</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">text</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Ok&quot;</span><span class="p">,</span> <span class="s2">&quot;Cancelar&quot;</span><span class="p">,</span> <span class="s2">&quot;Aplicar&quot;</span><span class="p">,</span> <span class="s2">&quot;Sí&quot;</span><span class="p">,</span> <span class="s2">&quot;No&quot;</span><span class="p">,</span> <span class="s2">&quot;Cerrar&quot;</span><span class="p">]:</span>
+    <span class="n">button</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">window</span><span class="p">)</span>
+    <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">button</span><span class="p">)</span>
+
+<span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span>
+</code></pre></div>
+
+<p>En este ejemplo, primero añades la clase <code>QPushButton</code> a tus objetos importados. El bucle <code>for</code> itera sobre una lista de nombres de botones comunes y crea un botón con cada uno de los nombres definidos. Así es como se verá tu aplicación al ejecutarla desde tu terminal:</p>
+<p><img src="../images/articles/iniciando-con-pyqt-python/pyqt-botones.png" class="mx-auto d-block mt-2" alt="Botones en PyQt"></p>
+<div class="text-center mb-5 lead"><em>Botones en PyQt</em></div>
+
+<p>Botones como estos son quizás los widgets más utilizados en cualquier GUI. Cuando alguien hace clic en ellos, tu aplicación ordena a la computadora realizar acciones. Así es como puedes ejecutar cálculos cuando un usuario hace clic en un botón.</p>
+<aside>
+    En este ejemplo, empleas una clase llamada <code>QVBoxLayout</code> que representa un gestor de disposición que permite organizar los widgets con una orientación vertical. Más sobre gestores de disposición en un momento.
+</aside>
+
+<h3 id="campos-de-entrada-de-texto">Campos de entrada de texto</h3>
+<p>Los <strong>campos de entrada de texto</strong> son widgets comunes también. Estos widgets te permite ingresar una sola línea de texto y puedes crearlos con la clase <a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qlineedit.html"><code>QLineEdit</code></a>. Los campos de entrada de texto son útiles cuando necesitas obtener información del usuario como texto simple.</p>
+<p>Para un ejemplo, crea un archivo <code>line_edits.py</code> y escribe el siguiente código:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PyQt6.QtWidgets</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">QApplication</span><span class="p">,</span>
+    <span class="n">QLineEdit</span><span class="p">,</span>
+    <span class="n">QVBoxLayout</span><span class="p">,</span>
+    <span class="n">QWidget</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">([])</span>
+
+<span class="n">window</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">()</span>
+<span class="n">window</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s2">&quot;Campos de texto PyQt&quot;</span><span class="p">)</span>
+<span class="n">window</span><span class="o">.</span><span class="n">setGeometry</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">layout</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">()</span>
+<span class="n">window</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">text</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Nombre&quot;</span><span class="p">,</span> <span class="s2">&quot;Usuario&quot;</span><span class="p">,</span> <span class="s2">&quot;Contraseña&quot;</span><span class="p">]:</span>
+    <span class="n">edit</span> <span class="o">=</span> <span class="n">QLineEdit</span><span class="p">(</span><span class="n">parent</span><span class="o">=</span><span class="n">window</span><span class="p">)</span>
+    <span class="n">edit</span><span class="o">.</span><span class="n">setPlaceholderText</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">edit</span><span class="p">)</span>
+
+<span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span>
+</code></pre></div>
+
+<p>En el bucle de este ejemplo, creas tres campos de texto para permitir que el usuario introduzca su nombre, usuario y contraseña:</p>
+<p><img src="../images/articles/iniciando-con-pyqt-python/pyqt-campos-de-texto.png" class="mx-auto d-block mt-2" alt="Campos de texto en PyQt"></p>
+<div class="text-center mb-5 lead"><em>Campos de texto en PyQt</em></div>
+
+<p>Campos de texto como estos proporcionan funcionalidades estándar como copiar, pegar, deshacer, rehacer, arrastrar, soltar, y similares. En la imagen, puedes notar que los campos muestran texto de marcador de posición para informar al usuario qué tipo de información debe introducir.</p>
+<h3 id="listas-desplegables">Listas desplegables</h3>
+<p>Las <strong>listas desplegables</strong> son otro tipo fundamental de widget en aplicaciones GUI. Puedes crearlas usando la clase <a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qcombobox.html"><code>QComboBox</code></a>. Una lista desplegable presenta al usuario una serie de opciones de una manera que ocupa un espacio mínimo en la pantalla.</p>
+<p>A continuación, un ejemplo de cómo emplear una lista desplegable en PyQt:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PyQt6.QtWidgets</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">QApplication</span><span class="p">,</span>
+    <span class="n">QComboBox</span><span class="p">,</span>
+    <span class="n">QVBoxLayout</span><span class="p">,</span>
+    <span class="n">QWidget</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">([])</span>
+
+<span class="n">window</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">()</span>
+<span class="n">window</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s2">&quot;Lista desplegable PyQt&quot;</span><span class="p">)</span>
+<span class="n">window</span><span class="o">.</span><span class="n">setGeometry</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">layout</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">()</span>
+<span class="n">window</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+
+<span class="n">combo</span> <span class="o">=</span> <span class="n">QComboBox</span><span class="p">(</span><span class="n">parent</span><span class="o">=</span><span class="n">window</span><span class="p">)</span>
+<span class="n">combo</span><span class="o">.</span><span class="n">addItems</span><span class="p">(</span>
+    <span class="p">[</span><span class="s2">&quot;PyQt&quot;</span><span class="p">,</span> <span class="s2">&quot;PySide&quot;</span><span class="p">,</span> <span class="s2">&quot;Kivy&quot;</span><span class="p">,</span> <span class="s2">&quot;Tkinter&quot;</span><span class="p">,</span> <span class="s2">&quot;wxPython&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">combo</span><span class="p">)</span>
+
+<span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span>
+</code></pre></div>
+
+<p>En este ejemplo, creas <code>combo</code> como una instancia de <code>QComboBox</code>. Esta instancia contendrá una lista desplegable con una serie de nombres de bibliotecas Python para desarrollo de aplicaciones GUI. Cuando ejecutas esta aplicación desde tu línea de comandos, obtienes una ventana como la siguiente:</p>
+<p><img src="../images/articles/iniciando-con-pyqt-python/pyqt-lista-desplegable.png" class="mx-auto d-block mt-2" alt="Lista desplegable en PyQt"></p>
+<div class="text-center mb-5 lead"><em>Lista desplegable en PyQt</em></div>
+
+<p>Al hacer clic sobre esta lista desplegable, los usuarios pueden seleccionar una de las opciones desplegadas. Las listas desplegables también pueden ser de solo lectura o editables y además de texto, también pueden contener <a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtgui/qbitmap.html">pixmaps</a> o ambos.</p>
+<h3 id="botones-radiales">Botones radiales</h3>
+<p>El último widget que estudiarás es el <strong>botón radial</strong>, que puedes crear con la clase <a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qradiobutton.html"><code>QRadioButton</code></a>. Se trata de un botón circular de opción que puedes seleccionar al hacer clic sobre él. Los botones radiales son útiles cuando necesitas que el usuario seleccione una entre varias opciones.</p>
+<p>Todas las opciones en un grupo de botones radiales son visibles al mismo tiempo, pero el usuario solo puede seleccionar una de ellas. Es decir, la selección es excluyente. Considera el siguiente ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PyQt6.QtWidgets</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">QApplication</span><span class="p">,</span>
+    <span class="n">QLabel</span><span class="p">,</span>
+    <span class="n">QRadioButton</span><span class="p">,</span>
+    <span class="n">QVBoxLayout</span><span class="p">,</span>
+    <span class="n">QWidget</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">([])</span>
+<span class="n">window</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">()</span>
+<span class="n">window</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s2">&quot;Botones radiales PyQt&quot;</span><span class="p">)</span>
+<span class="n">window</span><span class="o">.</span><span class="n">setGeometry</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">230</span><span class="p">,</span> <span class="mi">80</span><span class="p">)</span>
+<span class="n">layout</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">()</span>
+<span class="n">window</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+<span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot;¿Qué prefieres?&quot;</span><span class="p">))</span>
+
+<span class="n">foods</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Pizza&quot;</span><span class="p">,</span> <span class="s2">&quot;Hamburguesa&quot;</span><span class="p">,</span> <span class="s2">&quot;Pasta&quot;</span><span class="p">,</span> <span class="s2">&quot;Pollo asado&quot;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">food</span> <span class="ow">in</span> <span class="n">foods</span><span class="p">:</span>
+    <span class="n">radio</span> <span class="o">=</span> <span class="n">QRadioButton</span><span class="p">(</span><span class="n">food</span><span class="p">)</span>
+    <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">radio</span><span class="p">)</span>
+
+<span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span>
+</code></pre></div>
+
+<p>En este ejemplo, creas una aplicación que muestra un texto descriptivo, <code>"¿Qué prefieres?"</code>, seguido de una serie de botones radiales, que representan opciones entre las que el usuario puede elegir. En este caso, las opciones son "Pizza", "Hamburguesa", "Pasta" y "Pollo asado". Para crear los botones, empleas un ciclo <code>for</code> que itera sobre la lista de comidas.</p>
+<p>Al hacer clic en uno de los botones, este se activa y los demás se desactivan automáticamente. Esto los hace ideales para preguntas de selección única, como preferencias o respuestas a encuestas:</p>
+<p><img src="../images/articles/iniciando-con-pyqt-python/pyqt-botones-radiales.png" class="mx-auto d-block mt-2" alt="Botones radiales en PyQt"></p>
+<div class="text-center mb-5 lead"><em>Botones radiales en PyQt</em></div>
+
+<p>En este grupo de botones radiales, solo un botón puede estar seleccionado a la vez. Si seleccionas otro botón del grupo, entonces el botón previamente seleccionado se deseleccionará automáticamente.</p>
+<p>PyQt tiene una amplia colección de widgets. Actualmente hay más de cuarenta <a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qwidget.html">widgets</a> disponibles. Aquí, has estudiado solo una pequeña muestra. Sin embargo, esta es suficiente para mostrarte el poder y la flexibilidad de este framework GUI.</p>
+<p>En la siguiente sección, aprenderás cómo organizar diferentes widgets para construir GUIs modernas y completamente funcionales para tus aplicaciones.</p>
+<h2 id="usando-gestores-de-disposicion">Usando gestores de disposición</h2>
+<p>Para construir GUI app, necesitas saber cómo organizar un conjunto de widgets para que tu GUI sea intuitiva y funcional. En PyQt, las herramientas para este fin son los llamados <a href="https://realpython.com/python-pyqt-layout/">gestores de disposición</a>.</p>
+<p>Se trata de clases que te permiten dimensionar y posicionar tus widgets en la ventana o formulario de la aplicación. Se adaptan automáticamente a eventos de cambio de tamaño y otros cambios en la GUI, controlando el tamaño y posición de todos sus widgets.</p>
+<p>PyQt proporciona cuatro clases básicas de gestores de disposición:</p>
+<ol>
+<li><a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qhboxlayout.html"><code>QHBoxLayout</code></a></li>
+<li><a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qvboxlayout.html"><code>QVBoxLayout</code></a></li>
+<li><a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qgridlayout.html"><code>QGridLayout</code></a></li>
+<li><a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qformlayout.html"><code>QFormLayout</code></a></li>
+</ol>
+<p>En las secciones siguientes, aprenderás lo básico de cómo emplear estas clases y crear GUIs ordenadas y funcionales.</p>
+<h3 id="disposicion-horizontal">Disposición horizontal</h3>
+<p>La primera clase de gestor de disposición que estudiarás es <strong><code>QHBoxLayout</code></strong>. Esta te permite organizar los widgets horizontalmente de izquierda a derecha. El ejemplo a continuación muestra cómo usar <code>QHBoxLayout</code> para organizar tres botones horizontalmente:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PyQt6.QtWidgets</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">QApplication</span><span class="p">,</span>
+    <span class="n">QHBoxLayout</span><span class="p">,</span>
+    <span class="n">QPushButton</span><span class="p">,</span>
+    <span class="n">QWidget</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">([])</span>
+<span class="n">window</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">()</span>
+<span class="n">window</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s2">&quot;Disposición Horizontal&quot;</span><span class="p">)</span>
+
+<span class="n">layout</span> <span class="o">=</span> <span class="n">QHBoxLayout</span><span class="p">()</span>
+<span class="n">window</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+
+<span class="n">positions</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Izquierda&quot;</span><span class="p">,</span> <span class="s2">&quot;Centro&quot;</span><span class="p">,</span> <span class="s2">&quot;Derecha&quot;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">position</span> <span class="ow">in</span> <span class="n">positions</span><span class="p">:</span>
+    <span class="n">button</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="n">position</span><span class="p">)</span>
+    <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">button</span><span class="p">)</span>
+
+<span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span>
+</code></pre></div>
+
+<p>En este ejemplo, creas una instancia de <code>QHBoxLayout</code> llamada <code>layout</code>. Luego agregas los tres botones en un ciclo usando el método <code>.addWidget()</code>. La aplicación resultante luce como se muestra a continuación:</p>
+<p><img src="../images/articles/iniciando-con-pyqt-python/pyqt-gestor-disposicion-horizontal.png" class="mx-auto d-block mt-2" alt="Gestor de disposición horizontal en PyQt"></p>
+<div class="text-center mb-5 lead"><em>Gestor de disposición horizontal en PyQt</em></div>
+
+<p>La figura anterior muestra tres botones en disposición horizontal. Los botones se muestran de izquierda a derecha en el mismo orden en que los agregaste en tu código.</p>
+<h3 id="disposicion-vertical">Disposición vertical</h3>
+<p>La siguiente clase de gestor de disposición es <strong><code>QVBoxLayout</code></strong>. Esta clase te permite organizar los widgets verticalmente de arriba a abajo, facilitando la construcción de diseños verticales en tu GUI.</p>
+<p>A continuación, un ejemplo de cómo puedes usar <code>QVBoxLayout</code> para organizar tres botones verticalmente:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PyQt6.QtWidgets</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">QApplication</span><span class="p">,</span>
+    <span class="n">QPushButton</span><span class="p">,</span>
+    <span class="n">QVBoxLayout</span><span class="p">,</span>
+    <span class="n">QWidget</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">([])</span>
+<span class="n">window</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">()</span>
+<span class="n">window</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s2">&quot;Disposición Vertical&quot;</span><span class="p">)</span>
+<span class="n">window</span><span class="o">.</span><span class="n">setGeometry</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">230</span><span class="p">,</span> <span class="mi">80</span><span class="p">)</span>
+
+<span class="n">layout</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">()</span>
+<span class="n">window</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+
+<span class="n">positions</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Arriba&quot;</span><span class="p">,</span> <span class="s2">&quot;Centro&quot;</span><span class="p">,</span> <span class="s2">&quot;Abajo&quot;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">position</span> <span class="ow">in</span> <span class="n">positions</span><span class="p">:</span>
+    <span class="n">button</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="n">position</span><span class="p">)</span>
+    <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">button</span><span class="p">)</span>
+
+<span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span>
+</code></pre></div>
+
+<p>En este ejemplo, creas una instancia de <code>QVBoxLayout</code> llamada <code>layout</code>. En el ciclo <code>for</code>, añades tres botones a <code>layout</code> empleando <code>.addWidget()</code>. Cuando ejecutas esta aplicación de ejemplo, obtienes una ventana que se ve como la siguiente:</p>
+<p><img src="../images/articles/iniciando-con-pyqt-python/pyqt-gestor-disposicion-vertical.png" class="mx-auto d-block mt-2" alt="Gestor de disposición vertical en PyQt"></p>
+<div class="text-center mb-5 lead"><em>Gestor de disposición vertical en PyQt</em></div>
+
+<p>Esta captura muestra tres botones en un arreglo vertical, uno debajo del otro. Los botones aparecen en el mismo orden en que los agregaste a tu código, de arriba a abajo.</p>
+<h3 id="disposicion-en-cuadricula">Disposición en cuadrícula</h3>
+<p>El tercer gestor de disposición que estudiarás es <strong><code>QGridLayout</code></strong>. Esta clase te permite organizar los widgets en una cuadrícula de filas y columnas. Cada widget tendrá una posición relativa en la cuadrícula. Puedes definir la posición de un widget con un par de coordenadas como <code>(fila, columna)</code>. Cada coordenada debe ser un <a href="https://realpython.com/python-numbers/">número</a> entero. Estos pares de coordenadas definen qué celda en la cuadrícula ocupará un widget determinado.</p>
+<p><code>QGridLayout</code> toma el espacio disponible, lo divide en <code>filas</code> y <code>columnas</code>, y coloca cada widget hijo en su propia celda. </p>
+<p>A continuación, se muestra un ejemplo de cómo organizar una GUI con este gestor de disposición:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PyQt6.QtWidgets</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">QApplication</span><span class="p">,</span>
+    <span class="n">QGridLayout</span><span class="p">,</span>
+    <span class="n">QPushButton</span><span class="p">,</span>
+    <span class="n">QWidget</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">([])</span>
+<span class="n">window</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">()</span>
+<span class="n">window</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s2">&quot;Disposición en Cuadrícula&quot;</span><span class="p">)</span>
+
+<span class="n">layout</span> <span class="o">=</span> <span class="n">QGridLayout</span><span class="p">()</span>
+<span class="n">window</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+
+<span class="n">button_names</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;Botón (0, 0)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Botón (0, 1)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Botón (0, 2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Botón (1, 0)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Botón (1, 1)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Botón (1, 2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Botón (2, 0)&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">button_names</span><span class="p">):</span>
+    <span class="n">button</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">button</span><span class="p">,</span> <span class="n">i</span> <span class="o">//</span> <span class="mi">3</span><span class="p">,</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">3</span><span class="p">)</span>
+
+<span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span>
+    <span class="n">QPushButton</span><span class="p">(</span><span class="s2">&quot;Botón (2, 1) + 2 Columnas de Amplitud&quot;</span><span class="p">),</span>
+    <span class="mi">2</span><span class="p">,</span>
+    <span class="mi">1</span><span class="p">,</span>
+    <span class="mi">1</span><span class="p">,</span>
+    <span class="mi">2</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span>
+</code></pre></div>
+
+<p>En este ejemplo, creas una aplicación que utiliza un objeto <code>QGridLayout</code> para organizar sus widgets en la pantalla. Nuevamente, para añadir los botones, empleas un ciclo <code>for</code> y el método <code>.addWidget()</code>. Nota que el segundo y tercer argumento que pasas al métodos son números enteros que definen la posición de cada widget en la cuadrícula.</p>
+<p>Finalmente, pasas dos argumentos más a <code>.addWidget()</code>. Estos argumentos son <code>rowSpan</code> y <code>columnSpan</code> los cuales sirven para hacer que un widget ocupe más de una fila o columna. En este ejemplo, el último botón ocupa una fila y dos columnas.</p>
+<p>Si ejecutas este código desde tu línea de comandos, obtendrás una ventana que luce así:</p>
+<p><img src="../images/articles/iniciando-con-pyqt-python/pyqt-gestor-disposicion-cuadricula.png" class="mx-auto d-block mt-2" alt="Gestor de disposición en cuadrícula en PyQt"></p>
+<div class="text-center mb-5 lead"><em>Gestor de disposición en cuadrícula en PyQt</em></div>
+
+<p>En esta figura, puedes ver tus botones organizados en una cuadrícula de filas y columnas. El último botón ocupa dos columnas en la cuadrícula.</p>
+<h3 id="disposicion-de-formulario">Disposición de formulario</h3>
+<p>El último gestor de disposición que estudiarás es el <strong><code>QFormLayout</code></strong>. Con esta clase, puedes organizar los widgets en un diseño de dos columnas. La primera columna generalmente muestra texto en etiquetas, mientras que la segunda columna pueden contener widgets de entrada de datos como <code>QLineEdit</code>, <code>QComboBox</code>, <a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qspinbox.html"><code>QSpinBox</code></a>, entre otros.</p>
+<p>El siguiente ejemplo muestra cómo crear una aplicación que utiliza un objeto <code>QFormLayout</code> para organizar sus widgets:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PyQt6.QtWidgets</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">QApplication</span><span class="p">,</span>
+    <span class="n">QFormLayout</span><span class="p">,</span>
+    <span class="n">QLineEdit</span><span class="p">,</span>
+    <span class="n">QWidget</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">([])</span>
+<span class="n">window</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">()</span>
+<span class="n">window</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s2">&quot;Disposición de Formulario&quot;</span><span class="p">)</span>
+<span class="n">window</span><span class="o">.</span><span class="n">setGeometry</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">280</span><span class="p">,</span> <span class="mi">80</span><span class="p">)</span>
+
+<span class="n">layout</span> <span class="o">=</span> <span class="n">QFormLayout</span><span class="p">()</span>
+<span class="n">window</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+
+<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Nombre:&quot;</span><span class="p">,</span> <span class="s2">&quot;Edad:&quot;</span><span class="p">,</span> <span class="s2">&quot;Ocupación:&quot;</span><span class="p">,</span> <span class="s2">&quot;Dirección:&quot;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">labels</span><span class="p">:</span>
+    <span class="n">layout</span><span class="o">.</span><span class="n">addRow</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">QLineEdit</span><span class="p">())</span>
+
+<span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span>
+</code></pre></div>
+
+<p><code>QFormLayout</code> tiene un método llamado <code>.addRow()</code> que puedes usar para agregar una fila de dos widgets al formulario. El primer argumento de <code>.addRow()</code> debe ser una etiqueta o una cadena. El segundo argumento puede ser cualquier widget que permita al usuario ingresar o editar datos. En este ejemplo específico, has usado campos de entrada de texto, <code>QLineEdit</code>.</p>
+<p>Si ejecutas este código, obtendrás una ventana similar a la siguiente:</p>
+<p><img src="../images/articles/iniciando-con-pyqt-python/pyqt-gestor-disposicion-formulario.png" class="mx-auto d-block mt-2" alt="Gestor de disposición para formulario en PyQt"></p>
+<div class="text-center mb-5 lead"><em>Gestor de disposición para formulario en PyQt</em></div>
+
+<p>Esta ventana muestra un diseño de formulario. La primera columna contiene etiquetas para comunicar al usuario la información deseada. La segunda columna muestra widgets que permiten al usuario ingresar la información.</p>
+<h2 id="creando-ventanas-y-dialogos">Creando ventanas y diálogos</h2>
+<p>Las aplicaciones de escritorio GUI en PyQt generalmente están conformadas por dos tipos de ventanas:</p>
+<ol>
+<li><strong>Ventana principal:</strong> La ventana en la que se desarrolla la mayor parte de la interacción del usuario.</li>
+<li><strong>Diálogos:</strong> Ventanas auxiliares de la aplicación que solicitan o muestran información al usuario.</li>
+</ol>
+<p>En las secciones siguientes, aprenderás sobre ambos tipos de ventanas y cómo crearlas en PyQt de manera que puedas construir aplicaciones funcionales y atractivas.</p>
+<h3 id="ventanas-principales">Ventanas principales</h3>
+<p>La mayoría de las veces, tus aplicaciones tendrán una ventana que incluye <a href="https://realpython.com/python-menus-toolbars/">barra de menú</a>, algunas barras de herramientas, una barra de estado y un widget central que será el elemento principal de la GUI. Para crear este tipo de ventana en PyQt, puedes heredar de la clase <a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qmainwindow.html"><code>QMainWindow</code></a>.</p>
+<p>Una instancia de una clase que deriva de <code>QMainWindow</code> se considera la <strong>ventana principal</strong> de la aplicación y debe ser única.</p>
+<p>La clase <code>QMainWindow</code> proporciona un marco para construir la GUI de tu aplicación rápidamente. Esta clase tiene su propio diseño incorporado, que acepta los siguientes componentes gráficos:</p>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Posición</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Una <a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qmenubar.html">barra de menú</a></td>
+<td>Arriba</td>
+<td>Contiene el menú principal de la aplicación</td>
+</tr>
+<tr>
+<td>Una o más <a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qtoolbar.html">barras de herramientas</a></td>
+<td>Cualquiera de los lados</td>
+<td>Puede contener <a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qtoolbutton.html">botones de herramienta</a> y otros widgets, como <code>QComboBox</code>, <code>QSpinBox</code>, y más</td>
+</tr>
+<tr>
+<td>Un widget central</td>
+<td>Centro</td>
+<td>Contiene el widget central de la ventana, que puede ser de cualquier tipo, incluyendo un widget compuesto</td>
+</tr>
+<tr>
+<td>Uno o más widgets <a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qdockwidget.html">acoplables</a></td>
+<td>Alrededor del widget central</td>
+<td>Son ventanas pequeñas, movibles y ocultables</td>
+</tr>
+<tr>
+<td>Una <a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qstatusbar.html">barra de estado</a></td>
+<td>Abajo</td>
+<td>Contiene la barra de estado de la app, que muestra información de estado</td>
+</tr>
+</tbody>
+</table>
+<p>No puedes crear una ventana principal sin un widget central. Puedes establecer el widget central de la ventana con el método <code>.setCentralWidget()</code>. El diseño de la ventana principal te permitirá tener un único widget central, que puede ser simple o compuesto.</p>
+<p>El siguiente ejemplo muestra cómo usar <code>QMainWindow</code> para crear una aplicación con ventana principal:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PyQt6.QtWidgets</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">QApplication</span><span class="p">,</span>
+    <span class="n">QLabel</span><span class="p">,</span>
+    <span class="n">QMainWindow</span><span class="p">,</span>
+    <span class="n">QStatusBar</span><span class="p">,</span>
+    <span class="n">QToolBar</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Window</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s2">&quot;QMainWindow&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setCentralWidget</span><span class="p">(</span><span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot;Soy el Widget Central&quot;</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_createMenu</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_createToolBar</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_createStatusBar</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_createMenu</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">menu</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">menuBar</span><span class="p">()</span><span class="o">.</span><span class="n">addMenu</span><span class="p">(</span><span class="s2">&quot;&amp;Menú&quot;</span><span class="p">)</span>
+        <span class="n">menu</span><span class="o">.</span><span class="n">addAction</span><span class="p">(</span><span class="s2">&quot;&amp;Salir&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">close</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_createToolBar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">tools</span> <span class="o">=</span> <span class="n">QToolBar</span><span class="p">()</span>
+        <span class="n">tools</span><span class="o">.</span><span class="n">addAction</span><span class="p">(</span><span class="s2">&quot;Salir&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">close</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addToolBar</span><span class="p">(</span><span class="n">tools</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_createStatusBar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">status</span> <span class="o">=</span> <span class="n">QStatusBar</span><span class="p">()</span>
+        <span class="n">status</span><span class="o">.</span><span class="n">showMessage</span><span class="p">(</span><span class="s2">&quot;Soy la Barra de Estado&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setStatusBar</span><span class="p">(</span><span class="n">status</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">([])</span>
+    <span class="n">window</span> <span class="o">=</span> <span class="n">Window</span><span class="p">()</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span>
+</code></pre></div>
+
+<p>Primeramente, creas una clase llamada <code>Window</code> que hereda de <code>QMainWindow</code>. Dentro del método <code>.__init__()</code>, llamas al inicializador de la clase base. El argumento <code>parent</code> se establece en <code>None</code> porque esta es la ventana principal de tu aplicación, por lo que no debe tener una ventana padre. </p>
+<p>Luego, estableces el título de la ventana y creas un objeto <code>QLabel</code> para usar como widget central de la ventana. Finalmente, llamas los métodos no públicos <code>._createMenu()</code>, <code>._createToolBar()</code>, <code>._createStatusBar()</code> para crear el menú principal, una barra de herramientas y la barra de estado.</p>
+<p>El widget central y la barra de estado muestran mensajes identificativos. El menú y la barra de herramientas mostrarán una opcion para salir de la aplicación.</p>
+<p>En macOS, cuando ejecutas la aplicación de ejemplo anterior, obtendrás una ventana como la siguiente:</p>
+<p><img src="../images/articles/iniciando-con-pyqt-python/pyqt-ventana-principal-macOS.png" class="mx-auto d-block mt-2" alt="Ventana principal en PyQt - macOS"></p>
+<div class="text-center mb-5 lead"><em>Ventana principal en PyQt - macOS</em></div>
+
+<p>Como puedes confirmar, tu aplicación tiene los siguientes componentes:</p>
+<ul>
+<li>Un menú principal llamado genéricamente <em>Menú</em> que se muestra en la barra superior del escritorio macOS. En otras plataformas, el menú principal aparece en la misma ventana de la aplicación justo debajo de la barra de título.</li>
+<li>Una barra de herramientas que contiene un botón <em>Salir</em>.</li>
+<li>Un widget central compuesto por un objeto <code>QLabel</code> que muestra un mensaje identificativo.</li>
+<li>Una barra de estado en la parte inferior de la ventana que también muestra un mensaje identificativo.</li>
+</ul>
+<p>¡Eso es todo! Has aprendido a construir una aplicación con ventana principal usando Python y PyQt. Lo siguiente es aprender un poco sobre cómo crear diálogos.</p>
+<h3 id="dialogos-y-formularios">Diálogos y formularios</h3>
+<p>También es común que tus aplicaciones tengan varios diálogos para llevar a cabo acciones secundarias que dependen de la entrada del usuario. Para crear un diálogo, necesitas crear una clase que herede de <a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qdialog.html"><code>QDialog</code></a>, que es la clase base de todas las ventanas de diálogo en PyQt.</p>
+<p>En PyQt, los diálogos pueden ser:</p>
+<ul>
+<li><strong>Modal:</strong> Bloquea la entrada a cualquier otra ventana visible en la misma aplicación. Puedes mostrar un diálogo modal llamando a su método <code>.exec()</code>.</li>
+<li><strong>No Modal:</strong> Opera independientemente de otras ventanas en la misma aplicación. Puedes mostrar un diálogo no modal usando su método <code>.show()</code>.</li>
+</ul>
+<p>Puedes emplear diálogos como formularios de entrada de datos, ventanas de configuración, entre otras. Por esto, los diálogos también pueden proporcionar un valor de retorno y tener botones predeterminados, como <em>Aplicar</em>, <em>Ok</em> y <em>Cancelar</em>.</p>
+<p>Un diálogo es siempre una ventana independiente. Si un diálogo tiene un widget padre (<code>parent</code>), entonces se mostrará centrado sobre dicho widget.</p>
+<p>A continuación un ejemplo de cómo emplear <code>QDialog</code> para desarrollar una diálogo:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PyQt6.QtWidgets</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">QApplication</span><span class="p">,</span>
+    <span class="n">QDialog</span><span class="p">,</span>
+    <span class="n">QDialogButtonBox</span><span class="p">,</span>
+    <span class="n">QFormLayout</span><span class="p">,</span>
+    <span class="n">QLineEdit</span><span class="p">,</span>
+    <span class="n">QVBoxLayout</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Window</span><span class="p">(</span><span class="n">QDialog</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s2">&quot;QDialog&quot;</span><span class="p">)</span>
+
+        <span class="n">layout</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+
+        <span class="n">form_layout</span> <span class="o">=</span> <span class="n">QFormLayout</span><span class="p">()</span>
+        <span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Nombre:&quot;</span><span class="p">,</span> <span class="s2">&quot;Edad:&quot;</span><span class="p">,</span> <span class="s2">&quot;Ocupación:&quot;</span><span class="p">,</span> <span class="s2">&quot;Dirección:&quot;</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">labels</span><span class="p">:</span>
+            <span class="n">form_layout</span><span class="o">.</span><span class="n">addRow</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">QLineEdit</span><span class="p">())</span>
+
+        <span class="n">layout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="n">form_layout</span><span class="p">)</span>
+        <span class="n">buttons</span> <span class="o">=</span> <span class="n">QDialogButtonBox</span><span class="p">()</span>
+        <span class="n">buttons</span><span class="o">.</span><span class="n">setStandardButtons</span><span class="p">(</span>
+            <span class="n">QDialogButtonBox</span><span class="o">.</span><span class="n">StandardButton</span><span class="o">.</span><span class="n">Cancel</span> <span class="o">|</span>
+            <span class="n">QDialogButtonBox</span><span class="o">.</span><span class="n">StandardButton</span><span class="o">.</span><span class="n">Ok</span>
+        <span class="p">)</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">buttons</span><span class="p">)</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">([])</span>
+<span class="n">window</span> <span class="o">=</span> <span class="n">Window</span><span class="p">()</span>
+<span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span>
+</code></pre></div>
+
+<p>En este ejemplo, usas la clase <code>QDialog</code> como la base para crear una ventana de diálogo. Para definir el diseño del diálogo, usas un <code>QVBoxLayout</code> y un <code>QFormLayout</code>. Con ellos, estableces el diseño principal que consiste en un formulario para entrada de datos y dos botones para aceptar o cancelar la entrada de datos.</p>
+<p>Empleas la clase <code>QDialogButtonBox</code> para gestionar los botones estándar del diálogo <em>OK</em> y <em>Cancel</em>. Este widget es muy útil porque gestiona automáticamente las interacciones comunes de los botones como cerrar el cuadro de diálogo o confirmar acciones.</p>
+<p>El código anterior mostrará una ventana que se verá así:</p>
+<p><img src="../images/articles/iniciando-con-pyqt-python/pyqt-dialogo.png" class="mx-auto d-block mt-2" alt="Ventana de diálogo en PyQt"></p>
+<div class="text-center mb-5 lead"><em>Ventana de diálogo en PyQt</em></div>
+
+<p>Esta figura muestra el diálogo creado con un <code>QFormLayout</code> para organizar los widgets y un <code>QVBoxLayout</code> para el diseño global.</p>
+<h3 id="mensajes-y-dialogos-estandar">Mensajes y diálogos estándar</h3>
+<p>PyQt también proporciona una forma rápida de crear <strong>cuadros de mensaje</strong> para el usuario. La clase <code>QMessageBox</code> te permite crear pequeñas ventanas diseñados para mostrar mensajes al usuario. PyQt ofrece varios tipos de cuadros de mensajes predefinidos:</p>
+<ul>
+<li>
+<p><strong><code>QMessageBox.information()</code></strong>: Permite mostrar un mensaje informativo, como una confirmación o un aviso simple.</p>
+</li>
+<li>
+<p><strong><code>QMessageBox.warning()</code></strong>: Permite mostrar una advertencia sobre posibles problemas.</p>
+</li>
+<li>
+<p><strong><code>QMessageBox.critical()</code></strong>: Muestra mensajes de error críticos.</p>
+</li>
+<li>
+<p><strong><code>QMessageBox.question()</code></strong>: Presenta una pregunta al usuario con opciones como <em>Sí</em> y <em>No</em>.</p>
+</li>
+</ul>
+<p>Además, PyQt tiene <strong>diálogos estándar</strong> predefinidos que facilitan la interacción con el usuario, ya sea para permitirle seleccionar archivos, carpetas, colores o fuentes. Aquí tienes un resumen de ellos:</p>
+<ul>
+<li>
+<p><strong><code>QFileDialog</code></strong>: Permite al usuario seleccionar un archivo existente para abrirlo. Con el método <code>.getOpenFileName()</code>, seleccionas un archivos. Con <code>.getSaveFileNames()</code>, seleccionas múltiples archivos. Por su parte, <code>.getSaveFileName()</code> te permite seleccionar la ubicación y el nombre para guardar un archivo. Finalmente, <code>.getExistingDirectory()</code> permite seleccionar una carpeta en lugar de un archivo.</p>
+</li>
+<li>
+<p><strong><code>QColorDialog</code></strong>: Presenta un diálogo selector de colores que permite al usuario elegir un color. El método empleado es <code>.getColor()</code>.</p>
+</li>
+<li>
+<p><strong><code>QFontDialog</code></strong>: Representa un selector de fuentes que permite al usuario seleccionar una fuente, tamaño y estilo. El método empleado es <code>.getFont()</code>.</p>
+</li>
+<li>
+<p><strong><code>QInputDialog</code></strong>: Permite al usuario ingresar datos simples, como un texto, un número o una opción de una lista. Los métodos correspondientes son <code>.getText()</code> para entrada de texto, <code>.getInt()</code> para entrada de un número entero, y <code>.getItem()</code> para selección de un elemento de una lista.</p>
+</li>
+</ul>
+<p>A continuación, un ejemplo que muestra algunos de elementos en acción:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PyQt6.QtWidgets</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">QApplication</span><span class="p">,</span>
+    <span class="n">QColorDialog</span><span class="p">,</span>
+    <span class="n">QFileDialog</span><span class="p">,</span>
+    <span class="n">QFontDialog</span><span class="p">,</span>
+    <span class="n">QInputDialog</span><span class="p">,</span>
+    <span class="n">QMessageBox</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">([])</span>
+
+<span class="c1"># Mostrar un mensaje</span>
+<span class="n">QMessageBox</span><span class="o">.</span><span class="n">information</span><span class="p">(</span>
+    <span class="kc">None</span><span class="p">,</span>
+    <span class="s2">&quot;Información&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Este es un mensaje.&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># Abrir un archivo</span>
+<span class="n">file_path</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">QFileDialog</span><span class="o">.</span><span class="n">getOpenFileName</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;Abrir Archivo&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">file_path</span><span class="p">:</span>
+    <span class="n">QMessageBox</span><span class="o">.</span><span class="n">information</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;Archivo Seleccionado&quot;</span><span class="p">,</span>
+        <span class="sa">f</span><span class="s2">&quot;Seleccionaste: </span><span class="si">{</span><span class="n">file_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+
+<span class="c1"># Seleccionar un color</span>
+<span class="n">color</span> <span class="o">=</span> <span class="n">QColorDialog</span><span class="o">.</span><span class="n">getColor</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">color</span><span class="o">.</span><span class="n">isValid</span><span class="p">():</span>
+    <span class="n">QMessageBox</span><span class="o">.</span><span class="n">information</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;Color Seleccionado&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Seleccionaste: </span><span class="si">{</span><span class="n">color</span><span class="o">.</span><span class="n">name</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="p">)</span>
+
+<span class="c1"># Seleccionar una fuente</span>
+<span class="n">font</span><span class="p">,</span> <span class="n">ok</span> <span class="o">=</span> <span class="n">QFontDialog</span><span class="o">.</span><span class="n">getFont</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">ok</span><span class="p">:</span>
+    <span class="n">QMessageBox</span><span class="o">.</span><span class="n">information</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;Fuente Seleccionada&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Seleccionaste: </span><span class="si">{</span><span class="n">font</span><span class="o">.</span><span class="n">family</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="p">)</span>
+
+<span class="c1"># Entrada de texto</span>
+<span class="n">text</span><span class="p">,</span> <span class="n">ok</span> <span class="o">=</span> <span class="n">QInputDialog</span><span class="o">.</span><span class="n">getText</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;Entrada de Texto&quot;</span><span class="p">,</span> <span class="s2">&quot;Escribe algo:&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">ok</span> <span class="ow">and</span> <span class="n">text</span><span class="p">:</span>
+    <span class="n">QMessageBox</span><span class="o">.</span><span class="n">information</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;Texto Ingresado&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Escribiste: </span><span class="si">{</span><span class="n">text</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span>
+</code></pre></div>
+
+<p>En esta aplicación, lo primero que haces es mostrar un mensaje empleando <code>QMessageBox.information()</code>. Luego, empleas <code>QFileDialog.getOpenFileName()</code> para generar un diálogo que te permite abrir un archivo seleccionado. Seguidamente, creas diálogos para seleccionar un color y una fuente. Finalmente, creas un diálogo que le da al usuario la posibilidad de introducir un número entero de manera rápida.</p>
+<p>Los cuadros de mensaje y los diálogos estándar son herramientas esenciales para cualquier aplicación PyQt que requiera interacción con el usuario.</p>
+<h2 id="conclusion">Conclusión</h2>
+<p>Las <strong>aplicaciones con interfaz gráfica de usuario (GUI)</strong> representan una parte sustancial en el desarrollo de software. Python ofrece un puñado de frameworks y bibliotecas que pueden ayudarte a desarrollar aplicaciones GUI modernas y robustas.</p>
+<p>En este tutorial, aprendiste cómo usar <strong>PyQt</strong>, que es una de las bibliotecas más populares y sólidas para el desarrollo de aplicaciones GUI en Python.</p>
+<p><strong>En este tutorial, has aprendido a:</strong></p>
+<ul>
+<li><strong>Instalar</strong> PyQt y configurarlo en tu computadora</li>
+<li>Desarrollar aplicaciones con <strong>GUI</strong> basadas en PyQt</li>
+<li>Organizar una GUI usando <strong>gestores de disposición</strong></li>
+<li>Crear <strong>ventanas principales</strong> y <strong>diálogos</strong> en tus aplicaciones PyQt</li>
+</ul>
+<p>Ahora puedes usar tus conocimientos de Python y PyQt para dar vida a tus propias aplicaciones GUI de escritorio.</p>
+              </div>
+            </div>
+        </article>
+
+
+      <!-- Disqus -->
+      <div id="disqus_thread" class="py-5"></div>
+      <script type="text/javascript">
+          var disqus_shortname = 'pythonscouts';
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+      </script>
+
+    </main>
+
+    <!-- Page footer -->
+    <footer class="footer mt-auto bg-gray text-center py-3 border-top border-1">
+        <div class="container">
+        <span class="lead">&copy; 2023 Leodanis Pozo Ramos</span>
+        </div>
+        <p class="pt-3">Imágenes cortesía de <a href="https://picsum.photos/" target="_blank">Picsum</a></p>
+    </footer>
+
+    <!-- JS Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Stroke Scripts -->
+    <script src="https://pythonscouts.com/theme/js/stork.js"></script>
+    <script>
+        stork.initialize("https://pythonscouts.com/theme/js/stork.wasm")
+        stork.downloadIndex("sitesearch", "https://pythonscouts.com/search-index.st")
+        stork.attach("sitesearch")
+    </script>
+
+</body>
+</html>
