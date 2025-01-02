@@ -154,7 +154,11 @@
 <p>Para obtener el máximo de este tutorial, debes conocer lo básico de programación con Python, especialmente temas relacionados con la programación orientada a objetos.</p>
 <div class="toc"><span class="toctitle">Contenidos</span><ul>
 <li><a href="#conociendo-pyqt">Conociendo PyQt</a></li>
-<li><a href="#instalando-pyqt">Instalando PyQt</a></li>
+<li><a href="#instalando-pyqt">Instalando PyQt</a><ul>
+<li><a href="#en-windows">En Windows</a></li>
+<li><a href="#en-linux-y-macos">En Linux y macOS</a></li>
+</ul>
+</li>
 <li><a href="#creando-una-aplicacion-pyqt">Creando una aplicación PyQt</a></li>
 <li><a href="#explorando-widgets-comunes-de-pyqt">Explorando widgets comunes de PyQt</a><ul>
 <li><a href="#botones">Botones</a></li>
@@ -185,19 +189,22 @@
 <p>Si deseas usar PyQt para crear aplicaciones comerciales, entonces necesitas una licencia comercial. También puedes emplear PyQt para proyectos de código abierto, en cuyo caso la licencia de tu proyecto debe ser compatible con la licencia de Qt que estés empleando.</p>
 <h2 id="instalando-pyqt">Instalando PyQt</h2>
 <p>Para instalar PyQt en tu computadora, la opción recomendada es instalar desde el índice de paquetes de Python, <a href="https://realpython.com/pypi-publish-python-package/">PyPI</a>, usando el comando <code>pip</code>. Para esto, puedes crear un <a href="https://docs.python.org/es/3.13/glossary.html#term-virtual-environment">entorno virtual de Python</a> y luego instalar el paquete <code>pyqt6</code>, ejecuta lo siguiente en tu línea de comandos, dependiendo de tu sistema operativo.</p>
-<p>En Windows:</p>
+<h3 id="en-windows">En Windows</h3>
+<p>En Windows, puedes instalar PyQt ejecutando los comandos:</p>
 <div class="highlight"><pre><span></span><code><span class="go">PS&gt; python -m venv venv</span>
 <span class="go">PS&gt; venv\Scripts\activate</span>
 <span class="gp gp-VirtualEnv">(venv)</span> <span class="go">PS&gt; python -m pip install pyqt6</span>
 </code></pre></div>
 
-<p>En Linux y macOS:</p>
+<p>Con estos comandos, primero creas y activas un entorno virtual Python y luego instalas PyQt dese PyPI.</p>
+<h3 id="en-linux-y-macos">En Linux y macOS</h3>
+<p>En Linux y macOS el proceso es el mismo y puedes realizarlo con los siguientes comandos:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
 <span class="gp">$ </span><span class="nb">source</span><span class="w"> </span>venv/bin/activate
 <span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>pyqt6
 </code></pre></div>
 
-<p>Con estos comandos, primero creas un entorno virtual usando el módulo <code>venv</code> de la biblioteca estándar de Python. Luego lo activas, y finalmente instalas PyQt.</p>
+<p>Nuevamente, primero creas un entorno virtual usando el módulo <code>venv</code> de la biblioteca estándar de Python. Luego lo activas, y finalmente instalas PyQt.</p>
 <h2 id="creando-una-aplicacion-pyqt">Creando una aplicación PyQt</h2>
 <p>Con PyQt instalado, estás listo para crear tu primera aplicación GUI. Para comenzar, crearás una aplicación de <code>Hola, Mundo!</code>. Aquí están los pasos a seguir:</p>
 <ol>

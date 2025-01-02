@@ -11,7 +11,11 @@
 &lt;p&gt;Para obtener el máximo de este tutorial, debes conocer lo básico de programación con Python, especialmente temas relacionados con la programación orientada a objetos.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#conociendo-pyqt"&gt;Conociendo PyQt&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#instalando-pyqt"&gt;Instalando PyQt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#instalando-pyqt"&gt;Instalando PyQt&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#en-windows"&gt;En Windows&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#en-linux-y-macos"&gt;En Linux y macOS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;a href="#creando-una-aplicacion-pyqt"&gt;Creando una aplicación PyQt&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#explorando-widgets-comunes-de-pyqt"&gt;Explorando widgets comunes de PyQt&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#botones"&gt;Botones&lt;/a&gt;&lt;/li&gt;
@@ -42,19 +46,22 @@
 &lt;p&gt;Si deseas usar PyQt para crear aplicaciones comerciales, entonces necesitas una licencia comercial. También puedes emplear PyQt para proyectos de código abierto, en cuyo caso la licencia de tu proyecto debe ser compatible con la licencia de Qt que estés empleando.&lt;/p&gt;
 &lt;h2 id="instalando-pyqt"&gt;Instalando PyQt&lt;/h2&gt;
 &lt;p&gt;Para instalar PyQt en tu computadora, la opción recomendada es instalar desde el índice de paquetes de Python, &lt;a href="https://realpython.com/pypi-publish-python-package/"&gt;PyPI&lt;/a&gt;, usando el comando &lt;code&gt;pip&lt;/code&gt;. Para esto, puedes crear un &lt;a href="https://docs.python.org/es/3.13/glossary.html#term-virtual-environment"&gt;entorno virtual de Python&lt;/a&gt; y luego instalar el paquete &lt;code&gt;pyqt6&lt;/code&gt;, ejecuta lo siguiente en tu línea de comandos, dependiendo de tu sistema operativo.&lt;/p&gt;
-&lt;p&gt;En Windows:&lt;/p&gt;
+&lt;h3 id="en-windows"&gt;En Windows&lt;/h3&gt;
+&lt;p&gt;En Windows, puedes instalar PyQt ejecutando los comandos:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="go"&gt;PS&amp;gt; python -m venv venv&lt;/span&gt;
 &lt;span class="go"&gt;PS&amp;gt; venv\Scripts\activate&lt;/span&gt;
 &lt;span class="gp gp-VirtualEnv"&gt;(venv)&lt;/span&gt; &lt;span class="go"&gt;PS&amp;gt; python -m pip install pyqt6&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;En Linux y macOS:&lt;/p&gt;
+&lt;p&gt;Con estos comandos, primero creas y activas un entorno virtual Python y luego instalas PyQt dese PyPI.&lt;/p&gt;
+&lt;h3 id="en-linux-y-macos"&gt;En Linux y macOS&lt;/h3&gt;
+&lt;p&gt;En Linux y macOS el proceso es el mismo y puedes realizarlo con los siguientes comandos:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;venv&lt;span class="w"&gt; &lt;/span&gt;venv
 &lt;span class="gp"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;source&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;venv/bin/activate
 &lt;span class="gp gp-VirtualEnv"&gt;(venv)&lt;/span&gt; &lt;span class="gp"&gt;$ &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;pyqt6
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Con estos comandos, primero creas un entorno virtual usando el módulo &lt;code&gt;venv&lt;/code&gt; de la biblioteca estándar de Python. Luego lo activas, y finalmente instalas PyQt.&lt;/p&gt;
+&lt;p&gt;Nuevamente, primero creas un entorno virtual usando el módulo &lt;code&gt;venv&lt;/code&gt; de la biblioteca estándar de Python. Luego lo activas, y finalmente instalas PyQt.&lt;/p&gt;
 &lt;h2 id="creando-una-aplicacion-pyqt"&gt;Creando una aplicación PyQt&lt;/h2&gt;
 &lt;p&gt;Con PyQt instalado, estás listo para crear tu primera aplicación GUI. Para comenzar, crearás una aplicación de &lt;code&gt;Hola, Mundo!&lt;/code&gt;. Aquí están los pasos a seguir:&lt;/p&gt;
 &lt;ol&gt;
