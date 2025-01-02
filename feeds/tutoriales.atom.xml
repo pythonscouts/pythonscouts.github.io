@@ -8,7 +8,7 @@
 &lt;li&gt;Organizar una GUI usando &lt;strong&gt;gestores de disposición&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;Crear &lt;strong&gt;ventanas principales&lt;/strong&gt; y &lt;strong&gt;diálogos&lt;/strong&gt; en tus aplicaciones PyQt&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Para este tutorial, crearás una calculadora con Python y PyQt. Este pequeño proyecto te ayudará a comprender los fundamentos y a empezar con esta biblioteca de GUI.&lt;/p&gt;
+&lt;p&gt;Para obtener el máximo de este tutorial, debes conocer lo básico de programación con Python, especialmente temas relacionados con la programación orientada a objetos.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#conociendo-pyqt"&gt;Conociendo PyQt&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#instalando-pyqt"&gt;Instalando PyQt&lt;/a&gt;&lt;/li&gt;
