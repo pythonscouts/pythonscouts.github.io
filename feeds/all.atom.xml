@@ -1,5 +1,479 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"></link><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"></link><id>https://pythonscouts.com/</id><updated>2024-12-31T06:00:00+01:00</updated><subtitle>Una web en Español para aprender a programar con Python.</subtitle><entry><title>Iniciando con PyQt para desarrollo GUI</title><link href="https://pythonscouts.com/iniciando-con-pyqt-python/" rel="alternate"></link><published>2024-12-31T06:00:00+01:00</published><updated>2024-12-31T06:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2024-12-31:/iniciando-con-pyqt-python/</id><summary type="html">&lt;p&gt;En Python, PyQt es una biblioteca que proporciona un enlace con Qt, que es un framework de desarrollo de aplicaciones de interfaz gráfica de usuario (GUI).&lt;/p&gt;</summary><content type="html">&lt;p&gt;Para desarrollar este tipo de aplicaciones en Python, puedes emplear una amplia variedad de bibliotecas y frameworks, incluyendo &lt;a href="https://docs.python.org/3/library/tkinter.html"&gt;Tkinter&lt;/a&gt;, &lt;a href="https://realpython.com/python-gui-with-wxpython/"&gt;wxPython&lt;/a&gt;, &lt;a href="https://www.riverbankcomputing.com/software/pyqt/intro"&gt;PyQt&lt;/a&gt;, &lt;a href="https://wiki.qt.io/Qt_for_Python"&gt;PySide&lt;/a&gt;, entre otras. Sin embargo, PyQt es una de las bibliotecas más populares y sólidas disponibles.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"></link><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"></link><id>https://pythonscouts.com/</id><updated>2025-01-06T15:15:00+01:00</updated><subtitle>Una web en Español para aprender a programar con Python.</subtitle><entry><title>Iniciando con Tkinter para desarrollo GUI</title><link href="https://pythonscouts.com/iniciando-con-tkinter-python/" rel="alternate"></link><published>2025-01-06T15:15:00+01:00</published><updated>2025-01-06T15:15:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-01-06:/iniciando-con-tkinter-python/</id><summary type="html">&lt;p&gt;En Python, Tkinter es una biblioteca que proporciona un kit de herramientas para el desarrollo de aplicaciones de interfaz gráfica de usuario (GUI).&lt;/p&gt;</summary><content type="html">&lt;p&gt;Tkinter es una de las bibliotecas más empleadas en el desarrollo rápido de aplicaciones GUI puesto que viene incluida con la instalación oficial de Python como parte de la biblioteca estándar.&lt;/p&gt;
+&lt;p&gt;Aprender los conceptos básicos para construir aplicaciones GUI usando Python y Tkinter es una excelente habilidad para cualquier desarrollador Python.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;En este tutorial, aprenderás cómo:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Instalar&lt;/strong&gt; Tkinter y configurarlo en tu computadora&lt;/li&gt;
+&lt;li&gt;Crear aplicaciones con &lt;strong&gt;interfaces gráficas de usuario&lt;/strong&gt; basadas en Tkinter&lt;/li&gt;
+&lt;li&gt;Organizar una GUI usando los &lt;strong&gt;gestores de geometría&lt;/strong&gt; de Tkinter&lt;/li&gt;
+&lt;li&gt;Crear &lt;strong&gt;ventanas principales&lt;/strong&gt; y &lt;strong&gt;diálogos&lt;/strong&gt; en tus aplicaciones&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Para aprovechar al máximo de este tutorial, debes conocer lo básico de programación con Python, especialmente temas relacionados con la programación orientada a objetos.&lt;/p&gt;
+&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#conociendo-tkinter"&gt;Conociendo Tkinter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#instalando-tkinter"&gt;Instalando Tkinter&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#en-windows-y-macos"&gt;En Windows y macOS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#en-linux"&gt;En Linux&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#creando-una-aplicacion-tkinter"&gt;Creando una aplicación Tkinter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#explorando-widgets-comunes-de-tkinter"&gt;Explorando widgets comunes de Tkinter&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#botones"&gt;Botones&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#campos-de-entrada-de-texto"&gt;Campos de entrada de texto&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#listas-desplegables"&gt;Listas desplegables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#botones-radiales"&gt;Botones radiales&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#usando-gestores-de-geometria"&gt;Usando gestores de geometría&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#disposicion-por-empaquetado-con-pack"&gt;Disposición por empaquetado con .pack()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#disposicion-en-cuadricula-con-grid"&gt;Disposición en cuadrícula con .grid()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#disposicion-por-posicion-con-place"&gt;Disposición por posición con .place()&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#creando-ventanas-y-dialogos"&gt;Creando ventanas y diálogos&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#ventanas-principales"&gt;Ventanas principales&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#mensajes-de-alerta-y-confirmacion"&gt;Mensajes de alerta y confirmación&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#dialogos-integrados"&gt;Diálogos integrados&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#conclusion"&gt;Conclusión&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="conociendo-tkinter"&gt;Conociendo Tkinter&lt;/h2&gt;
+&lt;p&gt;Tkinter es un paquete que forma parte de la biblioteca estándar de Python y está diseñado para crear interfaces gráficas de usuario (GUI). Provee acceso a las clases y objetos de la biblioteca &lt;a href="https://www.tcl.tk/"&gt;Tcl/Tk&lt;/a&gt; y proporciona una manera rápida y sencilla de crear aplicaciones GUI en Python.&lt;/p&gt;
+&lt;p&gt;Tkinter es compatible con Windows, macOS y Linux, lo que te permite desarrollar aplicaciones multiplataforma sin preocuparte por las diferencias entre sistemas operativos.&lt;/p&gt;
+&lt;p&gt;Tkinter ofrece una variada gama de widgets y herramientas que puedes usar para crear interfaces de usuario interactivas. Desde botones y etiquetas hasta cuadros de texto y menús. Tkinter tiene todo lo que necesitas para desarrollar aplicaciones de escritorio en Python.&lt;/p&gt;
+&lt;p&gt;Sin embargo, a diferencia de otros frameworks y bibliotecas GUI que ofrecen componentes gráficos (widgets) y otras herramientas tales como clases para manipulación de bases de datos, trabajo con redes, y similares, Tkinter se enfoca en los componentes gráficos, la gestión de eventos y el soporte para menus y diálogos.&lt;/p&gt;
+&lt;h2 id="instalando-tkinter"&gt;Instalando Tkinter&lt;/h2&gt;
+&lt;p&gt;La mayoría de las distribuciones de Python ya incluyen Tkinter por defecto. Por lo tanto, es muy probable que no necesites instalarlo por separado. Sin embargo, si resulta que Tkinter no está disponible en tu sistema, puedes instalarlo de manera rápida.&lt;/p&gt;
+&lt;h3 id="en-windows-y-macos"&gt;En Windows y macOS&lt;/h3&gt;
+&lt;p&gt;Si instalaste Python empleando el instalador oficial para &lt;a href="https://pythonscouts.com/instalar-python-windows/"&gt;Windows&lt;/a&gt; y &lt;a href="https://pythonscouts.com/instalar-python-macos/"&gt;macOS&lt;/a&gt;, entonces Tkinter ya estará instalado. Si no está disponible, puedes reinstalar Python asegurándote de que la opción de instalación de Tkinter esté habilitada.&lt;/p&gt;
+&lt;p&gt;En macOS, podría ser necesario instalar &lt;em&gt;Xcode&lt;/em&gt; o &lt;em&gt;Xcode Command Line Tools&lt;/em&gt; para que Tkinter funcione correctamente.&lt;/p&gt;
+&lt;h3 id="en-linux"&gt;En Linux&lt;/h3&gt;
+&lt;p&gt;En sistemas Linux basados en Debian, como Ubuntu, puede que al instalar Python desde los repositorios oficiales de la distribución, Tkinter no venga en el paquete. En estos casos, puedes instalar Tkinter usando el siguiente comando:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;python3-tk
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Este comando descargará e instalará Tkinter en tu sistema. Es decir, Tkinter estará disponible en la instalación global de Python.&lt;/p&gt;
+&lt;h2 id="creando-una-aplicacion-tkinter"&gt;Creando una aplicación Tkinter&lt;/h2&gt;
+&lt;p&gt;Con Tkinter disponible, estás listo para crear tu primera aplicación GUI. Para comenzar, crearás una aplicación &lt;a href="https://pythonscouts.com/python-hola-mundo/"&gt;&lt;code&gt;"Hola, mundo!"&lt;/code&gt;&lt;/a&gt;. Aquí están los pasos a seguir:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Importa &lt;code&gt;tkinter&lt;/code&gt; como &lt;code&gt;tk&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Crea una instancia de la clase &lt;code&gt;Tk&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Define la GUI de la aplicación.&lt;/li&gt;
+&lt;li&gt;Ejecuta el bucle de eventos de la aplicación con &lt;code&gt;.mainloop()&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Crea un nuevo archivo Python llamado &lt;code&gt;app.py&lt;/code&gt; en tu directorio de trabajo actual y escribe el siguiente código:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En esta línea de código, importas el módulo &lt;code&gt;tkinter&lt;/code&gt; y lo renombras como &lt;code&gt;tk&lt;/code&gt; para facilitar su uso. Con esto, has cumplido con el primer paso.&lt;/p&gt;
+&lt;p&gt;Para completar el segundo paso, necesitas crear una instancia de &lt;code&gt;Tk&lt;/code&gt;, la cual usualmente llamarás &lt;code&gt;root&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
+
+&lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Tk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En esta línea de código, creas la instancia de &lt;code&gt;Tk&lt;/code&gt;. Esto inicializa la aplicación y prepara el entorno para comenzar a añadir widgets a la GUI de tu aplicación.&lt;/p&gt;
+&lt;p&gt;El tercer paso consiste en crear la ventana principal de la aplicación con los elementos gráficos deseados. Para este ejemplo, la GUI se basará en un widget &lt;code&gt;Label&lt;/code&gt; que mostrará el mensaje &lt;code&gt;"Hola, mundo!"&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Así es como puedes crear la GUI de la aplicación:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
+
+&lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Tk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Tkinter Demo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;geometry&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;280x80&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;hello&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Label&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Hola, mundo!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;font&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Arial&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;24&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;hello&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pack&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pady&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este código, el método &lt;code&gt;.title()&lt;/code&gt; te permite establecer el título de la ventana de tu aplicación. En este ejemplo, la ventana de la aplicación mostrará &lt;code&gt;Tkinter Demo&lt;/code&gt; en su barra de título.&lt;/p&gt;
+&lt;p&gt;Puedes usar el método &lt;code&gt;.geometry()&lt;/code&gt; para definir el tamaño de la ventana. El argumento es una cadena que especifica el ancho y alto de la ventana en píxeles.&lt;/p&gt;
+&lt;p&gt;Cada aplicación GUI necesita widgets. Estos son los componentes gráficos que conforman la GUI de la aplicación. En este ejemplo, usas un widget &lt;code&gt;Label&lt;/code&gt; llamado &lt;code&gt;hello&lt;/code&gt; que te permitirá mostrar el mensaje &lt;code&gt;"Hola, mundo!"&lt;/code&gt; en la ventana de tu aplicación.&lt;/p&gt;
+&lt;p&gt;El método &lt;code&gt;.pack()&lt;/code&gt; es un &lt;a href="https://pythonscouts.com/iniciando-con-tkinter-python/#usando-gestores-de-geometria"&gt;gestor de geometría&lt;/a&gt; se utiliza para colocar el widget en la ventana. El argumento &lt;code&gt;pady&lt;/code&gt; agrega un poco de espacio vertical alrededor del widget.&lt;/p&gt;
+&lt;p&gt;Has finalizado el tercer paso, así que puedes continuar con el último paso y preparar tu aplicación Tkinter para su ejecución:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
+
+&lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Tk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Tkinter Demo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;geometry&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;280x80&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;hello&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Label&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Hola, mundo!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;font&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Arial&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;24&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;hello&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pack&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pady&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainloop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En la última línea, inicias el bucle de eventos de la aplicación ejecutando el método &lt;code&gt;.mainloop()&lt;/code&gt;. Eso es todo. Ahora puedes ejecutar tu primera aplicación Tkinter con el siguiente comando:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;app.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Al ejecutar este comando, verás una ventana que lucirá como la siguiente:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/articles/iniciando-con-tkinter-python/tkinter-demo-app.png" class="mx-auto d-block mt-2" alt="Aplicación 'Hola, Mundo!' con Tkinter y Python"&gt;&lt;/p&gt;
+&lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Aplicación 'Hola, Mundo!' con Tkinter y Python&lt;/em&gt;&lt;/div&gt;
+
+&lt;p&gt;Tu aplicación muestra una ventana basada en &lt;code&gt;Tk&lt;/code&gt;. La ventana muestra el mensaje &lt;code&gt;"Hola, mundo!"&lt;/code&gt; usando un widget &lt;code&gt;Label&lt;/code&gt;. ¡Y con eso, has escrito tu primera aplicación de escritorio GUI usando Tkinter y Python!&lt;/p&gt;
+&lt;h2 id="explorando-widgets-comunes-de-tkinter"&gt;Explorando widgets comunes de Tkinter&lt;/h2&gt;
+&lt;p&gt;Los &lt;strong&gt;widgets&lt;/strong&gt; son componentes gráficos rectangulares que colocas en las ventanas de tus aplicación para construir su GUI. Los widgets tienen atributos y métodos que te permiten ajustar su apariencia y comportamiento.&lt;/p&gt;
+&lt;p&gt;Tkinter tiene una variada colección de widgets, cada uno de los cuales tiene un propósito diferente. Algunos de los widgets más comunes incluyen botones, etiquetas o labels, campos de entrada de texto, listas desplegables, y botones radiales.&lt;/p&gt;
+&lt;h3 id="botones"&gt;Botones&lt;/h3&gt;
+&lt;p&gt;Puedes crear un botón con la clase &lt;code&gt;Button&lt;/code&gt;, la cual proporciona un botón de comando clásico. Algunos botones típicos son &lt;em&gt;Ok&lt;/em&gt;, &lt;em&gt;Cancelar&lt;/em&gt;, &lt;em&gt;Aplicar&lt;/em&gt;, &lt;em&gt;Sí&lt;/em&gt;, &lt;em&gt;No&lt;/em&gt;, &lt;em&gt;Cerrar&lt;/em&gt;, similares.&lt;/p&gt;
+&lt;p&gt;Crea un archivo llamado &lt;code&gt;buttons.py&lt;/code&gt; y pon el siguiente código en él:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
+
+&lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Tk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Botones Tkinter&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;geometry&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;190x240&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;buttons&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Ok&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Cancelar&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Aplicar&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Sí&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;No&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Cerrar&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;buttons&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;button&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Button&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;button&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pack&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fill&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;x&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;padx&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pady&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainloop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este ejemplo, creas botones en un bucle &lt;code&gt;for&lt;/code&gt; que itera sobre una lista de nombres de botones comunes y crea un botón con cada uno de los nombres definidos. Así es como se verá tu aplicación al ejecutarla desde tu terminal:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/articles/iniciando-con-tkinter-python/tkinter-botones.png" class="mx-auto d-block mt-2" alt="Botones en Tkinter"&gt;&lt;/p&gt;
+&lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Botones en Tkinter&lt;/em&gt;&lt;/div&gt;
+
+&lt;p&gt;Botones como estos son quizás los widgets más utilizados en cualquier GUI. Cuando alguien hace clic en ellos, tu aplicación ordena a la computadora realizar acciones. Así es como puedes ejecutar cálculos cuando un usuario hace clic en un botón.&lt;/p&gt;
+&lt;h3 id="campos-de-entrada-de-texto"&gt;Campos de entrada de texto&lt;/h3&gt;
+&lt;p&gt;Los &lt;strong&gt;campos de entrada de texto&lt;/strong&gt; son widgets comunes también. Estos widgets te permiten ingresar una sola línea de texto y puedes crearlos con la clase &lt;code&gt;Entry&lt;/code&gt; de Tkinter. Los campos de entrada de texto son útiles cuando necesitas obtener información del usuario en forma de texto.&lt;/p&gt;
+&lt;p&gt;Como ejemplo, crea un archivo &lt;code&gt;entries.py&lt;/code&gt; y escribe el siguiente código en él:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
+
+&lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Tk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Campos de texto Tkinter&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;geometry&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;250x120&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;fields&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Nombre&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Usuario&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Contraseña&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;field&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;fields&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;entry&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Entry&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;foreground&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;lightgrey&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;entry&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;insert&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;field&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;entry&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pack&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;padx&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pady&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainloop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En el bucle de este ejemplo, creas tres campos de entrada de texto para permitir que el usuario introduzca su nombre, usuario y contraseña.&lt;/p&gt;
+&lt;p&gt;La captura a continuación muestra cómo debe lucir tu aplicación:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/articles/iniciando-con-tkinter-python/tkinter-campos-de-texto.png" class="mx-auto d-block mt-2" alt="Campos de entrada de texto en Tkinter"&gt;&lt;/p&gt;
+&lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Campos de entrada de texto en Tkinter&lt;/em&gt;&lt;/div&gt;
+
+&lt;p&gt;Campos de entrada de texto como estos proporcionan funcionalidades estándar como copiar, pegar y cortar. En la imagen, puedes notar que los campos muestran texto de marcador de posición (placeholder) para informar al usuario qué tipo de información debe introducir.&lt;/p&gt;
+&lt;p&gt;La clase &lt;code&gt;Entry&lt;/code&gt; de Tkinter no tiene la opción de mostrar un texto de marcador de posición, por lo tanto, en este ejemplo lo que hiciste fue cambiar el color del texto para que sea gris claro y así simular un texto de marcador de posición.&lt;/p&gt;
+&lt;h3 id="listas-desplegables"&gt;Listas desplegables&lt;/h3&gt;
+&lt;p&gt;Las &lt;strong&gt;listas desplegables&lt;/strong&gt; son otro tipo fundamental de widget en aplicaciones GUI. Puedes crearlas usando la clase &lt;code&gt;Combobox&lt;/code&gt; del módulo &lt;code&gt;ttk&lt;/code&gt;, el cual contiene una serie mejorada de widgets para Tkinter. Una lista desplegable presenta al usuario una serie de opciones de una manera que ocupa un espacio mínimo en la pantalla.&lt;/p&gt;
+&lt;p&gt;A continuación, un ejemplo de cómo emplear una lista desplegable en Tkinter:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;ttk&lt;/span&gt;
+
+&lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Tk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Lista desplegable Tkinter&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;geometry&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;250x100&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;options&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Tkinter&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;PyQt&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;PySide&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Kivy&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;wxPython&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;selected_option&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;StringVar&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;selected_option&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;options&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="n"&gt;combobox&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ttk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Combobox&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;textvariable&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;selected_option&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;values&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;options&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;state&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;readonly&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;combobox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pack&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pady&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainloop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este ejemplo, creas &lt;code&gt;combobox&lt;/code&gt; como una instancia de &lt;code&gt;Combobox&lt;/code&gt;. Esta instancia contendrá una lista desplegable con una serie de nombres de bibliotecas Python para desarrollo de aplicaciones GUI. Cuando ejecutas esta aplicación desde tu línea de comandos, obtienes una ventana como la siguiente:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/articles/iniciando-con-tkinter-python/tkinter-lista-desplegable.png" class="mx-auto d-block mt-2" alt="Lista desplegable en Tkinter"&gt;&lt;/p&gt;
+&lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Lista desplegable en Tkinter&lt;/em&gt;&lt;/div&gt;
+
+&lt;p&gt;Al hacer clic sobre esta lista desplegable, los usuarios pueden seleccionar una de las opciones desplegadas.&lt;/p&gt;
+&lt;h3 id="botones-radiales"&gt;Botones radiales&lt;/h3&gt;
+&lt;p&gt;El último widget que estudiarás es el &lt;strong&gt;botón radial&lt;/strong&gt;, que puedes crear con la clase &lt;code&gt;Radiobutton&lt;/code&gt;. Se trata de un botón circular de opción que puedes seleccionar al hacer clic sobre él. Los botones radiales son útiles cuando necesitas que el usuario seleccione una entre varias opciones.&lt;/p&gt;
+&lt;p&gt;Todas las opciones en un grupo de botones radiales son visibles al mismo tiempo, pero el usuario solo puede seleccionar una de ellas. Es decir, la selección es excluyente.&lt;/p&gt;
+&lt;p&gt;Considera el siguiente ejemplo:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
+
+&lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Tk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Botones radiales Tkinter&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;geometry&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;230x150&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;label&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Label&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;¿Qué prefieres?&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;label&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pack&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pady&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;foods&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Pizza&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Hamburguesa&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Pasta&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Pollo asado&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;selected_food&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;StringVar&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;foods&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;food&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;foods&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;radio&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Radiobutton&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+        &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;food&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="n"&gt;variable&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;selected_food&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;food&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;radio&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pack&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;anchor&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;w&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;padx&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainloop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este ejemplo, creas una aplicación que muestra un texto descriptivo, &lt;code&gt;"¿Qué prefieres?"&lt;/code&gt;, seguido de una serie de botones radiales, que representan alternativas entre las que el usuario puede elegir. En este caso, las alternativas son &lt;code&gt;"Pizza"&lt;/code&gt;, &lt;code&gt;"Hamburguesa"&lt;/code&gt;, &lt;code&gt;"Pasta"&lt;/code&gt; y &lt;code&gt;"Pollo asado"&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Para crear los botones, empleas un ciclo &lt;code&gt;for&lt;/code&gt; que itera sobre la lista de comidas. Por defecto, el primer botón (&lt;code&gt;foods[0]&lt;/code&gt;) de la lista estará seleccionado.&lt;/p&gt;
+&lt;p&gt;Al hacer clic en uno de los botones, este se activa y los demás se desactivan automáticamente. Este comportamiento los hace ideales para preguntas de selección única, como preferencias o respuestas a encuestas:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/articles/iniciando-con-tkinter-python/tkinter-botones-radiales.png" class="mx-auto d-block mt-2" alt="Botones radiales en Tkinter"&gt;&lt;/p&gt;
+&lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Botones radiales en Tkinter&lt;/em&gt;&lt;/div&gt;
+
+&lt;p&gt;En este grupo de botones radiales, solo un botón puede estar seleccionado a la vez. Si seleccionas otro botón del grupo, entonces el botón previamente seleccionado se deseleccionará automáticamente.&lt;/p&gt;
+&lt;p&gt;Tkinter ofrece una colección aceptable de widgets. Aquí, has estudiado solo una pequeña muestra, suficiente para mostrarte el poder y la flexibilidad de este framework GUI.&lt;/p&gt;
+&lt;p&gt;En la siguiente sección, aprenderás cómo organizar diferentes widgets para construir GUIs modernas y completamente funcionales para tus aplicaciones.&lt;/p&gt;
+&lt;h2 id="usando-gestores-de-geometria"&gt;Usando gestores de geometría&lt;/h2&gt;
+&lt;p&gt;Para construir aplicaciones GUI, necesitas saber cómo organizar un conjunto de widgets para que tu GUI sea intuitiva y funcional. En Tkinter, las herramientas para este fin son los llamados &lt;strong&gt;gestores de geometría&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Se trata de métodos que te permiten dimensionar y posicionar tus widgets en la ventana o formulario de la aplicación. Permiten además que tus widgets se adapten automáticamente a eventos de cambio de tamaño de ventana y otros cambios en la GUI.&lt;/p&gt;
+&lt;p&gt;Tkinter proporciona tres métodos para gestionar la geometría de una GUI determinada:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;.pack()&lt;/code&gt;&lt;/strong&gt;: Organiza widgets en bloques de forma sencilla, colocándolos automáticamente en la ventana según el orden especificado (arriba, abajo, izquierda o derecha).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;.grid()&lt;/code&gt;&lt;/strong&gt;: Posiciona los widgets en una cuadrícula definida por filas y columnas, proporcionando más control sobre su posición relativa.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;.place()&lt;/code&gt;&lt;/strong&gt;: Ubica widgets en posiciones absolutas o relativas especificadas por coordenadas exactas &lt;code&gt;(x, y)&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;En las secciones siguientes, aprenderás lo básico sobre cómo emplear estos métodos y crear GUIs ordenadas y funcionales.&lt;/p&gt;
+&lt;h3 id="disposicion-por-empaquetado-con-pack"&gt;Disposición por empaquetado con &lt;code&gt;.pack()&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;El método &lt;code&gt;pack()&lt;/code&gt; organiza los widgets en bloques antes o después de los widgets ya empaquetados. Puedes especificar las opciones &lt;code&gt;side&lt;/code&gt;, &lt;code&gt;fill&lt;/code&gt; y &lt;code&gt;expand&lt;/code&gt; para controlar cómo se comportan los widgets empaquetados.&lt;/p&gt;
+&lt;p&gt;A continuación se muestra un ejemplo de uso de &lt;code&gt;pack()&lt;/code&gt; para gestionar la geometría de una GUI ordenada verticalmente:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
+
+&lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Tk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Disposición vertical&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;geometry&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;290x130&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;buttons&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Arriba&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Centro&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Abajo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;position&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;buttons&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;button&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Button&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;position&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;button&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pack&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fill&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;x&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;padx&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pady&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainloop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este ejemplo, el método &lt;code&gt;.pack()&lt;/code&gt; coloca los botones uno debajo del otro en la ventana de la aplicación, rellenando horizontalmente el espacio disponible con el argumento &lt;code&gt;fill&lt;/code&gt; y añadiendo algo de espacio a ambos lados con &lt;code&gt;padx&lt;/code&gt; y &lt;code&gt;pady&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/articles/iniciando-con-tkinter-python/tkinter-gestor-de-geometria-pack-vertical.png" class="mx-auto d-block mt-2" alt="Disposición vertical por empaquetado con .pack() en Tkinter"&gt;&lt;/p&gt;
+&lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Disposición vertical por empaquetado con &lt;code&gt;.pack()&lt;/code&gt; en Tkinter&lt;/em&gt;&lt;/div&gt;
+
+&lt;p&gt;Nota como el orden de los botones en la GUI coincide con el orden de aparición de los botones en el código.&lt;/p&gt;
+&lt;p&gt;También puedes emplear &lt;code&gt;.pack()&lt;/code&gt; para disponer los widgets horizontalmente:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
+
+&lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Tk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Disposición horizontal&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;geometry&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;290x80&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;buttons&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Izquierda&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Centro&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Derecha&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;position&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;buttons&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;button&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Button&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;position&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;button&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pack&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;side&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;left&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;expand&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;padx&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pady&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainloop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este ejemplo, asignas &lt;code&gt;"left"&lt;/code&gt; al argumento &lt;code&gt;side&lt;/code&gt; del método &lt;code&gt;.pack()&lt;/code&gt; para alinear los botones horizontalmente y la ventana de tu aplicación lucirá como se muestra a continuación:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/articles/iniciando-con-tkinter-python/tkinter-gestor-de-geometria-pack-horizontal.png" class="mx-auto d-block mt-2" alt="Disposición horizontal por empaquetado con .pack() en Tkinter"&gt;&lt;/p&gt;
+&lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Disposición horizontal por empaquetado con &lt;code&gt;.pack()&lt;/code&gt; en Tkinter&lt;/em&gt;&lt;/div&gt;
+
+&lt;p&gt;Con el argumento &lt;code&gt;side&lt;/code&gt; de &lt;code&gt;.pack()&lt;/code&gt;, puedes lograr una configuración horizontal de los widgets en la GUI de tu aplicación.&lt;/p&gt;
+&lt;h3 id="disposicion-en-cuadricula-con-grid"&gt;Disposición en cuadrícula con &lt;code&gt;.grid()&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;El método &lt;code&gt;.grid()&lt;/code&gt; es otro gestor de geometría en Tkinter. Con él, puedes organizar los widgets en una cuadrícula de filas y columnas. Puedes especificar la fila y la columna para cada widget usando índices, lo que te permite controlar su posición exacta en la ventana.&lt;/p&gt;
+&lt;p&gt;A continuación se muestra un ejemplo de uso de &lt;code&gt;.grid()&lt;/code&gt; para posicionar un grupo de botones:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
+
+&lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Tk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Disposición en cuadrícula&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;positions&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Botón (0, 0)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Botón (0, 1)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Botón (1, 0)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Botón (1, 1)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;enumerate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;positions&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;button&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Button&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;button&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;grid&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;column&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;padx&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pady&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;button&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Button&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Botón (2, 0) + 2 Columnas de Amplitud&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;button&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;grid&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;column&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;columnspan&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;padx&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pady&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainloop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este ejemplo, los botones se colocan en una cuadrícula de 2x2, lo que permite un control preciso sobre la disposición de los widgets:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/articles/iniciando-con-tkinter-python/tkinter-gestor-de-geometria-grid.png" class="mx-auto d-block mt-2" alt="Disposición en cuadrícula con .grid() en Tkinter"&gt;&lt;/p&gt;
+&lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Disposición en cuadrícula con &lt;code&gt;.grid()&lt;/code&gt; en Tkinter&lt;/em&gt;&lt;/div&gt;
+
+&lt;p&gt;Los primeros cuatro botones ocupan una sola celda en la cuadrícula. La celda está definida por coordenadas enteras en la forma &lt;code&gt;(fila, columna)&lt;/code&gt;. El último botón ocupa dos celdas en la cuadricula. Para lograr esto, empleas el argumento &lt;code&gt;columnspan&lt;/code&gt; con un valor de &lt;code&gt;2&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id="disposicion-por-posicion-con-place"&gt;Disposición por posición con &lt;code&gt;.place()&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;El método &lt;code&gt;.place()&lt;/code&gt; te permite organizar los widgets en posiciones absolutas y relativas dentro de la ventana. Puedes especificar las coordenadas &lt;code&gt;x&lt;/code&gt; e &lt;code&gt;y&lt;/code&gt; para cada widget, lo que te permite un control preciso sobre su ubicación:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
+
+&lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Tk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Disposición por posición&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;geometry&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;300x200&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Button&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;x=0, y=0&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;place&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Button&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;x=50, y=50&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;place&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Button&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;x=100, y=100&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;place&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Button&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;x=150, y=150&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;place&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;150&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;150&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainloop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este ejemplo, los botones se colocan en posiciones absolutas dentro de la ventana, lo que permite un control preciso sobre su disposición:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/articles/iniciando-con-tkinter-python/tkinter-gestor-de-geometria-place.png" class="mx-auto d-block mt-2" alt="Disposición por posición con .place() en Tkinter"&gt;&lt;/p&gt;
+&lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Disposición por posición con &lt;code&gt;.place()&lt;/code&gt; en Tkinter&lt;/em&gt;&lt;/div&gt;
+
+&lt;p&gt;Para definir la posición correcta de cada botón, debes saber que el origen de coordenadas es la esquina superior izquierda de la ventana.&lt;/p&gt;
+&lt;p&gt;Las posiciones absolutas puede ser problemáticas para la adaptabilidad de la GUI, especialmente si el usuario cambia el tamaño de la ventana o si la aplicación se ejecuta en diferentes resoluciones de pantalla. El método &lt;code&gt;.place()&lt;/code&gt; te ayuda con estos problemas, permitiéndote especificar posiciones relativas con los parámetros &lt;code&gt;relx&lt;/code&gt;, &lt;code&gt;rely&lt;/code&gt;, &lt;code&gt;relwidth&lt;/code&gt; y &lt;code&gt;relheight&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="creando-ventanas-y-dialogos"&gt;Creando ventanas y diálogos&lt;/h2&gt;
+&lt;p&gt;Las aplicaciones de escritorio GUI en Tkinter generalmente están conformadas por dos tipos de ventanas:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Ventana principal:&lt;/strong&gt; La ventana en la que se desarrolla la mayor parte de la interacción del usuario.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Diálogos:&lt;/strong&gt; Ventanas auxiliares de la aplicación que solicitan o muestran información al usuario.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;En las secciones siguientes, aprenderás sobre ambos tipos de ventanas y cómo crearlas en Tkinter de manera que puedas construir aplicaciones funcionales y atractivas.&lt;/p&gt;
+&lt;h3 id="ventanas-principales"&gt;Ventanas principales&lt;/h3&gt;
+&lt;p&gt;La mayoría de tus aplicaciones tendrán una ventana que puede incluir elementos como menús, botones y cuadros de texto. Para crear este tipo de ventana en Tkinter, utilizarás una instancia de la clase &lt;code&gt;Tk&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;La siguiente aplicación muestra cómo crear una ventana principal con un menú:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
+
+&lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Tk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Ventana Principal Tkinter&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;geometry&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;250x80&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;menubar&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Menu&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;menu&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;menubar&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;file_menu&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Menu&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;menubar&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;tearoff&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;file_menu&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_command&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;label&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Salir&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;quit&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;menubar&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_cascade&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;label&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Menú&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;menu&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;file_menu&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Label&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Soy el Widget Central&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pack&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pady&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainloop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este ejemplo, creas un menú con una opción para salir de la aplicación. Un &lt;code&gt;Label&lt;/code&gt; actúa como el widget central de la ventana. Cuando ejecutas esta aplicación, obtendrás una ventana que luce como la siguiente:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/articles/iniciando-con-tkinter-python/tkinter-ventana-principal.png" class="mx-auto d-block mt-2" alt="Ventana principal en Tkinter"&gt;&lt;/p&gt;
+&lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Ventana principal en Tkinter&lt;/em&gt;&lt;/div&gt;
+
+&lt;p&gt;La ventana de tu aplicación tiene un menú principal que, en macOS, se visualiza en la barra superior del escritorio. En otros sistemas operativos, el menú principal se muestra inmediatamente debajo de la barra de título de la ventana.&lt;/p&gt;
+&lt;p&gt;Has aprendido a construir una aplicación con ventana principal usando Python y Tkinter. Lo siguiente es aprender un poco sobre cómo crear diálogos.&lt;/p&gt;
+&lt;h3 id="mensajes-de-alerta-y-confirmacion"&gt;Mensajes de alerta y confirmación&lt;/h3&gt;
+&lt;p&gt;Tkinter también proporciona una forma rápida de crear &lt;strong&gt;cuadros de mensaje&lt;/strong&gt; para el usuario. Para esto, puedes emplear el modulo &lt;code&gt;messagebox&lt;/code&gt;, el cual contiene funciones para construir diferentes tipos de diálogos de alerta y confirmación:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Función&lt;/th&gt;
+&lt;th&gt;Descripción&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;showinfo()&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Información con un botón &lt;em&gt;Ok&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;showwarning()&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Alerta con un botón &lt;em&gt;Ok&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;showerror()&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Error con un botón &lt;em&gt;Ok&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;askokcancel()&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Confirmación con botones &lt;em&gt;Ok&lt;/em&gt; y &lt;em&gt;Cancel&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;askyesno()&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Confirmación con botones &lt;em&gt;Yes&lt;/em&gt; y &lt;em&gt;No&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;askretrycancel()&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Confirmación con botones &lt;em&gt;Retry&lt;/em&gt; y &lt;em&gt;Cancel&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;askquestion()&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Pregunta con botones &lt;em&gt;Yes&lt;/em&gt; y &lt;em&gt;No&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;askyesnocancel()&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Pregunta con botones &lt;em&gt;Yes&lt;/em&gt;, &lt;em&gt;No&lt;/em&gt; y &lt;em&gt;Cancel&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Un ejemplo común es el cuadro de diálogo de mensaje, que puedes crear usando &lt;code&gt;messagebox.showinfo()&lt;/code&gt;. El siguiente código crea una aplicación con un botón que muestra un mensaje de información al usuario:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;messagebox&lt;/span&gt;
+
+&lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Tk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Diálogo Tkinter&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;geometry&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;300x200&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;show_message&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;messagebox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;showinfo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Información&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Este es un mensaje informativo.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Button&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Mostrar Mensaje&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;show_message&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pack&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pady&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainloop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este ejemplo, cuando haces clic en el botón &lt;em&gt;Mostrar Mensaje&lt;/em&gt; aparece un cuadro de diálogo informativo con un mensaje para el usuario.&lt;/p&gt;
+&lt;h3 id="dialogos-integrados"&gt;Diálogos integrados&lt;/h3&gt;
+&lt;p&gt;También es común que tus aplicaciones tengan diálogos para realizar acciones secundarias que dependen de la entrada del usuario. Tkinter también ofrece diálogos integrados para abrir y guardar archivos, seleccionar colores, entre otros.&lt;/p&gt;
+&lt;p&gt;A continuación un resumen de los diálogos más usados:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;filedialog.askopenfilename()&lt;/code&gt;&lt;/strong&gt;: Diálogo que permite al usuario seleccionar un archivo para abrir. Retorna la ruta completa del archivo seleccionado como una cadena.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;filedialog.asksaveasfilename()&lt;/code&gt;&lt;/strong&gt;: Diálogo para que el usuario seleccione la ubicación y nombre de un archivo para guardar. Retorna la ruta completa del archivo elegido como una cadena.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;filedialog.askdirectory()&lt;/code&gt;&lt;/strong&gt;: Diálogo para seleccionar una carpeta. Devuelve la ruta completa de la carpeta seleccionada.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;colorchooser.askcolor()&lt;/code&gt;&lt;/strong&gt;: Selector de colores que permite al usuario elegir un color. Retorna una tupla con el valor RGB del color seleccionado y su representación hexadecimal.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;El siguiente ejemplo muestra cómo usar un diálogo estándar para selecionar un archivo en tu sistema:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;filedialog&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;messagebox&lt;/span&gt;
+
+&lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Tk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Diálogo de Archivo Tkinter&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;geometry&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;300x200&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;open_file&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;file_path&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;filedialog&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;askopenfilename&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;file_path&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;messagebox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;showinfo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+            &lt;span class="s2"&gt;&amp;quot;Archivo Seleccionado&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+            &lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Seleccionaste: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;file_path&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Button&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Abrir Archivo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;open_file&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pack&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pady&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainloop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este ejemplo, un botón abre un cuadro de diálogo para seleccionar un archivo. Si se selecciona un archivo, se muestra un cuadro de mensaje con la ruta del archivo elegido.&lt;/p&gt;
+&lt;p&gt;Es importante que sepas que la función &lt;code&gt;.askopenfilename()&lt;/code&gt; no abre el archivo, solo devuelve la ruta del archivo seleccionado. Para manipular el archivo, debes abrirlo explícitamente con Python, usando la función integrada &lt;code&gt;open()&lt;/code&gt; u otra herramienta similar.&lt;/p&gt;
+&lt;h2 id="conclusion"&gt;Conclusión&lt;/h2&gt;
+&lt;p&gt;Las aplicaciones con &lt;strong&gt;interfaz gráfica de usuario (GUI)&lt;/strong&gt; constituyen una parte sustancial del desarrollo de software. Python ofrece varios frameworks y bibliotecas que pueden ayudarte a desarrollar aplicaciones GUI modernas y robustas.&lt;/p&gt;
+&lt;p&gt;En este tutorial, aprendiste cómo usar &lt;strong&gt;Tkinter&lt;/strong&gt;, que es una de las bibliotecas más accesibles para el desarrollo de aplicaciones GUI en Python.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;En este tutorial, has aprendido a:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Instalar&lt;/strong&gt; Tkinter y configurarlo en tu computadora&lt;/li&gt;
+&lt;li&gt;Desarrollar aplicaciones con &lt;strong&gt;GUI&lt;/strong&gt; basadas en Tkinter&lt;/li&gt;
+&lt;li&gt;Organizar una GUI usando &lt;strong&gt;gestores de geometría&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Crear &lt;strong&gt;ventanas principales&lt;/strong&gt; y &lt;strong&gt;diálogos&lt;/strong&gt; en tus aplicaciones Tkinter&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ahora puedes usar tus conocimientos de Python y Tkinter para dar vida a tus propias aplicaciones GUI de escritorio.&lt;/p&gt;</content><category term="Tutoriales"></category><category term="gui"></category><category term="tkinter"></category></entry><entry><title>Iniciando con PyQt para desarrollo GUI</title><link href="https://pythonscouts.com/iniciando-con-pyqt-python/" rel="alternate"></link><published>2024-12-31T06:00:00+01:00</published><updated>2024-12-31T06:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2024-12-31:/iniciando-con-pyqt-python/</id><summary type="html">&lt;p&gt;En Python, PyQt es una biblioteca que proporciona un enlace con Qt, que es un framework de desarrollo de aplicaciones de interfaz gráfica de usuario (GUI).&lt;/p&gt;</summary><content type="html">&lt;p&gt;Para desarrollar este tipo de aplicaciones en Python, puedes emplear una amplia variedad de bibliotecas y frameworks, incluyendo &lt;a href="https://docs.python.org/3/library/tkinter.html"&gt;Tkinter&lt;/a&gt;, &lt;a href="https://realpython.com/python-gui-with-wxpython/"&gt;wxPython&lt;/a&gt;, &lt;a href="https://www.riverbankcomputing.com/software/pyqt/intro"&gt;PyQt&lt;/a&gt;, &lt;a href="https://wiki.qt.io/Qt_for_Python"&gt;PySide&lt;/a&gt;, entre otras. Sin embargo, PyQt es una de las bibliotecas más populares y sólidas disponibles.&lt;/p&gt;
 &lt;p&gt;En este tutorial, aprenderás los conceptos básicos para construir aplicaciones GUI usando Python y PyQt.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;En este tutorial, aprenderás cómo:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;

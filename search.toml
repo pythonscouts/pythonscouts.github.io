@@ -8,6 +8,11 @@ url = "/acerca/"
 title = "Acerca"
 
 [[input.files]]
+path = "iniciando-con-tkinter-python/index.html"
+url = "/iniciando-con-tkinter-python/"
+title = "Iniciando con Tkinter para desarrollo GUI"
+
+[[input.files]]
 path = "iniciando-con-pyqt-python/index.html"
 url = "/iniciando-con-pyqt-python/"
 title = "Iniciando con PyQt para desarrollo GUI"
