@@ -1,5 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"></link><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"></link><id>https://pythonscouts.com/</id><updated>2025-01-06T15:15:00+01:00</updated><subtitle>Una web en Español para aprender a programar con Python.</subtitle><entry><title>Iniciando con Tkinter para desarrollo GUI</title><link href="https://pythonscouts.com/iniciando-con-tkinter-python/" rel="alternate"></link><published>2025-01-06T15:15:00+01:00</published><updated>2025-01-06T15:15:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-01-06:/iniciando-con-tkinter-python/</id><summary type="html">&lt;p&gt;En Python, Tkinter es una biblioteca que proporciona un kit de herramientas para el desarrollo de aplicaciones de interfaz gráfica de usuario (GUI).&lt;/p&gt;</summary><content type="html">&lt;p&gt;Tkinter es una de las bibliotecas más empleadas en el desarrollo rápido de aplicaciones GUI puesto que viene incluida con la instalación oficial de Python como parte de la biblioteca estándar.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"></link><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"></link><id>https://pythonscouts.com/</id><updated>2025-01-21T15:45:00+01:00</updated><subtitle>Una web en Español para aprender a programar con Python.</subtitle><entry><title>Cómo instalar Python en tu sistema operativo Debian o Ubuntu Linux?</title><link href="https://pythonscouts.com/instalar-python-linux-debian-ubuntu/" rel="alternate"></link><published>2025-01-21T15:45:00+01:00</published><updated>2025-01-21T15:45:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-01-21:/instalar-python-linux-debian-ubuntu/</id><summary type="html">&lt;p&gt;Instalar Python en tu computadora es el primer paso para aprender el lenguaje. Si usas Debian/Ubuntu, aquí encontrarás los pasos necesarios para instalar Python.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Emplearás &lt;code&gt;apt&lt;/code&gt; que es el gestor de paquetes de tu distribución Debian/Ubuntu y derivadas. Es recomendable que tengas experiencia de trabajo en sistemas Linux basados en Debian, como puede ser Ubuntu o Linux Mint, para poder seguir esta guía de instalación de Python.&lt;/p&gt;
+&lt;p&gt;Es especialmente importante que tengas conocimientos básicos sobre la terminal del sistema y sepas cómo emplearla.&lt;/p&gt;
+&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#prerequisitos"&gt;Prerequisitos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#instalar-python-en-debian-o-ubuntu-linux-con-apt"&gt;Instalar Python en Debian o Ubuntu Linux con apt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#paso-1-actualizar-la-lista-de-paquetes-disponibles"&gt;Paso 1: Actualizar la lista de paquetes disponibles&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#paso-2-instalar-python-desde-los-repositorios-del-sistema"&gt;Paso 2: Instalar Python desde los repositorios del sistema&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#paso-3-verificar-la-instalacion"&gt;Paso 3: Verificar la instalación&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#resumiendo"&gt;Resumiendo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="prerequisitos"&gt;Prerequisitos&lt;/h2&gt;
+&lt;p&gt;Para completar los pasos de esta guía de instalación de Python en Linux, necesitas una computadora con alguna distribución basada en Debian como Ubuntu o Linux Mint. Además, necesitas tener privilegios root y una conexión a Internet.&lt;/p&gt;
+&lt;p&gt;¡Lo demás es solo seguir las instrucciones más abajo!&lt;/p&gt;
+&lt;h2 id="instalar-python-en-debian-o-ubuntu-linux-con-apt"&gt;Instalar Python en Debian o Ubuntu Linux con &lt;code&gt;apt&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;La manera recomendada para instalar Python en una computadora con Linux es emplear el gestor de paquetes de tu distribución. En distribuciones basadas en Debian y Ubuntu, el gestor de paquetes es &lt;code&gt;apt&lt;/code&gt;. Los pasos para completar la instalación son los siguientes:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Actualizar la lista de paquetes disponibles con &lt;code&gt;sudo apt update&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Instalar Python desde los repositorios del sistema con &lt;code&gt;sudo apt install python3&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Verificar que la instalación se completó con éxito.&lt;/li&gt;
+&lt;li&gt;🐍&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;A continuación encontrarás una explicación detallada de estos pasos. Presta especial atención al paso número dos. De él dependerá el éxito de la instalación.&lt;/p&gt;
+&lt;h2 id="paso-1-actualizar-la-lista-de-paquetes-disponibles"&gt;Paso 1: Actualizar la lista de paquetes disponibles&lt;/h2&gt;
+&lt;p&gt;Lo primero es abrir una terminal del sistema o línea de comandos. Para esto, puedes presionar Ctrl+Alt+T en tu teclado o buscar el terminal entre las aplicaciones de tu sistema. En Ubuntu, el terminal luce de la siguiente manera:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/articles/instalar-python-linux-debian-ubuntu/terminal-window-ubuntu.png" class="mx-auto d-block mt-2" alt="Ventana de la Terminal o línea de comandos en Ubuntu Linux"&gt;&lt;/p&gt;
+&lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Ventana de la Terminal o línea de comandos en Ubuntu Linux&lt;/em&gt;&lt;/div&gt;
+
+&lt;p&gt;Una vez que tengas la terminal abierta, puedes ejecutar el siguiente comando para actualizar la lista de paquetes disponibles en los repositorios de tu distribución:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Para poder ejecutar este comando, debes suministrar la contraseña del usuario root. De esto se encarga el comando &lt;code&gt;sudo&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Durante la ejecución de &lt;code&gt;apt update&lt;/code&gt;, el comando descargará los indices del repositorio y los actualizará en tu ordenador. De este modo, tendrás acceso a las últimas versiones disponibles para cada paquete de tu distribución. Con este paso, estás listo para instalar Python.&lt;/p&gt;
+&lt;h2 id="paso-2-instalar-python-desde-los-repositorios-del-sistema"&gt;Paso 2: Instalar Python desde los repositorios del sistema&lt;/h2&gt;
+&lt;p&gt;Ahora que tienes la lista de paquetes actualizada, puedes instalar Python desde los repositorios de tu distribución con el siguiente comando:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;python3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Este comando descarga Python desde los repos y lo instala en tu ordenador. Esta será la instalación Python del sistema.&lt;/p&gt;
+&lt;p&gt;En Ubuntu, el paquete &lt;code&gt;python3&lt;/code&gt; no incluye todas las funcionalidades que vienen con el instalador oficial de Python para otros sistemas operativos como &lt;a href="https://pythonscouts.com/instalar-python-windows/"&gt;Windows&lt;/a&gt; y &lt;a href="https://pythonscouts.com/instalar-python-macos/"&gt;macOS&lt;/a&gt;. Por ejemplo, si necesitas trabajar con entornos virtuales, deberás instalar &lt;code&gt;python3-venv&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;De modo similar, si deseas usar &lt;a href="https://pip.pypa.io/en/stable/"&gt;&lt;code&gt;pip&lt;/code&gt;&lt;/a&gt;, que es el instalador de paquetes para Python, deberás instalar el paquete &lt;code&gt;python3-pip&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Puedes disponer de estas dos herramientas al ejecutar el siguiente comando:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;python3-venv&lt;span class="w"&gt; &lt;/span&gt;python3-pip
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Al concluir la ejecución de este comando, tendrás acceso a crear nuevos entornos virtuales e instalar paquetes Python usando &lt;code&gt;pip&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Finalmente, si planeas crear aplicaciones con &lt;a href="https://pythonscouts.com/iniciando-con-tkinter-python/"&gt;interfaz gráfica (GUI) basada en Tkinter&lt;/a&gt;, debes instalar el paquete &lt;code&gt;python3-tk&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="paso-3-verificar-la-instalacion"&gt;Paso 3: Verificar la instalación&lt;/h2&gt;
+&lt;p&gt;Una vez que hayas ejecutado los pasos anteriores, Python estará instalado en tu sistema operativo. Para confirmar que lo tienes, ejecuta el comando siguiente:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;python3&lt;span class="w"&gt; &lt;/span&gt;--version&lt;span class="w"&gt; &lt;/span&gt;
+&lt;span class="go"&gt;Python 3.10.12&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Este comando imprime la versión de Python que tienes instalada por defecto. Con esto has concluido la instalación de Python usando el gestor de paquetes de tu distribución Linux. Ahora estás listo para escribir tu &lt;a href="https://pythonscouts.com/python-hola-mundo/"&gt;primer programa&lt;/a&gt;.&lt;/p&gt;
+&lt;aside&gt;Es importante que sepas que la versión de Python disponible en los repositorios oficiales de Debian, Ubuntu y derivados puede estar relativamente actualizada con respecto a las últimas versiones liberadas. Para instalar la última versión de Python, deberás compilarla desde sus &lt;a href="https://www.python.org/downloads/source/" target="_blank"&gt;fuentes&lt;/a&gt; o emplear herramientas como &lt;a href="https://github.com/pyenv/pyenv" target="_blank"&gt;&lt;code&gt;pyenv&lt;/code&gt;&lt;/a&gt; que te permiten gestionar varias versiones de Python en tu computadora.&lt;/aside&gt;
+
+&lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
+&lt;p&gt;Instalar Python en tu ordenador es el primer paso en tu empeño de aprender a programar con el lenguaje. Nuevamente, recuerda que los pasos a seguir para completar la instalación en tu distribución Linux basada en Debian o Ubuntu son los siguientes:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Actualizar la lista de paquetes disponibles con &lt;code&gt;sudo apt update&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Instalar Python desde los repositorios del sistema con &lt;code&gt;sudo apt install python3&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Verificar que la instalación se completó con éxito.&lt;/li&gt;
+&lt;li&gt;🐍&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Luego de completados estos pasos, estás listo para comenzar a explorar las bondades de Python como lenguaje de programación.&lt;/p&gt;</content><category term="Guías"></category><category term="python"></category><category term="linux"></category></entry><entry><title>Iniciando con Tkinter para desarrollo GUI</title><link href="https://pythonscouts.com/iniciando-con-tkinter-python/" rel="alternate"></link><published>2025-01-06T15:15:00+01:00</published><updated>2025-01-06T15:15:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-01-06:/iniciando-con-tkinter-python/</id><summary type="html">&lt;p&gt;En Python, Tkinter es una biblioteca que proporciona un kit de herramientas para el desarrollo de aplicaciones de interfaz gráfica de usuario (GUI).&lt;/p&gt;</summary><content type="html">&lt;p&gt;Tkinter es una de las bibliotecas más empleadas en el desarrollo rápido de aplicaciones GUI puesto que viene incluida con la instalación oficial de Python como parte de la biblioteca estándar.&lt;/p&gt;
 &lt;p&gt;Aprender los conceptos básicos para construir aplicaciones GUI usando Python y Tkinter es una excelente habilidad para cualquier desarrollador Python.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;En este tutorial, aprenderás cómo:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -2424,11 +2489,11 @@ Hola, Mundo!
 &lt;/div&gt;
 &lt;h2 id="prerequisitos"&gt;Prerequisitos&lt;/h2&gt;
 &lt;p&gt;Para completar los pasos de esta guía de instalación de Python en Windows, necesitas una computadora con Windows 10 o superior y conexión a Internet. Además, puedes requerir privilegios administrativos en dependencia del tipo de instalación que decidas hacer.&lt;/p&gt;
-&lt;p&gt;Lo demás es seguír las instrucciones debajo, las cuales te guiarán en la instalación tanto usando el instalador oficial como el que está disponible en la tienda de aplicaciones de Microsoft.&lt;/p&gt;
+&lt;p&gt;Lo demás es seguir las instrucciones debajo, las cuales te guiarán en la instalación tanto usando el instalador oficial como el que está disponible en la tienda de aplicaciones de Microsoft.&lt;/p&gt;
 &lt;h2 id="instalar-python-en-windows-usando-el-instalador-oficial"&gt;Instalar Python en Windows usando el instalador oficial&lt;/h2&gt;
-&lt;p&gt;En general, la manera recomendada para instalar Python en una computadora con Windows es emplear el instalador oficial que provee la &lt;a href="https://www.python.org/psf-landing/"&gt;Python Sofware Foundation (PSF)&lt;/a&gt; en el sitio web del lenguaje, &lt;a href="https://www.python.org/"&gt;&lt;code&gt;Python.org&lt;/code&gt;&lt;/a&gt;. Los pasos para completar la instalación son los siguientes:&lt;/p&gt;
+&lt;p&gt;En general, la manera recomendada para instalar Python en una computadora con Windows es emplear el instalador oficial que provee la &lt;a href="https://www.python.org/psf-landing/"&gt;Python Software Foundation (PSF)&lt;/a&gt; en el sitio web del lenguaje, &lt;a href="https://www.python.org/"&gt;&lt;code&gt;Python.org&lt;/code&gt;&lt;/a&gt;. Los pasos para completar la instalación son los siguientes:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Descargar el instalador de Python para Windows dede la &lt;a href="https://www.python.org/downloads/"&gt;página de descargas&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Descargar el instalador de Python para Windows desde la &lt;a href="https://www.python.org/downloads/"&gt;página de descargas&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Ejecutar el instalador y seguir las instrucciones en pantalla.&lt;/li&gt;
 &lt;li&gt;Verificar que la instalación se completó con éxito.&lt;/li&gt;
 &lt;li&gt;🐍&lt;/li&gt;
@@ -2446,7 +2511,7 @@ Hola, Mundo!
 
 &lt;p&gt;Una vez en la página de descargas, es recomendable que descargues la versión más reciente de Python que aparecerá como la primera opción. De esta manera, tendrás acceso a las últimas novedades del lenguaje y estarás al día con las correcciones de errores y los parches de seguridad.&lt;/p&gt;
 &lt;aside&gt;
-En esta guía, emplearás el instalador ejecutable (`.exe`) que puedes obtener haciendo click en el botón amarillo.
+En esta guía, emplearás el instalador ejecutable (&lt;code&gt;.exe&lt;/code&gt;) que puedes obtener haciendo click en el botón amarillo.
 &lt;/aside&gt;
 
 &lt;p&gt;Luego de estas consideraciones, has click en la versión de tu preferencia para comenzar la descarga del instalador de Python. Concluida la descarga, estás listo para el próximo paso.&lt;/p&gt;
@@ -2466,16 +2531,16 @@ En esta guía, emplearás el instalador ejecutable (`.exe`) que puedes obtener h
 &lt;li&gt;&lt;em&gt;Install Now&lt;/em&gt; (Instalar Ahora) para comenzar la instalación &lt;strong&gt;standard&lt;/strong&gt; de Python&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Customize installation&lt;/em&gt; (Personalizar instalación) para personalizar la instalación con opciones adicionales&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;En esta guía, seleccionarás la segunda opción, la cual te lleva a la segunda ventana del instalador, &lt;em&gt;Optional Fatures&lt;/em&gt; (Características Opcionales), que luce así:&lt;/p&gt;
+&lt;p&gt;En esta guía, seleccionarás la segunda opción, la cual te lleva a la segunda ventana del instalador, &lt;em&gt;Optional Features&lt;/em&gt; (Características Opcionales), que luce así:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/instalar-python-windows/instalador-python-segunda-ventana-caracteristicas-opcionales.png" class="mx-auto d-block mt-2" alt="Instalador de Python, segunda ventana - Características Opcionales"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Instalador de Python, segunda ventana - Características Opcionales&lt;/em&gt;&lt;/div&gt;
 
 &lt;p&gt;En esta ventana, todas las opciones están seleccionadas por defecto, lo cual es recomendable. Sin embargo, si no tienes pensado emplear IDLE en tu proceso de aprendizaje y desarrollo, entonces puedes desmarcar esta opción. El resto de las opciones deberías mantenerlas seleccionadas para evitar futuros problemas.&lt;/p&gt;
 &lt;aside&gt;
-IDLE es el entorno de desarrollo integrado (IDE) por defecto de Python. Este programa provee una interfaz gráfica para trabajo con el lenguaje y su intérprete. Como regla general, está includido en el instalador oficial en todas sus versiones.
+IDLE es el entorno de desarrollo integrado (IDE) por defecto de Python. Este programa provee una interfaz gráfica para trabajo con el lenguaje y su intérprete. Como regla general, está incluido en el instalador oficial en todas sus versiones.
 &lt;/aside&gt;
 
-&lt;p&gt;Una vez que hayas decidido las característica opcionales que deseas, puedes hacer click en el botón &lt;em&gt;Next&lt;/em&gt; (Siguiente) para continuar. Te aparacerá la ventana siguiente:&lt;/p&gt;
+&lt;p&gt;Una vez que hayas decidido las característica opcionales que deseas, puedes hacer click en el botón &lt;em&gt;Next&lt;/em&gt; (Siguiente) para continuar. Te aparecerá la siguiente ventana:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/instalar-python-windows/instalador-python-tercera-ventana-opciones-avanzadas.png" class="mx-auto d-block mt-2" alt="Instalador de Python, tercera ventana - Opciones Avanzadas"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Instalador de Python, tercera ventana - Opciones Avanzadas&lt;/em&gt;&lt;/div&gt;
 
@@ -2488,13 +2553,13 @@ IDLE es el entorno de desarrollo integrado (IDE) por defecto de Python. Este pro
 &lt;p&gt;&lt;strong&gt;Associate files with Python&lt;/strong&gt; (Asociar archivos con Python): Recomendada porque esta opción asocia los archivos Python con el lanzador y el editor de código.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Create shortcuts for installed applications&lt;/strong&gt; (Crear accesos directos para las aplicaciones instaladas): Recommendada, pues crea accesos directos que te permitirán acceder a Python y sus aplicaciones de forma rápida.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Create shortcuts for installed applications&lt;/strong&gt; (Crear accesos directos para las aplicaciones instaladas): Recomendada, pues crea accesos directos que te permitirán acceder a Python y sus aplicaciones de forma rápida.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Add Python to environment variables&lt;/strong&gt; (Añadir Python a las variables de entorno): Recomendada poque habilita la ejecución directa de Python.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Add Python to environment variables&lt;/strong&gt; (Añadir Python a las variables de entorno): Recomendada porque habilita la ejecución directa de Python.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Precompile standard library&lt;/strong&gt; (Precompilar la biblioteca estándard): No requerida. Esta opción precompila los archivos Python de la biblioteca estándard, lo cual puede demorar la instalación.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Precompile standard library&lt;/strong&gt; (Precompilar la biblioteca estándar): No requerida. Esta opción precompila los archivos Python de la biblioteca estándar, lo cual puede demorar la instalación.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Download debugging symbols&lt;/strong&gt; and &lt;strong&gt;Download debug binaries&lt;/strong&gt;: Recomendadas cuando planeas crear extensiones en C o C++.&lt;/p&gt;
@@ -2509,18 +2574,18 @@ IDLE es el entorno de desarrollo integrado (IDE) por defecto de Python. Este pro
 &lt;p&gt;&lt;img src="../images/articles/instalar-python-windows/instalador-python-cuarta-ventana-instalacion.png" class="mx-auto d-block mt-2" alt="Instalador de Python - Ventana de instalación"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Instalador de Python - Ventana de instalación&lt;/em&gt;&lt;/div&gt;
 
-&lt;p&gt;La instalación no debe tomar mucho tiempo. En cualquier caso, puedes recostarte y relajarte mientra el instalador hace su trabajo. Una vez concluido el proceso, aprarecerá la ventana de instalación exitosa:&lt;/p&gt;
+&lt;p&gt;La instalación no debe tomar mucho tiempo. En cualquier caso, puedes recostarte y relajarte mientra el instalador hace su trabajo. Una vez concluido el proceso, aparecerá la ventana de instalación exitosa:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/instalar-python-windows/instalador-python-quinta-ventana-resumen.png" class="mx-auto d-block mt-2" alt="Instalador de Python - Ventana de resumen"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Instalador de Python - Ventana de resumen&lt;/em&gt;&lt;/div&gt;
 
-&lt;p&gt;Esta ventana es la confirmación de que ha concluido la instalación de Python en tu sistema operativo Windows. Es recomendable que visites el link a la página sobre &lt;a href="https://docs.python.org/es/3.11/using/windows.html"&gt;cómo usar Python en Windows&lt;/a&gt;. Allí encontrás información valiosa que puede servirte de mucho.&lt;/p&gt;
+&lt;p&gt;Esta ventana es la confirmación de que ha concluido la instalación de Python en tu sistema operativo Windows. Es recomendable que visites el link a la página sobre &lt;a href="https://docs.python.org/es/3.11/using/windows.html"&gt;cómo usar Python en Windows&lt;/a&gt;. Allí encontrarás información valiosa que puede servirte de mucho.&lt;/p&gt;
 &lt;h3 id="paso-3-verificar-la-instalacion-de-python"&gt;Paso 3: Verificar la instalación de Python&lt;/h3&gt;
 &lt;p&gt;Una vez que hayas ejecutado los pasos anteriores, Python estará instalado en tu sistema operativo. Para confirmar que lo tienes, abre una ventana de PowerShell y ejecuta el comando siguiente:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;PS&amp;gt; python --version
 Python 3.11.5
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Este comando imprime la versión de Python que tienes instalada por defecto. Con esto has concluido la instalación de Python usando el instalador oficial para Windows. Ahora estás listo para escribit tu &lt;a href="https://pythonscouts.com/python-hola-mundo/"&gt;primer programa&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Este comando imprime la versión de Python que tienes instalada por defecto. Con esto has concluido la instalación de Python usando el instalador oficial para Windows. Ahora estás listo para escribir tu &lt;a href="https://pythonscouts.com/python-hola-mundo/"&gt;primer programa&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="instalar-python-desde-microsoft-store"&gt;Instalar Python desde Microsoft Store&lt;/h2&gt;
 &lt;p&gt;Para los usuarios que comienzan con Python en un sistema operativo Windows, Microsoft recomienda instalar la aplicación desde su tienda de aplicaciones. Si prefieres instalar Python de esta forma, entonces puedes seguir los pasos siguientes:&lt;/p&gt;
 &lt;ol&gt;
@@ -2530,7 +2595,7 @@ Python 3.11.5
 &lt;li&gt;Selecciona qué versión de Python que te gustaría usar. Nuevamente, deberías usar la versión más reciente para que tengas disponibles las nuevas características del lenguaje.&lt;/li&gt;
 &lt;li&gt;Has click en el &lt;em&gt;Obtener&lt;/em&gt; (&lt;em&gt;Get&lt;/em&gt;) para descargar e instalar la versión seleccionada.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Una vez ejecutados esto pasos, deberás tener Python instalado en tu sistema operativo. Nuevamente, para confirmar que la instalación fue exitosa, abre tu PowerShell y ejecutal el comando siguiente:&lt;/p&gt;
+&lt;p&gt;Una vez ejecutados esto pasos, deberás tener Python instalado en tu sistema operativo. Nuevamente, para confirmar que la instalación fue exitosa, abre tu PowerShell y ejecutar el comando siguiente:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;PS&amp;gt; Python --version
 Python 3.11.5
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -2539,12 +2604,12 @@ Python 3.11.5
 &lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
 &lt;p&gt;Instalar Python en tu ordenador es el primer paso en tu empeño de aprender a programar con el lenguaje. Nuevamente, recuerda que los pasos a seguir para completar la instalación con el instalador oficial para Windows son los siguientes:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Descargar el instalador de Python para Windows dede la &lt;a href="https://www.python.org/downloads/"&gt;página de descargas&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Descargar el instalador de Python para Windows desde la &lt;a href="https://www.python.org/downloads/"&gt;página de descargas&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Ejecutar el instalador y seguir las instrucciones en pantalla.&lt;/li&gt;
 &lt;li&gt;Verificar que la instalación se completó con éxito.&lt;/li&gt;
 &lt;li&gt;🐍&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Luego de completados estos pasos, estás listo para comenzar a explorar las bondades de Python como lenguaje de programación.&lt;/p&gt;</content><category term="Guías"></category><category term="python"></category><category term="windows"></category></entry><entry><title>Cómo instalar Python en tu sistema operativo macOS?</title><link href="https://pythonscouts.com/instalar-python-macos/" rel="alternate"></link><published>2023-08-29T19:00:00+02:00</published><updated>2023-08-29T19:00:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2023-08-29:/instalar-python-macos/</id><summary type="html">&lt;p&gt;Instalar Python en tu odenador es el primer paso para aprender el lenguaje. Si tienes una computadora Mac, aquí aprenderás los pasos necesarios para instalar Python de manera rápida y confiable en el sistema operativo macOS.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Para instalar Python, emplearás el &lt;strong&gt;instalador oficial&lt;/strong&gt; para macOS que puedes descargar desde &lt;a href="https://www.python.org/"&gt;&lt;code&gt;Python.org&lt;/code&gt;&lt;/a&gt;. Es recomendable que tengas experiencia de trabajo en sistemas macOS para poder seguir esta guía de instalación de Python. Es especialmente importante tener conocimientos básicos sobre la terminal del sistema y cómo emplearla.&lt;/p&gt;
+&lt;p&gt;Luego de completados estos pasos, estás listo para comenzar a explorar las bondades de Python como lenguaje de programación.&lt;/p&gt;</content><category term="Guías"></category><category term="python"></category><category term="windows"></category></entry><entry><title>Cómo instalar Python en tu sistema operativo macOS?</title><link href="https://pythonscouts.com/instalar-python-macos/" rel="alternate"></link><published>2023-08-29T19:00:00+02:00</published><updated>2023-08-29T19:00:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2023-08-29:/instalar-python-macos/</id><summary type="html">&lt;p&gt;Instalar Python en tu computadora es el primer paso para aprender el lenguaje. Si tienes una computadora Mac, aquí aprenderás los pasos necesarios para instalar Python de manera rápida y confiable en el sistema operativo macOS.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Para instalar Python, emplearás el &lt;strong&gt;instalador oficial&lt;/strong&gt; para macOS que puedes descargar desde &lt;a href="https://www.python.org/"&gt;&lt;code&gt;Python.org&lt;/code&gt;&lt;/a&gt;. Es recomendable que tengas experiencia de trabajo en sistemas macOS para poder seguir esta guía de instalación de Python. Es especialmente importante tener conocimientos básicos sobre la terminal del sistema y cómo emplearla.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#prerequisitos"&gt;Prerequisitos&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#instalar-python-en-macos-usando-el-instalador-oficial"&gt;Instalar Python en macOS usando el instalador oficial&lt;/a&gt;&lt;/li&gt;
@@ -2558,9 +2623,9 @@ Python 3.11.5
 &lt;p&gt;Para completar los pasos de esta guía de instalación de Python en macOS, necesitas una computadora con este sistema operativo. Además, requieres tener privilegios root y una conexión a Internet.&lt;/p&gt;
 &lt;p&gt;Lo demás es solo seguir las instrucciones más abajo!&lt;/p&gt;
 &lt;h2 id="instalar-python-en-macos-usando-el-instalador-oficial"&gt;Instalar Python en macOS usando el instalador oficial&lt;/h2&gt;
-&lt;p&gt;La manera recomendada para instalar Python en una computadora Mac es emplear el instalador oficial que provee la &lt;a href="https://www.python.org/psf-landing/"&gt;Python Sofware Foundation (PSF)&lt;/a&gt; en el sitio web del lenguaje, &lt;a href="https://www.python.org/"&gt;&lt;code&gt;Python.org&lt;/code&gt;&lt;/a&gt;. Los pasos para completar la instalación son los siguientes:&lt;/p&gt;
+&lt;p&gt;La manera recomendada para instalar Python en una computadora Mac es emplear el instalador oficial que provee la &lt;a href="https://www.python.org/psf-landing/"&gt;Python Software Foundation (PSF)&lt;/a&gt; en el sitio web del lenguaje, &lt;a href="https://www.python.org/"&gt;&lt;code&gt;Python.org&lt;/code&gt;&lt;/a&gt;. Los pasos para completar la instalación son los siguientes:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Descargar el instalador de Python para macOS dede la &lt;a href="https://www.python.org/downloads/"&gt;página de descargas&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Descargar el instalador de Python para macOS desde la &lt;a href="https://www.python.org/downloads/"&gt;página de descargas&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Ejecutar el instalador y seguir las instrucciones en pantalla.&lt;/li&gt;
 &lt;li&gt;Verificar que la instalación se completó con éxito.&lt;/li&gt;
 &lt;li&gt;🐍&lt;/li&gt;
@@ -2577,7 +2642,7 @@ Python 3.11.5
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Página de descargas de Python para macOS&lt;/em&gt;&lt;/div&gt;
 
 &lt;p&gt;Una vez en la página de descargas, es recomendable que descargues la versión más reciente que aparecerá como la primera opción. De esta manera, tendrás acceso a las últimas novedades del lenguaje y estarás al día con las correcciones de errores y los parches de seguridad.&lt;/p&gt;
-&lt;p&gt;También puedes seleccionar una versión más antigua si lo deseas. Para esto, desplazate hacia abajo en la página de descargas e identifica la versión deseada.&lt;/p&gt;
+&lt;p&gt;También puedes seleccionar una versión más antigua si lo deseas. Para esto, desplázate hacia abajo en la página de descargas e identifica la versión deseada.&lt;/p&gt;
 &lt;aside&gt;
 En esta guía, emplearás el instalador universal (&lt;code&gt;.pkg&lt;/code&gt;) de 64-bit para macOS 10.9 o superior. Este instalador provee la versión 3.11.5 de Python. Puedes descargarlo directamente haciendo click en el botón amarillo.
 &lt;/aside&gt;
@@ -2589,7 +2654,7 @@ En esta guía, emplearás el instalador universal (&lt;code&gt;.pkg&lt;/code&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Instalador de Python, ventana inicial&lt;/em&gt;&lt;/div&gt;
 
 &lt;p&gt;Es la ventana inicial del instalador de Python. Sí, está en inglés, pero no hay de qué preocuparse. Tómalo como una práctica necesaria. Además, es probable que en tu ordenador te aparezca todo en español.&lt;/p&gt;
-&lt;p&gt;En esta pantalla, Python 3.11.5 te da la beinvenida a su instalador. Se trata de la versión diseñada para macOS 10.9 o superior.&lt;/p&gt;
+&lt;p&gt;En esta pantalla, Python 3.11.5 te da la bienvenida a su instalador. Se trata de la versión diseñada para macOS 10.9 o superior.&lt;/p&gt;
 &lt;p&gt;Puedes hacer click en el botón &lt;em&gt;Continue&lt;/em&gt; (Continuar) para proseguir con la instalación. Esta acción te lleva a la segunda ventana del instalador, &lt;em&gt;Read Me&lt;/em&gt;, la cual luce de la manera siguiente:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/instalar-python-macos/instalador-python-segunda-ventana-readme.png" class="img-fluid mt-2" alt="Instalador de Python, segunda ventana: Readme"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Instalador de Python, segunda ventana: Readme&lt;/em&gt;&lt;/div&gt;
@@ -2598,7 +2663,7 @@ En esta guía, emplearás el instalador universal (&lt;code&gt;.pkg&lt;/code&gt;
 &lt;p&gt;&lt;img src="../images/articles/instalar-python-macos/instalador-python-tercera-ventana-licencia.png" class="img-fluid mt-2" alt="Instalador de Python, tercera ventana: Licencia"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Instalador de Python, tercera ventana: Licencia&lt;/em&gt;&lt;/div&gt;
 
-&lt;p&gt;Aquí encontrarás informción sobre la licencia de software bajo la cual se distribuye Python. Nuevamente, puedes leerla si es un tema que te interesa. Para tu tranquilidad, la licencia de Python pertime el uso del lenguaje tanto en aplicaciones de &lt;a href="https://es.wikipedia.org/wiki/C%C3%B3digo_abierto"&gt;código abierto&lt;/a&gt;, como en proyectos comerciales.&lt;/p&gt;
+&lt;p&gt;Aquí encontrarás información sobre la licencia de software bajo la cual se distribuye Python. Nuevamente, puedes leerla si es un tema que te interesa. Para tu tranquilidad, la licencia de Python permite el uso del lenguaje tanto en aplicaciones de &lt;a href="https://es.wikipedia.org/wiki/C%C3%B3digo_abierto"&gt;código abierto&lt;/a&gt;, como en proyectos comerciales.&lt;/p&gt;
 &lt;p&gt;Haz click en el botón &lt;em&gt;Continue&lt;/em&gt; y acepta los términos de la licencia para proseguir. La siguiente ventana te permitirá seleccionar el disco de tu Mac donde deseas instalar Python. Si tu Mac tiene la configuración de discos por defecto, entonces el disco destino será &lt;strong&gt;Macintosh HD&lt;/strong&gt;:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/instalar-python-macos/instalador-python-cuarta-ventana-hd-destino.png" class="img-fluid mt-2" alt="Instalador de Python, cuarta ventana: Disco destino"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Instalador de Python, cuarta ventana: Disco destino&lt;/em&gt;&lt;/div&gt;
@@ -2606,25 +2671,25 @@ En esta guía, emplearás el instalador universal (&lt;code&gt;.pkg&lt;/code&gt;
 &lt;p&gt;Con la configuración de discos por defecto, no tienes que realizar ningún paso adicional. Solo has click nuevamente en el botón &lt;em&gt;Continue&lt;/em&gt; del instalador.&lt;/p&gt;
 &lt;p&gt;La próxima ventana te permitirá seleccionar el tipo de instalación. Aquí tienes dos opciones:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Instalación &lt;strong&gt;estándard&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Instalcaión &lt;strong&gt;personalizada&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Instalación &lt;strong&gt;estándar&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Instalación &lt;strong&gt;personalizada&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;La ventana de instalación estándard luce como se muestra a continuación:&lt;/p&gt;
-&lt;p&gt;&lt;img src="../images/articles/instalar-python-macos/instalador-python-quinta-ventana-instalacion-estandard.png" class="img-fluid mt-2" alt="Instalador de Python, quinta ventana: Instalación estándard"&gt;&lt;/p&gt;
-&lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Instalador de Python, quinta ventana: Instalación estándard&lt;/em&gt;&lt;/div&gt;
+&lt;p&gt;La ventana de instalación estándar luce como se muestra a continuación:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/articles/instalar-python-macos/instalador-python-quinta-ventana-instalacion-estandard.png" class="img-fluid mt-2" alt="Instalador de Python, quinta ventana: Instalación estándar"&gt;&lt;/p&gt;
+&lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Instalador de Python, quinta ventana: Instalación estándar&lt;/em&gt;&lt;/div&gt;
 
 &lt;p&gt;Este tipo de instalación incluye todas las funcionalidades de Python para macOS. Por lo tanto, es la instalación recomendada si estás comenzando con Python.&lt;/p&gt;
 &lt;p&gt;Si deseas personalizar tu instalación, puedes seleccionar el botón &lt;em&gt;Customize&lt;/em&gt; para acceder a la vista siguiente:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/instalar-python-macos/instalador-python-quinta-ventana-instalacion-personalizada.png" class="img-fluid mt-2" alt="Instalador de Python, quinta ventana: Instalación personalizada"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Instalador de Python, quinta ventana: Instalación personalizada&lt;/em&gt;&lt;/div&gt;
 
-&lt;p&gt;En esta ventana, puedes hacer click en cada una de las opciones para obtener información adicional. Por ejemplo, si pinchas la opción &lt;em&gt;GUI Applications&lt;/em&gt;, obtendrás la sigiuente vista:&lt;/p&gt;
+&lt;p&gt;En esta ventana, puedes hacer click en cada una de las opciones para obtener información adicional. Por ejemplo, si pinchas la opción &lt;em&gt;GUI Applications&lt;/em&gt;, obtendrás la siguiente vista:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/instalar-python-macos/instalador-python-quinta-ventana-instalacion-personalizada-opciones.png" class="img-fluid mt-2" alt="Instalador de Python, quinta ventana: Instalación personalizada, opciones"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Instalador de Python, quinta ventana: Instalación personalizada, opciones&lt;/em&gt;&lt;/div&gt;
 
 &lt;p&gt;Si no tienes pensado emplear IDLE en tu proceso de aprendizaje y desarrollo, entonces puedes desmarcar esta opción. El resto de las opciones son recomendables para evitar futuros problemas, así que no deberías desmarcarlas.&lt;/p&gt;
 &lt;aside&gt;
-IDLE es el entorno de desarrollo integrado (IDE) por defecto de Python. Este programa provee una interfaz gráfica para trabajo con el lenguaje y su intérprete. Como regla general, está includido en el instalador oficial en todas sus versiones.
+IDLE es el entorno de desarrollo integrado (IDE) por defecto de Python. Este programa provee una interfaz gráfica para trabajo con el lenguaje y su intérprete. Como regla general, está incluido en el instalador oficial en todas sus versiones.
 &lt;/aside&gt;
 
 &lt;p&gt;Una vez que hayas personalizado tu instalación, puedes hacer click en el botón &lt;em&gt;Install&lt;/em&gt; para comenzar. Deberás introducir tu nombre de usuario y tu contraseña. Ten en cuenta que debes tener privilegios administrativos para concluir la instalación.&lt;/p&gt;
@@ -2644,11 +2709,11 @@ IDLE es el entorno de desarrollo integrado (IDE) por defecto de Python. Este pro
 &lt;span class="go"&gt;Python 3.11.5&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Este comando imprime la versión de Python que tienes instalada por defecto. Con esto has concluido la instalación de Python usando el instalador oficial para masOS. Ahora estás listo para escribit tu &lt;a href="https://pythonscouts.com/python-hola-mundo/"&gt;primer programa&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Este comando imprime la versión de Python que tienes instalada por defecto. Con esto has concluido la instalación de Python usando el instalador oficial para masOS. Ahora estás listo para escribir tu &lt;a href="https://pythonscouts.com/python-hola-mundo/"&gt;primer programa&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
 &lt;p&gt;Instalar Python en tu ordenador es el primer paso en tu empeño de aprender a programar con el lenguaje. Nuevamente, recuerda que los pasos a seguir para completar la instalación son los siguientes:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Descargar el instalador de Python para macOS dede la &lt;a href="https://www.python.org/downloads/"&gt;página de descargas&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Descargar el instalador de Python para macOS desde la &lt;a href="https://www.python.org/downloads/"&gt;página de descargas&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Ejecutar el instalador y seguir las instrucciones en pantalla.&lt;/li&gt;
 &lt;li&gt;Verificar que la instalación se completó con éxito.&lt;/li&gt;
 &lt;li&gt;🐍&lt;/li&gt;

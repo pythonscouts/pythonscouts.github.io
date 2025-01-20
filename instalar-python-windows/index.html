@@ -23,10 +23,11 @@
 
 
     <!-- Article tags -->
+    <meta name="article:tag" content="python" />
+    <meta name="article:tag" content="linux" />
     <meta name="article:tag" content="gui" />
     <meta name="article:tag" content="tkinter" />
     <meta name="article:tag" content="pyqt" />
-    <meta name="article:tag" content="python" />
     <meta name="article:tag" content="windows" />
     <meta name="article:tag" content="macos" />
     <meta name="article:tag" content="fundamentos" />
@@ -159,11 +160,11 @@
 </div>
 <h2 id="prerequisitos">Prerequisitos</h2>
 <p>Para completar los pasos de esta guía de instalación de Python en Windows, necesitas una computadora con Windows 10 o superior y conexión a Internet. Además, puedes requerir privilegios administrativos en dependencia del tipo de instalación que decidas hacer.</p>
-<p>Lo demás es seguír las instrucciones debajo, las cuales te guiarán en la instalación tanto usando el instalador oficial como el que está disponible en la tienda de aplicaciones de Microsoft.</p>
+<p>Lo demás es seguir las instrucciones debajo, las cuales te guiarán en la instalación tanto usando el instalador oficial como el que está disponible en la tienda de aplicaciones de Microsoft.</p>
 <h2 id="instalar-python-en-windows-usando-el-instalador-oficial">Instalar Python en Windows usando el instalador oficial</h2>
-<p>En general, la manera recomendada para instalar Python en una computadora con Windows es emplear el instalador oficial que provee la <a href="https://www.python.org/psf-landing/">Python Sofware Foundation (PSF)</a> en el sitio web del lenguaje, <a href="https://www.python.org/"><code>Python.org</code></a>. Los pasos para completar la instalación son los siguientes:</p>
+<p>En general, la manera recomendada para instalar Python en una computadora con Windows es emplear el instalador oficial que provee la <a href="https://www.python.org/psf-landing/">Python Software Foundation (PSF)</a> en el sitio web del lenguaje, <a href="https://www.python.org/"><code>Python.org</code></a>. Los pasos para completar la instalación son los siguientes:</p>
 <ol>
-<li>Descargar el instalador de Python para Windows dede la <a href="https://www.python.org/downloads/">página de descargas</a>.</li>
+<li>Descargar el instalador de Python para Windows desde la <a href="https://www.python.org/downloads/">página de descargas</a>.</li>
 <li>Ejecutar el instalador y seguir las instrucciones en pantalla.</li>
 <li>Verificar que la instalación se completó con éxito.</li>
 <li>🐍</li>
@@ -181,7 +182,7 @@
 
 <p>Una vez en la página de descargas, es recomendable que descargues la versión más reciente de Python que aparecerá como la primera opción. De esta manera, tendrás acceso a las últimas novedades del lenguaje y estarás al día con las correcciones de errores y los parches de seguridad.</p>
 <aside>
-En esta guía, emplearás el instalador ejecutable (`.exe`) que puedes obtener haciendo click en el botón amarillo.
+En esta guía, emplearás el instalador ejecutable (<code>.exe</code>) que puedes obtener haciendo click en el botón amarillo.
 </aside>
 
 <p>Luego de estas consideraciones, has click en la versión de tu preferencia para comenzar la descarga del instalador de Python. Concluida la descarga, estás listo para el próximo paso.</p>
@@ -201,16 +202,16 @@ En esta guía, emplearás el instalador ejecutable (`.exe`) que puedes obtener h
 <li><em>Install Now</em> (Instalar Ahora) para comenzar la instalación <strong>standard</strong> de Python</li>
 <li><em>Customize installation</em> (Personalizar instalación) para personalizar la instalación con opciones adicionales</li>
 </ol>
-<p>En esta guía, seleccionarás la segunda opción, la cual te lleva a la segunda ventana del instalador, <em>Optional Fatures</em> (Características Opcionales), que luce así:</p>
+<p>En esta guía, seleccionarás la segunda opción, la cual te lleva a la segunda ventana del instalador, <em>Optional Features</em> (Características Opcionales), que luce así:</p>
 <p><img src="../images/articles/instalar-python-windows/instalador-python-segunda-ventana-caracteristicas-opcionales.png" class="mx-auto d-block mt-2" alt="Instalador de Python, segunda ventana - Características Opcionales"></p>
 <div class="text-center mb-5 lead"><em>Instalador de Python, segunda ventana - Características Opcionales</em></div>
 
 <p>En esta ventana, todas las opciones están seleccionadas por defecto, lo cual es recomendable. Sin embargo, si no tienes pensado emplear IDLE en tu proceso de aprendizaje y desarrollo, entonces puedes desmarcar esta opción. El resto de las opciones deberías mantenerlas seleccionadas para evitar futuros problemas.</p>
 <aside>
-IDLE es el entorno de desarrollo integrado (IDE) por defecto de Python. Este programa provee una interfaz gráfica para trabajo con el lenguaje y su intérprete. Como regla general, está includido en el instalador oficial en todas sus versiones.
+IDLE es el entorno de desarrollo integrado (IDE) por defecto de Python. Este programa provee una interfaz gráfica para trabajo con el lenguaje y su intérprete. Como regla general, está incluido en el instalador oficial en todas sus versiones.
 </aside>
 
-<p>Una vez que hayas decidido las característica opcionales que deseas, puedes hacer click en el botón <em>Next</em> (Siguiente) para continuar. Te aparacerá la ventana siguiente:</p>
+<p>Una vez que hayas decidido las característica opcionales que deseas, puedes hacer click en el botón <em>Next</em> (Siguiente) para continuar. Te aparecerá la siguiente ventana:</p>
 <p><img src="../images/articles/instalar-python-windows/instalador-python-tercera-ventana-opciones-avanzadas.png" class="mx-auto d-block mt-2" alt="Instalador de Python, tercera ventana - Opciones Avanzadas"></p>
 <div class="text-center mb-5 lead"><em>Instalador de Python, tercera ventana - Opciones Avanzadas</em></div>
 
@@ -223,13 +224,13 @@ IDLE es el entorno de desarrollo integrado (IDE) por defecto de Python. Este pro
 <p><strong>Associate files with Python</strong> (Asociar archivos con Python): Recomendada porque esta opción asocia los archivos Python con el lanzador y el editor de código.</p>
 </li>
 <li>
-<p><strong>Create shortcuts for installed applications</strong> (Crear accesos directos para las aplicaciones instaladas): Recommendada, pues crea accesos directos que te permitirán acceder a Python y sus aplicaciones de forma rápida.</p>
+<p><strong>Create shortcuts for installed applications</strong> (Crear accesos directos para las aplicaciones instaladas): Recomendada, pues crea accesos directos que te permitirán acceder a Python y sus aplicaciones de forma rápida.</p>
 </li>
 <li>
-<p><strong>Add Python to environment variables</strong> (Añadir Python a las variables de entorno): Recomendada poque habilita la ejecución directa de Python.</p>
+<p><strong>Add Python to environment variables</strong> (Añadir Python a las variables de entorno): Recomendada porque habilita la ejecución directa de Python.</p>
 </li>
 <li>
-<p><strong>Precompile standard library</strong> (Precompilar la biblioteca estándard): No requerida. Esta opción precompila los archivos Python de la biblioteca estándard, lo cual puede demorar la instalación.</p>
+<p><strong>Precompile standard library</strong> (Precompilar la biblioteca estándar): No requerida. Esta opción precompila los archivos Python de la biblioteca estándar, lo cual puede demorar la instalación.</p>
 </li>
 <li>
 <p><strong>Download debugging symbols</strong> and <strong>Download debug binaries</strong>: Recomendadas cuando planeas crear extensiones en C o C++.</p>
@@ -244,18 +245,18 @@ IDLE es el entorno de desarrollo integrado (IDE) por defecto de Python. Este pro
 <p><img src="../images/articles/instalar-python-windows/instalador-python-cuarta-ventana-instalacion.png" class="mx-auto d-block mt-2" alt="Instalador de Python - Ventana de instalación"></p>
 <div class="text-center mb-5 lead"><em>Instalador de Python - Ventana de instalación</em></div>
 
-<p>La instalación no debe tomar mucho tiempo. En cualquier caso, puedes recostarte y relajarte mientra el instalador hace su trabajo. Una vez concluido el proceso, aprarecerá la ventana de instalación exitosa:</p>
+<p>La instalación no debe tomar mucho tiempo. En cualquier caso, puedes recostarte y relajarte mientra el instalador hace su trabajo. Una vez concluido el proceso, aparecerá la ventana de instalación exitosa:</p>
 <p><img src="../images/articles/instalar-python-windows/instalador-python-quinta-ventana-resumen.png" class="mx-auto d-block mt-2" alt="Instalador de Python - Ventana de resumen"></p>
 <div class="text-center mb-5 lead"><em>Instalador de Python - Ventana de resumen</em></div>
 
-<p>Esta ventana es la confirmación de que ha concluido la instalación de Python en tu sistema operativo Windows. Es recomendable que visites el link a la página sobre <a href="https://docs.python.org/es/3.11/using/windows.html">cómo usar Python en Windows</a>. Allí encontrás información valiosa que puede servirte de mucho.</p>
+<p>Esta ventana es la confirmación de que ha concluido la instalación de Python en tu sistema operativo Windows. Es recomendable que visites el link a la página sobre <a href="https://docs.python.org/es/3.11/using/windows.html">cómo usar Python en Windows</a>. Allí encontrarás información valiosa que puede servirte de mucho.</p>
 <h3 id="paso-3-verificar-la-instalacion-de-python">Paso 3: Verificar la instalación de Python</h3>
 <p>Una vez que hayas ejecutado los pasos anteriores, Python estará instalado en tu sistema operativo. Para confirmar que lo tienes, abre una ventana de PowerShell y ejecuta el comando siguiente:</p>
 <div class="highlight"><pre><span></span><code>PS&gt; python --version
 Python 3.11.5
 </code></pre></div>
 
-<p>Este comando imprime la versión de Python que tienes instalada por defecto. Con esto has concluido la instalación de Python usando el instalador oficial para Windows. Ahora estás listo para escribit tu <a href="https://pythonscouts.com/python-hola-mundo/">primer programa</a>.</p>
+<p>Este comando imprime la versión de Python que tienes instalada por defecto. Con esto has concluido la instalación de Python usando el instalador oficial para Windows. Ahora estás listo para escribir tu <a href="https://pythonscouts.com/python-hola-mundo/">primer programa</a>.</p>
 <h2 id="instalar-python-desde-microsoft-store">Instalar Python desde Microsoft Store</h2>
 <p>Para los usuarios que comienzan con Python en un sistema operativo Windows, Microsoft recomienda instalar la aplicación desde su tienda de aplicaciones. Si prefieres instalar Python de esta forma, entonces puedes seguir los pasos siguientes:</p>
 <ol>
@@ -265,7 +266,7 @@ Python 3.11.5
 <li>Selecciona qué versión de Python que te gustaría usar. Nuevamente, deberías usar la versión más reciente para que tengas disponibles las nuevas características del lenguaje.</li>
 <li>Has click en el <em>Obtener</em> (<em>Get</em>) para descargar e instalar la versión seleccionada.</li>
 </ol>
-<p>Una vez ejecutados esto pasos, deberás tener Python instalado en tu sistema operativo. Nuevamente, para confirmar que la instalación fue exitosa, abre tu PowerShell y ejecutal el comando siguiente:</p>
+<p>Una vez ejecutados esto pasos, deberás tener Python instalado en tu sistema operativo. Nuevamente, para confirmar que la instalación fue exitosa, abre tu PowerShell y ejecutar el comando siguiente:</p>
 <div class="highlight"><pre><span></span><code>PS&gt; Python --version
 Python 3.11.5
 </code></pre></div>
@@ -274,7 +275,7 @@ Python 3.11.5
 <h2 id="resumiendo">Resumiendo</h2>
 <p>Instalar Python en tu ordenador es el primer paso en tu empeño de aprender a programar con el lenguaje. Nuevamente, recuerda que los pasos a seguir para completar la instalación con el instalador oficial para Windows son los siguientes:</p>
 <ol>
-<li>Descargar el instalador de Python para Windows dede la <a href="https://www.python.org/downloads/">página de descargas</a>.</li>
+<li>Descargar el instalador de Python para Windows desde la <a href="https://www.python.org/downloads/">página de descargas</a>.</li>
 <li>Ejecutar el instalador y seguir las instrucciones en pantalla.</li>
 <li>Verificar que la instalación se completó con éxito.</li>
 <li>🐍</li>
