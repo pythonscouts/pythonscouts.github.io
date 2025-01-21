@@ -62,3 +62,15 @@ button:hover {
     background: #008800;
     color: white;
 }
+
+.custom-pagination .page-link {
+    color: #008800;
+    background-color: #D1E6DD;
+    border-color: #008800;
+  }
+
+.custom-pagination .active .page-link {
+    background-color: #008800;
+    border-color: #008800;
+    color: white;
+  }
