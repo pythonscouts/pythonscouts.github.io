@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es-es" class="h-100">
+
+<head>
+        <title>
+  Python Scouts - Python a través de ejemplos: Sentencias condicionales
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="En Python, una condicional es una sentencia compuesta que permite ejecutar bloques de código en función del cumplimiento de determinadas condiciones.">
+    <meta name="keywords" content="condicionales python">
+    <!-- RSS feeds -->
+    <link href="https://pythonscouts.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Full Atom Feed" />
+    <link href="https://pythonscouts.com/feeds/series.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Categories Atom Feed" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://pythonscouts.com/condicionales-python/">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css">
+    <!-- Stork Search -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css">
+
+
+    <!-- Article tags -->
+    <meta name="article:tag" content="python" />
+    <meta name="article:tag" content="linux" />
+    <meta name="article:tag" content="gui" />
+    <meta name="article:tag" content="tkinter" />
+    <meta name="article:tag" content="pyqt" />
+    <meta name="article:tag" content="windows" />
+    <meta name="article:tag" content="macos" />
+    <meta name="article:tag" content="fundamentos" />
+
+    <!-- Twitter cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lpozo78">
+    <meta name="twitter:creator" content="@lpozo78">
+    <meta name="twitter:title" content="Python a través de ejemplos: Sentencias condicionales - Python Scouts">
+    <meta name="twitter:description" content="En Python, una condicional es una sentencia compuesta que permite ejecutar bloques de código en función del cumplimiento de determinadas condiciones.">
+    <meta name="twitter:image" content="https://picsum.photos/id/230/300/200.webp">
+    <!-- Linkedin card -->
+    <meta property="og:title" content="Python Scouts">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="condicionales-python/">
+    <meta property="og:description" content="En Python, una condicional es una sentencia compuesta que permite ejecutar bloques de código en función del cumplimiento de determinadas condiciones.">
+    <meta property="og:image" content="https://picsum.photos/id/230/300/200.webp">
+    <!-- Custom CSS for article -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-R3C5PFSQ1S');
+</script>
+
+<body class="d-flex flex-column h-100">
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-md bg-white fixed-top border-bottom">
+        <div class="container-md content-px">
+            <a class="navbar-brand" href="/">
+            <img
+            src="https://pythonscouts.com/images/identity/header.webp"
+            alt="Python Scouts"
+            width="150"
+            height="50"
+            >
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Menú de Navegación">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav m-auto nav-link">
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/guias/" aria-current="page">
+                    Guías
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/series/" aria-current="page">
+                    Series
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/tutoriales/" aria-current="page">
+                    Tutoriales
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/acerca/" aria-current="page">
+                    Acerca
+                </a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <div class="stork-wrapper">
+                <input
+                class="stork-input"
+                type="search"
+                placeholder="Buscar"
+                aria-label="Search"
+                data-stork="sitesearch"
+                >
+                </div>
+            </form>
+            </div>
+        </div>
+    </nav>
+    <main class="container-md content-px py-3">
+        <div class="stork-wrapper">
+            <div data-stork="sitesearch-output" class="stork-output"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+            </div>
+        </div>
+
+    <!-- Article Header -->
+    <div class="row pt-3 pb-5">
+        <div class="col-md-6 py-3">
+            <h1 class="display-5">
+                <strong>Python a través de ejemplos: Sentencias condicionales</strong>
+            </h1>
+            <div class="text-muted small py-3">
+                Publicado el martes, 21 de enero del 2025
+            </div>
+            <div class="py-3">
+                <img src="https://pythonscouts.com/images/authors/leodanis-pozo-ramos.webp" alt="Leodanis Pozo Ramos" class="rounded-circle border" width="70" height="70">
+                <a href="https://pythonscouts.com/author/leodanis-pozo-ramos.html" style="padding-left: 10px;">
+                    Leodanis Pozo Ramos
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6 py-3">
+            <img src="https://picsum.photos/id/230/200/150.webp" class="img-fluid w-100">
+        </div>
+    </div>
+          <!-- Article Content -->
+        <article>
+          <p>En Python, una condicional es una sentencia compuesta que permite ejecutar bloques de código en función del cumplimiento de determinadas condiciones.</p>
+            <div class="row">
+                <div class="col">
+                  <p>Python te permite crear varios tipos de sentencias condicionales. En este tutorial, aprenderás lo básico sobre cómo funcionan y cómo crear condicionales en Python.</p>
+<div class="toc"><span class="toctitle">Contenidos</span><ul>
+<li><a href="#condiciones">Condiciones</a></li>
+<li><a href="#condicionales-simples-con-if">Condicionales simples con if</a></li>
+<li><a href="#condicionales-con-clausula-else">Condicionales con cláusula else</a></li>
+<li><a href="#condicionales-multiples-con-elif">Condicionales múltiples con elif</a></li>
+<li><a href="#conclusiones">Conclusiones</a></li>
+</ul>
+</div>
+<h2 id="condiciones">Condiciones</h2>
+<p>Una <strong>condición</strong> es una expresión que evalúa si algo es verdadero (<code>True</code>) o falso (<code>False</code>). Las condiciones se emplean para controlar el flujo de un programa, permitiendo ejecutar diferentes bloques de código según el resultado obtenido al evaluarlas.</p>
+<p>En Python, puedes crear varios tipos de condiciones. Por ejemplo, las siguientes condiciones comparan valores numéricos:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">3</span>
+<span class="kc">True</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">3</span>
+<span class="kc">False</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">2</span>
+<span class="kc">True</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">2</span>
+<span class="kc">False</span>
+</code></pre></div>
+
+<p>Las condiciones más comunes usan operadores de <a href="https://pythonscouts.com/operadores-python/#comparacion">comparación</a> como <code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, y <code>&lt;=</code>. En estos casos, siempre obtendrás un valor booleano (<code>True</code> o <code>False</code>).</p>
+<p>Las expresiones de <a href="https://pythonscouts.com/operadores-python/#pertenencia">pertenencia</a> también son empleadas como condiciones:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mi">3</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="kc">False</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;banana&quot;</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;manzana&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;cereza&quot;</span><span class="p">]</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;naranja&quot;</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;manzana&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;cereza&quot;</span><span class="p">]</span>
+<span class="kc">False</span>
+</code></pre></div>
+
+<p>Estas expresiones permiten determinar si un valor u objeto específico forma parte de una serie de valores o colección.</p>
+<p>También puedes crear condiciones empleando los operadores <a href="https://pythonscouts.com/operadores-python/#logicos">lógicos</a> <code>and</code>, <code>or</code>, y <code>not</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="ow">and</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span>
+<span class="kc">True</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="ow">or</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">1</span>
+<span class="kc">True</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="ow">not</span> <span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">2</span>
+<span class="kc">False</span>
+</code></pre></div>
+
+<p>En el primer ejemplo, utilizas el operador <code>and</code> para combinar dos expresiones de comparación. Si ambas son verdaderas, obtienes <code>True</code>. En el segundo ejemplo, empleas el operador <code>or</code>. En este caso, si al menos una de las expresiones evaluadas es verdadera, entonces obtienes <code>True</code>. Finalmente, el operador <code>not</code> te permite negar el resultado de evaluar una expresión o condición.</p>
+<p>Finalmente, también es posible emplear valores y objetos individuales como condiciones. Esto es posible porque todos los objetos en Python tienen un valor de verdad inherente.</p>
+<p>Python emplea las siguientes reglas para determinar el valor de verdad de los objetos:</p>
+<blockquote>
+<p>Por defecto, un objeto se considera verdadero a menos que su clase defina un método <code>.__bool__()</code> que devuelva <code>False</code> o un método <code>.__len__()</code> que devuelva cero cuando se llama con el objeto. A continuación, se muestran la mayoría de los objetos incorporados considerados como falsos:</p>
+<ul>
+<li>Constantes definidas como falsas: <code>None</code> y <code>False</code></li>
+<li>Cero en cualquiera de los diferentes tipos numéricos: <code>0</code>, <code>0.0</code>, <code>0j</code>, <code>Decimal(0)</code>, <code>Fraction(0, 1)</code></li>
+<li>Cualquier colección o secuencia vacía: <code>''</code>, <code>()</code>, <code>[]</code>, <code>{}</code>, <code>set()</code>, <code>range(0)</code> (<a href="https://docs.python.org/es/3.13/library/stdtypes.html#truth-value-testing">Fuente</a>)</li>
+</ul>
+</blockquote>
+<h2 id="condicionales-simples-con-if">Condicionales simples con <code>if</code></h2>
+<p>El condicional <code>if</code> permite ejecutar un bloque de código solo si una condición es verdadera. Su sintaxis es la siguiente:</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">condition</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">code</span> <span class="n">block</span><span class="o">&gt;</span>
+</code></pre></div>
+
+<p>El bloque de código se ejecuta únicamente si la condición es verdadera. Considera el siguiente ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+<span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x es mayor que 5&quot;</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="n">x</span> <span class="n">es</span> <span class="n">mayor</span> <span class="n">que</span> <span class="mi">5</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+<span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x es igual a 5&quot;</span><span class="p">)</span>
+<span class="o">...</span>
+</code></pre></div>
+
+<p>La primera condición es verdadera, por lo tanto la función <code>print()</code> se ejecuta. Si la condición es falsa, el código dentro del bloque <code>if</code> no se ejecuta, tal y como sucede en el segundo ejemplo.</p>
+<p>Como ya sabes, todos los objetos en Python tienen un valor de verdad y por lo tanto los puedes emplear como condiciones en una sentencia condicional. Un ejemplo común es verificar si una lista contiene algún valor:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]:</span>
+<span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;la lista no está vacía&quot;</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="n">la</span> <span class="n">lista</span> <span class="n">no</span> <span class="n">está</span> <span class="n">vacía</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="p">[]:</span>
+<span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;la lista no está vacía&quot;</span><span class="p">)</span>
+<span class="o">...</span>
+</code></pre></div>
+
+<p>En el primer ejemplo, la lista contiene valores y por lo tanto su valor de verdad es <code>True</code>. En este caso, el bloque de código se ejecuta. En el segundo ejemplo, la lista está vacía y su valor de verdad es <code>False</code>. Por esta razón, el bloque de código no se ejecuta.</p>
+<h2 id="condicionales-con-clausula-else">Condicionales con cláusula <code>else</code></h2>
+<p>La cláusula <code>else</code> te permite manejar el caso en que la condición del <code>if</code> es falsa. La sintaxis es la siguiente:</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">condition</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="k">if</span> <span class="n">block</span><span class="o">&gt;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="k">else</span> <span class="n">block</span><span class="o">&gt;</span>
+</code></pre></div>
+
+<p>El bloque bajo la cláusula <code>else</code> se ejecuta si la condición es falsa:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+<span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x es mayor que 5&quot;</span><span class="p">)</span>
+<span class="o">...</span> <span class="k">else</span><span class="p">:</span>
+<span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x no es mayor que 5&quot;</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="n">x</span> <span class="n">no</span> <span class="n">es</span> <span class="n">mayor</span> <span class="n">que</span> <span class="mi">5</span>
+</code></pre></div>
+
+<p>El bloque <code>else</code> es opcional y solo se ejecuta si la condición en el <code>if</code> no se cumple.</p>
+<h2 id="condicionales-multiples-con-elif">Condicionales múltiples con <code>elif</code></h2>
+<p>Cuando necesitas evaluar más de una condición, puedes usar la cláusula <code>elif</code> (abreviatura de <code>else if</code>). Esta permite verificar varias condiciones una detrás de otra. La sintaxis es como sigue:</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">condition_1</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">block</span> <span class="mi">1</span><span class="o">&gt;</span>
+<span class="k">elif</span> <span class="n">condition_2</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">block</span> <span class="mi">2</span><span class="o">&gt;</span>
+<span class="k">elif</span> <span class="n">condition_3</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">block</span> <span class="mi">3</span><span class="o">&gt;</span>
+<span class="o">...</span>
+<span class="k">elif</span> <span class="n">condition_N</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">block</span> <span class="n">N</span><span class="o">&gt;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="k">else</span> <span class="n">block</span><span class="o">&gt;</span>
+</code></pre></div>
+
+<p>Puedes tener cualquier número de cláusulas <code>elif</code>, pero solo un <code>if</code> que es requerido y un <code>else</code> que es opcional. Python evalúa las condiciones en orden. Una vez que encuentra una condición verdadera, el bloque correspondiente se ejecuta y los bloques restantes se ignoran. Si ninguna condición resulta verdadera, el bloque <code>else</code> (si existe) se ejecuta.</p>
+<p>Considera el ejemplo a continuación:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">15</span><span class="p">:</span>
+<span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x es mayor que 15&quot;</span><span class="p">)</span>
+<span class="o">...</span> <span class="k">elif</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+<span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x es mayor que 5 pero no mayor que 15&quot;</span><span class="p">)</span>
+<span class="o">...</span> <span class="k">else</span><span class="p">:</span>
+<span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x es 5 o menos&quot;</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="n">x</span> <span class="n">es</span> <span class="n">mayor</span> <span class="n">que</span> <span class="mi">5</span> <span class="n">pero</span> <span class="n">no</span> <span class="n">mayor</span> <span class="n">que</span> <span class="mi">15</span>
+</code></pre></div>
+
+<p>En este ejemplo, Python comienza evaluando la condición <code>x &gt; 15</code> la cual resulta falsa. Luego evalúa la siguiente condición <code>x &gt; 5</code> en la cláusula <code>elif</code>. Como esta condición es verdadera, el bloque se ejecuta y la cláusula <code>else</code> se ignora.</p>
+<h2 id="conclusiones">Conclusiones</h2>
+<p>Has aprendido a escribir sentencias <strong>condicionales</strong> en Python empleando las <a href="https://pythonscouts.com/python-palabras-clave/">palabras clave</a> <code>if</code>, <code>else</code>, y <code>elif</code>. Las sentencias condicionales te permiten controlar el flujo de ejecución de un programa en función del cumplimiento de ciertas condiciones.</p>
+<p>Comprender y utilizar correctamente las condicionales es fundamental para cualquier desarrollador de Python, pues ellas te permiten tomar decisiones en tiempo de ejecución. Esto es esencial para desarrollar aplicaciones que respondan adecuadamente a diferentes escenarios.</p>
+<p>Ahora que sabes lo básico de las condicionales en Python, puedes aplicarlas para crear programas más complejos, y desarrollar aplicaciones que requieran lógica de decisión.</p>
+              </div>
+            </div>
+        </article>
+
+
+      <!-- Disqus -->
+      <div id="disqus_thread" class="py-5"></div>
+      <script type="text/javascript">
+          var disqus_shortname = 'pythonscouts';
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+      </script>
+
+    </main>
+
+    <!-- Page footer -->
+    <footer class="footer mt-auto bg-gray text-center py-3 border-top border-1">
+        <div class="container">
+        <span class="lead">&copy; 2023 Leodanis Pozo Ramos</span>
+        </div>
+        <p class="pt-3">Imágenes cortesía de <a href="https://picsum.photos/" target="_blank">Picsum</a></p>
+    </footer>
+
+    <!-- JS Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Stroke Scripts -->
+    <script src="https://pythonscouts.com/theme/js/stork.js"></script>
+    <script>
+        stork.initialize("https://pythonscouts.com/theme/js/stork.wasm")
+        stork.downloadIndex("sitesearch", "https://pythonscouts.com/search-index.st")
+        stork.attach("sitesearch")
+    </script>
+
+</body>
+</html>

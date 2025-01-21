@@ -8,6 +8,11 @@ url = "/acerca/"
 title = "Acerca"
 
 [[input.files]]
+path = "condicionales-python/index.html"
+url = "/condicionales-python/"
+title = "Python a través de ejemplos: Sentencias condicionales"
+
+[[input.files]]
 path = "instalar-python-linux-debian-ubuntu/index.html"
 url = "/instalar-python-linux-debian-ubuntu/"
 title = "Cómo instalar Python en tu sistema operativo Debian o Ubuntu Linux?"

@@ -1,5 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts - Series</title><link href="https://pythonscouts.com/" rel="alternate"></link><link href="https://pythonscouts.com/feeds/series.atom.xml" rel="self"></link><id>https://pythonscouts.com/</id><updated>2024-12-12T06:00:00+01:00</updated><subtitle>Una web en Español para aprender a programar con Python.</subtitle><entry><title>Patrones de diseño en Python: Modelo-Vista-Controlador (MVC)</title><link href="https://pythonscouts.com/patron-mvc-python/" rel="alternate"></link><published>2024-12-12T06:00:00+01:00</published><updated>2024-12-12T06:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2024-12-12:/patron-mvc-python/</id><summary type="html">&lt;p&gt;El patrón Modelo-Vista-Controlador (MVC) es usado en la industria del software para definir la arquitectura general de una aplicación.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Este patrón permite separar la lógica específica de cada uno de los componentes de la aplicación. El &lt;strong&gt;modelo&lt;/strong&gt; maneja la lógica de negocio, la &lt;strong&gt;vista&lt;/strong&gt; es el componente visual y el &lt;strong&gt;controlador&lt;/strong&gt; se ocupa de conectar y controlar el funcionamiento de los dos anteriores.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts - Series</title><link href="https://pythonscouts.com/" rel="alternate"></link><link href="https://pythonscouts.com/feeds/series.atom.xml" rel="self"></link><id>https://pythonscouts.com/</id><updated>2025-01-21T18:40:00+01:00</updated><subtitle>Una web en Español para aprender a programar con Python.</subtitle><entry><title>Python a través de ejemplos: Sentencias condicionales</title><link href="https://pythonscouts.com/condicionales-python/" rel="alternate"></link><published>2025-01-21T18:40:00+01:00</published><updated>2025-01-21T18:40:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-01-21:/condicionales-python/</id><summary type="html">&lt;p&gt;En Python, una condicional es una sentencia compuesta que permite ejecutar bloques de código en función del cumplimiento de determinadas condiciones.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Python te permite crear varios tipos de sentencias condicionales. En este tutorial, aprenderás lo básico sobre cómo funcionan y cómo crear condicionales en Python.&lt;/p&gt;
+&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#condiciones"&gt;Condiciones&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#condicionales-simples-con-if"&gt;Condicionales simples con if&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#condicionales-con-clausula-else"&gt;Condicionales con cláusula else&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#condicionales-multiples-con-elif"&gt;Condicionales múltiples con elif&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#conclusiones"&gt;Conclusiones&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="condiciones"&gt;Condiciones&lt;/h2&gt;
+&lt;p&gt;Una &lt;strong&gt;condición&lt;/strong&gt; es una expresión que evalúa si algo es verdadero (&lt;code&gt;True&lt;/code&gt;) o falso (&lt;code&gt;False&lt;/code&gt;). Las condiciones se emplean para controlar el flujo de un programa, permitiendo ejecutar diferentes bloques de código según el resultado obtenido al evaluarlas.&lt;/p&gt;
+&lt;p&gt;En Python, puedes crear varios tipos de condiciones. Por ejemplo, las siguientes condiciones comparan valores numéricos:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="kc"&gt;True&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="kc"&gt;False&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="kc"&gt;True&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="kc"&gt;False&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Las condiciones más comunes usan operadores de &lt;a href="https://pythonscouts.com/operadores-python/#comparacion"&gt;comparación&lt;/a&gt; como &lt;code&gt;==&lt;/code&gt;, &lt;code&gt;!=&lt;/code&gt;, &lt;code&gt;&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;&lt;/code&gt;, &lt;code&gt;&amp;gt;=&lt;/code&gt;, y &lt;code&gt;&amp;lt;=&lt;/code&gt;. En estos casos, siempre obtendrás un valor booleano (&lt;code&gt;True&lt;/code&gt; o &lt;code&gt;False&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;Las expresiones de &lt;a href="https://pythonscouts.com/operadores-python/#pertenencia"&gt;pertenencia&lt;/a&gt; también son empleadas como condiciones:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="kc"&gt;True&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="kc"&gt;False&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;banana&amp;quot;&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;manzana&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;banana&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;cereza&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="kc"&gt;True&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;naranja&amp;quot;&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;manzana&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;banana&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;cereza&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="kc"&gt;False&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Estas expresiones permiten determinar si un valor u objeto específico forma parte de una serie de valores o colección.&lt;/p&gt;
+&lt;p&gt;También puedes crear condiciones empleando los operadores &lt;a href="https://pythonscouts.com/operadores-python/#logicos"&gt;lógicos&lt;/a&gt; &lt;code&gt;and&lt;/code&gt;, &lt;code&gt;or&lt;/code&gt;, y &lt;code&gt;not&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="kc"&gt;True&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="kc"&gt;True&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="kc"&gt;False&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En el primer ejemplo, utilizas el operador &lt;code&gt;and&lt;/code&gt; para combinar dos expresiones de comparación. Si ambas son verdaderas, obtienes &lt;code&gt;True&lt;/code&gt;. En el segundo ejemplo, empleas el operador &lt;code&gt;or&lt;/code&gt;. En este caso, si al menos una de las expresiones evaluadas es verdadera, entonces obtienes &lt;code&gt;True&lt;/code&gt;. Finalmente, el operador &lt;code&gt;not&lt;/code&gt; te permite negar el resultado de evaluar una expresión o condición.&lt;/p&gt;
+&lt;p&gt;Finalmente, también es posible emplear valores y objetos individuales como condiciones. Esto es posible porque todos los objetos en Python tienen un valor de verdad inherente.&lt;/p&gt;
+&lt;p&gt;Python emplea las siguientes reglas para determinar el valor de verdad de los objetos:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Por defecto, un objeto se considera verdadero a menos que su clase defina un método &lt;code&gt;.__bool__()&lt;/code&gt; que devuelva &lt;code&gt;False&lt;/code&gt; o un método &lt;code&gt;.__len__()&lt;/code&gt; que devuelva cero cuando se llama con el objeto. A continuación, se muestran la mayoría de los objetos incorporados considerados como falsos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Constantes definidas como falsas: &lt;code&gt;None&lt;/code&gt; y &lt;code&gt;False&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Cero en cualquiera de los diferentes tipos numéricos: &lt;code&gt;0&lt;/code&gt;, &lt;code&gt;0.0&lt;/code&gt;, &lt;code&gt;0j&lt;/code&gt;, &lt;code&gt;Decimal(0)&lt;/code&gt;, &lt;code&gt;Fraction(0, 1)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Cualquier colección o secuencia vacía: &lt;code&gt;''&lt;/code&gt;, &lt;code&gt;()&lt;/code&gt;, &lt;code&gt;[]&lt;/code&gt;, &lt;code&gt;{}&lt;/code&gt;, &lt;code&gt;set()&lt;/code&gt;, &lt;code&gt;range(0)&lt;/code&gt; (&lt;a href="https://docs.python.org/es/3.13/library/stdtypes.html#truth-value-testing"&gt;Fuente&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="condicionales-simples-con-if"&gt;Condicionales simples con &lt;code&gt;if&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;El condicional &lt;code&gt;if&lt;/code&gt; permite ejecutar un bloque de código solo si una condición es verdadera. Su sintaxis es la siguiente:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;condition&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;code&lt;/span&gt; &lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;El bloque de código se ejecuta únicamente si la condición es verdadera. Considera el siguiente ejemplo:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;x es mayor que 5&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="n"&gt;es&lt;/span&gt; &lt;span class="n"&gt;mayor&lt;/span&gt; &lt;span class="n"&gt;que&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;x es igual a 5&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;La primera condición es verdadera, por lo tanto la función &lt;code&gt;print()&lt;/code&gt; se ejecuta. Si la condición es falsa, el código dentro del bloque &lt;code&gt;if&lt;/code&gt; no se ejecuta, tal y como sucede en el segundo ejemplo.&lt;/p&gt;
+&lt;p&gt;Como ya sabes, todos los objetos en Python tienen un valor de verdad y por lo tanto los puedes emplear como condiciones en una sentencia condicional. Un ejemplo común es verificar si una lista contiene algún valor:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;la lista no está vacía&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;la&lt;/span&gt; &lt;span class="n"&gt;lista&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;está&lt;/span&gt; &lt;span class="n"&gt;vacía&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;[]:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;la lista no está vacía&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En el primer ejemplo, la lista contiene valores y por lo tanto su valor de verdad es &lt;code&gt;True&lt;/code&gt;. En este caso, el bloque de código se ejecuta. En el segundo ejemplo, la lista está vacía y su valor de verdad es &lt;code&gt;False&lt;/code&gt;. Por esta razón, el bloque de código no se ejecuta.&lt;/p&gt;
+&lt;h2 id="condicionales-con-clausula-else"&gt;Condicionales con cláusula &lt;code&gt;else&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;La cláusula &lt;code&gt;else&lt;/code&gt; te permite manejar el caso en que la condición del &lt;code&gt;if&lt;/code&gt; es falsa. La sintaxis es la siguiente:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;condition&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;El bloque bajo la cláusula &lt;code&gt;else&lt;/code&gt; se ejecuta si la condición es falsa:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;x es mayor que 5&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;x no es mayor que 5&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;es&lt;/span&gt; &lt;span class="n"&gt;mayor&lt;/span&gt; &lt;span class="n"&gt;que&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;El bloque &lt;code&gt;else&lt;/code&gt; es opcional y solo se ejecuta si la condición en el &lt;code&gt;if&lt;/code&gt; no se cumple.&lt;/p&gt;
+&lt;h2 id="condicionales-multiples-con-elif"&gt;Condicionales múltiples con &lt;code&gt;elif&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Cuando necesitas evaluar más de una condición, puedes usar la cláusula &lt;code&gt;elif&lt;/code&gt; (abreviatura de &lt;code&gt;else if&lt;/code&gt;). Esta permite verificar varias condiciones una detrás de otra. La sintaxis es como sigue:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;condition_1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;condition_2&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;condition_3&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;condition_N&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt; &lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Puedes tener cualquier número de cláusulas &lt;code&gt;elif&lt;/code&gt;, pero solo un &lt;code&gt;if&lt;/code&gt; que es requerido y un &lt;code&gt;else&lt;/code&gt; que es opcional. Python evalúa las condiciones en orden. Una vez que encuentra una condición verdadera, el bloque correspondiente se ejecuta y los bloques restantes se ignoran. Si ninguna condición resulta verdadera, el bloque &lt;code&gt;else&lt;/code&gt; (si existe) se ejecuta.&lt;/p&gt;
+&lt;p&gt;Considera el ejemplo a continuación:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;x es mayor que 15&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt; &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;x es mayor que 5 pero no mayor que 15&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;x es 5 o menos&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="n"&gt;es&lt;/span&gt; &lt;span class="n"&gt;mayor&lt;/span&gt; &lt;span class="n"&gt;que&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="n"&gt;pero&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;mayor&lt;/span&gt; &lt;span class="n"&gt;que&lt;/span&gt; &lt;span class="mi"&gt;15&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este ejemplo, Python comienza evaluando la condición &lt;code&gt;x &amp;gt; 15&lt;/code&gt; la cual resulta falsa. Luego evalúa la siguiente condición &lt;code&gt;x &amp;gt; 5&lt;/code&gt; en la cláusula &lt;code&gt;elif&lt;/code&gt;. Como esta condición es verdadera, el bloque se ejecuta y la cláusula &lt;code&gt;else&lt;/code&gt; se ignora.&lt;/p&gt;
+&lt;h2 id="conclusiones"&gt;Conclusiones&lt;/h2&gt;
+&lt;p&gt;Has aprendido a escribir sentencias &lt;strong&gt;condicionales&lt;/strong&gt; en Python empleando las &lt;a href="https://pythonscouts.com/python-palabras-clave/"&gt;palabras clave&lt;/a&gt; &lt;code&gt;if&lt;/code&gt;, &lt;code&gt;else&lt;/code&gt;, y &lt;code&gt;elif&lt;/code&gt;. Las sentencias condicionales te permiten controlar el flujo de ejecución de un programa en función del cumplimiento de ciertas condiciones.&lt;/p&gt;
+&lt;p&gt;Comprender y utilizar correctamente las condicionales es fundamental para cualquier desarrollador de Python, pues ellas te permiten tomar decisiones en tiempo de ejecución. Esto es esencial para desarrollar aplicaciones que respondan adecuadamente a diferentes escenarios.&lt;/p&gt;
+&lt;p&gt;Ahora que sabes lo básico de las condicionales en Python, puedes aplicarlas para crear programas más complejos, y desarrollar aplicaciones que requieran lógica de decisión.&lt;/p&gt;</content><category term="Series"></category><category term="python"></category></entry><entry><title>Patrones de diseño en Python: Modelo-Vista-Controlador (MVC)</title><link href="https://pythonscouts.com/patron-mvc-python/" rel="alternate"></link><published>2024-12-12T06:00:00+01:00</published><updated>2024-12-12T06:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2024-12-12:/patron-mvc-python/</id><summary type="html">&lt;p&gt;El patrón Modelo-Vista-Controlador (MVC) es usado en la industria del software para definir la arquitectura general de una aplicación.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Este patrón permite separar la lógica específica de cada uno de los componentes de la aplicación. El &lt;strong&gt;modelo&lt;/strong&gt; maneja la lógica de negocio, la &lt;strong&gt;vista&lt;/strong&gt; es el componente visual y el &lt;strong&gt;controlador&lt;/strong&gt; se ocupa de conectar y controlar el funcionamiento de los dos anteriores.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;En este tutorial aprenderá:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Qué es &lt;strong&gt;MVC&lt;/strong&gt; y cómo funciona&lt;/li&gt;
