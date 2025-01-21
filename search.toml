@@ -8,6 +8,11 @@ url = "/acerca/"
 title = "Acerca"
 
 [[input.files]]
+path = "iniciando-con-pyside6-python/index.html"
+url = "/iniciando-con-pyside6-python/"
+title = "Iniciando con PySide6 para desarrollo GUI"
+
+[[input.files]]
 path = "condicionales-python/index.html"
 url = "/condicionales-python/"
 title = "Python a través de ejemplos: Sentencias condicionales"

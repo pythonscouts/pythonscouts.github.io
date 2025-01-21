@@ -1,5 +1,673 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts - Tutoriales</title><link href="https://pythonscouts.com/" rel="alternate"></link><link href="https://pythonscouts.com/feeds/tutoriales.atom.xml" rel="self"></link><id>https://pythonscouts.com/</id><updated>2025-01-06T15:15:00+01:00</updated><subtitle>Una web en Español para aprender a programar con Python.</subtitle><entry><title>Iniciando con Tkinter para desarrollo GUI</title><link href="https://pythonscouts.com/iniciando-con-tkinter-python/" rel="alternate"></link><published>2025-01-06T15:15:00+01:00</published><updated>2025-01-06T15:15:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-01-06:/iniciando-con-tkinter-python/</id><summary type="html">&lt;p&gt;En Python, Tkinter es una biblioteca que proporciona un kit de herramientas para el desarrollo de aplicaciones de interfaz gráfica de usuario (GUI).&lt;/p&gt;</summary><content type="html">&lt;p&gt;Tkinter es una de las bibliotecas más empleadas en el desarrollo rápido de aplicaciones GUI puesto que viene incluida con la instalación oficial de Python como parte de la biblioteca estándar.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts - Tutoriales</title><link href="https://pythonscouts.com/" rel="alternate"></link><link href="https://pythonscouts.com/feeds/tutoriales.atom.xml" rel="self"></link><id>https://pythonscouts.com/</id><updated>2025-01-21T21:40:00+01:00</updated><subtitle>Una web en Español para aprender a programar con Python.</subtitle><entry><title>Iniciando con PySide6 para desarrollo GUI</title><link href="https://pythonscouts.com/iniciando-con-pyside6-python/" rel="alternate"></link><published>2025-01-21T21:40:00+01:00</published><updated>2025-01-21T21:40:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-01-21:/iniciando-con-pyside6-python/</id><summary type="html">&lt;p&gt;En Python, PySide6 es una biblioteca que proporciona el enlace oficial de Python con Qt, que es un framework de desarrollo de aplicaciones de interfaz gráfica de usuario (GUI).&lt;/p&gt;</summary><content type="html">&lt;p&gt;Para desarrollar este tipo de aplicaciones en Python, puedes emplear una amplia variedad de bibliotecas y frameworks, incluyendo &lt;a href="https://docs.python.org/3/library/tkinter.html"&gt;Tkinter&lt;/a&gt;, &lt;a href="https://realpython.com/python-gui-with-wxpython/"&gt;wxPython&lt;/a&gt;, &lt;a href="https://www.riverbankcomputing.com/software/pyqt/intro"&gt;PyQt&lt;/a&gt;, entre otras. Sin embargo, &lt;a href="https://wiki.qt.io/Qt_for_Python"&gt;PySide6&lt;/a&gt; es una de las bibliotecas más populares y sólidas disponibles.&lt;/p&gt;
+&lt;p&gt;En este tutorial, aprenderás los conceptos básicos para construir aplicaciones GUI usando Python y PySide6.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;En este tutorial, aprenderás cómo:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Instalar&lt;/strong&gt; PySide6 y configurarlo en tu computadora&lt;/li&gt;
+&lt;li&gt;Crear aplicaciones con &lt;strong&gt;interfaces gráficas de usuario&lt;/strong&gt; basadas en PySide6&lt;/li&gt;
+&lt;li&gt;Organizar una GUI usando &lt;strong&gt;gestores de disposición&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Crear &lt;strong&gt;ventanas principales&lt;/strong&gt; y &lt;strong&gt;diálogos&lt;/strong&gt; en tus aplicaciones PySide6&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Para obtener el máximo de este tutorial, debes conocer lo básico de programación con Python, especialmente temas relacionados con la programación orientada a objetos.&lt;/p&gt;
+&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#conociendo-pyside6"&gt;Conociendo PySide6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#instalando-pyside6"&gt;Instalando PySide6&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#en-windows"&gt;En Windows&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#en-linux-y-macos"&gt;En Linux y macOS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#creando-una-aplicacion-pyside6"&gt;Creando una aplicación PySide6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#explorando-widgets-comunes-de-pyside6"&gt;Explorando widgets comunes de PySide6&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#botones"&gt;Botones&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#campos-de-entrada-de-texto"&gt;Campos de entrada de texto&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#listas-desplegables"&gt;Listas desplegables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#botones-radiales"&gt;Botones radiales&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#usando-gestores-de-disposicion"&gt;Usando gestores de disposición&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#disposicion-horizontal"&gt;Disposición horizontal&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#disposicion-vertical"&gt;Disposición vertical&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#disposicion-en-cuadricula"&gt;Disposición en cuadrícula&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#disposicion-de-formulario"&gt;Disposición de formulario&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#creando-ventanas-y-dialogos"&gt;Creando ventanas y diálogos&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#ventanas-principales"&gt;Ventanas principales&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#dialogos-y-formularios"&gt;Diálogos y formularios&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#mensajes-y-dialogos-estandar"&gt;Mensajes y diálogos estándar&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#conclusion"&gt;Conclusión&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="conociendo-pyside6"&gt;Conociendo PySide6&lt;/h2&gt;
+&lt;p&gt;PySide6 es una biblioteca que proporciona el enlace oficial entre Python y &lt;a href="https://wiki.qt.io/About_Qt"&gt;Qt&lt;/a&gt;, el cual es un framework de desarrollo en &lt;a href="https://realpython.com/python-vs-cpp/"&gt;C++&lt;/a&gt; para crear interfaces gráficas de usuario (GUIs). Proporciona &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets.html"&gt;clases&lt;/a&gt; y herramientas para la creación de GUIs, manejo de &lt;a href="https://realpython.com/python-xml-parser/"&gt;XML&lt;/a&gt;, comunicación de red, expresiones regulares, hilos, bases de datos SQL, navegación web y otras tecnologías disponibles en Qt.&lt;/p&gt;
+&lt;p&gt;PySide6, también conocida como &lt;a href="https://doc.qt.io/qtforpython-6/"&gt;Qt for Python&lt;/a&gt;, es compatible con Windows, Linux, and macOS, por lo que puedes emplearla para desarrollar aplicaciones multiplataforma que tengan una apariencia nativa en cada plataforma.&lt;/p&gt;
+&lt;p&gt;Puedes usar PySide6 con una licencia comercial y en proyectos de código abierto con una licencia compatible con la licencia de Qt que estés empleando ya sea &lt;a href="https://tldrlegal.com/license/gnu-lesser-general-public-license-v3-(lgpl-3)"&gt;LGPLv3&lt;/a&gt; o &lt;a href="https://tldrlegal.com/license/gnu-general-public-license-v2"&gt;GPLv2&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="instalando-pyside6"&gt;Instalando PySide6&lt;/h2&gt;
+&lt;p&gt;Para instalar PySide6 en tu computadora, la opción recomendada es instalar desde el índice de paquetes de Python, &lt;a href="https://realpython.com/pypi-publish-python-package/"&gt;PyPI&lt;/a&gt;, usando el comando &lt;code&gt;pip&lt;/code&gt;. Para esto, puedes crear un &lt;a href="https://docs.python.org/es/3.13/glossary.html#term-virtual-environment"&gt;entorno virtual de Python&lt;/a&gt; y luego instalar el paquete &lt;code&gt;pyside6&lt;/code&gt;, ejecuta lo siguiente en tu línea de comandos, dependiendo de tu sistema operativo.&lt;/p&gt;
+&lt;h3 id="en-windows"&gt;En Windows&lt;/h3&gt;
+&lt;p&gt;En Windows, puedes instalar PySide6 ejecutando los comandos:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;PS&amp;gt; python -m venv venv
+PS&amp;gt; venv\Scripts\activate.bat
+(venv) PS&amp;gt; python -m pip install pyside6
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Con estos comandos, primero creas y activas un entorno virtual Python y luego instalas PySide6 desde PyPI.&lt;/p&gt;
+&lt;h3 id="en-linux-y-macos"&gt;En Linux y macOS&lt;/h3&gt;
+&lt;p&gt;En Linux y macOS el proceso es el mismo y puedes realizarlo con los siguientes comandos:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;venv&lt;span class="w"&gt; &lt;/span&gt;venv
+&lt;span class="gp"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;source&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;venv/bin/activate
+&lt;span class="gp gp-VirtualEnv"&gt;(venv)&lt;/span&gt; &lt;span class="gp"&gt;$ &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;pyside6
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Nuevamente, primero creas un entorno virtual usando el módulo &lt;code&gt;venv&lt;/code&gt; de la biblioteca estándar de Python. Luego lo activas, y finalmente instalas PySide6.&lt;/p&gt;
+&lt;h2 id="creando-una-aplicacion-pyside6"&gt;Creando una aplicación PySide6&lt;/h2&gt;
+&lt;p&gt;Con PySide6 instalado, estás listo para crear tu primera aplicación GUI. Para comenzar, crearás una aplicación de &lt;code&gt;Hola, Mundo!&lt;/code&gt;. Aquí están los pasos a seguir:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Importa &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QApplication.html"&gt;&lt;code&gt;QApplication&lt;/code&gt;&lt;/a&gt; y todos los widgets necesarios desde &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/index.html#module-PySide6.QtWidgets"&gt;&lt;code&gt;PySide6.QtWidgets&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Crea una instancia de &lt;code&gt;QApplication&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Define la GUI de la aplicación.&lt;/li&gt;
+&lt;li&gt;Muestra la GUI de la aplicación.&lt;/li&gt;
+&lt;li&gt;Ejecuta el &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtCore/QCoreApplication.html#PySide6.QtCore.PySide6.QtCore.QCoreApplication.exec"&gt;bucle de eventos&lt;/a&gt; de la aplicación.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Crea un nuevo archivo Python llamado &lt;code&gt;app.py&lt;/code&gt; en tu directorio de trabajo actual:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En esta línea de código, importas &lt;code&gt;QApplication&lt;/code&gt;, &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QLabel.html"&gt;&lt;code&gt;QLabel&lt;/code&gt;&lt;/a&gt;, y &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QWidget.html"&gt;&lt;code&gt;QWidget&lt;/code&gt;&lt;/a&gt; desde &lt;code&gt;QtWidgets&lt;/code&gt;. Con esto, has cumplido con el primer paso.&lt;/p&gt;
+&lt;p&gt;Para completar el segundo paso, necesitas crear una instancia de &lt;code&gt;QApplication&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;
+
+&lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;([])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En esta línea de código, creas la instancia de &lt;code&gt;QApplication&lt;/code&gt;. Es necesario crear esta instancia antes de crear cualquier objeto GUI en PySide6.&lt;/p&gt;
+&lt;p&gt;El tercer paso consiste en crear la GUI o ventana principal de la aplicación. Para este ejemplo, la GUI se basará en la clase &lt;code&gt;QWidget&lt;/code&gt;, que es la clase base de todos los objetos de interfaz de usuario en PySide6.&lt;/p&gt;
+&lt;p&gt;Así es como puedes crear la GUI de la app:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;
+
+&lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;([])&lt;/span&gt;
+
+&lt;span class="n"&gt;window&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setWindowTitle&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;PySide6 Demo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setGeometry&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;280&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;80&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;hello&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;lt;h1&amp;gt;Hola, Mundo!&amp;lt;/h1&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;parent&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;hello&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;move&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;60&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este código, &lt;code&gt;window&lt;/code&gt; es una instancia de &lt;code&gt;QWidget&lt;/code&gt;, la cual proporciona todas las características que necesitarás para crear la ventana de la aplicación.&lt;/p&gt;
+&lt;p&gt;Como su nombre sugiere, el método &lt;code&gt;.setWindowTitle()&lt;/code&gt; te permite establecer el título de la ventana en tu aplicación. En este ejemplo, la ventana de la app mostrará &lt;code&gt;PySide6 Demo&lt;/code&gt; en su barra de título.&lt;/p&gt;
+&lt;p&gt;Puedes usar &lt;code&gt;.setGeometry()&lt;/code&gt; para definir el tamaño de la ventana y la posición en la pantalla. Los dos primeros argumentos son las coordenadas de pantalla &lt;code&gt;x&lt;/code&gt; y &lt;code&gt;y&lt;/code&gt; donde se colocará la ventana. El tercer y cuarto argumentos son el ancho y alto de la ventana.&lt;/p&gt;
+&lt;p&gt;Cada aplicación GUI necesita &lt;strong&gt;widgets&lt;/strong&gt;. Estos son los componentes gráficos que conforman la GUI de la app. En este ejemplo, usas un widget &lt;code&gt;QLabel&lt;/code&gt; llamado&lt;code&gt;hello&lt;/code&gt; que te permitirá mostrar el mensaje &lt;code&gt;Hola, Mundo!&lt;/code&gt; en la ventana de tu aplicación.&lt;/p&gt;
+&lt;p&gt;Los objetos &lt;code&gt;QLabel&lt;/code&gt; pueden mostrar texto formateado en HTML, por lo que puedes usar el elemento &lt;a href="https://es.wikipedia.org/wiki/HTML"&gt;HTML&lt;/a&gt; &lt;code&gt;"&amp;lt;h1&amp;gt;Hola, Mundo!&amp;lt;/h1&amp;gt;"&lt;/code&gt; para proporcionar el texto deseado como un encabezado &lt;code&gt;h1&lt;/code&gt;. Finalmente, usas el método &lt;code&gt;.move()&lt;/code&gt; para colocar el mensaje en las coordenadas &lt;code&gt;(60, 15)&lt;/code&gt; en la ventana de la aplicación.&lt;/p&gt;
+&lt;p&gt;Has finalizado el tercer paso, así que puedes continuar con los dos últimos pasos y preparar tu aplicación GUI PySide6 para ejecutarse:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;
+
+&lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;([])&lt;/span&gt;
+
+&lt;span class="n"&gt;window&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setWindowTitle&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;PySide6 Demo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setGeometry&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;280&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;80&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;hello&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;lt;h1&amp;gt;Hola, Mundo!&amp;lt;/h1&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;parent&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;hello&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;move&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;60&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En las dos últimas líneas, llamas el método &lt;code&gt;.show()&lt;/code&gt; en &lt;code&gt;window&lt;/code&gt; para mostrar la ventana en la pantalla. Luego, inicias el bucle de eventos de la aplicación ejecutando &lt;code&gt;.exec()&lt;/code&gt; y ya está.&lt;/p&gt;
+&lt;p&gt;Puedes ejecutar tu primera aplicación PySide6 con el siguiente comando:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;app.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Al ejecutar este comando, verás una ventana que lucirá como la siguiente:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/articles/iniciando-con-pyside6-python/pyside6-demo-app.png" class="mx-auto d-block mt-2" alt="Aplicación 'Hola, Mundo!' con PySide6 y Python"&gt;&lt;/p&gt;
+&lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Aplicación "Hola, Mundo!" con PySide6 y Python&lt;/em&gt;&lt;/div&gt;
+
+&lt;p&gt;Tu aplicación muestra una ventana basada en &lt;code&gt;QWidget&lt;/code&gt;. La ventana muestra el mensaje &lt;code&gt;Hola, Mundo!&lt;/code&gt; usando un widget &lt;code&gt;QLabel&lt;/code&gt;. ¡Y con eso, has escrito tu primera aplicación de escritorio GUI usando PySide6 y Python!&lt;/p&gt;
+&lt;h2 id="explorando-widgets-comunes-de-pyside6"&gt;Explorando widgets comunes de PySide6&lt;/h2&gt;
+&lt;p&gt;Los &lt;strong&gt;widgets&lt;/strong&gt; son componentes gráficos rectangulares que colocas en las ventanas de tu aplicación para construir la GUI. Los widgets tienen atributos y métodos que te permiten ajustar su apariencia y comportamiento.&lt;/p&gt;
+&lt;p&gt;Los widgets también detectan clics del mouse, pulsaciones de teclas y otros eventos del usuario, el sistema de ventanas y otras fuentes. Cada vez que un widget captura un evento, emite una señal para anunciar su cambio de estado.&lt;/p&gt;
+&lt;p&gt;PySide6 tiene una colección variada de widgets, cada uno de los cuales tiene un propósito diferente. Algunos de los widgets más comunes incluyen botones, etiquetas o labels, campos de entrada de texto, listas desplegables, y botones radiales.&lt;/p&gt;
+&lt;h3 id="botones"&gt;Botones&lt;/h3&gt;
+&lt;p&gt;Puedes crear un botón con la clase &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QPushButton.html"&gt;&lt;code&gt;QPushButton&lt;/code&gt;&lt;/a&gt;, la cual proporciona un botón de comando clásico. Algunos botones típicos son &lt;em&gt;Ok&lt;/em&gt;, &lt;em&gt;Cancelar&lt;/em&gt;, &lt;em&gt;Aplicar&lt;/em&gt;, &lt;em&gt;Sí&lt;/em&gt;, &lt;em&gt;No&lt;/em&gt;, &lt;em&gt;Cerrar&lt;/em&gt;, similares.&lt;/p&gt;
+&lt;p&gt;Crea un archivo llamado &lt;code&gt;buttons.py&lt;/code&gt; y pon el siguiente código en él:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QPushButton&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QVBoxLayout&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QWidget&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;([])&lt;/span&gt;
+
+&lt;span class="n"&gt;window&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setWindowTitle&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Botones PySide6&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setGeometry&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;190&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;layout&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QVBoxLayout&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setLayout&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;layout&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Ok&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Cancelar&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Aplicar&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Sí&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;No&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Cerrar&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
+    &lt;span class="n"&gt;button&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QPushButton&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;parent&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;layout&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;addWidget&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;button&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este ejemplo, primero añades la clase &lt;code&gt;QPushButton&lt;/code&gt; a tus objetos importados. El bucle &lt;code&gt;for&lt;/code&gt; itera sobre una lista de nombres de botones comunes y crea un botón con cada uno de los nombres definidos. Así es como se verá tu aplicación al ejecutarla desde tu terminal:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/articles/iniciando-con-pyside6-python/pyside6-botones.png" class="mx-auto d-block mt-2" alt="Botones en PySide6"&gt;&lt;/p&gt;
+&lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Botones en PySide6&lt;/em&gt;&lt;/div&gt;
+
+&lt;p&gt;Botones como estos son quizás los widgets más utilizados en cualquier GUI. Cuando alguien hace clic en ellos, tu aplicación ordena a la computadora realizar acciones. Así es como puedes ejecutar cálculos cuando un usuario hace clic en un botón.&lt;/p&gt;
+&lt;aside&gt;
+En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; que representa un gestor de disposición que permite organizar los widgets con una orientación vertical. Más sobre gestores de disposición en un momento.
+&lt;/aside&gt;
+
+&lt;h3 id="campos-de-entrada-de-texto"&gt;Campos de entrada de texto&lt;/h3&gt;
+&lt;p&gt;Los &lt;strong&gt;campos de entrada de texto&lt;/strong&gt; son widgets comunes también. Estos widgets te permite ingresar una sola línea de texto y puedes crearlos con la clase &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QLineEdit.html"&gt;&lt;code&gt;QLineEdit&lt;/code&gt;&lt;/a&gt;. Los campos de entrada de texto son útiles cuando necesitas obtener información del usuario como texto simple.&lt;/p&gt;
+&lt;p&gt;Para un ejemplo, crea un archivo &lt;code&gt;line_edits.py&lt;/code&gt; y escribe el siguiente código en él:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QLineEdit&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QVBoxLayout&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QWidget&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;([])&lt;/span&gt;
+
+&lt;span class="n"&gt;window&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setWindowTitle&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Campos de texto PySide6&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setGeometry&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;250&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;layout&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QVBoxLayout&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setLayout&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;layout&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Nombre&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Usuario&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Contraseña&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
+    &lt;span class="n"&gt;edit&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QLineEdit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;parent&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;edit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setPlaceholderText&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;layout&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;addWidget&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;edit&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En el bucle de este ejemplo, creas tres campos de texto para permitir que el usuario introduzca su nombre, usuario y contraseña:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/articles/iniciando-con-pyside6-python/pyside6-campos-de-texto.png" class="mx-auto d-block mt-2" alt="Campos de texto en PySide6"&gt;&lt;/p&gt;
+&lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Campos de texto en PySide6&lt;/em&gt;&lt;/div&gt;
+
+&lt;p&gt;Campos de texto como estos proporcionan funcionalidades estándar como copiar, pegar, deshacer, rehacer, arrastrar, soltar, y similares. En la imagen, puedes notar que los campos muestran texto de marcador de posición para informar al usuario qué tipo de información debe introducir.&lt;/p&gt;
+&lt;h3 id="listas-desplegables"&gt;Listas desplegables&lt;/h3&gt;
+&lt;p&gt;Las &lt;strong&gt;listas desplegables&lt;/strong&gt; son otro tipo fundamental de widget en aplicaciones GUI. Puedes crearlas usando la clase &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QComboBox.html"&gt;&lt;code&gt;QComboBox&lt;/code&gt;&lt;/a&gt;. Una lista desplegable presenta al usuario una serie de opciones de una manera que ocupa un espacio mínimo en la pantalla.&lt;/p&gt;
+&lt;p&gt;A continuación, un ejemplo de cómo emplear una lista desplegable en PySide6:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QComboBox&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QVBoxLayout&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QWidget&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;([])&lt;/span&gt;
+
+&lt;span class="n"&gt;window&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setWindowTitle&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Lista desplegable PySide6&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setGeometry&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;250&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;layout&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QVBoxLayout&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setLayout&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;layout&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;combo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QComboBox&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;parent&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;combo&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;addItems&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;PySide6&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;PyQt&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Kivy&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Tkinter&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;wxPython&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;layout&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;addWidget&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;combo&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este ejemplo, creas &lt;code&gt;combo&lt;/code&gt; como una instancia de &lt;code&gt;QComboBox&lt;/code&gt;. Esta instancia contendrá una lista desplegable con una serie de nombres de bibliotecas Python para desarrollo de aplicaciones GUI. Cuando ejecutas esta aplicación desde tu línea de comandos, obtienes una ventana como la siguiente:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/articles/iniciando-con-pyside6-python/pyside6-lista-desplegable.png" class="mx-auto d-block mt-2" alt="Lista desplegable en PySide6"&gt;&lt;/p&gt;
+&lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Lista desplegable en PySide6&lt;/em&gt;&lt;/div&gt;
+
+&lt;p&gt;Al hacer clic sobre esta lista desplegable, los usuarios pueden seleccionar una de las opciones desplegadas. Las listas desplegables también pueden ser de solo lectura o editables y además de texto, también pueden contener &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtGui/QBitmap.html"&gt;pixmaps&lt;/a&gt; o ambos.&lt;/p&gt;
+&lt;h3 id="botones-radiales"&gt;Botones radiales&lt;/h3&gt;
+&lt;p&gt;El último widget que estudiarás es el &lt;strong&gt;botón radial&lt;/strong&gt;, que puedes crear con la clase &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QRadioButton.html"&gt;&lt;code&gt;QRadioButton&lt;/code&gt;&lt;/a&gt;. Se trata de un botón circular de opción que puedes seleccionar al hacer clic sobre él. Los botones radiales son útiles cuando necesitas que el usuario seleccione una entre varias opciones.&lt;/p&gt;
+&lt;p&gt;Todas las opciones en un grupo de botones radiales son visibles al mismo tiempo, pero el usuario solo puede seleccionar una de ellas. Es decir, la selección es excluyente. Considera el siguiente ejemplo:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QRadioButton&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QVBoxLayout&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QWidget&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;([])&lt;/span&gt;
+&lt;span class="n"&gt;window&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setWindowTitle&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Botones radiales PySide6&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setGeometry&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;230&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;80&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;layout&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QVBoxLayout&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setLayout&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;layout&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;layout&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;addWidget&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;¿Qué prefieres?&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+&lt;span class="n"&gt;foods&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Pizza&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Hamburguesa&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Pasta&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Pollo asado&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;food&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;foods&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;radio&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QRadioButton&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;food&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;layout&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;addWidget&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;radio&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este ejemplo, creas una aplicación que muestra un texto descriptivo, &lt;code&gt;"¿Qué prefieres?"&lt;/code&gt;, seguido de una serie de botones radiales, que representan opciones entre las que el usuario puede elegir. En este caso, las opciones son "Pizza", "Hamburguesa", "Pasta" y "Pollo asado". Para crear los botones, empleas un ciclo &lt;code&gt;for&lt;/code&gt; que itera sobre la lista de comidas.&lt;/p&gt;
+&lt;p&gt;Al hacer clic en uno de los botones, este se activa y los demás se desactivan automáticamente. Esto los hace ideales para preguntas de selección única, como preferencias o respuestas a encuestas:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/articles/iniciando-con-pyside6-python/pyside6-botones-radiales.png" class="mx-auto d-block mt-2" alt="Botones radiales en PySide6"&gt;&lt;/p&gt;
+&lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Botones radiales en PySide6&lt;/em&gt;&lt;/div&gt;
+
+&lt;p&gt;En este grupo de botones radiales, solo un botón puede estar seleccionado a la vez. Si seleccionas otro botón del grupo, entonces el botón previamente seleccionado se deseleccionará automáticamente.&lt;/p&gt;
+&lt;p&gt;PySide6 tiene una amplia colección de widgets. Actualmente hay más de cuarenta &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QWidget.html"&gt;widgets&lt;/a&gt; disponibles. Aquí, has estudiado solo una pequeña muestra. Sin embargo, esta es suficiente para mostrarte el poder y la flexibilidad de este framework GUI.&lt;/p&gt;
+&lt;p&gt;En la siguiente sección, aprenderás cómo organizar diferentes widgets para construir GUIs modernas y completamente funcionales para tus aplicaciones.&lt;/p&gt;
+&lt;h2 id="usando-gestores-de-disposicion"&gt;Usando gestores de disposición&lt;/h2&gt;
+&lt;p&gt;Para construir GUI app, necesitas saber cómo organizar un conjunto de widgets para que tu GUI sea intuitiva y funcional. En PySide6, las herramientas para este fin son los llamados &lt;strong&gt;gestores de disposición&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Se trata de clases que te permiten dimensionar y posicionar tus widgets en la ventana o formulario de la aplicación. Se adaptan automáticamente a eventos de cambio de tamaño y otros cambios en la GUI, controlando el tamaño y posición de todos sus widgets.&lt;/p&gt;
+&lt;p&gt;PySide6 proporciona cuatro clases básicas de gestores de disposición:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QHBoxLayout.html"&gt;&lt;code&gt;QHBoxLayout&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QVBoxLayout.html"&gt;&lt;code&gt;QVBoxLayout&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QGridLayout.html"&gt;&lt;code&gt;QGridLayout&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QFormLayout.html"&gt;&lt;code&gt;QFormLayout&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;En las secciones siguientes, aprenderás lo básico de cómo emplear estas clases y crear GUIs ordenadas y funcionales.&lt;/p&gt;
+&lt;h3 id="disposicion-horizontal"&gt;Disposición horizontal&lt;/h3&gt;
+&lt;p&gt;La primera clase de gestor de disposición que estudiarás es &lt;strong&gt;&lt;code&gt;QHBoxLayout&lt;/code&gt;&lt;/strong&gt;. Esta te permite organizar los widgets horizontalmente de izquierda a derecha. El ejemplo a continuación muestra cómo usar &lt;code&gt;QHBoxLayout&lt;/code&gt; para organizar tres botones horizontalmente:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QHBoxLayout&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QPushButton&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QWidget&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;([])&lt;/span&gt;
+&lt;span class="n"&gt;window&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setWindowTitle&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Disposición Horizontal&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;layout&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QHBoxLayout&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setLayout&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;layout&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;positions&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Izquierda&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Centro&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Derecha&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;position&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;positions&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;button&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QPushButton&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;position&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;layout&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;addWidget&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;button&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este ejemplo, creas una instancia de &lt;code&gt;QHBoxLayout&lt;/code&gt; llamada &lt;code&gt;layout&lt;/code&gt;. Luego agregas los tres botones en un ciclo usando el método &lt;code&gt;.addWidget()&lt;/code&gt;. La aplicación resultante luce como se muestra a continuación:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/articles/iniciando-con-pyside6-python/pyside6-gestor-disposicion-horizontal.png" class="mx-auto d-block mt-2" alt="Gestor de disposición horizontal en PySide6"&gt;&lt;/p&gt;
+&lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Gestor de disposición horizontal en PySide6&lt;/em&gt;&lt;/div&gt;
+
+&lt;p&gt;La figura anterior muestra tres botones en disposición horizontal. Los botones se muestran de izquierda a derecha en el mismo orden en que los agregaste en tu código.&lt;/p&gt;
+&lt;h3 id="disposicion-vertical"&gt;Disposición vertical&lt;/h3&gt;
+&lt;p&gt;La siguiente clase de gestor de disposición es &lt;strong&gt;&lt;code&gt;QVBoxLayout&lt;/code&gt;&lt;/strong&gt;. Esta clase te permite organizar los widgets verticalmente de arriba a abajo, facilitando la construcción de diseños verticales en tu GUI.&lt;/p&gt;
+&lt;p&gt;A continuación, un ejemplo de cómo puedes usar &lt;code&gt;QVBoxLayout&lt;/code&gt; para organizar tres botones verticalmente:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QPushButton&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QVBoxLayout&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QWidget&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;([])&lt;/span&gt;
+&lt;span class="n"&gt;window&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setWindowTitle&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Disposición Vertical&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setGeometry&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;230&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;80&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;layout&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QVBoxLayout&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setLayout&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;layout&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;positions&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Arriba&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Centro&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Abajo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;position&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;positions&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;button&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QPushButton&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;position&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;layout&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;addWidget&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;button&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este ejemplo, creas una instancia de &lt;code&gt;QVBoxLayout&lt;/code&gt; llamada &lt;code&gt;layout&lt;/code&gt;. En el ciclo &lt;code&gt;for&lt;/code&gt;, añades tres botones a &lt;code&gt;layout&lt;/code&gt; empleando &lt;code&gt;.addWidget()&lt;/code&gt;. Cuando ejecutas esta aplicación de ejemplo, obtienes una ventana que se ve como la siguiente:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/articles/iniciando-con-pyside6-python/pyside6-gestor-disposicion-vertical.png" class="mx-auto d-block mt-2" alt="Gestor de disposición vertical en PySide6"&gt;&lt;/p&gt;
+&lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Gestor de disposición vertical en PySide6&lt;/em&gt;&lt;/div&gt;
+
+&lt;p&gt;Esta captura muestra tres botones en un arreglo vertical, uno debajo del otro. Los botones aparecen en el mismo orden en que los agregaste a tu código, de arriba a abajo.&lt;/p&gt;
+&lt;h3 id="disposicion-en-cuadricula"&gt;Disposición en cuadrícula&lt;/h3&gt;
+&lt;p&gt;El tercer gestor de disposición que estudiarás es &lt;strong&gt;&lt;code&gt;QGridLayout&lt;/code&gt;&lt;/strong&gt;. Esta clase te permite organizar los widgets en una cuadrícula de filas y columnas. Cada widget tendrá una posición relativa en la cuadrícula. Puedes definir la posición de un widget con un par de coordenadas como &lt;code&gt;(fila, columna)&lt;/code&gt;. Cada coordenada debe ser un &lt;a href="https://realpython.com/python-numbers/"&gt;número&lt;/a&gt; entero. Estos pares de coordenadas definen qué celda en la cuadrícula ocupará un widget determinado.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;QGridLayout&lt;/code&gt; toma el espacio disponible, lo divide en &lt;code&gt;filas&lt;/code&gt; y &lt;code&gt;columnas&lt;/code&gt;, y coloca cada widget hijo en su propia celda.&lt;/p&gt;
+&lt;p&gt;A continuación, se muestra un ejemplo de cómo organizar una GUI con este gestor de disposición:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QGridLayout&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QPushButton&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QWidget&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;([])&lt;/span&gt;
+&lt;span class="n"&gt;window&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setWindowTitle&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Disposición en Cuadrícula&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;layout&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QGridLayout&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setLayout&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;layout&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;button_names&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+    &lt;span class="s2"&gt;&amp;quot;Botón (0, 0)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="s2"&gt;&amp;quot;Botón (0, 1)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="s2"&gt;&amp;quot;Botón (0, 2)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="s2"&gt;&amp;quot;Botón (1, 0)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="s2"&gt;&amp;quot;Botón (1, 1)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="s2"&gt;&amp;quot;Botón (1, 2)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="s2"&gt;&amp;quot;Botón (2, 0)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;enumerate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;button_names&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;button&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QPushButton&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;layout&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;addWidget&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;button&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;layout&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;addWidget&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="n"&gt;QPushButton&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Botón (2, 1) + 2 Columnas de Amplitud&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este ejemplo, creas una aplicación que utiliza un objeto &lt;code&gt;QGridLayout&lt;/code&gt; para organizar sus widgets en la pantalla. Nuevamente, para añadir los botones, empleas un ciclo &lt;code&gt;for&lt;/code&gt; y el método &lt;code&gt;.addWidget()&lt;/code&gt;. Nota que el segundo y tercer argumento que pasas al métodos son números enteros que definen la posición de cada widget en la cuadrícula.&lt;/p&gt;
+&lt;p&gt;Finalmente, pasas dos argumentos más a &lt;code&gt;.addWidget()&lt;/code&gt;. Estos argumentos son &lt;code&gt;rowSpan&lt;/code&gt; y &lt;code&gt;columnSpan&lt;/code&gt; los cuales sirven para hacer que un widget ocupe más de una fila o columna. En este ejemplo, el último botón ocupa una fila y dos columnas.&lt;/p&gt;
+&lt;p&gt;Si ejecutas este código desde tu línea de comandos, obtendrás una ventana que luce así:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/articles/iniciando-con-pyside6-python/pyside6-gestor-disposicion-cuadricula.png" class="mx-auto d-block mt-2" alt="Gestor de disposición en cuadrícula en PySide6"&gt;&lt;/p&gt;
+&lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Gestor de disposición en cuadrícula en PySide6&lt;/em&gt;&lt;/div&gt;
+
+&lt;p&gt;En esta figura, puedes ver tus botones organizados en una cuadrícula de filas y columnas. El último botón ocupa dos columnas en la cuadrícula.&lt;/p&gt;
+&lt;h3 id="disposicion-de-formulario"&gt;Disposición de formulario&lt;/h3&gt;
+&lt;p&gt;El último gestor de disposición que estudiarás es el &lt;strong&gt;&lt;code&gt;QFormLayout&lt;/code&gt;&lt;/strong&gt;. Con esta clase, puedes organizar los widgets en un diseño de dos columnas. La primera columna generalmente muestra texto en etiquetas, mientras que la segunda columna pueden contener widgets de entrada de datos como &lt;code&gt;QLineEdit&lt;/code&gt;, &lt;code&gt;QComboBox&lt;/code&gt;, &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QSpinBox.html"&gt;&lt;code&gt;QSpinBox&lt;/code&gt;&lt;/a&gt;, entre otros.&lt;/p&gt;
+&lt;p&gt;El siguiente ejemplo muestra cómo crear una aplicación que utiliza un objeto &lt;code&gt;QFormLayout&lt;/code&gt; para organizar sus widgets:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QFormLayout&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QLineEdit&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QWidget&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;([])&lt;/span&gt;
+&lt;span class="n"&gt;window&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setWindowTitle&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Disposición de Formulario&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setGeometry&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;280&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;80&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;layout&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QFormLayout&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setLayout&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;layout&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;labels&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Nombre:&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Edad:&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Ocupación:&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Dirección:&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;label&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;labels&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;layout&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;addRow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;label&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QLineEdit&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+
+&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code&gt;QFormLayout&lt;/code&gt; tiene un método llamado &lt;code&gt;.addRow()&lt;/code&gt; que puedes usar para agregar una fila de dos widgets al formulario. El primer argumento de &lt;code&gt;.addRow()&lt;/code&gt; debe ser una etiqueta o una cadena. El segundo argumento puede ser cualquier widget que permita al usuario ingresar o editar datos. En este ejemplo específico, has usado campos de entrada de texto, &lt;code&gt;QLineEdit&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Si ejecutas este código, obtendrás una ventana similar a la siguiente:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/articles/iniciando-con-pyside6-python/pyside6-gestor-disposicion-formulario.png" class="mx-auto d-block mt-2" alt="Gestor de disposición para formulario en PySide6"&gt;&lt;/p&gt;
+&lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Gestor de disposición para formulario en PySide6&lt;/em&gt;&lt;/div&gt;
+
+&lt;p&gt;Esta ventana muestra un diseño de formulario. La primera columna contiene etiquetas para comunicar al usuario la información deseada. La segunda columna muestra widgets que permiten al usuario ingresar la información.&lt;/p&gt;
+&lt;h2 id="creando-ventanas-y-dialogos"&gt;Creando ventanas y diálogos&lt;/h2&gt;
+&lt;p&gt;Las aplicaciones de escritorio GUI en PySide6 generalmente están conformadas por dos tipos de ventanas:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Ventana principal:&lt;/strong&gt; La ventana en la que se desarrolla la mayor parte de la interacción del usuario.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Diálogos:&lt;/strong&gt; Ventanas auxiliares de la aplicación que solicitan o muestran información al usuario.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;En las secciones siguientes, aprenderás sobre ambos tipos de ventanas y cómo crearlas en PySide6 de manera que puedas construir aplicaciones funcionales y atractivas.&lt;/p&gt;
+&lt;h3 id="ventanas-principales"&gt;Ventanas principales&lt;/h3&gt;
+&lt;p&gt;La mayoría de las veces, tus aplicaciones tendrán una ventana que incluye &lt;a href="https://realpython.com/python-menus-toolbars/"&gt;barra de menú&lt;/a&gt;, algunas barras de herramientas, una barra de estado y un widget central que será el elemento principal de la GUI. Para crear este tipo de ventana en PySide6, puedes heredar de la clase &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QMainWindow.html"&gt;&lt;code&gt;QMainWindow&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Una instancia de una clase que deriva de &lt;code&gt;QMainWindow&lt;/code&gt; se considera la &lt;strong&gt;ventana principal&lt;/strong&gt; de la aplicación y debe ser única.&lt;/p&gt;
+&lt;p&gt;La clase &lt;code&gt;QMainWindow&lt;/code&gt; proporciona un marco para construir la GUI de tu aplicación rápidamente. Esta clase tiene su propio diseño incorporado, que acepta los siguientes componentes gráficos:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Componente&lt;/th&gt;
+&lt;th&gt;Posición&lt;/th&gt;
+&lt;th&gt;Descripción&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Una &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QMenuBar.html"&gt;barra de menú&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Arriba&lt;/td&gt;
+&lt;td&gt;Contiene el menú principal de la aplicación&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Una o más &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QToolBar.html"&gt;barras de herramientas&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Cualquiera de los lados&lt;/td&gt;
+&lt;td&gt;Puede contener &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QToolButton.html"&gt;botones de herramienta&lt;/a&gt; y otros widgets, como &lt;code&gt;QComboBox&lt;/code&gt;, &lt;code&gt;QSpinBox&lt;/code&gt;, y más&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Un widget central&lt;/td&gt;
+&lt;td&gt;Centro&lt;/td&gt;
+&lt;td&gt;Contiene el widget central de la ventana, que puede ser de cualquier tipo, incluyendo un widget compuesto&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Uno o más widgets &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QDockWidget.html"&gt;acoplables&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Alrededor del widget central&lt;/td&gt;
+&lt;td&gt;Son ventanas pequeñas, movibles y ocultables&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Una &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QStatusBar.html"&gt;barra de estado&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Abajo&lt;/td&gt;
+&lt;td&gt;Contiene la barra de estado de la app, que muestra información de estado&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;No puedes crear una ventana principal sin un widget central. Puedes establecer el widget central de la ventana con el método &lt;code&gt;.setCentralWidget()&lt;/code&gt;. El diseño de la ventana principal te permitirá tener un único widget central, que puede ser simple o compuesto.&lt;/p&gt;
+&lt;p&gt;El siguiente ejemplo muestra cómo usar &lt;code&gt;QMainWindow&lt;/code&gt; para crear una aplicación con ventana principal:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QMainWindow&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QStatusBar&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QToolBar&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Window&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;QMainWindow&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="nb"&gt;super&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;parent&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setWindowTitle&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;QMainWindow&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setCentralWidget&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Soy el Widget Central&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_createMenu&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_createToolBar&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_createStatusBar&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;_createMenu&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;menu&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;menuBar&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;addMenu&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;amp;Menú&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;menu&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;addAction&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;amp;Salir&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;_createToolBar&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;tools&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QToolBar&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="n"&gt;tools&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;addAction&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Salir&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;addToolBar&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tools&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;_createStatusBar&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;status&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QStatusBar&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="n"&gt;status&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;showMessage&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Soy la Barra de Estado&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setStatusBar&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;status&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;__main__&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;([])&lt;/span&gt;
+    &lt;span class="n"&gt;window&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Window&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Primeramente, creas una clase llamada &lt;code&gt;Window&lt;/code&gt; que hereda de &lt;code&gt;QMainWindow&lt;/code&gt;. Dentro del método &lt;code&gt;.__init__()&lt;/code&gt;, llamas al inicializador de la clase base. El argumento &lt;code&gt;parent&lt;/code&gt; se establece en &lt;code&gt;None&lt;/code&gt; porque esta es la ventana principal de tu aplicación, por lo que no debe tener una ventana padre.&lt;/p&gt;
+&lt;p&gt;Luego, estableces el título de la ventana y creas un objeto &lt;code&gt;QLabel&lt;/code&gt; para usar como widget central de la ventana. Finalmente, llamas los métodos no públicos &lt;code&gt;._createMenu()&lt;/code&gt;, &lt;code&gt;._createToolBar()&lt;/code&gt;, &lt;code&gt;._createStatusBar()&lt;/code&gt; para crear el menú principal, una barra de herramientas y la barra de estado.&lt;/p&gt;
+&lt;p&gt;El widget central y la barra de estado muestran mensajes identificativos. El menú y la barra de herramientas mostrarán una opcion para salir de la aplicación.&lt;/p&gt;
+&lt;p&gt;En macOS, cuando ejecutas la aplicación de ejemplo anterior, obtendrás una ventana como la siguiente:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/articles/iniciando-con-pyside6-python/pyside6-ventana-principal-macOS.png" class="mx-auto d-block mt-2" alt="Ventana principal en PySide6 - macOS"&gt;&lt;/p&gt;
+&lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Ventana principal en PySide6 - macOS&lt;/em&gt;&lt;/div&gt;
+
+&lt;p&gt;Como puedes confirmar, tu aplicación tiene los siguientes componentes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Un menú principal llamado genéricamente &lt;em&gt;Menú&lt;/em&gt; que se muestra en la barra superior del escritorio macOS. En otras plataformas, el menú principal aparece en la misma ventana de la aplicación justo debajo de la barra de título.&lt;/li&gt;
+&lt;li&gt;Una barra de herramientas que contiene un botón &lt;em&gt;Salir&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Un widget central compuesto por un objeto &lt;code&gt;QLabel&lt;/code&gt; que muestra un mensaje identificativo.&lt;/li&gt;
+&lt;li&gt;Una barra de estado en la parte inferior de la ventana que también muestra un mensaje identificativo.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;¡Eso es todo! Has aprendido a construir una aplicación con ventana principal usando Python y PySide6. Lo siguiente es aprender un poco sobre cómo crear diálogos.&lt;/p&gt;
+&lt;h3 id="dialogos-y-formularios"&gt;Diálogos y formularios&lt;/h3&gt;
+&lt;p&gt;También es común que tus aplicaciones tengan varios diálogos para llevar a cabo acciones secundarias que dependen de la entrada del usuario. Para crear un diálogo, necesitas crear una clase que herede de &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QDialog.html"&gt;&lt;code&gt;QDialog&lt;/code&gt;&lt;/a&gt;, que es la clase base de todas las ventanas de diálogo en PySide6.&lt;/p&gt;
+&lt;p&gt;En PySide6, los diálogos pueden ser:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Modal:&lt;/strong&gt; Bloquea la entrada a cualquier otra ventana visible en la misma aplicación. Puedes mostrar un diálogo modal llamando a su método &lt;code&gt;.exec()&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;No modal:&lt;/strong&gt; Opera independientemente de otras ventanas en la misma aplicación. Puedes mostrar un diálogo no modal usando su método &lt;code&gt;.show()&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Puedes emplear diálogos como formularios de entrada de datos, ventanas de configuración, entre otras. Por esto, los diálogos también pueden proporcionar un valor de retorno y tener botones predeterminados, como &lt;em&gt;Aplicar&lt;/em&gt;, &lt;em&gt;Ok&lt;/em&gt; y &lt;em&gt;Cancelar&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Un diálogo es siempre una ventana independiente. Si un diálogo tiene un widget padre (&lt;code&gt;parent&lt;/code&gt;), entonces se mostrará centrado sobre dicho widget.&lt;/p&gt;
+&lt;p&gt;A continuación un ejemplo de cómo emplear &lt;code&gt;QDialog&lt;/code&gt; para desarrollar una diálogo:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QDialog&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QDialogButtonBox&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QFormLayout&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QLineEdit&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QVBoxLayout&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Window&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;QDialog&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="nb"&gt;super&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;parent&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setWindowTitle&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;QDialog&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+        &lt;span class="n"&gt;layout&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QVBoxLayout&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setLayout&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;layout&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+        &lt;span class="n"&gt;form_layout&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QFormLayout&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="n"&gt;labels&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Nombre:&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Edad:&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Ocupación:&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Dirección:&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;label&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;labels&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;form_layout&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;addRow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;label&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QLineEdit&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+
+        &lt;span class="n"&gt;layout&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;addLayout&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;form_layout&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;buttons&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QDialogButtonBox&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="n"&gt;buttons&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setStandardButtons&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+            &lt;span class="n"&gt;QDialogButtonBox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;StandardButton&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Cancel&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;
+            &lt;span class="n"&gt;QDialogButtonBox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;StandardButton&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Ok&lt;/span&gt;
+        &lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;layout&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;addWidget&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;buttons&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;([])&lt;/span&gt;
+&lt;span class="n"&gt;window&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Window&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este ejemplo, usas la clase &lt;code&gt;QDialog&lt;/code&gt; como la base para crear una ventana de diálogo. Para definir el diseño del diálogo, usas un &lt;code&gt;QVBoxLayout&lt;/code&gt; y un &lt;code&gt;QFormLayout&lt;/code&gt;. Con ellos, estableces el diseño principal que consiste en un formulario para entrada de datos y dos botones para aceptar o cancelar la entrada de datos.&lt;/p&gt;
+&lt;p&gt;Empleas la clase &lt;code&gt;QDialogButtonBox&lt;/code&gt; para gestionar los botones estándar del diálogo &lt;em&gt;OK&lt;/em&gt; y &lt;em&gt;Cancel&lt;/em&gt;. Este widget es muy útil porque gestiona automáticamente las interacciones comunes de los botones como cerrar el cuadro de diálogo o confirmar acciones.&lt;/p&gt;
+&lt;p&gt;El código anterior mostrará una ventana que se verá así:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/articles/iniciando-con-pyside6-python/pyside6-dialogo.png" class="mx-auto d-block mt-2" alt="Ventana de diálogo en PySide6"&gt;&lt;/p&gt;
+&lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Ventana de diálogo en PySide6&lt;/em&gt;&lt;/div&gt;
+
+&lt;p&gt;Esta figura muestra el diálogo creado con un &lt;code&gt;QFormLayout&lt;/code&gt; para organizar los widgets y un &lt;code&gt;QVBoxLayout&lt;/code&gt; para el diseño global.&lt;/p&gt;
+&lt;h3 id="mensajes-y-dialogos-estandar"&gt;Mensajes y diálogos estándar&lt;/h3&gt;
+&lt;p&gt;PySide6 también proporciona una forma rápida de crear &lt;strong&gt;cuadros de mensaje&lt;/strong&gt; para el usuario. La clase &lt;code&gt;QMessageBox&lt;/code&gt; te permite crear pequeñas ventanas diseñados para mostrar mensajes al usuario. PySide6 ofrece varios tipos de cuadros de mensajes predefinidos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;QMessageBox.information()&lt;/code&gt;&lt;/strong&gt;: Permite mostrar un mensaje informativo, como una confirmación o un aviso simple.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;QMessageBox.warning()&lt;/code&gt;&lt;/strong&gt;: Permite mostrar una advertencia sobre posibles problemas.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;QMessageBox.critical()&lt;/code&gt;&lt;/strong&gt;: Muestra mensajes de error críticos.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;QMessageBox.question()&lt;/code&gt;&lt;/strong&gt;: Presenta una pregunta al usuario con opciones como &lt;em&gt;Sí&lt;/em&gt; y &lt;em&gt;No&lt;/em&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Además, PySide6 tiene &lt;strong&gt;diálogos estándar&lt;/strong&gt; predefinidos que facilitan la interacción con el usuario, ya sea para permitirle seleccionar archivos, carpetas, colores o fuentes. Aquí tienes un resumen de ellos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;QFileDialog&lt;/code&gt;&lt;/strong&gt;: Permite al usuario seleccionar un archivo existente para abrirlo. Con el método &lt;code&gt;.getOpenFileName()&lt;/code&gt;, seleccionas un archivos. Con &lt;code&gt;.getSaveFileNames()&lt;/code&gt;, seleccionas múltiples archivos. Por su parte, &lt;code&gt;.getSaveFileName()&lt;/code&gt; te permite seleccionar la ubicación y el nombre para guardar un archivo. Finalmente, &lt;code&gt;.getExistingDirectory()&lt;/code&gt; permite seleccionar una carpeta en lugar de un archivo.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;QColorDialog&lt;/code&gt;&lt;/strong&gt;: Presenta un diálogo selector de colores que permite al usuario elegir un color. El método empleado es &lt;code&gt;.getColor()&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;QFontDialog&lt;/code&gt;&lt;/strong&gt;: Representa un selector de fuentes que permite al usuario seleccionar una fuente, tamaño y estilo. El método empleado es &lt;code&gt;.getFont()&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;QInputDialog&lt;/code&gt;&lt;/strong&gt;: Permite al usuario ingresar datos simples, como un texto, un número o una opción de una lista. Los métodos correspondientes son &lt;code&gt;.getText()&lt;/code&gt; para entrada de texto, &lt;code&gt;.getInt()&lt;/code&gt; para entrada de un número entero, y &lt;code&gt;.getItem()&lt;/code&gt; para selección de un elemento de una lista.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A continuación, un ejemplo que muestra algunos de elementos en acción:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QColorDialog&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QFileDialog&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QFontDialog&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QInputDialog&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;QMessageBox&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;([])&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Mostrar un mensaje&lt;/span&gt;
+&lt;span class="n"&gt;QMessageBox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;information&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="s2"&gt;&amp;quot;Información&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="s2"&gt;&amp;quot;Este es un mensaje.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Abrir un archivo&lt;/span&gt;
+&lt;span class="n"&gt;file_path&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;_&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QFileDialog&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getOpenFileName&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Abrir Archivo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;file_path&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;QMessageBox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;information&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+        &lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="s2"&gt;&amp;quot;Archivo Seleccionado&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Seleccionaste: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;file_path&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Seleccionar un color&lt;/span&gt;
+&lt;span class="n"&gt;color&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QColorDialog&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getColor&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isValid&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;QMessageBox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;information&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+        &lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Color Seleccionado&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Seleccionaste: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+    &lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Seleccionar una fuente&lt;/span&gt;
+&lt;span class="n"&gt;ok&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;font&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QFontDialog&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getFont&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;ok&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;QMessageBox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;information&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+        &lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Fuente Seleccionada&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Seleccionaste: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;font&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;family&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+    &lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Entrada de texto&lt;/span&gt;
+&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ok&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QInputDialog&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getText&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Entrada de Texto&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Escribe algo:&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;ok&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;QMessageBox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;information&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Texto Ingresado&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Escribiste: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En esta aplicación, lo primero que haces es mostrar un mensaje empleando &lt;code&gt;QMessageBox.information()&lt;/code&gt;. Luego, empleas &lt;code&gt;QFileDialog.getOpenFileName()&lt;/code&gt; para generar un diálogo que te permite abrir un archivo seleccionado. Seguidamente, creas diálogos para seleccionar un color y una fuente. Finalmente, creas un diálogo que le da al usuario la posibilidad de introducir un número entero de manera rápida.&lt;/p&gt;
+&lt;p&gt;Los cuadros de mensaje y los diálogos estándar son herramientas esenciales para cualquier aplicación PySide6 que requiera interacción con el usuario.&lt;/p&gt;
+&lt;h2 id="conclusion"&gt;Conclusión&lt;/h2&gt;
+&lt;p&gt;Las aplicaciones con &lt;strong&gt;interfaz gráfica de usuario (GUI)&lt;/strong&gt; representan una parte sustancial en el desarrollo de software. Python ofrece varios frameworks y bibliotecas que pueden ayudarte a desarrollar aplicaciones GUI modernas y robustas.&lt;/p&gt;
+&lt;p&gt;En este tutorial, aprendiste cómo usar &lt;strong&gt;PySide6&lt;/strong&gt;, que es una de las bibliotecas más populares y sólidas para el desarrollo de aplicaciones GUI en Python. Es además, el enlace oficial de Python con &lt;a href="https://doc.qt.io/"&gt;Qt&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;En este tutorial, has aprendido a:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Instalar&lt;/strong&gt; PySide6 y configurarlo en tu computadora&lt;/li&gt;
+&lt;li&gt;Desarrollar aplicaciones con &lt;strong&gt;GUI&lt;/strong&gt; basadas en PySide6&lt;/li&gt;
+&lt;li&gt;Organizar una GUI usando &lt;strong&gt;gestores de disposición&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Crear &lt;strong&gt;ventanas principales&lt;/strong&gt; y &lt;strong&gt;diálogos&lt;/strong&gt; en tus aplicaciones PySide6&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ahora puedes usar tus conocimientos de Python y PySide6 para dar vida a tus propias aplicaciones GUI de escritorio.&lt;/p&gt;</content><category term="Tutoriales"></category><category term="gui"></category><category term="pyside6"></category></entry><entry><title>Iniciando con Tkinter para desarrollo GUI</title><link href="https://pythonscouts.com/iniciando-con-tkinter-python/" rel="alternate"></link><published>2025-01-06T15:15:00+01:00</published><updated>2025-01-06T15:15:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-01-06:/iniciando-con-tkinter-python/</id><summary type="html">&lt;p&gt;En Python, Tkinter es una biblioteca que proporciona un kit de herramientas para el desarrollo de aplicaciones de interfaz gráfica de usuario (GUI).&lt;/p&gt;</summary><content type="html">&lt;p&gt;Tkinter es una de las bibliotecas más empleadas en el desarrollo rápido de aplicaciones GUI puesto que viene incluida con la instalación oficial de Python como parte de la biblioteca estándar.&lt;/p&gt;
 &lt;p&gt;Aprender los conceptos básicos para construir aplicaciones GUI usando Python y Tkinter es una excelente habilidad para cualquier desarrollador Python.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;En este tutorial, aprenderás cómo:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -473,7 +1141,7 @@
 &lt;li&gt;Organizar una GUI usando &lt;strong&gt;gestores de geometría&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;Crear &lt;strong&gt;ventanas principales&lt;/strong&gt; y &lt;strong&gt;diálogos&lt;/strong&gt; en tus aplicaciones Tkinter&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Ahora puedes usar tus conocimientos de Python y Tkinter para dar vida a tus propias aplicaciones GUI de escritorio.&lt;/p&gt;</content><category term="Tutoriales"></category><category term="gui"></category><category term="tkinter"></category></entry><entry><title>Iniciando con PyQt para desarrollo GUI</title><link href="https://pythonscouts.com/iniciando-con-pyqt-python/" rel="alternate"></link><published>2024-12-31T06:00:00+01:00</published><updated>2024-12-31T06:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2024-12-31:/iniciando-con-pyqt-python/</id><summary type="html">&lt;p&gt;En Python, PyQt es una biblioteca que proporciona un enlace con Qt, que es un framework de desarrollo de aplicaciones de interfaz gráfica de usuario (GUI).&lt;/p&gt;</summary><content type="html">&lt;p&gt;Para desarrollar este tipo de aplicaciones en Python, puedes emplear una amplia variedad de bibliotecas y frameworks, incluyendo &lt;a href="https://docs.python.org/3/library/tkinter.html"&gt;Tkinter&lt;/a&gt;, &lt;a href="https://realpython.com/python-gui-with-wxpython/"&gt;wxPython&lt;/a&gt;, &lt;a href="https://www.riverbankcomputing.com/software/pyqt/intro"&gt;PyQt&lt;/a&gt;, &lt;a href="https://wiki.qt.io/Qt_for_Python"&gt;PySide&lt;/a&gt;, entre otras. Sin embargo, PyQt es una de las bibliotecas más populares y sólidas disponibles.&lt;/p&gt;
+&lt;p&gt;Ahora puedes usar tus conocimientos de Python y Tkinter para dar vida a tus propias aplicaciones GUI de escritorio.&lt;/p&gt;</content><category term="Tutoriales"></category><category term="gui"></category><category term="tkinter"></category></entry><entry><title>Iniciando con PyQt para desarrollo GUI</title><link href="https://pythonscouts.com/iniciando-con-pyqt-python/" rel="alternate"></link><published>2024-12-31T06:00:00+01:00</published><updated>2024-12-31T06:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2024-12-31:/iniciando-con-pyqt-python/</id><summary type="html">&lt;p&gt;En Python, PyQt es una biblioteca que proporciona un enlace con Qt, que es un framework de desarrollo de aplicaciones de interfaz gráfica de usuario (GUI).&lt;/p&gt;</summary><content type="html">&lt;p&gt;Para desarrollar este tipo de aplicaciones en Python, puedes emplear una amplia variedad de bibliotecas y frameworks, incluyendo &lt;a href="https://docs.python.org/3/library/tkinter.html"&gt;Tkinter&lt;/a&gt;, &lt;a href="https://realpython.com/python-gui-with-wxpython/"&gt;wxPython&lt;/a&gt;, &lt;a href="https://www.riverbankcomputing.com/software/pyqt/intro"&gt;PyQt&lt;/a&gt;, &lt;a href="https://wiki.qt.io/Qt_for_Python"&gt;PySide6&lt;/a&gt;, entre otras. Sin embargo, PyQt es una de las bibliotecas más populares y sólidas disponibles.&lt;/p&gt;
 &lt;p&gt;En este tutorial, aprenderás los conceptos básicos para construir aplicaciones GUI usando Python y PyQt.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;En este tutorial, aprenderás cómo:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -515,16 +1183,16 @@
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;h2 id="conociendo-pyqt"&gt;Conociendo PyQt&lt;/h2&gt;
-&lt;p&gt;PyQt es una biblioteca que proporciona un enlace entre Python y &lt;a href="https://wiki.qt.io/About_Qt"&gt;Qt&lt;/a&gt;, el cual es un framework de desarrollo en &lt;a href="https://realpython.com/python-vs-cpp/"&gt;C++&lt;/a&gt; para crear interfaces gráficas de usuario (GUIs). Proporciona &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/sip-classes.html"&gt;clases&lt;/a&gt; y herramientas para la creación de GUIs, manejo de &lt;a href="https://realpython.com/python-xml-parser/"&gt;XML&lt;/a&gt;, comunicación de red, expresiones regulares, hilos, bases de datos SQL, navegación web y otras tecnologías disponibles en Qt. &lt;/p&gt;
+&lt;p&gt;PyQt es una biblioteca que proporciona un enlace entre Python y &lt;a href="https://wiki.qt.io/About_Qt"&gt;Qt&lt;/a&gt;, el cual es un framework de desarrollo en &lt;a href="https://realpython.com/python-vs-cpp/"&gt;C++&lt;/a&gt; para crear interfaces gráficas de usuario (GUIs). Proporciona &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/sip-classes.html"&gt;clases&lt;/a&gt; y herramientas para la creación de GUIs, manejo de &lt;a href="https://realpython.com/python-xml-parser/"&gt;XML&lt;/a&gt;, comunicación de red, expresiones regulares, hilos, bases de datos SQL, navegación web y otras tecnologías disponibles en Qt.&lt;/p&gt;
 &lt;p&gt;PyQt es compatible con Windows, Unix, Linux, macOS, iOS y Android, por lo que puedes emplearla para desarrollar aplicaciones multiplataforma que tengan una apariencia nativa en cada plataforma.&lt;/p&gt;
 &lt;p&gt;Si deseas usar PyQt para crear aplicaciones comerciales, entonces necesitas una licencia comercial. También puedes emplear PyQt para proyectos de código abierto, en cuyo caso la licencia de tu proyecto debe ser compatible con la licencia de Qt que estés empleando.&lt;/p&gt;
 &lt;h2 id="instalando-pyqt"&gt;Instalando PyQt&lt;/h2&gt;
 &lt;p&gt;Para instalar PyQt en tu computadora, la opción recomendada es instalar desde el índice de paquetes de Python, &lt;a href="https://realpython.com/pypi-publish-python-package/"&gt;PyPI&lt;/a&gt;, usando el comando &lt;code&gt;pip&lt;/code&gt;. Para esto, puedes crear un &lt;a href="https://docs.python.org/es/3.13/glossary.html#term-virtual-environment"&gt;entorno virtual de Python&lt;/a&gt; y luego instalar el paquete &lt;code&gt;pyqt6&lt;/code&gt;, ejecuta lo siguiente en tu línea de comandos, dependiendo de tu sistema operativo.&lt;/p&gt;
 &lt;h3 id="en-windows"&gt;En Windows&lt;/h3&gt;
 &lt;p&gt;En Windows, puedes instalar PyQt ejecutando los comandos:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="go"&gt;PS&amp;gt; python -m venv venv&lt;/span&gt;
-&lt;span class="go"&gt;PS&amp;gt; venv\Scripts\activate&lt;/span&gt;
-&lt;span class="gp gp-VirtualEnv"&gt;(venv)&lt;/span&gt; &lt;span class="go"&gt;PS&amp;gt; python -m pip install pyqt6&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;PS&amp;gt; python -m venv venv
+PS&amp;gt; venv\Scripts\activate.bat
+(venv) PS&amp;gt; python -m pip install pyqt6
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Con estos comandos, primero creas y activas un entorno virtual Python y luego instalas PyQt dese PyPI.&lt;/p&gt;
@@ -605,7 +1273,7 @@
 &lt;p&gt;Los widgets también detectan clics del mouse, pulsaciones de teclas y otros eventos del usuario, el sistema de ventanas y otras fuentes. Cada vez que un widget captura un evento, emite una señal para anunciar su cambio de estado.&lt;/p&gt;
 &lt;p&gt;PyQt tiene una colección variada de widgets, cada uno de los cuales tiene un propósito diferente. Algunos de los widgets más comunes incluyen botones, etiquetas o labels, campos de entrada de texto, listas desplegables, y botones radiales.&lt;/p&gt;
 &lt;h3 id="botones"&gt;Botones&lt;/h3&gt;
-&lt;p&gt;Puedes crear un botón con la clase &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qpushbutton.html"&gt;&lt;code&gt;QPushButton&lt;/code&gt;&lt;/a&gt;, la cual proporciona un botón de comando clásico. Algunos botones típicos son &lt;em&gt;Ok&lt;/em&gt;, &lt;em&gt;Cancelar&lt;/em&gt;, &lt;em&gt;Aplicar&lt;/em&gt;, &lt;em&gt;Sí&lt;/em&gt;, &lt;em&gt;No&lt;/em&gt;, &lt;em&gt;Cerrar&lt;/em&gt;, similares. &lt;/p&gt;
+&lt;p&gt;Puedes crear un botón con la clase &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qpushbutton.html"&gt;&lt;code&gt;QPushButton&lt;/code&gt;&lt;/a&gt;, la cual proporciona un botón de comando clásico. Algunos botones típicos son &lt;em&gt;Ok&lt;/em&gt;, &lt;em&gt;Cancelar&lt;/em&gt;, &lt;em&gt;Aplicar&lt;/em&gt;, &lt;em&gt;Sí&lt;/em&gt;, &lt;em&gt;No&lt;/em&gt;, &lt;em&gt;Cerrar&lt;/em&gt;, similares.&lt;/p&gt;
 &lt;p&gt;Crea un archivo llamado &lt;code&gt;buttons.py&lt;/code&gt; y pon el siguiente código en él:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -741,7 +1409,7 @@
 &lt;p&gt;PyQt tiene una amplia colección de widgets. Actualmente hay más de cuarenta &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qwidget.html"&gt;widgets&lt;/a&gt; disponibles. Aquí, has estudiado solo una pequeña muestra. Sin embargo, esta es suficiente para mostrarte el poder y la flexibilidad de este framework GUI.&lt;/p&gt;
 &lt;p&gt;En la siguiente sección, aprenderás cómo organizar diferentes widgets para construir GUIs modernas y completamente funcionales para tus aplicaciones.&lt;/p&gt;
 &lt;h2 id="usando-gestores-de-disposicion"&gt;Usando gestores de disposición&lt;/h2&gt;
-&lt;p&gt;Para construir GUI app, necesitas saber cómo organizar un conjunto de widgets para que tu GUI sea intuitiva y funcional. En PyQt, las herramientas para este fin son los llamados &lt;a href="https://realpython.com/python-pyqt-layout/"&gt;gestores de disposición&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Para construir GUI app, necesitas saber cómo organizar un conjunto de widgets para que tu GUI sea intuitiva y funcional. En PyQt, las herramientas para este fin son los llamados &lt;strong&gt;gestores de disposición&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Se trata de clases que te permiten dimensionar y posicionar tus widgets en la ventana o formulario de la aplicación. Se adaptan automáticamente a eventos de cambio de tamaño y otros cambios en la GUI, controlando el tamaño y posición de todos sus widgets.&lt;/p&gt;
 &lt;p&gt;PyQt proporciona cuatro clases básicas de gestores de disposición:&lt;/p&gt;
 &lt;ol&gt;
@@ -815,7 +1483,7 @@
 &lt;p&gt;Esta captura muestra tres botones en un arreglo vertical, uno debajo del otro. Los botones aparecen en el mismo orden en que los agregaste a tu código, de arriba a abajo.&lt;/p&gt;
 &lt;h3 id="disposicion-en-cuadricula"&gt;Disposición en cuadrícula&lt;/h3&gt;
 &lt;p&gt;El tercer gestor de disposición que estudiarás es &lt;strong&gt;&lt;code&gt;QGridLayout&lt;/code&gt;&lt;/strong&gt;. Esta clase te permite organizar los widgets en una cuadrícula de filas y columnas. Cada widget tendrá una posición relativa en la cuadrícula. Puedes definir la posición de un widget con un par de coordenadas como &lt;code&gt;(fila, columna)&lt;/code&gt;. Cada coordenada debe ser un &lt;a href="https://realpython.com/python-numbers/"&gt;número&lt;/a&gt; entero. Estos pares de coordenadas definen qué celda en la cuadrícula ocupará un widget determinado.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;QGridLayout&lt;/code&gt; toma el espacio disponible, lo divide en &lt;code&gt;filas&lt;/code&gt; y &lt;code&gt;columnas&lt;/code&gt;, y coloca cada widget hijo en su propia celda. &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;QGridLayout&lt;/code&gt; toma el espacio disponible, lo divide en &lt;code&gt;filas&lt;/code&gt; y &lt;code&gt;columnas&lt;/code&gt;, y coloca cada widget hijo en su propia celda.&lt;/p&gt;
 &lt;p&gt;A continuación, se muestra un ejemplo de cómo organizar una GUI con este gestor de disposición:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -982,7 +1650,7 @@
     &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Primeramente, creas una clase llamada &lt;code&gt;Window&lt;/code&gt; que hereda de &lt;code&gt;QMainWindow&lt;/code&gt;. Dentro del método &lt;code&gt;.__init__()&lt;/code&gt;, llamas al inicializador de la clase base. El argumento &lt;code&gt;parent&lt;/code&gt; se establece en &lt;code&gt;None&lt;/code&gt; porque esta es la ventana principal de tu aplicación, por lo que no debe tener una ventana padre. &lt;/p&gt;
+&lt;p&gt;Primeramente, creas una clase llamada &lt;code&gt;Window&lt;/code&gt; que hereda de &lt;code&gt;QMainWindow&lt;/code&gt;. Dentro del método &lt;code&gt;.__init__()&lt;/code&gt;, llamas al inicializador de la clase base. El argumento &lt;code&gt;parent&lt;/code&gt; se establece en &lt;code&gt;None&lt;/code&gt; porque esta es la ventana principal de tu aplicación, por lo que no debe tener una ventana padre.&lt;/p&gt;
 &lt;p&gt;Luego, estableces el título de la ventana y creas un objeto &lt;code&gt;QLabel&lt;/code&gt; para usar como widget central de la ventana. Finalmente, llamas los métodos no públicos &lt;code&gt;._createMenu()&lt;/code&gt;, &lt;code&gt;._createToolBar()&lt;/code&gt;, &lt;code&gt;._createStatusBar()&lt;/code&gt; para crear el menú principal, una barra de herramientas y la barra de estado.&lt;/p&gt;
 &lt;p&gt;El widget central y la barra de estado muestran mensajes identificativos. El menú y la barra de herramientas mostrarán una opcion para salir de la aplicación.&lt;/p&gt;
 &lt;p&gt;En macOS, cuando ejecutas la aplicación de ejemplo anterior, obtendrás una ventana como la siguiente:&lt;/p&gt;
@@ -1002,7 +1670,7 @@
 &lt;p&gt;En PyQt, los diálogos pueden ser:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Modal:&lt;/strong&gt; Bloquea la entrada a cualquier otra ventana visible en la misma aplicación. Puedes mostrar un diálogo modal llamando a su método &lt;code&gt;.exec()&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;No Modal:&lt;/strong&gt; Opera independientemente de otras ventanas en la misma aplicación. Puedes mostrar un diálogo no modal usando su método &lt;code&gt;.show()&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;No modal:&lt;/strong&gt; Opera independientemente de otras ventanas en la misma aplicación. Puedes mostrar un diálogo no modal usando su método &lt;code&gt;.show()&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Puedes emplear diálogos como formularios de entrada de datos, ventanas de configuración, entre otras. Por esto, los diálogos también pueden proporcionar un valor de retorno y tener botones predeterminados, como &lt;em&gt;Aplicar&lt;/em&gt;, &lt;em&gt;Ok&lt;/em&gt; y &lt;em&gt;Cancelar&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Un diálogo es siempre una ventana independiente. Si un diálogo tiene un widget padre (&lt;code&gt;parent&lt;/code&gt;), entonces se mostrará centrado sobre dicho widget.&lt;/p&gt;
