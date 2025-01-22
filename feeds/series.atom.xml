@@ -202,7 +202,7 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Haciendo una analogía puedes comparar el MVC con un restaurante. La carta sería la vista que contiene la información sobre el menú, el mesero sería el controlador que recibe la orden del cliente y se la transmite al chef quien representa al modelo y se encarga de confeccionar el plato solicitado por el cliente.&lt;/p&gt;
-&lt;aside&gt;
+&lt;aside class="note"&gt;
 En muchas implementaciones de MVC, especialmente en aplicaciones web, las acciones del usuario no son directamente manejadas por la vista, sino que pasan primero por el controlador. La vista debería ser lo más pasiva posible, simplemente renderizando lo que el controlador le proporciona. El controlador debe ser quien maneje las acciones del usuario y decida qué hacer con ellas, incluyendo actualizar el modelo o cambiar lo que se muestra en la vista.
 &lt;/aside&gt;
 
@@ -332,13 +332,13 @@ En muchas implementaciones de MVC, especialmente en aplicaciones web, las accion
 &lt;/ul&gt;
 &lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
 &lt;p&gt;Ahora conoces conceptos fundamentales sobre el patrón Modelo-Vista-Controlador. Tienes una idea clara de qué cosa es el patrón de diseño Modelo-Vista-Controlador (MVC), cuáles son sus componentes fundamentales y qué función tiene cada uno de ellos.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Ahora conoces&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Ahora sabes&lt;/strong&gt;:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Qué es &lt;strong&gt;MVC&lt;/strong&gt; y cómo funciona&lt;/li&gt;
 &lt;li&gt;Qué &lt;strong&gt;rol&lt;/strong&gt; desempeña cada uno de los componentes del MVC&lt;/li&gt;
 &lt;li&gt;Cuáles son los &lt;strong&gt;beneficios&lt;/strong&gt; de emplear el MVC en tus aplicaciones&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Aplicando estos conocimientos a tus proyectos Python, podrás darles una mejor organización de manera que sean más fáciles de modificar y mantener.&lt;/p&gt;</content><category term="Series"></category><category term="python"></category></entry><entry><title>Python a través de ejemplos: Expresiones</title><link href="https://pythonscouts.com/expresiones-python/" rel="alternate"></link><published>2024-12-09T18:00:00+01:00</published><updated>2024-12-09T18:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2024-12-09:/expresiones-python/</id><summary type="html">&lt;p&gt;En Python, una expresión es una combinación de valores y operadores que retorna un resultado o valor espcífico cuando es evaluada.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Python te permite crear diferentes tipos de expresiones que podrás emplear para obtener valores requeridos en tu código. En este tutorial, aprenderás lo básico sobre cómo funcionan y cómo crear expresiones en Python.&lt;/p&gt;
+&lt;p&gt;Aplicando estos conocimientos a tus proyectos Python, podrás darles una mejor organización de manera que sean más fáciles de modificar y mantener.&lt;/p&gt;</content><category term="Series"></category><category term="python"></category></entry><entry><title>Python a través de ejemplos: Expresiones</title><link href="https://pythonscouts.com/expresiones-python/" rel="alternate"></link><published>2024-12-09T18:00:00+01:00</published><updated>2024-12-09T18:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2024-12-09:/expresiones-python/</id><summary type="html">&lt;p&gt;En Python, una expresión es una combinación de valores y operadores que retorna un resultado o valor específico cuando es evaluada.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Python te permite crear diferentes tipos de expresiones que podrás emplear para obtener valores requeridos en tu código. En este tutorial, aprenderás lo básico sobre cómo funcionan y cómo crear expresiones en Python.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#aritmeticas"&gt;Aritméticas&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#comparacion"&gt;Comparación&lt;/a&gt;&lt;/li&gt;
@@ -393,7 +393,7 @@ En muchas implementaciones de MVC, especialmente en aplicaciones web, las accion
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Todas las expresiones de comparación retornan un valor lógico, ya sea &lt;code&gt;True&lt;/code&gt; o &lt;code&gt;False&lt;/code&gt;.&lt;/p&gt;
-&lt;aside&gt;
+&lt;aside class="note"&gt;
 Los ejemplos anteriores comparan valores numéricos, sin embargo, también es posible comparar cadenas, tuplas, listas y cualquier otro objeto que soporte los operadores de comparación.
 &lt;/aside&gt;
 
@@ -617,7 +617,7 @@ Los ejemplos anteriores comparan valores numéricos, sin embargo, también es po
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Los operadores de adición, sustracción, multiplicación y división son casi idénticos a los que empleas en matemáticas.&lt;/p&gt;
-&lt;p&gt;El operador de módulo (&lt;code&gt;%&lt;/code&gt;) devuelve el resto de la división entera. El operador de exponenciación o exponenciación te permite elevar números a una determinada potencia. Finalmente, el operador de división entera realiza una división que devuelve el mayor entero menor o igual al resultado de la división normal. Esto se conoce como división de piso.&lt;/p&gt;
+&lt;p&gt;El operador de módulo (&lt;code&gt;%&lt;/code&gt;) devuelve el resto de la división entera. El operador de exponenciación o potenciación te permite elevar números a una determinada potencia. Finalmente, el operador de división entera realiza una división que devuelve el mayor entero menor o igual al resultado de la división normal. Esto se conoce como división de piso.&lt;/p&gt;
 &lt;h2 id="asignacion"&gt;Asignación&lt;/h2&gt;
 &lt;p&gt;Los operadores de asignación se emplean para asignar valores u objetos a variables o nombres:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;# Asignación&lt;/span&gt;
@@ -982,7 +982,7 @@ Los ejemplos anteriores comparan valores numéricos, sin embargo, también es po
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;En estos ejemplos, has creado algunas variables mediante la asignación de valores numéricos o de cadena de caracteres.&lt;/p&gt;
-&lt;aside&gt;
+&lt;aside class="note"&gt;
 Como regla general, emplearemos nombres de constantes en idioma inglés puesto que este es el idioma base para la programación actualmente.
 &lt;/aside&gt;
 
@@ -1003,7 +1003,7 @@ Como regla general, emplearemos nombres de constantes en idioma inglés puesto q
 &lt;p&gt;Al igual que las variables, las constantes no tienen un tipo de dato estático. Cuando se habla del tipo de dato de una constante, en realidad se trata del tipo de dato del objeto al que la constante apunta, ya sea un valor numérico o cualquier otro tipo de valor. Python determina este tipo de dato dinámicamente.&lt;/p&gt;
 &lt;h2 id="nombres-de-constantes"&gt;Nombres de constantes&lt;/h2&gt;
 &lt;p&gt;Los nombres de constantes en Python pueden tener cualquier longitud y consistir en letras mayúsculas (A-Z), dígitos (0-9) y el carácter de subrayado o guión bajo (&lt;code&gt;_&lt;/code&gt;). La única restricción es que, aunque un nombre de constante puede contener dígitos, el primer carácter del nombre no puede ser un dígito.&lt;/p&gt;
-&lt;aside&gt;
+&lt;aside class="note"&gt;
 Para una comprensión más profunda de las convenciones de estilo en Python, puedes consultar la &lt;a href="https://www.python.org/dev/peps/pep-0008/" target="_blank"&gt;Guía de Estilo para el Código Python (PEP 8)&lt;/a&gt;.
 &lt;/aside&gt;
 
@@ -1058,7 +1058,7 @@ Para una comprensión más profunda de las convenciones de estilo en Python, pue
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;En estos ejemplos, has creado algunas variables mediante la asignación de valores numéricos o de cadena de caracteres.&lt;/p&gt;
-&lt;aside&gt;
+&lt;aside class="note"&gt;
 Como regla general, emplearemos nombres de variables en idioma inglés puesto que este es el idioma base para la programación actualmente.
 &lt;/aside&gt;
 
@@ -1196,7 +1196,7 @@ Como regla general, emplearemos nombres de variables en idioma inglés puesto qu
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mf"&gt;.5&lt;/span&gt;  &lt;span class="c1"&gt;# Sin cero a la izquierda del punto&lt;/span&gt;
 &lt;span class="mf"&gt;0.5&lt;/span&gt;
 
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mf"&gt;10.&lt;/span&gt;  &lt;span class="c1"&gt;# Sin fracción decimal specificada&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mf"&gt;10.&lt;/span&gt;  &lt;span class="c1"&gt;# Sin fracción decimal especificada&lt;/span&gt;
 &lt;span class="mf"&gt;10.0&lt;/span&gt;
 
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mf"&gt;1_000_000.02&lt;/span&gt;  &lt;span class="c1"&gt;# Con separador de miles en el literal&lt;/span&gt;
@@ -1271,7 +1271,7 @@ Como regla general, emplearemos nombres de variables en idioma inglés puesto qu
 &lt;span class="s1"&gt;&amp;#39;Balance general: $5,425.93&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;El campo de reemplazo en esta f-string contiene una variable llamada &lt;code&gt;balance&lt;/code&gt;. Esta variable provee el valor que necesitamos interpolar en la cadena. Luego tenemos el especificador de formato que comienza con el caracter dos puntos (&lt;code&gt;:&lt;/code&gt;). En este caso, formateas el valor como un valor decimal con dos lugares después del punto y empleando una coma (&lt;code&gt;,&lt;/code&gt;) como separador de miles.&lt;/p&gt;
+&lt;p&gt;El campo de reemplazo en esta f-string contiene una variable llamada &lt;code&gt;balance&lt;/code&gt;. Esta variable provee el valor que necesitamos interpolar en la cadena. Luego tenemos el especificador de formato que comienza con el caracter de dos puntos (&lt;code&gt;:&lt;/code&gt;). En este caso, formateas el valor como un valor decimal con dos lugares después del punto y empleando una coma (&lt;code&gt;,&lt;/code&gt;) como separador de miles.&lt;/p&gt;
 &lt;h2 id="conclusiones"&gt;Conclusiones&lt;/h2&gt;
 &lt;p&gt;Ahora sabes lo básico sobre los valores o literales en Python, incluidos valores numéricos como los números enteros, decimales y complejos. También aprendiste sobre los valores de cadenas de caracteres.&lt;/p&gt;
 &lt;p&gt;Entender los valores y cómo crearlos es fundamental para cualquier desarrollador de Python, pues estos son la base sobre la que se construyen expresiones y sentencias más elaboradas.&lt;/p&gt;

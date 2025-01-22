@@ -21,7 +21,7 @@ blockquote:before {
 }
 
 /* Note */
-article aside {
+.note {
     background-color: #D1E6DD;
     border: 1px solid #008800;
     border-left: 5px solid #008800;
@@ -31,7 +31,7 @@ article aside {
     margin-bottom: 1.3em;
     font-style: italic;
 }
-article aside:before {
+.note:before {
     color: #008800;
     content: "NOTA:";
     font-size: 1em;

@@ -161,7 +161,7 @@ PS&amp;gt; venv\Scripts\activate.bat
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Botones en PySide6&lt;/em&gt;&lt;/div&gt;
 
 &lt;p&gt;Botones como estos son quizás los widgets más utilizados en cualquier GUI. Cuando alguien hace clic en ellos, tu aplicación ordena a la computadora realizar acciones. Así es como puedes ejecutar cálculos cuando un usuario hace clic en un botón.&lt;/p&gt;
-&lt;aside&gt;
+&lt;aside class="note"&gt;
 En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; que representa un gestor de disposición que permite organizar los widgets con una orientación vertical. Más sobre gestores de disposición en un momento.
 &lt;/aside&gt;
 
@@ -909,8 +909,8 @@ En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; 
 &lt;/ol&gt;
 &lt;p&gt;En las secciones siguientes, aprenderás lo básico sobre cómo emplear estos métodos y crear GUIs ordenadas y funcionales.&lt;/p&gt;
 &lt;h3 id="disposicion-por-empaquetado-con-pack"&gt;Disposición por empaquetado con &lt;code&gt;.pack()&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;El método &lt;code&gt;pack()&lt;/code&gt; organiza los widgets en bloques antes o después de los widgets ya empaquetados. Puedes especificar las opciones &lt;code&gt;side&lt;/code&gt;, &lt;code&gt;fill&lt;/code&gt; y &lt;code&gt;expand&lt;/code&gt; para controlar cómo se comportan los widgets empaquetados.&lt;/p&gt;
-&lt;p&gt;A continuación se muestra un ejemplo de uso de &lt;code&gt;pack()&lt;/code&gt; para gestionar la geometría de una GUI ordenada verticalmente:&lt;/p&gt;
+&lt;p&gt;El método &lt;code&gt;.pack()&lt;/code&gt; organiza los widgets en bloques antes o después de los widgets ya empaquetados. Puedes especificar las opciones &lt;code&gt;side&lt;/code&gt;, &lt;code&gt;fill&lt;/code&gt; y &lt;code&gt;expand&lt;/code&gt; para controlar cómo se comportan los widgets empaquetados.&lt;/p&gt;
+&lt;p&gt;A continuación se muestra un ejemplo de uso de &lt;code&gt;.pack()&lt;/code&gt; para gestionar la geometría de una GUI ordenada verticalmente:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
 
 &lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Tk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
@@ -1303,7 +1303,7 @@ PS&amp;gt; venv\Scripts\activate.bat
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Botones en PyQt&lt;/em&gt;&lt;/div&gt;
 
 &lt;p&gt;Botones como estos son quizás los widgets más utilizados en cualquier GUI. Cuando alguien hace clic en ellos, tu aplicación ordena a la computadora realizar acciones. Así es como puedes ejecutar cálculos cuando un usuario hace clic en un botón.&lt;/p&gt;
-&lt;aside&gt;
+&lt;aside class="note"&gt;
     En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; que representa un gestor de disposición que permite organizar los widgets con una orientación vertical. Más sobre gestores de disposición en un momento.
 &lt;/aside&gt;
 
@@ -1652,7 +1652,7 @@ PS&amp;gt; venv\Scripts\activate.bat
 
 &lt;p&gt;Primeramente, creas una clase llamada &lt;code&gt;Window&lt;/code&gt; que hereda de &lt;code&gt;QMainWindow&lt;/code&gt;. Dentro del método &lt;code&gt;.__init__()&lt;/code&gt;, llamas al inicializador de la clase base. El argumento &lt;code&gt;parent&lt;/code&gt; se establece en &lt;code&gt;None&lt;/code&gt; porque esta es la ventana principal de tu aplicación, por lo que no debe tener una ventana padre.&lt;/p&gt;
 &lt;p&gt;Luego, estableces el título de la ventana y creas un objeto &lt;code&gt;QLabel&lt;/code&gt; para usar como widget central de la ventana. Finalmente, llamas los métodos no públicos &lt;code&gt;._createMenu()&lt;/code&gt;, &lt;code&gt;._createToolBar()&lt;/code&gt;, &lt;code&gt;._createStatusBar()&lt;/code&gt; para crear el menú principal, una barra de herramientas y la barra de estado.&lt;/p&gt;
-&lt;p&gt;El widget central y la barra de estado muestran mensajes identificativos. El menú y la barra de herramientas mostrarán una opcion para salir de la aplicación.&lt;/p&gt;
+&lt;p&gt;El widget central y la barra de estado muestran mensajes identificativos. El menú y la barra de herramientas mostrarán una opción para salir de la aplicación.&lt;/p&gt;
 &lt;p&gt;En macOS, cuando ejecutas la aplicación de ejemplo anterior, obtendrás una ventana como la siguiente:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/iniciando-con-pyqt-python/pyqt-ventana-principal-macOS.png" class="mx-auto d-block mt-2" alt="Ventana principal en PyQt - macOS"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Ventana principal en PyQt - macOS&lt;/em&gt;&lt;/div&gt;
@@ -1836,7 +1836,7 @@ PS&amp;gt; venv\Scripts\activate.bat
 &lt;/blockquote&gt;
 &lt;p&gt;Cuando la documentación dice que deben escribirse de esta forma, esto incluye el detalle de las mayúsculas, como en los casos de &lt;a href="https://docs.python.org/es/3/library/constants.html#None"&gt;&lt;code&gt;None&lt;/code&gt;&lt;/a&gt;, &lt;a href="https://docs.python.org/es/3/library/constants.html#False"&gt;&lt;code&gt;False&lt;/code&gt;&lt;/a&gt; y &lt;a href="https://docs.python.org/es/3/library/constants.html#True"&gt;&lt;code&gt;True&lt;/code&gt;&lt;/a&gt;. Sí, Python discrimina entre mayúsculas y minúsculas, de modo que las variantes &lt;code&gt;True&lt;/code&gt; y &lt;code&gt;true&lt;/code&gt; no son equivalentes.&lt;/p&gt;
 &lt;p&gt;Cualquier error de escritura en una palabra clave provoca una excepción del tipo &lt;a href="https://docs.python.org/es/3/library/exceptions.html#NameError"&gt;&lt;code&gt;NameError&lt;/code&gt;&lt;/a&gt;. Este comportamiento se debe a que como la palabra está mal escrita, Python asume que se trata de un identificador o nombre y al no encontrar el nombre, levanta la excepción.&lt;/p&gt;
-&lt;p&gt;Con esta breve introducción al concepto de palabras clave, estás listo para conocer cúales son las palabras clave de Python.&lt;/p&gt;
+&lt;p&gt;Con esta breve introducción al concepto de palabras clave, estás listo para conocer cuáles son las palabras clave de Python.&lt;/p&gt;
 &lt;h2 id="cuales-son-las-palabras-clave-de-python"&gt;Cuáles son las palabras clave de Python?&lt;/h2&gt;
 &lt;p&gt;Dependiendo de la versión, Python tiene un conjunto de palabras clave o reservadas que ronda las 30 palabras. Estas palabras constituyen el núcleo de las sintaxis del lenguaje. Para conocer o consultar cuáles son estas palabras, puedes abrir una sesión interactiva de Python y ejecutar el siguiente código:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;# Python 3.11&lt;/span&gt;
@@ -2068,7 +2068,7 @@ PS&amp;gt; venv\Scripts\activate.bat
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;Concer las palabras reservadas de Python te facilitará la comprensión y la escritura de código. Recuerda que este conjunto de palabras es el núcleo de toda la sintaxis del lenguaje.&lt;/p&gt;
+&lt;p&gt;Conocer las palabras reservadas de Python te facilitará la comprensión y la escritura de código. Recuerda que este conjunto de palabras es el núcleo de toda la sintaxis del lenguaje.&lt;/p&gt;
 &lt;h2 id="como-obtengo-ayuda-sobre-palabras-clave-especificas"&gt;Cómo obtengo ayuda sobre palabras clave específicas?&lt;/h2&gt;
 &lt;p&gt;En determinadas situaciones, sobre todo cuando estás comenzando con Python, necesitarás consultar rápidamente el objetivo de determinada palabra clave. En esos casos, puedes auxiliarte de &lt;code&gt;help()&lt;/code&gt; nuevamente.&lt;/p&gt;
 &lt;p&gt;Una vez que entras al sistema de ayuda integrado usando &lt;code&gt;help()&lt;/code&gt;, puedes introducir la palabra clave que deseas consultar y presionar &lt;em&gt;Enter&lt;/em&gt;. De inmediato te aparecerá en pantalla la documentación de la palabra en cuestión.&lt;/p&gt;
@@ -2110,7 +2110,7 @@ Related help topics: TRUTHVALUE
 &lt;span class="kc"&gt;True&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Este ejemplo demustra que puedes emplear la palabra reservada &lt;code&gt;match&lt;/code&gt; como un nombre de variable. En este caso, Python no levanta una excepción como lo hace con otras palabras reservadas.&lt;/p&gt;
+&lt;p&gt;Este ejemplo demuestra que puedes emplear la palabra reservada &lt;code&gt;match&lt;/code&gt; como un nombre de variable. En este caso, Python no levanta una excepción como lo hace con otras palabras reservadas.&lt;/p&gt;
 &lt;p&gt;En cualquier caso, debes evitar emplear palabras clave como nombres o identificadores de variables, funciones, clases, módulos, paquetes o de cualquier otra estructura u objeto Python. Еmplearlas de esta forma podría generar problemas difíciles de identificar y resolver en tu código.&lt;/p&gt;
 &lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
 &lt;p&gt;Ya has adquirido conocimientos elementales sobre las palabras clave o palabras reservadas de Python. Sabes cómo obtener la lista de palabras reservadas disponibles en tu entorno Python y cómo obtener ayuda sobre estas palabras y su papel en la sintaxis del lenguaje.&lt;/p&gt;
@@ -2118,7 +2118,7 @@ Related help topics: TRUTHVALUE
 &lt;ul&gt;
 &lt;li&gt;La definición de &lt;strong&gt;palabra clave&lt;/strong&gt; o &lt;strong&gt;reservada&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;Las &lt;strong&gt;palabras clave de Python&lt;/strong&gt; y su significado&lt;/li&gt;
-&lt;li&gt;Como usar la función &lt;code&gt;help()&lt;/code&gt; para objeter &lt;strong&gt;ayuda&lt;/strong&gt; sobre las palabras clave&lt;/li&gt;
+&lt;li&gt;Como usar la función &lt;code&gt;help()&lt;/code&gt; para obtener &lt;strong&gt;ayuda&lt;/strong&gt; sobre las palabras clave&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Con estos conocimientos tienes las bases y las herramientas necesarias para profundizar en los conceptos y definiciones que encierra cada una de las palabras clave de Python.&lt;/p&gt;
 &lt;h2 id="lecturas-sugeridas"&gt;Lecturas sugeridas&lt;/h2&gt;

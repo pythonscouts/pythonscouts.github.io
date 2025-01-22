@@ -161,7 +161,7 @@ PS&amp;gt; venv\Scripts\activate.bat
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Botones en PySide6&lt;/em&gt;&lt;/div&gt;
 
 &lt;p&gt;Botones como estos son quizás los widgets más utilizados en cualquier GUI. Cuando alguien hace clic en ellos, tu aplicación ordena a la computadora realizar acciones. Así es como puedes ejecutar cálculos cuando un usuario hace clic en un botón.&lt;/p&gt;
-&lt;aside&gt;
+&lt;aside class="note"&gt;
 En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; que representa un gestor de disposición que permite organizar los widgets con una orientación vertical. Más sobre gestores de disposición en un momento.
 &lt;/aside&gt;
 
@@ -868,7 +868,7 @@ En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Este comando imprime la versión de Python que tienes instalada por defecto. Con esto has concluido la instalación de Python usando el gestor de paquetes de tu distribución Linux. Ahora estás listo para escribir tu &lt;a href="https://pythonscouts.com/python-hola-mundo/"&gt;primer programa&lt;/a&gt;.&lt;/p&gt;
-&lt;aside&gt;Es importante que sepas que la versión de Python disponible en los repositorios oficiales de Debian, Ubuntu y derivados puede estar relativamente actualizada con respecto a las últimas versiones liberadas. Para instalar la última versión de Python, deberás compilarla desde sus &lt;a href="https://www.python.org/downloads/source/" target="_blank"&gt;fuentes&lt;/a&gt; o emplear herramientas como &lt;a href="https://github.com/pyenv/pyenv" target="_blank"&gt;&lt;code&gt;pyenv&lt;/code&gt;&lt;/a&gt; que te permiten gestionar varias versiones de Python en tu computadora.&lt;/aside&gt;
+&lt;aside class="note"&gt;Es importante que sepas que la versión de Python disponible en los repositorios oficiales de Debian, Ubuntu y derivados puede estar relativamente actualizada con respecto a las últimas versiones liberadas. Para instalar la última versión de Python, deberás compilarla desde sus &lt;a href="https://www.python.org/downloads/source/" target="_blank"&gt;fuentes&lt;/a&gt; o emplear herramientas como &lt;a href="https://github.com/pyenv/pyenv" target="_blank"&gt;&lt;code&gt;pyenv&lt;/code&gt;&lt;/a&gt; que te permiten gestionar varias versiones de Python en tu computadora.&lt;/aside&gt;
 
 &lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
 &lt;p&gt;Instalar Python en tu ordenador es el primer paso en tu empeño de aprender a programar con el lenguaje. Nuevamente, recuerda que los pasos a seguir para completar la instalación en tu distribución Linux basada en Debian o Ubuntu son los siguientes:&lt;/p&gt;
@@ -1120,8 +1120,8 @@ En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; 
 &lt;/ol&gt;
 &lt;p&gt;En las secciones siguientes, aprenderás lo básico sobre cómo emplear estos métodos y crear GUIs ordenadas y funcionales.&lt;/p&gt;
 &lt;h3 id="disposicion-por-empaquetado-con-pack"&gt;Disposición por empaquetado con &lt;code&gt;.pack()&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;El método &lt;code&gt;pack()&lt;/code&gt; organiza los widgets en bloques antes o después de los widgets ya empaquetados. Puedes especificar las opciones &lt;code&gt;side&lt;/code&gt;, &lt;code&gt;fill&lt;/code&gt; y &lt;code&gt;expand&lt;/code&gt; para controlar cómo se comportan los widgets empaquetados.&lt;/p&gt;
-&lt;p&gt;A continuación se muestra un ejemplo de uso de &lt;code&gt;pack()&lt;/code&gt; para gestionar la geometría de una GUI ordenada verticalmente:&lt;/p&gt;
+&lt;p&gt;El método &lt;code&gt;.pack()&lt;/code&gt; organiza los widgets en bloques antes o después de los widgets ya empaquetados. Puedes especificar las opciones &lt;code&gt;side&lt;/code&gt;, &lt;code&gt;fill&lt;/code&gt; y &lt;code&gt;expand&lt;/code&gt; para controlar cómo se comportan los widgets empaquetados.&lt;/p&gt;
+&lt;p&gt;A continuación se muestra un ejemplo de uso de &lt;code&gt;.pack()&lt;/code&gt; para gestionar la geometría de una GUI ordenada verticalmente:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
 
 &lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Tk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
@@ -1514,7 +1514,7 @@ PS&amp;gt; venv\Scripts\activate.bat
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Botones en PyQt&lt;/em&gt;&lt;/div&gt;
 
 &lt;p&gt;Botones como estos son quizás los widgets más utilizados en cualquier GUI. Cuando alguien hace clic en ellos, tu aplicación ordena a la computadora realizar acciones. Así es como puedes ejecutar cálculos cuando un usuario hace clic en un botón.&lt;/p&gt;
-&lt;aside&gt;
+&lt;aside class="note"&gt;
     En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; que representa un gestor de disposición que permite organizar los widgets con una orientación vertical. Más sobre gestores de disposición en un momento.
 &lt;/aside&gt;
 
@@ -1863,7 +1863,7 @@ PS&amp;gt; venv\Scripts\activate.bat
 
 &lt;p&gt;Primeramente, creas una clase llamada &lt;code&gt;Window&lt;/code&gt; que hereda de &lt;code&gt;QMainWindow&lt;/code&gt;. Dentro del método &lt;code&gt;.__init__()&lt;/code&gt;, llamas al inicializador de la clase base. El argumento &lt;code&gt;parent&lt;/code&gt; se establece en &lt;code&gt;None&lt;/code&gt; porque esta es la ventana principal de tu aplicación, por lo que no debe tener una ventana padre.&lt;/p&gt;
 &lt;p&gt;Luego, estableces el título de la ventana y creas un objeto &lt;code&gt;QLabel&lt;/code&gt; para usar como widget central de la ventana. Finalmente, llamas los métodos no públicos &lt;code&gt;._createMenu()&lt;/code&gt;, &lt;code&gt;._createToolBar()&lt;/code&gt;, &lt;code&gt;._createStatusBar()&lt;/code&gt; para crear el menú principal, una barra de herramientas y la barra de estado.&lt;/p&gt;
-&lt;p&gt;El widget central y la barra de estado muestran mensajes identificativos. El menú y la barra de herramientas mostrarán una opcion para salir de la aplicación.&lt;/p&gt;
+&lt;p&gt;El widget central y la barra de estado muestran mensajes identificativos. El menú y la barra de herramientas mostrarán una opción para salir de la aplicación.&lt;/p&gt;
 &lt;p&gt;En macOS, cuando ejecutas la aplicación de ejemplo anterior, obtendrás una ventana como la siguiente:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/iniciando-con-pyqt-python/pyqt-ventana-principal-macOS.png" class="mx-auto d-block mt-2" alt="Ventana principal en PyQt - macOS"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Ventana principal en PyQt - macOS&lt;/em&gt;&lt;/div&gt;
@@ -2079,7 +2079,7 @@ PS&amp;gt; venv\Scripts\activate.bat
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Haciendo una analogía puedes comparar el MVC con un restaurante. La carta sería la vista que contiene la información sobre el menú, el mesero sería el controlador que recibe la orden del cliente y se la transmite al chef quien representa al modelo y se encarga de confeccionar el plato solicitado por el cliente.&lt;/p&gt;
-&lt;aside&gt;
+&lt;aside class="note"&gt;
 En muchas implementaciones de MVC, especialmente en aplicaciones web, las acciones del usuario no son directamente manejadas por la vista, sino que pasan primero por el controlador. La vista debería ser lo más pasiva posible, simplemente renderizando lo que el controlador le proporciona. El controlador debe ser quien maneje las acciones del usuario y decida qué hacer con ellas, incluyendo actualizar el modelo o cambiar lo que se muestra en la vista.
 &lt;/aside&gt;
 
@@ -2209,13 +2209,13 @@ En muchas implementaciones de MVC, especialmente en aplicaciones web, las accion
 &lt;/ul&gt;
 &lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
 &lt;p&gt;Ahora conoces conceptos fundamentales sobre el patrón Modelo-Vista-Controlador. Tienes una idea clara de qué cosa es el patrón de diseño Modelo-Vista-Controlador (MVC), cuáles son sus componentes fundamentales y qué función tiene cada uno de ellos.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Ahora conoces&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Ahora sabes&lt;/strong&gt;:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Qué es &lt;strong&gt;MVC&lt;/strong&gt; y cómo funciona&lt;/li&gt;
 &lt;li&gt;Qué &lt;strong&gt;rol&lt;/strong&gt; desempeña cada uno de los componentes del MVC&lt;/li&gt;
 &lt;li&gt;Cuáles son los &lt;strong&gt;beneficios&lt;/strong&gt; de emplear el MVC en tus aplicaciones&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Aplicando estos conocimientos a tus proyectos Python, podrás darles una mejor organización de manera que sean más fáciles de modificar y mantener.&lt;/p&gt;</content><category term="Series"></category><category term="python"></category></entry><entry><title>Python a través de ejemplos: Expresiones</title><link href="https://pythonscouts.com/expresiones-python/" rel="alternate"></link><published>2024-12-09T18:00:00+01:00</published><updated>2024-12-09T18:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2024-12-09:/expresiones-python/</id><summary type="html">&lt;p&gt;En Python, una expresión es una combinación de valores y operadores que retorna un resultado o valor espcífico cuando es evaluada.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Python te permite crear diferentes tipos de expresiones que podrás emplear para obtener valores requeridos en tu código. En este tutorial, aprenderás lo básico sobre cómo funcionan y cómo crear expresiones en Python.&lt;/p&gt;
+&lt;p&gt;Aplicando estos conocimientos a tus proyectos Python, podrás darles una mejor organización de manera que sean más fáciles de modificar y mantener.&lt;/p&gt;</content><category term="Series"></category><category term="python"></category></entry><entry><title>Python a través de ejemplos: Expresiones</title><link href="https://pythonscouts.com/expresiones-python/" rel="alternate"></link><published>2024-12-09T18:00:00+01:00</published><updated>2024-12-09T18:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2024-12-09:/expresiones-python/</id><summary type="html">&lt;p&gt;En Python, una expresión es una combinación de valores y operadores que retorna un resultado o valor específico cuando es evaluada.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Python te permite crear diferentes tipos de expresiones que podrás emplear para obtener valores requeridos en tu código. En este tutorial, aprenderás lo básico sobre cómo funcionan y cómo crear expresiones en Python.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#aritmeticas"&gt;Aritméticas&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#comparacion"&gt;Comparación&lt;/a&gt;&lt;/li&gt;
@@ -2270,7 +2270,7 @@ En muchas implementaciones de MVC, especialmente en aplicaciones web, las accion
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Todas las expresiones de comparación retornan un valor lógico, ya sea &lt;code&gt;True&lt;/code&gt; o &lt;code&gt;False&lt;/code&gt;.&lt;/p&gt;
-&lt;aside&gt;
+&lt;aside class="note"&gt;
 Los ejemplos anteriores comparan valores numéricos, sin embargo, también es posible comparar cadenas, tuplas, listas y cualquier otro objeto que soporte los operadores de comparación.
 &lt;/aside&gt;
 
@@ -2494,7 +2494,7 @@ Los ejemplos anteriores comparan valores numéricos, sin embargo, también es po
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Los operadores de adición, sustracción, multiplicación y división son casi idénticos a los que empleas en matemáticas.&lt;/p&gt;
-&lt;p&gt;El operador de módulo (&lt;code&gt;%&lt;/code&gt;) devuelve el resto de la división entera. El operador de exponenciación o exponenciación te permite elevar números a una determinada potencia. Finalmente, el operador de división entera realiza una división que devuelve el mayor entero menor o igual al resultado de la división normal. Esto se conoce como división de piso.&lt;/p&gt;
+&lt;p&gt;El operador de módulo (&lt;code&gt;%&lt;/code&gt;) devuelve el resto de la división entera. El operador de exponenciación o potenciación te permite elevar números a una determinada potencia. Finalmente, el operador de división entera realiza una división que devuelve el mayor entero menor o igual al resultado de la división normal. Esto se conoce como división de piso.&lt;/p&gt;
 &lt;h2 id="asignacion"&gt;Asignación&lt;/h2&gt;
 &lt;p&gt;Los operadores de asignación se emplean para asignar valores u objetos a variables o nombres:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;# Asignación&lt;/span&gt;
@@ -2831,15 +2831,15 @@ Los ejemplos anteriores comparan valores numéricos, sin embargo, también es po
 &lt;p&gt;Has aprendido sobre los distintos tipos de operadores en Python, incluyendo aritméticos, de asignación, concatenación, repetición, comparación, lógicos, pertenencia, identidad y bitwise.&lt;/p&gt;
 &lt;p&gt;El conocimiento de los operadores es esencial para cualquier desarrollador de Python, pues con ellos puedes manipular y evaluar datos, controlar el flujo de ejecución, y realizar otras tareas de programación.&lt;/p&gt;
 &lt;p&gt;Ahora puedes aplicar tus conocimientos para resolver problemas complejos, optimizar tus programas y desarrollar aplicaciones más robustas y eficientes.&lt;/p&gt;</content><category term="Series"></category><category term="python"></category></entry><entry><title>Cómo saber si todos los elementos en una lista son iguales en Python?</title><link href="https://pythonscouts.com/elementos-iguales-lista-python/" rel="alternate"></link><published>2024-10-29T06:00:00+01:00</published><updated>2024-10-29T06:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2024-10-29:/elementos-iguales-lista-python/</id><summary type="html">&lt;p&gt;En Python, puede ser útil determinar si todos los elementos en una lista son iguales. Esto es lo que estarás aprendiendo en esta guía rápida.&lt;/p&gt;</summary><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href="#convertir-la-lista-en-un-conjunto-y-comprobar-si-contine-un-unico-elemento"&gt;Convertir la lista en un conjunto y comprobar si contine un único elemento&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#convertir-la-lista-en-un-conjunto-y-comprobar-si-contiene-un-unico-elemento"&gt;Convertir la lista en un conjunto y comprobar si contiene un único elemento&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#usar-la-funcion-all-para-comparar-el-primer-elemento-con-los-restantes"&gt;Usar la función all() para comparar el primer elemento con los restantes&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#ordenar-la-lista-y-comparar-el-primer-y-el-ultimo-elemento"&gt;Ordenar la lista y comparar el primer y el último elemento&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#en-resumen"&gt;En resumen&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;h2 id="convertir-la-lista-en-un-conjunto-y-comprobar-si-contine-un-unico-elemento"&gt;Convertir la lista en un conjunto y comprobar si contine un único elemento&lt;/h2&gt;
+&lt;h2 id="convertir-la-lista-en-un-conjunto-y-comprobar-si-contiene-un-unico-elemento"&gt;Convertir la lista en un conjunto y comprobar si contiene un único elemento&lt;/h2&gt;
 &lt;p&gt;Una vía rápida para determinar si todos los elementos de una lista son iguales es convertir la lista en un conjunto usando la clase &lt;a href="https://docs.python.org/es/3/library/functions.html#func-set"&gt;&lt;code&gt;set()&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
-&lt;aside&gt;
+&lt;aside class="note"&gt;
 Como premisa y en aras de la simplicidad, asumiremos que se trata de una lista no vacía que contiene elementos del mismo tipo de dato, ya sea números, cadenas, u otros.
 &lt;/aside&gt;
 
@@ -2869,7 +2869,7 @@ Como premisa y en aras de la simplicidad, asumiremos que se trata de una lista n
 &lt;p&gt;Esta técnica para determinar si todos los elementos de una lista son iguales emplea una expresión generadora que produce valores booleanos que resultan de evaluar la expresión &lt;code&gt;item == letters[0]&lt;/code&gt;. Luego, &lt;code&gt;all()&lt;/code&gt; verifica si todos los elementos resultantes son &lt;code&gt;True&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="ordenar-la-lista-y-comparar-el-primer-y-el-ultimo-elemento"&gt;Ordenar la lista y comparar el primer y el último elemento&lt;/h2&gt;
 &lt;p&gt;Otra manera de saber si todos los elementos de una lista son iguales es ordenar la lista y comparar el primer y el último elemento.&lt;/p&gt;
-&lt;aside&gt;
+&lt;aside class="note"&gt;
 Debes saber que esta técnica puedes ser muy ineficiente especialmente cuando tienes una lista muy larga, pues el algoritmo de ordenamiento puede tomar un tiempo considerable. Además, ordenar la lista modifica el orden original de los elementos, lo cual puede no ser deseado.
 &lt;/aside&gt;
 
@@ -2924,7 +2924,7 @@ Debes saber que esta técnica puedes ser muy ineficiente especialmente cuando ti
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;En estos ejemplos, has creado algunas variables mediante la asignación de valores numéricos o de cadena de caracteres.&lt;/p&gt;
-&lt;aside&gt;
+&lt;aside class="note"&gt;
 Como regla general, emplearemos nombres de constantes en idioma inglés puesto que este es el idioma base para la programación actualmente.
 &lt;/aside&gt;
 
@@ -2945,7 +2945,7 @@ Como regla general, emplearemos nombres de constantes en idioma inglés puesto q
 &lt;p&gt;Al igual que las variables, las constantes no tienen un tipo de dato estático. Cuando se habla del tipo de dato de una constante, en realidad se trata del tipo de dato del objeto al que la constante apunta, ya sea un valor numérico o cualquier otro tipo de valor. Python determina este tipo de dato dinámicamente.&lt;/p&gt;
 &lt;h2 id="nombres-de-constantes"&gt;Nombres de constantes&lt;/h2&gt;
 &lt;p&gt;Los nombres de constantes en Python pueden tener cualquier longitud y consistir en letras mayúsculas (A-Z), dígitos (0-9) y el carácter de subrayado o guión bajo (&lt;code&gt;_&lt;/code&gt;). La única restricción es que, aunque un nombre de constante puede contener dígitos, el primer carácter del nombre no puede ser un dígito.&lt;/p&gt;
-&lt;aside&gt;
+&lt;aside class="note"&gt;
 Para una comprensión más profunda de las convenciones de estilo en Python, puedes consultar la &lt;a href="https://www.python.org/dev/peps/pep-0008/" target="_blank"&gt;Guía de Estilo para el Código Python (PEP 8)&lt;/a&gt;.
 &lt;/aside&gt;
 
@@ -3000,7 +3000,7 @@ Para una comprensión más profunda de las convenciones de estilo en Python, pue
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;En estos ejemplos, has creado algunas variables mediante la asignación de valores numéricos o de cadena de caracteres.&lt;/p&gt;
-&lt;aside&gt;
+&lt;aside class="note"&gt;
 Como regla general, emplearemos nombres de variables en idioma inglés puesto que este es el idioma base para la programación actualmente.
 &lt;/aside&gt;
 
@@ -3138,7 +3138,7 @@ Como regla general, emplearemos nombres de variables en idioma inglés puesto qu
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mf"&gt;.5&lt;/span&gt;  &lt;span class="c1"&gt;# Sin cero a la izquierda del punto&lt;/span&gt;
 &lt;span class="mf"&gt;0.5&lt;/span&gt;
 
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mf"&gt;10.&lt;/span&gt;  &lt;span class="c1"&gt;# Sin fracción decimal specificada&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mf"&gt;10.&lt;/span&gt;  &lt;span class="c1"&gt;# Sin fracción decimal especificada&lt;/span&gt;
 &lt;span class="mf"&gt;10.0&lt;/span&gt;
 
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mf"&gt;1_000_000.02&lt;/span&gt;  &lt;span class="c1"&gt;# Con separador de miles en el literal&lt;/span&gt;
@@ -3213,7 +3213,7 @@ Como regla general, emplearemos nombres de variables en idioma inglés puesto qu
 &lt;span class="s1"&gt;&amp;#39;Balance general: $5,425.93&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;El campo de reemplazo en esta f-string contiene una variable llamada &lt;code&gt;balance&lt;/code&gt;. Esta variable provee el valor que necesitamos interpolar en la cadena. Luego tenemos el especificador de formato que comienza con el caracter dos puntos (&lt;code&gt;:&lt;/code&gt;). En este caso, formateas el valor como un valor decimal con dos lugares después del punto y empleando una coma (&lt;code&gt;,&lt;/code&gt;) como separador de miles.&lt;/p&gt;
+&lt;p&gt;El campo de reemplazo en esta f-string contiene una variable llamada &lt;code&gt;balance&lt;/code&gt;. Esta variable provee el valor que necesitamos interpolar en la cadena. Luego tenemos el especificador de formato que comienza con el caracter de dos puntos (&lt;code&gt;:&lt;/code&gt;). En este caso, formateas el valor como un valor decimal con dos lugares después del punto y empleando una coma (&lt;code&gt;,&lt;/code&gt;) como separador de miles.&lt;/p&gt;
 &lt;h2 id="conclusiones"&gt;Conclusiones&lt;/h2&gt;
 &lt;p&gt;Ahora sabes lo básico sobre los valores o literales en Python, incluidos valores numéricos como los números enteros, decimales y complejos. También aprendiste sobre los valores de cadenas de caracteres.&lt;/p&gt;
 &lt;p&gt;Entender los valores y cómo crearlos es fundamental para cualquier desarrollador de Python, pues estos son la base sobre la que se construyen expresiones y sentencias más elaboradas.&lt;/p&gt;
@@ -3241,7 +3241,7 @@ Como regla general, emplearemos nombres de variables en idioma inglés puesto qu
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Hola, Mundo!&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Este script es el típico programa &lt;a href="https://pythonscouts.com/python-hola-mundo/"&gt;&lt;code&gt;"Hola, Mundo!"&lt;/code&gt;&lt;/a&gt; que generalmente escribes cuando comienzas a aprender un lenguaje de programación. Guarda el archivo en tu directorio de trabajo y asígnale el nombre &lt;code&gt;script.py&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Este script es el típico programa &lt;a href="https://pythonscouts.com/python-hola-mundo/"&gt;&lt;code&gt;"Hola, Mundo!"&lt;/code&gt;&lt;/a&gt; que generalmente escribes cuando comienzas a aprender un lenguaje de programación. Guarda el archivo en tu directorio de trabajo y llámalo &lt;code&gt;script.py&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Abre una ventana de terminal en tu directorio de trabajo actual y ejecuta el siguiente comando:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;script.py
 &lt;span class="go"&gt;Hola, Mundo!&lt;/span&gt;
@@ -3324,7 +3324,7 @@ Hola, Mundo!
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Página de descargas de Python para Windows&lt;/em&gt;&lt;/div&gt;
 
 &lt;p&gt;Una vez en la página de descargas, es recomendable que descargues la versión más reciente de Python que aparecerá como la primera opción. De esta manera, tendrás acceso a las últimas novedades del lenguaje y estarás al día con las correcciones de errores y los parches de seguridad.&lt;/p&gt;
-&lt;aside&gt;
+&lt;aside class="note"&gt;
 En esta guía, emplearás el instalador ejecutable (&lt;code&gt;.exe&lt;/code&gt;) que puedes obtener haciendo click en el botón amarillo.
 &lt;/aside&gt;
 
@@ -3350,7 +3350,7 @@ En esta guía, emplearás el instalador ejecutable (&lt;code&gt;.exe&lt;/code&gt
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Instalador de Python, segunda ventana - Características Opcionales&lt;/em&gt;&lt;/div&gt;
 
 &lt;p&gt;En esta ventana, todas las opciones están seleccionadas por defecto, lo cual es recomendable. Sin embargo, si no tienes pensado emplear IDLE en tu proceso de aprendizaje y desarrollo, entonces puedes desmarcar esta opción. El resto de las opciones deberías mantenerlas seleccionadas para evitar futuros problemas.&lt;/p&gt;
-&lt;aside&gt;
+&lt;aside class="note"&gt;
 IDLE es el entorno de desarrollo integrado (IDE) por defecto de Python. Este programa provee una interfaz gráfica para trabajo con el lenguaje y su intérprete. Como regla general, está incluido en el instalador oficial en todas sus versiones.
 &lt;/aside&gt;
 
@@ -3457,7 +3457,7 @@ Python 3.11.5
 
 &lt;p&gt;Una vez en la página de descargas, es recomendable que descargues la versión más reciente que aparecerá como la primera opción. De esta manera, tendrás acceso a las últimas novedades del lenguaje y estarás al día con las correcciones de errores y los parches de seguridad.&lt;/p&gt;
 &lt;p&gt;También puedes seleccionar una versión más antigua si lo deseas. Para esto, desplázate hacia abajo en la página de descargas e identifica la versión deseada.&lt;/p&gt;
-&lt;aside&gt;
+&lt;aside class="note"&gt;
 En esta guía, emplearás el instalador universal (&lt;code&gt;.pkg&lt;/code&gt;) de 64-bit para macOS 10.9 o superior. Este instalador provee la versión 3.11.5 de Python. Puedes descargarlo directamente haciendo click en el botón amarillo.
 &lt;/aside&gt;
 
@@ -3502,7 +3502,7 @@ En esta guía, emplearás el instalador universal (&lt;code&gt;.pkg&lt;/code&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Instalador de Python, quinta ventana: Instalación personalizada, opciones&lt;/em&gt;&lt;/div&gt;
 
 &lt;p&gt;Si no tienes pensado emplear IDLE en tu proceso de aprendizaje y desarrollo, entonces puedes desmarcar esta opción. El resto de las opciones son recomendables para evitar futuros problemas, así que no deberías desmarcarlas.&lt;/p&gt;
-&lt;aside&gt;
+&lt;aside class="note"&gt;
 IDLE es el entorno de desarrollo integrado (IDE) por defecto de Python. Este programa provee una interfaz gráfica para trabajo con el lenguaje y su intérprete. Como regla general, está incluido en el instalador oficial en todas sus versiones.
 &lt;/aside&gt;
 
@@ -3557,7 +3557,7 @@ IDLE es el entorno de desarrollo integrado (IDE) por defecto de Python. Este pro
 &lt;/blockquote&gt;
 &lt;p&gt;Cuando la documentación dice que deben escribirse de esta forma, esto incluye el detalle de las mayúsculas, como en los casos de &lt;a href="https://docs.python.org/es/3/library/constants.html#None"&gt;&lt;code&gt;None&lt;/code&gt;&lt;/a&gt;, &lt;a href="https://docs.python.org/es/3/library/constants.html#False"&gt;&lt;code&gt;False&lt;/code&gt;&lt;/a&gt; y &lt;a href="https://docs.python.org/es/3/library/constants.html#True"&gt;&lt;code&gt;True&lt;/code&gt;&lt;/a&gt;. Sí, Python discrimina entre mayúsculas y minúsculas, de modo que las variantes &lt;code&gt;True&lt;/code&gt; y &lt;code&gt;true&lt;/code&gt; no son equivalentes.&lt;/p&gt;
 &lt;p&gt;Cualquier error de escritura en una palabra clave provoca una excepción del tipo &lt;a href="https://docs.python.org/es/3/library/exceptions.html#NameError"&gt;&lt;code&gt;NameError&lt;/code&gt;&lt;/a&gt;. Este comportamiento se debe a que como la palabra está mal escrita, Python asume que se trata de un identificador o nombre y al no encontrar el nombre, levanta la excepción.&lt;/p&gt;
-&lt;p&gt;Con esta breve introducción al concepto de palabras clave, estás listo para conocer cúales son las palabras clave de Python.&lt;/p&gt;
+&lt;p&gt;Con esta breve introducción al concepto de palabras clave, estás listo para conocer cuáles son las palabras clave de Python.&lt;/p&gt;
 &lt;h2 id="cuales-son-las-palabras-clave-de-python"&gt;Cuáles son las palabras clave de Python?&lt;/h2&gt;
 &lt;p&gt;Dependiendo de la versión, Python tiene un conjunto de palabras clave o reservadas que ronda las 30 palabras. Estas palabras constituyen el núcleo de las sintaxis del lenguaje. Para conocer o consultar cuáles son estas palabras, puedes abrir una sesión interactiva de Python y ejecutar el siguiente código:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;# Python 3.11&lt;/span&gt;
@@ -3789,7 +3789,7 @@ IDLE es el entorno de desarrollo integrado (IDE) por defecto de Python. Este pro
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;Concer las palabras reservadas de Python te facilitará la comprensión y la escritura de código. Recuerda que este conjunto de palabras es el núcleo de toda la sintaxis del lenguaje.&lt;/p&gt;
+&lt;p&gt;Conocer las palabras reservadas de Python te facilitará la comprensión y la escritura de código. Recuerda que este conjunto de palabras es el núcleo de toda la sintaxis del lenguaje.&lt;/p&gt;
 &lt;h2 id="como-obtengo-ayuda-sobre-palabras-clave-especificas"&gt;Cómo obtengo ayuda sobre palabras clave específicas?&lt;/h2&gt;
 &lt;p&gt;En determinadas situaciones, sobre todo cuando estás comenzando con Python, necesitarás consultar rápidamente el objetivo de determinada palabra clave. En esos casos, puedes auxiliarte de &lt;code&gt;help()&lt;/code&gt; nuevamente.&lt;/p&gt;
 &lt;p&gt;Una vez que entras al sistema de ayuda integrado usando &lt;code&gt;help()&lt;/code&gt;, puedes introducir la palabra clave que deseas consultar y presionar &lt;em&gt;Enter&lt;/em&gt;. De inmediato te aparecerá en pantalla la documentación de la palabra en cuestión.&lt;/p&gt;
@@ -3831,7 +3831,7 @@ Related help topics: TRUTHVALUE
 &lt;span class="kc"&gt;True&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Este ejemplo demustra que puedes emplear la palabra reservada &lt;code&gt;match&lt;/code&gt; como un nombre de variable. En este caso, Python no levanta una excepción como lo hace con otras palabras reservadas.&lt;/p&gt;
+&lt;p&gt;Este ejemplo demuestra que puedes emplear la palabra reservada &lt;code&gt;match&lt;/code&gt; como un nombre de variable. En este caso, Python no levanta una excepción como lo hace con otras palabras reservadas.&lt;/p&gt;
 &lt;p&gt;En cualquier caso, debes evitar emplear palabras clave como nombres o identificadores de variables, funciones, clases, módulos, paquetes o de cualquier otra estructura u objeto Python. Еmplearlas de esta forma podría generar problemas difíciles de identificar y resolver en tu código.&lt;/p&gt;
 &lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
 &lt;p&gt;Ya has adquirido conocimientos elementales sobre las palabras clave o palabras reservadas de Python. Sabes cómo obtener la lista de palabras reservadas disponibles en tu entorno Python y cómo obtener ayuda sobre estas palabras y su papel en la sintaxis del lenguaje.&lt;/p&gt;
@@ -3839,7 +3839,7 @@ Related help topics: TRUTHVALUE
 &lt;ul&gt;
 &lt;li&gt;La definición de &lt;strong&gt;palabra clave&lt;/strong&gt; o &lt;strong&gt;reservada&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;Las &lt;strong&gt;palabras clave de Python&lt;/strong&gt; y su significado&lt;/li&gt;
-&lt;li&gt;Como usar la función &lt;code&gt;help()&lt;/code&gt; para objeter &lt;strong&gt;ayuda&lt;/strong&gt; sobre las palabras clave&lt;/li&gt;
+&lt;li&gt;Como usar la función &lt;code&gt;help()&lt;/code&gt; para obtener &lt;strong&gt;ayuda&lt;/strong&gt; sobre las palabras clave&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Con estos conocimientos tienes las bases y las herramientas necesarias para profundizar en los conceptos y definiciones que encierra cada una de las palabras clave de Python.&lt;/p&gt;
 &lt;h2 id="lecturas-sugeridas"&gt;Lecturas sugeridas&lt;/h2&gt;
@@ -3877,16 +3877,16 @@ Related help topics: TRUTHVALUE
 &lt;li&gt;Creación de herramientas de consola&lt;/li&gt;
 &lt;li&gt;Ciencia de datos&lt;/li&gt;
 &lt;li&gt;Desarrollo de juegos&lt;/li&gt;
-&lt;li&gt;Aprendisaje automático&lt;/li&gt;
+&lt;li&gt;Aprendizaje automático&lt;/li&gt;
 &lt;li&gt;Inteligencia artificial&lt;/li&gt;
 &lt;li&gt;DevOps y automatización&lt;/li&gt;
 &lt;li&gt;Sistemas embebidos&lt;/li&gt;
 &lt;li&gt;Robótica&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Ten en cuenta que esta lista es solo una muestra de todo el ámplio espectro de disciplinas donde Python se ha ganado un lugar importante.&lt;/p&gt;
+&lt;p&gt;Ten en cuenta que esta lista es solo una muestra de todo el amplio espectro de disciplinas donde Python se ha ganado un lugar importante.&lt;/p&gt;
 &lt;h2 id="como-escribo-el-hola-mundo-en-python"&gt;Como escribo el &lt;code&gt;Hola, mundo!&lt;/code&gt; en Python?&lt;/h2&gt;
 &lt;p&gt;Ahora que sabes de qué va Python Scouts y principalmente qué es Python y dónde puedes emplearlo, es tiempo de escribir tu primer programa en el lenguaje. Como es tradición, el primer programa que se escribe cuando comienzas a aprender un lenguaje de programación es el &lt;em&gt;Hola, mundo!&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Se trata de un progmama muy elemental que muestra la frase &lt;em&gt;Hola, mundo!&lt;/em&gt; en la pantalla de tu computadora.&lt;/p&gt;
+&lt;p&gt;Se trata de un programa muy elemental que muestra la frase &lt;em&gt;Hola, mundo!&lt;/em&gt; en la pantalla de tu computadora.&lt;/p&gt;
 &lt;p&gt;Python ofrece dos modos básicos de trabajo. Puedes trabajar en modo:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Interactivo&lt;/li&gt;
@@ -3902,7 +3902,7 @@ Related help topics: TRUTHVALUE
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Este comando inicia el interprete Python. El interprete es el programa que te permite interpretar y ejecutar código escrito en lenguaje Python.&lt;/p&gt;
-&lt;p&gt;En general, notarás que las personas usan el término Python para referirse tanto al lenguaje como al interprete, pero debes saber que hay una diferenncias entre estos conceptos para que puedas identificar de qué se está hablando en cada contexto.&lt;/p&gt;
+&lt;p&gt;En general, notarás que las personas usan el término Python para referirse tanto al lenguaje como al interprete, pero debes saber que hay una diferencias entre estos conceptos para que puedas identificar de qué se está hablando en cada contexto.&lt;/p&gt;
 &lt;p&gt;Una vez que ejecutes el comando anterior, verás en pantalla un mensaje de presentación de tu actual versión de Python e inmediatamente te aparecerá el indicador (&lt;em&gt;prompt&lt;/em&gt;) primario del interprete. Este indicador consiste en tres signos de &lt;em&gt;mayor que&lt;/em&gt;, &lt;code&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Ahora escribe el siguiente código y presiona &lt;em&gt;Enter&lt;/em&gt; al final:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Hola, mundo!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -3910,13 +3910,11 @@ Related help topics: TRUTHVALUE
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Al presionar enter, Python ejecuta el código que has introducido e inmediatamente imprime &lt;em&gt;Hola, mundo!&lt;/em&gt; en la siguiente línea. Y eso es todo! Ya escribiste tu &lt;em&gt;Hola, mundo!&lt;/em&gt; en Python.&lt;/p&gt;
-&lt;p&gt;Hay dos cosas fundamentales que debes saber sobre esta línea de código. Primeramente, se trata de una llamada a la función integrada (&lt;em&gt;built-in&lt;/em&gt;) &lt;a href="https://docs.python.org/3/library/functions.html#print"&gt;&lt;code&gt;print()&lt;/code&gt;&lt;/a&gt;. Como su nombre sugiere, esta función te permite imprimir texto en la salida estándard de tú computadora. Esta salida es tu pantalla por defecto.&lt;/p&gt;
+&lt;p&gt;Hay dos cosas fundamentales que debes saber sobre esta línea de código. Primeramente, se trata de una llamada a la función integrada (&lt;em&gt;built-in&lt;/em&gt;) &lt;a href="https://docs.python.org/3/library/functions.html#print"&gt;&lt;code&gt;print()&lt;/code&gt;&lt;/a&gt;. Como su nombre sugiere, esta función te permite imprimir texto en la salida estándar de tú computadora. Esta salida es tu pantalla por defecto.&lt;/p&gt;
 &lt;p&gt;Como argumento a la función &lt;code&gt;print()&lt;/code&gt;, empleas la frase o mensaje que deseas imprimir en pantalla. En este caso, el habitual saludo &lt;em&gt;Hola, mundo!&lt;/em&gt; Y con eso ya escribiste tu primer programa Python.&lt;/p&gt;
 &lt;h3 id="hola-mundo-desde-un-archivo-py"&gt;&lt;code&gt;Hola, mundo!&lt;/code&gt; desde un archivo &lt;code&gt;.py&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;Para escribir tu programa &lt;em&gt;Hola, mundo!&lt;/em&gt; y ejecutarlo desde un archivo Python, abre tu editor de código preferido y crea un nuevo archivo llamado &lt;code&gt;hola.py&lt;/code&gt; en tu carpeta de trabajo. Luego añade el mismo código de la sección anterior y salva los cambios:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# hola.py&lt;/span&gt;
-
-&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Hola, mundo!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Hola, mundo!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Una vez que hayas creado tu archivo &lt;code&gt;hola.py&lt;/code&gt; y añadido el código necesario, puedes abrir una nueva terminal y ejecutar el siguiente comando:&lt;/p&gt;
@@ -3926,7 +3924,7 @@ Related help topics: TRUTHVALUE
 
 &lt;p&gt;En este caso, el interprete Python corre en modo script usando tú archivo &lt;code&gt;hola.py&lt;/code&gt; como entrada. El interprete lee tu código y lo ejecuta línea por línea produciendo la salida deseada.&lt;/p&gt;
 &lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
-&lt;p&gt;Has aprendido a escribir tu primer programa, el &lt;em&gt;Hola, mundo!&lt;/em&gt; usuando Python. Los pasos necesarios para escribir y ejecutar este programa se resumen en:&lt;/p&gt;
+&lt;p&gt;Has aprendido a escribir tu primer programa, el &lt;em&gt;Hola, mundo!&lt;/em&gt; usando Python. Los pasos necesarios para escribir y ejecutar este programa se resumen en:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Crea un archivo Python (&lt;code&gt;hola.py&lt;/code&gt;) en tu editor de código favorito&lt;/li&gt;
 &lt;li&gt;Añade la línea de código &lt;code&gt;print("Hola, mundo!")&lt;/code&gt; y salva los cambios&lt;/li&gt;

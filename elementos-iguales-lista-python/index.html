@@ -146,15 +146,15 @@
             <div class="row">
                 <div class="col">
                   <div class="toc"><span class="toctitle">Contenidos</span><ul>
-<li><a href="#convertir-la-lista-en-un-conjunto-y-comprobar-si-contine-un-unico-elemento">Convertir la lista en un conjunto y comprobar si contine un único elemento</a></li>
+<li><a href="#convertir-la-lista-en-un-conjunto-y-comprobar-si-contiene-un-unico-elemento">Convertir la lista en un conjunto y comprobar si contiene un único elemento</a></li>
 <li><a href="#usar-la-funcion-all-para-comparar-el-primer-elemento-con-los-restantes">Usar la función all() para comparar el primer elemento con los restantes</a></li>
 <li><a href="#ordenar-la-lista-y-comparar-el-primer-y-el-ultimo-elemento">Ordenar la lista y comparar el primer y el último elemento</a></li>
 <li><a href="#en-resumen">En resumen</a></li>
 </ul>
 </div>
-<h2 id="convertir-la-lista-en-un-conjunto-y-comprobar-si-contine-un-unico-elemento">Convertir la lista en un conjunto y comprobar si contine un único elemento</h2>
+<h2 id="convertir-la-lista-en-un-conjunto-y-comprobar-si-contiene-un-unico-elemento">Convertir la lista en un conjunto y comprobar si contiene un único elemento</h2>
 <p>Una vía rápida para determinar si todos los elementos de una lista son iguales es convertir la lista en un conjunto usando la clase <a href="https://docs.python.org/es/3/library/functions.html#func-set"><code>set()</code></a>.</p>
-<aside>
+<aside class="note">
 Como premisa y en aras de la simplicidad, asumiremos que se trata de una lista no vacía que contiene elementos del mismo tipo de dato, ya sea números, cadenas, u otros.
 </aside>
 
@@ -184,7 +184,7 @@ Como premisa y en aras de la simplicidad, asumiremos que se trata de una lista n
 <p>Esta técnica para determinar si todos los elementos de una lista son iguales emplea una expresión generadora que produce valores booleanos que resultan de evaluar la expresión <code>item == letters[0]</code>. Luego, <code>all()</code> verifica si todos los elementos resultantes son <code>True</code>.</p>
 <h2 id="ordenar-la-lista-y-comparar-el-primer-y-el-ultimo-elemento">Ordenar la lista y comparar el primer y el último elemento</h2>
 <p>Otra manera de saber si todos los elementos de una lista son iguales es ordenar la lista y comparar el primer y el último elemento.</p>
-<aside>
+<aside class="note">
 Debes saber que esta técnica puedes ser muy ineficiente especialmente cuando tienes una lista muy larga, pues el algoritmo de ordenamiento puede tomar un tiempo considerable. Además, ordenar la lista modifica el orden original de los elementos, lo cual puede no ser deseado.
 </aside>
 

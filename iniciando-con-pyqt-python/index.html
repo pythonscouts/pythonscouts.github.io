@@ -307,7 +307,7 @@ PS&gt; venv\Scripts\activate.bat
 <div class="text-center mb-5 lead"><em>Botones en PyQt</em></div>
 
 <p>Botones como estos son quizás los widgets más utilizados en cualquier GUI. Cuando alguien hace clic en ellos, tu aplicación ordena a la computadora realizar acciones. Así es como puedes ejecutar cálculos cuando un usuario hace clic en un botón.</p>
-<aside>
+<aside class="note">
     En este ejemplo, empleas una clase llamada <code>QVBoxLayout</code> que representa un gestor de disposición que permite organizar los widgets con una orientación vertical. Más sobre gestores de disposición en un momento.
 </aside>
 
@@ -656,7 +656,7 @@ PS&gt; venv\Scripts\activate.bat
 
 <p>Primeramente, creas una clase llamada <code>Window</code> que hereda de <code>QMainWindow</code>. Dentro del método <code>.__init__()</code>, llamas al inicializador de la clase base. El argumento <code>parent</code> se establece en <code>None</code> porque esta es la ventana principal de tu aplicación, por lo que no debe tener una ventana padre.</p>
 <p>Luego, estableces el título de la ventana y creas un objeto <code>QLabel</code> para usar como widget central de la ventana. Finalmente, llamas los métodos no públicos <code>._createMenu()</code>, <code>._createToolBar()</code>, <code>._createStatusBar()</code> para crear el menú principal, una barra de herramientas y la barra de estado.</p>
-<p>El widget central y la barra de estado muestran mensajes identificativos. El menú y la barra de herramientas mostrarán una opcion para salir de la aplicación.</p>
+<p>El widget central y la barra de estado muestran mensajes identificativos. El menú y la barra de herramientas mostrarán una opción para salir de la aplicación.</p>
 <p>En macOS, cuando ejecutas la aplicación de ejemplo anterior, obtendrás una ventana como la siguiente:</p>
 <p><img src="../images/articles/iniciando-con-pyqt-python/pyqt-ventana-principal-macOS.png" class="mx-auto d-block mt-2" alt="Ventana principal en PyQt - macOS"></p>
 <div class="text-center mb-5 lead"><em>Ventana principal en PyQt - macOS</em></div>

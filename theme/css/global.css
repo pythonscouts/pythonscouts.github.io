@@ -63,6 +63,7 @@ button:hover {
     color: white;
 }
 
+/* Custom pagination */
 .custom-pagination .page-link {
     color: #008800;
     background-color: #D1E6DD;
