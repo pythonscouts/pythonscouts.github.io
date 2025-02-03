@@ -1,5 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"></link><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"></link><id>https://pythonscouts.com/</id><updated>2025-01-21T21:40:00+01:00</updated><subtitle>Una web en Español para aprender a programar con Python.</subtitle><entry><title>Iniciando con PySide6 para desarrollo GUI</title><link href="https://pythonscouts.com/iniciando-con-pyside6-python/" rel="alternate"></link><published>2025-01-21T21:40:00+01:00</published><updated>2025-01-21T21:40:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-01-21:/iniciando-con-pyside6-python/</id><summary type="html">&lt;p&gt;En Python, PySide6 es una biblioteca que proporciona el enlace oficial de Python con Qt, que es un framework de desarrollo de aplicaciones de interfaz gráfica de usuario (GUI).&lt;/p&gt;</summary><content type="html">&lt;p&gt;Para desarrollar este tipo de aplicaciones en Python, puedes emplear una amplia variedad de bibliotecas y frameworks, incluyendo &lt;a href="https://docs.python.org/3/library/tkinter.html"&gt;Tkinter&lt;/a&gt;, &lt;a href="https://realpython.com/python-gui-with-wxpython/"&gt;wxPython&lt;/a&gt;, &lt;a href="https://www.riverbankcomputing.com/software/pyqt/intro"&gt;PyQt&lt;/a&gt;, entre otras. Sin embargo, &lt;a href="https://wiki.qt.io/Qt_for_Python"&gt;PySide6&lt;/a&gt; es una de las bibliotecas más populares y sólidas disponibles.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"></link><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"></link><id>https://pythonscouts.com/</id><updated>2025-02-03T10:20:00+01:00</updated><subtitle>Una web en Español para aprender a programar con Python.</subtitle><entry><title>Cómo crear un entorno virtual de Python?</title><link href="https://pythonscouts.com/entorno-virtual-python/" rel="alternate"></link><published>2025-02-03T10:20:00+01:00</published><updated>2025-02-03T10:20:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-02-03:/entorno-virtual-python/</id><summary type="html">&lt;p&gt;Un entorno virtual en Python es un espacio de trabajo en el que puedes ejecutar código e instalar paquetes sin afectar la instalación global de Python.&lt;/p&gt;</summary><content type="html">&lt;p&gt;En esta guía rápida, aprenderás los pasos para crear un entorno virtual en Windows, macOS y Linux (Debian/Ubuntu).&lt;/p&gt;
+&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#conociendo-los-entornos-virtuales-de-python"&gt;Conociendo los entornos virtuales de Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#crear-un-entorno-virtual-python-en-windows"&gt;Crear un entorno virtual Python en Windows&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#crear-un-entorno-virtual-python-en-macos"&gt;Crear un entorno virtual Python en macOS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#crear-un-entorno-virtual-python-en-linux-debianubuntu"&gt;Crear un entorno virtual Python en Linux (Debian/Ubuntu)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#resumiendo"&gt;Resumiendo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="conociendo-los-entornos-virtuales-de-python"&gt;Conociendo los entornos virtuales de Python&lt;/h2&gt;
+&lt;p&gt;Los &lt;strong&gt;entornos virtuales&lt;/strong&gt; de Python te sirven para gestionar dependencias de manera independiente para cada uno de tus proyectos. Esto te evita conflictos entre diferentes versiones de bibliotecas.&lt;/p&gt;
+&lt;p&gt;En la práctica, un entorno virtual:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Crea una copia aislada de Python y &lt;a href="https://pip.pypa.io/en/stable/"&gt;&lt;code&gt;pip&lt;/code&gt;&lt;/a&gt; dentro de un directorio específico.&lt;/li&gt;
+&lt;li&gt;Permite instalar paquetes sin interferir con otros proyectos o con el sistema operativo.&lt;/li&gt;
+&lt;li&gt;Facilita la replicación de entornos en distintos dispositivos o servidores.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="crear-un-entorno-virtual-python-en-windows"&gt;Crear un entorno virtual Python en Windows&lt;/h2&gt;
+&lt;p&gt;Los requisitos previos para crear un entorno virtual de Python en Windows son los siguientes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tener &lt;a href="https://pythonscouts.com/instalar-python-windows/"&gt;instalado&lt;/a&gt; Python.&lt;/li&gt;
+&lt;li&gt;Asegurarse de que &lt;code&gt;python&lt;/code&gt; y &lt;code&gt;pip&lt;/code&gt; funcionan correctamente.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Una vez que tu sistema cumple los requisitos previos, puedes crear un entorno virtual de Python siguiendo los pasos que a continuación se describen.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Abrir símbolo del sistema (&lt;code&gt;cmd.exe&lt;/code&gt;) o la aplicación PowerShell.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Navegar a la carpeta donde deseas crear el entorno virtual:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;PS&amp;gt; cd ruta\al\proyecto
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Crear el entorno virtual:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;PS&amp;gt; py -m venv venv\
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Activar el entorno virtual:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;PS&amp;gt; venv\Scripts\activate
+(venv) PS&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Desactivar el entorno y regresar al indicador (prompt) del sistema:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;PS&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;deactivate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;aside class="note"&gt;
+Usar &lt;code&gt;venv&lt;/code&gt; como nombre de un entorno virtual de Python es una práctica común. Sin embargo, no es obligatorio hacerlo, puedes emplear el nombre que desees.
+&lt;/aside&gt;
+
+&lt;h2 id="crear-un-entorno-virtual-python-en-macos"&gt;Crear un entorno virtual Python en macOS&lt;/h2&gt;
+&lt;p&gt;En macOS, para crear un entorno virtual de Python, solo necesitas tener Python correctamente &lt;a href="https://pythonscouts.com/instalar-python-macos/"&gt;instalado&lt;/a&gt; en tu sistema. Una vez instalado, puedes seguir los siguientes pasos para crear un entorno virtual de Python:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Abrir la Terminal.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Navegar a la carpeta donde deseas crear el entorno virtual:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;ruta/al/proyecto
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Crear el entorno virtual:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;python3&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;venv&lt;span class="w"&gt; &lt;/span&gt;venv
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Activar el entorno virtual:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;source&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;venv/bin/activate
+&lt;span class="gp gp-VirtualEnv"&gt;(venv)&lt;/span&gt; &lt;span class="gp"&gt;$&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Desactivar el entorno y regresar al indicador del sistema:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;deactivate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id="crear-un-entorno-virtual-python-en-linux-debianubuntu"&gt;Crear un entorno virtual Python en Linux (Debian/Ubuntu)&lt;/h2&gt;
+&lt;p&gt;Si tienes un sistema Linux basado en Debian o Ubuntu, entonces los requisitos son los siguientes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tener &lt;a href="http://localhost:8000/instalar-python-linux-debian-ubuntu/"&gt;instalado&lt;/a&gt; Python&lt;/li&gt;
+&lt;li&gt;Tener el módulo &lt;code&gt;venv&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;En Ubuntu, el módulo &lt;code&gt;venv&lt;/code&gt; no viene instalado por defecto. Si ese es tu sistema, entonces puedes instalar &lt;code&gt;venv&lt;/code&gt; con el siguiente comando:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;update&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;python3-venv
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Luego de cumplir con los requisitos iniciales, puedes crear un entorno virtual Python siguiendo los pasos a continuación:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Abrir la terminal o línea de comandos.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Navegar a la carpeta del proyecto:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;ruta/al/proyecto
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Crear el entorno virtual:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;python3&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;venv&lt;span class="w"&gt; &lt;/span&gt;venv
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Activar el entorno virtual:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;source&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;venv/bin/activate
+&lt;span class="gp gp-VirtualEnv"&gt;(venv)&lt;/span&gt; &lt;span class="gp"&gt;$&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Desactivar el entorno y regresar al indicador del sistema:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;deactivate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
+&lt;p&gt;En Python, las buenas prácticas recomiendan el empleo de entornos virtuales dedicados para cada uno de tus proyectos. Siguiendo los pasos de esta guía, puedes crear y activar entornos virtuales de Python de manera eficiente en el sistema operativo que estés usando en tu computadora.&lt;/p&gt;</content><category term="Guías"></category><category term="python"></category></entry><entry><title>Iniciando con PySide6 para desarrollo GUI</title><link href="https://pythonscouts.com/iniciando-con-pyside6-python/" rel="alternate"></link><published>2025-01-21T21:40:00+01:00</published><updated>2025-01-21T21:40:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-01-21:/iniciando-con-pyside6-python/</id><summary type="html">&lt;p&gt;En Python, PySide6 es una biblioteca que proporciona el enlace oficial de Python con Qt, que es un framework de desarrollo de aplicaciones de interfaz gráfica de usuario (GUI).&lt;/p&gt;</summary><content type="html">&lt;p&gt;Para desarrollar este tipo de aplicaciones en Python, puedes emplear una amplia variedad de bibliotecas y frameworks, incluyendo &lt;a href="https://docs.python.org/3/library/tkinter.html"&gt;Tkinter&lt;/a&gt;, &lt;a href="https://realpython.com/python-gui-with-wxpython/"&gt;wxPython&lt;/a&gt;, &lt;a href="https://www.riverbankcomputing.com/software/pyqt/intro"&gt;PyQt&lt;/a&gt;, entre otras. Sin embargo, &lt;a href="https://wiki.qt.io/Qt_for_Python"&gt;PySide6&lt;/a&gt; es una de las bibliotecas más populares y sólidas disponibles.&lt;/p&gt;
 &lt;p&gt;En este tutorial, aprenderás los conceptos básicos para construir aplicaciones GUI usando Python y PySide6.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;En este tutorial, aprenderás cómo:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
