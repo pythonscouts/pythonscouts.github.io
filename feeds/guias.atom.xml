@@ -130,6 +130,10 @@ Usar &lt;code&gt;venv&lt;/code&gt; como nombre de un entorno virtual de Python e
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;deactivate
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;aside class="note"&gt;
+En Ubuntu, &lt;code&gt;pip&lt;/code&gt; tampoco viene instalado por defecto. Para poder usar esta herramienta, debes instalarla con el comando &lt;code&gt;sudo apt install python3-pip&lt;/code&gt;.
+&lt;/aside&gt;
+
 &lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
 &lt;p&gt;En Python, las buenas prácticas recomiendan el empleo de entornos virtuales dedicados para cada uno de tus proyectos. Siguiendo los pasos de esta guía, puedes crear y activar entornos virtuales de Python de manera eficiente en el sistema operativo que estés usando en tu computadora.&lt;/p&gt;</content><category term="Guías"></category><category term="python"></category></entry><entry><title>Cómo instalar Python en tu sistema operativo Debian o Ubuntu Linux?</title><link href="https://pythonscouts.com/instalar-python-linux-debian-ubuntu/" rel="alternate"></link><published>2025-01-20T15:45:00+01:00</published><updated>2025-01-20T15:45:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-01-20:/instalar-python-linux-debian-ubuntu/</id><summary type="html">&lt;p&gt;Instalar Python en tu computadora es el primer paso para aprender el lenguaje. Si usas Debian/Ubuntu, aquí encontrarás los pasos necesarios para instalar Python.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Emplearás &lt;code&gt;apt&lt;/code&gt; que es el gestor de paquetes de tu distribución Debian/Ubuntu y derivadas. Es recomendable que tengas experiencia de trabajo en sistemas Linux basados en Debian, como puede ser Ubuntu o Linux Mint, para poder seguir esta guía de instalación de Python.&lt;/p&gt;
 &lt;p&gt;Es especialmente importante que tengas conocimientos básicos sobre la terminal del sistema y sepas cómo emplearla.&lt;/p&gt;
