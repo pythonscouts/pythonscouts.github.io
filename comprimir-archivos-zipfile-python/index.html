@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es-es" class="h-100">
+
+<head>
+        <title>
+  Python Scouts - Cómo comprimir archivos con zipfile en Python?
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprimir una serie de archivos con el fin de ahorrar espacio en disco puede ser una tarea necesaria en tu trabajo diario con Python. En esta guía rápida, aprenderás cómo hacerlo.">
+    <meta name="keywords" content="comprimir archivos python">
+    <!-- RSS feeds -->
+    <link href="https://pythonscouts.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Full Atom Feed" />
+    <link href="https://pythonscouts.com/feeds/guias.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Categories Atom Feed" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://pythonscouts.com/comprimir-archivos-zipfile-python/">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css">
+    <!-- Stork Search -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css">
+
+
+    <!-- Article tags -->
+    <meta name="article:tag" content="python" />
+    <meta name="article:tag" content="gui" />
+    <meta name="article:tag" content="pyside6" />
+    <meta name="article:tag" content="linux" />
+    <meta name="article:tag" content="tkinter" />
+    <meta name="article:tag" content="pyqt" />
+    <meta name="article:tag" content="windows" />
+    <meta name="article:tag" content="macos" />
+    <meta name="article:tag" content="fundamentos" />
+
+    <!-- Twitter cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lpozo78">
+    <meta name="twitter:creator" content="@lpozo78">
+    <meta name="twitter:title" content="Cómo comprimir archivos con zipfile en Python? - Python Scouts">
+    <meta name="twitter:description" content="Comprimir una serie de archivos con el fin de ahorrar espacio en disco puede ser una tarea necesaria en tu trabajo diario con Python. En esta guía rápida, aprenderás cómo hacerlo.">
+    <meta name="twitter:image" content="https://picsum.photos/id/368/300/200.webp">
+    <!-- Linkedin card -->
+    <meta property="og:title" content="Python Scouts">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="comprimir-archivos-zipfile-python/">
+    <meta property="og:description" content="Comprimir una serie de archivos con el fin de ahorrar espacio en disco puede ser una tarea necesaria en tu trabajo diario con Python. En esta guía rápida, aprenderás cómo hacerlo.">
+    <meta property="og:image" content="https://picsum.photos/id/368/300/200.webp">
+    <!-- Custom CSS for article -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-R3C5PFSQ1S');
+</script>
+
+<body class="d-flex flex-column h-100">
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-md bg-white fixed-top border-bottom">
+        <div class="container-md content-px">
+            <a class="navbar-brand" href="/">
+            <img
+            src="https://pythonscouts.com/images/identity/header.webp"
+            alt="Python Scouts"
+            width="150"
+            height="50"
+            >
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Menú de Navegación">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav m-auto nav-link">
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/guias/" aria-current="page">
+                    Guías
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/series/" aria-current="page">
+                    Series
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/tutoriales/" aria-current="page">
+                    Tutoriales
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/acerca/" aria-current="page">
+                    Acerca
+                </a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <div class="stork-wrapper">
+                <input
+                class="stork-input"
+                type="search"
+                placeholder="Buscar"
+                aria-label="Search"
+                data-stork="sitesearch"
+                >
+                </div>
+            </form>
+            </div>
+        </div>
+    </nav>
+    <main class="container-md content-px py-3">
+        <div class="stork-wrapper">
+            <div data-stork="sitesearch-output" class="stork-output"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+            </div>
+        </div>
+
+    <!-- Article Header -->
+    <div class="row pt-3 pb-5">
+        <div class="col-md-6 py-3">
+            <h1 class="display-5">
+                <strong>Cómo comprimir archivos con zipfile en Python?</strong>
+            </h1>
+            <div class="text-muted small py-3">
+                Publicado el martes, 11 de febrero del 2025
+            </div>
+            <div class="py-3">
+                <img src="https://pythonscouts.com/images/authors/leodanis-pozo-ramos.webp" alt="Leodanis Pozo Ramos" class="rounded-circle border" width="70" height="70">
+                <a href="https://pythonscouts.com/author/leodanis-pozo-ramos.html" style="padding-left: 10px;">
+                    Leodanis Pozo Ramos
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6 py-3">
+            <img src="https://picsum.photos/id/368/200/150.webp" class="img-fluid w-100">
+        </div>
+    </div>
+          <!-- Article Content -->
+        <article>
+          <p>Comprimir una serie de archivos con el fin de ahorrar espacio en disco puede ser una tarea necesaria en tu trabajo diario con Python. En esta guía rápida, aprenderás cómo hacerlo.</p>
+            <div class="row">
+                <div class="col">
+                  <p>El módulo <a href="https://docs.python.org/es/3.13/library/zipfile.html#module-zipfile"><code>zipfile</code></a> de la biblioteca estándar de Python permite manipular archivos en formato <a href="https://en.wikipedia.org/wiki/ZIP_(file_format)">ZIP</a> que es un formato estándar para comprimir y archivar datos. Con este módulo, puedes crear, leer, escribir, extraer y listar archivos contenidos dentro de archivos ZIP.</p>
+<div class="toc"><span class="toctitle">Contenidos</span><ul>
+<li><a href="#pasos-resumidos">Pasos resumidos</a></li>
+<li><a href="#paso-1-importar-el-modulo-zipfile">Paso 1: Importar el módulo zipfile</a></li>
+<li><a href="#paso-2-instanciar-la-clase-zipfile">Paso 2: Instanciar la clase ZipFile</a></li>
+<li><a href="#paso-3-elegir-el-metodo-de-compresion">Paso 3: Elegir el método de compresión</a></li>
+<li><a href="#paso-4-comprimir-los-archivos-en-el-archivo-zip">Paso 4: Comprimir los archivos en el archivo ZIP</a></li>
+<li><a href="#resumiendo">Resumiendo</a></li>
+</ul>
+</div>
+<h2 id="pasos-resumidos">Pasos resumidos</h2>
+<p>Para comprimir archivos usando el módulo <code>zipfile</code> en Python, puedes seguir los siguientes pasos:</p>
+<ol>
+<li>Importar el módulo <code>zipfile</code>.</li>
+<li>Instanciar la clase <a href="https://docs.python.org/es/3.13/library/zipfile.html#zipfile.ZipFile"><code>ZipFile</code></a> en modo de escritura (<code>"w"</code>) para crear un nuevo archivo ZIP.</li>
+<li>Elegir el método de compresión.</li>
+<li>Comprimir los archivos en el archivo ZIP usando el método <code>.write()</code>.</li>
+</ol>
+<p>Estos pasos te permitirán crear y comprimir archivos en un archivo ZIP utilizando Python. El código necesario es el siguiente:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">zipfile</span>
+
+<span class="k">with</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span>
+    <span class="s2">&quot;archivo.zip&quot;</span><span class="p">,</span>
+    <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">,</span>
+    <span class="n">compression</span><span class="o">=</span><span class="n">zipfile</span><span class="o">.</span><span class="n">ZIP_DEFLATED</span>
+<span class="p">)</span> <span class="k">as</span> <span class="n">zip_file</span><span class="p">:</span>
+    <span class="n">zip_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;archivo_0.txt&quot;</span><span class="p">)</span>
+    <span class="n">zip_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;archivo_1.txt&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>A continuación una discusión más detallada de cada uno de estos pasos y su código Python asociado.</p>
+<h2 id="paso-1-importar-el-modulo-zipfile">Paso 1: Importar el módulo <code>zipfile</code></h2>
+<p>Primero, necesitas importar el módulo <code>zipfile</code> en tu script:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">zipfile</span>
+</code></pre></div>
+
+<h2 id="paso-2-instanciar-la-clase-zipfile">Paso 2: Instanciar la clase <code>ZipFile</code></h2>
+<p>La clase <code>ZipFile</code> funciona de modo similar a la función incorporada <code>open()</code> de Python, permitiéndote abrir archivos ZIP. Para instanciar la clase, emplearás tres argumentos:</p>
+<ol>
+<li><strong><code>file</code></strong>: El nombre del archivo ZIP resultante.</li>
+<li><strong><code>mode</code></strong>: El modo de apertura que puede ser modo de lectura (<code>"r"</code>), escritura (<code>"w"</code>), anexar (<code>"a"</code>) y exclusivo (<code>"x"</code>).</li>
+<li><strong><code>compression</code></strong>: El método de compresión deseado.</li>
+</ol>
+<p>Esta clase funciona como un gestor de contexto, por lo que puedes utilizarla dentro de una sentencia <code>with</code>. Como nombre de archivo, puedes emplear cualquier identificador de archivo válido en tu sistema operativo seguido de la extensión <code>.zip</code>.</p>
+<h2 id="paso-3-elegir-el-metodo-de-compresion">Paso 3: Elegir el método de compresión</h2>
+<p>Para comprimir archivos mientras los escribes en un archivo ZIP, puedes usar alguno de los modos de compresión siguientes con la constante apropiada:</p>
+<table>
+<thead>
+<tr>
+<th>Método de compresión</th>
+<th>Constante</th>
+<th>Módulo requerido</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deflate</td>
+<td><code>zipfile.ZIP_DEFLATED</code></td>
+<td><code>zlib</code></td>
+</tr>
+<tr>
+<td>Bzip2</td>
+<td><code>zipfile.ZIP_BZIP2</code></td>
+<td><code>bz2</code></td>
+</tr>
+<tr>
+<td>LZMA</td>
+<td><code>zipfile.ZIP_LZMA</code></td>
+<td><code>lzma</code></td>
+</tr>
+</tbody>
+</table>
+<p>Estos son los métodos de compresión que actualmente puedes usar con <code>ZipFile</code>. Usar un método diferente generará un <code>NotImplementedError</code>. El método más comúnmente usado es <code>ZIP_DEFLATED</code>.</p>
+<h2 id="paso-4-comprimir-los-archivos-en-el-archivo-zip">Paso 4: Comprimir los archivos en el archivo ZIP</h2>
+<p>Ahora, supón que necesitas comprimir los archivos <code>archivo_0.txt</code> y <code>archivo_1.txt</code> que se encuentran en tu directorio de trabajo actual. Puedes lograrlo con el siguiente código:</p>
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span>
+    <span class="s2">&quot;archivo.zip&quot;</span><span class="p">,</span>
+    <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">,</span>
+    <span class="n">compression</span><span class="o">=</span><span class="n">zipfile</span><span class="o">.</span><span class="n">ZIP_DEFLATED</span>
+<span class="p">)</span> <span class="k">as</span> <span class="n">zip_file</span><span class="p">:</span>
+    <span class="n">zip_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;archivo_0.txt&quot;</span><span class="p">)</span>
+    <span class="n">zip_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;archivo_1.txt&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Este código crea un archivo ZIP llamado <code>archivo.zip</code> y lo abre en modo de escritura. Luego, utiliza el algoritmo Deflate para comprimir los archivos dentro del archivo ZIP. Dentro del bloque de la sentencia <code>with</code>, se agregan los archivos a comprimir utilizando el método <code>.write()</code>.</p>
+<h2 id="resumiendo">Resumiendo</h2>
+<p>Para comprimir archivos usando el módulo <code>zipfile</code> en Python, puedes seguir los siguientes pasos:</p>
+<ol>
+<li>Importar el módulo <code>zipfile</code>.</li>
+<li>Instanciar la clase <a href="https://docs.python.org/es/3.13/library/zipfile.html#zipfile.ZipFile"><code>ZipFile</code></a> en modo de escritura (<code>"w"</code>) para crear un nuevo archivo ZIP.</li>
+<li>Elegir el método de compresión.</li>
+<li>Comprimir los archivos en el archivo ZIP usando el método <code>.write()</code>.</li>
+</ol>
+<p>Estos pasos te permiten crear un archivo ZIP y comprimir los archivos deseados utilizando Python.</p>
+              </div>
+            </div>
+        </article>
+
+
+      <!-- Disqus -->
+      <div id="disqus_thread" class="py-5"></div>
+      <script type="text/javascript">
+          var disqus_shortname = 'pythonscouts';
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+      </script>
+
+    </main>
+
+    <!-- Page footer -->
+    <footer class="footer mt-auto bg-gray text-center py-3 border-top border-1">
+        <div class="container">
+        <span class="lead">&copy; 2023 Leodanis Pozo Ramos</span>
+        </div>
+        <p class="pt-3">Imágenes cortesía de <a href="https://picsum.photos/" target="_blank">Picsum</a></p>
+    </footer>
+
+    <!-- JS Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Stroke Scripts -->
+    <script src="https://pythonscouts.com/theme/js/stork.js"></script>
+    <script>
+        stork.initialize("https://pythonscouts.com/theme/js/stork.wasm")
+        stork.downloadIndex("sitesearch", "https://pythonscouts.com/search-index.st")
+        stork.attach("sitesearch")
+    </script>
+
+</body>
+</html>
