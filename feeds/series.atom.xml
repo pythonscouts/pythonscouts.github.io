@@ -247,8 +247,8 @@ El método &lt;code&gt;.keys()&lt;/code&gt; es redundante en este contexto. Iter
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;h2 id="condiciones"&gt;Condiciones&lt;/h2&gt;
-&lt;p&gt;Una &lt;strong&gt;condición&lt;/strong&gt; es una expresión que evalúa si algo es verdadero (&lt;code&gt;True&lt;/code&gt;) o falso (&lt;code&gt;False&lt;/code&gt;). Las condiciones se emplean para controlar el flujo de un programa, permitiendo ejecutar diferentes bloques de código según el resultado obtenido al evaluarlas.&lt;/p&gt;
-&lt;p&gt;En Python, puedes crear varios tipos de condiciones. Por ejemplo, las siguientes condiciones comparan valores numéricos:&lt;/p&gt;
+&lt;p&gt;Una &lt;strong&gt;condición&lt;/strong&gt; es una &lt;a href="https://pythonscouts.com/expresiones-python/"&gt;expresión&lt;/a&gt; que evalúa si algo es verdadero (&lt;code&gt;True&lt;/code&gt;) o falso (&lt;code&gt;False&lt;/code&gt;). Las condiciones se emplean para controlar el flujo de un programa, permitiendo ejecutar diferentes bloques de código según el resultado obtenido al evaluarlas.&lt;/p&gt;
+&lt;p&gt;En Python, puedes crear varios tipos de condiciones. Por ejemplo, las siguientes condiciones comparan &lt;a href="https://pythonscouts.com/valores-python/"&gt;valores&lt;/a&gt; numéricos:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
 &lt;span class="kc"&gt;True&lt;/span&gt;
 
@@ -611,7 +611,7 @@ En muchas implementaciones de MVC, especialmente en aplicaciones web, las accion
 
 &lt;p&gt;En este ejemplo, utilizamos una variable y una constante para crear una expresión que retorna el área de un círculo a partir del radio. Como las expresiones siempre retornan un valor, puedes emplear una variable para mantener una referencia al resultado.&lt;/p&gt;
 &lt;h2 id="comparacion"&gt;Comparación&lt;/h2&gt;
-&lt;p&gt;Por su parte, las expresiones de comparación son aquellas que nos permiten comparar objetos entre sí. Estas expresiones son útiles para decidir el flujo de ejecución de tus programas en función del cumplimiento de determinadas condiciones.&lt;/p&gt;
+&lt;p&gt;Por su parte, las expresiones de comparación son aquellas que nos permiten comparar objetos entre sí. Estas expresiones son útiles para decidir el flujo de ejecución de tus programas en función del cumplimiento de determinadas &lt;a href="https://pythonscouts.com/condicionales-python/"&gt;condiciones&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Por ejemplo, las expresiones siguientes comparan valores empleando &lt;a href="https://pythonscouts.com/operadores-python/#comparacion"&gt;operadores de comparación&lt;/a&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
@@ -822,7 +822,7 @@ Los ejemplos anteriores comparan valores numéricos, sin embargo, también es po
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;h2 id="aritmeticos"&gt;Aritméticos&lt;/h2&gt;
-&lt;p&gt;Los operadores aritméticos son probablemente los más conocidos y empleados. Ellos permiten realizar operaciones aritméticas básicas entre valores numéricos:&lt;/p&gt;
+&lt;p&gt;Los operadores aritméticos son probablemente los más conocidos y empleados. Ellos permiten realizar operaciones aritméticas básicas entre &lt;a href="https://pythonscouts.com/valores-python/"&gt;valores&lt;/a&gt; numéricos:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;# Adición&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
 &lt;span class="mi"&gt;15&lt;/span&gt;
@@ -999,7 +999,7 @@ Los ejemplos anteriores comparan valores numéricos, sin embargo, también es po
 
 &lt;p&gt;Estos operadores son casi idénticos a los que usamos en las matemáticas. El operador de igualdad que se representa con dos símbolos de igualdad (&lt;code&gt;==&lt;/code&gt;) para diferenciarlo del operador de asignación. El operador de desigualdad se representa como &lt;code&gt;!=&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="logicos"&gt;Lógicos&lt;/h2&gt;
-&lt;p&gt;Los operadores lógicos o booleanos permiten crear expresiones lógicas que generalmente se utilizan en condiciones. Python tiene tres operadores booleanos: &lt;code&gt;and&lt;/code&gt;, &lt;code&gt;or&lt;/code&gt;, y &lt;code&gt;not&lt;/code&gt;. Los siguientes ejemplos muestran el funcionamiento de cada operador:&lt;/p&gt;
+&lt;p&gt;Los operadores lógicos o booleanos permiten crear &lt;a href="https://pythonscouts.com/expresiones-python/"&gt;expresiones&lt;/a&gt; lógicas que generalmente se utilizan en &lt;a href="https://pythonscouts.com/condicionales-python/"&gt;condiciones&lt;/a&gt;. Python tiene tres operadores booleanos: &lt;code&gt;and&lt;/code&gt;, &lt;code&gt;or&lt;/code&gt;, y &lt;code&gt;not&lt;/code&gt;. Los siguientes ejemplos muestran el funcionamiento de cada operador:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;# Operador and (y)&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;
 &lt;span class="kc"&gt;True&lt;/span&gt;
@@ -1295,7 +1295,7 @@ Para una comprensión más profunda de las convenciones de estilo en Python, pue
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;message&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Bienvenidos a pythonscouts.com&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;En estos ejemplos, has creado algunas variables mediante la asignación de valores numéricos o de cadena de caracteres.&lt;/p&gt;
+&lt;p&gt;En estos ejemplos, has creado algunas variables mediante la asignación de &lt;a href="https://pythonscouts.com/valores-python/"&gt;valores&lt;/a&gt; numéricos o de cadena de caracteres.&lt;/p&gt;
 &lt;aside class="note"&gt;
 Como regla general, emplearemos nombres de variables en idioma inglés puesto que este es el idioma base para la programación actualmente.
 &lt;/aside&gt;
@@ -1509,8 +1509,8 @@ Como regla general, emplearemos nombres de variables en idioma inglés puesto qu
 &lt;span class="s1"&gt;&amp;#39;Balance general: $5,425.93&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;El campo de reemplazo en esta f-string contiene una variable llamada &lt;code&gt;balance&lt;/code&gt;. Esta variable provee el valor que necesitamos interpolar en la cadena. Luego tenemos el especificador de formato que comienza con el caracter de dos puntos (&lt;code&gt;:&lt;/code&gt;). En este caso, formateas el valor como un valor decimal con dos lugares después del punto y empleando una coma (&lt;code&gt;,&lt;/code&gt;) como separador de miles.&lt;/p&gt;
+&lt;p&gt;El campo de reemplazo en esta f-string contiene una &lt;a href="https://pythonscouts.com/variables-python/"&gt;variable&lt;/a&gt; llamada &lt;code&gt;balance&lt;/code&gt;. Esta variable provee el valor que necesitamos interpolar en la cadena. Luego tenemos el especificador de formato que comienza con el caracter de dos puntos (&lt;code&gt;:&lt;/code&gt;). En este caso, formateas el valor como un valor decimal con dos lugares después del punto y empleando una coma (&lt;code&gt;,&lt;/code&gt;) como separador de miles.&lt;/p&gt;
 &lt;h2 id="conclusiones"&gt;Conclusiones&lt;/h2&gt;
 &lt;p&gt;Ahora sabes lo básico sobre los valores o literales en Python, incluidos valores numéricos como los números enteros, decimales y complejos. También aprendiste sobre los valores de cadenas de caracteres.&lt;/p&gt;
-&lt;p&gt;Entender los valores y cómo crearlos es fundamental para cualquier desarrollador de Python, pues estos son la base sobre la que se construyen expresiones y sentencias más elaboradas.&lt;/p&gt;
+&lt;p&gt;Entender los valores y cómo crearlos es fundamental para cualquier desarrollador de Python, pues estos son la base sobre la que se construyen &lt;a href="https://pythonscouts.com/expresiones-python/"&gt;expresiones&lt;/a&gt; y sentencias más elaboradas.&lt;/p&gt;
 &lt;p&gt;Ahora que dominas estos conceptos, tienes las puertas abiertas para explorar temas más avanzados en Python.&lt;/p&gt;</content><category term="Series"></category><category term="python"></category></entry></feed>

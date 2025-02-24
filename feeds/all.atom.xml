@@ -269,7 +269,7 @@ El método &lt;code&gt;.keys()&lt;/code&gt; es redundante en este contexto. Iter
 
 &lt;p&gt;A continuación una discusión más detallada de cada uno de estos pasos y su código Python asociado.&lt;/p&gt;
 &lt;h2 id="paso-1-importar-el-modulo-zipfile"&gt;Paso 1: Importar el módulo &lt;code&gt;zipfile&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;Primero, necesitas importar el módulo &lt;code&gt;zipfile&lt;/code&gt; en tu script:&lt;/p&gt;
+&lt;p&gt;Primero, necesitas importar el módulo &lt;code&gt;zipfile&lt;/code&gt; en tu &lt;a href="https://pythonscouts.com/ejecutar-script-python/"&gt;script&lt;/a&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;zipfile&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -1144,8 +1144,8 @@ En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; 
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;h2 id="condiciones"&gt;Condiciones&lt;/h2&gt;
-&lt;p&gt;Una &lt;strong&gt;condición&lt;/strong&gt; es una expresión que evalúa si algo es verdadero (&lt;code&gt;True&lt;/code&gt;) o falso (&lt;code&gt;False&lt;/code&gt;). Las condiciones se emplean para controlar el flujo de un programa, permitiendo ejecutar diferentes bloques de código según el resultado obtenido al evaluarlas.&lt;/p&gt;
-&lt;p&gt;En Python, puedes crear varios tipos de condiciones. Por ejemplo, las siguientes condiciones comparan valores numéricos:&lt;/p&gt;
+&lt;p&gt;Una &lt;strong&gt;condición&lt;/strong&gt; es una &lt;a href="https://pythonscouts.com/expresiones-python/"&gt;expresión&lt;/a&gt; que evalúa si algo es verdadero (&lt;code&gt;True&lt;/code&gt;) o falso (&lt;code&gt;False&lt;/code&gt;). Las condiciones se emplean para controlar el flujo de un programa, permitiendo ejecutar diferentes bloques de código según el resultado obtenido al evaluarlas.&lt;/p&gt;
+&lt;p&gt;En Python, puedes crear varios tipos de condiciones. Por ejemplo, las siguientes condiciones comparan &lt;a href="https://pythonscouts.com/valores-python/"&gt;valores&lt;/a&gt; numéricos:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
 &lt;span class="kc"&gt;True&lt;/span&gt;
 
@@ -2717,7 +2717,7 @@ En muchas implementaciones de MVC, especialmente en aplicaciones web, las accion
 
 &lt;p&gt;En este ejemplo, utilizamos una variable y una constante para crear una expresión que retorna el área de un círculo a partir del radio. Como las expresiones siempre retornan un valor, puedes emplear una variable para mantener una referencia al resultado.&lt;/p&gt;
 &lt;h2 id="comparacion"&gt;Comparación&lt;/h2&gt;
-&lt;p&gt;Por su parte, las expresiones de comparación son aquellas que nos permiten comparar objetos entre sí. Estas expresiones son útiles para decidir el flujo de ejecución de tus programas en función del cumplimiento de determinadas condiciones.&lt;/p&gt;
+&lt;p&gt;Por su parte, las expresiones de comparación son aquellas que nos permiten comparar objetos entre sí. Estas expresiones son útiles para decidir el flujo de ejecución de tus programas en función del cumplimiento de determinadas &lt;a href="https://pythonscouts.com/condicionales-python/"&gt;condiciones&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Por ejemplo, las expresiones siguientes comparan valores empleando &lt;a href="https://pythonscouts.com/operadores-python/#comparacion"&gt;operadores de comparación&lt;/a&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
@@ -2928,7 +2928,7 @@ Los ejemplos anteriores comparan valores numéricos, sin embargo, también es po
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;h2 id="aritmeticos"&gt;Aritméticos&lt;/h2&gt;
-&lt;p&gt;Los operadores aritméticos son probablemente los más conocidos y empleados. Ellos permiten realizar operaciones aritméticas básicas entre valores numéricos:&lt;/p&gt;
+&lt;p&gt;Los operadores aritméticos son probablemente los más conocidos y empleados. Ellos permiten realizar operaciones aritméticas básicas entre &lt;a href="https://pythonscouts.com/valores-python/"&gt;valores&lt;/a&gt; numéricos:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;# Adición&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
 &lt;span class="mi"&gt;15&lt;/span&gt;
@@ -3105,7 +3105,7 @@ Los ejemplos anteriores comparan valores numéricos, sin embargo, también es po
 
 &lt;p&gt;Estos operadores son casi idénticos a los que usamos en las matemáticas. El operador de igualdad que se representa con dos símbolos de igualdad (&lt;code&gt;==&lt;/code&gt;) para diferenciarlo del operador de asignación. El operador de desigualdad se representa como &lt;code&gt;!=&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="logicos"&gt;Lógicos&lt;/h2&gt;
-&lt;p&gt;Los operadores lógicos o booleanos permiten crear expresiones lógicas que generalmente se utilizan en condiciones. Python tiene tres operadores booleanos: &lt;code&gt;and&lt;/code&gt;, &lt;code&gt;or&lt;/code&gt;, y &lt;code&gt;not&lt;/code&gt;. Los siguientes ejemplos muestran el funcionamiento de cada operador:&lt;/p&gt;
+&lt;p&gt;Los operadores lógicos o booleanos permiten crear &lt;a href="https://pythonscouts.com/expresiones-python/"&gt;expresiones&lt;/a&gt; lógicas que generalmente se utilizan en &lt;a href="https://pythonscouts.com/condicionales-python/"&gt;condiciones&lt;/a&gt;. Python tiene tres operadores booleanos: &lt;code&gt;and&lt;/code&gt;, &lt;code&gt;or&lt;/code&gt;, y &lt;code&gt;not&lt;/code&gt;. Los siguientes ejemplos muestran el funcionamiento de cada operador:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;# Operador and (y)&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;
 &lt;span class="kc"&gt;True&lt;/span&gt;
@@ -3333,7 +3333,7 @@ Como premisa y en aras de la simplicidad, asumiremos que se trata de una lista n
 &lt;span class="kc"&gt;False&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Esta técnica para determinar si todos los elementos de una lista son iguales emplea una expresión generadora que produce valores booleanos que resultan de evaluar la expresión &lt;code&gt;item == letters[0]&lt;/code&gt;. Luego, &lt;code&gt;all()&lt;/code&gt; verifica si todos los elementos resultantes son &lt;code&gt;True&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Esta técnica para determinar si todos los elementos de una lista son iguales emplea una expresión generadora que produce &lt;a href="https://pythonscouts.com/valores-python/"&gt;valores&lt;/a&gt; booleanos que resultan de evaluar la &lt;a href="https://pythonscouts.com/expresiones-python/"&gt;expresión&lt;/a&gt; &lt;code&gt;item == letters[0]&lt;/code&gt;. Luego, &lt;code&gt;all()&lt;/code&gt; verifica si todos los elementos resultantes son &lt;code&gt;True&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="ordenar-la-lista-y-comparar-el-primer-y-el-ultimo-elemento"&gt;Ordenar la lista y comparar el primer y el último elemento&lt;/h2&gt;
 &lt;p&gt;Otra manera de saber si todos los elementos de una lista son iguales es ordenar la lista y comparar el primer y el último elemento.&lt;/p&gt;
 &lt;aside class="note"&gt;
@@ -3466,7 +3466,7 @@ Para una comprensión más profunda de las convenciones de estilo en Python, pue
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;message&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Bienvenidos a pythonscouts.com&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;En estos ejemplos, has creado algunas variables mediante la asignación de valores numéricos o de cadena de caracteres.&lt;/p&gt;
+&lt;p&gt;En estos ejemplos, has creado algunas variables mediante la asignación de &lt;a href="https://pythonscouts.com/valores-python/"&gt;valores&lt;/a&gt; numéricos o de cadena de caracteres.&lt;/p&gt;
 &lt;aside class="note"&gt;
 Como regla general, emplearemos nombres de variables en idioma inglés puesto que este es el idioma base para la programación actualmente.
 &lt;/aside&gt;
@@ -3680,10 +3680,10 @@ Como regla general, emplearemos nombres de variables en idioma inglés puesto qu
 &lt;span class="s1"&gt;&amp;#39;Balance general: $5,425.93&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;El campo de reemplazo en esta f-string contiene una variable llamada &lt;code&gt;balance&lt;/code&gt;. Esta variable provee el valor que necesitamos interpolar en la cadena. Luego tenemos el especificador de formato que comienza con el caracter de dos puntos (&lt;code&gt;:&lt;/code&gt;). En este caso, formateas el valor como un valor decimal con dos lugares después del punto y empleando una coma (&lt;code&gt;,&lt;/code&gt;) como separador de miles.&lt;/p&gt;
+&lt;p&gt;El campo de reemplazo en esta f-string contiene una &lt;a href="https://pythonscouts.com/variables-python/"&gt;variable&lt;/a&gt; llamada &lt;code&gt;balance&lt;/code&gt;. Esta variable provee el valor que necesitamos interpolar en la cadena. Luego tenemos el especificador de formato que comienza con el caracter de dos puntos (&lt;code&gt;:&lt;/code&gt;). En este caso, formateas el valor como un valor decimal con dos lugares después del punto y empleando una coma (&lt;code&gt;,&lt;/code&gt;) como separador de miles.&lt;/p&gt;
 &lt;h2 id="conclusiones"&gt;Conclusiones&lt;/h2&gt;
 &lt;p&gt;Ahora sabes lo básico sobre los valores o literales en Python, incluidos valores numéricos como los números enteros, decimales y complejos. También aprendiste sobre los valores de cadenas de caracteres.&lt;/p&gt;
-&lt;p&gt;Entender los valores y cómo crearlos es fundamental para cualquier desarrollador de Python, pues estos son la base sobre la que se construyen expresiones y sentencias más elaboradas.&lt;/p&gt;
+&lt;p&gt;Entender los valores y cómo crearlos es fundamental para cualquier desarrollador de Python, pues estos son la base sobre la que se construyen &lt;a href="https://pythonscouts.com/expresiones-python/"&gt;expresiones&lt;/a&gt; y sentencias más elaboradas.&lt;/p&gt;
 &lt;p&gt;Ahora que dominas estos conceptos, tienes las puertas abiertas para explorar temas más avanzados en Python.&lt;/p&gt;</content><category term="Series"></category><category term="python"></category></entry><entry><title>Cómo ejecutar un script Python?</title><link href="https://pythonscouts.com/ejecutar-script-python/" rel="alternate"></link><published>2024-03-21T18:40:00+01:00</published><updated>2024-03-21T18:40:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2024-03-21:/ejecutar-script-python/</id><summary type="html">&lt;p&gt;Un script Python es un archivo que contiene una secuencia de código Python ejecutable. Este tipo de archivo está diseñado para ser ejecutado directamente, de la misma manera que un programa o aplicación.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ser capaz de ejecutar tus scripts y programas es una de las habilidades más importantes que debes tener como programador Python. En realidad ejecutar el código es la única forma de asegurarte que funciona como esperas. Además, para qué escribir código sino para ejecutarlo y que haga cosas por tí?&lt;/p&gt;
 &lt;p&gt;En este tutorial, aprenderás qué es un script o programa ejecutable en Python, cómo ejecutar scripts usando el comando &lt;code&gt;python&lt;/code&gt; o el propio script como un comando. Finalmente, aprenderás que también es posible ejecutar tus scripts desde tu IDE o editor de texto favorito, lo cual es muy conveniente durante el proceso de desarrollo.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
@@ -4137,7 +4137,7 @@ IDLE es el entorno de desarrollo integrado (IDE) por defecto de Python. Este pro
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;assert&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;afirmar&lt;/td&gt;
-&lt;td&gt;Verifica si una expresión es verdadera y lanza un error si es falsa&lt;/td&gt;
+&lt;td&gt;Verifica si una &lt;a href="https://pythonscouts.com/expresiones-python/"&gt;expresión&lt;/a&gt; es verdadera y lanza un error si es falsa&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;async&lt;/code&gt;&lt;/td&gt;
@@ -4207,12 +4207,12 @@ IDLE es el entorno de desarrollo integrado (IDE) por defecto de Python. Este pro
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;global&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;global&lt;/td&gt;
-&lt;td&gt;Indica que una variable se define en el ámbito global&lt;/td&gt;
+&lt;td&gt;Indica que una &lt;a href="https://pythonscouts.com/valores-python/"&gt;variable&lt;/a&gt; se define en el ámbito global&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;if&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;si&lt;/td&gt;
-&lt;td&gt;Inicia una &lt;a href="https://docs.python.org/es/3/glossary.html#term-statement"&gt;sentencia&lt;/a&gt; condicional&lt;/td&gt;
+&lt;td&gt;Inicia una &lt;a href="https://pythonscouts.com/condicionales-python/"&gt;sentencia condicional&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;import&lt;/code&gt;&lt;/td&gt;
@@ -4360,7 +4360,7 @@ Related help topics: TRUTHVALUE
 &lt;li&gt;Script&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;El modo &lt;strong&gt;interactivo&lt;/strong&gt; consiste en ejecutar el interprete Python desde tu línea de comandos o terminal usando el comando &lt;code&gt;python&lt;/code&gt;. Este modo de trabajo es útil cuando deseas probar ideas y fragmentos de código de manera rápida.&lt;/p&gt;
-&lt;p&gt;Por otro lado, el modo &lt;strong&gt;script&lt;/strong&gt; es cuando pones tu código en un archivo con extensión &lt;code&gt;.py&lt;/code&gt; y corres este archivo en tu ordenador como un programa ejecutable.&lt;/p&gt;
+&lt;p&gt;Por otro lado, el modo &lt;a href="https://pythonscouts.com/ejecutar-script-python/"&gt;script&lt;/a&gt; es cuando pones tu código en un archivo con extensión &lt;code&gt;.py&lt;/code&gt; y corres este archivo en tu ordenador como un programa ejecutable.&lt;/p&gt;
 &lt;p&gt;En las secciones siguientes, aprenderás a crear tu &lt;em&gt;Hola, mundo!&lt;/em&gt; usando Python en los dos modos de trabajo descritos.&lt;/p&gt;
 &lt;h3 id="hola-mundo-desde-una-sesion-interactiva"&gt;&lt;code&gt;Hola, mundo!&lt;/code&gt; desde una sesión interactiva&lt;/h3&gt;
 &lt;p&gt;Para comenzar una sesión interactiva de Python, abre una ventana de línea de comandos o terminal en tu computadora. Los pasos para abrir una terminal variarán en dependencia de tu sistema operativo. En macOS y Linux, generalmente encontrarás una aplicación llamada &lt;em&gt;Terminal&lt;/em&gt;. Si trabajas en Windows, entonces puedes usar algo como PowerShell.&lt;/p&gt;

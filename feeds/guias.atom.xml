@@ -31,7 +31,7 @@
 
 &lt;p&gt;A continuación una discusión más detallada de cada uno de estos pasos y su código Python asociado.&lt;/p&gt;
 &lt;h2 id="paso-1-importar-el-modulo-zipfile"&gt;Paso 1: Importar el módulo &lt;code&gt;zipfile&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;Primero, necesitas importar el módulo &lt;code&gt;zipfile&lt;/code&gt; en tu script:&lt;/p&gt;
+&lt;p&gt;Primero, necesitas importar el módulo &lt;code&gt;zipfile&lt;/code&gt; en tu &lt;a href="https://pythonscouts.com/ejecutar-script-python/"&gt;script&lt;/a&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;zipfile&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -329,7 +329,7 @@ Como premisa y en aras de la simplicidad, asumiremos que se trata de una lista n
 &lt;span class="kc"&gt;False&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Esta técnica para determinar si todos los elementos de una lista son iguales emplea una expresión generadora que produce valores booleanos que resultan de evaluar la expresión &lt;code&gt;item == letters[0]&lt;/code&gt;. Luego, &lt;code&gt;all()&lt;/code&gt; verifica si todos los elementos resultantes son &lt;code&gt;True&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Esta técnica para determinar si todos los elementos de una lista son iguales emplea una expresión generadora que produce &lt;a href="https://pythonscouts.com/valores-python/"&gt;valores&lt;/a&gt; booleanos que resultan de evaluar la &lt;a href="https://pythonscouts.com/expresiones-python/"&gt;expresión&lt;/a&gt; &lt;code&gt;item == letters[0]&lt;/code&gt;. Luego, &lt;code&gt;all()&lt;/code&gt; verifica si todos los elementos resultantes son &lt;code&gt;True&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="ordenar-la-lista-y-comparar-el-primer-y-el-ultimo-elemento"&gt;Ordenar la lista y comparar el primer y el último elemento&lt;/h2&gt;
 &lt;p&gt;Otra manera de saber si todos los elementos de una lista son iguales es ordenar la lista y comparar el primer y el último elemento.&lt;/p&gt;
 &lt;aside class="note"&gt;
@@ -718,7 +718,7 @@ IDLE es el entorno de desarrollo integrado (IDE) por defecto de Python. Este pro
 &lt;li&gt;Script&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;El modo &lt;strong&gt;interactivo&lt;/strong&gt; consiste en ejecutar el interprete Python desde tu línea de comandos o terminal usando el comando &lt;code&gt;python&lt;/code&gt;. Este modo de trabajo es útil cuando deseas probar ideas y fragmentos de código de manera rápida.&lt;/p&gt;
-&lt;p&gt;Por otro lado, el modo &lt;strong&gt;script&lt;/strong&gt; es cuando pones tu código en un archivo con extensión &lt;code&gt;.py&lt;/code&gt; y corres este archivo en tu ordenador como un programa ejecutable.&lt;/p&gt;
+&lt;p&gt;Por otro lado, el modo &lt;a href="https://pythonscouts.com/ejecutar-script-python/"&gt;script&lt;/a&gt; es cuando pones tu código en un archivo con extensión &lt;code&gt;.py&lt;/code&gt; y corres este archivo en tu ordenador como un programa ejecutable.&lt;/p&gt;
 &lt;p&gt;En las secciones siguientes, aprenderás a crear tu &lt;em&gt;Hola, mundo!&lt;/em&gt; usando Python en los dos modos de trabajo descritos.&lt;/p&gt;
 &lt;h3 id="hola-mundo-desde-una-sesion-interactiva"&gt;&lt;code&gt;Hola, mundo!&lt;/code&gt; desde una sesión interactiva&lt;/h3&gt;
 &lt;p&gt;Para comenzar una sesión interactiva de Python, abre una ventana de línea de comandos o terminal en tu computadora. Los pasos para abrir una terminal variarán en dependencia de tu sistema operativo. En macOS y Linux, generalmente encontrarás una aplicación llamada &lt;em&gt;Terminal&lt;/em&gt;. Si trabajas en Windows, entonces puedes usar algo como PowerShell.&lt;/p&gt;

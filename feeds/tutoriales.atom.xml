@@ -1949,7 +1949,7 @@ PS&amp;gt; venv\Scripts\activate.bat
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;assert&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;afirmar&lt;/td&gt;
-&lt;td&gt;Verifica si una expresión es verdadera y lanza un error si es falsa&lt;/td&gt;
+&lt;td&gt;Verifica si una &lt;a href="https://pythonscouts.com/expresiones-python/"&gt;expresión&lt;/a&gt; es verdadera y lanza un error si es falsa&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;async&lt;/code&gt;&lt;/td&gt;
@@ -2019,12 +2019,12 @@ PS&amp;gt; venv\Scripts\activate.bat
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;global&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;global&lt;/td&gt;
-&lt;td&gt;Indica que una variable se define en el ámbito global&lt;/td&gt;
+&lt;td&gt;Indica que una &lt;a href="https://pythonscouts.com/valores-python/"&gt;variable&lt;/a&gt; se define en el ámbito global&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;if&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;si&lt;/td&gt;
-&lt;td&gt;Inicia una &lt;a href="https://docs.python.org/es/3/glossary.html#term-statement"&gt;sentencia&lt;/a&gt; condicional&lt;/td&gt;
+&lt;td&gt;Inicia una &lt;a href="https://pythonscouts.com/condicionales-python/"&gt;sentencia condicional&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;import&lt;/code&gt;&lt;/td&gt;
