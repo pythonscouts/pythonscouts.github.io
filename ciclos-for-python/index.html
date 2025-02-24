@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es-es" class="h-100">
+
+<head>
+        <title>
+  Python Scouts - Python a través de ejemplos: Ciclos o bucles for
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="En Python, un ciclo o bucle for es una sentencia compuesta que puedes emplear para recorrer colecciones o contenedores de datos como listas, tuplas, cadenas, diccionarios y conjuntos.">
+    <meta name="keywords" content="ciclos for python, bucles for python">
+    <!-- RSS feeds -->
+    <link href="https://pythonscouts.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Full Atom Feed" />
+    <link href="https://pythonscouts.com/feeds/series.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Categories Atom Feed" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://pythonscouts.com/ciclos-for-python/">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css">
+    <!-- Stork Search -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css">
+
+
+    <!-- Article tags -->
+    <meta name="article:tag" content="python" />
+    <meta name="article:tag" content="gui" />
+    <meta name="article:tag" content="pyside6" />
+    <meta name="article:tag" content="linux" />
+    <meta name="article:tag" content="tkinter" />
+    <meta name="article:tag" content="pyqt" />
+    <meta name="article:tag" content="windows" />
+    <meta name="article:tag" content="macos" />
+    <meta name="article:tag" content="fundamentos" />
+
+    <!-- Twitter cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lpozo78">
+    <meta name="twitter:creator" content="@lpozo78">
+    <meta name="twitter:title" content="Python a través de ejemplos: Ciclos o bucles for - Python Scouts">
+    <meta name="twitter:description" content="En Python, un ciclo o bucle for es una sentencia compuesta que puedes emplear para recorrer colecciones o contenedores de datos como listas, tuplas, cadenas, diccionarios y conjuntos.">
+    <meta name="twitter:image" content="https://picsum.photos/id/179/300/200.webp">
+    <!-- Linkedin card -->
+    <meta property="og:title" content="Python Scouts">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="ciclos-for-python/">
+    <meta property="og:description" content="En Python, un ciclo o bucle for es una sentencia compuesta que puedes emplear para recorrer colecciones o contenedores de datos como listas, tuplas, cadenas, diccionarios y conjuntos.">
+    <meta property="og:image" content="https://picsum.photos/id/179/300/200.webp">
+    <!-- Custom CSS for article -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-R3C5PFSQ1S');
+</script>
+
+<body class="d-flex flex-column h-100">
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-md bg-white fixed-top border-bottom">
+        <div class="container-md content-px">
+            <a class="navbar-brand" href="/">
+            <img
+            src="https://pythonscouts.com/images/identity/header.webp"
+            alt="Python Scouts"
+            width="150"
+            height="50"
+            >
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Menú de Navegación">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav m-auto nav-link">
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/guias/" aria-current="page">
+                    Guías
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/series/" aria-current="page">
+                    Series
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/tutoriales/" aria-current="page">
+                    Tutoriales
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/acerca/" aria-current="page">
+                    Acerca
+                </a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <div class="stork-wrapper">
+                <input
+                class="stork-input"
+                type="search"
+                placeholder="Buscar"
+                aria-label="Search"
+                data-stork="sitesearch"
+                >
+                </div>
+            </form>
+            </div>
+        </div>
+    </nav>
+    <main class="container-md content-px py-3">
+        <div class="stork-wrapper">
+            <div data-stork="sitesearch-output" class="stork-output"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+            </div>
+        </div>
+
+    <!-- Article Header -->
+    <div class="row pt-3 pb-5">
+        <div class="col-md-6 py-3">
+            <h1 class="display-5">
+                <strong>Python a través de ejemplos: Ciclos o bucles for</strong>
+            </h1>
+            <div class="text-muted small py-3">
+                Publicado el lunes, 24 de febrero del 2025
+            </div>
+            <div class="py-3">
+                <img src="https://pythonscouts.com/images/authors/leodanis-pozo-ramos.webp" alt="Leodanis Pozo Ramos" class="rounded-circle border" width="70" height="70">
+                <a href="https://pythonscouts.com/author/leodanis-pozo-ramos.html" style="padding-left: 10px;">
+                    Leodanis Pozo Ramos
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6 py-3">
+            <img src="https://picsum.photos/id/179/200/150.webp" class="img-fluid w-100">
+        </div>
+    </div>
+          <!-- Article Content -->
+        <article>
+          <p>En Python, un ciclo o bucle <code>for</code> es una sentencia compuesta que puedes emplear para recorrer colecciones o contenedores de datos como listas, tuplas, cadenas, diccionarios y conjuntos.</p>
+            <div class="row">
+                <div class="col">
+                  <p>Los ciclos <code>for</code> son fundamentales para procesar colecciones de datos, aplicando transformaciones sobre cada valor de la colección o empleando los valores en alguna operación o cálculo intermedio.</p>
+<p>En este tutorial, aprenderás lo esencial sobre el funcionamiento de los ciclos <code>for</code> y cómo utilizarlos en tus programas.</p>
+<div class="toc"><span class="toctitle">Contenidos</span><ul>
+<li><a href="#conociendo-los-ciclos-for">Conociendo los ciclos for</a></li>
+<li><a href="#iterando-con-ciclos-for-en-python">Iterando con ciclos for en Python</a><ul>
+<li><a href="#listas-y-tuplas">Listas y tuplas</a></li>
+<li><a href="#cadenas-de-texto">Cadenas de texto</a></li>
+<li><a href="#rangos-de-valores">Rangos de valores</a></li>
+<li><a href="#diccionarios-y-conjuntos">Diccionarios y conjuntos</a></li>
+</ul>
+</li>
+<li><a href="#controlando-la-iteracion-con-break-y-continue">Controlando la iteración con break y continue</a></li>
+<li><a href="#usando-la-clausula-else-en-ciclos-for">Usando la cláusula else en ciclos for</a></li>
+<li><a href="#usando-ciclos-for-anidados">Usando ciclos for anidados</a></li>
+<li><a href="#conclusiones">Conclusiones</a></li>
+</ul>
+</div>
+<h2 id="conociendo-los-ciclos-for">Conociendo los ciclos <code>for</code></h2>
+<p>Un ciclo o bucle <strong><code>for</code></strong> te permite iterar sobre los elementos de un iterable, colección o contenedor de datos, como pueden ser las listas, tuplas, cadenas de texto y diccionarios. En cada iteración, puedes ejecutar un bloque de código que actúe sobre cada elemento de la colección.</p>
+<p>La sintaxis básica de un ciclo <code>for</code> en Python es la siguiente:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">variable</span> <span class="ow">in</span> <span class="n">iterable</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">block</span><span class="o">&gt;</span>
+</code></pre></div>
+
+<ul>
+<li><strong><code>variable</code></strong>: variable del ciclo que mantiene una referencia al elemento actual de la secuencia.</li>
+<li><strong><code>iterable</code></strong>: objeto iterable sobre el que se realiza la iteración.</li>
+<li><strong><code>&lt;block&gt;</code></strong>: bloque de código con las instrucciones que se ejecutan en cada iteración.</li>
+</ul>
+<h2 id="iterando-con-ciclos-for-en-python">Iterando con ciclos <code>for</code> en Python</h2>
+<p>En tu trabajo diario con Python, puedes emplear los ciclos <code>for</code> para recorrer los elementos de distintos tipos de datos, siempre y cuando estos soporten la iteración. Esto te permite transformar tus datos y hacer cálculos y operaciones con ellos mientras iteras.</p>
+<p>En las secciones siguientes, aprenderás cómo emplear ciclos <code>for</code> para recorrer distintos tipos de datos integrados, como las listas, tuplas, cadenas, diccionarios y conjuntos.</p>
+<h3 id="listas-y-tuplas">Listas y tuplas</h3>
+<p>Los ciclos <code>for</code> son comúnmente empleados para iterar sobre listas:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;manzana&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;cereza&quot;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">fruit</span> <span class="ow">in</span> <span class="n">fruits</span><span class="p">:</span>
+<span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="n">fruit</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="n">manzana</span>
+<span class="n">banana</span>
+<span class="n">cereza</span>
+</code></pre></div>
+
+<p>En este ejemplo, el ciclo recorre la lista de frutas e imprime cada elemento. La <a href="https://pythonscouts.com/variables-python/">variable</a> <code>fruit</code> es la variable del ciclo, y la lista <code>fruits</code> es el objeto iterable. La llamada a <code>print()</code> representa el bloque de código del bucle. Este bloque generalmente opera sobre o con los elementos del iterable.</p>
+<p>También puedes emplear un ciclo <code>for</code> para poblar una lista vacía con <a href="https://pythonscouts.com/valores-python/">valores</a> generados a partir de alguna operación o cálculo:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">squares</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]:</span>
+<span class="o">...</span>     <span class="n">squares</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">squares</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+</code></pre></div>
+
+<p>En este ejemplo, creas una lista vacía para almacenar los cuadrados de los valores almacenados en una lista de números. El método <code>.append()</code> te permite agregar valores individuales al final de una lista.</p>
+<p>El ciclo <code>for</code> funciona de igual manera con tuplas:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">person</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Juan&quot;</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="s2">&quot;Programador&quot;</span><span class="p">,</span> <span class="s2">&quot;Cuba&quot;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">person</span><span class="p">:</span>
+<span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="n">Juan</span>
+<span class="mi">35</span>
+<span class="n">Programador</span>
+<span class="n">Cuba</span>
+</code></pre></div>
+
+<p>En este ejemplo, iteras sobre una tupla con un ciclo <code>for</code>. Nuevamente, el ciclo solo imprime cada elemento de la tupla en tu pantalla.</p>
+<h3 id="cadenas-de-texto">Cadenas de texto</h3>
+<p>También puedes usar un bucle <code>for</code> para recorrer los caracteres de una cadena de texto:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">word</span> <span class="o">=</span> <span class="s2">&quot;Python!&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">word</span><span class="p">:</span>
+<span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="n">P</span>
+<span class="n">y</span>
+<span class="n">t</span>
+<span class="n">h</span>
+<span class="n">o</span>
+<span class="n">n</span>
+<span class="err">!</span>
+</code></pre></div>
+
+<p>Cada iteración de este bucle imprime un carácter de la cadena original.</p>
+<h3 id="rangos-de-valores">Rangos de valores</h3>
+<p>La función incorporada <a href="https://docs.python.org/es/3/library/functions.html#func-range"><code>range()</code></a> genera secuencias de números enteros:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+<span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="mi">0</span>
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+</code></pre></div>
+
+<p>Aquí, <code>range(5)</code> genera los números del <code>0</code> al <code>4</code>.</p>
+<h3 id="diccionarios-y-conjuntos">Diccionarios y conjuntos</h3>
+<p>Los ciclos <code>for</code> también te permiten iterar sobre diccionarios y conjuntos. En el caso de los diccionarios, puedes recorrer un diccionario por sus claves, valores, o items.</p>
+<p>Para recorrer un diccionario por sus claves, puedes emplear el diccionario directamente o el método <code>.keys()</code> como se muestra a continuación:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">person</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;Juan&quot;</span><span class="p">,</span> <span class="s2">&quot;edad&quot;</span><span class="p">:</span> <span class="mi">35</span><span class="p">,</span> <span class="s2">&quot;puesto&quot;</span><span class="p">:</span> <span class="s2">&quot;Programador&quot;</span><span class="p">}</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">person</span><span class="p">:</span>
+<span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s2">&quot;-&gt;&quot;</span><span class="p">,</span> <span class="n">person</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+<span class="o">...</span>
+<span class="n">nombre</span> <span class="o">-&gt;</span> <span class="n">Juan</span>
+<span class="n">edad</span> <span class="o">-&gt;</span> <span class="mi">35</span>
+<span class="n">puesto</span> <span class="o">-&gt;</span> <span class="n">Programador</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">person</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+<span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s2">&quot;-&gt;&quot;</span><span class="p">,</span> <span class="n">person</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+<span class="o">...</span>
+<span class="n">nombre</span> <span class="o">-&gt;</span> <span class="n">Juan</span>
+<span class="n">edad</span> <span class="o">-&gt;</span> <span class="mi">35</span>
+<span class="n">puesto</span> <span class="o">-&gt;</span> <span class="n">Programador</span>
+</code></pre></div>
+
+<p>Ambas maneras de iterar sobre las claves son equivalentes. La primera es más comúnmente usada y ligeramente más eficiente. Sin embargo, la segunda puede ser más explícita en algunas situaciones.</p>
+<aside class="note">
+El método <code>.keys()</code> es redundante en este contexto. Iterar directamente sobre el diccionario es la manera preferida en la mayoría de los casos. Este método solo es útil si necesitas específicamente un objeto de <a href="https://docs.python.org/es/3.13/library/stdtypes.html#dict-views" target="_blank">vista de claves</a>.
+</aside>
+
+<p>Para iterar sobre los valores, puedes emplear el método <code>.values()</code> como se muestra en el siguiente ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">person</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+<span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="n">Juan</span>
+<span class="mi">35</span>
+<span class="n">Programador</span>
+</code></pre></div>
+
+<p>Si deseas recorrer los pares clave-valor, puedes usar <code>.items()</code> como se muestra en el siguiente ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">person</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+<span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s2">&quot;-&gt;&quot;</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="n">nombre</span> <span class="o">-&gt;</span> <span class="n">Juan</span>
+<span class="n">edad</span> <span class="o">-&gt;</span> <span class="mi">35</span>
+<span class="n">puesto</span> <span class="o">-&gt;</span> <span class="n">Programador</span>
+</code></pre></div>
+
+<p>Finalmente, los ciclos <code>for</code> también te permiten recorrer conjuntos:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">colors</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;rojo&quot;</span><span class="p">,</span> <span class="s2">&quot;azul&quot;</span><span class="p">,</span> <span class="s2">&quot;verde&quot;</span><span class="p">,</span> <span class="s2">&quot;amarillo&quot;</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">color</span> <span class="ow">in</span> <span class="n">colors</span><span class="p">:</span>
+<span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="n">amarillo</span>
+<span class="n">azul</span>
+<span class="n">verde</span>
+<span class="n">rojo</span>
+</code></pre></div>
+
+<p>Es fundamental que tengas en cuenta que los conjuntos en Python son colecciones no ordenadas de datos. Por esta razón, el ciclo itera sobre los elementos en un orden diferente al orden de inserción.</p>
+<h2 id="controlando-la-iteracion-con-break-y-continue">Controlando la iteración con <code>break</code> y <code>continue</code></h2>
+<p>En Python, las sentencias <code>break</code> y <code>continue</code> te permiten controlar el flujo de ejecución en los ciclos <code>for</code>. La función de estas sentencias es la siguiente:</p>
+<ul>
+<li><strong><code>break</code></strong>: termina el ciclo anticipadamente y salta a la sentencia inmediatamente después del ciclo.</li>
+<li><strong><code>continue</code></strong>: salta a la siguiente iteración, sin ejecutar el código que le sigue en el bloque del ciclo.</li>
+</ul>
+<p>A continuación, un ejemplo de cómo usar <code>break</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s2">&quot;python&quot;</span><span class="p">:</span>
+<span class="o">...</span>     <span class="k">if</span> <span class="n">letter</span> <span class="o">==</span> <span class="s2">&quot;h&quot;</span><span class="p">:</span>
+<span class="o">...</span>         <span class="k">break</span>
+<span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="n">p</span>
+<span class="n">y</span>
+<span class="n">t</span>
+</code></pre></div>
+
+<p>Nota cómo la ejecución termina cuando la letra actual es <code>"h"</code>. El resto de las letras no se imprimen. </p>
+<p>Considera el siguiente ejemplo de cómo emplear <code>continue</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s2">&quot;python&quot;</span><span class="p">:</span>
+<span class="o">...</span>     <span class="k">if</span> <span class="n">letter</span> <span class="o">==</span> <span class="s2">&quot;h&quot;</span><span class="p">:</span>
+<span class="o">...</span>         <span class="k">continue</span>
+<span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="n">p</span>
+<span class="n">y</span>
+<span class="n">t</span>
+<span class="n">o</span>
+<span class="n">n</span>
+</code></pre></div>
+
+<p>En este ejemplo, la letra <code>"h"</code> no se imprime, pues la sentencia <code>continue</code> salta a la próxima iteración sin ejecutar <code>print()</code>.</p>
+<h2 id="usando-la-clausula-else-en-ciclos-for">Usando la cláusula <code>else</code> en ciclos <code>for</code></h2>
+<p>Como las <a href="https://pythonscouts.com/condicionales-python/">sentencias condicionales</a>, los ciclos <code>for</code> pueden tener una cláusula <code>else</code>. En los ciclos, el <code>else</code> se ejecuta únicamente cuando el ciclo finaliza sin ser interrumpido por una sentencia <code>break</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+<span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="o">...</span> <span class="k">else</span><span class="p">:</span>
+<span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ciclo finalizado&quot;</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="mi">0</span>
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+<span class="n">Ciclo</span> <span class="n">finalizado</span>
+</code></pre></div>
+
+<p>Este ciclo termina naturalmente luego de recorrer el rango de valores completo. Entonces, el <code>else</code> se ejecuta y ves el mensaje <code>Ciclo finalizado</code> en la pantalla.</p>
+<p>Si se usa una instrucción <code>break</code>, el bloque <code>else</code> no se ejecuta:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+<span class="o">...</span>         <span class="k">break</span>
+<span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="o">...</span> <span class="k">else</span><span class="p">:</span>
+<span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ciclo finalizado&quot;</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="mi">0</span>
+<span class="mi">1</span>
+</code></pre></div>
+
+<p>Este ciclo termina cuando el valor de <code>i</code> es igual a <code>2</code>, en cuyo caso la cláusula <code>else</code> no se ejecuta.</p>
+<p>Es importante tener en cuenta que, cuando incluyes un bucle <code>for</code> en una función y el bucle contiene una instrucción <code>return</code>, entonces este termina al alcanzar dicha instrucción y la cláusula <code>else</code> no se ejecuta.</p>
+<h2 id="usando-ciclos-for-anidados">Usando ciclos <code>for</code> anidados</h2>
+<p>Puedes anidar un ciclo <code>for</code> dentro de otro para recorrer estructuras más complejas, como por ejemplo listas de listas:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">matrix</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span>
+<span class="p">]</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">matrix</span><span class="p">:</span>
+<span class="o">...</span>     <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">row</span><span class="p">:</span>
+<span class="o">...</span>         <span class="nb">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+<span class="mi">5</span>
+<span class="mi">6</span>
+<span class="mi">7</span>
+<span class="mi">8</span>
+<span class="mi">9</span>
+</code></pre></div>
+
+<p>Puedes anidar ciclos a tanto niveles como necesites. Sin embargo, esta práctica suele causar que tu código sea ineficiente y difícil de entender. Por lo tanto, es recomendable no anidar ciclos a más de dos niveles de profundidad.</p>
+<h2 id="conclusiones">Conclusiones</h2>
+<p>Los ciclos o bucles <strong><code>for</code></strong> son esenciales en Python para realizar tareas repetitivas y manipular datos eficientemente. Con un ciclo <code>for</code>, puedes recorrer diversos tipos de datos como listas, cadenas y diccionarios.</p>
+<p>También puedes combinar <code>for</code> con <code>range()</code>, <code>break</code>, <code>continue</code> y <code>else</code> para controlar el flujo de ejecución de tu código en una manera mucho más precisa.</p>
+<p>Dominar esta estructura es fundamental para escribir código más limpio y efectivo. Practica con tus propios ejemplos y experimenta con diferentes estructuras para afianzar tu comprensión.</p>
+              </div>
+            </div>
+        </article>
+
+
+      <!-- Disqus -->
+      <div id="disqus_thread" class="py-5"></div>
+      <script type="text/javascript">
+          var disqus_shortname = 'pythonscouts';
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+      </script>
+
+    </main>
+
+    <!-- Page footer -->
+    <footer class="footer mt-auto bg-gray text-center py-3 border-top border-1">
+        <div class="container">
+        <span class="lead">&copy; 2023 Leodanis Pozo Ramos</span>
+        </div>
+        <p class="pt-3">Imágenes cortesía de <a href="https://picsum.photos/" target="_blank">Picsum</a></p>
+    </footer>
+
+    <!-- JS Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Stroke Scripts -->
+    <script src="https://pythonscouts.com/theme/js/stork.js"></script>
+    <script>
+        stork.initialize("https://pythonscouts.com/theme/js/stork.wasm")
+        stork.downloadIndex("sitesearch", "https://pythonscouts.com/search-index.st")
+        stork.attach("sitesearch")
+    </script>
+
+</body>
+</html>

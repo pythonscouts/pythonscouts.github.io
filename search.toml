@@ -8,6 +8,11 @@ url = "/acerca/"
 title = "Acerca"
 
 [[input.files]]
+path = "ciclos-for-python/index.html"
+url = "/ciclos-for-python/"
+title = "Python a través de ejemplos: Ciclos o bucles for"
+
+[[input.files]]
 path = "comprimir-archivos-zipfile-python/index.html"
 url = "/comprimir-archivos-zipfile-python/"
 title = "Cómo comprimir archivos con zipfile en Python?"
