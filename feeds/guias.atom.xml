@@ -1,5 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts - Guías</title><link href="https://pythonscouts.com/" rel="alternate"></link><link href="https://pythonscouts.com/feeds/guias.atom.xml" rel="self"></link><id>https://pythonscouts.com/</id><updated>2025-02-11T22:15:00+01:00</updated><subtitle>Una web en Español para aprender a programar con Python.</subtitle><entry><title>Cómo comprimir archivos con zipfile en Python?</title><link href="https://pythonscouts.com/comprimir-archivos-zipfile-python/" rel="alternate"></link><published>2025-02-11T22:15:00+01:00</published><updated>2025-02-11T22:15:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-02-11:/comprimir-archivos-zipfile-python/</id><summary type="html">&lt;p&gt;Comprimir una serie de archivos con el fin de ahorrar espacio en disco puede ser una tarea necesaria en tu trabajo diario con Python. En esta guía rápida, aprenderás cómo hacerlo.&lt;/p&gt;</summary><content type="html">&lt;p&gt;El módulo &lt;a href="https://docs.python.org/es/3.13/library/zipfile.html#module-zipfile"&gt;&lt;code&gt;zipfile&lt;/code&gt;&lt;/a&gt; de la biblioteca estándar de Python permite manipular archivos en formato &lt;a href="https://en.wikipedia.org/wiki/ZIP_(file_format)"&gt;ZIP&lt;/a&gt; que es un formato estándar para comprimir y archivar datos. Con este módulo, puedes crear, leer, escribir, extraer y listar archivos contenidos dentro de archivos ZIP.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts - Guías</title><link href="https://pythonscouts.com/" rel="alternate"></link><link href="https://pythonscouts.com/feeds/guias.atom.xml" rel="self"></link><id>https://pythonscouts.com/</id><updated>2025-03-03T17:30:00+01:00</updated><subtitle>Una web en Español para aprender a programar con Python.</subtitle><entry><title>Cómo obtener ayuda en Python?</title><link href="https://pythonscouts.com/obtener-ayuda-python/" rel="alternate"></link><published>2025-03-03T17:30:00+01:00</published><updated>2025-03-03T17:30:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-03-03:/obtener-ayuda-python/</id><summary type="html">&lt;p&gt;Para obtener ayuda en Python, debes conocer herramientas básicas que te permitan resolver dudas de forma eficiente. La documentación oficial y el sistema interactivo de ayuda de Python son excelentes opciones.&lt;/p&gt;</summary><content type="html">&lt;p&gt;En esta guía rápida, tienes un resumen de las opciones más utilizadas para obtener ayuda directamente desde una sesión interactiva de Python o desde la terminal de tu sistema operativo.&lt;/p&gt;
+&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#1-la-documentacion-oficial-de-python"&gt;1. La documentación oficial de Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#2-el-sistema-interactivo-de-ayuda-help"&gt;2. El sistema interactivo de ayuda: help()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#3-la-herramienta-pydoc"&gt;3. La herramienta pydoc&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#resumiendo"&gt;Resumiendo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="1-la-documentacion-oficial-de-python"&gt;1. La documentación oficial de Python&lt;/h2&gt;
+&lt;p&gt;La &lt;a href="https://docs.python.org/es/3/"&gt;documentación&lt;/a&gt; oficial de Python es la fuente primaria de información actualizada sobre el lenguaje y sus últimas actualizaciones. La estructura de la documentación incluye secciones como las siguientes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/es/3/whatsnew/3.13.html" target="_blank"&gt;¿Qué hay de nuevo en Python?&lt;/a&gt;: Novedades en cada versión&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/es/3/tutorial/index.html" target="_blank"&gt;Tutorial&lt;/a&gt;: Guía escrita por Guido Van Rossum&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/es/3/library/index.html" target="_blank"&gt;Library reference&lt;/a&gt;: Referencia de módulos y paquetes&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/es/3/reference/index.html" target="_blank"&gt;Language reference&lt;/a&gt;: Sintaxis del lenguaje&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/es/3/howto/index.html" target="_blank"&gt;Cómos (&lt;em&gt;HOWTOs&lt;/em&gt;) de Python&lt;/a&gt;: Preguntas frecuentes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Notarás que la documentación aún tiene fragmentos que no han sido traducidos completamente al Español. Te gustaría contribuir en la traducción? Consulta la &lt;a href="https://python-docs-es.readthedocs.io/es/3.13/CONTRIBUTING.html" target="_blank"&gt;guía de contribución&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="2-el-sistema-interactivo-de-ayuda-help"&gt;2. El sistema interactivo de ayuda: &lt;code&gt;help()&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;La función integrada &lt;code&gt;help()&lt;/code&gt; proporciona información detallada sobre objetos, funciones y módulos:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;help&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este ejemplo, usas la clase &lt;code&gt;list&lt;/code&gt; como argumento para &lt;code&gt;help()&lt;/code&gt; y obtienes la página de ayuda relacionada.&lt;/p&gt;
+&lt;p&gt;Para consultar la ayuda de un objeto que no está en tu espacio de nombres actual, puedes emplear una cadena con el nombre del objeto. Por ejemplo, para consultar la ayuda sobre el módulo &lt;code&gt;sys&lt;/code&gt; de la librería estándar no tienes que importar el módulo primero, solo usa una cadena con su nombre:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;help&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;sys&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Cuando el objeto que le pasas como argumento a &lt;code&gt;help()&lt;/code&gt; tiene una página de ayuda disponible, esa página te aparecerá en pantalla.&lt;/p&gt;
+&lt;p&gt;Si llamas a la función &lt;code&gt;help()&lt;/code&gt; sin argumentos, entonces entrarás al sistema interactivo de ayuda:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;help&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Dentro del sistema interactivo de ayuda, puedes explorar temas fundamentales escribiendo algunas palabras clave como por ejemplo:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;keywords&lt;/code&gt;: Lista de palabras clave de Python&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;modules&lt;/code&gt;: Lista de módulos disponibles&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;topics&lt;/code&gt;: Temas de documentación&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;symbols&lt;/code&gt;: Símbolos disponibles&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Para salir de cada página de ayuda, presiona la tecla &lt;em&gt;Q&lt;/em&gt;. Para salir del sistema de ayuda y regresar a tu sesión interactiva de Python, escribe &lt;code&gt;q&lt;/code&gt; o &lt;code&gt;quit&lt;/code&gt; y presiona &lt;em&gt;Enter&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id="3-la-herramienta-pydoc"&gt;3. La herramienta &lt;code&gt;pydoc&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;La herramienta de línea de comandos &lt;code&gt;pydoc&lt;/code&gt; permite obtener información sobre módulos y funciones desde la terminal sin necesidad de estar en una sesión interactiva de Python. Esta herramienta funciona de manera muy parecida a la función &lt;code&gt;help()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Por ejemplo, el siguiente comando muestra información sobre la clase &lt;code&gt;str&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;pydoc&lt;span class="w"&gt; &lt;/span&gt;str
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Puedes generar documentación en HTML con el comando siguiente:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;pydoc&lt;span class="w"&gt; &lt;/span&gt;-w&lt;span class="w"&gt; &lt;/span&gt;sys
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Guarda la documentación del módulo &lt;code&gt;sys&lt;/code&gt; en un archivo HTML llamado &lt;code&gt;sys.html&lt;/code&gt; en tu directorio de trabajo.&lt;/p&gt;
+&lt;p&gt;Para explorar la documentación en un navegador web:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;pydoc&lt;span class="w"&gt; &lt;/span&gt;-b
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Con este comando, puedes iniciar un servidor web con la documentación de Python.&lt;/p&gt;
+&lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
+&lt;p&gt;Contar con buenas fuentes de información es clave para aprender Python eficazmente. La documentación oficial, la función integrada &lt;code&gt;help()&lt;/code&gt; y la herramienta &lt;code&gt;pydoc&lt;/code&gt; te permitirán encontrar respuestas rápidamente mientras trabajas en tu código.&lt;/p&gt;
+&lt;p&gt;Explora estas opciones y podrás resolver rápidamente tus dudas sobre Python.&lt;/p&gt;</content><category term="Guías"></category><category term="python"></category><category term="ayuda"></category></entry><entry><title>Cómo comprimir archivos con zipfile en Python?</title><link href="https://pythonscouts.com/comprimir-archivos-zipfile-python/" rel="alternate"></link><published>2025-02-11T22:15:00+01:00</published><updated>2025-02-11T22:15:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-02-11:/comprimir-archivos-zipfile-python/</id><summary type="html">&lt;p&gt;Comprimir una serie de archivos con el fin de ahorrar espacio en disco puede ser una tarea necesaria en tu trabajo diario con Python. En esta guía rápida, aprenderás cómo hacerlo.&lt;/p&gt;</summary><content type="html">&lt;p&gt;El módulo &lt;a href="https://docs.python.org/es/3.13/library/zipfile.html#module-zipfile"&gt;&lt;code&gt;zipfile&lt;/code&gt;&lt;/a&gt; de la biblioteca estándar de Python permite manipular archivos en formato &lt;a href="https://en.wikipedia.org/wiki/ZIP_(file_format)"&gt;ZIP&lt;/a&gt; que es un formato estándar para comprimir y archivar datos. Con este módulo, puedes crear, leer, escribir, extraer y listar archivos contenidos dentro de archivos ZIP.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#pasos-resumidos"&gt;Pasos resumidos&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#paso-1-importar-el-modulo-zipfile"&gt;Paso 1: Importar el módulo zipfile&lt;/a&gt;&lt;/li&gt;
