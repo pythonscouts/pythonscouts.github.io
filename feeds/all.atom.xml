@@ -1,5 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"></link><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"></link><id>https://pythonscouts.com/</id><updated>2025-03-03T17:30:00+01:00</updated><subtitle>Una web en Español para aprender a programar con Python.</subtitle><entry><title>Cómo obtener ayuda en Python?</title><link href="https://pythonscouts.com/obtener-ayuda-python/" rel="alternate"></link><published>2025-03-03T17:30:00+01:00</published><updated>2025-03-03T17:30:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-03-03:/obtener-ayuda-python/</id><summary type="html">&lt;p&gt;Para obtener ayuda en Python, debes conocer herramientas básicas que te permitan resolver dudas de forma eficiente. La documentación oficial y el sistema interactivo de ayuda de Python son excelentes opciones.&lt;/p&gt;</summary><content type="html">&lt;p&gt;En esta guía rápida, tienes un resumen de las opciones más utilizadas para obtener ayuda directamente desde una sesión interactiva de Python o desde la terminal de tu sistema operativo.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"></link><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"></link><id>https://pythonscouts.com/</id><updated>2025-03-08T11:00:00+01:00</updated><subtitle>Una web en Español para aprender a programar con Python.</subtitle><entry><title>Palabras clave en Python: False</title><link href="https://pythonscouts.com/python-false/" rel="alternate"></link><published>2025-03-08T11:00:00+01:00</published><updated>2025-03-08T11:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-03-08:/python-false/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;False&lt;/code&gt; representa un valor booleano que indica falso o la ausencia de verdad en una expresión lógica.&lt;/p&gt;</summary><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#sintaxis"&gt;Sintaxis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#ejemplos-practicos"&gt;Ejemplos prácticos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#uso-de-false"&gt;Uso de False&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#resumiendo"&gt;Resumiendo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="sintaxis"&gt;Sintaxis&lt;/h2&gt;
+&lt;p&gt;La sintaxis de &lt;code&gt;False&lt;/code&gt; consiste en usar la palabra clave tal cual se escribe (incluyendo la inicial mayúscula) en expresiones o sentencias, como en comparaciones o evaluaciones booleanas..&lt;/p&gt;
+&lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;False&lt;/code&gt; puede ser el resultado de evaluar una expresión booleana en Python:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;
+&lt;span class="kc"&gt;False&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este ejemplo, &lt;code&gt;5&lt;/code&gt; es menor que &lt;code&gt;6&lt;/code&gt;, por lo tanto, Python evalúa la expresión y retorna &lt;code&gt;False&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;También es común emplear &lt;code&gt;False&lt;/code&gt; como valor por defecto de argumentos en funciones y métodos:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;greet&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;verbose&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;verbose&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;         &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Hola, &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;! Cómo estás hoy?&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;         &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Hola, &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;greet&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Scout&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;Hola&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Scout&lt;/span&gt;&lt;span class="err"&gt;!&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;greet&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Scout&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;verbose&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;Hola&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Scout&lt;/span&gt;&lt;span class="err"&gt;!&lt;/span&gt; &lt;span class="n"&gt;Cómo&lt;/span&gt; &lt;span class="n"&gt;estás&lt;/span&gt; &lt;span class="n"&gt;hoy&lt;/span&gt;&lt;span class="err"&gt;?&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este ejemplo, el argumento &lt;code&gt;verbose&lt;/code&gt; es falso por defecto. &lt;code&gt;False&lt;/code&gt; se emplea comúnmente para establecer el valor por defecto de argumentos que operan como indicadores (flags) booleanos.&lt;/p&gt;
+&lt;p&gt;También puedes emplear &lt;code&gt;False&lt;/code&gt; como valor inicial de variables booleanas:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;is_active&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;has_permission&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En estos ejemplos, &lt;code&gt;False&lt;/code&gt; te permite establecer un valor inicial para variables que pueden ser verdaderas o falsas.&lt;/p&gt;
+&lt;h2 id="uso-de-false"&gt;Uso de &lt;code&gt;False&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Los casos de uso más comunes de la palabra clave &lt;code&gt;False&lt;/code&gt; incluyen los siguientes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Operaciones lógicas y comparaciones para representar un valor de verdad falso.&lt;/li&gt;
+&lt;li&gt;Como valor predeterminado o por defecto de argumento en funciones y métodos.&lt;/li&gt;
+&lt;li&gt;Declaraciones de control de flujo como &lt;code&gt;if&lt;/code&gt; y &lt;code&gt;while&lt;/code&gt; para determinar qué acción ejecutar.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
+&lt;p&gt;La palabra clave &lt;code&gt;False&lt;/code&gt; en Python es fundamental para representar un valor booleano falso en evaluaciones lógicas y control de flujo.&lt;/p&gt;
+&lt;p&gt;Conocer y emplear esta palabra clave te permitirá escribir código legible y efectivo al manejar condiciones y tomar decisiones en tus programas.&lt;/p&gt;</content><category term="Series"></category><category term="python"></category></entry><entry><title>Cómo obtener ayuda en Python?</title><link href="https://pythonscouts.com/obtener-ayuda-python/" rel="alternate"></link><published>2025-03-03T17:30:00+01:00</published><updated>2025-03-03T17:30:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-03-03:/obtener-ayuda-python/</id><summary type="html">&lt;p&gt;Para obtener ayuda en Python, debes conocer herramientas básicas que te permitan resolver dudas de forma eficiente. La documentación oficial y el sistema interactivo de ayuda de Python son excelentes opciones.&lt;/p&gt;</summary><content type="html">&lt;p&gt;En esta guía rápida, tienes un resumen de las opciones más utilizadas para obtener ayuda directamente desde una sesión interactiva de Python o desde la terminal de tu sistema operativo.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#1-la-documentacion-oficial-de-python"&gt;1. La documentación oficial de Python&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#2-el-sistema-interactivo-de-ayuda-help"&gt;2. El sistema interactivo de ayuda: help()&lt;/a&gt;&lt;/li&gt;
