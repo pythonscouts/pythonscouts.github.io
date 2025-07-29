@@ -1,5 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts - Series</title><link href="https://pythonscouts.com/" rel="alternate"></link><link href="https://pythonscouts.com/feeds/series.atom.xml" rel="self"></link><id>https://pythonscouts.com/</id><updated>2025-04-18T13:50:00+02:00</updated><subtitle>Una web en Español para aprender a programar con Python.</subtitle><entry><title>Palabras clave en Python: and</title><link href="https://pythonscouts.com/python-and/" rel="alternate"></link><published>2025-04-18T13:50:00+02:00</published><updated>2025-04-18T13:50:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-04-18:/python-and/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;and&lt;/code&gt; se utiliza como un operador lógico que conecta dos expresiones u objetos con el fin de verificar el valor de verdad de ambos.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Este operador es comúnmente empleado para combinar múltiples &lt;a href="https://pythonscouts.com/condicionales-python/"&gt;condiciones&lt;/a&gt; en una sola expresión lógica o condición compuesta. En este contexto, el operador devuelve un valor verdadero si ambas condiciones son verdaderas y un valor falso si al menos una de las condiciones es falsa.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts - Series</title><link href="https://pythonscouts.com/" rel="alternate"></link><link href="https://pythonscouts.com/feeds/series.atom.xml" rel="self"></link><id>https://pythonscouts.com/</id><updated>2025-07-29T23:10:00+02:00</updated><subtitle>Una web en Español para aprender a programar con Python.</subtitle><entry><title>Palabras clave en Python: def</title><link href="https://pythonscouts.com/python-def/" rel="alternate"></link><published>2025-07-29T23:10:00+02:00</published><updated>2025-07-29T23:10:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-07-29:/python-def/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;def&lt;/code&gt; se utiliza para definir una nueva función. Las funciones son bloques de código reutilizables que realizan una tarea específica.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Una vez que escribes una función, puedes llamarla en cualquier parte de tu programa para ejecutar esa tarea.&lt;/p&gt;
+&lt;h2 id="sintaxis"&gt;Sintaxis&lt;/h2&gt;
+&lt;p&gt;La sintaxis básica para definir una función con &lt;code&gt;def&lt;/code&gt; es la siguiente:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;function_name&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;parameters&lt;/span&gt;&lt;span class="p"&gt;]):&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;body&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;return_value&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;aside class="note"&gt;
+Los corchetes indican elementos opcionales. De modo similar, los corchetes angulares denotan elementos requerido.
+&lt;/aside&gt;
+
+&lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
+&lt;p&gt;Aquí tienes algunos ejemplos de cómo puedes usar &lt;code&gt;def&lt;/code&gt; para definir tus funciones:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;greet&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt; &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;¡Hola, Mundo!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;greet&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="err"&gt;¡&lt;/span&gt;&lt;span class="n"&gt;Hola&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Mundo&lt;/span&gt;&lt;span class="err"&gt;!&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este ejemplo, has definido una función llamada &lt;code&gt;greet()&lt;/code&gt; que imprime &lt;code&gt;¡Hola, Mundo!&lt;/code&gt; cuando la llamas.&lt;/p&gt;
+&lt;p&gt;La función &lt;code&gt;add()&lt;/code&gt; permite sumar dos números:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="mi"&gt;8&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Aquí, la función &lt;code&gt;add()&lt;/code&gt; toma dos argumentos &lt;code&gt;a&lt;/code&gt; y &lt;code&gt;b&lt;/code&gt; que deben ser números, y devuelve su suma. Cuando llamas a &lt;code&gt;add(3, 5)&lt;/code&gt;, obtienes el resultado &lt;code&gt;8&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="uso-de-def"&gt;Uso de &lt;code&gt;def&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Los casos de uso más comunes de la palabra clave &lt;code&gt;def&lt;/code&gt; incluyen los siguientes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Crear funciones que encapsulen lógica reutilizable en tu código.&lt;/li&gt;
+&lt;li&gt;Dividir el código en unidades modulares y más fáciles de mantener.&lt;/li&gt;
+&lt;li&gt;Definir funciones con parámetros para recibir argumentos y devolver valores.&lt;/li&gt;
+&lt;li&gt;Definir funciones anidadas (funciones dentro de otras funciones) para crear lógica interna específica o closures.&lt;/li&gt;
+&lt;li&gt;Implementar decoradores, que reciben y devuelven funciones para añadir funcionalidad a código existente.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
+&lt;p&gt;La palabra clave &lt;code&gt;def&lt;/code&gt; en Python es fundamental para definir funciones, lo que te permite estructurar tu código de manera eficiente y reutilizable.&lt;/p&gt;
+&lt;p&gt;Conocer y utilizar &lt;code&gt;def&lt;/code&gt; te ayuda a escribir programas más organizados y modulares, encapsulando lógica para tareas específicas.&lt;/p&gt;</content><category term="Series"></category><category term="python"></category></entry><entry><title>Palabras clave en Python: and</title><link href="https://pythonscouts.com/python-and/" rel="alternate"></link><published>2025-04-18T13:50:00+02:00</published><updated>2025-04-18T13:50:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-04-18:/python-and/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;and&lt;/code&gt; se utiliza como un operador lógico que conecta dos expresiones u objetos con el fin de verificar el valor de verdad de ambos.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Este operador es comúnmente empleado para combinar múltiples &lt;a href="https://pythonscouts.com/condicionales-python/"&gt;condiciones&lt;/a&gt; en una sola expresión lógica o condición compuesta. En este contexto, el operador devuelve un valor verdadero si ambas condiciones son verdaderas y un valor falso si al menos una de las condiciones es falsa.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#sintaxis"&gt;Sintaxis&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#ejemplos-practicos"&gt;Ejemplos prácticos&lt;/a&gt;&lt;/li&gt;
