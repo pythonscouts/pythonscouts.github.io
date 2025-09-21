@@ -1,5 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts - Series</title><link href="https://pythonscouts.com/" rel="alternate"></link><link href="https://pythonscouts.com/feeds/series.atom.xml" rel="self"></link><id>https://pythonscouts.com/</id><updated>2025-07-29T23:10:00+02:00</updated><subtitle>Una web en Español para aprender a programar con Python.</subtitle><entry><title>Palabras clave en Python: def</title><link href="https://pythonscouts.com/python-def/" rel="alternate"></link><published>2025-07-29T23:10:00+02:00</published><updated>2025-07-29T23:10:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-07-29:/python-def/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;def&lt;/code&gt; se utiliza para definir una nueva función. Las funciones son bloques de código reutilizables que realizan una tarea específica.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Una vez que escribes una función, puedes llamarla en cualquier parte de tu programa para ejecutar esa tarea.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts - Series</title><link href="https://pythonscouts.com/" rel="alternate"></link><link href="https://pythonscouts.com/feeds/series.atom.xml" rel="self"></link><id>https://pythonscouts.com/</id><updated>2025-09-21T19:30:00+02:00</updated><subtitle>Una web en Español para aprender a programar con Python.</subtitle><entry><title>Palabras clave en Python: if</title><link href="https://pythonscouts.com/python-if/" rel="alternate"></link><published>2025-09-21T19:30:00+02:00</published><updated>2025-09-21T19:30:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-09-21:/python-if/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;if&lt;/code&gt; se utiliza para construir sentencias condicionales, permitiéndote ejecutar bloques de código basados en la evaluación de una condición.&lt;/p&gt;</summary><content type="html">&lt;h2 id="sintaxis"&gt;Sintaxis&lt;/h2&gt;
+&lt;p&gt;La sintaxis básica de una sentencia &lt;code&gt;if&lt;/code&gt; es la siguiente:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;condition&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Puedes extender una sentencia &lt;code&gt;if&lt;/code&gt; con las palabras clave &lt;code&gt;elif&lt;/code&gt; y &lt;code&gt;else&lt;/code&gt; para gestionar múltiples condiciones:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;condition1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;  &lt;span class="c1"&gt;# Se ejecuta si condition1 es verdadera&lt;/span&gt;
+&lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;condition2&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;  &lt;span class="c1"&gt;# Se ejecuta si condition2 es verdadera&lt;/span&gt;
+&lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;condition3&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;  &lt;span class="c1"&gt;# Se ejecuta si condition3 es verdadera&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;  &lt;span class="c1"&gt;# Se ejecuta si ninguna de las condiciones anteriores es verdadera&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Puedes usar tantas cláusulas &lt;code&gt;elif&lt;/code&gt; como necesites, pero solo puedes tener una única cláusula &lt;code&gt;else&lt;/code&gt;. La cláusula &lt;code&gt;else&lt;/code&gt; siempre debe aparecer al final.&lt;/p&gt;
+&lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
+&lt;p&gt;Estos son algunos ejemplos de cómo usar la palabra clave &lt;code&gt;if&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;x es mayor que 5&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="n"&gt;es&lt;/span&gt; &lt;span class="n"&gt;mayor&lt;/span&gt; &lt;span class="n"&gt;que&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este ejemplo, como &lt;code&gt;x&lt;/code&gt; es mayor que &lt;code&gt;5&lt;/code&gt;, el bloque de código de la sentencia &lt;code&gt;if&lt;/code&gt; se ejecuta y la función &lt;code&gt;print()&lt;/code&gt; muestra el mensaje correspondiente:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;y es mayor que 5&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;y no es mayor que 5&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;es&lt;/span&gt; &lt;span class="n"&gt;mayor&lt;/span&gt; &lt;span class="n"&gt;que&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Aquí, como &lt;code&gt;y&lt;/code&gt; no es mayor que &lt;code&gt;5&lt;/code&gt;, se ejecuta el bloque de código asociado a &lt;code&gt;else&lt;/code&gt; y la función &lt;code&gt;print()&lt;/code&gt; muestra el mensaje en pantalla.&lt;/p&gt;
+&lt;p&gt;Ahora considera el ejemplo siguiente:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;z es mayor que 10&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt; &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;z es mayor que 5 pero no mayor que 10&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;z no es mayor que 5&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="n"&gt;es&lt;/span&gt; &lt;span class="n"&gt;mayor&lt;/span&gt; &lt;span class="n"&gt;que&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="n"&gt;pero&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;mayor&lt;/span&gt; &lt;span class="n"&gt;que&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este ejemplo, &lt;code&gt;z&lt;/code&gt; es mayor que &lt;code&gt;5&lt;/code&gt; pero no mayor que &lt;code&gt;10&lt;/code&gt;, por lo que se ejecuta el bloque de código asociado a &lt;code&gt;elif&lt;/code&gt; y la función &lt;code&gt;print()&lt;/code&gt; muestra el mensaje especificado.&lt;/p&gt;
+&lt;h2 id="uso-de-if"&gt;Uso de &lt;code&gt;if&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Los casos de uso más comunes de la palabra clave &lt;code&gt;if&lt;/code&gt; incluyen los siguientes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Controlar el flujo del programa ejecutando código basado en condiciones específicas.&lt;/li&gt;
+&lt;li&gt;Implementar lógica de decisiones en funciones y métodos.&lt;/li&gt;
+&lt;li&gt;Validar y verificar datos antes de proceder con operaciones críticas.&lt;/li&gt;
+&lt;li&gt;Ejecutar diferentes caminos de ejecución en algoritmos y estructuras de datos.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
+&lt;p&gt;La palabra clave &lt;code&gt;if&lt;/code&gt; en Python es fundamental para controlar el flujo de ejecución de tus programas basado en condiciones.&lt;/p&gt;
+&lt;p&gt;Conocer y usar esta palabra clave te permite crear programas que tomen decisiones dinámicas según las condiciones que enfrenten, mejorando la capacidad de respuesta y adaptabilidad de tus aplicaciones.&lt;/p&gt;</content><category term="Series"></category><category term="python"></category></entry><entry><title>Palabras clave en Python: def</title><link href="https://pythonscouts.com/python-def/" rel="alternate"></link><published>2025-07-29T23:10:00+02:00</published><updated>2025-07-29T23:10:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-07-29:/python-def/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;def&lt;/code&gt; se utiliza para definir una nueva función. Las funciones son bloques de código reutilizables que realizan una tarea específica.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Una vez que escribes una función, puedes llamarla en cualquier parte de tu programa para ejecutar esa tarea.&lt;/p&gt;
+&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#sintaxis"&gt;Sintaxis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#ejemplos-practicos"&gt;Ejemplos prácticos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#uso-de-def"&gt;Uso de def&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#resumiendo"&gt;Resumiendo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 &lt;h2 id="sintaxis"&gt;Sintaxis&lt;/h2&gt;
 &lt;p&gt;La sintaxis básica para definir una función con &lt;code&gt;def&lt;/code&gt; es la siguiente:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;function_name&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;parameters&lt;/span&gt;&lt;span class="p"&gt;]):&lt;/span&gt;
