@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es-es" class="h-100">
+
+<head>
+        <title>
+  Python Scouts - Palabras clave en Python: for
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="En Python, la palabra clave for se utiliza para iterar sobre secuencias de elementos como pueden ser las listas, tuplas, cadenas, o cualquier objeto que sea iterable.">
+    <meta name="keywords" content="python for">
+    <!-- RSS feeds -->
+    <link href="https://pythonscouts.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Full Atom Feed" />
+    <link href="https://pythonscouts.com/feeds/series.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Categories Atom Feed" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://pythonscouts.com/python-for/">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css">
+    <!-- Stork Search -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css">
+
+
+    <!-- Article tags -->
+    <meta name="article:tag" content="python" />
+    <meta name="article:tag" content="ayuda" />
+    <meta name="article:tag" content="gui" />
+    <meta name="article:tag" content="pyside6" />
+    <meta name="article:tag" content="linux" />
+    <meta name="article:tag" content="tkinter" />
+    <meta name="article:tag" content="pyqt" />
+    <meta name="article:tag" content="windows" />
+    <meta name="article:tag" content="macos" />
+    <meta name="article:tag" content="fundamentos" />
+
+    <!-- Twitter cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lpozo78">
+    <meta name="twitter:creator" content="@lpozo78">
+    <meta name="twitter:title" content="Palabras clave en Python: for - Python Scouts">
+    <meta name="twitter:description" content="En Python, la palabra clave for se utiliza para iterar sobre secuencias de elementos como pueden ser las listas, tuplas, cadenas, o cualquier objeto que sea iterable.">
+    <meta name="twitter:image" content="https://picsum.photos/id/478/300/200.webp">
+    <!-- Linkedin card -->
+    <meta property="og:title" content="Python Scouts">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="python-for/">
+    <meta property="og:description" content="En Python, la palabra clave for se utiliza para iterar sobre secuencias de elementos como pueden ser las listas, tuplas, cadenas, o cualquier objeto que sea iterable.">
+    <meta property="og:image" content="https://picsum.photos/id/478/300/200.webp">
+    <!-- Custom CSS for article -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-R3C5PFSQ1S');
+</script>
+
+<body class="d-flex flex-column h-100">
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-md bg-white fixed-top border-bottom">
+        <div class="container-md content-px">
+            <a class="navbar-brand" href="/">
+            <img
+            src="https://pythonscouts.com/images/identity/header.webp"
+            alt="Python Scouts"
+            width="150"
+            height="50"
+            >
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Menú de Navegación">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav m-auto nav-link">
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/guias/" aria-current="page">
+                    Guías
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/series/" aria-current="page">
+                    Series
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/tutoriales/" aria-current="page">
+                    Tutoriales
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/acerca/" aria-current="page">
+                    Acerca
+                </a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <div class="stork-wrapper">
+                <input
+                class="stork-input"
+                type="search"
+                placeholder="Buscar"
+                aria-label="Search"
+                data-stork="sitesearch"
+                >
+                </div>
+            </form>
+            </div>
+        </div>
+    </nav>
+    <main class="container-md content-px py-3">
+        <div class="stork-wrapper">
+            <div data-stork="sitesearch-output" class="stork-output"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+            </div>
+        </div>
+
+    <!-- Article Header -->
+    <div class="row pt-3 pb-5">
+        <div class="col-md-6 py-3">
+            <h1 class="display-5">
+                <strong>Palabras clave en Python: for</strong>
+            </h1>
+            <div class="text-muted small py-3">
+                Publicado el jueves, 02 de octubre del 2025
+            </div>
+            <div class="py-3">
+                <img src="https://pythonscouts.com/images/authors/leodanis-pozo-ramos.webp" alt="Leodanis Pozo Ramos" class="rounded-circle border" width="70" height="70">
+                <a href="https://pythonscouts.com/author/leodanis-pozo-ramos.html" style="padding-left: 10px;">
+                    Leodanis Pozo Ramos
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6 py-3">
+            <img src="https://picsum.photos/id/478/200/150.webp" class="img-fluid w-100">
+        </div>
+    </div>
+          <!-- Article Content -->
+        <article>
+          <p>En Python, la palabra clave <code>for</code> se utiliza para iterar sobre secuencias de elementos como pueden ser las listas, tuplas, cadenas, o cualquier objeto que sea iterable.</p>
+            <div class="row">
+                <div class="col">
+                  <p>Esta <a href="https://pythonscouts.com/python-palabras-clave/">palabra clave</a> define una estructura de control llamada <strong>ciclo</strong> o <strong>bucle</strong> que te permite ejecutar acciones sobre o con cada elemento en la secuencia, facilitando la automatización de tareas repetitivas.</p>
+<div class="toc"><span class="toctitle">Contenidos</span><ul>
+<li><a href="#sintaxis">Sintaxis</a></li>
+<li><a href="#ejemplos-practicos">Ejemplos prácticos</a></li>
+<li><a href="#uso-de-for">Uso de for</a></li>
+<li><a href="#resumiendo">Resumiendo</a></li>
+</ul>
+</div>
+<h2 id="sintaxis">Sintaxis</h2>
+<p>La sintaxis básica de un ciclo <code>for</code> en Python es la siguiente:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">variable</span> <span class="ow">in</span> <span class="n">iterable</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">block</span><span class="o">&gt;</span>
+</code></pre></div>
+
+<p>Donde <code>variable</code> toma el valor de cada elemento en el <code>iterable</code>, y el bloque de código se ejecuta para cada uno de estos valores.</p>
+<h2 id="ejemplos-practicos">Ejemplos prácticos</h2>
+<p>A continuación algunos ejemplos de cómo usar el ciclo <code>for</code> en tu código:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]:</span>
+<span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+</code></pre></div>
+
+<p>En este ejemplo, el ciclo <code>for</code> itera sobre una lista de números, y <code>print(number)</code> se ejecuta para cada número en la lista.</p>
+<aside class="note">
+Para aprender más sobre los ciclos <code>for</code> revisa el tutorial <a href="https://pythonscouts.com/ciclos-for-python/">Python a través de ejemplos: Ciclos o bucles <code>for</code></a>.
+</aside>
+
+<p>También puedes iterar sobre los caracteres de una <a href="https://pythonscouts.com/valores-python/#valores-de-cadena-de-caracteres">cadena</a>:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s2">&quot;Python&quot;</span><span class="p">:</span>
+<span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="n">P</span>
+<span class="n">y</span>
+<span class="n">t</span>
+<span class="n">h</span>
+<span class="n">o</span>
+<span class="n">n</span>
+</code></pre></div>
+
+<p>Aquí, el ciclo <code>for</code> recorre cada caracter de la cadena <code>"Python"</code> e imprime cada uno de ellos en pantalla.</p>
+<p>El ejemplo siguiente muestra cómo iterar sobre un diccionario y acceder a sus claves y valores:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">students</span> <span class="o">=</span> <span class="p">{</span>
+<span class="o">...</span>     <span class="s2">&quot;Ana&quot;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+<span class="o">...</span>     <span class="s2">&quot;Luis&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+<span class="o">...</span>     <span class="s2">&quot;María&quot;</span><span class="p">:</span> <span class="mi">19</span>
+<span class="o">...</span> <span class="p">}</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span> <span class="ow">in</span> <span class="n">students</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+<span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> tiene </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2"> años&quot;</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="n">Ana</span> <span class="n">tiene</span> <span class="mi">18</span> <span class="n">años</span>
+<span class="n">Luis</span> <span class="n">tiene</span> <span class="mi">20</span> <span class="n">años</span>
+<span class="n">María</span> <span class="n">tiene</span> <span class="mi">19</span> <span class="n">años</span>
+</code></pre></div>
+
+<p>En este caso, el método <code>.items()</code> devuelve pares de clave y valor que puedes desempaquetar directamente en el ciclo <code>for</code>.</p>
+<h2 id="uso-de-for">Uso de <code>for</code></h2>
+<p>Los casos de uso más comunes de la palabra clave <code>for</code> incluyen los siguientes:</p>
+<ul>
+<li>Iterar sobre elementos en una lista, tupla, conjunto o diccionario.</li>
+<li>Recorrer cadenas de caracteres.</li>
+<li>Ejecutar un bloque de código un número específico de veces utilizando la función <code>range()</code>.</li>
+<li>Trabajar con estructuras de datos complejas y realizar operaciones en cada elemento.</li>
+<li>Iterar sobre un archivo línea por línea.</li>
+</ul>
+<h2 id="resumiendo">Resumiendo</h2>
+<p>La palabra clave <code>for</code> es fundamental en Python para realizar iteraciones sobre secuencias de elementos de manera eficiente y clara.</p>
+<p>Conocer y emplear esta palabra clave te permitirá automatizar tareas repetitivas y manejar colecciones de datos de forma efectiva.</p>
+              </div>
+            </div>
+        </article>
+
+
+      <!-- Disqus -->
+      <div id="disqus_thread" class="py-5"></div>
+      <script type="text/javascript">
+          var disqus_shortname = 'pythonscouts';
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+      </script>
+
+    </main>
+
+    <!-- Page footer -->
+    <footer class="footer mt-auto bg-gray text-center py-3 border-top border-1">
+        <div class="container">
+        <span class="lead">&copy; 2023 Leodanis Pozo Ramos</span>
+        </div>
+        <p class="pt-3">Imágenes cortesía de <a href="https://picsum.photos/" target="_blank">Picsum</a></p>
+    </footer>
+
+    <!-- JS Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Stroke Scripts -->
+    <script src="https://pythonscouts.com/theme/js/stork.js"></script>
+    <script>
+        stork.initialize("https://pythonscouts.com/theme/js/stork.wasm")
+        stork.downloadIndex("sitesearch", "https://pythonscouts.com/search-index.st")
+        stork.attach("sitesearch")
+    </script>
+
+</body>
+</html>
