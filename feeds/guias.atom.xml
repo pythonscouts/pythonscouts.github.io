@@ -1,5 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts - Guías</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/guias.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2025-03-03T17:30:00+01:00</updated><subtitle>Una web en Español para aprender a programar con Python.</subtitle><entry><title>Cómo obtener ayuda en Python?</title><link href="https://pythonscouts.com/obtener-ayuda-python/" rel="alternate"/><published>2025-03-03T17:30:00+01:00</published><updated>2025-03-03T17:30:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-03-03:/obtener-ayuda-python/</id><summary type="html">&lt;p&gt;Para obtener ayuda en Python, debes conocer herramientas básicas que te permitan resolver dudas de forma eficiente. La documentación oficial y el sistema interactivo de ayuda de Python son excelentes opciones.&lt;/p&gt;</summary><content type="html">&lt;p&gt;En esta guía rápida, tienes un resumen de las opciones más utilizadas para obtener ayuda directamente desde una sesión interactiva de Python o desde la terminal de tu sistema operativo.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts - Guías</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/guias.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2025-10-05T22:55:00+02:00</updated><subtitle>Una web en Español para aprender a programar con Python.</subtitle><entry><title>Cómo gestionar un proyecto Python con uv?</title><link href="https://pythonscouts.com/gestionar-proyecto-python-uv/" rel="alternate"/><published>2025-10-05T22:55:00+02:00</published><updated>2025-10-05T22:55:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-10-05:/gestionar-proyecto-python-uv/</id><summary type="html">&lt;p&gt;La herramienta de línea de comandos &lt;code&gt;uv&lt;/code&gt; te permite gestionar proyectos Python y sus dependencias de manera eficiente y precisa.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Esta herramienta ofrece una alternativa rápida y completa a otras como &lt;code&gt;pip&lt;/code&gt;, &lt;code&gt;pip-tools&lt;/code&gt; o &lt;code&gt;poetry&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Con &lt;code&gt;uv&lt;/code&gt; puedes instalar diferentes versiones de Python, crear proyectos desde cero, gestionar &lt;a href="https://pythonscouts.com/entorno-virtual-python/"&gt;entornos virtuales&lt;/a&gt;, añadir y remover dependencias garantizando reproducibilidad, e incluso construir y publicar tus proyectos en PyPI. Todo desde un único flujo de trabajo.&lt;/p&gt;
+&lt;p&gt;En esta guía aprenderás lo básico de cómo usar &lt;code&gt;uv&lt;/code&gt; para ejecutar las tareas más comunes de gestión de proyectos Python, desde la instalación hasta la distribución.&lt;/p&gt;
+&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#instalar-uv-en-tu-sistema"&gt;Instalar uv en tu sistema&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#gestionar-multiples-versiones-de-python"&gt;Gestionar múltiples versiones de Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#iniciar-un-proyecto-python-con-uv"&gt;Iniciar un proyecto Python con uv&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#gestionar-dependencias-de-proyectos"&gt;Gestionar dependencias de proyectos&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#crear-un-entorno-virtual-para-tu-proyecto"&gt;Crear un entorno virtual para tu proyecto&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#instalar-dependencias-de-ejecucion"&gt;Instalar dependencias de ejecución&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#instalar-dependencias-de-desarrollo"&gt;Instalar dependencias de desarrollo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#desinstalar-dependencias"&gt;Desinstalar dependencias&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#distribuir-y-publicar-el-proyecto"&gt;Distribuir y publicar el proyecto&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#conclusion"&gt;Conclusión&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="instalar-uv-en-tu-sistema"&gt;Instalar &lt;code&gt;uv&lt;/code&gt; en tu sistema&lt;/h2&gt;
+&lt;p&gt;En macOS y Linux, puedes instalar &lt;code&gt;uv&lt;/code&gt; con el commando siguiente:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;curl&lt;span class="w"&gt; &lt;/span&gt;-LsSf&lt;span class="w"&gt; &lt;/span&gt;https://astral.sh/uv/install.sh&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Si no dispones de &lt;code&gt;curl&lt;/code&gt; en tu sistema, entonces puedes usar &lt;code&gt;wget&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;wget&lt;span class="w"&gt; &lt;/span&gt;-qO-&lt;span class="w"&gt; &lt;/span&gt;https://astral.sh/uv/install.sh&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En Windows, puedes usar el commando:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;PS&amp;gt; powershell -ExecutionPolicy ByPass -c &amp;quot;irm https://astral.sh/uv/install.ps1 | iex&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Una vez concluida la instalación, &lt;code&gt;uv&lt;/code&gt; estará disponible en tu sistema. Puedes comprobarla con el comando &lt;code&gt;uv --version&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="gestionar-multiples-versiones-de-python"&gt;Gestionar múltiples versiones de Python&lt;/h2&gt;
+&lt;p&gt;Con &lt;code&gt;uv&lt;/code&gt; puedes instalar y usar distintas versiones de Python fácilmente. Para instalar una versión de Python, por ejemplo la 3.13, usa el comando siguiente:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;uv&lt;span class="w"&gt; &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.13
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Esto te permite trabajar con varios proyectos que requieran versiones diferentes del lenguaje.&lt;/p&gt;
+&lt;p&gt;Con el comando &lt;code&gt;uv python list&lt;/code&gt;, puedes listar las versiones disponibles y con &lt;code&gt;uv python pin &amp;lt;version&amp;gt;&lt;/code&gt;, puedes fijar la versión de Python que quiere emplear en un proyecto específico.&lt;/p&gt;
+&lt;h2 id="iniciar-un-proyecto-python-con-uv"&gt;Iniciar un proyecto Python con &lt;code&gt;uv&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Con &lt;code&gt;uv&lt;/code&gt; puedes crear la estructura inicial de tus nuevos proyectos:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;uv&lt;span class="w"&gt; &lt;/span&gt;init&lt;span class="w"&gt; &lt;/span&gt;project_name
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Este comando crea la estructura de proyecto siguiente:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;project_name/
+│
+├── .git/
+├── .gitignore
+├── .python-version
+├── README.md
+├── main.py
+└── pyproject.toml
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Aquí tienes un repositorio Git con su correspondiente archivo &lt;code&gt;.gitignore&lt;/code&gt;. Luego tienes el archivo &lt;code&gt;.python-version&lt;/code&gt; donde &lt;code&gt;uv&lt;/code&gt; almacena la versión de Python para el proyecto. El archivo &lt;code&gt;README.md&lt;/code&gt; provee el espacio para la documentación básica del proyecto.&lt;/p&gt;
+&lt;p&gt;Seguidamente tienes el archivo &lt;code&gt;main.py&lt;/code&gt; que es el script de entrada del proyecto. Puedes modificarlo según tus necesidades o puedes incluso reemplazarlo por otro. Finalmente, tienes el archivo &lt;code&gt;pyproject.toml&lt;/code&gt; que contiene la configuración necesaria para construir y distribuir tu proyecto.&lt;/p&gt;
+&lt;p&gt;Alternativamente, puedes emplear varias estructuras disponibles en dependencia de tus necesidades:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;uv&lt;span class="w"&gt; &lt;/span&gt;init&lt;span class="w"&gt; &lt;/span&gt;--app&lt;span class="w"&gt; &lt;/span&gt;app_name
+&lt;span class="gp"&gt;$ &lt;/span&gt;uv&lt;span class="w"&gt; &lt;/span&gt;init&lt;span class="w"&gt; &lt;/span&gt;--lib&lt;span class="w"&gt; &lt;/span&gt;library_name
+&lt;span class="gp"&gt;$ &lt;/span&gt;uv&lt;span class="w"&gt; &lt;/span&gt;init&lt;span class="w"&gt; &lt;/span&gt;--pkg&lt;span class="w"&gt; &lt;/span&gt;package_name
+&lt;span class="gp"&gt;$ &lt;/span&gt;uv&lt;span class="w"&gt; &lt;/span&gt;init&lt;span class="w"&gt; &lt;/span&gt;--script&lt;span class="w"&gt; &lt;/span&gt;script_name
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Cada tipo genera una estructura inicial de archivos adaptada al caso. Puedes usar esta estructura como punto de partida para programar tu proyecto.&lt;/p&gt;
+&lt;p&gt;Debes notar que estos comandos crean el directorio raíz del proyecto usando el nombre suministrado. Si ya has creado el directorio, entonces puedes ejecutar &lt;code&gt;uv init .&lt;/code&gt; dentro del mismo.&lt;/p&gt;
+&lt;p&gt;Una vez que has inicializado un proyecto de aplicación, puedes ejecutarlo con el comando &lt;code&gt;uv run main.py&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="gestionar-dependencias-de-proyectos"&gt;Gestionar dependencias de proyectos&lt;/h2&gt;
+&lt;p&gt;Uno de los puntos fuertes de &lt;code&gt;uv&lt;/code&gt; es la gestión de dependencias. Con &lt;code&gt;uv&lt;/code&gt; puedes instalar y desinstalar dependencias de manera rápida y precisa. Además, &lt;code&gt;uv&lt;/code&gt; mantiene un estricto registro y control de dependencias que facilita la reproducibilidad de tu entrono de desarrollo en otros sistemas. Esta característica es fundamental cuando trabajas en equipo.&lt;/p&gt;
+&lt;p&gt;Cuando añades dependencias con &lt;code&gt;uv&lt;/code&gt;, se actualizan automáticamente los archivos &lt;code&gt;pyproject.toml&lt;/code&gt; y &lt;code&gt;uv.lock&lt;/code&gt;. El primero declara las dependencias, mientras que el segundo mantiene un record estricto de las versiones instaladas.&lt;/p&gt;
+&lt;p&gt;A continuación aprenderás cómo instalar y desinstalar dependencias externas con &lt;code&gt;uv&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id="crear-un-entorno-virtual-para-tu-proyecto"&gt;Crear un entorno virtual para tu proyecto&lt;/h3&gt;
+&lt;p&gt;Luego que has inicializado tu proyecto, puedes crear un entorno virtual Python manualmente:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;uv&lt;span class="w"&gt; &lt;/span&gt;venv
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;El nombre del directorio del entorno virtual es &lt;code&gt;.venv&lt;/code&gt; por defecto, pero puede usar el nombre que desees con solo añadirlo después del subcomando &lt;code&gt;venv&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;El entorno virtual hará referencia al intérprete de Python disponible directamente en tu sistema, entorno de trabajo o shell.&lt;/p&gt;
+&lt;p&gt;Debes saber que el entorno virtual se crea automáticamente (si es que no existe) cuando ejecutas comandos como &lt;code&gt;uv run&lt;/code&gt;, &lt;code&gt;uv add&lt;/code&gt;, &lt;code&gt;uv sync&lt;/code&gt;, o &lt;code&gt;uv lock&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id="instalar-dependencias-de-ejecucion"&gt;Instalar dependencias de ejecución&lt;/h3&gt;
+&lt;p&gt;Las dependencias de ejecución son aquellas bibliotecas o paquetes que empleas directamente en el código de tu proyecto.&lt;/p&gt;
+&lt;p&gt;Por ejemplo, digamos que estás creando un proyecto the Inteligencia Artificial y quieres emplear la API de OpenAI. Puedes instalar la librería &lt;code&gt;openai&lt;/code&gt; con el siguiente commando:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;uv&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;openai
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Este comando añade la librería &lt;code&gt;openai&lt;/code&gt; al proyecto como dependencia de ejecución.&lt;/p&gt;
+&lt;h3 id="instalar-dependencias-de-desarrollo"&gt;Instalar dependencias de desarrollo&lt;/h3&gt;
+&lt;p&gt;Las dependencias de desarrollo son aquellas que necesitas durante el ciclo de desarrollo de tu proyecto. Por ejemplo, puedes necesitar &lt;code&gt;pytest&lt;/code&gt; para escribir y ejecutar test unitarios para tu proyecto:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;uv&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;--dev&lt;span class="w"&gt; &lt;/span&gt;pytest
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Este comando instala &lt;code&gt;pytest&lt;/code&gt; como dependencia de desarrollo, actualizando los archivos &lt;code&gt;uv.lock&lt;/code&gt; y &lt;code&gt;pyproject.toml&lt;/code&gt; de manera adecuada.&lt;/p&gt;
+&lt;h3 id="desinstalar-dependencias"&gt;Desinstalar dependencias&lt;/h3&gt;
+&lt;p&gt;Para eliminar un paquete o biblioteca que ya habías instalado y que no necesitas más, puedes usar el comando siguiente:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;uv&lt;span class="w"&gt; &lt;/span&gt;remove&lt;span class="w"&gt; &lt;/span&gt;pytest
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Este comando desinstala la biblioteca &lt;code&gt;pytest&lt;/code&gt; y todas sus dependencias transitivas, dejando tu entorno virtual de trabajo limpio de paquetes no necesarios. También actualiza el archivo &lt;code&gt;uv.lock&lt;/code&gt; de acuerdo con los cambios.&lt;/p&gt;
+&lt;h2 id="distribuir-y-publicar-el-proyecto"&gt;Distribuir y publicar el proyecto&lt;/h2&gt;
+&lt;p&gt;Con &lt;code&gt;uv&lt;/code&gt; también puedes empaquetar y publicar tu proyecto:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;uv&lt;span class="w"&gt; &lt;/span&gt;build
+&lt;span class="gp"&gt;$ &lt;/span&gt;uv&lt;span class="w"&gt; &lt;/span&gt;publish&lt;span class="w"&gt; &lt;/span&gt;--token&lt;span class="w"&gt; &lt;/span&gt;tu_token_aquí
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;El primer comando genera los artefactos de distribución que se guardan en el directorio &lt;code&gt;dist/&lt;/code&gt; por defecto. El segundo comando sube estos artefactos a PyPI.&lt;/p&gt;
+&lt;p&gt;Debes notar que para que estos comandos funcionen correctamente, es necesario configurar el script de entrada del proyecto y el sistema de construcción (build system). Todo esto en el archivo &lt;code&gt;pyproject.toml&lt;/code&gt; de tu proyecto.&lt;/p&gt;
+&lt;h2 id="conclusion"&gt;Conclusión&lt;/h2&gt;
+&lt;p&gt;Con &lt;code&gt;uv&lt;/code&gt; puedes gestionar todo el ciclo de vida de un proyecto Python desde la línea de comandos de manera rápida, precisa y eficiente. Es una alternativa ligera y moderna frente a herramientas como &lt;code&gt;poetry&lt;/code&gt; y puede reemplazar la funcionalidad de herramientas como &lt;code&gt;pyenv&lt;/code&gt;, &lt;code&gt;pip&lt;/code&gt;, &lt;code&gt;venv&lt;/code&gt;, &lt;code&gt;pip-tools&lt;/code&gt;, &lt;code&gt;twine&lt;/code&gt; entre otras.&lt;/p&gt;</content><category term="Guías"/><category term="python"/></entry><entry><title>Cómo obtener ayuda en Python?</title><link href="https://pythonscouts.com/obtener-ayuda-python/" rel="alternate"/><published>2025-03-03T17:30:00+01:00</published><updated>2025-03-03T17:30:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-03-03:/obtener-ayuda-python/</id><summary type="html">&lt;p&gt;Para obtener ayuda en Python, debes conocer herramientas básicas que te permitan resolver dudas de forma eficiente. La documentación oficial y el sistema interactivo de ayuda de Python son excelentes opciones.&lt;/p&gt;</summary><content type="html">&lt;p&gt;En esta guía rápida, tienes un resumen de las opciones más utilizadas para obtener ayuda directamente desde una sesión interactiva de Python o desde la terminal de tu sistema operativo.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#1-la-documentacion-oficial-de-python"&gt;1. La documentación oficial de Python&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#2-el-sistema-interactivo-de-ayuda-help"&gt;2. El sistema interactivo de ayuda: help()&lt;/a&gt;&lt;/li&gt;
