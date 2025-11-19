@@ -2,42 +2,47 @@
 
 /* Quotations */
 blockquote {
-    background-color: #F3F3F3;
-    border: 1px solid #dfe4ea;
-    border-left: 5px solid #dfe4ea;
-    color: black;
-    padding: 1em;
-    margin-top: 1.3em;
-    margin-bottom: 1.3em;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border: 1px solid #e9ecef;
+    border-left: 4px solid #2D7A3E;
+    border-radius: 0 12px 12px 0;
+    color: #323F48;
+    padding: 1.5rem 1.5rem 1.5rem 2rem;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
     font-style: italic;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 }
 blockquote:before {
-    color: #dfe4ea;
+    color: #2D7A3E;
     content: "\201C";
     font-size: 3em;
     line-height: 0.1em;
     margin-right: 0.25em;
     vertical-align: -0.4em;
+    opacity: 0.3;
 }
 
 /* Note */
 .note {
-    background-color: #D1E6DD;
-    border: 1px solid #008800;
-    border-left: 5px solid #008800;
-    color: black;
-    padding: 1em;
-    margin-top: 1.3em;
-    margin-bottom: 1.3em;
-    font-style: italic;
+    background: linear-gradient(135deg, #E8F5E9 0%, #f1f8f2 100%);
+    border: 1px solid #C8E6C9;
+    border-left: 4px solid #2D7A3E;
+    border-radius: 0 12px 12px 0;
+    color: #323F48;
+    padding: 1.5rem 1.5rem 1.5rem 2rem;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    font-style: normal;
+    box-shadow: 0 2px 4px rgba(45, 122, 62, 0.1);
 }
 .note:before {
-    color: #008800;
-    content: "NOTA:";
+    content: "💡 NOTA: ";
+    color: #2D7A3E;
     font-size: 1em;
-    font-weight: bold;
-    line-height: 0.1em;
-    margin-right: 0.25em;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.5rem;
 }
 
 /* Tables */
@@ -50,7 +55,7 @@ table {
 }
 table td, table th {
     border: 1px solid #F3F3F3;
-    padding: 0.5em;
+    padding: 0.75rem 1rem;
 }
 
 caption {
@@ -64,32 +69,48 @@ thead {
 
 /* Table of Contents */
 .toc {
-    border: 1px solid #dfe4ea;
-    border-radius: 0px;
-    margin-top: 1.2em;
-    margin-bottom: 1.2em;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border: 1px solid #e9ecef;
+    border-left: 4px solid #2D7A3E;
+    border-radius: 0 16px 16px 0;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .toc ul li {
-    padding: .25em;
+    padding: 0.5rem 0;
 }
 
 .toc ul {
     font-size: 1em;
-    margin: .2em;
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
 }
 
 .toctitle {
-    font-size: 1.1em;
-    font-weight: 500;
-    margin: 1em;
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+    color: #323F48;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.toctitle:before {
+    content: "📋";
+    font-size: 1.2em;
 }
 
 .toc a {
-    color: #008800;
+    color: #2D7A3E;
+    text-decoration: none;
 }
 
 .toc a:hover {
+    color: #1a4d25;
     text-decoration: underline;
 }
 
@@ -100,7 +121,29 @@ span.linenos { color: inherit; background-color: transparent; padding-left: 5px;
 td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
 span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
 .highlight .hll { background-color: #ffffcc }
-.highlight { background: #F3F3F3; border: 1px solid #dfe4ea; border-radius: 0px; padding: 1em 1em 0em 1em; margin-top: 1em; margin-bottom: 1em; font-size: 1em; }
+.highlight { 
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border: 1px solid #e9ecef;
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    font-size: 1em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow-x: auto;
+    position: relative;
+}
+
+.highlight::before {
+    content: "</>";
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    color: #2D7A3E;
+    font-size: 1.2em;
+    font-weight: 600;
+    opacity: 0.4;
+}
 .highlight .c { color: #8f5902; font-style: italic } /* Comment */
 .highlight .err { color: #a40000; border: 1px solid #ef2929 } /* Error */
 .highlight .g { color: #000000 } /* Generic */

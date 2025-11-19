@@ -1,4 +1,11 @@
 User-agent: *
+Allow: /
 Disallow: /search-index.st
+Disallow: /search.toml
+Disallow: /cache/
+Disallow: /*.json$
+
+# Crawl delay (optional, reduce if needed)
+Crawl-delay: 1
 
 Sitemap: https://pythonscouts.com/sitemap.xml

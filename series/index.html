@@ -3,22 +3,44 @@
 
 <head>
     <title>
-    Python Scouts - Categoría: "Series"
+    Series - Python Scouts
     </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Python Scouts - Una web en Español para aprender a programar con Python.">
+    <meta name="author" content="Leodanis Pozo Ramos">
+    <meta name="description" content="Python Scouts es tu guía completa para aprender a programar en Python. Encuentra tutoriales, guías prácticas y series educativas en español para principiantes y autodidactas.">
+    <meta name="keywords" content="python, programación, tutoriales python, aprender python, python español, guías python">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="language" content="Spanish">
+    <meta name="generator" content="Pelican">    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Python Scouts - Aprende Python en Español.">
+    <meta property="og:description" content="Python Scouts es tu guía completa para aprender a programar en Python. Encuentra tutoriales, guías prácticas y series educativas en español.">
+    <meta property="og:url" content="https://pythonscouts.com">
+    <meta property="og:site_name" content="Python Scouts">
+    <meta property="og:locale" content="es_ES">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@lpozo78">
+    <meta name="twitter:title" content="Python Scouts - Aprende Python en Español.">
+    <meta name="twitter:description" content="Python Scouts es tu guía completa para aprender a programar en Python. Encuentra tutoriales, guías prácticas y series educativas en español.">
     <!-- RSS feeds -->
     <link href="https://pythonscouts.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Full Atom Feed" />
     <link href="https://pythonscouts.com/feeds/series.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Categories Atom Feed" />
     <!-- Canonical URL -->
     <link rel="canonical" href="https://pythonscouts.com/series/">
+    <!-- Preconnect to CDNs -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css">
-    <!-- Stork Search -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css">
+    <!-- Stork Search - Deferred -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css"></noscript>
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -31,6 +53,8 @@
 </script>
 
 <body class="d-flex flex-column h-100">
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    
     <!-- Navigation bar -->
     <nav class="navbar navbar-expand-md bg-white fixed-top border-bottom">
         <div class="container-md content-px">
@@ -49,7 +73,7 @@
             <ul class="navbar-nav m-auto nav-link">
                 <li class="nav-item px-3">
                 <a href="https://pythonscouts.com/guias/" aria-current="page">
-                    Guías
+                    Guías
                 </a>
                 </li>
                 <li class="nav-item px-3">
@@ -82,7 +106,7 @@
             </div>
         </div>
     </nav>
-    <main class="container-md content-px py-3">
+    <main id="main-content" class="container-md content-px py-3" tabindex="-1">
         <div class="stork-wrapper">
             <div data-stork="sitesearch-output" class="stork-output"></div>
         </div>
@@ -98,9 +122,9 @@
     <!-- List of Articles -->
         <div class="row py-3">
             <div class="col-md-4">
-                <div class="card border-light rounded-0">
+                <div class="card">
                     <a href="https://pythonscouts.com/python-for/">
-                        <img class="card-img-top rounded-0 img-fluid w-100" src="https://picsum.photos/id/478/300/200.webp" width="300" height="200" alt="Palabras clave en Python: for">
+                        <img class="card-img-top img-fluid w-100" src="https://picsum.photos/id/478/300/200.webp" width="300" height="200" alt="Palabras clave en Python: for" loading="lazy">
                     </a>
                     <div class="py-3">
                         <a href="https://pythonscouts.com/python-for/"><p class="card-title h5">Palabras clave en Python: for</p></a>
@@ -108,15 +132,19 @@
                             <a href="https://pythonscouts.com/author/leodanis-pozo-ramos.html">Leodanis Pozo Ramos</a>
                         </div>
                         <time class="text-muted small">
-                            Jueves, 02 de octubre del 2025
+                            <i class="bi bi-calendar-event me-1"></i>
+                            02 oct 2025
+                            <span class="mx-2">•</span>
+                            <i class="bi bi-clock me-1"></i>
+                            <span>2 min</span>
                         </time>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card border-light rounded-0">
+                <div class="card">
                     <a href="https://pythonscouts.com/python-if/">
-                        <img class="card-img-top rounded-0 img-fluid w-100" src="https://picsum.photos/id/459/300/200.webp" width="300" height="200" alt="Palabras clave en Python: if">
+                        <img class="card-img-top img-fluid w-100" src="https://picsum.photos/id/459/300/200.webp" width="300" height="200" alt="Palabras clave en Python: if" loading="lazy">
                     </a>
                     <div class="py-3">
                         <a href="https://pythonscouts.com/python-if/"><p class="card-title h5">Palabras clave en Python: if</p></a>
@@ -124,15 +152,19 @@
                             <a href="https://pythonscouts.com/author/leodanis-pozo-ramos.html">Leodanis Pozo Ramos</a>
                         </div>
                         <time class="text-muted small">
-                            Domingo, 21 de septiembre del 2025
+                            <i class="bi bi-calendar-event me-1"></i>
+                            21 sep 2025
+                            <span class="mx-2">•</span>
+                            <i class="bi bi-clock me-1"></i>
+                            <span>2 min</span>
                         </time>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card border-light rounded-0">
+                <div class="card">
                     <a href="https://pythonscouts.com/python-def/">
-                        <img class="card-img-top rounded-0 img-fluid w-100" src="https://picsum.photos/id/54/300/200.webp" width="300" height="200" alt="Palabras clave en Python: def">
+                        <img class="card-img-top img-fluid w-100" src="https://picsum.photos/id/54/300/200.webp" width="300" height="200" alt="Palabras clave en Python: def" loading="lazy">
                     </a>
                     <div class="py-3">
                         <a href="https://pythonscouts.com/python-def/"><p class="card-title h5">Palabras clave en Python: def</p></a>
@@ -140,7 +172,11 @@
                             <a href="https://pythonscouts.com/author/leodanis-pozo-ramos.html">Leodanis Pozo Ramos</a>
                         </div>
                         <time class="text-muted small">
-                            Martes, 29 de julio del 2025
+                            <i class="bi bi-calendar-event me-1"></i>
+                            29 jul 2025
+                            <span class="mx-2">•</span>
+                            <i class="bi bi-clock me-1"></i>
+                            <span>1 min</span>
                         </time>
                     </div>
                 </div>
@@ -148,9 +184,9 @@
         </div>
         <div class="row py-3">
             <div class="col-md-4">
-                <div class="card border-light rounded-0">
+                <div class="card">
                     <a href="https://pythonscouts.com/python-and/">
-                        <img class="card-img-top rounded-0 img-fluid w-100" src="https://picsum.photos/id/309/300/200.webp" width="300" height="200" alt="Palabras clave en Python: and">
+                        <img class="card-img-top img-fluid w-100" src="https://picsum.photos/id/309/300/200.webp" width="300" height="200" alt="Palabras clave en Python: and" loading="lazy">
                     </a>
                     <div class="py-3">
                         <a href="https://pythonscouts.com/python-and/"><p class="card-title h5">Palabras clave en Python: and</p></a>
@@ -158,15 +194,19 @@
                             <a href="https://pythonscouts.com/author/leodanis-pozo-ramos.html">Leodanis Pozo Ramos</a>
                         </div>
                         <time class="text-muted small">
-                            Viernes, 18 de abril del 2025
+                            <i class="bi bi-calendar-event me-1"></i>
+                            18 abr 2025
+                            <span class="mx-2">•</span>
+                            <i class="bi bi-clock me-1"></i>
+                            <span>3 min</span>
                         </time>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card border-light rounded-0">
+                <div class="card">
                     <a href="https://pythonscouts.com/python-true/">
-                        <img class="card-img-top rounded-0 img-fluid w-100" src="https://picsum.photos/id/330/300/200.webp" width="300" height="200" alt="Palabras clave en Python: True">
+                        <img class="card-img-top img-fluid w-100" src="https://picsum.photos/id/330/300/200.webp" width="300" height="200" alt="Palabras clave en Python: True" loading="lazy">
                     </a>
                     <div class="py-3">
                         <a href="https://pythonscouts.com/python-true/"><p class="card-title h5">Palabras clave en Python: True</p></a>
@@ -174,15 +214,19 @@
                             <a href="https://pythonscouts.com/author/leodanis-pozo-ramos.html">Leodanis Pozo Ramos</a>
                         </div>
                         <time class="text-muted small">
-                            Sábado, 12 de abril del 2025
+                            <i class="bi bi-calendar-event me-1"></i>
+                            12 abr 2025
+                            <span class="mx-2">•</span>
+                            <i class="bi bi-clock me-1"></i>
+                            <span>2 min</span>
                         </time>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card border-light rounded-0">
+                <div class="card">
                     <a href="https://pythonscouts.com/python-none/">
-                        <img class="card-img-top rounded-0 img-fluid w-100" src="https://picsum.photos/id/324/300/200.webp" width="300" height="200" alt="Palabras clave en Python: None">
+                        <img class="card-img-top img-fluid w-100" src="https://picsum.photos/id/324/300/200.webp" width="300" height="200" alt="Palabras clave en Python: None" loading="lazy">
                     </a>
                     <div class="py-3">
                         <a href="https://pythonscouts.com/python-none/"><p class="card-title h5">Palabras clave en Python: None</p></a>
@@ -190,7 +234,11 @@
                             <a href="https://pythonscouts.com/author/leodanis-pozo-ramos.html">Leodanis Pozo Ramos</a>
                         </div>
                         <time class="text-muted small">
-                            Martes, 11 de marzo del 2025
+                            <i class="bi bi-calendar-event me-1"></i>
+                            11 mar 2025
+                            <span class="mx-2">•</span>
+                            <i class="bi bi-clock me-1"></i>
+                            <span>2 min</span>
                         </time>
                     </div>
                 </div>
@@ -198,9 +246,9 @@
         </div>
         <div class="row py-3">
             <div class="col-md-4">
-                <div class="card border-light rounded-0">
+                <div class="card">
                     <a href="https://pythonscouts.com/python-false/">
-                        <img class="card-img-top rounded-0 img-fluid w-100" src="https://picsum.photos/id/323/300/200.webp" width="300" height="200" alt="Palabras clave en Python: False">
+                        <img class="card-img-top img-fluid w-100" src="https://picsum.photos/id/323/300/200.webp" width="300" height="200" alt="Palabras clave en Python: False" loading="lazy">
                     </a>
                     <div class="py-3">
                         <a href="https://pythonscouts.com/python-false/"><p class="card-title h5">Palabras clave en Python: False</p></a>
@@ -208,15 +256,19 @@
                             <a href="https://pythonscouts.com/author/leodanis-pozo-ramos.html">Leodanis Pozo Ramos</a>
                         </div>
                         <time class="text-muted small">
-                            Sábado, 08 de marzo del 2025
+                            <i class="bi bi-calendar-event me-1"></i>
+                            08 mar 2025
+                            <span class="mx-2">•</span>
+                            <i class="bi bi-clock me-1"></i>
+                            <span>1 min</span>
                         </time>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card border-light rounded-0">
+                <div class="card">
                     <a href="https://pythonscouts.com/ciclos-for-python/">
-                        <img class="card-img-top rounded-0 img-fluid w-100" src="https://picsum.photos/id/179/300/200.webp" width="300" height="200" alt="Python a través de ejemplos: Ciclos o bucles for">
+                        <img class="card-img-top img-fluid w-100" src="https://picsum.photos/id/179/300/200.webp" width="300" height="200" alt="Python a través de ejemplos: Ciclos o bucles for" loading="lazy">
                     </a>
                     <div class="py-3">
                         <a href="https://pythonscouts.com/ciclos-for-python/"><p class="card-title h5">Python a través de ejemplos: Ciclos o bucles for</p></a>
@@ -224,15 +276,19 @@
                             <a href="https://pythonscouts.com/author/leodanis-pozo-ramos.html">Leodanis Pozo Ramos</a>
                         </div>
                         <time class="text-muted small">
-                            Lunes, 24 de febrero del 2025
+                            <i class="bi bi-calendar-event me-1"></i>
+                            24 feb 2025
+                            <span class="mx-2">•</span>
+                            <i class="bi bi-clock me-1"></i>
+                            <span>7 min</span>
                         </time>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card border-light rounded-0">
+                <div class="card">
                     <a href="https://pythonscouts.com/condicionales-python/">
-                        <img class="card-img-top rounded-0 img-fluid w-100" src="https://picsum.photos/id/230/300/200.webp" width="300" height="200" alt="Python a través de ejemplos: Sentencias condicionales">
+                        <img class="card-img-top img-fluid w-100" src="https://picsum.photos/id/230/300/200.webp" width="300" height="200" alt="Python a través de ejemplos: Sentencias condicionales" loading="lazy">
                     </a>
                     <div class="py-3">
                         <a href="https://pythonscouts.com/condicionales-python/"><p class="card-title h5">Python a través de ejemplos: Sentencias condicionales</p></a>
@@ -240,7 +296,11 @@
                             <a href="https://pythonscouts.com/author/leodanis-pozo-ramos.html">Leodanis Pozo Ramos</a>
                         </div>
                         <time class="text-muted small">
-                            Martes, 21 de enero del 2025
+                            <i class="bi bi-calendar-event me-1"></i>
+                            21 ene 2025
+                            <span class="mx-2">•</span>
+                            <i class="bi bi-clock me-1"></i>
+                            <span>5 min</span>
                         </time>
                     </div>
                 </div>
@@ -248,9 +308,9 @@
         </div>
         <div class="row py-3">
             <div class="col-md-4">
-                <div class="card border-light rounded-0">
+                <div class="card">
                     <a href="https://pythonscouts.com/patron-mvc-python/">
-                        <img class="card-img-top rounded-0 img-fluid w-100" src="https://picsum.photos/id/136/300/200.webp" width="300" height="200" alt="Patrones de diseño en Python: Modelo-Vista-Controlador (MVC)">
+                        <img class="card-img-top img-fluid w-100" src="https://picsum.photos/id/136/300/200.webp" width="300" height="200" alt="Patrones de diseño en Python: Modelo-Vista-Controlador (MVC)" loading="lazy">
                     </a>
                     <div class="py-3">
                         <a href="https://pythonscouts.com/patron-mvc-python/"><p class="card-title h5">Patrones de diseño en Python: Modelo-Vista-Controlador (MVC)</p></a>
@@ -258,15 +318,19 @@
                             <a href="https://pythonscouts.com/author/leodanis-pozo-ramos.html">Leodanis Pozo Ramos</a>
                         </div>
                         <time class="text-muted small">
-                            Jueves, 12 de diciembre del 2024
+                            <i class="bi bi-calendar-event me-1"></i>
+                            12 dic 2024
+                            <span class="mx-2">•</span>
+                            <i class="bi bi-clock me-1"></i>
+                            <span>10 min</span>
                         </time>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card border-light rounded-0">
+                <div class="card">
                     <a href="https://pythonscouts.com/expresiones-python/">
-                        <img class="card-img-top rounded-0 img-fluid w-100" src="https://picsum.photos/id/167/300/200.webp" width="300" height="200" alt="Python a través de ejemplos: Expresiones">
+                        <img class="card-img-top img-fluid w-100" src="https://picsum.photos/id/167/300/200.webp" width="300" height="200" alt="Python a través de ejemplos: Expresiones" loading="lazy">
                     </a>
                     <div class="py-3">
                         <a href="https://pythonscouts.com/expresiones-python/"><p class="card-title h5">Python a través de ejemplos: Expresiones</p></a>
@@ -274,15 +338,19 @@
                             <a href="https://pythonscouts.com/author/leodanis-pozo-ramos.html">Leodanis Pozo Ramos</a>
                         </div>
                         <time class="text-muted small">
-                            Lunes, 09 de diciembre del 2024
+                            <i class="bi bi-calendar-event me-1"></i>
+                            09 dic 2024
+                            <span class="mx-2">•</span>
+                            <i class="bi bi-clock me-1"></i>
+                            <span>8 min</span>
                         </time>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card border-light rounded-0">
+                <div class="card">
                     <a href="https://pythonscouts.com/operadores-python/">
-                        <img class="card-img-top rounded-0 img-fluid w-100" src="https://picsum.photos/id/82/300/200.webp" width="300" height="200" alt="Python a través de ejemplos: Operadores">
+                        <img class="card-img-top img-fluid w-100" src="https://picsum.photos/id/82/300/200.webp" width="300" height="200" alt="Python a través de ejemplos: Operadores" loading="lazy">
                     </a>
                     <div class="py-3">
                         <a href="https://pythonscouts.com/operadores-python/"><p class="card-title h5">Python a través de ejemplos: Operadores</p></a>
@@ -290,7 +358,11 @@
                             <a href="https://pythonscouts.com/author/leodanis-pozo-ramos.html">Leodanis Pozo Ramos</a>
                         </div>
                         <time class="text-muted small">
-                            Lunes, 04 de noviembre del 2024
+                            <i class="bi bi-calendar-event me-1"></i>
+                            04 nov 2024
+                            <span class="mx-2">•</span>
+                            <i class="bi bi-clock me-1"></i>
+                            <span>11 min</span>
                         </time>
                     </div>
                 </div>
@@ -304,18 +376,18 @@
         <nav>
             <ul class="pagination custom-pagination justify-content-center">
                 <li class="page-item active">
-                  <a class="page-link" href="https://pythonscouts.com/series/index.html">
+                  <a class="page-link" href="https://pythonscouts.com/series/index.html#article-list">
                     1
                   </a>
                 </li>
                 <li class="page-item ">
-                  <a class="page-link" href="https://pythonscouts.com/series/index2.html">
+                  <a class="page-link" href="https://pythonscouts.com/series/index2.html#article-list">
                     2
                   </a>
                 </li>
                   
                 <li class="page-item">
-                  <a class="page-link" href="https://pythonscouts.com/series/index2.html" aria-label="Next">
+                  <a class="page-link" href="https://pythonscouts.com/series/index2.html#article-list" aria-label="Next">
                     <span aria-hidden="true">&raquo;</span>
                   </a>
                 </li>
@@ -329,19 +401,65 @@
     <!-- Page footer -->
     <footer class="footer mt-auto bg-gray text-center py-3 border-top border-1">
         <div class="container">
-        <span class="lead">&copy; 2023 Leodanis Pozo Ramos</span>
+        <span class="lead">&copy; 2023-2025 Leodanis Pozo Ramos</span>
         </div>
         <p class="pt-3">Imágenes cortesía de <a href="https://picsum.photos/" target="_blank">Picsum</a></p>
     </footer>
 
     <!-- JS Script Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Stroke Scripts -->
-    <script src="https://pythonscouts.com/theme/js/stork.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
+    <!-- Stroke Scripts - Deferred -->
+    <script src="https://pythonscouts.com/theme/js/stork.js" defer></script>
+    <script defer>
+        // Initialize Stork when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initStork);
+        } else {
+            initStork();
+        }
+        
+        function initStork() {
+            if (typeof stork !== 'undefined') {
+                stork.initialize("https://pythonscouts.com/theme/js/stork.wasm")
+                stork.downloadIndex("sitesearch", "https://pythonscouts.com/search-index.st")
+                stork.attach("sitesearch")
+            }
+        }
+    </script>
+    <!-- Navbar Scroll Effect -->
     <script>
-        stork.initialize("https://pythonscouts.com/theme/js/stork.wasm")
-        stork.downloadIndex("sitesearch", "https://pythonscouts.com/search-index.st")
-        stork.attach("sitesearch")
+        // Add scroll effect to navbar with requestAnimationFrame
+        let ticking = false;
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                window.requestAnimationFrame(function() {
+                    const navbar = document.querySelector('.navbar');
+                    if (window.scrollY > 50) {
+                        navbar.classList.add('scrolled');
+                    } else {
+                        navbar.classList.remove('scrolled');
+                    }
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }, { passive: true });
+        
+        // Smooth scroll for skip link
+        document.addEventListener('DOMContentLoaded', function() {
+            const skipLink = document.querySelector('.skip-link');
+            if (skipLink) {
+                skipLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const mainContent = document.querySelector('#main-content');
+                    mainContent.focus();
+                    window.scrollTo({
+                        top: mainContent.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        });
     </script>
 
 </body>

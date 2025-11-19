@@ -1,8 +1,19 @@
-code {
+/* Inline code - not inside code blocks */
+:not(pre) > code {
     font-family: "Source Code Pro", monospace;
-    font-size: 1em;
-    background-color: #F3F3F3;
-    padding: 0.1em 0;
-    border-radius: 3px;
-    color: #000000;
+    font-size: 0.9em;
+    background-color: #f8f9fa;
+    padding: 0.2em 0.4em;
+    border-radius: 6px;
+    color: #323F48;
+}
+
+/* Code blocks */
+pre code {
+    background: none;
+    padding: 0;
+    border: none;
+    color: inherit;
+    font-size: 0.95em;
+    border-radius: 0;
 }

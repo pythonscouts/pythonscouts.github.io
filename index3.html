@@ -3,20 +3,42 @@
 
 <head>
     <title>
-Python Scouts    </title>
+Python Scouts - Aprende Python en Español.    </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Python Scouts - Una web en Español para aprender a programar con Python.">
+    <meta name="author" content="Leodanis Pozo Ramos">
+    <meta name="description" content="Python Scouts es tu guía completa para aprender a programar en Python. Encuentra tutoriales, guías prácticas y series educativas en español para principiantes y autodidactas.">
+    <meta name="keywords" content="python, programación, tutoriales python, aprender python, python español, guías python">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="language" content="Spanish">
+    <meta name="generator" content="Pelican">    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Python Scouts - Aprende Python en Español.">
+    <meta property="og:description" content="Python Scouts es tu guía completa para aprender a programar en Python. Encuentra tutoriales, guías prácticas y series educativas en español.">
+    <meta property="og:url" content="https://pythonscouts.com">
+    <meta property="og:site_name" content="Python Scouts">
+    <meta property="og:locale" content="es_ES">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@lpozo78">
+    <meta name="twitter:title" content="Python Scouts - Aprende Python en Español.">
+    <meta name="twitter:description" content="Python Scouts es tu guía completa para aprender a programar en Python. Encuentra tutoriales, guías prácticas y series educativas en español.">
     <!-- RSS feeds -->
     <link href="https://pythonscouts.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Full Atom Feed" />
     <!-- Canonical URL -->
     <link rel="canonical" href="https://pythonscouts.com/">
+    <!-- Preconnect to CDNs -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css">
-    <!-- Stork Search -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css">
+    <!-- Stork Search - Deferred -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css"></noscript>
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -29,6 +51,8 @@ Python Scouts    </title>
 </script>
 
 <body class="d-flex flex-column h-100">
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    
     <!-- Navigation bar -->
     <nav class="navbar navbar-expand-md bg-white fixed-top border-bottom">
         <div class="container-md content-px">
@@ -47,7 +71,7 @@ Python Scouts    </title>
             <ul class="navbar-nav m-auto nav-link">
                 <li class="nav-item px-3">
                 <a href="https://pythonscouts.com/guias/" aria-current="page">
-                    Guías
+                    Guías
                 </a>
                 </li>
                 <li class="nav-item px-3">
@@ -80,7 +104,7 @@ Python Scouts    </title>
             </div>
         </div>
     </nav>
-    <main class="container-md content-px py-3">
+    <main id="main-content" class="container-md content-px py-3" tabindex="-1">
         <div class="stork-wrapper">
             <div data-stork="sitesearch-output" class="stork-output"></div>
         </div>
@@ -89,37 +113,140 @@ Python Scouts    </title>
             </div>
         </div>
 
-<section>
-    <!-- Feature Article -->
-    <div class="row pt-3 pb-5">
-        <div class="col-md-6 py-3">
-            <a href="https://pythonscouts.com/gestionar-proyecto-python-uv/">
-                <img src="https://picsum.photos/id/432/200/150.webp" width="200" height="150" class="img-fluid w-100" alt="Cómo gestionar un proyecto Python con uv?">
-            </a>
-        </div>
-        <div class="col-md-6 py-3">
-            <h1>
-                <a href="https://pythonscouts.com/gestionar-proyecto-python-uv/" rel="bookmark" title="Link to Cómo gestionar un proyecto Python con uv?">
-                    Cómo gestionar un proyecto Python con uv?
-                </a>
-            </h1>
-            <p class="py-3">
-                La herramienta de línea de comandos uv te permite gestionar proyectos Python y sus dependencias de manera eficiente y precisa.
-            </p>
-            <div class="text-muted small">
-                Domingo, 05 de octubre del 2025
+<!-- Featured Article with Getting Started Guide -->
+<section class="featured-section mb-5">
+    <div class="row g-4">
+        <!-- Featured Article (8 columns) -->
+        <div class="col-lg-8">
+            <div class="card border-0 shadow rounded-4 overflow-hidden h-100">
+                <div class="row g-0">
+                    <!-- Top Image Section (Full Width) -->
+                    <div class="col-12 position-relative" style="height: 200px; overflow: hidden;">
+                        <img src="https://picsum.photos/id/432//1400/400" 
+                             alt="Cómo gestionar un proyecto Python con uv?" 
+                             class="w-100 h-100"
+                             style="object-fit: cover;"
+                             loading="eager"
+                             fetchpriority="high">
+                        <div class="position-absolute top-0 start-0 w-100 h-100" 
+                             style="background: linear-gradient(180deg, transparent 0%, transparent 50%, rgba(255,255,255,0.3) 70%, rgba(255,255,255,0.7) 85%, rgba(255,255,255,0.95) 95%, #fff 100%);">
+                        </div>
+                    </div>
+                    
+                    <!-- Content Section -->
+                    <div class="col-12 px-4 pb-4" style="margin-top: -50px; position: relative; z-index: 10;">
+                        <!-- Badges -->
+                        <div class="mb-3">
+                            <span class="badge bg-primary text-white text-uppercase small me-2">
+                                Guías
+                            </span>
+                            <span class="badge bg-warning text-dark">
+                                <i class="bi bi-star-fill me-1"></i> Destacado
+                            </span>
+                        </div>
+                        
+                        <!-- Title -->
+                        <h2 class="h3 fw-bold mb-3">
+                            <a href="https://pythonscouts.com/gestionar-proyecto-python-uv/" 
+                               class="text-dark text-decoration-none">
+                                Cómo gestionar un proyecto Python con uv?
+                            </a>
+                        </h2>
+                        
+                        <!-- Summary -->
+                        <p class="text-muted mb-4">
+                            La herramienta de línea de comandos uv te permite gestionar proyectos Python y sus dependencias de manera eficiente y precisa.
+                        </p>
+                        
+                        <!-- Author and Meta Info -->
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://pythonscouts.com/images/authors/leodanis-pozo-ramos.webp" 
+                                 alt="Leodanis Pozo Ramos" 
+                                 class="rounded-circle me-2"
+                                 style="width: 36px; height: 36px; object-fit: cover;"
+                                 loading="lazy"
+                                 width="36"
+                                 height="36">
+                            <div class="small">
+                                <a href="https://pythonscouts.com/author/leodanis-pozo-ramos.html" 
+                                   class="fw-semibold text-decoration-none d-block">
+                                    Leodanis Pozo Ramos
+                                </a>
+                                <div class="text-muted">
+                                    <i class="bi bi-calendar-event me-1"></i>05 oct 2025
+                                    <span class="mx-2">•</span>
+                                    <i class="bi bi-clock me-1"></i>5 min
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- CTA Button -->
+                        <a href="https://pythonscouts.com/gestionar-proyecto-python-uv/" 
+                           class="btn btn-success px-4">
+                            Leer artículo completo
+                            <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="py-3">
-                <img src="https://pythonscouts.com/images/authors/leodanis-pozo-ramos.webp" alt="Leodanis Pozo Ramos" class="rounded-circle border" width="70" height="70">
-                <a href="https://pythonscouts.com/author/leodanis-pozo-ramos.html" style="padding-left: 10px;">
-                    Leodanis Pozo Ramos
-                </a>
+        </div>
+
+        <!-- Getting Started Guide (4 columns) -->
+        <div class="col-lg-4">
+            <div class="card border-0 shadow rounded-4 h-100 p-4 getting-started-card">
+                <div class="mb-3">
+                    <span class="badge bg-success-subtle text-success border border-success px-3 py-2 mb-3">
+                        <i class="bi bi-rocket-takeoff-fill me-2"></i>Comienza Aquí
+                    </span>
+                </div>
+                
+                <nav class="getting-started-nav">
+                    <a href="https://pythonscouts.com/instalar-python-windows/" class="getting-started-link">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="getting-started-number">1</div>
+                            <div class="flex-grow-1">
+                                <div class="fw-semibold">Instalar Python</div>
+                                <div class="text-muted small">Windows, macOS o Linux</div>
+                            </div>
+                            <i class="bi bi-chevron-right text-muted"></i>
+                        </div>
+                    </a>
+                    
+                    <a href="https://pythonscouts.com/python-hola-mundo/" class="getting-started-link">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="getting-started-number">2</div>
+                            <div class="flex-grow-1">
+                                <div class="fw-semibold">Hola Mundo</div>
+                                <div class="text-muted small">Tu primer programa</div>
+                            </div>
+                            <i class="bi bi-chevron-right text-muted"></i>
+                        </div>
+                    </a>
+                    
+                    <a href="https://pythonscouts.com/variables-python/" class="getting-started-link">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="getting-started-number">3</div>
+                            <div class="flex-grow-1">
+                                <div class="fw-semibold">Variables</div>
+                                <div class="text-muted small">Almacenar datos</div>
+                            </div>
+                            <i class="bi bi-chevron-right text-muted"></i>
+                        </div>
+                    </a>
+                </nav>
+                
+                <div class="mt-4 pt-3 border-top">
+                    <a href="https://pythonscouts.com/guias/" class="btn btn-outline-success btn-sm w-100">
+                        Ver todas las guías
+                        <i class="bi bi-arrow-right ms-1"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<header>
+<header id="article-list">
     <div class="row">
         <div class="col">
             <p class="h1">Recientes en el <strong>blog...</strong></p>
@@ -131,9 +258,9 @@ Python Scouts    </title>
     <!-- List of Articles -->
         <div class="row py-3">
             <div class="col-md-4">
-                <div class="card border-light rounded-0">
+                <div class="card">
                     <a href="https://pythonscouts.com/ejecutar-script-python/">
-                        <img class="card-img-top rounded-0 img-fluid w-100" src="https://picsum.photos/id/168/300/200.webp" width="300" height="200" alt="Cómo ejecutar un script Python?">
+                        <img class="card-img-top img-fluid w-100" src="https://picsum.photos/id/168/300/200.webp" width="300" height="200" alt="Cómo ejecutar un script Python?" loading="lazy">
                     </a>
                     <div class="py-3">
                         <a href="https://pythonscouts.com/ejecutar-script-python/"><p class="card-title h5">Cómo ejecutar un script Python?</p></a>
@@ -141,15 +268,19 @@ Python Scouts    </title>
                             <a href="https://pythonscouts.com/author/leodanis-pozo-ramos.html">Leodanis Pozo Ramos</a>
                         </div>
                         <time class="text-muted small">
-                            Jueves, 21 de marzo del 2024
+                            <i class="bi bi-calendar-event me-1"></i>
+                            21 mar 2024
+                            <span class="mx-2">•</span>
+                            <i class="bi bi-clock me-1"></i>
+                            <span>5 min</span>
                         </time>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card border-light rounded-0">
+                <div class="card">
                     <a href="https://pythonscouts.com/instalar-python-windows/">
-                        <img class="card-img-top rounded-0 img-fluid w-100" src="https://picsum.photos/id/217/300/200.webp" width="300" height="200" alt="Cómo instalar Python en tu sistema operativo Windows?">
+                        <img class="card-img-top img-fluid w-100" src="https://picsum.photos/id/217/300/200.webp" width="300" height="200" alt="Cómo instalar Python en tu sistema operativo Windows?" loading="lazy">
                     </a>
                     <div class="py-3">
                         <a href="https://pythonscouts.com/instalar-python-windows/"><p class="card-title h5">Cómo instalar Python en tu sistema operativo Windows?</p></a>
@@ -157,15 +288,19 @@ Python Scouts    </title>
                             <a href="https://pythonscouts.com/author/leodanis-pozo-ramos.html">Leodanis Pozo Ramos</a>
                         </div>
                         <time class="text-muted small">
-                            Lunes, 25 de septiembre del 2023
+                            <i class="bi bi-calendar-event me-1"></i>
+                            25 sep 2023
+                            <span class="mx-2">•</span>
+                            <i class="bi bi-clock me-1"></i>
+                            <span>7 min</span>
                         </time>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card border-light rounded-0">
+                <div class="card">
                     <a href="https://pythonscouts.com/instalar-python-macos/">
-                        <img class="card-img-top rounded-0 img-fluid w-100" src="https://picsum.photos/id/71/300/200.webp" width="300" height="200" alt="Cómo instalar Python en tu sistema operativo macOS?">
+                        <img class="card-img-top img-fluid w-100" src="https://picsum.photos/id/71/300/200.webp" width="300" height="200" alt="Cómo instalar Python en tu sistema operativo macOS?" loading="lazy">
                     </a>
                     <div class="py-3">
                         <a href="https://pythonscouts.com/instalar-python-macos/"><p class="card-title h5">Cómo instalar Python en tu sistema operativo macOS?</p></a>
@@ -173,7 +308,11 @@ Python Scouts    </title>
                             <a href="https://pythonscouts.com/author/leodanis-pozo-ramos.html">Leodanis Pozo Ramos</a>
                         </div>
                         <time class="text-muted small">
-                            Martes, 29 de agosto del 2023
+                            <i class="bi bi-calendar-event me-1"></i>
+                            29 ago 2023
+                            <span class="mx-2">•</span>
+                            <i class="bi bi-clock me-1"></i>
+                            <span>6 min</span>
                         </time>
                     </div>
                 </div>
@@ -181,9 +320,9 @@ Python Scouts    </title>
         </div>
         <div class="row py-3">
             <div class="col-md-4">
-                <div class="card border-light rounded-0">
+                <div class="card">
                     <a href="https://pythonscouts.com/python-palabras-clave/">
-                        <img class="card-img-top rounded-0 img-fluid w-100" src="https://picsum.photos/id/11/300/200.webp" width="300" height="200" alt="Palabras clave o reservadas de Python: cuáles son?">
+                        <img class="card-img-top img-fluid w-100" src="https://picsum.photos/id/11/300/200.webp" width="300" height="200" alt="Palabras clave o reservadas de Python: cuáles son?" loading="lazy">
                     </a>
                     <div class="py-3">
                         <a href="https://pythonscouts.com/python-palabras-clave/"><p class="card-title h5">Palabras clave o reservadas de Python: cuáles son?</p></a>
@@ -191,15 +330,19 @@ Python Scouts    </title>
                             <a href="https://pythonscouts.com/author/leodanis-pozo-ramos.html">Leodanis Pozo Ramos</a>
                         </div>
                         <time class="text-muted small">
-                            Jueves, 17 de agosto del 2023
+                            <i class="bi bi-calendar-event me-1"></i>
+                            17 ago 2023
+                            <span class="mx-2">•</span>
+                            <i class="bi bi-clock me-1"></i>
+                            <span>8 min</span>
                         </time>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card border-light rounded-0">
+                <div class="card">
                     <a href="https://pythonscouts.com/python-hola-mundo/">
-                        <img class="card-img-top rounded-0 img-fluid w-100" src="https://picsum.photos/id/10/300/200.webp" width="300" height="200" alt="Cómo escribir tu primer programa en Python: Hola, mundo!">
+                        <img class="card-img-top img-fluid w-100" src="https://picsum.photos/id/10/300/200.webp" width="300" height="200" alt="Cómo escribir tu primer programa en Python: Hola, mundo!" loading="lazy">
                     </a>
                     <div class="py-3">
                         <a href="https://pythonscouts.com/python-hola-mundo/"><p class="card-title h5">Cómo escribir tu primer programa en Python: Hola, mundo!</p></a>
@@ -207,7 +350,11 @@ Python Scouts    </title>
                             <a href="https://pythonscouts.com/author/leodanis-pozo-ramos.html">Leodanis Pozo Ramos</a>
                         </div>
                         <time class="text-muted small">
-                            Martes, 15 de agosto del 2023
+                            <i class="bi bi-calendar-event me-1"></i>
+                            15 ago 2023
+                            <span class="mx-2">•</span>
+                            <i class="bi bi-clock me-1"></i>
+                            <span>5 min</span>
                         </time>
                     </div>
                 </div>
@@ -221,22 +368,22 @@ Python Scouts    </title>
         <nav>
             <ul class="pagination custom-pagination justify-content-center">
                 <li class="page-item">
-                  <a class="page-link" href="https://pythonscouts.com/index.html" aria-label="Previous">
+                  <a class="page-link" href="https://pythonscouts.com/index.html#article-list" aria-label="Previous">
                     <span aria-hidden="true">&laquo;</span>
                   </a>
                 </li>
                 <li class="page-item ">
-                  <a class="page-link" href="https://pythonscouts.com/index.html">
+                  <a class="page-link" href="https://pythonscouts.com/index.html#article-list">
                     1
                   </a>
                 </li>
                 <li class="page-item ">
-                  <a class="page-link" href="https://pythonscouts.com/index2.html">
+                  <a class="page-link" href="https://pythonscouts.com/index2.html#article-list">
                     2
                   </a>
                 </li>
                 <li class="page-item active">
-                  <a class="page-link" href="https://pythonscouts.com/index3.html">
+                  <a class="page-link" href="https://pythonscouts.com/index3.html#article-list">
                     3
                   </a>
                 </li>
@@ -251,19 +398,65 @@ Python Scouts    </title>
     <!-- Page footer -->
     <footer class="footer mt-auto bg-gray text-center py-3 border-top border-1">
         <div class="container">
-        <span class="lead">&copy; 2023 Leodanis Pozo Ramos</span>
+        <span class="lead">&copy; 2023-2025 Leodanis Pozo Ramos</span>
         </div>
         <p class="pt-3">Imágenes cortesía de <a href="https://picsum.photos/" target="_blank">Picsum</a></p>
     </footer>
 
     <!-- JS Script Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Stroke Scripts -->
-    <script src="https://pythonscouts.com/theme/js/stork.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
+    <!-- Stroke Scripts - Deferred -->
+    <script src="https://pythonscouts.com/theme/js/stork.js" defer></script>
+    <script defer>
+        // Initialize Stork when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initStork);
+        } else {
+            initStork();
+        }
+        
+        function initStork() {
+            if (typeof stork !== 'undefined') {
+                stork.initialize("https://pythonscouts.com/theme/js/stork.wasm")
+                stork.downloadIndex("sitesearch", "https://pythonscouts.com/search-index.st")
+                stork.attach("sitesearch")
+            }
+        }
+    </script>
+    <!-- Navbar Scroll Effect -->
     <script>
-        stork.initialize("https://pythonscouts.com/theme/js/stork.wasm")
-        stork.downloadIndex("sitesearch", "https://pythonscouts.com/search-index.st")
-        stork.attach("sitesearch")
+        // Add scroll effect to navbar with requestAnimationFrame
+        let ticking = false;
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                window.requestAnimationFrame(function() {
+                    const navbar = document.querySelector('.navbar');
+                    if (window.scrollY > 50) {
+                        navbar.classList.add('scrolled');
+                    } else {
+                        navbar.classList.remove('scrolled');
+                    }
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }, { passive: true });
+        
+        // Smooth scroll for skip link
+        document.addEventListener('DOMContentLoaded', function() {
+            const skipLink = document.querySelector('.skip-link');
+            if (skipLink) {
+                skipLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const mainContent = document.querySelector('#main-content');
+                    mainContent.focus();
+                    window.scrollTo({
+                        top: mainContent.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        });
     </script>
 
 </body>

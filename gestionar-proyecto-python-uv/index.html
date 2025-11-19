@@ -3,23 +3,59 @@
 
 <head>
         <title>
-  Python Scouts - Cómo gestionar un proyecto Python con uv?
+  Cómo gestionar un proyecto Python con uv? - Python Scouts
     </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Leodanis Pozo Ramos">
     <meta name="description" content="La herramienta de línea de comandos uv te permite gestionar proyectos Python y sus dependencias de manera eficiente y precisa.">
-    <meta name="keywords" content="uv python">
+    <meta name="keywords" content="python">
+    <meta name="article:published_time" content="2025-10-05T22:55:00+02:00">
+    <meta name="article:modified_time" content="2025-10-05T22:55:00+02:00">
+    <meta name="article:author" content="Leodanis Pozo Ramos">
+    <meta name="article:section" content="Guías">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="language" content="Spanish">
+    <meta name="generator" content="Pelican">    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Cómo gestionar un proyecto Python con uv?">
+    <meta property="og:description" content="La herramienta de línea de comandos uv te permite gestionar proyectos Python y sus dependencias de manera eficiente y precisa.">
+    <meta property="og:url" content="https://pythonscouts.com/gestionar-proyecto-python-uv/">
+    <meta property="og:site_name" content="Python Scouts">
+    <meta property="og:image" content="https://picsum.photos/id/432//1200/630.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="es_ES">
+    <meta property="article:published_time" content="2025-10-05T22:55:00+02:00">
+    <meta property="article:modified_time" content="2025-10-05T22:55:00+02:00">
+    <meta property="article:author" content="Leodanis Pozo Ramos">
+    <meta property="article:section" content="Guías">
+    <meta property="article:tag" content="python">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lpozo78">
+    <meta name="twitter:creator" content="@lpozo78">
+    <meta name="twitter:title" content="Cómo gestionar un proyecto Python con uv?">
+    <meta name="twitter:description" content="La herramienta de línea de comandos uv te permite gestionar proyectos Python y sus dependencias de manera eficiente y precisa.">
+    <meta name="twitter:image" content="https://picsum.photos/id/432//1200/630.webp">
+    <meta name="twitter:image:alt" content="Cómo gestionar un proyecto Python con uv?">
     <!-- RSS feeds -->
     <link href="https://pythonscouts.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Full Atom Feed" />
     <link href="https://pythonscouts.com/feeds/guias.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Categories Atom Feed" />
     <!-- Canonical URL -->
     <link rel="canonical" href="https://pythonscouts.com/gestionar-proyecto-python-uv/">
+    <!-- Preconnect to CDNs -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css">
-    <!-- Stork Search -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css">
+    <!-- Stork Search - Deferred -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css"></noscript>
 
 
     <!-- Article tags -->
@@ -34,19 +70,31 @@
     <meta name="article:tag" content="macos" />
     <meta name="article:tag" content="fundamentos" />
 
-    <!-- Twitter cards -->
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Cómo gestionar un proyecto Python con uv?">
+    <meta property="og:description" content="La herramienta de línea de comandos uv te permite gestionar proyectos Python y sus dependencias de manera eficiente y precisa.">
+    <meta property="og:url" content="https://pythonscouts.com/gestionar-proyecto-python-uv/">
+    <meta property="og:site_name" content="Python Scouts">
+    <meta property="og:image" content="https://picsum.photos/id/432//1200/630.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="es_ES">
+    <meta property="article:published_time" content="2025-10-05T22:55:00+02:00">
+    <meta property="article:modified_time" content="2025-10-05T22:55:00+02:00">
+    <meta property="article:author" content="Leodanis Pozo Ramos">
+    <meta property="article:section" content="Guías">
+    <meta property="article:tag" content="python">
+    
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@lpozo78">
     <meta name="twitter:creator" content="@lpozo78">
-    <meta name="twitter:title" content="Cómo gestionar un proyecto Python con uv? - Python Scouts">
+    <meta name="twitter:title" content="Cómo gestionar un proyecto Python con uv?">
     <meta name="twitter:description" content="La herramienta de línea de comandos uv te permite gestionar proyectos Python y sus dependencias de manera eficiente y precisa.">
-    <meta name="twitter:image" content="https://picsum.photos/id/432/300/200.webp">
-    <!-- Linkedin card -->
-    <meta property="og:title" content="Python Scouts">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="gestionar-proyecto-python-uv/">
-    <meta property="og:description" content="La herramienta de línea de comandos uv te permite gestionar proyectos Python y sus dependencias de manera eficiente y precisa.">
-    <meta property="og:image" content="https://picsum.photos/id/432/300/200.webp">
+    <meta name="twitter:image" content="https://picsum.photos/id/432//1200/630.webp">
+    <meta name="twitter:image:alt" content="Cómo gestionar un proyecto Python con uv?">
+
     <!-- Custom CSS for article -->
     <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css">
 </head>
@@ -61,6 +109,8 @@
 </script>
 
 <body class="d-flex flex-column h-100">
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    
     <!-- Navigation bar -->
     <nav class="navbar navbar-expand-md bg-white fixed-top border-bottom">
         <div class="container-md content-px">
@@ -79,7 +129,7 @@
             <ul class="navbar-nav m-auto nav-link">
                 <li class="nav-item px-3">
                 <a href="https://pythonscouts.com/guias/" aria-current="page">
-                    Guías
+                    Guías
                 </a>
                 </li>
                 <li class="nav-item px-3">
@@ -112,7 +162,7 @@
             </div>
         </div>
     </nav>
-    <main class="container-md content-px py-3">
+    <main id="main-content" class="container-md content-px py-3" tabindex="-1">
         <div class="stork-wrapper">
             <div data-stork="sitesearch-output" class="stork-output"></div>
         </div>
@@ -121,32 +171,83 @@
             </div>
         </div>
 
-    <!-- Article Header -->
-    <div class="row pt-3 pb-5">
-        <div class="col-md-6 py-3">
-            <h1 class="display-5">
-                <strong>Cómo gestionar un proyecto Python con uv?</strong>
-            </h1>
-            <div class="text-muted small py-3">
-                Publicado el domingo, 05 de octubre del 2025
+    <!-- Article Header - Magazine Style -->
+    <header class="article-header mb-5">
+        <div class="row g-4 align-items-center">
+            <!-- Content Column -->
+            <div class="col-lg-6 order-lg-1">
+                <!-- Breadcrumbs -->
+                <nav aria-label="breadcrumb" class="mb-3">
+                    <ol class="breadcrumb mb-0 small">
+                        <li class="breadcrumb-item"><a href="https://pythonscouts.com">Inicio</a></li>
+                        <li class="breadcrumb-item"><a href="https://pythonscouts.com/guias/">Guías</a></li>
+                    </ol>
+                </nav>
+                
+                <!-- Category -->
+                <div class="mb-3">
+                    <span class="badge bg-primary px-3 py-2 text-uppercase fw-semibold">
+                        Guías
+                    </span>
+                </div>
+                
+                <!-- Title -->
+                <h1 class="display-5 fw-bold mb-4">
+                    Cómo gestionar un proyecto Python con uv?
+                </h1>
+                
+                <!-- Author & Meta -->
+                <div class="d-flex align-items-center gap-3 mb-4">
+                    <img src="https://pythonscouts.com/images/authors/leodanis-pozo-ramos.webp" 
+                         class="rounded-circle border" 
+                         width="60" height="60" 
+                         alt="Leodanis Pozo Ramos">
+                    <div>
+                        <div class="fw-semibold">Leodanis Pozo Ramos</div>
+                        <div class="text-muted small">
+                            <i class="bi bi-calendar-event me-1"></i>
+                            05 oct 2025
+                            <span class="mx-2">•</span>
+                            <i class="bi bi-clock me-1"></i>
+                            5 min
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tags -->
+                <div class="d-flex gap-2 flex-wrap">
+                    <a href="https://pythonscouts.com/tag/python.html" 
+                       class="badge bg-light text-dark border text-decoration-none">
+                        python
+                    </a>
+                </div>
             </div>
-            <div class="py-3">
-                <img src="https://pythonscouts.com/images/authors/leodanis-pozo-ramos.webp" alt="Leodanis Pozo Ramos" class="rounded-circle border" width="70" height="70">
-                <a href="https://pythonscouts.com/author/leodanis-pozo-ramos.html" style="padding-left: 10px;">
-                    Leodanis Pozo Ramos
-                </a>
+            
+            <!-- Image Column -->
+            <div class="col-lg-6 order-lg-2">
+                <img src="https://picsum.photos/id/432//900/700" 
+                     class="img-fluid w-100 rounded-4 shadow-lg" 
+                     alt="Cómo gestionar un proyecto Python con uv?"
+                     style="max-height: 600px; object-fit: cover;">
             </div>
         </div>
-        <div class="col-md-6 py-3">
-            <img src="https://picsum.photos/id/432/200/150.webp" class="img-fluid w-100">
-        </div>
-    </div>
-          <!-- Article Content -->
-        <article>
-          <p>La herramienta de línea de comandos <code>uv</code> te permite gestionar proyectos Python y sus dependencias de manera eficiente y precisa.</p>
-            <div class="row">
-                <div class="col">
-                  <p>Esta herramienta ofrece una alternativa rápida y completa a otras como <code>pip</code>, <code>pip-tools</code> o <code>poetry</code>.</p>
+    </header>
+
+    <!-- Article Content -->
+    <div class="row">
+        <div class="col-12">
+            <article itemscope itemtype="https://schema.org/BlogPosting">
+                <meta itemprop="headline" content="Cómo gestionar un proyecto Python con uv?">
+                <meta itemprop="description" content="La herramienta de línea de comandos uv te permite gestionar proyectos Python y sus dependencias de manera eficiente y precisa.">
+                <meta itemprop="datePublished" content="2025-10-05T22:55:00+02:00">
+                <meta itemprop="dateModified" content="2025-10-05T22:55:00+02:00">
+                <meta itemprop="author" content="Leodanis Pozo Ramos">
+                <meta itemprop="image" content="https://picsum.photos/id/432//1200/630.webp">
+                <div itemprop="articleBody">
+                    <p class="lead text-muted mb-4">
+                        <p>La herramienta de línea de comandos <code>uv</code> te permite gestionar proyectos Python y sus dependencias de manera eficiente y precisa.</p>
+                    </p>
+                    <p>Esta herramienta ofrece una alternativa rápida y completa a otras como <code>pip</code>, <code>pip-tools</code> o <code>poetry</code>.</p>
 <p>Con <code>uv</code> puedes instalar diferentes versiones de Python, crear proyectos desde cero, gestionar <a href="https://pythonscouts.com/entorno-virtual-python/">entornos virtuales</a>, añadir y remover dependencias garantizando reproducibilidad, e incluso construir y publicar tus proyectos en PyPI. Todo desde un único flujo de trabajo.</p>
 <p>En esta guía aprenderás lo básico de cómo usar <code>uv</code> para ejecutar las tareas más comunes de gestión de proyectos Python, desde la instalación hasta la distribución.</p>
 <div class="toc"><span class="toctitle">Contenidos</span><ul>
@@ -254,40 +355,87 @@
 <p>Debes notar que para que estos comandos funcionen correctamente, es necesario configurar el script de entrada del proyecto y el sistema de construcción (build system). Todo esto en el archivo <code>pyproject.toml</code> de tu proyecto.</p>
 <h2 id="conclusion">Conclusión</h2>
 <p>Con <code>uv</code> puedes gestionar todo el ciclo de vida de un proyecto Python desde la línea de comandos de manera rápida, precisa y eficiente. Es una alternativa ligera y moderna frente a herramientas como <code>poetry</code> y puede reemplazar la funcionalidad de herramientas como <code>pyenv</code>, <code>pip</code>, <code>venv</code>, <code>pip-tools</code>, <code>twine</code> entre otras.</p>
-              </div>
-            </div>
-        </article>
+                </div>
+            </article>
+        </div>
+    </div>
 
-
-      <!-- Disqus -->
-      <div id="disqus_thread" class="py-5"></div>
-      <script type="text/javascript">
-          var disqus_shortname = 'pythonscouts';
-          (function() {
-              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-          })();
-      </script>
+    <!-- Disqus -->
+    <div id="disqus_thread" class="py-5"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'pythonscouts';
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Por favor habilita JavaScript para ver los comentarios.</noscript>
 
     </main>
 
     <!-- Page footer -->
     <footer class="footer mt-auto bg-gray text-center py-3 border-top border-1">
         <div class="container">
-        <span class="lead">&copy; 2023 Leodanis Pozo Ramos</span>
+        <span class="lead">&copy; 2023-2025 Leodanis Pozo Ramos</span>
         </div>
         <p class="pt-3">Imágenes cortesía de <a href="https://picsum.photos/" target="_blank">Picsum</a></p>
     </footer>
 
     <!-- JS Script Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Stroke Scripts -->
-    <script src="https://pythonscouts.com/theme/js/stork.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
+    <!-- Stroke Scripts - Deferred -->
+    <script src="https://pythonscouts.com/theme/js/stork.js" defer></script>
+    <script defer>
+        // Initialize Stork when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initStork);
+        } else {
+            initStork();
+        }
+        
+        function initStork() {
+            if (typeof stork !== 'undefined') {
+                stork.initialize("https://pythonscouts.com/theme/js/stork.wasm")
+                stork.downloadIndex("sitesearch", "https://pythonscouts.com/search-index.st")
+                stork.attach("sitesearch")
+            }
+        }
+    </script>
+    <!-- Navbar Scroll Effect -->
     <script>
-        stork.initialize("https://pythonscouts.com/theme/js/stork.wasm")
-        stork.downloadIndex("sitesearch", "https://pythonscouts.com/search-index.st")
-        stork.attach("sitesearch")
+        // Add scroll effect to navbar with requestAnimationFrame
+        let ticking = false;
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                window.requestAnimationFrame(function() {
+                    const navbar = document.querySelector('.navbar');
+                    if (window.scrollY > 50) {
+                        navbar.classList.add('scrolled');
+                    } else {
+                        navbar.classList.remove('scrolled');
+                    }
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }, { passive: true });
+        
+        // Smooth scroll for skip link
+        document.addEventListener('DOMContentLoaded', function() {
+            const skipLink = document.querySelector('.skip-link');
+            if (skipLink) {
+                skipLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const mainContent = document.querySelector('#main-content');
+                    mainContent.focus();
+                    window.scrollTo({
+                        top: mainContent.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        });
     </script>
 
 </body>
