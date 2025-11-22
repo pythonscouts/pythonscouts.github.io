@@ -1,5 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2025-10-05T22:55:00+02:00</updated><subtitle>Aprende Python en Español.</subtitle><entry><title>Cómo gestionar un proyecto Python con uv?</title><link href="https://pythonscouts.com/gestionar-proyecto-python-uv/" rel="alternate"/><published>2025-10-05T22:55:00+02:00</published><updated>2025-10-05T22:55:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-10-05:/gestionar-proyecto-python-uv/</id><summary type="html">&lt;p&gt;La herramienta de línea de comandos &lt;code&gt;uv&lt;/code&gt; te permite gestionar proyectos Python y sus dependencias de manera eficiente y precisa.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Esta herramienta ofrece una alternativa rápida y completa a otras como &lt;code&gt;pip&lt;/code&gt;, &lt;code&gt;pip-tools&lt;/code&gt; o &lt;code&gt;poetry&lt;/code&gt;.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2025-11-22T21:40:00+01:00</updated><subtitle>Aprende Python en Español.</subtitle><entry><title>Palabras clave en Python: while</title><link href="https://pythonscouts.com/python-while/" rel="alternate"/><published>2025-11-22T21:40:00+01:00</published><updated>2025-11-22T21:40:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-11-22:/python-while/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;while&lt;/code&gt; te permite definir bucles que ejecutan un bloque de código repetidamente mientras una condición sea verdadera.&lt;/p&gt;</summary><content type="html">&lt;p&gt;La &lt;a href="https://pythonscouts.com/python-palabras-clave/"&gt;palabra clave&lt;/a&gt; &lt;code&gt;while&lt;/code&gt; en Python define una estructura de control llamada bucle. Este tipo de bucle te permite ejecutar un bloque de código múltiples veces mientras una condición lógica sea verdadera. Si la condición es falsa desde el principio, el cuerpo del bucle no se ejecuta ni una sola vez.&lt;/p&gt;
+&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#sintaxis"&gt;Sintaxis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#ejemplos-practicos"&gt;Ejemplos prácticos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#uso-de-while"&gt;Uso de while&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#resumiendo"&gt;Resumiendo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="sintaxis"&gt;Sintaxis&lt;/h2&gt;
+&lt;p&gt;La sintaxis básica para un bucle &lt;code&gt;while&lt;/code&gt; es la siguiente:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;condition&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
+&lt;p&gt;Aquí tienes algunos ejemplos que muestran cómo crear bucles &lt;code&gt;while&lt;/code&gt; en Python:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;counter&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;counter&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;counter&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="n"&gt;counter&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="mi"&gt;4&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este ejemplo, el bucle &lt;code&gt;while&lt;/code&gt; se ejecuta mientras &lt;code&gt;counter&lt;/code&gt; sea menor que 5. En cada repetición, se imprime el valor actual de &lt;code&gt;counter&lt;/code&gt; y luego se incrementa en &lt;code&gt;1&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;El siguiente ejemplo muestra cómo usar un bucle &lt;code&gt;while&lt;/code&gt; para contar hacia atrás:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;number&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="o"&gt;-=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="mi"&gt;5&lt;/span&gt;
+&lt;span class="mi"&gt;4&lt;/span&gt;
+&lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Aquí, el bucle &lt;code&gt;while&lt;/code&gt; se ejecuta mientras &lt;code&gt;number&lt;/code&gt; sea mayor que 0, imprimiendo el valor de &lt;code&gt;number&lt;/code&gt; y luego disminuyéndolo en &lt;code&gt;1&lt;/code&gt; en cada iteración.&lt;/p&gt;
+&lt;h2 id="uso-de-while"&gt;Uso de &lt;code&gt;while&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Los casos de uso más comunes de la palabra clave &lt;code&gt;while&lt;/code&gt; incluyen los siguientes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Repetir un bloque de código hasta que se cumpla una condición específica.&lt;/li&gt;
+&lt;li&gt;Crear bucles que dependen de condiciones dinámicas que pueden cambiar durante la ejecución del programa.&lt;/li&gt;
+&lt;li&gt;Implementar bucles infinitos que se detienen mediante condiciones internas y una instrucción &lt;code&gt;break&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
+&lt;p&gt;El bucle &lt;code&gt;while&lt;/code&gt; es una herramienta muy útil en Python, pues te permite ejecutar código repetidamente mientras se cumpla una condición.&lt;/p&gt;
+&lt;p&gt;Conocer y utilizar la palabra clave &lt;code&gt;while&lt;/code&gt; te proporciona la flexibilidad de controlar el flujo de tu programa y manejar tareas repetitivas de manera eficiente.&lt;/p&gt;</content><category term="Series"/><category term="python"/></entry><entry><title>Cómo gestionar un proyecto Python con uv?</title><link href="https://pythonscouts.com/gestionar-proyecto-python-uv/" rel="alternate"/><published>2025-10-05T22:55:00+02:00</published><updated>2025-10-05T22:55:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-10-05:/gestionar-proyecto-python-uv/</id><summary type="html">&lt;p&gt;La herramienta de línea de comandos &lt;code&gt;uv&lt;/code&gt; te permite gestionar proyectos Python y sus dependencias de manera eficiente y precisa.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Esta herramienta ofrece una alternativa rápida y completa a otras como &lt;code&gt;pip&lt;/code&gt;, &lt;code&gt;pip-tools&lt;/code&gt; o &lt;code&gt;poetry&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Con &lt;code&gt;uv&lt;/code&gt; puedes instalar diferentes versiones de Python, crear proyectos desde cero, gestionar &lt;a href="https://pythonscouts.com/entorno-virtual-python/"&gt;entornos virtuales&lt;/a&gt;, añadir y remover dependencias garantizando reproducibilidad, e incluso construir y publicar tus proyectos en PyPI. Todo desde un único flujo de trabajo.&lt;/p&gt;
 &lt;p&gt;En esta guía aprenderás lo básico de cómo usar &lt;code&gt;uv&lt;/code&gt; para ejecutar las tareas más comunes de gestión de proyectos Python, desde la instalación hasta la distribución.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;

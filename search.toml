@@ -8,6 +8,11 @@ url = "/acerca/"
 title = "Acerca"
 
 [[input.files]]
+path = "python-while/index.html"
+url = "/python-while/"
+title = "Palabras clave en Python: while"
+
+[[input.files]]
 path = "gestionar-proyecto-python-uv/index.html"
 url = "/gestionar-proyecto-python-uv/"
 title = "Cómo gestionar un proyecto Python con uv?"
