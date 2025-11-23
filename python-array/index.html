@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="es-es" class="h-100">
+
+<head>
+        <title>
+  Estructuras de datos en Python: Arreglos (arrays) - Python Scouts
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Leodanis Pozo Ramos">
+    <meta name="description" content="Los arreglos o arrays son una de las estructuras de datos más usadas en programación. Proporcionan una forma de almacenar un número fijo de elementos en una...">
+    <meta name="keywords" content="python">
+    <meta name="article:published_time" content="2025-11-23T22:50:00+01:00">
+    <meta name="article:modified_time" content="2025-11-23T22:50:00+01:00">
+    <meta name="article:author" content="Leodanis Pozo Ramos">
+    <meta name="article:section" content="Series">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="language" content="Spanish">
+    <meta name="generator" content="Pelican">    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Estructuras de datos en Python: Arreglos (arrays)">
+    <meta property="og:description" content="Los arreglos o arrays son una de las estructuras de datos más usadas en programación. Proporcionan una forma de almacenar un número fijo de elementos en una secuencia.">
+    <meta property="og:url" content="https://pythonscouts.com/python-array/">
+    <meta property="og:site_name" content="Python Scouts">
+    <meta property="og:image" content="https://picsum.photos/id/871//1200/630.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="es_ES">
+    <meta property="article:published_time" content="2025-11-23T22:50:00+01:00">
+    <meta property="article:modified_time" content="2025-11-23T22:50:00+01:00">
+    <meta property="article:author" content="Leodanis Pozo Ramos">
+    <meta property="article:section" content="Series">
+    <meta property="article:tag" content="python">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lpozo78">
+    <meta name="twitter:creator" content="@lpozo78">
+    <meta name="twitter:title" content="Estructuras de datos en Python: Arreglos (arrays)">
+    <meta name="twitter:description" content="Los arreglos o arrays son una de las estructuras de datos más usadas en programación. Proporcionan una forma de almacenar un número fijo de elementos en una secuencia.">
+    <meta name="twitter:image" content="https://picsum.photos/id/871//1200/630.webp">
+    <meta name="twitter:image:alt" content="Estructuras de datos en Python: Arreglos (arrays)">
+    <!-- RSS feeds -->
+    <link href="https://pythonscouts.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Full Atom Feed" />
+    <link href="https://pythonscouts.com/feeds/series.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Categories Atom Feed" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://pythonscouts.com/python-array/">
+    <!-- Preconnect to CDNs -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202511232250">
+    <!-- Stork Search - Deferred -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202511232250" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202511232250"></noscript>
+
+
+    <!-- Article tags -->
+    <meta name="article:tag" content="python" />
+    <meta name="article:tag" content="ayuda" />
+    <meta name="article:tag" content="gui" />
+    <meta name="article:tag" content="pyside6" />
+    <meta name="article:tag" content="linux" />
+    <meta name="article:tag" content="tkinter" />
+    <meta name="article:tag" content="pyqt" />
+    <meta name="article:tag" content="windows" />
+    <meta name="article:tag" content="macos" />
+    <meta name="article:tag" content="fundamentos" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Estructuras de datos en Python: Arreglos (arrays)">
+    <meta property="og:description" content="Los arreglos o arrays son una de las estructuras de datos más usadas en programación. Proporcionan una forma de almacenar un número fijo de elementos en una secuencia.">
+    <meta property="og:url" content="https://pythonscouts.com/python-array/">
+    <meta property="og:site_name" content="Python Scouts">
+    <meta property="og:image" content="https://picsum.photos/id/871//1200/630.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="es_ES">
+    <meta property="article:published_time" content="2025-11-23T22:50:00+01:00">
+    <meta property="article:modified_time" content="2025-11-23T22:50:00+01:00">
+    <meta property="article:author" content="Leodanis Pozo Ramos">
+    <meta property="article:section" content="Series">
+    <meta property="article:tag" content="python">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lpozo78">
+    <meta name="twitter:creator" content="@lpozo78">
+    <meta name="twitter:title" content="Estructuras de datos en Python: Arreglos (arrays)">
+    <meta name="twitter:description" content="Los arreglos o arrays son una de las estructuras de datos más usadas en programación. Proporcionan una forma de almacenar un número fijo de elementos en una secuencia.">
+    <meta name="twitter:image" content="https://picsum.photos/id/871//1200/630.webp">
+    <meta name="twitter:image:alt" content="Estructuras de datos en Python: Arreglos (arrays)">
+
+    <!-- Custom CSS for article -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202511232250">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-R3C5PFSQ1S');
+</script>
+
+<body class="d-flex flex-column h-100">
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-md bg-white fixed-top border-bottom">
+        <div class="container-md content-px">
+            <a class="navbar-brand" href="/">
+            <img
+            src="https://pythonscouts.com/images/identity/header.webp"
+            alt="Python Scouts"
+            width="150"
+            height="50"
+            >
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Menú de Navegación">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav m-auto nav-link">
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/guias/" aria-current="page">
+                    Guías
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/series/" aria-current="page">
+                    Series
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/tutoriales/" aria-current="page">
+                    Tutoriales
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/acerca/" aria-current="page">
+                    Acerca
+                </a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <div class="stork-wrapper">
+                <input
+                class="stork-input"
+                type="search"
+                placeholder="Buscar"
+                aria-label="Search"
+                data-stork="sitesearch"
+                >
+                </div>
+            </form>
+            </div>
+        </div>
+    </nav>
+    <main id="main-content" class="container-md content-px py-3" tabindex="-1">
+        <div class="stork-wrapper">
+            <div data-stork="sitesearch-output" class="stork-output"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+            </div>
+        </div>
+
+    <!-- Article Header - Magazine Style -->
+    <header class="article-header mb-5">
+        <div class="row g-4 align-items-center">
+            <!-- Content Column -->
+            <div class="col-lg-6 order-lg-1">
+                <!-- Breadcrumbs -->
+                <nav aria-label="breadcrumb" class="mb-3">
+                    <ol class="breadcrumb mb-0 small">
+                        <li class="breadcrumb-item"><a href="https://pythonscouts.com">Inicio</a></li>
+                        <li class="breadcrumb-item"><a href="https://pythonscouts.com/series/">Series</a></li>
+                    </ol>
+                </nav>
+                
+                <!-- Category -->
+                <div class="mb-3">
+                    <span class="badge bg-success-subtle text-success border border-success px-3 py-2 text-uppercase fw-semibold">
+                        Series
+                    </span>
+                </div>
+                
+                <!-- Title -->
+                <h1 class="display-5 fw-bold mb-4">
+                    Estructuras de datos en Python: Arreglos (arrays)
+                </h1>
+                
+                <!-- Author & Meta -->
+                <div class="d-flex align-items-center gap-3 mb-4">
+                    <img src="https://pythonscouts.com/images/authors/leodanis-pozo-ramos.webp" 
+                         class="rounded-circle border" 
+                         width="60" height="60" 
+                         alt="Leodanis Pozo Ramos">
+                    <div>
+                        <div class="fw-semibold">Leodanis Pozo Ramos</div>
+                        <div class="text-muted small">
+                            <i class="bi bi-calendar-event me-1"></i>
+                            23 nov 2025
+                            <span class="mx-2">•</span>
+                            <i class="bi bi-clock me-1"></i>
+                            6 min
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tags -->
+                <div class="d-flex gap-2 flex-wrap">
+                    <a href="https://pythonscouts.com/tag/python.html" 
+                       class="badge bg-light text-dark border text-decoration-none">
+                        python
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Image Column -->
+            <div class="col-lg-6 order-lg-2">
+                <img src="https://picsum.photos/id/871//900/700" 
+                     class="img-fluid w-100 rounded-4 shadow-lg" 
+                     alt="Estructuras de datos en Python: Arreglos (arrays)"
+                     style="max-height: 600px; object-fit: cover;">
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Content -->
+    <div class="row">
+        <div class="col-12">
+            <article itemscope itemtype="https://schema.org/BlogPosting">
+                <meta itemprop="headline" content="Estructuras de datos en Python: Arreglos (arrays)">
+                <meta itemprop="description" content="Los arreglos o arrays son una de las estructuras de datos más usadas en programación. Proporcionan una forma de almacenar un número fijo de elementos en una secuencia.">
+                <meta itemprop="datePublished" content="2025-11-23T22:50:00+01:00">
+                <meta itemprop="dateModified" content="2025-11-23T22:50:00+01:00">
+                <meta itemprop="author" content="Leodanis Pozo Ramos">
+                <meta itemprop="image" content="https://picsum.photos/id/871//1200/630.webp">
+                <div itemprop="articleBody">
+                    <p class="lead text-muted mb-4">
+                        <p>Los arreglos o arrays son una de las estructuras de datos más usadas en programación. Proporcionan una forma de almacenar un número fijo de elementos en una secuencia.</p>
+                    </p>
+                    <p>En este artículo, aprenderás cómo implementar un arreglo en Python, incluyendo sus operaciones y características principales.</p>
+<div class="toc"><span class="toctitle">Contenidos</span><ul>
+<li><a href="#que-es-un-arreglo-o-array">¿Qué es un arreglo o array?</a></li>
+<li><a href="#operaciones-comunes-en-un-arreglo">Operaciones comunes en un arreglo</a></li>
+<li><a href="#implementacion-de-un-arreglo-en-python">Implementación de un arreglo en Python</a></li>
+<li><a href="#ejemplo-de-uso-del-arreglo">Ejemplo de uso del arreglo</a><ul>
+<li><a href="#inicializacion">Inicialización</a></li>
+<li><a href="#acceso-y-modificacion-de-elementos">Acceso y modificación de elementos</a></li>
+<li><a href="#limpiar-el-arreglo">Limpiar el arreglo</a></li>
+<li><a href="#longitud-y-pertenencia">Longitud y pertenencia</a></li>
+<li><a href="#iteracion">Iteración</a></li>
+<li><a href="#representacion-en-cadena">Representación en cadena</a></li>
+</ul>
+</li>
+<li><a href="#conclusion">Conclusión</a></li>
+</ul>
+</div>
+<h2 id="que-es-un-arreglo-o-array">¿Qué es un arreglo o array?</h2>
+<p>Un arreglo es una colección de elementos, cada uno identificado por un índice entero. Las características fundamentales de un arreglo incluyen las siguientes:</p>
+<ul>
+<li><strong>Tamaño fijo</strong>: El tamaño o número de elementos del arreglo se determina al crearlo y no se puede cambiar.</li>
+<li><strong>Acceso aleatorio</strong>: Los elementos se pueden acceder directamente usando índices que comienzan en <code>0</code>.</li>
+<li><strong>Homogéneo o heterogéneo</strong>: Los arreglos pueden almacenar elementos del mismo tipo de dato o de tipos mixtos, dependiendo de la implementación.</li>
+</ul>
+<p>En Python, los arreglos no están integrados como una estructura de datos primitiva. La biblioteca estándar incluye el tipo <code>array.array</code> para trabajar con datos numéricos homogéneos, pero en este artículo implementarás tu propio arreglo usando el módulo <code>ctypes</code> para tener un mayor control de bajo nivel.</p>
+<p>A través de ste ejercicio, podrás obtener una serie de habilidades fundamentales en Python, como puede ser el uso de clases y de métodos especiales, también conocidos como métodos mágicos o dunder.</p>
+<h2 id="operaciones-comunes-en-un-arreglo">Operaciones comunes en un arreglo</h2>
+<p>A continuación, un resumen de las operaciones que soportará tu arreglo:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Operación</strong></th>
+<th><strong>Descripción</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>array = Array(size)</code></td>
+<td>Construye un arreglo que puede contener <code>size</code> elementos.</td>
+</tr>
+<tr>
+<td><code>array[index]</code></td>
+<td>Accede al elemento en <code>index</code>.</td>
+</tr>
+<tr>
+<td><code>array[index] = value</code></td>
+<td>Asigna <code>value</code> al elemento en <code>index</code>.</td>
+</tr>
+<tr>
+<td><code>array.clear([value])</code></td>
+<td>Restablece todos los elementos del arreglo, asignándoles el valor <code>value</code> o <code>None</code>.</td>
+</tr>
+<tr>
+<td><code>len(array)</code></td>
+<td>Devuelve la longitud del arreglo.</td>
+</tr>
+<tr>
+<td><code>item in array</code></td>
+<td>Devuelve <code>True</code> si <code>item</code> está contenido en el arreglo y <code>False</code> si no lo está.</td>
+</tr>
+<tr>
+<td><code>for item in array: ...</code></td>
+<td>Itera sobre los elementos del arreglo.</td>
+</tr>
+<tr>
+<td><code>for item in reversed(array): ...</code></td>
+<td>Itera sobre los elementos en orden inverso.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="implementacion-de-un-arreglo-en-python">Implementación de un arreglo en Python</h2>
+<p>A continuación encontrarás la implementación del arreglo en Python:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">ctypes</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Generator</span><span class="p">,</span> <span class="n">Optional</span>
+
+<span class="k">class</span> <span class="nc">Array</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">size</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Array size must be a positive integer&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_size</span> <span class="o">=</span> <span class="n">size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_data</span> <span class="o">=</span> <span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">py_object</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_size</span><span class="p">)()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_type</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">type</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_type</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Expected type </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_type</span><span class="si">}</span><span class="s2">, got </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_size</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_size</span>
+
+    <span class="k">def</span> <span class="fm">__contains__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">item</span> <span class="o">==</span> <span class="n">value</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="nf">_check_index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">index</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">_size</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">IndexError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Index out of range: </span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">. &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;Valid range: 0 to </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_size</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_check_index</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_type</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_type</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_type</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Expected type </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_type</span><span class="si">}</span><span class="s2">, got </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_check_index</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Generator</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">]:</span>
+        <span class="k">yield from</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span>
+
+    <span class="k">def</span> <span class="fm">__reversed__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Generator</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">]:</span>
+        <span class="k">yield from</span> <span class="nb">reversed</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span><span class="w"> </span><span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">))</span><span class="si">}</span><span class="s2">)&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">(size=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_size</span><span class="si">}</span><span class="s2">)&quot;</span>
+</code></pre></div>
+
+<p>El atributo <code>._size</code> almacena el tamaño fijo del arreglo o el número de posiciones disponibles, mientras que <code>._data</code> proporciona un arreglo de bajo nivel creado con <code>ctypes.py_object * size</code>, donde se guardan las referencias a los objetos de Python.</p>
+<p>En <code>._type</code>, se guarda el tipo de dato de los elementos del arreglo. Una vez que asignas el primer valor no nulo, solo se permiten valores de ese mismo tipo.</p>
+<p>El método <code>.clear()</code> recorre todas las posiciones del arreglo y les asigna <code>value</code> o <code>None</code>. Si <code>._type</code> ya está fijado, comprueba que <code>value</code> coincida con ese tipo.</p>
+<p>Los métodos especiales te permiten ofrecer las funcionalidades siguientes:</p>
+<ul>
+<li><strong><code>.__getitem__()</code></strong>: devuelve el valor almacenado en <code>index</code> después de verificar que el índice esté dentro del rango válido.</li>
+<li><strong><code>.__setitem__()</code></strong>: fija el tipo de dato de los elementos del arreglo con el primer <code>value</code> no nulo. A partir de ahí, solo permite valores de ese tipo. También valida que el índice esté en rango antes de asignar.</li>
+<li><strong><code>__len__</code></strong>: devuelve el tamaño del arreglo o el número de elementos.</li>
+<li><strong><code>__contains__()</code></strong>: comprueba si <code>value</code> está contenido en el arreglo y devuelve <code>True</code> o <code>False</code>.</li>
+<li><strong><code>__iter__</code></strong> y <strong><code>__reversed__</code></strong>: permiten iterar sobre los elementos del arreglo en orden normal o inverso.</li>
+<li><strong><code>__str__</code></strong> y <strong><code>__repr__</code></strong>: devuelven representaciones de cadena que muestran el contenido actual del arreglo.</li>
+</ul>
+<h2 id="ejemplo-de-uso-del-arreglo">Ejemplo de uso del arreglo</h2>
+<p>En esta sección verás ejemplos prácticos de cómo crear, inicializar y manipular instancias de tu clase <code>Array</code>.</p>
+<h3 id="inicializacion">Inicialización</h3>
+<p>Para crear un <code>Array</code>, solo necesitas indicar su tamaño. Todos los elementos se inicializan con <code>None</code> por defecto:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Array</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># Crea un arreglo con 5 elementos</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">Array</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="acceso-y-modificacion-de-elementos">Acceso y modificación de elementos</h3>
+<p>Puedes leer y escribir elementos con el operador de indexado <code>[index]</code>, igual que en una lista:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">42</span>  <span class="c1"># Establece el primer elemento a 42</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="mi">42</span>
+</code></pre></div>
+
+<p>Si intentas asignar un valor de un tipo de dato diferente al que ya tiene el arreglo, o usar un índice fuera del rango válido, obtendrás errores claros:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Array</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;tres&quot;</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+    <span class="o">...</span>
+<span class="ne">TypeError</span><span class="p">:</span> <span class="n">Expected</span> <span class="nb">type</span> <span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">int</span><span class="s1">&#39;&gt;, got &lt;class &#39;</span><span class="nb">str</span><span class="s1">&#39;&gt;</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+    <span class="o">...</span>
+<span class="ne">IndexError</span><span class="p">:</span> <span class="n">Index</span> <span class="n">out</span> <span class="n">of</span> <span class="nb">range</span><span class="p">:</span> <span class="mf">3.</span> <span class="n">Valid</span> <span class="nb">range</span><span class="p">:</span> <span class="mi">0</span> <span class="n">to</span> <span class="mi">2</span>
+</code></pre></div>
+
+<h3 id="limpiar-el-arreglo">Limpiar el arreglo</h3>
+<p>El método <code>.clear()</code> restablece todos los elementos asignándoles el valor especificado. El valor predeterminado es <code>None</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Array</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">clear</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># Establece todos los elementos a 0</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">Array</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="longitud-y-pertenencia">Longitud y pertenencia</h3>
+<p>El método <code>.__len__()</code> devuelve el tamaño del arreglo, mientras que <code>.__contains__()</code> verifica si un elemento existe en el arreglo:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Array</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="mi">5</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">42</span> <span class="ow">in</span> <span class="n">a</span>
+<span class="kc">False</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">42</span> <span class="ow">in</span> <span class="n">a</span>
+<span class="kc">True</span>
+</code></pre></div>
+
+<h3 id="iteracion">Iteración</h3>
+<p>Los métodos <code>.__iter__()</code> y <code>.__reversed__()</code> permiten iterar sobre el arreglo tanto hacia adelante como hacia atrás:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Array</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
+<span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+<span class="mi">5</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+<span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="mi">5</span>
+<span class="mi">4</span>
+<span class="mi">3</span>
+<span class="mi">2</span>
+<span class="mi">1</span>
+</code></pre></div>
+
+<h3 id="representacion-en-cadena">Representación en cadena</h3>
+<p>Los métodos <code>.__str__()</code> y <code>.__repr__()</code> son más bien utilitarios y proporcionan representaciones legibles para humanos y amigables para desarrolladores:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Array</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">clear</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">Array</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<span class="n">Array</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</code></pre></div>
+
+<h2 id="conclusion">Conclusión</h2>
+<p>Has aprendido cómo implementar un arreglo de tamaño fijo que proporciona operaciones esenciales como indexación, iteración y pertenencia, al tiempo que refuerza la consistencia del tipo de dato de sus elementos. Este conocimiento te sirve de base para entender estructuras de datos fundamentales en Python.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <!-- Disqus -->
+    <div id="disqus_thread" class="py-5"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'pythonscouts';
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Por favor habilita JavaScript para ver los comentarios.</noscript>
+
+    </main>
+
+<footer class="site-footer mt-auto">
+    <div class="footer-primary border-top border-success-subtle py-3">
+        <div class="container-md content-px">
+            <div class="row gy-3 align-items-center justify-content-between">
+                <div class="col-lg-6 col-md-7">
+                    <div class="d-flex flex-column flex-sm-row align-items-center align-items-sm-start gap-3 text-center text-sm-start">
+                        <a href="https://pythonscouts.com" class="d-inline-flex align-items-center text-decoration-none">
+                            <img src="https://pythonscouts.com/images/identity/logo-title.png" alt="Python Scouts" width="160" height="48" class="img-fluid footer-logo">
+                        </a>
+                        <p class="text-muted footer-description mb-0">
+                            Python Scouts es tu espacio para aprender Python en español.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-5 text-center text-md-start">
+                    <h3 class="h6 text-uppercase text-success fw-semibold mb-2">Explora</h3>
+                    <nav aria-label="Footer navigation">
+                        <ul class="footer-links list-unstyled d-inline-flex flex-column gap-2 mb-0 text-start">
+                            <li><a href="https://pythonscouts.com/guias/">Guías</a></li>
+                            <li><a href="https://pythonscouts.com/series/">Series</a></li>
+                            <li><a href="https://pythonscouts.com/tutoriales/">Tutoriales</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-secondary py-3">
+        <div class="container-md content-px">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+                <span class="text-white-50 small">
+                    &copy; 2023-2025 Leodanis Pozo Ramos. Todos los derechos reservados.
+                </span>
+                <span class="text-white-50 small">
+                    Imágenes cortesía de <a href="https://picsum.photos/" target="_blank" rel="noopener" class="text-white">Picsum</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</footer>
+    <!-- JS Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
+    <!-- Stroke Scripts - Deferred -->
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202511232250" defer></script>
+    <script defer>
+        // Initialize Stork when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initStork);
+        } else {
+            initStork();
+        }
+        
+        function initStork() {
+            if (typeof stork !== 'undefined') {
+                stork.initialize("https://pythonscouts.com/theme/js/stork.wasm?v=202511232250")
+                stork.downloadIndex("sitesearch", "https://pythonscouts.com/search-index.st")
+                stork.attach("sitesearch")
+            }
+        }
+    </script>
+    <!-- Navbar Scroll Effect -->
+    <script>
+        // Add scroll effect to navbar with requestAnimationFrame
+        let ticking = false;
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                window.requestAnimationFrame(function() {
+                    const navbar = document.querySelector('.navbar');
+                    if (window.scrollY > 50) {
+                        navbar.classList.add('scrolled');
+                    } else {
+                        navbar.classList.remove('scrolled');
+                    }
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }, { passive: true });
+        
+        // Smooth scroll for skip link
+        document.addEventListener('DOMContentLoaded', function() {
+            const skipLink = document.querySelector('.skip-link');
+            if (skipLink) {
+                skipLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const mainContent = document.querySelector('#main-content');
+                    mainContent.focus();
+                    window.scrollTo({
+                        top: mainContent.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
