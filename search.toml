@@ -8,6 +8,11 @@ url = "/acerca/"
 title = "Acerca"
 
 [[input.files]]
+path = "python-class/index.html"
+url = "/python-class/"
+title = "Palabras clave en Python: class"
+
+[[input.files]]
 path = "python-array/index.html"
 url = "/python-array/"
 title = "Estructuras de datos en Python: Arreglos (arrays)"

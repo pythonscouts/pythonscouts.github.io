@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2025-11-23T22:50:00+01:00</updated><subtitle>Aprende Python en Español.</subtitle><entry><title>Estructuras de datos en Python: Arreglos (arrays)</title><link href="https://pythonscouts.com/python-array/" rel="alternate"/><published>2025-11-23T22:50:00+01:00</published><updated>2025-11-23T22:50:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-11-23:/python-array/</id><summary type="html">&lt;p&gt;Los arreglos o arrays son una de las estructuras de datos más usadas en programación. Proporcionan una forma de almacenar un número fijo de elementos en una secuencia.&lt;/p&gt;</summary><content type="html">&lt;p&gt;En este artículo, aprenderás cómo implementar un arreglo en Python, incluyendo sus operaciones y características principales.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2025-12-01T08:50:00+01:00</updated><subtitle>Aprende Python en Español.</subtitle><entry><title>Palabras clave en Python: class</title><link href="https://pythonscouts.com/python-class/" rel="alternate"/><published>2025-12-01T08:50:00+01:00</published><updated>2025-12-01T08:50:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-12-01:/python-class/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;class&lt;/code&gt; se utiliza para definir nuevas clases, que son plantillas para crear objetos.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Las clases encapsulan datos y funcionalidades en una sola entidad, lo que te permite modelar objetos del mundo real y sus interacciones de manera eficiente.&lt;/p&gt;
+&lt;h2 id="sintaxis"&gt;Sintaxis&lt;/h2&gt;
+&lt;p&gt;La sintaxis básica para definir una clase en Python es la siguiente:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ClassName&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;cls_attribute&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;42&lt;/span&gt;  &lt;span class="c1"&gt;# Class attribute&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;arg&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;attribute&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;arg&lt;/span&gt; &lt;span class="c1"&gt;# Instance attribute&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;method&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
+&lt;p&gt;Aquí tienes un ejemplo rápido que ilustra cómo se usa la palabra clave &lt;code&gt;class&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Dog&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;         &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;bark&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt; dice ¡Guau!&amp;quot;&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;fido&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Dog&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Fido&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;fido&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bark&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="s1"&gt;&amp;#39;Fido dice ¡Guau!&amp;#39;&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;fido&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;
+&lt;span class="s1"&gt;&amp;#39;Fido&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este ejemplo, definimos una clase &lt;code&gt;Dog&lt;/code&gt; que tiene un método &lt;code&gt;.bark()&lt;/code&gt;. Cuando creamos un objeto &lt;code&gt;fido&lt;/code&gt; de la clase &lt;code&gt;Dog&lt;/code&gt;, podemos llamar sus métodos para que realice acciones, como ladrar con &lt;code&gt;.bark()&lt;/code&gt;. También podemos acceder a sus atributos o datos con la notación de punto.&lt;/p&gt;
+&lt;h2 id="uso-de-class"&gt;Uso de &lt;code&gt;class&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Los casos de uso más comunes de la palabra clave &lt;code&gt;class&lt;/code&gt; incluyen los siguientes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Crear objetos con atributos y métodos que modelan entidades del mundo real.&lt;/li&gt;
+&lt;li&gt;Facilitar la reutilización de código mediante herencia.&lt;/li&gt;
+&lt;li&gt;Encapsular y ocultar detalles internos de implementación para mejorar la modularidad.&lt;/li&gt;
+&lt;li&gt;Definir estructuras de datos complejas y personalizadas.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
+&lt;p&gt;La palabra clave &lt;code&gt;class&lt;/code&gt; en Python es fundamental para la programación orientada a objetos, permitiéndote definir nuevas estructuras de datos y modelar comportamientos complejos.&lt;/p&gt;
+&lt;p&gt;Conocer y emplear esta palabra clave te ayuda a crear aplicaciones más organizadas, modulares y escalables.&lt;/p&gt;</content><category term="Series"/><category term="python"/></entry><entry><title>Estructuras de datos en Python: Arreglos (arrays)</title><link href="https://pythonscouts.com/python-array/" rel="alternate"/><published>2025-11-23T22:50:00+01:00</published><updated>2025-11-23T22:50:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-11-23:/python-array/</id><summary type="html">&lt;p&gt;Los arreglos o arrays son una de las estructuras de datos más usadas en programación. Proporcionan una forma de almacenar un número fijo de elementos en una secuencia.&lt;/p&gt;</summary><content type="html">&lt;p&gt;En este artículo, aprenderás cómo implementar un arreglo en Python, incluyendo sus operaciones y características principales.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#que-es-un-arreglo-o-array"&gt;¿Qué es un arreglo o array?&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#operaciones-comunes-en-un-arreglo"&gt;Operaciones comunes en un arreglo&lt;/a&gt;&lt;/li&gt;
