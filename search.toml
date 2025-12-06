@@ -8,6 +8,16 @@ url = "/acerca/"
 title = "Acerca"
 
 [[input.files]]
+path = "licencia/index.html"
+url = "/licencia/"
+title = "Licencia"
+
+[[input.files]]
+path = "python-return/index.html"
+url = "/python-return/"
+title = "Palabras clave en Python: return"
+
+[[input.files]]
 path = "python-class/index.html"
 url = "/python-class/"
 title = "Palabras clave en Python: class"

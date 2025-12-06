@@ -55,6 +55,21 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Links inside inline code */
+code a,
+a code {
+    color: #2D7A3E;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 2px;
+}
+
+code a:hover,
+a code:hover {
+    color: #1a5c2a;
+    text-decoration-style: solid;
+}
+
 .nav-link a {
     text-decoration: none;
     font-weight: 500;
