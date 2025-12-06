@@ -13,6 +13,11 @@ url = "/licencia/"
 title = "Licencia"
 
 [[input.files]]
+path = "python-palabras-clave/index.html"
+url = "/python-palabras-clave/"
+title = "Palabras clave en Python: Cuáles son?"
+
+[[input.files]]
 path = "python-return/index.html"
 url = "/python-return/"
 title = "Palabras clave en Python: return"
@@ -166,11 +171,6 @@ title = "Cómo instalar Python en tu sistema operativo Windows?"
 path = "instalar-python-macos/index.html"
 url = "/instalar-python-macos/"
 title = "Cómo instalar Python en tu sistema operativo macOS?"
-
-[[input.files]]
-path = "python-palabras-clave/index.html"
-url = "/python-palabras-clave/"
-title = "Palabras clave o reservadas de Python: cuáles son?"
 
 [[input.files]]
 path = "python-hola-mundo/index.html"
