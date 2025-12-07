@@ -6,7 +6,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://pythonscouts.com/</loc>
-<lastmod>2025-12-06T21:14:35-00:00</lastmod>
+<lastmod>2025-12-07T07:59:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -124,13 +124,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://pythonscouts.com/licencia/</loc>
-<lastmod>2025-12-06T21:14:35-00:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
 <loc>https://pythonscouts.com/obtener-ayuda-python/</loc>
 <lastmod>2025-03-03T17:30:00+01:00</lastmod>
 <changefreq>weekly</changefreq>
@@ -244,35 +237,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://pythonscouts.com/series/</loc>
-<lastmod>2025-12-06T21:14:35-00:00</lastmod>
+<lastmod>2025-12-07T07:59:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/series/estructuras-de-datos-en-python/</loc>
-<lastmod>2025-12-06T21:14:35-00:00</lastmod>
+<lastmod>2025-12-07T07:59:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/series/palabras-clave-en-python/</loc>
-<lastmod>2025-12-06T21:14:35-00:00</lastmod>
+<lastmod>2025-12-07T07:59:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/series/patrones-de-diseno-en-python/</loc>
-<lastmod>2025-12-06T21:14:35-00:00</lastmod>
+<lastmod>2025-12-07T07:59:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/series/python-a-traves-de-ejemplos/</loc>
-<lastmod>2025-12-06T21:14:35-00:00</lastmod>
+<lastmod>2025-12-07T07:59:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
