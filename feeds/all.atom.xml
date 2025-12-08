@@ -1,5 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2025-12-06T21:00:00+01:00</updated><subtitle>Aprende Python en Español.</subtitle><entry><title>Palabras clave en Python: Cuáles son?</title><link href="https://pythonscouts.com/python-palabras-clave/" rel="alternate"/><published>2025-12-06T21:00:00+01:00</published><updated>2025-12-06T21:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-12-06:/python-palabras-clave/</id><summary type="html">&lt;p&gt;Las &lt;strong&gt;palabras clave&lt;/strong&gt; o &lt;strong&gt;palabras reservadas&lt;/strong&gt; (&lt;em&gt;keywords&lt;/em&gt;) de Python son un conjunto de palabras en idioma Inglés que tienen un significado especial para el lenguaje. Estas palabras constituyen la base de la sintaxis de Python.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Por esta razón, es importante que las conozcas y sepas su rol en el lenguaje. Con ellas, podrás escribir diferentes tipos de sentencias que, en su conjunto, conformarán tus programas y aplicaciones Python.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2025-12-08T21:00:00+01:00</updated><subtitle>Aprende Python en Español.</subtitle><entry><title>Palabras clave en Python: as</title><link href="https://pythonscouts.com/python-as/" rel="alternate"/><published>2025-12-08T21:00:00+01:00</published><updated>2025-12-08T21:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-12-08:/python-as/</id><summary type="html">&lt;p&gt;Descubre cómo usar la palabra clave as en Python para crear alias de módulos y capturar excepciones, mejorando la legibilidad de tu código.&lt;/p&gt;</summary><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#sintaxis"&gt;Sintaxis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#ejemplos-practicos"&gt;Ejemplos prácticos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#uso-de-as"&gt;Uso de as&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#resumiendo"&gt;Resumiendo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="sintaxis"&gt;Sintaxis&lt;/h2&gt;
+&lt;p&gt;La sintaxis básica para usar &lt;code&gt;as&lt;/code&gt; es:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Importar módulos con alias:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;module_name&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;alias_name&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Capturar excepciones:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="c1"&gt;# Code that may raise an exception&lt;/span&gt;
+&lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="n"&gt;ExceptionType&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="c1"&gt;# Handle the exception&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Gestionar contexto con with:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;expression&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;variable&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="c1"&gt;# Code that uses variable&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
+&lt;p&gt;Aquí tienes algunos ejemplos de cómo se usa &lt;code&gt;as&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt; &lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="ne"&gt;ZeroDivisionError&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Error: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Error&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;division&lt;/span&gt; &lt;span class="n"&gt;by&lt;/span&gt; &lt;span class="n"&gt;zero&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En el primer ejemplo, se importa el módulo &lt;code&gt;numpy&lt;/code&gt; y se le asigna el alias &lt;code&gt;np&lt;/code&gt;, lo que permite referirse a él de forma más concisa.&lt;/p&gt;
+&lt;p&gt;En el segundo ejemplo, &lt;code&gt;as&lt;/code&gt; se utiliza para capturar una excepción y asignarla a la variable &lt;code&gt;error&lt;/code&gt;, permitiendo manejarla e imprimir un mensaje de error.&lt;/p&gt;
+&lt;h2 id="uso-de-as"&gt;Uso de &lt;code&gt;as&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Los casos de uso más comunes de la palabra clave &lt;code&gt;as&lt;/code&gt; incluyen los siguientes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Crear alias para módulos importados, lo que ayuda a reducir la longitud del código y mejora la legibilidad, especialmente con nombres de módulos largos.&lt;/li&gt;
+&lt;li&gt;Capturar excepciones para acceder a los detalles de la excepción en bloques &lt;code&gt;try-except&lt;/code&gt;, permitiendo un manejo más preciso de errores.&lt;/li&gt;
+&lt;li&gt;Gestionar contextos con &lt;code&gt;with&lt;/code&gt;, asignando el resultado de un gestor de contexto a una variable para facilitar el manejo de recursos como archivos, conexiones de red o bloqueos.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
+&lt;p&gt;La palabra clave &lt;code&gt;as&lt;/code&gt; en Python es una herramienta versátil que te permite asignar alias a módulos, capturar excepciones y gestionar contextos, facilitando un código más limpio y manejable.&lt;/p&gt;
+&lt;p&gt;Conocer y emplear &lt;code&gt;as&lt;/code&gt; puede mejorar significativamente la legibilidad y organización de tu código Python.&lt;/p&gt;</content><category term="Series"/><category term="python"/></entry><entry><title>Palabras clave en Python: Cuáles son?</title><link href="https://pythonscouts.com/python-palabras-clave/" rel="alternate"/><published>2025-12-06T21:00:00+01:00</published><updated>2025-12-06T21:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-12-06:/python-palabras-clave/</id><summary type="html">&lt;p&gt;Las &lt;strong&gt;palabras clave&lt;/strong&gt; o &lt;strong&gt;palabras reservadas&lt;/strong&gt; (&lt;em&gt;keywords&lt;/em&gt;) de Python son un conjunto de palabras en idioma Inglés que tienen un significado especial para el lenguaje. Estas palabras constituyen la base de la sintaxis de Python.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Por esta razón, es importante que las conozcas y sepas su rol en el lenguaje. Con ellas, podrás escribir diferentes tipos de sentencias que, en su conjunto, conformarán tus programas y aplicaciones Python.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;En este tutorial, aprenderás:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Qué son las &lt;strong&gt;palabras clave&lt;/strong&gt; o &lt;strong&gt;reservadas&lt;/strong&gt;&lt;/li&gt;
