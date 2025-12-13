@@ -33,26 +33,44 @@ Python Scouts - Aprende Python en Español.    </title>
     <!-- Canonical URL -->
     <link rel="canonical" href="https://pythonscouts.com/">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202512131230">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202512131230">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202512131242">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202512131242">
     <!-- Preconnect to CDNs -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <!-- Bootstrap CSS (deferred) -->
+    <link rel="preload"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+          as="style"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+          crossorigin="anonymous"
+          onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+              integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+              crossorigin="anonymous">
+    </noscript>
+    <!-- Bootstrap Icons (deferred) -->
+    <link rel="preload"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css"
+          as="style"
+          onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
+    </noscript>
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202512131230">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202512131242">
     <!-- Stork Search - Deferred -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202512131230" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202512131230"></noscript>
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202512131242" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202512131242"></noscript>
 
             <link rel="preload"
                   as="image"
                   href="https://pythonscouts.com/images/articles/python-as/featured.webp"
                   imagesrcset="
-                      https://pythonscouts.com/images/articles/python-as/featured.webp 1400w
-, https://pythonscouts.com/images/articles/python-as/article.webp 900w, https://pythonscouts.com/images/articles/python-as/thumbnail.webp 300w                  "
+https://pythonscouts.com/images/articles/python-as/featured.webp 1400w, https://pythonscouts.com/images/articles/python-as/article.webp 900w, https://pythonscouts.com/images/articles/python-as/thumbnail.webp 300w                  "
                   imagesizes="(min-width: 992px) 66vw, 100vw"
                   fetchpriority="high">
 </head>
@@ -131,18 +149,17 @@ Python Scouts - Aprende Python en Español.    </title>
 
 <!-- Featured Article with Getting Started Guide -->
 <section class="featured-section mb-5">
-    <div class="row g-4">
+    <div class="row g-3 g-lg-4">
         <!-- Featured Article (8 columns) -->
         <div class="col-lg-8">
-            <div class="card border-0 shadow rounded-4 overflow-hidden h-100">
+            <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
                 <div class="row g-0">
                     <!-- Top Image Section (Full Width) -->
-                    <div class="col-12 position-relative" style="height: 200px; overflow: hidden;">
+                    <div class="col-12 position-relative" style="height: clamp(180px, 22vw, 280px); overflow: hidden;">
                         <picture>
                                 <source type="image/webp"
                                         srcset="
-                                            https://pythonscouts.com/images/articles/python-as/featured.webp 1400w
-, https://pythonscouts.com/images/articles/python-as/article.webp 900w, https://pythonscouts.com/images/articles/python-as/thumbnail.webp 300w                                        "
+https://pythonscouts.com/images/articles/python-as/featured.webp 1400w, https://pythonscouts.com/images/articles/python-as/article.webp 900w, https://pythonscouts.com/images/articles/python-as/thumbnail.webp 300w                                        "
                                         sizes="(min-width: 992px) 66vw, 100vw">
                                 <img src="https://pythonscouts.com/images/articles/python-as/featured.webp"
                                      alt="Palabras clave en Python: as"
@@ -152,12 +169,12 @@ Python Scouts - Aprende Python en Español.    </title>
                                      fetchpriority="high">
                         </picture>
                         <div class="position-absolute top-0 start-0 w-100 h-100" 
-                             style="background: linear-gradient(180deg, transparent 0%, transparent 50%, rgba(255,255,255,0.3) 70%, rgba(255,255,255,0.7) 85%, rgba(255,255,255,0.95) 95%, #fff 100%);">
+                             style="background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.05) 40%, rgba(255,255,255,0.8) 80%, #fff 100%);">
                         </div>
                     </div>
-                    
+
                     <!-- Content Section -->
-                    <div class="col-12 px-4 pb-4" style="margin-top: -50px; position: relative; z-index: 10;">
+                    <div class="col-12 px-4 pb-4" style="margin-top: clamp(-70px, -6vw, -40px); position: relative; z-index: 10;">
                         <!-- Badges -->
                         <div class="mb-3">
                             <span class="badge bg-primary text-white text-uppercase small me-2">
@@ -303,7 +320,7 @@ Python Scouts - Aprende Python en Español.    </title>
         <div class="col">
             <div class="card h-100">
                 <a href="https://pythonscouts.com/python-palabras-clave/">
-                    <img class="card-img-top img-fluid w-100" src="https://pythonscouts.com/images/articles/python-palabras-clave/thumbnail.webp" width="300" height="200" alt="Palabras clave en Python: Cuáles son?" loading="lazy">
+                    <img class="card-img-top img-fluid w-100" src="https://pythonscouts.com/images/articles/python-palabras-clave/article.webp" width="300" height="200" alt="Palabras clave en Python: Cuáles son?" loading="lazy">
                 </a>
                 <div class="py-3">
                     <a href="https://pythonscouts.com/python-palabras-clave/"><p class="card-title h5">Palabras clave en Python: Cuáles son?</p></a>
@@ -323,7 +340,7 @@ Python Scouts - Aprende Python en Español.    </title>
         <div class="col">
             <div class="card h-100">
                 <a href="https://pythonscouts.com/python-return/">
-                    <img class="card-img-top img-fluid w-100" src="https://pythonscouts.com/images/articles/python-return/thumbnail.webp" width="300" height="200" alt="Palabras clave en Python: return" loading="lazy">
+                    <img class="card-img-top img-fluid w-100" src="https://pythonscouts.com/images/articles/python-return/article.webp" width="300" height="200" alt="Palabras clave en Python: return" loading="lazy">
                 </a>
                 <div class="py-3">
                     <a href="https://pythonscouts.com/python-return/"><p class="card-title h5">Palabras clave en Python: return</p></a>
@@ -343,7 +360,7 @@ Python Scouts - Aprende Python en Español.    </title>
         <div class="col">
             <div class="card h-100">
                 <a href="https://pythonscouts.com/python-class/">
-                    <img class="card-img-top img-fluid w-100" src="https://pythonscouts.com/images/articles/python-class/thumbnail.webp" width="300" height="200" alt="Palabras clave en Python: class" loading="lazy">
+                    <img class="card-img-top img-fluid w-100" src="https://pythonscouts.com/images/articles/python-class/article.webp" width="300" height="200" alt="Palabras clave en Python: class" loading="lazy">
                 </a>
                 <div class="py-3">
                     <a href="https://pythonscouts.com/python-class/"><p class="card-title h5">Palabras clave en Python: class</p></a>
@@ -363,7 +380,7 @@ Python Scouts - Aprende Python en Español.    </title>
         <div class="col">
             <div class="card h-100">
                 <a href="https://pythonscouts.com/python-array/">
-                    <img class="card-img-top img-fluid w-100" src="https://pythonscouts.com/images/articles/python-array/thumbnail.webp" width="300" height="200" alt="Estructuras de datos en Python: Arreglos (arrays)" loading="lazy">
+                    <img class="card-img-top img-fluid w-100" src="https://pythonscouts.com/images/articles/python-array/article.webp" width="300" height="200" alt="Estructuras de datos en Python: Arreglos (arrays)" loading="lazy">
                 </a>
                 <div class="py-3">
                     <a href="https://pythonscouts.com/python-array/"><p class="card-title h5">Estructuras de datos en Python: Arreglos (arrays)</p></a>
@@ -383,7 +400,7 @@ Python Scouts - Aprende Python en Español.    </title>
         <div class="col">
             <div class="card h-100">
                 <a href="https://pythonscouts.com/python-while/">
-                    <img class="card-img-top img-fluid w-100" src="https://pythonscouts.com/images/articles/python-while/thumbnail.webp" width="300" height="200" alt="Palabras clave en Python: while" loading="lazy">
+                    <img class="card-img-top img-fluid w-100" src="https://pythonscouts.com/images/articles/python-while/article.webp" width="300" height="200" alt="Palabras clave en Python: while" loading="lazy">
                 </a>
                 <div class="py-3">
                     <a href="https://pythonscouts.com/python-while/"><p class="card-title h5">Palabras clave en Python: while</p></a>
@@ -403,7 +420,7 @@ Python Scouts - Aprende Python en Español.    </title>
         <div class="col">
             <div class="card h-100">
                 <a href="https://pythonscouts.com/gestionar-proyecto-python-uv/">
-                    <img class="card-img-top img-fluid w-100" src="https://pythonscouts.com/images/articles/gestionar-proyecto-python-uv/thumbnail.webp" width="300" height="200" alt="Cómo gestionar un proyecto Python con uv?" loading="lazy">
+                    <img class="card-img-top img-fluid w-100" src="https://pythonscouts.com/images/articles/gestionar-proyecto-python-uv/article.webp" width="300" height="200" alt="Cómo gestionar un proyecto Python con uv?" loading="lazy">
                 </a>
                 <div class="py-3">
                     <a href="https://pythonscouts.com/gestionar-proyecto-python-uv/"><p class="card-title h5">Cómo gestionar un proyecto Python con uv?</p></a>
@@ -423,7 +440,7 @@ Python Scouts - Aprende Python en Español.    </title>
         <div class="col">
             <div class="card h-100">
                 <a href="https://pythonscouts.com/python-for/">
-                    <img class="card-img-top img-fluid w-100" src="https://pythonscouts.com/images/articles/python-for/thumbnail.webp" width="300" height="200" alt="Palabras clave en Python: for" loading="lazy">
+                    <img class="card-img-top img-fluid w-100" src="https://pythonscouts.com/images/articles/python-for/article.webp" width="300" height="200" alt="Palabras clave en Python: for" loading="lazy">
                 </a>
                 <div class="py-3">
                     <a href="https://pythonscouts.com/python-for/"><p class="card-title h5">Palabras clave en Python: for</p></a>
@@ -443,7 +460,7 @@ Python Scouts - Aprende Python en Español.    </title>
         <div class="col">
             <div class="card h-100">
                 <a href="https://pythonscouts.com/python-if/">
-                    <img class="card-img-top img-fluid w-100" src="https://pythonscouts.com/images/articles/python-if/thumbnail.webp" width="300" height="200" alt="Palabras clave en Python: if" loading="lazy">
+                    <img class="card-img-top img-fluid w-100" src="https://pythonscouts.com/images/articles/python-if/article.webp" width="300" height="200" alt="Palabras clave en Python: if" loading="lazy">
                 </a>
                 <div class="py-3">
                     <a href="https://pythonscouts.com/python-if/"><p class="card-title h5">Palabras clave en Python: if</p></a>
@@ -463,7 +480,7 @@ Python Scouts - Aprende Python en Español.    </title>
         <div class="col">
             <div class="card h-100">
                 <a href="https://pythonscouts.com/python-def/">
-                    <img class="card-img-top img-fluid w-100" src="https://pythonscouts.com/images/articles/python-def/thumbnail.webp" width="300" height="200" alt="Palabras clave en Python: def" loading="lazy">
+                    <img class="card-img-top img-fluid w-100" src="https://pythonscouts.com/images/articles/python-def/article.webp" width="300" height="200" alt="Palabras clave en Python: def" loading="lazy">
                 </a>
                 <div class="py-3">
                     <a href="https://pythonscouts.com/python-def/"><p class="card-title h5">Palabras clave en Python: def</p></a>
@@ -483,7 +500,7 @@ Python Scouts - Aprende Python en Español.    </title>
         <div class="col">
             <div class="card h-100">
                 <a href="https://pythonscouts.com/python-and/">
-                    <img class="card-img-top img-fluid w-100" src="https://pythonscouts.com/images/articles/python-and/thumbnail.webp" width="300" height="200" alt="Palabras clave en Python: and" loading="lazy">
+                    <img class="card-img-top img-fluid w-100" src="https://pythonscouts.com/images/articles/python-and/article.webp" width="300" height="200" alt="Palabras clave en Python: and" loading="lazy">
                 </a>
                 <div class="py-3">
                     <a href="https://pythonscouts.com/python-and/"><p class="card-title h5">Palabras clave en Python: and</p></a>
@@ -503,7 +520,7 @@ Python Scouts - Aprende Python en Español.    </title>
         <div class="col">
             <div class="card h-100">
                 <a href="https://pythonscouts.com/python-true/">
-                    <img class="card-img-top img-fluid w-100" src="https://pythonscouts.com/images/articles/python-true/thumbnail.webp" width="300" height="200" alt="Palabras clave en Python: True" loading="lazy">
+                    <img class="card-img-top img-fluid w-100" src="https://pythonscouts.com/images/articles/python-true/article.webp" width="300" height="200" alt="Palabras clave en Python: True" loading="lazy">
                 </a>
                 <div class="py-3">
                     <a href="https://pythonscouts.com/python-true/"><p class="card-title h5">Palabras clave en Python: True</p></a>
@@ -624,7 +641,7 @@ Python Scouts - Aprende Python en Español.    </title>
     <!-- JS Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
     <!-- Stroke Scripts - Deferred -->
-    <script src="https://pythonscouts.com/theme/js/stork.js?v=202512131230" defer></script>
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202512131242" defer></script>
     <script defer>
         // Initialize Stork when DOM is ready
         if (document.readyState === 'loading') {
@@ -635,7 +652,7 @@ Python Scouts - Aprende Python en Español.    </title>
         
         function initStork() {
             if (typeof stork !== 'undefined') {
-                stork.initialize("https://pythonscouts.com/theme/js/stork.wasm?v=202512131230")
+                stork.initialize("https://pythonscouts.com/theme/js/stork.wasm?v=202512131242")
                 stork.downloadIndex("sitesearch", "https://pythonscouts.com/search-index.st")
                 stork.attach("sitesearch")
             }

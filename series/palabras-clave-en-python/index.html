@@ -34,26 +34,44 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://pythonscouts.com/">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202512131230">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202512131230">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202512131242">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202512131242">
     <!-- Preconnect to CDNs -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <!-- Bootstrap CSS (deferred) -->
+    <link rel="preload"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+          as="style"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+          crossorigin="anonymous"
+          onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+              integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+              crossorigin="anonymous">
+    </noscript>
+    <!-- Bootstrap Icons (deferred) -->
+    <link rel="preload"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css"
+          as="style"
+          onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
+    </noscript>
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202512131230">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202512131242">
     <!-- Stork Search - Deferred -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202512131230" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202512131230"></noscript>
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202512131242" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202512131242"></noscript>
 
             <link rel="preload"
                   as="image"
                   href="https://pythonscouts.com/images/articles/python-as/featured.webp"
                   imagesrcset="
-                      https://pythonscouts.com/images/articles/python-as/featured.webp 1400w
-, https://pythonscouts.com/images/articles/python-as/article.webp 900w, https://pythonscouts.com/images/articles/python-as/thumbnail.webp 300w                  "
+https://pythonscouts.com/images/articles/python-as/featured.webp 1400w, https://pythonscouts.com/images/articles/python-as/article.webp 900w, https://pythonscouts.com/images/articles/python-as/thumbnail.webp 300w                  "
                   imagesizes="(min-width: 992px) 66vw, 100vw"
                   fetchpriority="high">
 </head>
@@ -174,7 +192,7 @@
             <div class="card h-100">
                 <a href="https://pythonscouts.com/python-palabras-clave/">
                      <img class="card-img-top img-fluid w-100"
-                          src="https://pythonscouts.com/images/articles/python-palabras-clave/thumbnail.webp"
+                          src="https://pythonscouts.com/images/articles/python-palabras-clave/article.webp"
                           width="300" height="200"
                           alt="Palabras clave en Python: Cuáles son?"
                           loading="lazy">
@@ -200,7 +218,7 @@
             <div class="card h-100">
                 <a href="https://pythonscouts.com/python-return/">
                      <img class="card-img-top img-fluid w-100"
-                          src="https://pythonscouts.com/images/articles/python-return/thumbnail.webp"
+                          src="https://pythonscouts.com/images/articles/python-return/article.webp"
                           width="300" height="200"
                           alt="Palabras clave en Python: return"
                           loading="lazy">
@@ -226,7 +244,7 @@
             <div class="card h-100">
                 <a href="https://pythonscouts.com/python-class/">
                      <img class="card-img-top img-fluid w-100"
-                          src="https://pythonscouts.com/images/articles/python-class/thumbnail.webp"
+                          src="https://pythonscouts.com/images/articles/python-class/article.webp"
                           width="300" height="200"
                           alt="Palabras clave en Python: class"
                           loading="lazy">
@@ -252,7 +270,7 @@
             <div class="card h-100">
                 <a href="https://pythonscouts.com/python-while/">
                      <img class="card-img-top img-fluid w-100"
-                          src="https://pythonscouts.com/images/articles/python-while/thumbnail.webp"
+                          src="https://pythonscouts.com/images/articles/python-while/article.webp"
                           width="300" height="200"
                           alt="Palabras clave en Python: while"
                           loading="lazy">
@@ -278,7 +296,7 @@
             <div class="card h-100">
                 <a href="https://pythonscouts.com/python-for/">
                      <img class="card-img-top img-fluid w-100"
-                          src="https://pythonscouts.com/images/articles/python-for/thumbnail.webp"
+                          src="https://pythonscouts.com/images/articles/python-for/article.webp"
                           width="300" height="200"
                           alt="Palabras clave en Python: for"
                           loading="lazy">
@@ -304,7 +322,7 @@
             <div class="card h-100">
                 <a href="https://pythonscouts.com/python-if/">
                      <img class="card-img-top img-fluid w-100"
-                          src="https://pythonscouts.com/images/articles/python-if/thumbnail.webp"
+                          src="https://pythonscouts.com/images/articles/python-if/article.webp"
                           width="300" height="200"
                           alt="Palabras clave en Python: if"
                           loading="lazy">
@@ -330,7 +348,7 @@
             <div class="card h-100">
                 <a href="https://pythonscouts.com/python-def/">
                      <img class="card-img-top img-fluid w-100"
-                          src="https://pythonscouts.com/images/articles/python-def/thumbnail.webp"
+                          src="https://pythonscouts.com/images/articles/python-def/article.webp"
                           width="300" height="200"
                           alt="Palabras clave en Python: def"
                           loading="lazy">
@@ -356,7 +374,7 @@
             <div class="card h-100">
                 <a href="https://pythonscouts.com/python-and/">
                      <img class="card-img-top img-fluid w-100"
-                          src="https://pythonscouts.com/images/articles/python-and/thumbnail.webp"
+                          src="https://pythonscouts.com/images/articles/python-and/article.webp"
                           width="300" height="200"
                           alt="Palabras clave en Python: and"
                           loading="lazy">
@@ -382,7 +400,7 @@
             <div class="card h-100">
                 <a href="https://pythonscouts.com/python-true/">
                      <img class="card-img-top img-fluid w-100"
-                          src="https://pythonscouts.com/images/articles/python-true/thumbnail.webp"
+                          src="https://pythonscouts.com/images/articles/python-true/article.webp"
                           width="300" height="200"
                           alt="Palabras clave en Python: True"
                           loading="lazy">
@@ -408,7 +426,7 @@
             <div class="card h-100">
                 <a href="https://pythonscouts.com/python-none/">
                      <img class="card-img-top img-fluid w-100"
-                          src="https://pythonscouts.com/images/articles/python-none/thumbnail.webp"
+                          src="https://pythonscouts.com/images/articles/python-none/article.webp"
                           width="300" height="200"
                           alt="Palabras clave en Python: None"
                           loading="lazy">
@@ -434,7 +452,7 @@
             <div class="card h-100">
                 <a href="https://pythonscouts.com/python-false/">
                      <img class="card-img-top img-fluid w-100"
-                          src="https://pythonscouts.com/images/articles/python-false/thumbnail.webp"
+                          src="https://pythonscouts.com/images/articles/python-false/article.webp"
                           width="300" height="200"
                           alt="Palabras clave en Python: False"
                           loading="lazy">
@@ -528,7 +546,7 @@
     <!-- JS Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
     <!-- Stroke Scripts - Deferred -->
-    <script src="https://pythonscouts.com/theme/js/stork.js?v=202512131230" defer></script>
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202512131242" defer></script>
     <script defer>
         // Initialize Stork when DOM is ready
         if (document.readyState === 'loading') {
@@ -539,7 +557,7 @@
         
         function initStork() {
             if (typeof stork !== 'undefined') {
-                stork.initialize("https://pythonscouts.com/theme/js/stork.wasm?v=202512131230")
+                stork.initialize("https://pythonscouts.com/theme/js/stork.wasm?v=202512131242")
                 stork.downloadIndex("sitesearch", "https://pythonscouts.com/search-index.st")
                 stork.attach("sitesearch")
             }
