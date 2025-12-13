@@ -12,6 +12,13 @@
     --ps-accent: #4caf50;
 }
 
+@font-face {
+    font-family: "bootstrap-icons";
+    src: url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/fonts/bootstrap-icons.woff2") format("woff2"),
+         url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/fonts/bootstrap-icons.woff") format("woff");
+    font-display: swap;
+}
+
 body {
     padding-top: 5em;
     font-size: 1.2em;
@@ -240,6 +247,39 @@ button:hover {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.95) !important;
+    min-height: 76px;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.navbar .search-form {
+    flex: 0 0 240px;
+    max-width: 100%;
+    width: 240px;
+}
+
+.navbar .stork-wrapper {
+    width: 100%;
+}
+
+.navbar .stork-output {
+    transform: translateY(0.5rem);
+}
+
+.navbar .stork-input {
+    width: 100%;
+}
+
+.navbar .search-form .stork-wrapper {
+    width: 100%;
+}
+
+@media (max-width: 991.98px) {
+    .navbar .search-form {
+        width: 100%;
+        flex: 1 1 auto;
+        margin-top: 1rem;
+    }
 }
 
 .navbar.scrolled {
@@ -283,41 +323,6 @@ button:hover {
 }
 
 /* Featured Article Card Elevated Style */
-.featured-card-elevated .card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.featured-card-elevated .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2) !important;
-}
-
-.featured-card-elevated img {
-    transition: transform 0.6s ease;
-}
-
-.featured-card-elevated:hover img {
-    transform: scale(1.05);
-}
-
-.featured-card-elevated .btn-primary {
-    transition: all 0.3s ease;
-}
-
-.featured-card-elevated .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 136, 0, 0.3);
-}
-
-@media (max-width: 991.98px) {
-    .featured-card-elevated .col-12 > div {
-        padding: 2rem !important;
-    }
-    
-    .featured-card-elevated .col-12:first-child {
-        height: 200px !important;
-    }
-}
 
 .nav-link a:hover::after {
     width: 100%;
@@ -337,58 +342,25 @@ button:hover {
 }
 
 .stork-input {
-    transition: all 0.3s ease;
     border: 1px solid #ddd;
     border-radius: 20px;
     padding: 0.5em 1em;
+    height: 2.5rem;
+    line-height: 1.2;
+    width: 100%;
 }
 
 .stork-input:focus {
     outline: none;
     border-color: #2D7A3E;
     box-shadow: 0 0 0 3px rgba(45, 122, 62, 0.1);
-    transform: scale(1.02);
 }
 
 /* ========================================
    FEATURED HERO ARTICLE STYLES
    ======================================== */
 
-.featured-hero {
-    margin-bottom: 3rem;
-}
-
-.featured-hero-img {
-    transition: transform 0.6s ease;
-}
-
-.featured-hero:hover .featured-hero-img {
-    transform: scale(1.05);
-}
-
-.featured-hero .btn-primary {
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    background: rgba(45, 122, 62, 0.9);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    transition: all 0.3s ease;
-}
-
-.featured-hero .btn-primary:hover {
-    background: white;
-    color: #2D7A3E;
-    border-color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.featured-hero .text-white a {
-    transition: opacity 0.3s ease;
-}
-
-.featured-hero .text-white a:hover {
-    opacity: 0.8;
-}
+/* (unused .featured-hero styles removed) */
 
 /* ========================================
    GETTING STARTED GUIDE STYLES
