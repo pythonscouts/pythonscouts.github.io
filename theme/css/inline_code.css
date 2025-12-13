@@ -2,10 +2,10 @@
 :not(pre) > code {
     font-family: "Source Code Pro", monospace;
     font-size: 0.9em;
-    background-color: #f8f9fa;
+    background-color: var(--ps-gray-pale);
     padding: 0.2em 0.4em;
     border-radius: 6px;
-    color: #323F48;
+    color: var(--ps-gray);
 }
 
 /* Code blocks */

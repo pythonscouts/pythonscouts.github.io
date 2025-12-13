@@ -1,9 +1,23 @@
+:root {
+    --ps-green: #2d7a3e;
+    --ps-green-dark: #1f5b2d;
+    --ps-green-light: #e8f5e9;
+    --ps-green-subtle: #c8e6c9;
+    --ps-gray: #323f48;
+    --ps-gray-strong: #4a4f57;
+    --ps-gray-light: #6c757d;
+    --ps-gray-pale: #f3f3f3;
+    --ps-white: #ffffff;
+    --ps-warning: #ffc107;
+    --ps-accent: #4caf50;
+}
+
 body {
     padding-top: 5em;
     font-size: 1.2em;
     line-height: 1.5;
-    color: #323F48;
-    background-color: white;
+    color: var(--ps-gray);
+    background-color: var(--ps-white);
 }
 
 /* Skip Link for Accessibility */
@@ -11,8 +25,8 @@ body {
     position: absolute;
     top: -40px;
     left: 0;
-    background: #2D7A3E;
-    color: white;
+    background: var(--ps-green);
+    color: var(--ps-white);
     padding: 8px 16px;
     text-decoration: none;
     z-index: 10000;
@@ -27,7 +41,7 @@ body {
     top: 0;
     opacity: 1;
     pointer-events: auto;
-    outline: 2px solid #FFD700;
+    outline: 2px solid var(--ps-warning);
     outline-offset: 2px;
 }
 
@@ -58,7 +72,7 @@ a:hover {
 /* Links inside inline code */
 code a,
 a code {
-    color: #2D7A3E;
+    color: var(--ps-green);
     text-decoration: underline;
     text-decoration-style: dotted;
     text-underline-offset: 2px;
@@ -91,6 +105,15 @@ a code:hover {
 
 .text-green {
     color: #2D7A3E;
+}
+
+.text-muted-strong {
+    color: var(--ps-gray-strong) !important;
+}
+
+.badge-strong {
+    color: #1f1f1f;
+    font-weight: 600;
 }
 
 /* Custom button */
@@ -254,7 +277,7 @@ button:hover {
     left: 50%;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, #2D7A3E, #4CAF50);
+    background: linear-gradient(90deg, var(--ps-green), var(--ps-accent));
     transition: all 0.3s ease;
     transform: translateX(-50%);
 }
@@ -382,7 +405,9 @@ button:hover {
 }
 
 .getting-started-link {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
     padding: 0.875rem;
     background: white;
     border: 1px solid #e9ecef;
@@ -413,6 +438,10 @@ button:hover {
     font-size: 0.875rem;
     flex-shrink: 0;
     box-shadow: 0 2px 4px rgba(45, 122, 62, 0.2);
+}
+
+.getting-started-copy .fw-semibold {
+    display: block;
 }
 
 .getting-started-link:hover .getting-started-number {
@@ -472,14 +501,14 @@ button:hover {
 }
 
 .site-footer a {
-    color: #2d7a3e;
+    color: #1f5b2d;
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 .site-footer a:hover,
 .site-footer a:focus {
-    color: #1f5b2d;
+    color: #15411f;
     text-decoration: underline;
 }
 

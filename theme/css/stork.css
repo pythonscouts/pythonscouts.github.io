@@ -1,22 +1,22 @@
 :root {
-  --stork-border-color: hsl(0, 0%, 65%);
-  --stork-background-color: #F3F3F3;
+  --stork-border-color: var(--ps-gray-pale);
+  --stork-background-color: var(--ps-gray-pale);
   --stork-font-family: inherit;
   --stork-size-multiplier: 1;
-  --stork-accent-color: hsl(210, 72%, 45%);
+  --stork-accent-color: var(--ps-green);
 
   --stork-input-width: 100%;
   --stork-input-border-radius: 8px;
-  --stork-input-text-color: #323F48;
+  --stork-input-text-color: var(--ps-gray);
   --stork-input-shadow: 1;
 
   --stork-results-width: 100%;
   --stork-results-border-radius: 4px;
   --stork-results-shadow: 1;
-  --stork-results-hover-color: hsl(210, 65%, 75%);
-  --stork-results-title-color: #323F48;
-  --stork-results-excerpt-color: #323F48;
-  --stork-results-highlight-color: #94B53C;
+  --stork-results-hover-color: var(--ps-green-light);
+  --stork-results-title-color: var(--ps-gray);
+  --stork-results-excerpt-color: var(--ps-gray-strong);
+  --stork-results-highlight-color: var(--ps-green);
   --stork-results-border-color: var(--stork-border-color);
 }
 
