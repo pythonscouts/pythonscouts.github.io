@@ -1,5 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts - Series</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/series.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2025-12-08T21:00:00+01:00</updated><subtitle>Aprende Python en Español.</subtitle><entry><title>Palabras clave en Python: as</title><link href="https://pythonscouts.com/python-as/" rel="alternate"/><published>2025-12-08T21:00:00+01:00</published><updated>2025-12-08T21:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-12-08:/python-as/</id><summary type="html">&lt;p&gt;Descubre cómo usar la palabra clave as en Python para crear alias de módulos y capturar excepciones, mejorando la legibilidad de tu código.&lt;/p&gt;</summary><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts - Series</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/series.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2025-12-14T09:00:00+01:00</updated><subtitle>Aprende Python en Español.</subtitle><entry><title>Palabras clave en Python: import</title><link href="https://pythonscouts.com/python-import/" rel="alternate"/><published>2025-12-14T09:00:00+01:00</published><updated>2025-12-14T09:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-12-14:/python-import/</id><summary type="html">&lt;p&gt;La palabra clave &lt;code&gt;import&lt;/code&gt; permite incorporar módulos y objetos externos para extender las capacidades de tus programas en Python.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Los imports actúan como conexión entre tu código y el ecosistema Python. Con ella puedes acceder a funciones, clases y &lt;a href="/constantes-python/"&gt;constantes&lt;/a&gt; definidas en otros módulos, ya sea de la biblioteca estándar, de terceros o propios.&lt;/p&gt;
+&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#sintaxis-basica"&gt;Sintaxis básica&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#ejemplos-practicos"&gt;Ejemplos prácticos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#cuando-usar-import"&gt;Cuándo usar import&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#buenas-practicas"&gt;Buenas prácticas&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#resumiendo"&gt;Resumiendo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="sintaxis-basica"&gt;Sintaxis básica&lt;/h2&gt;
+&lt;p&gt;La forma más directa de cargar un módulo consiste en escribir su nombre después de la &lt;a href="/python-palabras-clave/"&gt;palabra clave&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;module_name&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;También puedes asignar un alias que resulte más corto o significativo, aprovechando la palabra clave &lt;a href="/python-as/"&gt;&lt;code&gt;as&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;module_name&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;alias&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Otra opción consiste en traer símbolos concretos desde el módulo para usarlos directamente:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;module_name&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Si lo necesitas, también puedes renombrar el símbolo importado:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;module_name&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;alias&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Los imports selectivos te permiten traer únicamente los nombres que necesitas:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;math&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;pi&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;sqrt&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Finalmente, los imports relativos privilegian módulos dentro de tu propio paquete:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;.helpers&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;parse_config&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Este estilo solo funciona dentro de paquetes y ayuda a mantener rutas cortas y claras.&lt;/p&gt;
+&lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
+&lt;p&gt;A continuación algunos ejemplos prácticos de cómo usar la palabra clave &lt;code&gt;import&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;random&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;choice&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;🐍&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;🧠&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;⚙️&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="s1"&gt;&amp;#39;🐍&amp;#39;&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;statistics&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;sts&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;sts&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mean&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="mi"&gt;15&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;statistics&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;median&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;median&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="mf"&gt;4.0&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Estos ejemplos muestran cómo &lt;code&gt;import&lt;/code&gt; activa capacidades adicionales sin necesidad de duplicar código ni copiar archivos.&lt;/p&gt;
+&lt;h2 id="cuando-usar-import"&gt;Cuándo usar &lt;code&gt;import&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Los usos más frecuentes de la palabra clave &lt;code&gt;import&lt;/code&gt; incluyen los siguientes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Acceder a paquetes y módulos de la biblioteca estándar, tales como &lt;code&gt;math&lt;/code&gt;, &lt;code&gt;datetime&lt;/code&gt;, &lt;code&gt;pathlib&lt;/code&gt; o &lt;code&gt;itertools&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Usar paquetes de terceros, tales como &lt;code&gt;requests&lt;/code&gt;, &lt;code&gt;numpy&lt;/code&gt;, &lt;code&gt;pandas&lt;/code&gt; o cualquier otro que instales con herramientas como &lt;code&gt;pip&lt;/code&gt; o &lt;a href="/gestionar-proyecto-python-uv/"&gt;&lt;code&gt;uv&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Modularizar proyectos propios y dividir tu aplicación en múltiples archivos con responsabilidades específicas.&lt;/li&gt;
+&lt;li&gt;Configurar extensiones opcionales y cargar dinámicamente módulos solo cuando se requieren, reduciendo tiempos de arranque.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="buenas-practicas"&gt;Buenas prácticas&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Agrupa las importaciones al inicio de cada archivo siguiendo el orden:&lt;ol&gt;
+&lt;li&gt;Librería estándar&lt;/li&gt;
+&lt;li&gt;Paquetes de terceros&lt;/li&gt;
+&lt;li&gt;Paquetes locales.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Sitúa estas importaciones antes de tus &lt;a href="/python-def/"&gt;definiciones de funciones&lt;/a&gt; y &lt;a href="/python-class/"&gt;clases&lt;/a&gt;, manteniendo cada archivo coherente y fácil de recorrer.&lt;/li&gt;
+&lt;li&gt;Usa alias descriptivos solo cuando aporten claridad.&lt;/li&gt;
+&lt;li&gt;Evita &lt;code&gt;from module import *&lt;/code&gt; (wildcard imports), pues comprometen la legibilidad del código, contaminan tu espacio de nombres y puede sobrescribir nombres sin aviso, causando bugs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
+&lt;p&gt;La palabra clave &lt;code&gt;import&lt;/code&gt; es la base de la modularidad en Python. Te permite incorporar funcionalidad existente, mantener el código ordenado y facilitar la colaboración entre diferentes partes de un proyecto.&lt;/p&gt;
+&lt;p&gt;Dominar sus variantes y buenas prácticas te ayuda a escribir programas limpios, escalables y fáciles de mantener.&lt;/p&gt;</content><category term="Series"/><category term="python"/></entry><entry><title>Palabras clave en Python: as</title><link href="https://pythonscouts.com/python-as/" rel="alternate"/><published>2025-12-08T21:00:00+01:00</published><updated>2025-12-08T21:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-12-08:/python-as/</id><summary type="html">&lt;p&gt;Descubre cómo usar la palabra clave as en Python para crear alias de módulos y capturar excepciones, mejorando la legibilidad de tu código.&lt;/p&gt;</summary><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#sintaxis"&gt;Sintaxis&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#ejemplos-practicos"&gt;Ejemplos prácticos&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#uso-de-as"&gt;Uso de as&lt;/a&gt;&lt;/li&gt;
