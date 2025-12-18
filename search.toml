@@ -8,6 +8,11 @@ url = "/acerca/"
 title = "Acerca"
 
 [[input.files]]
+path = "python-lambda/index.html"
+url = "/python-lambda/"
+title = "Palabras clave en Python: lambda"
+
+[[input.files]]
 path = "python-import/index.html"
 url = "/python-import/"
 title = "Palabras clave en Python: import"
@@ -20,7 +25,7 @@ title = "Palabras clave en Python: as"
 [[input.files]]
 path = "python-palabras-clave/index.html"
 url = "/python-palabras-clave/"
-title = "Palabras clave en Python: Cuáles son?"
+title = "Palabras clave en Python: ¿Cuáles son?"
 
 [[input.files]]
 path = "python-return/index.html"

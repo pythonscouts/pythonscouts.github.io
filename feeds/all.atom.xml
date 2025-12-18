@@ -1,5 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2025-12-14T09:00:00+01:00</updated><subtitle>Aprende Python en Español.</subtitle><entry><title>Palabras clave en Python: import</title><link href="https://pythonscouts.com/python-import/" rel="alternate"/><published>2025-12-14T09:00:00+01:00</published><updated>2025-12-14T09:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-12-14:/python-import/</id><summary type="html">&lt;p&gt;La palabra clave &lt;code&gt;import&lt;/code&gt; permite incorporar módulos y objetos externos para extender las capacidades de tus programas en Python.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Los imports actúan como conexión entre tu código y el ecosistema Python. Con ella puedes acceder a funciones, clases y &lt;a href="/constantes-python/"&gt;constantes&lt;/a&gt; definidas en otros módulos, ya sea de la biblioteca estándar, de terceros o propios.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2025-12-18T09:45:00+01:00</updated><subtitle>Aprende Python en Español.</subtitle><entry><title>Palabras clave en Python: lambda</title><link href="https://pythonscouts.com/python-lambda/" rel="alternate"/><published>2025-12-18T09:45:00+01:00</published><updated>2025-12-18T09:45:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-12-18:/python-lambda/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;lambda&lt;/code&gt; te permite crear funciones anónimas de una sola expresión para escribir transformaciones y filtros inline.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Estas funciones son ideales cuando requieres encapsular una lógica breve y desecharla inmediatamente después, como sucede al ordenar colecciones, transformar datos o definir callbacks.&lt;/p&gt;
+&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#sintaxis-basica"&gt;Sintaxis básica&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#ejemplos-practicos"&gt;Ejemplos prácticos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#usos-de-lambda"&gt;Usos de lambda&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#resumiendo"&gt;Resumiendo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="sintaxis-basica"&gt;Sintaxis básica&lt;/h2&gt;
+&lt;p&gt;Una función &lt;code&gt;lambda&lt;/code&gt; se compone de tres partes:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;La &lt;a href="/python-palabras-clave/"&gt;palabra clave&lt;/a&gt; &lt;code&gt;lambda&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Una lista opcional de argumentos separados por comas&lt;/li&gt;
+&lt;li&gt;Una única expresión cuyo resultado se devuelve de forma implícita&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Esta es la sintaxis:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;arguments&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;expression&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Al igual que las funciones creadas con &lt;a href="/python-def/"&gt;&lt;code&gt;def&lt;/code&gt;&lt;/a&gt;, las lambdas aceptan &lt;a href="/valores-python/"&gt;valores&lt;/a&gt; por defecto, argumentos posicionales y hasta &lt;code&gt;*args&lt;/code&gt; o &lt;code&gt;**kwargs&lt;/code&gt;. Lo que no puedes hacer es escribir varias sentencias dentro del cuerpo de una &lt;code&gt;lambda&lt;/code&gt; porque únicamente admiten una expresión.&lt;/p&gt;
+&lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
+&lt;p&gt;A continuación algunos ejemplos:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;multipliers&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="n"&gt;multipliers&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;factor&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;factor&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;multipliers&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="mi"&gt;8&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este ejemplo, cada &lt;code&gt;lambda&lt;/code&gt; captura el valor de &lt;code&gt;n&lt;/code&gt; mediante un parámetro con valor por defecto. Al final del &lt;a href="/ciclos-for-python/"&gt;ciclo &lt;code&gt;for&lt;/code&gt;&lt;/a&gt; obtienes una lista de funciones a las que puedes pasar un valor para multiplicarlo por la &lt;code&gt;n&lt;/code&gt; correspondiente.&lt;/p&gt;
+&lt;p&gt;Las lambdas brillan cuando las combinas con funciones que aceptan otras funciones como argumento:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;words&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;SALUDO&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;mañana&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;funciones&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;sorted&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;words&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;word&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;word&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;lower&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;funciones&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;mañana&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;SALUDO&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;numbers&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;numbers&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;functools&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;reduce&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;reduce&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;acc&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;acc&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;numbers&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="mi"&gt;5&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sorted()&lt;/code&gt; usa la &lt;code&gt;lambda&lt;/code&gt; para normalizar cada elemento antes de comparar.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;filter()&lt;/code&gt; filtra la lista para mantener solo los números positivos.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;reduce()&lt;/code&gt; acumula los valores sin necesidad de definir una función separada.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="usos-de-lambda"&gt;Usos de &lt;code&gt;lambda&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Los casos de uso más comunes de la palabra clave &lt;code&gt;lambda&lt;/code&gt; incluyen los siguientes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Crear transformaciones breves dentro de funciones de orden superior como &lt;code&gt;map()&lt;/code&gt;, &lt;code&gt;filter()&lt;/code&gt;, &lt;code&gt;sorted()&lt;/code&gt; y similares.&lt;/li&gt;
+&lt;li&gt;Definir claves o métricas inline para ordenar, agrupar o seleccionar datos.&lt;/li&gt;
+&lt;li&gt;Escribir callbacks o manejadores temporales en APIs que esperan funciones, como eventos en interfaces gráficas o hooks de librerías.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
+&lt;p&gt;La palabra clave &lt;code&gt;lambda&lt;/code&gt; te ayuda a empaquetar lógica limitada de forma concisa sin necesidad de un identificador o nombre de función. Cuando la legibilidad, las pruebas o la trazabilidad sean prioritarias, prefiere &lt;code&gt;def&lt;/code&gt; y reserva las lambdas para los casos puntuales donde brilla su brevedad.&lt;/p&gt;
+&lt;p&gt;Conocer y emplear esta palabra clave te ayuda a crear funciones rápidas y breves que operan con un tiempo de vida limitado.&lt;/p&gt;</content><category term="Series"/><category term="python"/><category term="lambda"/><category term="funciones"/></entry><entry><title>Palabras clave en Python: import</title><link href="https://pythonscouts.com/python-import/" rel="alternate"/><published>2025-12-14T09:00:00+01:00</published><updated>2025-12-14T09:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-12-14:/python-import/</id><summary type="html">&lt;p&gt;La palabra clave &lt;code&gt;import&lt;/code&gt; permite incorporar módulos y objetos externos para extender las capacidades de tus programas en Python.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Los imports actúan como conexión entre tu código y el ecosistema Python. Con ella puedes acceder a funciones, clases y &lt;a href="/constantes-python/"&gt;constantes&lt;/a&gt; definidas en otros módulos, ya sea de la biblioteca estándar, de terceros o propios.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#sintaxis-basica"&gt;Sintaxis básica&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#ejemplos-practicos"&gt;Ejemplos prácticos&lt;/a&gt;&lt;/li&gt;
@@ -122,7 +184,7 @@
 &lt;/ul&gt;
 &lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
 &lt;p&gt;La palabra clave &lt;code&gt;as&lt;/code&gt; en Python es una herramienta versátil que te permite asignar alias a módulos, capturar excepciones y gestionar contextos, facilitando un código más limpio y manejable.&lt;/p&gt;
-&lt;p&gt;Conocer y emplear &lt;code&gt;as&lt;/code&gt; puede mejorar significativamente la legibilidad y organización de tu código Python.&lt;/p&gt;</content><category term="Series"/><category term="python"/></entry><entry><title>Palabras clave en Python: Cuáles son?</title><link href="https://pythonscouts.com/python-palabras-clave/" rel="alternate"/><published>2025-12-06T21:00:00+01:00</published><updated>2025-12-06T21:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-12-06:/python-palabras-clave/</id><summary type="html">&lt;p&gt;Las &lt;strong&gt;palabras clave&lt;/strong&gt; o &lt;strong&gt;palabras reservadas&lt;/strong&gt; (&lt;em&gt;keywords&lt;/em&gt;) de Python son un conjunto de palabras en idioma Inglés que tienen un significado especial para el lenguaje. Estas palabras constituyen la base de la sintaxis de Python.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Por esta razón, es importante que las conozcas y sepas su rol en el lenguaje. Con ellas, podrás escribir diferentes tipos de sentencias que, en su conjunto, conformarán tus programas y aplicaciones Python.&lt;/p&gt;
+&lt;p&gt;Conocer y emplear &lt;code&gt;as&lt;/code&gt; puede mejorar significativamente la legibilidad y organización de tu código Python.&lt;/p&gt;</content><category term="Series"/><category term="python"/></entry><entry><title>Palabras clave en Python: ¿Cuáles son?</title><link href="https://pythonscouts.com/python-palabras-clave/" rel="alternate"/><published>2025-12-06T21:00:00+01:00</published><updated>2025-12-06T21:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-12-06:/python-palabras-clave/</id><summary type="html">&lt;p&gt;Las &lt;strong&gt;palabras clave&lt;/strong&gt; o &lt;strong&gt;palabras reservadas&lt;/strong&gt; (&lt;em&gt;keywords&lt;/em&gt;) de Python son un conjunto de palabras en idioma inglés que tienen un significado especial para el lenguaje. Estas palabras constituyen la base de la sintaxis de Python.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Por esta razón, es importante que las conozcas y sepas su rol en el lenguaje. Con ellas, podrás escribir diferentes tipos de sentencias que, en su conjunto, conformarán tus programas y aplicaciones Python.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;En este tutorial, aprenderás:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Qué son las &lt;strong&gt;palabras clave&lt;/strong&gt; o &lt;strong&gt;reservadas&lt;/strong&gt;&lt;/li&gt;
@@ -131,27 +193,27 @@
 &lt;/ul&gt;
 &lt;p&gt;Con estos conocimientos, mejorarás tu comprensión del lenguaje y estarás mejor preparado para enfrentar el aprendizaje del mismo.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href="#que-son-las-palabras-clave-o-reservadas-en-python"&gt;Qué son las palabras clave o reservadas en Python&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#cuales-son-las-palabras-clave-de-python"&gt;Cuáles son las palabras clave de Python&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#que-son-las-palabras-clave-o-reservadas-en-python"&gt;¿Qué son las palabras clave o reservadas en Python?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#cuales-son-las-palabras-clave-de-python"&gt;¿Cuáles son las palabras clave de Python?&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#palabras-clave-suaves"&gt;Palabras clave suaves&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="#como-obtengo-ayuda-sobre-palabras-clave-especificas"&gt;Cómo obtengo ayuda sobre palabras clave específicas&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#puedo-emplear-palabras-clave-como-nombres"&gt;Puedo emplear palabras clave como nombres&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#como-obtengo-ayuda-sobre-palabras-clave-especificas"&gt;¿Cómo obtengo ayuda sobre palabras clave específicas?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#puedo-emplear-palabras-clave-como-nombres"&gt;¿Puedo emplear palabras clave como nombres?&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#resumiendo"&gt;Resumiendo&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;h2 id="que-son-las-palabras-clave-o-reservadas-en-python"&gt;Qué son las palabras clave o reservadas en Python&lt;/h2&gt;
-&lt;p&gt;Python cuenta con lo que se conoce como &lt;a href="https://docs.python.org/es/3/reference/lexical_analysis.html#keywords"&gt;palabras clave&lt;/a&gt; o &lt;strong&gt;palabras reservadas&lt;/strong&gt; (&lt;em&gt;keywords&lt;/em&gt;). Se trata de un conjunto reducido de palabras, en idioma Inglés, que tienen un significado especial en el lenguaje y que forman parte de su sintaxis.&lt;/p&gt;
-&lt;p&gt;Tal y como refiere la documentación oficial de Python en Español:&lt;/p&gt;
+&lt;h2 id="que-son-las-palabras-clave-o-reservadas-en-python"&gt;¿Qué son las palabras clave o reservadas en Python?&lt;/h2&gt;
+&lt;p&gt;Python cuenta con lo que se conoce como &lt;a href="https://docs.python.org/es/3/reference/lexical_analysis.html#keywords"&gt;palabras clave&lt;/a&gt; o &lt;strong&gt;palabras reservadas&lt;/strong&gt; (&lt;em&gt;keywords&lt;/em&gt;). Se trata de un conjunto reducido de palabras, en idioma inglés, que tienen un significado especial en el lenguaje y que forman parte de su sintaxis.&lt;/p&gt;
+&lt;p&gt;Tal y como refiere la documentación oficial de Python en español:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;[Las palabras clave] Deben escribirse exactamente como están escritas aquí: (&lt;a href="https://docs.python.org/es/3/reference/lexical_analysis.html#keywords"&gt;Fuente&lt;/a&gt;)&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Cuando la documentación dice que deben escribirse de esta forma, esto incluye el detalle de las mayúsculas, como en los casos de &lt;a href="https://pythonscouts.com/python-none/"&gt;&lt;code&gt;None&lt;/code&gt;&lt;/a&gt;, &lt;a href="https://pythonscouts.com/python-false/"&gt;&lt;code&gt;False&lt;/code&gt;&lt;/a&gt; y &lt;a href="https://pythonscouts.com/python-true/"&gt;&lt;code&gt;True&lt;/code&gt;&lt;/a&gt;. Sí, Python discrimina entre mayúsculas y minúsculas, de modo que las variantes &lt;code&gt;True&lt;/code&gt; y &lt;code&gt;true&lt;/code&gt; no son equivalentes.&lt;/p&gt;
 &lt;p&gt;Cualquier error de escritura en una palabra clave provoca una excepción del tipo &lt;a href="https://docs.python.org/es/3/library/exceptions.html#NameError"&gt;&lt;code&gt;NameError&lt;/code&gt;&lt;/a&gt;. Este comportamiento se debe a que como la palabra está mal escrita, Python asume que se trata de un identificador o nombre y al no encontrar el nombre, levanta la excepción.&lt;/p&gt;
 &lt;p&gt;Con esta breve introducción al concepto de palabras clave, estás listo para conocer cuáles son las palabras clave de Python.&lt;/p&gt;
-&lt;h2 id="cuales-son-las-palabras-clave-de-python"&gt;Cuáles son las palabras clave de Python&lt;/h2&gt;
-&lt;p&gt;Dependiendo de la versión, Python tiene un conjunto de palabras clave o reservadas que ronda las 30 palabras. Estas palabras constituyen el núcleo de las sintaxis del lenguaje. Para conocer o consultar cuáles son estas palabras, puedes abrir una sesión interactiva de Python y ejecutar el siguiente código:&lt;/p&gt;
+&lt;h2 id="cuales-son-las-palabras-clave-de-python"&gt;¿Cuáles son las palabras clave de Python?&lt;/h2&gt;
+&lt;p&gt;Dependiendo de la versión, Python tiene un conjunto de palabras clave o reservadas que ronda las 30 palabras. Estas palabras constituyen el núcleo de la sintaxis del lenguaje. Para conocer o consultar cuáles son estas palabras, puedes abrir una sesión interactiva de Python y ejecutar el siguiente código:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;# Python 3.13&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;keyword&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;kwlist&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;softkwlist&lt;/span&gt;
 
@@ -201,7 +263,7 @@
 &lt;span class="mi"&gt;39&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;El módulo &lt;a href="https://docs.python.org/es/3/library/keyword.html#module-keyword"&gt;&lt;code&gt;keyword&lt;/code&gt;&lt;/a&gt; de la &lt;a href="https://docs.python.org/es/3/library/index.html"&gt;biblioteca estándar&lt;/a&gt; exporta las listas &lt;a href="https://docs.python.org/es/3/library/keyword.html#keyword.kwlist"&gt;&lt;code&gt;kwlist&lt;/code&gt;&lt;/a&gt; y &lt;a href="https://docs.python.org/es/3/reference/lexical_analysis.html#soft-keywords"&gt;&lt;code&gt;softkwlist&lt;/code&gt;&lt;/a&gt; que contienen todas las palabras clave de Python. En el código anterior, primeramente importas &lt;code&gt;kwlist&lt;/code&gt; y &lt;code&gt;softkwlist&lt;/code&gt; desde &lt;code&gt;keyword&lt;/code&gt; y luego muestras su contenido. Python 3.13 tiene 39 palabras clave, incluyendo las suaves, tal y como resulta de ejecutar &lt;code&gt;len(kwlist + softkwlist)&lt;/code&gt; en la última línea de código del ejemplo.&lt;/p&gt;
+&lt;p&gt;El módulo &lt;a href="https://docs.python.org/es/3/library/keyword.html#module-keyword"&gt;&lt;code&gt;keyword&lt;/code&gt;&lt;/a&gt; de la &lt;a href="https://docs.python.org/es/3/library/index.html"&gt;biblioteca estándar&lt;/a&gt; exporta las listas &lt;a href="https://docs.python.org/es/3/library/keyword.html#keyword.kwlist"&gt;&lt;code&gt;kwlist&lt;/code&gt;&lt;/a&gt; y &lt;a href="https://docs.python.org/es/3/reference/lexical_analysis.html#soft-keywords"&gt;&lt;code&gt;softkwlist&lt;/code&gt;&lt;/a&gt; que contienen todas las palabras clave de Python. En el código anterior, primeramente importas &lt;code&gt;kwlist&lt;/code&gt; y &lt;code&gt;softkwlist&lt;/code&gt; desde &lt;code&gt;keyword&lt;/code&gt; y luego muestras su contenido. Python 3.13 tiene 39 palabras clave, incluidas las suaves, tal y como resulta de ejecutar &lt;code&gt;len(kwlist + softkwlist)&lt;/code&gt; en la última línea de código del ejemplo.&lt;/p&gt;
 &lt;p&gt;Debes tener en cuenta que el número de palabras clave varía en dependencia de la versión de Python que estés usando actualmente.&lt;/p&gt;
 &lt;p&gt;Otra manera de consultar las palabras clave de Python es mediante la función &lt;a href="https://pythonscouts.com/obtener-ayuda-python/#2-el-sistema-interactivo-de-ayuda-help"&gt;&lt;code&gt;help()&lt;/code&gt;&lt;/a&gt;. Se trata de una función incluida (&lt;em&gt;built-in&lt;/em&gt;) que te permite consultar la documentación y obtener ayuda rápida sobre cualquier objeto en Python.&lt;/p&gt;
 &lt;p&gt;Para consultar las palabras clave de Python por esta vía, primeramente ejecuta &lt;code&gt;help()&lt;/code&gt; para entrar al &lt;strong&gt;sistema de ayuda integrado&lt;/strong&gt; de Python. Luego consulta el contenido de la página de palabras clave usando el comando &lt;code&gt;keywords&lt;/code&gt; como en el ejemplo siguiente:&lt;/p&gt;
@@ -227,7 +289,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;En este caso, cuando ejecutas &lt;code&gt;help()&lt;/code&gt; en una sesión interactiva de Python, entras inmediatamente al sistema de ayuda integrado del lenguaje. El indicador (&lt;em&gt;prompt&lt;/em&gt;) &lt;code&gt;help&amp;gt;&lt;/code&gt; te hace saber que estás dentro. Una vez allí, tecleas el comando &lt;code&gt;keywords&lt;/code&gt; y presionas &lt;em&gt;Enter&lt;/em&gt;. Esta acción te devuelve el listado de palabras clave de tu versión específica del lenguaje.&lt;/p&gt;
-&lt;p&gt;Es importante que domines las palabras clave o reservadas de Python, y sobre todo que conozcas su significado en Español. A continuación, un resumen que incluye la traducción al español y una breve descripción de cada palabra clave:&lt;/p&gt;
+&lt;p&gt;Es importante que domines las palabras clave o reservadas de Python, y sobre todo que conozcas su significado en español. A continuación, un resumen que incluye la traducción al español y una breve descripción de cada palabra clave:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -260,7 +322,7 @@
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;as&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;como&lt;/td&gt;
-&lt;td&gt;Permite crear aliases de módulos, clases o funciones&lt;/td&gt;
+&lt;td&gt;Permite crear alias de módulos, clases o funciones&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;assert&lt;/code&gt;&lt;/td&gt;
@@ -448,7 +510,7 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;Conocer las palabras reservadas de Python te facilitará la comprensión y la escritura de código. Recuerda que este conjunto de palabras es el núcleo de toda la sintaxis del lenguaje.&lt;/p&gt;
-&lt;h2 id="como-obtengo-ayuda-sobre-palabras-clave-especificas"&gt;Cómo obtengo ayuda sobre palabras clave específicas&lt;/h2&gt;
+&lt;h2 id="como-obtengo-ayuda-sobre-palabras-clave-especificas"&gt;¿Cómo obtengo ayuda sobre palabras clave específicas?&lt;/h2&gt;
 &lt;p&gt;En determinadas situaciones, sobre todo cuando estás comenzando con Python, necesitarás consultar rápidamente el objetivo de determinada palabra clave. En esos casos, puedes auxiliarte de &lt;code&gt;help()&lt;/code&gt; nuevamente.&lt;/p&gt;
 &lt;p&gt;Una vez que entras al sistema de ayuda integrado usando &lt;code&gt;help()&lt;/code&gt;, puedes introducir la palabra clave que deseas consultar y presionar &lt;em&gt;Enter&lt;/em&gt;. De inmediato te aparecerá en pantalla la documentación de la palabra en cuestión.&lt;/p&gt;
 &lt;p&gt;Por ejemplo, si introduces &lt;code&gt;if&lt;/code&gt; y presionas Enter, entonces el sistema de ayuda entrará directamente a la página que documenta esta sentencia y mostrará la salida siguiente:&lt;/p&gt;
@@ -474,7 +536,7 @@ Related help topics: TRUTHVALUE
 &lt;p&gt;Si introduces una palabra clave o palabra reservada cualquiera (&lt;code&gt;if&lt;/code&gt; en el ejemplo anterior) en el indicador (&lt;em&gt;prompt&lt;/em&gt;) del sistema de ayuda de Python, obtienes acceso directo a la documentación de la misma. Esta documentación solo aparece en idioma inglés. Si deseas obtener ayuda en idioma español, entonces puedes usar la &lt;a href="https://docs.python.org/es/3/index.html"&gt;documentación oficial en español&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Es importante que sepas que cuando consultas una página de documentación específica en el sistema de ayuda integrado, tendrás que presionar la tecla &lt;em&gt;Q&lt;/em&gt; en tu teclado para poder salir de la página y regresar a la ayuda.&lt;/p&gt;
 &lt;p&gt;El sistema de ayuda integrado te ofrece además una guía de temas relacionados con la palabra clave que estés consultando. En la última línea del ejemplo anterior puedes leer &lt;code&gt;Related help topics: TRUTHVALUE&lt;/code&gt;. Si introduces &lt;code&gt;TRUTHVALUE&lt;/code&gt; y presionas &lt;em&gt;Enter&lt;/em&gt;, obtendrás la página de ayuda correspondiente. Adelántate y experiméntalo tú mismo.&lt;/p&gt;
-&lt;h2 id="puedo-emplear-palabras-clave-como-nombres"&gt;Puedo emplear palabras clave como nombres&lt;/h2&gt;
+&lt;h2 id="puedo-emplear-palabras-clave-como-nombres"&gt;¿Puedo emplear palabras clave como nombres?&lt;/h2&gt;
 &lt;p&gt;En la mayoría de los casos, si tratas de emplear una palabra clave o reservada para definir una variable o nombre, recibirás un error de sintaxis:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="err"&gt;= &amp;quot;&lt;/span&gt;&lt;span class="nc"&gt;Economy&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
   &lt;span class="n"&gt;File&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;lt;input&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
@@ -490,7 +552,7 @@ Related help topics: TRUTHVALUE
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Este ejemplo demuestra que puedes emplear la palabra reservada &lt;code&gt;match&lt;/code&gt; como un nombre de variable. En este caso, Python no levanta una excepción como lo hace con otras palabras reservadas.&lt;/p&gt;
-&lt;p&gt;En cualquier caso, debes evitar emplear palabras clave como nombres o identificadores de variables, funciones, clases, módulos, paquetes o de cualquier otra estructura u objeto Python. Еmplearlas de esta forma podría generar problemas difíciles de identificar y resolver en tu código.&lt;/p&gt;
+&lt;p&gt;En cualquier caso, debes evitar emplear palabras clave como nombres o identificadores de variables, funciones, clases, módulos, paquetes o de cualquier otra estructura u objeto Python. Emplearlas de esta forma podría generar problemas difíciles de identificar y resolver en tu código.&lt;/p&gt;
 &lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
 &lt;p&gt;Ya has adquirido conocimientos elementales sobre las palabras clave o palabras reservadas de Python. Sabes cómo obtener la lista de palabras reservadas disponibles en tu entorno Python y cómo obtener ayuda sobre estas palabras y su papel en la sintaxis del lenguaje.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Ahora conoces:&lt;/strong&gt;&lt;/p&gt;
@@ -552,13 +614,20 @@ Related help topics: TRUTHVALUE
 &lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
 &lt;p&gt;En Python, la palabra clave &lt;code&gt;return&lt;/code&gt; es fundamental para la creación de funciones, pues te permite obtener y devolver valores al código que las llama.&lt;/p&gt;
 &lt;p&gt;Conocer y emplear &lt;code&gt;return&lt;/code&gt; te permite escribir funciones que no solo realicen tareas, sino que también devuelvan resultados útiles.&lt;/p&gt;</content><category term="Series"/><category term="python"/></entry><entry><title>Palabras clave en Python: class</title><link href="https://pythonscouts.com/python-class/" rel="alternate"/><published>2025-12-01T08:50:00+01:00</published><updated>2025-12-01T08:50:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-12-01:/python-class/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;class&lt;/code&gt; se utiliza para definir nuevas clases, que son plantillas para crear objetos.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Las clases encapsulan datos y funcionalidades en una sola entidad, lo que te permite modelar objetos del mundo real y sus interacciones de manera eficiente.&lt;/p&gt;
+&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#sintaxis"&gt;Sintaxis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#ejemplos-practicos"&gt;Ejemplos prácticos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#uso-de-class"&gt;Uso de class&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#resumiendo"&gt;Resumiendo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 &lt;h2 id="sintaxis"&gt;Sintaxis&lt;/h2&gt;
 &lt;p&gt;La sintaxis básica para definir una clase en Python es la siguiente:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ClassName&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="n"&gt;cls_attribute&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;42&lt;/span&gt;  &lt;span class="c1"&gt;# Class attribute&lt;/span&gt;
+    &lt;span class="n"&gt;cls_attribute&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;42&lt;/span&gt;  &lt;span class="c1"&gt;# Atributo de clase&lt;/span&gt;
 
     &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;arg&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;attribute&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;arg&lt;/span&gt; &lt;span class="c1"&gt;# Instance attribute&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;attribute&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;arg&lt;/span&gt; &lt;span class="c1"&gt;# Atributo de instancia&lt;/span&gt;
 
     &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;method&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
         &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
@@ -1775,10 +1844,10 @@ El método &lt;code&gt;.keys()&lt;/code&gt; es redundante en este contexto. Iter
 &lt;span class="mi"&gt;9&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Puedes anidar ciclos a tanto niveles como necesites. Sin embargo, esta práctica suele causar que tu código sea ineficiente y difícil de entender. Por lo tanto, es recomendable no anidar ciclos a más de dos niveles de profundidad.&lt;/p&gt;
+&lt;p&gt;Puedes anidar ciclos a tantos niveles como necesites. Sin embargo, esta práctica suele causar que tu código sea ineficiente y difícil de entender. Por lo tanto, es recomendable no anidar ciclos a más de dos niveles de profundidad.&lt;/p&gt;
 &lt;h2 id="conclusiones"&gt;Conclusiones&lt;/h2&gt;
 &lt;p&gt;Los ciclos o bucles &lt;strong&gt;&lt;code&gt;for&lt;/code&gt;&lt;/strong&gt; son esenciales en Python para realizar tareas repetitivas y manipular datos eficientemente. Con un ciclo &lt;code&gt;for&lt;/code&gt;, puedes recorrer diversos tipos de datos como listas, cadenas y diccionarios.&lt;/p&gt;
-&lt;p&gt;También puedes combinar &lt;code&gt;for&lt;/code&gt; con &lt;code&gt;range()&lt;/code&gt;, &lt;code&gt;break&lt;/code&gt;, &lt;code&gt;continue&lt;/code&gt; y &lt;code&gt;else&lt;/code&gt; para controlar el flujo de ejecución de tu código en una manera mucho más precisa.&lt;/p&gt;
+&lt;p&gt;También puedes combinar &lt;code&gt;for&lt;/code&gt; con &lt;code&gt;range()&lt;/code&gt;, &lt;code&gt;break&lt;/code&gt;, &lt;code&gt;continue&lt;/code&gt; y &lt;code&gt;else&lt;/code&gt; para controlar el flujo de ejecución de tu código de una manera mucho más precisa.&lt;/p&gt;
 &lt;p&gt;Dominar esta estructura es fundamental para escribir código más limpio y efectivo. Practica con tus propios ejemplos y experimenta con diferentes estructuras para afianzar tu comprensión.&lt;/p&gt;</content><category term="Series"/><category term="python"/></entry><entry><title>Cómo comprimir archivos con zipfile en Python?</title><link href="https://pythonscouts.com/comprimir-archivos-zipfile-python/" rel="alternate"/><published>2025-02-11T22:15:00+01:00</published><updated>2025-02-11T22:15:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-02-11:/comprimir-archivos-zipfile-python/</id><summary type="html">&lt;p&gt;Comprimir una serie de archivos con el fin de ahorrar espacio en disco puede ser una tarea necesaria en tu trabajo diario con Python. En esta guía rápida, aprenderás cómo hacerlo.&lt;/p&gt;</summary><content type="html">&lt;p&gt;El módulo &lt;a href="https://docs.python.org/es/3.13/library/zipfile.html#module-zipfile"&gt;&lt;code&gt;zipfile&lt;/code&gt;&lt;/a&gt; de la biblioteca estándar de Python permite manipular archivos en formato &lt;a href="https://en.wikipedia.org/wiki/ZIP_(file_format)"&gt;ZIP&lt;/a&gt; que es un formato estándar para comprimir y archivar datos. Con este módulo, puedes crear, leer, escribir, extraer y listar archivos contenidos dentro de archivos ZIP.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#pasos-resumidos"&gt;Pasos resumidos&lt;/a&gt;&lt;/li&gt;
