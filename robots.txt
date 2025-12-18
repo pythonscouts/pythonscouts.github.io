@@ -4,6 +4,8 @@ Disallow: /search-index.st
 Disallow: /search.toml
 Disallow: /cache/
 Disallow: /*.json$
+Disallow: /*?trk=
+Disallow: /*&trk=
 
 # Crawl delay (optional, reduce if needed)
 Crawl-delay: 1
