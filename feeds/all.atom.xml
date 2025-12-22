@@ -1,5 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2025-12-18T09:45:00+01:00</updated><subtitle>Aprende Python en Español.</subtitle><entry><title>Palabras clave en Python: lambda</title><link href="https://pythonscouts.com/python-lambda/" rel="alternate"/><published>2025-12-18T09:45:00+01:00</published><updated>2025-12-18T09:45:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-12-18:/python-lambda/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;lambda&lt;/code&gt; te permite crear funciones anónimas de una sola expresión para escribir transformaciones y filtros inline.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Estas funciones son ideales cuando requieres encapsular una lógica breve y desecharla inmediatamente después, como sucede al ordenar colecciones, transformar datos o definir callbacks.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2025-12-22T22:40:00+01:00</updated><subtitle>Aprende Python en Español.</subtitle><entry><title>Palabras clave en Python: pass</title><link href="https://pythonscouts.com/python-pass/" rel="alternate"/><published>2025-12-22T22:40:00+01:00</published><updated>2025-12-22T22:40:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-12-22:/python-pass/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;pass&lt;/code&gt; se utiliza como un marcador de posición en el código. Es una instrucción que se emplea cuando la sintaxis del lenguaje requiere una sentencia, pero no se necesita ejecutar ninguna acción.&lt;/p&gt;</summary><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#sintaxis"&gt;Sintaxis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#ejemplos-practicos"&gt;Ejemplos prácticos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#uso-de-pass"&gt;Uso de pass&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#resumiendo"&gt;Resumiendo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="sintaxis"&gt;Sintaxis&lt;/h2&gt;
+&lt;p&gt;La sintaxis de la &lt;a href="/python-palabras-clave/"&gt;palabra clave&lt;/a&gt; &lt;code&gt;pass&lt;/code&gt; es extremadamente sencilla, ya que solo consiste en la palabra en sí:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;pass&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
+&lt;p&gt;Aquí tienes algunos ejemplos rápidos que muestran cómo se usa la palabra clave &lt;code&gt;pass&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;CustomException&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ne"&gt;Exception&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="k"&gt;pass&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;load_data&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="k"&gt;pass&lt;/span&gt;  &lt;span class="c1"&gt;# TODO: Implementar luego&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;ensure_nonexistence&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fname&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;         &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fname&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="ne"&gt;FileNotFoundError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;         &lt;span class="k"&gt;pass&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En el primer ejemplo, &lt;code&gt;pass&lt;/code&gt; se utiliza para crear una excepción personalizada sin añadir comportamiento adicional.&lt;/p&gt;
+&lt;p&gt;En el segundo ejemplo, la función &lt;code&gt;load_data()&lt;/code&gt; aún no hace nada. En este caso, &lt;code&gt;pass&lt;/code&gt; sirve como un recordatorio para implementar la lógica más tarde sin que el código genere un error de sintaxis.&lt;/p&gt;
+&lt;p&gt;En el tercer ejemplo, usas &lt;code&gt;pass&lt;/code&gt; en un bloque &lt;code&gt;except&lt;/code&gt; para ignorar explícitamente el error que ocurre si el archivo que intentas borrar no existe.&lt;/p&gt;
+&lt;h2 id="uso-de-pass"&gt;Uso de &lt;code&gt;pass&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Los casos de uso más comunes de la palabra clave &lt;code&gt;pass&lt;/code&gt; incluyen los siguientes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Como marcador de posición en una sentencia compuesta como &lt;a href="/python-if/"&gt;&lt;code&gt;if&lt;/code&gt;&lt;/a&gt;, &lt;a href="/python-for/"&gt;&lt;code&gt;for&lt;/code&gt;&lt;/a&gt; o &lt;a href="/python-while/"&gt;&lt;code&gt;while&lt;/code&gt;&lt;/a&gt; donde el código aún no está implementado.&lt;/li&gt;
+&lt;li&gt;Para crear funciones y evitar errores de sintaxis mientras se desarrolla el esqueleto del programa.&lt;/li&gt;
+&lt;li&gt;En clases como un marcador de posición para métodos o bloques de código que se implementarán más tarde.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
+&lt;p&gt;La palabra clave &lt;code&gt;pass&lt;/code&gt; en Python es una herramienta esencial para situaciones en las que no deseas realizar ninguna acción específica, pero necesitas cumplir con la sintaxis del lenguaje.&lt;/p&gt;
+&lt;p&gt;Conocer y utilizar &lt;code&gt;pass&lt;/code&gt; te permite estructurar tu código de manera más limpia y evita errores mientras desarrollas o refactorizas tus programas.&lt;/p&gt;</content><category term="Series"/><category term="python"/></entry><entry><title>Palabras clave en Python: lambda</title><link href="https://pythonscouts.com/python-lambda/" rel="alternate"/><published>2025-12-18T09:45:00+01:00</published><updated>2025-12-18T09:45:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-12-18:/python-lambda/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;lambda&lt;/code&gt; te permite crear funciones anónimas de una sola expresión para escribir transformaciones y filtros inline.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Estas funciones son ideales cuando requieres encapsular una lógica breve y desecharla inmediatamente después, como sucede al ordenar colecciones, transformar datos o definir callbacks.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#sintaxis-basica"&gt;Sintaxis básica&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#ejemplos-practicos"&gt;Ejemplos prácticos&lt;/a&gt;&lt;/li&gt;
