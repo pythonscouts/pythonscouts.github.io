@@ -1,5 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2025-12-27T12:00:00+01:00</updated><subtitle>Aprende Python en Español.</subtitle><entry><title>Palabras clave en Python: del</title><link href="https://pythonscouts.com/python-del/" rel="alternate"/><published>2025-12-27T12:00:00+01:00</published><updated>2025-12-27T12:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-12-27:/python-del/</id><summary type="html">&lt;p&gt;La palabra clave &lt;code&gt;del&lt;/code&gt; te permite eliminar variables, elementos de colecciones y atributos, liberando referencias y ayudándote a gestionar memoria.&lt;/p&gt;</summary><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2025-12-28T12:00:00+01:00</updated><subtitle>Aprende Python en Español.</subtitle><entry><title>Palabras clave en Python: assert</title><link href="https://pythonscouts.com/python-assert/" rel="alternate"/><published>2025-12-28T12:00:00+01:00</published><updated>2025-12-28T12:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-12-28:/python-assert/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;assert&lt;/code&gt; te permite comprobar precondiciones durante el desarrollo y depuración de tus programas, lanzando un error si no se cumplen.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Si la condición evaluada es falsa, &lt;code&gt;assert&lt;/code&gt; genera una excepción de tipo &lt;code&gt;AssertionError&lt;/code&gt;, lo que te ayuda a identificar y corregir problemas en tu código.&lt;/p&gt;
+&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#sintaxis"&gt;Sintaxis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#ejemplos-practicos"&gt;Ejemplos prácticos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#uso-de-assert"&gt;Uso de assert&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#resumiendo"&gt;Resumiendo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="sintaxis"&gt;Sintaxis&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="n"&gt;condition&lt;/span&gt;&lt;span class="p"&gt;[,&lt;/span&gt; &lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;condition&lt;/code&gt;: Una expresión que se evalúa como verdadera o falsa.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;message&lt;/code&gt;: Un mensaje (Opcional) de error que se mostrará si la condición es falsa.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
+&lt;p&gt;Aquí tienes algunos ejemplos que muestran cómo se utiliza la palabra clave &lt;code&gt;assert&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;# No se genera ningún error porque la condición es verdadera.&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;#39;y&amp;#39; debería ser mayor que 5&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;Traceback&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;most&lt;/span&gt; &lt;span class="n"&gt;recent&lt;/span&gt; &lt;span class="n"&gt;call&lt;/span&gt; &lt;span class="n"&gt;last&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="ne"&gt;AssertionError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;y&amp;#39;&lt;/span&gt; &lt;span class="n"&gt;debería&lt;/span&gt; &lt;span class="n"&gt;ser&lt;/span&gt; &lt;span class="n"&gt;mayor&lt;/span&gt; &lt;span class="n"&gt;que&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En el primer ejemplo, la condición &lt;code&gt;x &amp;gt; 5&lt;/code&gt; es verdadera, por lo que no ocurre nada ni se imprime ningún mensaje en pantalla.&lt;/p&gt;
+&lt;p&gt;En el segundo ejemplo, la condición &lt;code&gt;y &amp;gt; 5&lt;/code&gt; es falsa, por lo que se lanza un &lt;code&gt;AssertionError&lt;/code&gt; con el mensaje especificado.&lt;/p&gt;
+&lt;h2 id="uso-de-assert"&gt;Uso de &lt;code&gt;assert&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Los casos de uso más comunes de la palabra clave &lt;code&gt;assert&lt;/code&gt; incluyen los siguientes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Verificar condiciones en el código durante la fase de desarrollo y depuración.&lt;/li&gt;
+&lt;li&gt;Asegurarse de que los &lt;a href="/valores-python/"&gt;valores&lt;/a&gt; de las &lt;a href="/variables-python/"&gt;variables&lt;/a&gt; cumplen con los requisitos esperados antes de continuar con la ejecución.&lt;/li&gt;
+&lt;li&gt;Documentar supuestos en el código que deberían mantenerse verdaderos.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;aside class="note"&gt;
+En la práctica, no debes emplear la palabra clave &lt;code&gt;assert&lt;/code&gt; para verificar condiciones en producción, como puede ser la validación de datos de entrada. Esto es debido a que Python permite deshabilitar &lt;code&gt;assert&lt;/code&gt; con el fin de optimizar el funcionamiento de código en producción y, por tanto, tu validación quedaría sin efecto.
+&lt;/aside&gt;
+
+&lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
+&lt;p&gt;La palabra clave &lt;code&gt;assert&lt;/code&gt; en Python garantiza que ciertas precondiciones se mantengan durante la ejecución de un programa. Es especialmente valiosa durante la fase de desarrollo y depuración, pues permite identificar rápidamente errores lógicos y corregirlos.&lt;/p&gt;
+&lt;p&gt;Conocer y emplear &lt;code&gt;assert&lt;/code&gt; te ayuda a escribir código más robusto y confiable.&lt;/p&gt;</content><category term="Series"/><category term="python"/></entry><entry><title>Palabras clave en Python: del</title><link href="https://pythonscouts.com/python-del/" rel="alternate"/><published>2025-12-27T12:00:00+01:00</published><updated>2025-12-27T12:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-12-27:/python-del/</id><summary type="html">&lt;p&gt;La palabra clave &lt;code&gt;del&lt;/code&gt; te permite eliminar variables, elementos de colecciones y atributos, liberando referencias y ayudándote a gestionar memoria.&lt;/p&gt;</summary><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#sintaxis"&gt;Sintaxis&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#ejemplos-practicos"&gt;Ejemplos prácticos&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#uso-de-del"&gt;Uso de del&lt;/a&gt;&lt;/li&gt;
