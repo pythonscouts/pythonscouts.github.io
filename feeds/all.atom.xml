@@ -1,5 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2025-12-28T12:00:00+01:00</updated><subtitle>Aprende Python en Español.</subtitle><entry><title>Palabras clave en Python: assert</title><link href="https://pythonscouts.com/python-assert/" rel="alternate"/><published>2025-12-28T12:00:00+01:00</published><updated>2025-12-28T12:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-12-28:/python-assert/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;assert&lt;/code&gt; te permite comprobar precondiciones durante el desarrollo y depuración de tus programas, lanzando un error si no se cumplen.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Si la condición evaluada es falsa, &lt;code&gt;assert&lt;/code&gt; genera una excepción de tipo &lt;code&gt;AssertionError&lt;/code&gt;, lo que te ayuda a identificar y corregir problemas en tu código.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2025-12-29T12:00:00+01:00</updated><subtitle>Aprende Python en Español.</subtitle><entry><title>Palabras clave en Python: break</title><link href="https://pythonscouts.com/python-break/" rel="alternate"/><published>2025-12-29T12:00:00+01:00</published><updated>2025-12-29T12:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-12-29:/python-break/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;break&lt;/code&gt; te permite salir anticipadamente de bucles &lt;code&gt;for&lt;/code&gt; o &lt;code&gt;while&lt;/code&gt; cuando se cumple una condición.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Es una herramienta útil para controlar el flujo de ejecución y evitar iteraciones innecesarias.&lt;/p&gt;
+&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#sintaxis"&gt;Sintaxis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#ejemplos-practicos"&gt;Ejemplos prácticos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#uso-de-break"&gt;Uso de break&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#resumiendo"&gt;Resumiendo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="sintaxis"&gt;Sintaxis&lt;/h2&gt;
+&lt;p&gt;La sintaxis básica de &lt;code&gt;break&lt;/code&gt; es la siguiente, dependiendo del tipo de bucle que uses:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;iterable&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;condition&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;break&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;condition&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;break&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Coloca &lt;code&gt;break&lt;/code&gt; dentro del cuerpo de un bucle para interrumpir su ejecución cuando se cumpla una determinada condición.&lt;/p&gt;
+&lt;p&gt;En general, no debes usar &lt;code&gt;break&lt;/code&gt; directamente en el cuerpo del ciclo, pues eso provocaría que solo se realice una iteración. En su lugar, debes colocarla dentro de una sentencia &lt;a href="/condicionales-python/"&gt;condicional&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
+&lt;p&gt;A continuación, algunos ejemplos prácticos de cómo usar &lt;code&gt;break&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;         &lt;span class="k"&gt;break&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="mi"&gt;4&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este ejemplo, el bucle &lt;a href="/ciclos-for-python/"&gt;&lt;code&gt;for&lt;/code&gt;&lt;/a&gt; se detiene cuando &lt;code&gt;n&lt;/code&gt; es igual a &lt;code&gt;5&lt;/code&gt;, por lo que solo se imprimen los números del &lt;code&gt;0&lt;/code&gt; al &lt;code&gt;4&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;         &lt;span class="k"&gt;break&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Aquí, el bucle &lt;a href="/python-while/"&gt;&lt;code&gt;while&lt;/code&gt;&lt;/a&gt; se ejecuta indefinidamente hasta que &lt;code&gt;i&lt;/code&gt; alcanza &lt;code&gt;3&lt;/code&gt;, momento en el que &lt;code&gt;break&lt;/code&gt; interrumpe el ciclo.&lt;/p&gt;
+&lt;h2 id="uso-de-break"&gt;Uso de &lt;code&gt;break&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Los casos de uso más comunes de la &lt;a href="/python-palabras-clave/"&gt;palabra clave&lt;/a&gt; &lt;code&gt;break&lt;/code&gt; incluyen los siguientes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Salir anticipadamente de bucles &lt;code&gt;for&lt;/code&gt; o &lt;code&gt;while&lt;/code&gt; cuando se cumple una condición.&lt;/li&gt;
+&lt;li&gt;Evitar iteraciones o repeticiones innecesarias una vez que se ha encontrado el resultado deseado.&lt;/li&gt;
+&lt;li&gt;Mejorar la eficiencia y legibilidad del código al controlar el flujo de ejecución en bucles.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
+&lt;p&gt;La palabra clave &lt;code&gt;break&lt;/code&gt; en Python te permite controlar cuándo finalizar un bucle, haciendo tu código más eficiente y fácil de leer.&lt;/p&gt;
+&lt;p&gt;Conocer y emplear &lt;code&gt;break&lt;/code&gt; te ayuda a escribir programas más claros y optimizados, evitando iteraciones y repeticiones innecesarias en tus ciclos.&lt;/p&gt;</content><category term="Series"/><category term="python"/></entry><entry><title>Palabras clave en Python: assert</title><link href="https://pythonscouts.com/python-assert/" rel="alternate"/><published>2025-12-28T12:00:00+01:00</published><updated>2025-12-28T12:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-12-28:/python-assert/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;assert&lt;/code&gt; te permite comprobar precondiciones durante el desarrollo y depuración de tus programas, lanzando un error si no se cumplen.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Si la condición evaluada es falsa, &lt;code&gt;assert&lt;/code&gt; genera una excepción de tipo &lt;code&gt;AssertionError&lt;/code&gt;, lo que te ayuda a identificar y corregir problemas en tu código.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#sintaxis"&gt;Sintaxis&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#ejemplos-practicos"&gt;Ejemplos prácticos&lt;/a&gt;&lt;/li&gt;
