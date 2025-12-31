@@ -1,5 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2025-12-30T00:00:00+01:00</updated><subtitle>Aprende Python en Español.</subtitle><entry><title>Palabras clave en Python: else</title><link href="https://pythonscouts.com/python-else/" rel="alternate"/><published>2025-12-30T00:00:00+01:00</published><updated>2025-12-30T00:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-12-30:/python-else/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;else&lt;/code&gt; te permite controlar el flujo de tus programas en condicionales, bucles y manejo de excepciones.&lt;/p&gt;</summary><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2025-12-31T06:00:00+01:00</updated><subtitle>Aprende Python en Español.</subtitle><entry><title>Palabra clave en Python: continue</title><link href="https://pythonscouts.com/python-continue/" rel="alternate"/><published>2025-12-31T06:00:00+01:00</published><updated>2025-12-31T06:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-12-31:/python-continue/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;continue&lt;/code&gt; te permite saltar inmediatamente a la siguiente iteración de un bucle, omitiendo el resto del cuerpo de este.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Puedes usar &lt;code&gt;continue&lt;/code&gt; para &lt;em&gt;saltar&lt;/em&gt; casos que no quieres procesar sin salir del bucle.&lt;/p&gt;
+&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#sintaxis"&gt;Sintaxis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#ejemplos-practicos"&gt;Ejemplos prácticos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#uso-de-continue"&gt;Uso de continue&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#resumiendo"&gt;Resumiendo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="sintaxis"&gt;Sintaxis&lt;/h2&gt;
+&lt;p&gt;La sintaxis básica de &lt;code&gt;continue&lt;/code&gt; en un bucle &lt;code&gt;for&lt;/code&gt; o &lt;code&gt;while&lt;/code&gt; es la siguiente:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;iterable&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;condition&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;continue&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;condition&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;condition&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;continue&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;aside class="note"&gt;Si &lt;code&gt;continue&lt;/code&gt; queda como última sentencia del cuerpo del bucle, es innecesaria porque no hay código que omitir y el bucle pasa igual a la siguiente iteración.&lt;/aside&gt;
+
+&lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
+&lt;p&gt;A continuación, algunos ejemplos prácticos de cómo emplear &lt;code&gt;continue&lt;/code&gt;. Comenzamos con un ejemplo de cómo saltar números pares en un bucle &lt;code&gt;for&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;         &lt;span class="k"&gt;continue&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="mi"&gt;5&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Un caso de uso típico de &lt;code&gt;while&lt;/code&gt; es validar la entrada del usuario. En el ejemplo siguiente, &lt;code&gt;continue&lt;/code&gt; evita ejecutar el resto del cuerpo del bucle cuando la entrada es inválida:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;raw&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Edad (Enter para salir): &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strip&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;raw&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;break&lt;/span&gt;
+
+    &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;age&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;raw&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="ne"&gt;ValueError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Entrada inválida. Escribe un número entero.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;continue&lt;/span&gt;
+
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;age&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;La edad debe ser mayor que cero.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;continue&lt;/span&gt;
+
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Edad registrada: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;age&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En bucles anidados, &lt;code&gt;continue&lt;/code&gt; afecta solo al bucle más interno:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;pairs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;         &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;             &lt;span class="k"&gt;continue&lt;/span&gt;    &lt;span class="c1"&gt;# Salta pares donde i == j&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;         &lt;span class="n"&gt;pairs&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;pairs&lt;/span&gt;
+&lt;span class="p"&gt;[(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;El bloque &lt;code&gt;else&lt;/code&gt; de un bucle aún se ejecuta si usas &lt;code&gt;continue&lt;/code&gt;. Solo &lt;code&gt;break&lt;/code&gt; lo evita:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;         &lt;span class="k"&gt;continue&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Terminó sin usar break&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="n"&gt;Terminó&lt;/span&gt; &lt;span class="n"&gt;sin&lt;/span&gt; &lt;span class="n"&gt;usar&lt;/span&gt; &lt;span class="k"&gt;break&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Errores comunes:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;function&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="k"&gt;continue&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="ne"&gt;SyntaxError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;continue&amp;#39;&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;properly&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;loop&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Como ves, &lt;code&gt;continue&lt;/code&gt; solo puede emplearse dentro de un ciclo.&lt;/p&gt;
+&lt;h2 id="uso-de-continue"&gt;Uso de &lt;code&gt;continue&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Los casos de uso más comunes de la palabra clave &lt;code&gt;continue&lt;/code&gt; incluyen los siguientes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Saltar entradas inválidas o casos especiales sin duplicar lógica de salida del bucle.&lt;/li&gt;
+&lt;li&gt;Simplificar condiciones anidadas (“guard clauses”) para aplanar el cuerpo del bucle.&lt;/li&gt;
+&lt;li&gt;Omitir iteraciones que no cumplen un filtro dentro de bucles &lt;code&gt;for&lt;/code&gt;/&lt;code&gt;while&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Mantener disponible el bloque &lt;code&gt;else&lt;/code&gt; del bucle (a diferencia de &lt;code&gt;break&lt;/code&gt;, que lo inhibe).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
+&lt;p&gt;La palabra clave &lt;code&gt;continue&lt;/code&gt; te permite omitir de forma limpia el resto de la iteración actual y pasar a la siguiente, manteniendo el bucle en ejecución.&lt;/p&gt;
+&lt;p&gt;Conocer y emplear &lt;code&gt;continue&lt;/code&gt; mejora la claridad del flujo en tus bucles al evitar anidaciones profundas y manejar casos especiales de manera directa.&lt;/p&gt;</content><category term="Series"/><category term="palabras clave"/><category term="python"/></entry><entry><title>Palabras clave en Python: else</title><link href="https://pythonscouts.com/python-else/" rel="alternate"/><published>2025-12-30T15:25:00+01:00</published><updated>2025-12-30T15:25:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-12-30:/python-else/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;else&lt;/code&gt; te permite controlar el flujo de tus programas en condicionales, bucles y manejo de excepciones.&lt;/p&gt;</summary><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#sintaxis"&gt;Sintaxis&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#ejemplos-practicos"&gt;Ejemplos prácticos&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#uso-de-else"&gt;Uso de else&lt;/a&gt;&lt;/li&gt;
