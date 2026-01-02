@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="es-es" class="h-100">
+
+<head>
+        <title>
+  Iniciando con Kivy para desarrollo GUI - Python Scouts
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Leodanis Pozo Ramos">
+    <meta name="description" content="Kivy es un framework para construir aplicaciones con interfaz gráfica (GUI) multiplataforma. Provee widgets, layouts, eventos y más.">
+    <meta name="keywords" content="kivy, python, gui">
+    <meta name="article:published_time" content="2026-01-02T16:45:00+01:00">
+    <meta name="article:modified_time" content="2026-01-02T16:45:00+01:00">
+    <meta name="article:author" content="Leodanis Pozo Ramos">
+    <meta name="article:section" content="Tutoriales">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="language" content="Spanish">
+    <meta name="generator" content="Pelican">
+    
+    <meta name="dcterms.rights" content="https://creativecommons.org/licenses/by-sa/4.0/">
+    <meta name="dcterms.rightsHolder" content="Leodanis Pozo Ramos">
+    <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Iniciando con Kivy para desarrollo GUI">
+    <meta property="og:description" content="Kivy es un framework para construir aplicaciones con interfaz gráfica (GUI) multiplataforma. Provee widgets, layouts, eventos y más.">
+    <meta property="og:url" content="https://pythonscouts.com/iniciando-con-kivy-python/">
+    <meta property="og:site_name" content="Python Scouts">
+    <meta property="og:image" content="https://pythonscouts.com/images/articles/iniciando-con-kivy-python/social.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Iniciando con Kivy para desarrollo GUI">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:locale" content="es_ES">
+    <meta property="article:published_time" content="2026-01-02T16:45:00+01:00">
+    <meta property="article:author" content="Leodanis Pozo Ramos">
+    <meta property="article:section" content="Tutoriales">
+    <meta property="article:tag" content="kivy">
+    <meta property="article:tag" content="python">
+    <meta property="article:tag" content="gui">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lpozo78">
+    <meta name="twitter:creator" content="@lpozo78">
+    <meta name="twitter:title" content="Iniciando con Kivy para desarrollo GUI">
+    <meta name="twitter:description" content="Kivy es un framework para construir aplicaciones con interfaz gráfica (GUI) multiplataforma. Provee widgets, layouts, eventos y más.">
+    <meta name="twitter:image" content="https://pythonscouts.com/images/articles/iniciando-con-kivy-python/social.webp">
+    <meta name="twitter:image:alt" content="Iniciando con Kivy para desarrollo GUI">
+    <!-- RSS feeds -->
+    <link href="https://pythonscouts.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Full Atom Feed" />
+    <link href="https://pythonscouts.com/feeds/tutoriales.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Categories Atom Feed" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://pythonscouts.com/iniciando-con-kivy-python/">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202601021644">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202601021644">
+    <!-- Preconnect to CDNs -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <!-- Bootstrap CSS (deferred) -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+          crossorigin="anonymous">
+    <!-- Bootstrap Icons (self-hosted, deferred) -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202601021644">
+    <!-- Stork Search - Deferred -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202601021644">
+
+
+    <!-- Article tags -->
+    <meta name="article:tag" content="kivy" />
+    <meta name="article:tag" content="python" />
+    <meta name="article:tag" content="gui" />
+    <meta name="article:tag" content="palabras clave" />
+    <meta name="article:tag" content="lambda" />
+    <meta name="article:tag" content="funciones" />
+    <meta name="article:tag" content="fundamentos" />
+    <meta name="article:tag" content="ayuda" />
+    <meta name="article:tag" content="pyside6" />
+    <meta name="article:tag" content="linux" />
+    <meta name="article:tag" content="tkinter" />
+    <meta name="article:tag" content="pyqt" />
+    <meta name="article:tag" content="windows" />
+    <meta name="article:tag" content="macos" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Iniciando con Kivy para desarrollo GUI">
+    <meta property="og:description" content="Kivy es un framework para construir aplicaciones con interfaz gráfica (GUI) multiplataforma. Provee widgets, layouts, eventos y más.">
+    <meta property="og:url" content="https://pythonscouts.com/iniciando-con-kivy-python/">
+    <meta property="og:site_name" content="Python Scouts">
+    <meta property="og:image" content="https://pythonscouts.com/images/articles/iniciando-con-kivy-python/social.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Iniciando con Kivy para desarrollo GUI">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:locale" content="es_ES">
+    <meta property="article:published_time" content="2026-01-02T16:45:00+01:00">
+    <meta property="article:author" content="Leodanis Pozo Ramos">
+    <meta property="article:section" content="Tutoriales">
+    <meta property="article:tag" content="kivy">
+    <meta property="article:tag" content="python">
+    <meta property="article:tag" content="gui">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lpozo78">
+    <meta name="twitter:creator" content="@lpozo78">
+    <meta name="twitter:title" content="Iniciando con Kivy para desarrollo GUI">
+    <meta name="twitter:description" content="Kivy es un framework para construir aplicaciones con interfaz gráfica (GUI) multiplataforma. Provee widgets, layouts, eventos y más.">
+    <meta name="twitter:image" content="https://pythonscouts.com/images/articles/iniciando-con-kivy-python/social.webp">
+    <meta name="twitter:image:alt" content="Iniciando con Kivy para desarrollo GUI">
+
+    <!-- Custom CSS for article -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202601021644">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
+<script
+    src="https://pythonscouts.com/theme/js/analytics.js?v=202601021644"
+    defer
+    data-analytics-id="G-R3C5PFSQ1S">
+</script>
+
+<body class="d-flex flex-column h-100">
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-md bg-white fixed-top border-bottom">
+        <div class="container-md content-px">
+            <a class="navbar-brand" href="/">
+            <img
+            src="https://pythonscouts.com/images/identity/header.webp"
+            alt="Python Scouts"
+            width="150"
+            height="50"
+            >
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Menú de Navegación">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav m-auto nav-link">
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/guias/" aria-current="page">
+                    Guías
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/series/" aria-current="page">
+                    Series
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/tutoriales/" aria-current="page">
+                    Tutoriales
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/acerca/" aria-current="page">
+                    Acerca
+                </a>
+                </li>
+            </ul>
+            <form class="d-flex search-form" role="search" style="min-width:240px;">
+                <div class="stork-wrapper">
+                <input
+                class="stork-input"
+                type="search"
+                id="site-search"
+                name="q"
+                placeholder="Buscar"
+                aria-label="Search"
+                data-stork="sitesearch"
+                >
+                </div>
+            </form>
+            </div>
+        </div>
+    </nav>
+    <main id="main-content" class="container-md content-px py-3" tabindex="-1">
+        <div class="stork-wrapper">
+            <div data-stork="sitesearch-output" class="stork-output"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+            </div>
+        </div>
+
+    <!-- Article Header - Magazine Style -->
+    <header class="article-header mb-5">
+        <div class="row g-4 align-items-center">
+            <!-- Content Column -->
+            <div class="col-lg-6 order-lg-1">
+                <!-- Breadcrumbs -->
+                <nav aria-label="breadcrumb" class="mb-3">
+                    <ol class="breadcrumb mb-0 small">
+                        <li class="breadcrumb-item"><a href="https://pythonscouts.com">Inicio</a></li>
+                        <li class="breadcrumb-item"><a href="https://pythonscouts.com/tutoriales/">Tutoriales</a></li>
+                    </ol>
+                </nav>
+                
+                <!-- Category -->
+                <div class="mb-3">
+                    <span class="badge bg-success-subtle text-success border border-success px-3 py-2 text-uppercase fw-semibold">
+                        Tutoriales
+                    </span>
+                </div>
+                
+                <!-- Title -->
+                <h1 class="display-5 fw-bold mb-4">
+                    Iniciando con Kivy para desarrollo GUI
+                </h1>
+                
+                <!-- Author & Meta -->
+                <div class="d-flex align-items-center gap-3 mb-4">
+                    <img src="https://pythonscouts.com/images/authors/leodanis-pozo-ramos.webp" 
+                         class="rounded-circle border" 
+                         width="60" height="60" 
+                         alt="Leodanis Pozo Ramos">
+                    <div>
+                        <div class="fw-semibold">Leodanis Pozo Ramos</div>
+                        <div class="text-muted-strong small">
+                            <i class="bi bi-calendar-event me-1"></i>
+                            02 ene 2026
+                            <span class="mx-2">•</span>
+                            <i class="bi bi-clock me-1"></i>
+                            16 min
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tags -->
+                <div class="d-flex gap-2 flex-wrap">
+                    <a href="https://pythonscouts.com/tag/kivy.html" 
+                       class="badge bg-light text-dark border text-decoration-none">
+                        kivy
+                    </a>
+                    <a href="https://pythonscouts.com/tag/python.html" 
+                       class="badge bg-light text-dark border text-decoration-none">
+                        python
+                    </a>
+                    <a href="https://pythonscouts.com/tag/gui.html" 
+                       class="badge bg-light text-dark border text-decoration-none">
+                        gui
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Image Column -->
+            <div class="col-lg-6 order-lg-2">
+                <img src="https://pythonscouts.com/images/articles/iniciando-con-kivy-python/article.webp" 
+                     class="img-fluid w-100 rounded-4 shadow-lg" 
+                     alt="Iniciando con Kivy para desarrollo GUI"
+                     style="max-height: 600px; object-fit: cover;">
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Content -->
+    <div class="row">
+        <div class="col-12">
+            <article itemscope itemtype="https://schema.org/BlogPosting">
+                <meta itemprop="headline" content="Iniciando con Kivy para desarrollo GUI">
+                <meta itemprop="description" content="Kivy es un framework para construir aplicaciones con interfaz gráfica (GUI) multiplataforma. Provee widgets, layouts, eventos y más.">
+                <meta itemprop="datePublished" content="2026-01-02T16:45:00+01:00">
+                <meta itemprop="dateModified" content="2026-01-02T16:45:00+01:00">
+                <meta itemprop="author" content="Leodanis Pozo Ramos">
+                <meta itemprop="image" content="https://pythonscouts.com/images/articles/iniciando-con-kivy-python/social.webp">
+                <div itemprop="articleBody">
+                    <p class="lead text-muted-strong mb-4">
+                        <p>Kivy es un framework para construir aplicaciones con interfaz gráfica (GUI) multiplataforma. Provee widgets, layouts, eventos y más.</p>
+                    </p>
+                    <p>Si quieres crear interfaces gráficas en Python con un enfoque moderno y con soporte para gestos y multitouch en dispositivos móviles y táctiles, Kivy es una buena opción.</p>
+<div class="toc"><span class="toctitle">Contenidos</span><ul>
+<li><a href="#conociendo-kivy">Conociendo Kivy</a></li>
+<li><a href="#instalando-kivy">Instalando Kivy</a><ul>
+<li><a href="#en-windows">En Windows</a></li>
+<li><a href="#en-linux-y-macos">En Linux y macOS</a></li>
+</ul>
+</li>
+<li><a href="#creando-una-aplicacion-kivy">Creando una aplicación Kivy</a></li>
+<li><a href="#explorando-widgets-comunes-en-kivy">Explorando widgets comunes en Kivy</a><ul>
+<li><a href="#botones-clicables">Botones clicables</a></li>
+<li><a href="#campos-de-entrada-de-texto">Campos de entrada de texto</a></li>
+<li><a href="#botones-de-opcion">Botones de opción</a></li>
+<li><a href="#selectores-deslizantes">Selectores deslizantes</a></li>
+<li><a href="#listas-desplegables">Listas desplegables</a></li>
+</ul>
+</li>
+<li><a href="#usando-gestores-de-disposicion">Usando gestores de disposición</a><ul>
+<li><a href="#disponer-widgets-en-vertical-u-horizontal">Disponer widgets en vertical u horizontal</a></li>
+<li><a href="#organizar-widgets-en-cuadriculas">Organizar widgets en cuadrículas</a></li>
+<li><a href="#colocar-widgets-en-posiciones-especificas">Colocar widgets en posiciones específicas</a></li>
+</ul>
+</li>
+<li><a href="#conectando-eventos-con-callbacks-en-kivy">Conectando eventos con callbacks en Kivy</a><ul>
+<li><a href="#enlazar-eventos">Enlazar eventos</a></li>
+<li><a href="#enlazar-propiedades">Enlazar propiedades</a></li>
+</ul>
+</li>
+<li><a href="#separando-la-interfaz-de-la-logica-con-kv-language">Separando la interfaz de la lógica con KV language</a></li>
+<li><a href="#conclusion">Conclusión</a></li>
+</ul>
+</div>
+<h2 id="conociendo-kivy">Conociendo Kivy</h2>
+<p>Kivy es un framework para crear aplicaciones con interfaces gráficas en Python. Está pensado para UI con soporte multitouch y puede ejecutarse en varios sistemas operativos.</p>
+<p>Kivy funciona muy bien cuando:</p>
+<ul>
+<li>Quieres una GUI en Python con componentes y layouts listos para usar</li>
+<li>Te interesa reutilizar la misma base de código en escritorio y, más adelante, empaquetar para móviles</li>
+<li>Prefieres un enfoque declarativo para la interfaz y dejar la lógica de negocio en Python</li>
+</ul>
+<h2 id="instalando-kivy">Instalando Kivy</h2>
+<p>La forma recomendada de instalar Kivy es usar un <a href="/entorno-virtual-python/">entorno virtual</a> y luego instalar el framework desde <a href="https://pypi.org/project/Kivy/">PyPI</a>. Los comandos necesarios pueden variar un poco según tu sistema operativo.</p>
+<h3 id="en-windows">En Windows</h3>
+<p>En Windows, puedes crear el entorno virtual e instalar Kivy ejecutando los comandos siguientes:</p>
+<div class="highlight"><pre><span></span><code><span class="n">PS</span><span class="o">&gt;</span><span class="w"> </span><span class="n">python</span><span class="w"> </span><span class="o">-</span><span class="n">m</span><span class="w"> </span><span class="n">venv</span><span class="w"> </span><span class="n">venv</span>
+<span class="n">PS</span><span class="o">&gt;</span><span class="w"> </span><span class="n">venv</span><span class="err">\</span><span class="n">Scripts</span><span class="err">\</span><span class="n">Activate</span><span class="p">.</span><span class="n">ps1</span>
+<span class="p">(</span><span class="n">venv</span><span class="p">)</span><span class="w"> </span><span class="n">PS</span><span class="o">&gt;</span><span class="w"> </span><span class="n">python</span><span class="w"> </span><span class="o">-</span><span class="n">m</span><span class="w"> </span><span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="ss">&quot;kivy[base]&quot;</span>
+</code></pre></div>
+
+<p>Con estos comandos, primero creas y activas un entorno virtual de Python y luego instalas Kivy desde PyPI. Opcionalmente, puedes instalar los ejemplos de Kivy con el paquete <code>kivy_examples</code>.</p>
+<h3 id="en-linux-y-macos">En Linux y macOS</h3>
+<p>En Linux y macOS el proceso es similar y puedes realizarlo con los siguientes comandos:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
+<span class="gp">$ </span><span class="nb">source</span><span class="w"> </span>venv/bin/activate
+<span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;kivy[base]&quot;</span>
+</code></pre></div>
+
+<p>Kivy también ofrece las variantes <code>kivy[base,media]</code> o <code>kivy[full]</code> para incluir más opciones y funcionalidades, como, por ejemplo, el manejo de audio y video. Si estás comenzando, <code>kivy[base]</code> suele ser suficiente.</p>
+<h2 id="creando-una-aplicacion-kivy">Creando una aplicación Kivy</h2>
+<p>Una aplicación mínima en Kivy generalmente requiere que sigas los pasos siguientes:</p>
+<ol>
+<li>Crear una subclase de <code>App</code>.</li>
+<li>Implementar el método <code>.build()</code> para devolver el widget raíz de la UI.</li>
+<li>Crear una instancia de la clase y llamar su método <code>.run()</code>.</li>
+</ol>
+<p>Para traducir estos pasos a código Python, guarda el código siguiente como <code>hello.py</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">kivy.app</span> <span class="kn">import</span> <span class="n">App</span>
+<span class="kn">from</span> <span class="nn">kivy.uix.label</span> <span class="kn">import</span> <span class="n">Label</span>
+
+<span class="k">class</span> <span class="nc">HelloApp</span><span class="p">(</span><span class="n">App</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">Label</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Hola, Mundo!&quot;</span><span class="p">)</span>
+
+<span class="n">HelloApp</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</code></pre></div>
+
+<p>En este ejemplo, importas <code>App</code> como la clase base de tu aplicación. También importas <code>Label</code> para mostrar texto en pantalla. Luego defines <code>HelloApp</code> heredando de <code>App</code> e implementas <code>.build()</code> para construir la interfaz. El widget que devuelves en este método será la raíz del árbol de widgets de Kivy. En este ejemplo, usas el <code>Label</code> con el texto <code>Hola, Mundo!</code>.</p>
+<p>Por último, creas la instancia de <code>HelloApp</code> y llamas al método <code>.run()</code>. Con esto, Kivy inicia la aplicación y su bucle principal de eventos, abre la ventana y renderiza el <code>Label</code> que devolviste en <code>.build()</code>.</p>
+<p>Puedes ejecutar la aplicación con el comando siguiente:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>python<span class="w"> </span>hello.py
+</code></pre></div>
+
+<p>Una vez que ejecutas este comando, verás en pantalla una ventana que luce como la siguiente:</p>
+<p><img src="../images/articles/iniciando-con-kivy-python/kivy-demo-app.png" class="mx-auto d-block mt-2" style="max-width: 800px; width: 100%; height: auto;" alt="Aplicación 'Hola, Mundo!' con Kivy y Python"></p>
+<div class="text-center mb-5 lead"><em>Aplicación "Hola, Mundo!" con Kivy y Python</em></div>
+
+<h2 id="explorando-widgets-comunes-en-kivy">Explorando widgets comunes en Kivy</h2>
+<p>En Kivy, una interfaz (UI) es un árbol de widgets. Muchos widgets exponen eventos, como <code>on_press</code> en un <code>Button</code>. También tienen propiedades como <code>.text</code>, <code>.active</code> o <code>.value</code>, que puedes vincular con <code>.bind()</code> para reaccionar a eventos de usuario.</p>
+<p>En las siguientes secciones, encontrarás una selección de widgets básicos que te ayudarán a comprender conceptos fundamentales para empezar a crear tus GUIs con Kivy.</p>
+<h3 id="botones-clicables">Botones clicables</h3>
+<p>La clase <code>Button</code> ofrece un widget clicable en forma rectangular. Algunos botones típicos incluyen <em>Ok</em>, <em>Cancelar</em>, <em>Aplicar</em>, <em>Sí</em>, <em>No</em>, <em>Cerrar</em>, entre otros. He aquí un ejemplo que crea estos botones:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">kivy.app</span> <span class="kn">import</span> <span class="n">App</span>
+<span class="kn">from</span> <span class="nn">kivy.core.window</span> <span class="kn">import</span> <span class="n">Window</span>
+<span class="kn">from</span> <span class="nn">kivy.uix.boxlayout</span> <span class="kn">import</span> <span class="n">BoxLayout</span>
+<span class="kn">from</span> <span class="nn">kivy.uix.button</span> <span class="kn">import</span> <span class="n">Button</span>
+
+<span class="k">class</span> <span class="nc">ButtonsApp</span><span class="p">(</span><span class="n">App</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Botones Kivy&quot;</span>
+        <span class="n">Window</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+        <span class="n">layout</span> <span class="o">=</span> <span class="n">BoxLayout</span><span class="p">(</span><span class="n">orientation</span><span class="o">=</span><span class="s2">&quot;vertical&quot;</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">spacing</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">text</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Ok&quot;</span><span class="p">,</span> <span class="s2">&quot;Cancelar&quot;</span><span class="p">,</span> <span class="s2">&quot;Aplicar&quot;</span><span class="p">,</span> <span class="s2">&quot;Sí&quot;</span><span class="p">,</span> <span class="s2">&quot;No&quot;</span><span class="p">,</span> <span class="s2">&quot;Cerrar&quot;</span><span class="p">]:</span>
+            <span class="n">button</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">text</span><span class="p">)</span>
+            <span class="n">layout</span><span class="o">.</span><span class="n">add_widget</span><span class="p">(</span><span class="n">button</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">layout</span>
+
+<span class="n">ButtonsApp</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</code></pre></div>
+
+<p>En este ejemplo, la clase <code>ButtonsApp</code> crea una ventana que muestra varios botones en una columna. En <code>.build()</code>, primero configuras la ventana con un título y un tamaño apropiado. Luego, creas un <code>BoxLayout</code> vertical con <code>padding</code> y <code>spacing</code> para garantizar margen interno y separación entre los botones.</p>
+<p>El <a href="/ciclos-for-python/">ciclo <code>for</code></a> recorre la lista de botones y los crea para luego añadirlos al layout con <code>.add_widget()</code>. Al final, <code>.build()</code> devuelve el layout como widget raíz.</p>
+<p>Cuando corres la aplicación, obtienes una ventana como la siguiente:</p>
+<p><img src="../images/articles/iniciando-con-kivy-python/kivy-botones.png" class="mx-auto d-block mt-2" alt="Botones en Kivy"></p>
+<div class="text-center mb-5 lead"><em>Botones en Kivy</em></div>
+
+<p>Estos botones todavía no ejecutan ninguna acción al hacer clic en ellos, pues aún no están vinculados o enlazados a una función o método. Aprenderás sobre esto en la sección <a href="#conectando-eventos-con-callbacks-en-kivy">"Conectando eventos con callbacks en Kivy"</a>.</p>
+<h3 id="campos-de-entrada-de-texto">Campos de entrada de texto</h3>
+<p><code>TextInput</code> permite que el usuario escriba texto. Considera el siguiente ejemplo que crea un formulario para entrada de credenciales de usuario:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">kivy.app</span> <span class="kn">import</span> <span class="n">App</span>
+<span class="kn">from</span> <span class="nn">kivy.core.window</span> <span class="kn">import</span> <span class="n">Window</span>
+<span class="kn">from</span> <span class="nn">kivy.uix.boxlayout</span> <span class="kn">import</span> <span class="n">BoxLayout</span>
+<span class="kn">from</span> <span class="nn">kivy.uix.textinput</span> <span class="kn">import</span> <span class="n">TextInput</span>
+
+<span class="k">class</span> <span class="nc">TextInputApp</span><span class="p">(</span><span class="n">App</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Campos de texto Kivy&quot;</span>
+        <span class="n">Window</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">250</span><span class="p">,</span> <span class="mi">180</span><span class="p">)</span>
+        <span class="n">layout</span> <span class="o">=</span> <span class="n">BoxLayout</span><span class="p">(</span><span class="n">orientation</span><span class="o">=</span><span class="s2">&quot;vertical&quot;</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">spacing</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">text</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Nombre&quot;</span><span class="p">,</span> <span class="s2">&quot;Usuario&quot;</span><span class="p">,</span> <span class="s2">&quot;Contraseña&quot;</span><span class="p">]:</span>
+            <span class="n">entry</span> <span class="o">=</span> <span class="n">TextInput</span><span class="p">(</span>
+                <span class="n">hint_text</span><span class="o">=</span><span class="n">text</span><span class="p">,</span>
+                <span class="n">multiline</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">layout</span><span class="o">.</span><span class="n">add_widget</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">layout</span>
+
+<span class="n">TextInputApp</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</code></pre></div>
+
+<p>Este ejemplo muestra cómo usar <code>TextInput</code> para crear campos de texto. En el ciclo <code>for</code>, creas tres instancias de <code>TextInput</code> y las agregas al <code>BoxLayout</code>, de modo que cada campo aparezca apilado en la ventana. La propiedad <code>hint_text</code> actúa como texto de ayuda (placeholder) y le indica al usuario qué debe escribir en cada campo.</p>
+<p>Además, al establecer <code>multiline=False</code>, le dices a <code>TextInput</code> que actúe como un campo de una sola línea.</p>
+<p>A continuación se muestra cómo luce tu aplicación:</p>
+<p><img src="../images/articles/iniciando-con-kivy-python/kivy-campos-de-texto.png" class="mx-auto d-block mt-2" alt="Campos de texto en Kivy"></p>
+<div class="text-center mb-5 lead"><em>Campos de texto en Kivy</em></div>
+
+<p>Prueba a introducir texto en cada campo. También podrás copiar y pegar texto con las combinaciones de teclas <code>Ctrl+C</code> y <code>Ctrl+V</code>, respectivamente.</p>
+<h3 id="botones-de-opcion">Botones de opción</h3>
+<p>La clase <code>CheckBox</code> representa una opción booleana que te permite activar o desactivar características, funcionalidades, configuraciones y similares:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">kivy.app</span> <span class="kn">import</span> <span class="n">App</span>
+<span class="kn">from</span> <span class="nn">kivy.core.window</span> <span class="kn">import</span> <span class="n">Window</span>
+<span class="kn">from</span> <span class="nn">kivy.uix.boxlayout</span> <span class="kn">import</span> <span class="n">BoxLayout</span>
+<span class="kn">from</span> <span class="nn">kivy.uix.checkbox</span> <span class="kn">import</span> <span class="n">CheckBox</span>
+<span class="kn">from</span> <span class="nn">kivy.uix.label</span> <span class="kn">import</span> <span class="n">Label</span>
+
+<span class="k">class</span> <span class="nc">CheckBoxApp</span><span class="p">(</span><span class="n">App</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Botones de opción Kivy&quot;</span>
+        <span class="n">Window</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">250</span><span class="p">,</span> <span class="mi">150</span><span class="p">)</span>
+        <span class="n">Window</span><span class="o">.</span><span class="n">clearcolor</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">options</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s2">&quot;Recibir notificaciones&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Aceptar términos y condiciones&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Suscribirse al boletín&quot;</span><span class="p">,</span>
+        <span class="p">]</span>
+
+        <span class="n">layout</span> <span class="o">=</span> <span class="n">BoxLayout</span><span class="p">(</span><span class="n">orientation</span><span class="o">=</span><span class="s2">&quot;vertical&quot;</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">spacing</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">option</span> <span class="ow">in</span> <span class="n">options</span><span class="p">:</span>
+            <span class="n">row</span> <span class="o">=</span> <span class="n">BoxLayout</span><span class="p">(</span><span class="n">orientation</span><span class="o">=</span><span class="s2">&quot;horizontal&quot;</span><span class="p">,</span> <span class="n">spacing</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+            <span class="n">row</span><span class="o">.</span><span class="n">add_widget</span><span class="p">(</span><span class="n">CheckBox</span><span class="p">(</span><span class="n">size_hint_x</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">30</span><span class="p">))</span>
+
+            <span class="n">label</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span>
+                <span class="n">text</span><span class="o">=</span><span class="n">option</span><span class="p">,</span>
+                <span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+                <span class="n">size_hint_x</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">label</span><span class="o">.</span><span class="n">texture_update</span><span class="p">()</span>
+            <span class="n">label</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">label</span><span class="o">.</span><span class="n">texture_size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+            <span class="n">row</span><span class="o">.</span><span class="n">add_widget</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+            <span class="n">layout</span><span class="o">.</span><span class="n">add_widget</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">layout</span>
+
+<span class="n">CheckBoxApp</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</code></pre></div>
+
+<p>En este ejemplo, creas una lista de opciones con casillas de verificación usando objetos <code>CheckBox</code>. Creas un <code>BoxLayout</code> vertical para la aplicación y, para cada opción, construyes una fila horizontal (<code>row</code>) en la que insertas un checkbox. Al fijar <code>size_hint_x=None</code> y un <code>width</code> concreto, aseguras que todas las casillas tengan el mismo ancho y queden alineadas de forma consistente, una por fila, justo a la izquierda del texto.</p>
+<p>Luego añades un <code>Label</code> con el texto de la opción y lo ajustas al tamaño real del contenido para que el texto quede pegado al checkbox sin ocupar el resto de la fila.</p>
+<p>Finalmente, agregas cada fila al layout principal, lo que produce una columna de filas, cada una con su checkbox y su descripción al lado.</p>
+<p>Al ejecutar esta aplicación, obtendrás una ventana similar a la siguiente:</p>
+<p><img src="../images/articles/iniciando-con-kivy-python/kivy-botones-de-opcion.png" class="mx-auto d-block mt-2" alt="Botones de opción en Kivy"></p>
+<div class="text-center mb-5 lead"><em>Botones de opción en Kivy</em></div>
+
+<p>Cuando haces clic en las casillas, las activas o desactivas alternativamente. Puedes usar la propiedad <code>.active</code> para comprobar el estado actual de cada casilla y tomar acciones en consecuencia.</p>
+<h3 id="selectores-deslizantes">Selectores deslizantes</h3>
+<p>La clase <code>Slider</code> proporciona un selector deslizante que es útil para seleccionar un valor dentro de un rango predeterminado:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">kivy.app</span> <span class="kn">import</span> <span class="n">App</span>
+<span class="kn">from</span> <span class="nn">kivy.core.window</span> <span class="kn">import</span> <span class="n">Window</span>
+<span class="kn">from</span> <span class="nn">kivy.uix.boxlayout</span> <span class="kn">import</span> <span class="n">BoxLayout</span>
+<span class="kn">from</span> <span class="nn">kivy.uix.label</span> <span class="kn">import</span> <span class="n">Label</span>
+<span class="kn">from</span> <span class="nn">kivy.uix.slider</span> <span class="kn">import</span> <span class="n">Slider</span>
+
+<span class="k">class</span> <span class="nc">SliderApp</span><span class="p">(</span><span class="n">App</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Selector deslizante Kivy&quot;</span>
+        <span class="n">Window</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">150</span><span class="p">)</span>
+
+        <span class="n">root</span> <span class="o">=</span> <span class="n">BoxLayout</span><span class="p">(</span><span class="n">orientation</span><span class="o">=</span><span class="s2">&quot;vertical&quot;</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">spacing</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+        <span class="n">label</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Valor: 0&quot;</span><span class="p">)</span>
+        <span class="n">slider</span> <span class="o">=</span> <span class="n">Slider</span><span class="p">(</span><span class="nb">min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">on_value</span><span class="p">(</span><span class="n">instance</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+            <span class="n">label</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Valor: </span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+
+        <span class="n">slider</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">on_value</span><span class="p">)</span>
+
+        <span class="n">root</span><span class="o">.</span><span class="n">add_widget</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+        <span class="n">root</span><span class="o">.</span><span class="n">add_widget</span><span class="p">(</span><span class="n">slider</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">root</span>
+
+<span class="n">SliderApp</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</code></pre></div>
+
+<p>En este ejemplo, organizas la UI en un <code>BoxLayout</code> vertical, con un <code>Label</code> arriba y un <code>Slider</code> abajo. Creas el <code>Slider</code> con <code>min=0</code>, <code>max=100</code> y <code>value=0</code>, que son los parámetros típicos para definir el rango y el valor inicial de este widget.</p>
+<p>Luego, conectas el <code>Slider</code> con el <code>Label</code> mediante la función <code>on_value()</code>, que recibe el nuevo valor del control y actualiza el texto del label según los cambios. Al hacer <code>slider.bind(value=on_value)</code>, le dices a Kivy que ejecute esa función cada vez que cambie la propiedad <code>.value</code> del <code>Slider</code>.</p>
+<p>Ejecuta la app y obtendrás una ventana como la siguiente:</p>
+<p><img src="../images/articles/iniciando-con-kivy-python/kivy-selector-deslizante.png" class="mx-auto d-block mt-2" alt="Selector deslizante en Kivy"></p>
+<div class="text-center mb-5 lead"><em>Selector deslizante en Kivy</em></div>
+
+<p>Prueba a mover el selector del slider y verás cómo el <code>Label</code> se actualiza, lo que logra una interfaz reactiva que refleja el valor seleccionado en tiempo real.</p>
+<h3 id="listas-desplegables">Listas desplegables</h3>
+<p>La clase <code>Spinner</code> ofrece un selector compacto que muestra el valor actual y, al presionarlo, despliega una lista de opciones:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">kivy.app</span> <span class="kn">import</span> <span class="n">App</span>
+<span class="kn">from</span> <span class="nn">kivy.core.window</span> <span class="kn">import</span> <span class="n">Window</span>
+<span class="kn">from</span> <span class="nn">kivy.uix.boxlayout</span> <span class="kn">import</span> <span class="n">BoxLayout</span>
+<span class="kn">from</span> <span class="nn">kivy.uix.spinner</span> <span class="kn">import</span> <span class="n">Spinner</span>
+
+<span class="k">class</span> <span class="nc">SpinnerApp</span><span class="p">(</span><span class="n">App</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Lista desplegable Kivy&quot;</span>
+        <span class="n">Window</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">250</span><span class="p">,</span> <span class="mi">350</span><span class="p">)</span>
+
+        <span class="n">root</span> <span class="o">=</span> <span class="n">BoxLayout</span><span class="p">(</span><span class="n">orientation</span><span class="o">=</span><span class="s2">&quot;vertical&quot;</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">spacing</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+        <span class="n">options</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Kivy&quot;</span><span class="p">,</span> <span class="s2">&quot;PyQt6&quot;</span><span class="p">,</span> <span class="s2">&quot;PySide6&quot;</span><span class="p">,</span> <span class="s2">&quot;Tkinter&quot;</span><span class="p">)</span>
+        <span class="n">base_text</span> <span class="o">=</span> <span class="s2">&quot;Framework GUI favorito&quot;</span>
+
+        <span class="n">spinner</span> <span class="o">=</span> <span class="n">Spinner</span><span class="p">(</span>
+            <span class="n">text</span><span class="o">=</span><span class="n">base_text</span><span class="p">,</span>
+            <span class="n">values</span><span class="o">=</span><span class="n">options</span><span class="p">,</span>
+            <span class="n">size_hint_y</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">height</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">root</span><span class="o">.</span><span class="n">add_widget</span><span class="p">(</span><span class="n">spinner</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">root</span>
+
+<span class="n">SpinnerApp</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</code></pre></div>
+
+<p>En este ejemplo, creas una lista desplegable usando <code>Spinner</code>. La lista muestra un texto inicial: <code>Framework GUI favorito</code>. Luego, añades una colección (tupla) de opciones entre las cuales el usuario podrá seleccionar una a la vez.</p>
+<p>Si ejecutas esta aplicación, obtendrás una ventana como la siguiente:</p>
+<p><img src="../images/articles/iniciando-con-kivy-python/kivy-lista-desplegable.png" class="mx-auto d-block mt-2" alt="Lista desplegable en Kivy"></p>
+<div class="text-center mb-5 lead"><em>Lista desplegable en Kivy</em></div>
+
+<p>Aquí se muestra la lista desplegada. Puedes experimentar y seleccionar opciones de la lista. La opción seleccionada se mostrará en el selector compacto al cerrar la lista.</p>
+<h2 id="usando-gestores-de-disposicion">Usando gestores de disposición</h2>
+<p>Los <strong>layouts</strong> o <strong>gestores de disposición</strong> son contenedores que controlan la distribución de los widgets en la ventana de la aplicación. En Kivy, es habitual empezar con un layout mínimo y luego refinar la interfaz a medida que avanzas en el desarrollo de tu aplicación.</p>
+<h3 id="disponer-widgets-en-vertical-u-horizontal">Disponer widgets en vertical u horizontal</h3>
+<p>La clase <code>BoxLayout</code> te permite organizar los widgets de forma secuencial, ya sea en orientación vertical (uno encima de otro) u horizontal (uno al lado del otro). El ejemplo siguiente demuestra la forma básica de usar este tipo de layout para disponer los widgets horizontalmente:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">kivy.app</span> <span class="kn">import</span> <span class="n">App</span>
+<span class="kn">from</span> <span class="nn">kivy.core.window</span> <span class="kn">import</span> <span class="n">Window</span>
+<span class="kn">from</span> <span class="nn">kivy.uix.boxlayout</span> <span class="kn">import</span> <span class="n">BoxLayout</span>
+<span class="kn">from</span> <span class="nn">kivy.uix.button</span> <span class="kn">import</span> <span class="n">Button</span>
+
+<span class="k">class</span> <span class="nc">BoxLayoutApp</span><span class="p">(</span><span class="n">App</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Disposición horizontal Kivy&quot;</span>
+        <span class="n">Window</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+        <span class="n">root</span> <span class="o">=</span> <span class="n">BoxLayout</span><span class="p">(</span><span class="n">orientation</span><span class="o">=</span><span class="s2">&quot;horizontal&quot;</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">spacing</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+        <span class="n">root</span><span class="o">.</span><span class="n">add_widget</span><span class="p">(</span><span class="n">Button</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Izquierda&quot;</span><span class="p">))</span>
+        <span class="n">root</span><span class="o">.</span><span class="n">add_widget</span><span class="p">(</span><span class="n">Button</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Centro&quot;</span><span class="p">))</span>
+        <span class="n">root</span><span class="o">.</span><span class="n">add_widget</span><span class="p">(</span><span class="n">Button</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Derecha&quot;</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="n">root</span>
+
+<span class="n">BoxLayoutApp</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</code></pre></div>
+
+<p>La orientación horizontal es la orientación por defecto del <code>BoxLayout</code>, así que puedes obtener el mismo resultado si omites el argumento <code>orientation</code> al crear la instancia de <code>BoxLayout</code>.</p>
+<p>En un <code>BoxLayout</code>, el <code>padding</code> controla el margen interno del layout, es decir, el espacio entre el borde del contenedor y sus widgets hijos. En cambio, el <code>spacing</code> controla el espacio entre los widgets hijos. En este ejemplo, sería el espacio (en píxeles) que dejas entre un botón y el siguiente, ya sea en una columna (vertical) o en una fila (horizontal).</p>
+<p>Así es como luce esta aplicación:</p>
+<p><img src="../images/articles/iniciando-con-kivy-python/kivy-layout-horizontal.png" class="mx-auto d-block mt-2" alt="Disposición horizontal de widgets en Kivy"></p>
+<div class="text-center mb-5 lead"><em>Disposición horizontal de widgets en Kivy</em></div>
+
+<p>Para ordenar los widgets de manera vertical, solo tienes que hacer <code>orientation="vertical"</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">kivy.app</span> <span class="kn">import</span> <span class="n">App</span>
+<span class="kn">from</span> <span class="nn">kivy.core.window</span> <span class="kn">import</span> <span class="n">Window</span>
+<span class="kn">from</span> <span class="nn">kivy.uix.boxlayout</span> <span class="kn">import</span> <span class="n">BoxLayout</span>
+<span class="kn">from</span> <span class="nn">kivy.uix.button</span> <span class="kn">import</span> <span class="n">Button</span>
+
+<span class="k">class</span> <span class="nc">BoxLayoutApp</span><span class="p">(</span><span class="n">App</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Disposición vertical Kivy&quot;</span>
+        <span class="n">Window</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+
+        <span class="n">root</span> <span class="o">=</span> <span class="n">BoxLayout</span><span class="p">(</span><span class="n">orientation</span><span class="o">=</span><span class="s2">&quot;vertical&quot;</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">spacing</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+        <span class="n">root</span><span class="o">.</span><span class="n">add_widget</span><span class="p">(</span><span class="n">Button</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Arriba&quot;</span><span class="p">))</span>
+        <span class="n">root</span><span class="o">.</span><span class="n">add_widget</span><span class="p">(</span><span class="n">Button</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Centro&quot;</span><span class="p">))</span>
+        <span class="n">root</span><span class="o">.</span><span class="n">add_widget</span><span class="p">(</span><span class="n">Button</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Abajo&quot;</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="n">root</span>
+
+<span class="n">BoxLayoutApp</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</code></pre></div>
+
+<p>Al ejecutar esta app, obtienes una ventana como la siguiente:</p>
+<p><img src="../images/articles/iniciando-con-kivy-python/kivy-layout-vertical.png" class="mx-auto d-block mt-2" alt="Disposición vertical de widgets en Kivy"></p>
+<div class="text-center mb-5 lead"><em>Disposición vertical de widgets en Kivy</em></div>
+
+<p>Como puedes apreciar, ahora los botones se muestran en una sola columna, manteniendo el orden en que los añadiste en el código.</p>
+<h3 id="organizar-widgets-en-cuadriculas">Organizar widgets en cuadrículas</h3>
+<p>La clase <code>GridLayout</code> te permite distribuir los widgets en una cuadrícula de filas y columnas. Para usarlo, debes especificar al menos una dimensión, por ejemplo, <code>cols</code> o <code>rows</code> para columnas o filas respectivamente:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">kivy.app</span> <span class="kn">import</span> <span class="n">App</span>
+<span class="kn">from</span> <span class="nn">kivy.core.window</span> <span class="kn">import</span> <span class="n">Window</span>
+<span class="kn">from</span> <span class="nn">kivy.uix.button</span> <span class="kn">import</span> <span class="n">Button</span>
+<span class="kn">from</span> <span class="nn">kivy.uix.gridlayout</span> <span class="kn">import</span> <span class="n">GridLayout</span>
+
+<span class="k">class</span> <span class="nc">GridLayoutApp</span><span class="p">(</span><span class="n">App</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Disposición en cuadrícula Kivy&quot;</span>
+        <span class="n">Window</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+
+        <span class="n">root</span> <span class="o">=</span> <span class="n">GridLayout</span><span class="p">(</span><span class="n">cols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">spacing</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+            <span class="n">root</span><span class="o">.</span><span class="n">add_widget</span><span class="p">(</span><span class="n">Button</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;index=</span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="n">root</span>
+
+<span class="n">GridLayoutApp</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</code></pre></div>
+
+<p>En este ejemplo, creas una app que organiza botones en una cuadrícula de dos columnas usando un <code>GridLayout</code>. Con <code>cols=2</code> estableces cuántas columnas tendrá la cuadrícula.</p>
+<p>Luego, en el ciclo <code>for</code>, creas seis botones y los vas añadiendo con <code>.add_widget()</code>. Kivy no coloca widgets en una fila o columna especificada, sino que asigna la posición automáticamente según el orden (<code>index</code>) en que agregas los widgets.</p>
+<p>Si ejecutas la aplicación, obtendrás una ventana como la siguiente:</p>
+<p><img src="../images/articles/iniciando-con-kivy-python/kivy-layout-cuadricula.png" class="mx-auto d-block mt-2" alt="Disposición de widgets en cuadrícula en Kivy"></p>
+<div class="text-center mb-5 lead"><em>Disposición de widgets en cuadrícula en Kivy</em></div>
+
+<p>Cada botón muestra el índice con el que fue creado, y <code>GridLayout</code> lo coloca en la cuadrícula según el orden en que lo agregas con <code>.add_widget()</code>.</p>
+<h3 id="colocar-widgets-en-posiciones-especificas">Colocar widgets en posiciones específicas</h3>
+<p><code>FloatLayout</code> te da más libertad para posicionar los widgets. Este layout respeta las propiedades <code>pos_hint</code> y <code>size_hint</code> de sus widgets hijos. Considera el siguiente ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">kivy.app</span> <span class="kn">import</span> <span class="n">App</span>
+<span class="kn">from</span> <span class="nn">kivy.core.window</span> <span class="kn">import</span> <span class="n">Window</span>
+<span class="kn">from</span> <span class="nn">kivy.uix.button</span> <span class="kn">import</span> <span class="n">Button</span>
+<span class="kn">from</span> <span class="nn">kivy.uix.floatlayout</span> <span class="kn">import</span> <span class="n">FloatLayout</span>
+
+<span class="k">class</span> <span class="nc">FloatLayoutApp</span><span class="p">(</span><span class="n">App</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Disposición flotante Kivy&quot;</span>
+        <span class="n">Window</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+
+        <span class="n">root</span> <span class="o">=</span> <span class="n">FloatLayout</span><span class="p">()</span>
+
+        <span class="n">button1</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span>
+            <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Centrado&quot;</span><span class="p">,</span>
+            <span class="n">size_hint</span><span class="o">=</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">),</span>
+            <span class="n">pos_hint</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;center_x&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s2">&quot;center_y&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">},</span>
+        <span class="p">)</span>
+
+        <span class="n">button2</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span>
+            <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Esquina inferior derecha&quot;</span><span class="p">,</span>
+            <span class="n">size_hint</span><span class="o">=</span><span class="p">(</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">),</span>
+            <span class="n">pos_hint</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;right&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">)</span>
+        <span class="n">root</span><span class="o">.</span><span class="n">add_widget</span><span class="p">(</span><span class="n">button1</span><span class="p">)</span>
+        <span class="n">root</span><span class="o">.</span><span class="n">add_widget</span><span class="p">(</span><span class="n">button2</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">root</span>
+
+<span class="n">FloatLayoutApp</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</code></pre></div>
+
+<p>Aquí, creas una app con un <code>FloatLayout</code> que te permite posicionar y dimensionar sus widgets hijos a partir de sus propiedades <code>size_hint</code> y <code>pos_hint</code>. El <code>button1</code> ocupará el 50% del ancho y el 20% del alto del contenedor, lo cual logras con <code>size_hint</code>. Con <code>pos_hint</code>, lo anclas al centro del layout.</p>
+<p>El <code>button2</code> muestra otra forma común de ubicar elementos en <code>FloatLayout</code>. En este caso, usas <code>pos_hint={"right": 1, "y": 0}</code> para indicar que el borde derecho del botón debe coincidir con el borde derecho del contenedor (<code>right=1</code>) y que su posición vertical esté pegada al borde inferior (<code>y=0</code>). Además, <code>size_hint</code> lo hace ocupar el 30% de ancho y el 10% de alto del layout.</p>
+<p>Tu aplicación debe lucir como la siguiente:</p>
+<p><img src="../images/articles/iniciando-con-kivy-python/kivy-layout-flotante.png" class="mx-auto d-block mt-2" style="max-width: 800px; width: 100%; height: auto;" alt="Disposición en posiciones específicas en Kivy"></p>
+<div class="text-center mb-5 lead"><em>Disposición en posiciones específicas en Kivy</em></div>
+
+<p>Como puedes ver, el layout renderiza los botones en las posiciones correspondientes sin necesidad de calcular las coordenadas manualmente. Al redimensionar la ventana, notarás que los botones se mantienen en sus posiciones.</p>
+<h2 id="conectando-eventos-con-callbacks-en-kivy">Conectando eventos con callbacks en Kivy</h2>
+<p>En Kivy, la mayoría de los widgets te permiten vincular eventos y propiedades con funciones de callback mediante el método <code>.bind()</code>. Esta es la base para reaccionar a eventos del usuario, como clics, selecciones y entradas de texto.</p>
+<aside class="note">Es importante que sepas que no es lo mismo enlazar un evento que enlazar una propiedad. Por ejemplo, <code>on_press</code> (evento) suele llamar un callback con un solo argumento: la instancia del widget. En contraste, <code>.text</code>, <code>.active</code> o <code>.value</code> (propiedades) invocan un callback con dos argumentos: la instancia y el nuevo valor.</aside>
+
+<h3 id="enlazar-eventos">Enlazar eventos</h3>
+<p>Cuando quieres ejecutar una acción al pulsar un botón, puedes enlazar el evento <code>on_press</code> (al presionar) u <code>on_release</code> (al soltar) a una función o método. En la función (callback), el parámetro <code>instance</code> te permite identificar qué botón disparó o generó el evento.</p>
+<p>Considera el siguiente ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">kivy.app</span> <span class="kn">import</span> <span class="n">App</span>
+<span class="kn">from</span> <span class="nn">kivy.core.window</span> <span class="kn">import</span> <span class="n">Window</span>
+<span class="kn">from</span> <span class="nn">kivy.uix.boxlayout</span> <span class="kn">import</span> <span class="n">BoxLayout</span>
+<span class="kn">from</span> <span class="nn">kivy.uix.button</span> <span class="kn">import</span> <span class="n">Button</span>
+<span class="kn">from</span> <span class="nn">kivy.uix.label</span> <span class="kn">import</span> <span class="n">Label</span>
+
+<span class="k">class</span> <span class="nc">ButtonsCallbacksApp</span><span class="p">(</span><span class="n">App</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Enlazar eventos Kivy&quot;</span>
+        <span class="n">Window</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">220</span><span class="p">,</span> <span class="mi">220</span><span class="p">)</span>
+
+        <span class="n">root</span> <span class="o">=</span> <span class="n">BoxLayout</span><span class="p">(</span><span class="n">orientation</span><span class="o">=</span><span class="s2">&quot;vertical&quot;</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">spacing</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">label</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span>
+            <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Presionaste: ...&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">root</span><span class="o">.</span><span class="n">add_widget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">label</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">def</span> <span class="nf">on_press</span><span class="p">(</span><span class="n">instance</span><span class="p">):</span>  <span class="c1"># Callback</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Presionaste: </span><span class="si">{</span><span class="n">instance</span><span class="o">.</span><span class="n">text</span><span class="si">}</span><span class="s2">&quot;</span>
+
+        <span class="k">for</span> <span class="n">text</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Ok&quot;</span><span class="p">,</span> <span class="s2">&quot;Cancelar&quot;</span><span class="p">,</span> <span class="s2">&quot;Aplicar&quot;</span><span class="p">]:</span>
+            <span class="n">button</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">text</span><span class="p">)</span>
+            <span class="n">button</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">on_press</span><span class="o">=</span><span class="n">on_press</span><span class="p">)</span>  <span class="c1"># Enlace</span>
+            <span class="n">root</span><span class="o">.</span><span class="n">add_widget</span><span class="p">(</span><span class="n">button</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">root</span>
+
+<span class="n">ButtonsCallbacksApp</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</code></pre></div>
+
+<p>En este ejemplo, creas una app que muestra un <code>Label</code> con el texto <code>"Presionaste: ..."</code>. Este label mostrará el resultado de la interacción con los botones.</p>
+<p>Luego, creas una función llamada <code>on_press()</code> que actualizará el texto del label según el botón que presiones. En el bucle, creas tres botones y los enlazas con <code>on_press()</code> mediante <code>.bind()</code>.</p>
+<p>Al ejecutar la app, obtendrás lo siguiente:</p>
+<p><img src="../images/articles/iniciando-con-kivy-python/kivy-enlace-de-eventos.png" class="mx-auto d-block mt-2" alt="Enlace de eventos en Kivy"></p>
+<div class="text-center mb-5 lead"><em>Enlace de eventos en Kivy</em></div>
+
+<p>De este modo, cuando pulsas un botón en la ventana, Kivy llama al callback, pasándole la instancia del botón que disparó el evento, y el label se actualiza.</p>
+<h3 id="enlazar-propiedades">Enlazar propiedades</h3>
+<p>Además de eventos, puedes enlazar propiedades. Por ejemplo, en un <code>TextInput</code> puedes reaccionar a los cambios en la propiedad <code>.text</code>.</p>
+<p>Considera el siguiente ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">kivy.app</span> <span class="kn">import</span> <span class="n">App</span>
+<span class="kn">from</span> <span class="nn">kivy.core.window</span> <span class="kn">import</span> <span class="n">Window</span>
+<span class="kn">from</span> <span class="nn">kivy.uix.boxlayout</span> <span class="kn">import</span> <span class="n">BoxLayout</span>
+<span class="kn">from</span> <span class="nn">kivy.uix.label</span> <span class="kn">import</span> <span class="n">Label</span>
+<span class="kn">from</span> <span class="nn">kivy.uix.textinput</span> <span class="kn">import</span> <span class="n">TextInput</span>
+
+<span class="k">class</span> <span class="nc">BindPropertiesApp</span><span class="p">(</span><span class="n">App</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Enlazar propiedades Kivy&quot;</span>
+        <span class="n">Window</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">320</span><span class="p">,</span> <span class="mi">220</span><span class="p">)</span>
+
+        <span class="n">root</span> <span class="o">=</span> <span class="n">BoxLayout</span><span class="p">(</span><span class="n">orientation</span><span class="o">=</span><span class="s2">&quot;vertical&quot;</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">spacing</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+        <span class="n">entry</span> <span class="o">=</span> <span class="n">TextInput</span><span class="p">(</span><span class="n">hint_text</span><span class="o">=</span><span class="s2">&quot;Escribe algo aquí...&quot;</span><span class="p">,</span> <span class="n">multiline</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">display</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">on_text</span><span class="p">(</span><span class="n">instance</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+            <span class="n">display</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Escribiste: &#39;</span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&#39;&quot;</span>
+
+        <span class="n">entry</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">on_text</span><span class="p">)</span>
+
+        <span class="n">root</span><span class="o">.</span><span class="n">add_widget</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
+        <span class="n">root</span><span class="o">.</span><span class="n">add_widget</span><span class="p">(</span><span class="n">display</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">root</span>
+
+<span class="n">BindPropertiesApp</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</code></pre></div>
+
+<p>En este ejemplo, creas una app con un <code>TextInput</code> y un <code>Label</code>. El <code>TextInput</code> funciona como campo de entrada, mientras que el <code>Label</code> sirve como salida para mostrar lo que el usuario va escribiendo.</p>
+<p>La clave está en la función <code>on_text()</code>. Como aquí enlazas una <strong>propiedad</strong> (<code>.text</code>), Kivy llama al callback con dos argumentos: la instancia del widget que cambió (<code>instance</code>) y el nuevo valor de la propiedad (<code>value</code>). En consecuencia, cada vez que el usuario modifica el contenido del <code>TextInput</code>, el callback actualiza el texto del <code>Label</code> con <code>display.text = ...</code>.</p>
+<p>Al ejecutar la app, obtendrás lo siguiente:</p>
+<p><img src="../images/articles/iniciando-con-kivy-python/kivy-enlace-de-propiedades.png" class="mx-auto d-block mt-2" alt="Enlace de propiedades en Kivy"></p>
+<div class="text-center mb-5 lead"><em>Enlace de propiedades en Kivy</em></div>
+
+<p>Como ves, <code>.text</code> es una propiedad que cambia mientras escribes. Enlazar propiedades con <code>.bind()</code> es una forma directa de construir interfaces reactivas, en las que la UI se actualiza automáticamente en respuesta a cambios de estado.</p>
+<h2 id="separando-la-interfaz-de-la-logica-con-kv-language">Separando la interfaz de la lógica con KV language</h2>
+<p>Una de las características más poderosas de Kivy es el <em>KV language</em>. Se trata de un lenguaje dedicado que te permite definir la interfaz de forma declarativa en un archivo <code>.kv</code> y dejar la lógica en Python.</p>
+<p>Kivy puede cargar automáticamente un archivo <code>.kv</code> por convención de nombres, usando el nombre de la subclase de <code>App</code>. Por ejemplo, si tu clase de app se llama <code>ContadorApp</code>, Kivy buscará y cargará un archivo llamado <code>contador.kv</code>.</p>
+<p>Supón que tu app tiene la estructura siguiente:</p>
+<div class="highlight"><pre><span></span><code>contador/
+├── main.py
+└── contador.kv
+</code></pre></div>
+
+<p>El archivo <code>main.py</code> define la aplicación y el widget raíz con la lógica de la aplicación:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">kivy.app</span> <span class="kn">import</span> <span class="n">App</span>
+<span class="kn">from</span> <span class="nn">kivy.core.window</span> <span class="kn">import</span> <span class="n">Window</span>
+<span class="kn">from</span> <span class="nn">kivy.properties</span> <span class="kn">import</span> <span class="n">NumericProperty</span>
+<span class="kn">from</span> <span class="nn">kivy.uix.boxlayout</span> <span class="kn">import</span> <span class="n">BoxLayout</span>
+
+<span class="k">class</span> <span class="nc">ContadorApp</span><span class="p">(</span><span class="n">App</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;KV language Kivy&quot;</span>
+        <span class="n">Window</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">RootWidget</span><span class="p">()</span>
+
+<span class="k">class</span> <span class="nc">RootWidget</span><span class="p">(</span><span class="n">BoxLayout</span><span class="p">):</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="n">NumericProperty</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">increment</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">ContadorApp</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</code></pre></div>
+
+<p>Este código no define elementos gráficos para la UI de tu aplicación. Puedes hacer este trabajo en <code>contador.kv</code>. Para este ejemplo, añadirás un label y un botón:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="nt">RootWidget</span><span class="o">&gt;:</span>
+<span class="w">    </span><span class="nt">orientation</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;vertical&quot;</span>
+<span class="w">    </span><span class="nt">padding</span><span class="o">:</span><span class="w"> </span><span class="nt">20</span>
+<span class="w">    </span><span class="nt">spacing</span><span class="o">:</span><span class="w"> </span><span class="nt">10</span>
+
+<span class="w">    </span><span class="nt">Label</span><span class="o">:</span>
+<span class="w">        </span><span class="nt">text</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Clics: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nt">str</span><span class="o">(</span><span class="nt">root</span><span class="p">.</span><span class="nc">count</span><span class="o">)</span>
+<span class="w">        </span><span class="nt">font_size</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;24sp&quot;</span>
+
+<span class="w">    </span><span class="nt">Button</span><span class="o">:</span>
+<span class="w">        </span><span class="nt">text</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Incrementar&quot;</span>
+<span class="w">        </span><span class="nt">size_hint</span><span class="o">:</span><span class="w"> </span><span class="o">(</span><span class="nt">1</span><span class="o">,</span><span class="w"> </span><span class="nt">None</span><span class="o">)</span>
+<span class="w">        </span><span class="nt">height</span><span class="o">:</span><span class="w"> </span><span class="nt">48</span>
+<span class="w">        </span><span class="nt">on_press</span><span class="o">:</span><span class="w"> </span><span class="nt">root</span><span class="p">.</span><span class="nc">increment</span><span class="o">()</span>
+
+<span class="nt">RootWidget</span><span class="o">:</span>
+</code></pre></div>
+
+<p>Con este código en su lugar, la aplicación lucirá como se muestra a continuación:</p>
+<p><img src="../images/articles/iniciando-con-kivy-python/kivy-kv-language.png" class="mx-auto d-block mt-2" alt="KV language en Kivy"></p>
+<div class="text-center mb-5 lead"><em>KV language en Kivy</em></div>
+
+<p>Fíjate en dos ventajas importantes de esa manera de construir tus aplicaciones Kivy:</p>
+<ol>
+<li>La UI queda definida en <code>contador.kv</code>, lo que facilita iterar sobre el diseño.</li>
+<li>La lógica de la app (incrementar el contador) se encuentra en tus archivos de Python, lo que desacopla el frontend del backend.</li>
+</ol>
+<h2 id="conclusion">Conclusión</h2>
+<p>Con Kivy, puedes construir aplicaciones de interfaz gráfica con un conjunto sólido de widgets y layouts. También puedes separar la lógica y el diseño de la interfaz en archivos <code>.kv</code> a medida que tu aplicación crece.</p>
+<p>A partir de aquí, prueba a combinar widgets y layouts para crear aplicaciones multiplataforma, crear tus interfaces con KV language para mantener tu proyecto organizado.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <!-- Disqus -->
+    <div id="disqus_thread" class="py-5"></div>
+    <script
+        src="https://pythonscouts.com/theme/js/comments.js?v=202601021644"
+        defer
+        data-disqus-shortname="pythonscouts">
+    </script>
+    <noscript>Por favor habilita JavaScript para ver los comentarios.</noscript>
+
+    </main>
+
+<footer class="site-footer mt-auto">
+    <div class="footer-primary border-top border-success-subtle py-3">
+        <div class="container-md content-px">
+            <div class="row gy-3 align-items-center justify-content-between">
+                <div class="col-lg-6 col-md-7">
+                    <div class="d-flex flex-column flex-sm-row align-items-center align-items-sm-start gap-3 text-center text-sm-start">
+                        <a href="https://pythonscouts.com" class="d-inline-flex align-items-center text-decoration-none">
+                            <img src="https://pythonscouts.com/images/identity/logo-title.png" alt="Python Scouts" width="160" height="48" class="img-fluid footer-logo">
+                        </a>
+                        <p class="text-muted-strong footer-description mb-0">
+                            Python Scouts es tu espacio para aprender Python en español.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-5 text-center text-md-start">
+                    <h3 class="h6 text-uppercase text-success fw-semibold mb-2">Explora</h3>
+                    <nav aria-label="Footer navigation">
+                        <ul class="footer-links list-unstyled d-inline-flex flex-column gap-2 mb-0 text-start">
+                            <li><a href="https://pythonscouts.com/guias/">Guías</a></li>
+                            <li><a href="https://pythonscouts.com/series/">Series</a></li>
+                            <li><a href="https://pythonscouts.com/tutoriales/">Tutoriales</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-secondary py-3">
+        <div class="container-md content-px">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <div class="d-flex flex-column flex-sm-row align-items-center gap-2 text-center text-sm-start">
+                    <span class="text-white-50 small">
+                        &copy; 2023-2026 Leodanis Pozo Ramos.
+                    </span>
+                    <div class="d-flex align-items-center gap-2">
+                        <a href="https://creativecommons.org/licenses/by-sa/4.0/" 
+                           target="_blank" 
+                           rel="license noopener noreferrer"
+                           class="d-inline-block"
+                           style="background: white; padding: 4px 8px; border-radius: 4px;">
+                            <img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" 
+                                 alt="CC BY-SA 4.0" 
+                                 width="88" 
+                                 height="31"
+                                 style="border-width:0; display: block;">
+                        </a>
+                        <span class="text-white-50 small">
+                            Contenido licenciado bajo 
+                            <a href="https://creativecommons.org/licenses/by-sa/4.0/" 
+                               target="_blank" 
+                               rel="license noopener noreferrer"
+                               class="text-white text-decoration-none">
+                                CC BY-SA 4.0
+                                <i class="bi bi-box-arrow-up-right ms-1"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <span class="text-white-50 small">
+                    Imágenes cortesía de <a href="https://picsum.photos/" target="_blank" rel="noopener" class="text-white text-decoration-none">Picsum</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</footer>
+    <!-- JS Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
+    <!-- Stork and site scripts -->
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202601021644" defer></script>
+    <script
+        src="https://pythonscouts.com/theme/js/site.js?v=202601021644"
+        defer
+        data-stork-name="sitesearch"
+        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202601021644"
+        data-stork-index="https://pythonscouts.com/search-index.st">
+    </script>
+
+</body>
+</html>
