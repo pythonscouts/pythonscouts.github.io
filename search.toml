@@ -8,8 +8,13 @@ url = "/acerca/"
 title = "Acerca"
 
 [[input.files]]
-path = "elif-python/index.html"
-url = "/elif-python/"
+path = "python-raise/index.html"
+url = "/python-raise/"
+title = "Palabras clave en Python: raise"
+
+[[input.files]]
+path = "python-elif/index.html"
+url = "/python-elif/"
 title = "Palabras clave en Python: elif"
 
 [[input.files]]

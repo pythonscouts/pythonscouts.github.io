@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es-es" class="h-100">
+
+<head>
+        <title>
+  Palabras clave en Python: raise - Python Scouts
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Leodanis Pozo Ramos">
+    <meta name="description" content="En Python, la palabra clave raise se utiliza para generar una excepción de manera explícita en tu código.">
+    <meta name="keywords" content="python, palabras-clave">
+    <meta name="article:published_time" content="2026-01-06T10:00:00+01:00">
+    <meta name="article:modified_time" content="2026-01-06T10:00:00+01:00">
+    <meta name="article:author" content="Leodanis Pozo Ramos">
+    <meta name="article:section" content="Series">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="language" content="Spanish">
+    <meta name="generator" content="Pelican">
+    
+    <meta name="dcterms.rights" content="https://creativecommons.org/licenses/by-sa/4.0/">
+    <meta name="dcterms.rightsHolder" content="Leodanis Pozo Ramos">
+    <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Palabras clave en Python: raise">
+    <meta property="og:description" content="En Python, la palabra clave raise se utiliza para generar una excepción de manera explícita en tu código.">
+    <meta property="og:url" content="https://pythonscouts.com/python-raise/">
+    <meta property="og:site_name" content="Python Scouts">
+    <meta property="og:image" content="https://pythonscouts.com/images/articles/python-raise/social.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Palabras clave en Python: raise">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:locale" content="es_ES">
+    <meta property="article:published_time" content="2026-01-06T10:00:00+01:00">
+    <meta property="article:author" content="Leodanis Pozo Ramos">
+    <meta property="article:section" content="Series">
+    <meta property="article:tag" content="python">
+    <meta property="article:tag" content="palabras-clave">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lpozo78">
+    <meta name="twitter:creator" content="@lpozo78">
+    <meta name="twitter:title" content="Palabras clave en Python: raise">
+    <meta name="twitter:description" content="En Python, la palabra clave raise se utiliza para generar una excepción de manera explícita en tu código.">
+    <meta name="twitter:image" content="https://pythonscouts.com/images/articles/python-raise/social.webp">
+    <meta name="twitter:image:alt" content="Palabras clave en Python: raise">
+    <!-- RSS feeds -->
+    <link href="https://pythonscouts.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Full Atom Feed" />
+    <link href="https://pythonscouts.com/feeds/series.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Categories Atom Feed" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://pythonscouts.com/python-raise/">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202601061942">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202601061942">
+    <!-- Preconnect to CDNs -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <!-- Bootstrap CSS (deferred) -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+          crossorigin="anonymous">
+    <!-- Bootstrap Icons (self-hosted, deferred) -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202601061942">
+    <!-- Stork Search - Deferred -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202601061942">
+
+
+    <!-- Article tags -->
+    <meta name="article:tag" content="python" />
+    <meta name="article:tag" content="palabras-clave" />
+    <meta name="article:tag" content="kivy" />
+    <meta name="article:tag" content="gui" />
+    <meta name="article:tag" content="lambda" />
+    <meta name="article:tag" content="funciones" />
+    <meta name="article:tag" content="fundamentos" />
+    <meta name="article:tag" content="ayuda" />
+    <meta name="article:tag" content="pyside6" />
+    <meta name="article:tag" content="linux" />
+    <meta name="article:tag" content="tkinter" />
+    <meta name="article:tag" content="pyqt" />
+    <meta name="article:tag" content="windows" />
+    <meta name="article:tag" content="macos" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Palabras clave en Python: raise">
+    <meta property="og:description" content="En Python, la palabra clave raise se utiliza para generar una excepción de manera explícita en tu código.">
+    <meta property="og:url" content="https://pythonscouts.com/python-raise/">
+    <meta property="og:site_name" content="Python Scouts">
+    <meta property="og:image" content="https://pythonscouts.com/images/articles/python-raise/social.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Palabras clave en Python: raise">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:locale" content="es_ES">
+    <meta property="article:published_time" content="2026-01-06T10:00:00+01:00">
+    <meta property="article:author" content="Leodanis Pozo Ramos">
+    <meta property="article:section" content="Series">
+    <meta property="article:tag" content="python">
+    <meta property="article:tag" content="palabras-clave">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lpozo78">
+    <meta name="twitter:creator" content="@lpozo78">
+    <meta name="twitter:title" content="Palabras clave en Python: raise">
+    <meta name="twitter:description" content="En Python, la palabra clave raise se utiliza para generar una excepción de manera explícita en tu código.">
+    <meta name="twitter:image" content="https://pythonscouts.com/images/articles/python-raise/social.webp">
+    <meta name="twitter:image:alt" content="Palabras clave en Python: raise">
+
+    <!-- Custom CSS for article -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202601061942">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
+<script
+    src="https://pythonscouts.com/theme/js/analytics.js?v=202601061942"
+    defer
+    data-analytics-id="G-R3C5PFSQ1S">
+</script>
+
+<body class="d-flex flex-column h-100">
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-md bg-white fixed-top border-bottom">
+        <div class="container-md content-px">
+            <a class="navbar-brand" href="/">
+            <img
+            src="https://pythonscouts.com/images/identity/header.webp"
+            alt="Python Scouts"
+            width="150"
+            height="50"
+            >
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Menú de Navegación">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav m-auto nav-link">
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/guias/" aria-current="page">
+                    Guías
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/series/" aria-current="page">
+                    Series
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/tutoriales/" aria-current="page">
+                    Tutoriales
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/acerca/" aria-current="page">
+                    Acerca
+                </a>
+                </li>
+            </ul>
+            <form class="d-flex search-form" role="search" style="min-width:240px;">
+                <div class="stork-wrapper">
+                <input
+                class="stork-input"
+                type="search"
+                id="site-search"
+                name="q"
+                placeholder="Buscar"
+                aria-label="Search"
+                data-stork="sitesearch"
+                >
+                </div>
+            </form>
+            </div>
+        </div>
+    </nav>
+    <main id="main-content" class="container-md content-px py-3" tabindex="-1">
+        <div class="stork-wrapper">
+            <div data-stork="sitesearch-output" class="stork-output"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+            </div>
+        </div>
+
+    <!-- Article Header - Magazine Style -->
+    <header class="article-header mb-5">
+        <div class="row g-4 align-items-center">
+            <!-- Content Column -->
+            <div class="col-lg-6 order-lg-1">
+                <!-- Breadcrumbs -->
+                <nav aria-label="breadcrumb" class="mb-3">
+                    <ol class="breadcrumb mb-0 small">
+                        <li class="breadcrumb-item"><a href="https://pythonscouts.com">Inicio</a></li>
+                        <li class="breadcrumb-item"><a href="https://pythonscouts.com/series/">Series</a></li>
+                    </ol>
+                </nav>
+                
+                <!-- Category -->
+                <div class="mb-3">
+                    <span class="badge bg-success-subtle text-success border border-success px-3 py-2 text-uppercase fw-semibold">
+                        Series
+                    </span>
+                </div>
+                
+                <!-- Title -->
+                <h1 class="display-5 fw-bold mb-4">
+                    Palabras clave en Python: raise
+                </h1>
+                
+                <!-- Author & Meta -->
+                <div class="d-flex align-items-center gap-3 mb-4">
+                    <img src="https://pythonscouts.com/images/authors/leodanis-pozo-ramos.webp" 
+                         class="rounded-circle border" 
+                         width="60" height="60" 
+                         alt="Leodanis Pozo Ramos">
+                    <div>
+                        <div class="fw-semibold">Leodanis Pozo Ramos</div>
+                        <div class="text-muted-strong small">
+                            <i class="bi bi-calendar-event me-1"></i>
+                            06 ene 2026
+                            <span class="mx-2">•</span>
+                            <i class="bi bi-clock me-1"></i>
+                            2 min
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tags -->
+                <div class="d-flex gap-2 flex-wrap">
+                    <a href="https://pythonscouts.com/tag/python.html" 
+                       class="badge bg-light text-dark border text-decoration-none">
+                        python
+                    </a>
+                    <a href="https://pythonscouts.com/tag/palabras-clave.html" 
+                       class="badge bg-light text-dark border text-decoration-none">
+                        palabras-clave
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Image Column -->
+            <div class="col-lg-6 order-lg-2">
+                <img src="https://pythonscouts.com/images/articles/python-raise/article.webp" 
+                     class="img-fluid w-100 rounded-4 shadow-lg" 
+                     alt="Palabras clave en Python: raise"
+                     style="max-height: 600px; object-fit: cover;">
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Content -->
+    <div class="row">
+        <div class="col-12">
+            <article itemscope itemtype="https://schema.org/BlogPosting">
+                <meta itemprop="headline" content="Palabras clave en Python: raise">
+                <meta itemprop="description" content="En Python, la palabra clave raise se utiliza para generar una excepción de manera explícita en tu código.">
+                <meta itemprop="datePublished" content="2026-01-06T10:00:00+01:00">
+                <meta itemprop="dateModified" content="2026-01-06T10:00:00+01:00">
+                <meta itemprop="author" content="Leodanis Pozo Ramos">
+                <meta itemprop="image" content="https://pythonscouts.com/images/articles/python-raise/social.webp">
+                <div itemprop="articleBody">
+                    <p class="lead text-muted-strong mb-4">
+                        <p>En Python, la palabra clave <code>raise</code> se utiliza para generar una excepción de manera explícita en tu código.</p>
+                    </p>
+                    <p>Te permite señalar la ocurrencia de un error que debe manejarse, interrumpiendo el flujo normal de ejecución y activando el mecanismo de manejo de excepciones.</p>
+<div class="toc"><span class="toctitle">Contenidos</span><ul>
+<li><a href="#sintaxis">Sintaxis</a></li>
+<li><a href="#ejemplos-practicos">Ejemplos prácticos</a></li>
+<li><a href="#uso-de-raise">Uso de raise</a></li>
+<li><a href="#resumiendo">Resumiendo</a></li>
+</ul>
+</div>
+<h2 id="sintaxis">Sintaxis</h2>
+<p>La sintaxis básica para usar <code>raise</code> es la siguiente:</p>
+<div class="highlight"><pre><span></span><code><span class="k">raise</span> <span class="n">ExceptionType</span><span class="p">(</span><span class="s2">&quot;mensaje opcional&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Aquí, <code>ExceptionType</code> es el tipo de excepción que deseas generar o lanzar, y el <code>"mensaje opcional"</code> proporciona más detalles sobre la excepción.</p>
+<p>Para encadenar excepciones y conservar el contexto del error original, puedes usar la <a href="/python-palabras-clave/">palabra clave</a> <code>from</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">raise</span> <span class="n">NewException</span><span class="p">(</span><span class="s2">&quot;mensaje&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">original_exception</span>
+</code></pre></div>
+
+<p>Esto permite que la nueva excepción conserve la traza (traceback) de la excepción original, facilitando la depuración.</p>
+<h2 id="ejemplos-practicos">Ejemplos prácticos</h2>
+<p>Aquí tienes algunos ejemplos que muestran cómo usar <code>raise</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;este es un error de valor&quot;</span><span class="p">)</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+    <span class="o">...</span>
+<span class="ne">ValueError</span><span class="p">:</span> <span class="n">este</span> <span class="n">es</span> <span class="n">un</span> <span class="n">error</span> <span class="n">de</span> <span class="n">valor</span>
+</code></pre></div>
+
+<p>En este ejemplo, <code>raise</code> genera un <code>ValueError</code> con un mensaje personalizado.</p>
+<p>También puedes definir tus propias excepciones personalizadas y generarlas con <code>raise</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">CustomException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">pass</span>
+<span class="o">...</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="k">raise</span> <span class="n">CustomException</span><span class="p">(</span><span class="s2">&quot;esto es un error personalizado&quot;</span><span class="p">)</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+    <span class="o">...</span>
+<span class="n">CustomException</span><span class="p">:</span> <span class="n">esto</span> <span class="n">es</span> <span class="n">un</span> <span class="n">error</span> <span class="n">personalizado</span>
+</code></pre></div>
+
+<p>Aquí, defines una nueva clase de excepción llamada <code>CustomException</code> que hereda de <code>Exception</code>, y luego la lanzas usando <code>raise</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">try</span><span class="p">:</span>
+<span class="o">...</span>     <span class="nb">int</span><span class="p">(</span><span class="s2">&quot;abc&quot;</span><span class="p">)</span>
+<span class="o">...</span> <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">original_error</span><span class="p">:</span>
+<span class="o">...</span>     <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;error al convertir a entero&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">original_error</span>
+<span class="o">...</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+    <span class="o">...</span>
+<span class="ne">ValueError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">literal</span> <span class="k">for</span> <span class="nb">int</span><span class="p">()</span> <span class="k">with</span> <span class="n">base</span> <span class="mi">10</span><span class="p">:</span> <span class="s1">&#39;abc&#39;</span>
+
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
+
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+    <span class="o">...</span>
+<span class="ne">RuntimeError</span><span class="p">:</span> <span class="n">error</span> <span class="n">al</span> <span class="n">convertir</span> <span class="n">a</span> <span class="n">entero</span>
+</code></pre></div>
+
+<p>Aquí, <code>raise ... from ...</code> permite que la excepción <code>RuntimeError</code> conserve la traza de la excepción original, facilitando la depuración.</p>
+<p>En la práctica, debes generar excepciones en código de bajo nivel (backend) y capturarlas en código de alto nivel (frontend).</p>
+<h2 id="uso-de-raise">Uso de <code>raise</code></h2>
+<p>Los casos de uso más comunes de la palabra clave <code>raise</code> incluyen los siguientes:</p>
+<ul>
+<li>Generar excepciones personalizadas para indicar condiciones de error específicas.</li>
+<li>Interrumpir el flujo de ejecución normal cuando se detecta un error que no puede manejarse en el contexto actual.</li>
+<li>Proporcionar mensajes de error contextualizados que ayuden a depurar problemas en el código.</li>
+</ul>
+<h2 id="resumiendo">Resumiendo</h2>
+<p>La palabra clave <code>raise</code> es una herramienta para el manejo de excepciones que te permite generar errores de manera explícita cuando las condiciones del programa lo requieran.</p>
+<p>El uso correcto de <code>raise</code> contribuye a la robustez y mantenibilidad de tu código.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <!-- Disqus -->
+    <div id="disqus_thread" class="py-5"></div>
+    <script
+        src="https://pythonscouts.com/theme/js/comments.js?v=202601061942"
+        defer
+        data-disqus-shortname="pythonscouts">
+    </script>
+    <noscript>Por favor habilita JavaScript para ver los comentarios.</noscript>
+
+    </main>
+
+<footer class="site-footer mt-auto">
+    <div class="footer-primary border-top border-success-subtle py-3">
+        <div class="container-md content-px">
+            <div class="row gy-3 align-items-center justify-content-between">
+                <div class="col-lg-6 col-md-7">
+                    <div class="d-flex flex-column flex-sm-row align-items-center align-items-sm-start gap-3 text-center text-sm-start">
+                        <a href="https://pythonscouts.com" class="d-inline-flex align-items-center text-decoration-none">
+                            <img src="https://pythonscouts.com/images/identity/logo-title.png" alt="Python Scouts" width="160" height="48" class="img-fluid footer-logo">
+                        </a>
+                        <p class="text-muted-strong footer-description mb-0">
+                            Python Scouts es tu espacio para aprender Python en español.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-5 text-center text-md-start">
+                    <h3 class="h6 text-uppercase text-success fw-semibold mb-2">Explora</h3>
+                    <nav aria-label="Footer navigation">
+                        <ul class="footer-links list-unstyled d-inline-flex flex-column gap-2 mb-0 text-start">
+                            <li><a href="https://pythonscouts.com/guias/">Guías</a></li>
+                            <li><a href="https://pythonscouts.com/series/">Series</a></li>
+                            <li><a href="https://pythonscouts.com/tutoriales/">Tutoriales</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-secondary py-3">
+        <div class="container-md content-px">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <div class="d-flex flex-column flex-sm-row align-items-center gap-2 text-center text-sm-start">
+                    <span class="text-white-50 small">
+                        &copy; 2023-2026 Leodanis Pozo Ramos.
+                    </span>
+                    <div class="d-flex align-items-center gap-2">
+                        <a href="https://creativecommons.org/licenses/by-sa/4.0/" 
+                           target="_blank" 
+                           rel="license noopener noreferrer"
+                           class="d-inline-block"
+                           style="background: white; padding: 4px 8px; border-radius: 4px;">
+                            <img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" 
+                                 alt="CC BY-SA 4.0" 
+                                 width="88" 
+                                 height="31"
+                                 style="border-width:0; display: block;">
+                        </a>
+                        <span class="text-white-50 small">
+                            Contenido licenciado bajo 
+                            <a href="https://creativecommons.org/licenses/by-sa/4.0/" 
+                               target="_blank" 
+                               rel="license noopener noreferrer"
+                               class="text-white text-decoration-none">
+                                CC BY-SA 4.0
+                                <i class="bi bi-box-arrow-up-right ms-1"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <span class="text-white-50 small">
+                    Imágenes cortesía de <a href="https://picsum.photos/" target="_blank" rel="noopener" class="text-white text-decoration-none">Picsum</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</footer>
+    <!-- JS Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
+    <!-- Stork and site scripts -->
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202601061942" defer></script>
+    <script
+        src="https://pythonscouts.com/theme/js/site.js?v=202601061942"
+        defer
+        data-stork-name="sitesearch"
+        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202601061942"
+        data-stork-index="https://pythonscouts.com/search-index.st">
+    </script>
+
+</body>
+</html>
