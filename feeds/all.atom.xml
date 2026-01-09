@@ -1,5 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2026-01-06T10:00:00+01:00</updated><subtitle>Aprende Python en Español.</subtitle><entry><title>Palabras clave en Python: raise</title><link href="https://pythonscouts.com/python-raise/" rel="alternate"/><published>2026-01-06T10:00:00+01:00</published><updated>2026-01-06T10:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2026-01-06:/python-raise/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;raise&lt;/code&gt; se utiliza para generar una excepción de manera explícita en tu código.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Te permite señalar la ocurrencia de un error que debe manejarse, interrumpiendo el flujo normal de ejecución y activando el mecanismo de manejo de excepciones.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2026-01-09T18:35:00+01:00</updated><subtitle>Aprende Python en Español.</subtitle><entry><title>Palabras clave en Python: or</title><link href="https://pythonscouts.com/python-or/" rel="alternate"/><published>2026-01-09T18:35:00+01:00</published><updated>2026-01-09T18:35:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2026-01-09:/python-or/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;or&lt;/code&gt; es un operador lógico que se utiliza para evaluar dos expresiones y devuelve &lt;code&gt;True&lt;/code&gt; si al menos una es verdadera.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Este operador se emplea para combinar condiciones lógicas y es fundamental para la toma de decisiones en el flujo de un programa.&lt;/p&gt;
+&lt;h2 id="sintaxis"&gt;Sintaxis&lt;/h2&gt;
+&lt;p&gt;La sintaxis para utilizar &lt;code&gt;or&lt;/code&gt; es la siguiente:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;expr1&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="n"&gt;expr2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Donde &lt;code&gt;expr1&lt;/code&gt; y &lt;code&gt;expr2&lt;/code&gt; son las expresiones lógicas que deseas evaluar. Si alguna de ellas es verdadera, el resultado será &lt;a href="/python-true/"&gt;&lt;code&gt;True&lt;/code&gt;&lt;/a&gt;. Si ambas son falsas, el resultado es &lt;a href="/python-false/"&gt;&lt;code&gt;False&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;El operador &lt;code&gt;or&lt;/code&gt; aplica lo que se conoce como evaluación diferida (short-circuiting): si &lt;code&gt;expr1&lt;/code&gt; es verdadera, entonces Python no evalúa &lt;code&gt;expr2&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Además, &lt;code&gt;or&lt;/code&gt; devuelve el primer operando con valor de verdad verdadero (truthy). Si ninguno es verdadero, devuelve el último operando. Por lo tanto, no siempre devuelve &lt;code&gt;True&lt;/code&gt; o &lt;code&gt;False&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;La tabla de verdad del operador cuando lo usamos con expresiones lógicas se resume a continuación:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;code&gt;expression_1&lt;/code&gt; (bool)&lt;/th&gt;
+&lt;th&gt;&lt;code&gt;expression_2&lt;/code&gt; (bool)&lt;/th&gt;
+&lt;th&gt;&lt;code&gt;expression_1 or expression_2&lt;/code&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;True&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;True&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;True&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;True&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;False&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;True&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;False&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;False&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;False&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;False&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;True&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;True&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
+&lt;p&gt;Aquí tienes algunos ejemplos prácticos que muestran cómo se usa el operador &lt;code&gt;or&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="kc"&gt;True&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;
+&lt;span class="kc"&gt;False&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En estos ejemplos, el operador &lt;code&gt;or&lt;/code&gt; evalúa las expresiones a la izquierda y a la derecha. Si alguna de las expresiones es verdadera, el resultado de toda la expresión es &lt;code&gt;True&lt;/code&gt;. En el caso de que ambas expresiones sean falsas, el resultado es &lt;code&gt;False&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Si usamos &lt;code&gt;or&lt;/code&gt; con objetos concretos o con expresiones que retornan objetos distintos de &lt;code&gt;True&lt;/code&gt; o &lt;code&gt;False&lt;/code&gt;, tenemos el comportamiento siguiente:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;default&amp;quot;&lt;/span&gt;
+&lt;span class="s1"&gt;&amp;#39;default&amp;#39;&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
+&lt;span class="mi"&gt;5&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="mi"&gt;5&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+&lt;span class="p"&gt;[]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En estos ejemplos, el operador devuelve objetos concretos en lugar de los valores &lt;code&gt;True&lt;/code&gt; o &lt;code&gt;False&lt;/code&gt;. Esto se debe a a todo objeto en Python tiene un valor de verdad intrínseco. Estos son los objectos considerados falsos:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;constantes definidas para tener valor falso: &lt;code&gt;None&lt;/code&gt; y &lt;code&gt;False&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;cero en cualquiera de los diferentes tipos numéricos: &lt;code&gt;0&lt;/code&gt;, &lt;code&gt;0.0&lt;/code&gt;, &lt;code&gt;0j&lt;/code&gt;, &lt;code&gt;Decimal(0)&lt;/code&gt;, &lt;code&gt;Fraction(0, 1)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;cualquier colección o secuencia vacía: &lt;code&gt;''&lt;/code&gt;, &lt;code&gt;()&lt;/code&gt;, &lt;code&gt;[]&lt;/code&gt;, &lt;code&gt;{}&lt;/code&gt;, &lt;code&gt;set()&lt;/code&gt;, &lt;code&gt;range(0)&lt;/code&gt; (&lt;a href="https://docs.python.org/es/3.14/library/stdtypes.html#truth-value-testing"&gt;Fuente&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;El resto de los objetos son considerados verdaderos a menos que su clase defina un método &lt;code&gt;.__bool__()&lt;/code&gt; que devuelva &lt;code&gt;False&lt;/code&gt; o un método &lt;code&gt;.__len__()&lt;/code&gt; que devuelva zero.&lt;/p&gt;
+&lt;h2 id="uso-de-or"&gt;Uso de &lt;code&gt;or&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Los casos de uso más comunes de la palabra clave &lt;code&gt;or&lt;/code&gt; incluyen los siguientes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Evaluar múltiples condiciones en declaraciones de control de flujo como &lt;a href="/python-if/"&gt;&lt;code&gt;if&lt;/code&gt;&lt;/a&gt;, &lt;a href="/python-while/"&gt;&lt;code&gt;while&lt;/code&gt;&lt;/a&gt;, o &lt;a href="/python-assert/"&gt;&lt;code&gt;assert&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Simplificar la lógica condicional al permitir que al menos una condición sea verdadera para que la expresión completa sea verdadera.&lt;/li&gt;
+&lt;li&gt;Utilizar en expresiones booleanas para determinar el flujo de un programa.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
+&lt;p&gt;La palabra clave &lt;code&gt;or&lt;/code&gt; es un operador lógico esencial en Python y permite evaluar múltiples condiciones y devolver &lt;code&gt;True&lt;/code&gt; si al menos una es verdadera o &lt;code&gt;False&lt;/code&gt; si ambas son falsas.&lt;/p&gt;
+&lt;p&gt;Conocer y utilizar &lt;code&gt;or&lt;/code&gt; te ayuda a escribir código más eficiente y legible al simplificar la lógica condicional en tus programas.&lt;/p&gt;</content><category term="Series"/><category term="python"/><category term="palabra clave"/></entry><entry><title>Palabras clave en Python: raise</title><link href="https://pythonscouts.com/python-raise/" rel="alternate"/><published>2026-01-06T10:00:00+01:00</published><updated>2026-01-06T10:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2026-01-06:/python-raise/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;raise&lt;/code&gt; se utiliza para generar una excepción de manera explícita en tu código.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Te permite señalar la ocurrencia de un error que debe manejarse, interrumpiendo el flujo normal de ejecución y activando el mecanismo de manejo de excepciones.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#sintaxis"&gt;Sintaxis&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#ejemplos-practicos"&gt;Ejemplos prácticos&lt;/a&gt;&lt;/li&gt;
@@ -674,7 +757,7 @@
 &lt;/ol&gt;
 &lt;h2 id="conclusion"&gt;Conclusión&lt;/h2&gt;
 &lt;p&gt;Con Kivy, puedes construir aplicaciones de interfaz gráfica con un conjunto sólido de widgets y layouts. También puedes separar la lógica y el diseño de la interfaz en archivos &lt;code&gt;.kv&lt;/code&gt; a medida que tu aplicación crece.&lt;/p&gt;
-&lt;p&gt;A partir de aquí, prueba a combinar widgets y layouts para crear aplicaciones multiplataforma, crear tus interfaces con KV language para mantener tu proyecto organizado.&lt;/p&gt;</content><category term="Tutoriales"/><category term="kivy"/><category term="python"/><category term="gui"/></entry><entry><title>Palabra clave en Python: continue</title><link href="https://pythonscouts.com/python-continue/" rel="alternate"/><published>2025-12-31T06:00:00+01:00</published><updated>2025-12-31T06:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-12-31:/python-continue/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;continue&lt;/code&gt; te permite saltar inmediatamente a la siguiente iteración de un bucle, omitiendo el resto del cuerpo de este.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Puedes usar &lt;code&gt;continue&lt;/code&gt; para &lt;em&gt;saltar&lt;/em&gt; casos que no quieres procesar sin salir del bucle.&lt;/p&gt;
+&lt;p&gt;A partir de aquí, prueba a combinar widgets y layouts para crear aplicaciones multiplataforma, crear tus interfaces con KV language para mantener tu proyecto organizado.&lt;/p&gt;</content><category term="Tutoriales"/><category term="kivy"/><category term="python"/><category term="gui"/></entry><entry><title>Palabras clave en Python: continue</title><link href="https://pythonscouts.com/python-continue/" rel="alternate"/><published>2025-12-31T06:00:00+01:00</published><updated>2025-12-31T06:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-12-31:/python-continue/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;continue&lt;/code&gt; te permite saltar inmediatamente a la siguiente iteración de un bucle, omitiendo el resto del cuerpo de este.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Puedes usar &lt;code&gt;continue&lt;/code&gt; para &lt;em&gt;saltar&lt;/em&gt; casos que no quieres procesar sin salir del bucle.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#sintaxis"&gt;Sintaxis&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#ejemplos-practicos"&gt;Ejemplos prácticos&lt;/a&gt;&lt;/li&gt;

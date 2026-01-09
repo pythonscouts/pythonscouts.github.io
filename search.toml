@@ -8,6 +8,11 @@ url = "/acerca/"
 title = "Acerca"
 
 [[input.files]]
+path = "python-or/index.html"
+url = "/python-or/"
+title = "Palabras clave en Python: or"
+
+[[input.files]]
 path = "python-raise/index.html"
 url = "/python-raise/"
 title = "Palabras clave en Python: raise"
@@ -25,7 +30,7 @@ title = "Iniciando con Kivy para desarrollo GUI"
 [[input.files]]
 path = "python-continue/index.html"
 url = "/python-continue/"
-title = "Palabra clave en Python: continue"
+title = "Palabras clave en Python: continue"
 
 [[input.files]]
 path = "python-else/index.html"
