@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es-es" class="h-100">
+
+<head>
+        <title>
+  Palabras clave en Python: from - Python Scouts
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Leodanis Pozo Ramos">
+    <meta name="description" content="En Python, la palabra clave from se utiliza principalmente para importar módulos y sus componentes específicos de manera que puedas usarlos directamente en...">
+    <meta name="keywords" content="python, palabras clave">
+    <meta name="article:published_time" content="2026-01-21T13:05:00+01:00">
+    <meta name="article:modified_time" content="2026-01-21T13:05:00+01:00">
+    <meta name="article:author" content="Leodanis Pozo Ramos">
+    <meta name="article:section" content="Series">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="language" content="Spanish">
+    <meta name="generator" content="Pelican">
+    
+    <meta name="dcterms.rights" content="https://creativecommons.org/licenses/by-sa/4.0/">
+    <meta name="dcterms.rightsHolder" content="Leodanis Pozo Ramos">
+    <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Palabras clave en Python: from">
+    <meta property="og:description" content="En Python, la palabra clave from se utiliza principalmente para importar módulos y sus componentes específicos de manera que puedas usarlos directamente en tu código.">
+    <meta property="og:url" content="https://pythonscouts.com/python-from/">
+    <meta property="og:site_name" content="Python Scouts">
+    <meta property="og:image" content="https://pythonscouts.com/images/articles/python-from/social.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Palabras clave en Python: from">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:locale" content="es_ES">
+    <meta property="article:published_time" content="2026-01-21T13:05:00+01:00">
+    <meta property="article:author" content="Leodanis Pozo Ramos">
+    <meta property="article:section" content="Series">
+    <meta property="article:tag" content="python">
+    <meta property="article:tag" content="palabras clave">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lpozo78">
+    <meta name="twitter:creator" content="@lpozo78">
+    <meta name="twitter:title" content="Palabras clave en Python: from">
+    <meta name="twitter:description" content="En Python, la palabra clave from se utiliza principalmente para importar módulos y sus componentes específicos de manera que puedas usarlos directamente en tu código.">
+    <meta name="twitter:image" content="https://pythonscouts.com/images/articles/python-from/social.webp">
+    <meta name="twitter:image:alt" content="Palabras clave en Python: from">
+    <!-- RSS feeds -->
+    <link href="https://pythonscouts.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Full Atom Feed" />
+    <link href="https://pythonscouts.com/feeds/series.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Categories Atom Feed" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://pythonscouts.com/python-from/">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202601211303">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202601211303">
+    <!-- Preconnect to CDNs -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <!-- Bootstrap CSS (deferred) -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+          crossorigin="anonymous">
+    <!-- Bootstrap Icons (self-hosted, deferred) -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202601211303">
+    <!-- Stork Search - Deferred -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202601211303">
+
+
+    <!-- Article tags -->
+    <meta name="article:tag" content="python" />
+    <meta name="article:tag" content="palabras clave" />
+    <meta name="article:tag" content="kivy" />
+    <meta name="article:tag" content="gui" />
+    <meta name="article:tag" content="ayuda" />
+    <meta name="article:tag" content="pyside6" />
+    <meta name="article:tag" content="linux" />
+    <meta name="article:tag" content="tkinter" />
+    <meta name="article:tag" content="pyqt" />
+    <meta name="article:tag" content="windows" />
+    <meta name="article:tag" content="macos" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Palabras clave en Python: from">
+    <meta property="og:description" content="En Python, la palabra clave from se utiliza principalmente para importar módulos y sus componentes específicos de manera que puedas usarlos directamente en tu código.">
+    <meta property="og:url" content="https://pythonscouts.com/python-from/">
+    <meta property="og:site_name" content="Python Scouts">
+    <meta property="og:image" content="https://pythonscouts.com/images/articles/python-from/social.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Palabras clave en Python: from">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:locale" content="es_ES">
+    <meta property="article:published_time" content="2026-01-21T13:05:00+01:00">
+    <meta property="article:author" content="Leodanis Pozo Ramos">
+    <meta property="article:section" content="Series">
+    <meta property="article:tag" content="python">
+    <meta property="article:tag" content="palabras clave">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lpozo78">
+    <meta name="twitter:creator" content="@lpozo78">
+    <meta name="twitter:title" content="Palabras clave en Python: from">
+    <meta name="twitter:description" content="En Python, la palabra clave from se utiliza principalmente para importar módulos y sus componentes específicos de manera que puedas usarlos directamente en tu código.">
+    <meta name="twitter:image" content="https://pythonscouts.com/images/articles/python-from/social.webp">
+    <meta name="twitter:image:alt" content="Palabras clave en Python: from">
+
+    <!-- Custom CSS for article -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202601211303">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
+<script
+    src="https://pythonscouts.com/theme/js/analytics.js?v=202601211303"
+    defer
+    data-analytics-id="G-R3C5PFSQ1S">
+</script>
+
+<body class="d-flex flex-column h-100">
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-md bg-white fixed-top border-bottom">
+        <div class="container-md content-px">
+            <a class="navbar-brand" href="/">
+            <img
+            src="https://pythonscouts.com/images/identity/header.webp"
+            alt="Python Scouts"
+            width="150"
+            height="50"
+            >
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Menú de Navegación">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav m-auto nav-link">
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/guias/" aria-current="page">
+                    Guías
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/series/" aria-current="page">
+                    Series
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/tutoriales/" aria-current="page">
+                    Tutoriales
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/acerca/" aria-current="page">
+                    Acerca
+                </a>
+                </li>
+            </ul>
+            <form class="d-flex search-form" role="search" style="min-width:240px;">
+                <div class="stork-wrapper">
+                <input
+                class="stork-input"
+                type="search"
+                id="site-search"
+                name="q"
+                placeholder="Buscar"
+                aria-label="Search"
+                data-stork="sitesearch"
+                >
+                </div>
+            </form>
+            </div>
+        </div>
+    </nav>
+    <main id="main-content" class="container-md content-px py-3" tabindex="-1">
+        <div class="stork-wrapper">
+            <div data-stork="sitesearch-output" class="stork-output"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+            </div>
+        </div>
+
+    <!-- Article Header - Magazine Style -->
+    <header class="article-header mb-5">
+        <div class="row g-4 align-items-center">
+            <!-- Content Column -->
+            <div class="col-lg-6 order-lg-1">
+                <!-- Breadcrumbs -->
+                <nav aria-label="breadcrumb" class="mb-3">
+                    <ol class="breadcrumb mb-0 small">
+                        <li class="breadcrumb-item"><a href="https://pythonscouts.com">Inicio</a></li>
+                        <li class="breadcrumb-item"><a href="https://pythonscouts.com/series/">Series</a></li>
+                    </ol>
+                </nav>
+                
+                <!-- Category -->
+                <div class="mb-3">
+                    <span class="badge bg-success-subtle text-success border border-success px-3 py-2 text-uppercase fw-semibold">
+                        Series
+                    </span>
+                </div>
+                
+                <!-- Title -->
+                <h1 class="display-5 fw-bold mb-4">
+                    Palabras clave en Python: from
+                </h1>
+                
+                <!-- Author & Meta -->
+                <div class="d-flex align-items-center gap-3 mb-4">
+                    <img src="https://pythonscouts.com/images/authors/leodanis-pozo-ramos.webp" 
+                         class="rounded-circle border" 
+                         width="60" height="60" 
+                         alt="Leodanis Pozo Ramos">
+                    <div>
+                        <div class="fw-semibold">Leodanis Pozo Ramos</div>
+                        <div class="text-muted-strong small">
+                            <i class="bi bi-calendar-event me-1"></i>
+                            21 ene 2026
+                            <span class="mx-2">•</span>
+                            <i class="bi bi-clock me-1"></i>
+                            3 min
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tags -->
+                <div class="d-flex gap-2 flex-wrap">
+                    <a href="https://pythonscouts.com/tag/python.html" 
+                       class="badge bg-light text-dark border text-decoration-none">
+                        python
+                    </a>
+                    <a href="https://pythonscouts.com/tag/palabras-clave.html" 
+                       class="badge bg-light text-dark border text-decoration-none">
+                        palabras clave
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Image Column -->
+            <div class="col-lg-6 order-lg-2">
+                <img src="https://pythonscouts.com/images/articles/python-from/article.webp" 
+                     class="img-fluid w-100 rounded-4 shadow-lg" 
+                     alt="Palabras clave en Python: from"
+                     style="max-height: 600px; object-fit: cover;">
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Content -->
+    <div class="row">
+        <div class="col-12">
+            <article itemscope itemtype="https://schema.org/BlogPosting">
+                <meta itemprop="headline" content="Palabras clave en Python: from">
+                <meta itemprop="description" content="En Python, la palabra clave from se utiliza principalmente para importar módulos y sus componentes específicos de manera que puedas usarlos directamente en tu código.">
+                <meta itemprop="datePublished" content="2026-01-21T13:05:00+01:00">
+                <meta itemprop="dateModified" content="2026-01-21T13:05:00+01:00">
+                <meta itemprop="author" content="Leodanis Pozo Ramos">
+                <meta itemprop="image" content="https://pythonscouts.com/images/articles/python-from/social.webp">
+                <div itemprop="articleBody">
+                    <p class="lead text-muted-strong mb-4">
+                        <p>En Python, la palabra clave <code>from</code> se utiliza principalmente para importar módulos y sus componentes específicos de manera que puedas usarlos directamente en tu código.</p>
+                    </p>
+                    <p>Esta <a href="/python-palabras-clave/">palabra clave</a> se emplea generalmente en combinación con <a href="/python-import/"><code>import</code></a> y permite acceder solo a objetos específicos de un módulo sin cargar todo el contenido del módulo.</p>
+<p>Además, <code>from</code> tiene otros usos en Python:</p>
+<ul>
+<li>Con <a href="/python-raise/"><code>raise</code></a>: Encadena excepciones y preserva el contexto del error original.</li>
+<li>Con <code>yield</code>: Delega la iteración a otro generador o iterable.</li>
+</ul>
+<div class="toc"><span class="toctitle">Contenidos</span><ul>
+<li><a href="#sintaxis">Sintaxis</a></li>
+<li><a href="#ejemplos-practicos">Ejemplos prácticos</a></li>
+<li><a href="#uso-de-from">Uso de from</a></li>
+<li><a href="#resumiendo">Resumiendo</a></li>
+</ul>
+</div>
+<h2 id="sintaxis">Sintaxis</h2>
+<p>La sintaxis básica para utilizar <code>from</code> junto con <a href="/python-import/"><code>import</code></a> es la siguiente:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">module_name</span> <span class="kn">import</span> <span class="n">specific_component</span>
+</code></pre></div>
+
+<p>Si necesitas crear un alias para evitar conflictos de nombres o simplificar el uso, puedes usar <a href="/python-as/"><code>as</code></a>:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">module_name</span> <span class="kn">import</span> <span class="n">specific_component</span> <span class="k">as</span> <span class="n">alias</span>
+</code></pre></div>
+
+<p>También puedes importar múltiples componentes separados por comas:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">module_name</span> <span class="kn">import</span> <span class="n">component1</span><span class="p">,</span> <span class="n">component2</span>
+</code></pre></div>
+
+<p>Además, puedes usar <code>*</code> para importar todos los componentes del módulo:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">module_name</span> <span class="kn">import</span> <span class="o">*</span>
+</code></pre></div>
+
+<p>Esta sintaxis se conoce como <strong>wildcard import</strong> y es común en secciones de trabajo interactivas. Sin embargo, no se recomienda usarla en código en producción pues puede causar conflictos de nombres y dificultar la depuración.</p>
+<p>Sintaxis para el uso con <a href="/python-raise/"><code>raise</code></a>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">raise</span> <span class="n">NewException</span><span class="p">(</span><span class="s2">&quot;mensaje&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">original_exception</span>
+</code></pre></div>
+
+<p>Si deseas suprimir el contexto de la excepción original, puedes usar <a href="/python-none/"><code>None</code></a>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">raise</span> <span class="n">NewException</span><span class="p">(</span><span class="s2">&quot;mensaje&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="kc">None</span>
+</code></pre></div>
+
+<p>Sintaxis para el uso con <code>yield</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">yield from</span> <span class="n">iterable</span>
+</code></pre></div>
+
+<p>Esta sintaxis equivale a iterar sobre el iterable y producir cada elemento uno por uno.</p>
+<h2 id="ejemplos-practicos">Ejemplos prácticos</h2>
+<p>Aquí hay algunos ejemplos que ilustran cómo se usa la palabra clave <code>from</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">pi</span>
+<span class="mf">3.141592653589793</span>
+</code></pre></div>
+
+<p>En este ejemplo, solo se importa <code>pi</code> del módulo <code>math</code>, permitiéndote usarlo directamente sin tener que prefijarlo con <code>math</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">future</span> <span class="o">=</span> <span class="n">now</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">future</span>
+<span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2023</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">401213</span><span class="p">)</span>
+</code></pre></div>
+
+<p>En este ejemplo, se importan <code>datetime</code> y <code>timedelta</code> del módulo <code>datetime</code>. Esto permite trabajar con fechas y tiempos de manera más directa.</p>
+<p>A continuación, un ejemplo de encadenamiento de excepciones con <code>raise from</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">connect_to_database</span><span class="p">(</span><span class="n">connection_string</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">try</span><span class="p">:</span>
+<span class="o">...</span>         <span class="c1"># Código de conexión</span>
+<span class="o">...</span>         <span class="k">raise</span> <span class="ne">ConnectionError</span><span class="p">(</span><span class="s2">&quot;no se pudo conectar al servidor&quot;</span><span class="p">)</span>
+<span class="o">...</span>     <span class="k">except</span> <span class="ne">ConnectionError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+<span class="o">...</span>         <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;error en la base de datos&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">error</span>
+<span class="o">...</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">connect_to_database</span><span class="p">(</span><span class="s2">&quot;localhost:5432&quot;</span><span class="p">)</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+    <span class="o">...</span>
+<span class="ne">ConnectionError</span><span class="p">:</span> <span class="n">no</span> <span class="n">se</span> <span class="n">pudo</span> <span class="n">conectar</span> <span class="n">al</span> <span class="n">servidor</span>
+
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
+
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+    <span class="o">...</span>
+<span class="ne">RuntimeError</span><span class="p">:</span> <span class="n">error</span> <span class="n">en</span> <span class="n">la</span> <span class="n">base</span> <span class="n">de</span> <span class="n">datos</span>
+</code></pre></div>
+
+<p>En este ejemplo, se preserva la excepción original (<code>ConnectionError</code>) como causa directa del nuevo error (<code>RuntimeError</code>).</p>
+<p>Finalmente, un ejemplo de delegación de iteración con <code>yield from</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">combine</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">yield from</span> <span class="n">first</span>
+<span class="o">...</span>     <span class="k">yield from</span> <span class="n">second</span>
+<span class="o">...</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span><span class="n">combine</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]))</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+</code></pre></div>
+
+<p>En este ejemplo, <code>yield from</code> delega la iteración a cada lista, produciendo sus elementos sin necesidad de un bucle explícito.</p>
+<h2 id="uso-de-from">Uso de <code>from</code></h2>
+<p>Los casos de uso más comunes de la palabra clave <code>from</code> incluyen los siguientes:</p>
+<ul>
+<li>Importar componentes específicos de un módulo para mantener el namespace limpio y mejorar la legibilidad.</li>
+<li>Evitar conflictos de nombres al importar solo lo necesario.</li>
+<li>Hacer el código más limpio y fácil de entender al eliminar la necesidad de prefijos de módulo para componentes importados.</li>
+<li>Permitir la importación de múltiples componentes de un módulo en una sola línea.</li>
+<li>Encadenar excepciones con <code>raise ... from ...</code> para preservar el contexto del error original.</li>
+<li>Delegar la iteración a otro generador o iterable con <code>yield from</code>.</li>
+</ul>
+<h2 id="resumiendo">Resumiendo</h2>
+<p>La palabra clave <code>from</code> en Python es una herramienta versátil con múltiples usos: importar componentes específicos de módulos, encadenar excepciones con <code>raise</code> y delegar iteraciones con <code>yield</code>.</p>
+<p>Dominar estos usos te permite escribir código más claro, modular y expresivo en diferentes contextos de programación.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+
+
+
+    </main>
+
+<footer class="site-footer mt-auto">
+    <div class="footer-primary border-top border-success-subtle py-3">
+        <div class="container-md content-px">
+            <div class="row gy-3 align-items-center justify-content-between">
+                <div class="col-lg-6 col-md-7">
+                    <div class="d-flex flex-column flex-sm-row align-items-center align-items-sm-start gap-3 text-center text-sm-start">
+                        <a href="https://pythonscouts.com" class="d-inline-flex align-items-center text-decoration-none">
+                            <img src="https://pythonscouts.com/images/identity/logo-title.png" alt="Python Scouts" width="160" height="48" class="img-fluid footer-logo">
+                        </a>
+                        <p class="text-muted-strong footer-description mb-0">
+                            Python Scouts es tu espacio para aprender Python en español.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-5 text-center text-md-start">
+                    <h3 class="h6 text-uppercase text-success fw-semibold mb-2">Explora</h3>
+                    <nav aria-label="Footer navigation">
+                        <ul class="footer-links list-unstyled d-inline-flex flex-column gap-2 mb-0 text-start">
+                            <li><a href="https://pythonscouts.com/guias/">Guías</a></li>
+                            <li><a href="https://pythonscouts.com/series/">Series</a></li>
+                            <li><a href="https://pythonscouts.com/tutoriales/">Tutoriales</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-secondary py-3">
+        <div class="container-md content-px">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <div class="d-flex flex-column flex-sm-row align-items-center gap-2 text-center text-sm-start">
+                    <span class="text-white-50 small">
+                        &copy; 2023-2026 Leodanis Pozo Ramos.
+                    </span>
+                    <div class="d-flex align-items-center gap-2">
+                        <a href="https://creativecommons.org/licenses/by-sa/4.0/" 
+                           target="_blank" 
+                           rel="license noopener noreferrer"
+                           class="d-inline-block"
+                           style="background: white; padding: 4px 8px; border-radius: 4px;">
+                            <img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" 
+                                 alt="CC BY-SA 4.0" 
+                                 width="88" 
+                                 height="31"
+                                 style="border-width:0; display: block;">
+                        </a>
+                        <span class="text-white-50 small">
+                            Contenido licenciado bajo 
+                            <a href="https://creativecommons.org/licenses/by-sa/4.0/" 
+                               target="_blank" 
+                               rel="license noopener noreferrer"
+                               class="text-white text-decoration-none">
+                                CC BY-SA 4.0
+                                <i class="bi bi-box-arrow-up-right ms-1"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <span class="text-white-50 small">
+                    Imágenes cortesía de <a href="https://picsum.photos/" target="_blank" rel="noopener" class="text-white text-decoration-none">Picsum</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</footer>
+    <!-- JS Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
+    <!-- Stork and site scripts -->
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202601211303" defer></script>
+    <script
+        src="https://pythonscouts.com/theme/js/site.js?v=202601211303"
+        defer
+        data-stork-name="sitesearch"
+        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202601211303"
+        data-stork-index="https://pythonscouts.com/search-index.st">
+    </script>
+
+</body>
+</html>
