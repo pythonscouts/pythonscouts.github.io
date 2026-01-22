@@ -380,8 +380,9 @@
         &lt;span class="k"&gt;continue&lt;/span&gt;
     &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;aside class="note"&gt;Si &lt;code&gt;continue&lt;/code&gt; queda como última sentencia del cuerpo del bucle, es innecesaria porque no hay código que omitir y el bucle pasa igual a la siguiente iteración.&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;Si &lt;code&gt;continue&lt;/code&gt; queda como última sentencia del cuerpo del bucle, es innecesaria porque no hay código que omitir y el bucle pasa igual a la siguiente iteración.&lt;/p&gt;
+&lt;/div&gt;
 &lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
 &lt;p&gt;A continuación, algunos ejemplos prácticos de cómo emplear &lt;code&gt;continue&lt;/code&gt;. Comenzamos con un ejemplo de cómo saltar números pares en un bucle &lt;code&gt;for&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
@@ -623,10 +624,9 @@
 &lt;li&gt;Asegurarse de que los &lt;a href="/valores-python/"&gt;valores&lt;/a&gt; de las &lt;a href="/variables-python/"&gt;variables&lt;/a&gt; cumplen con los requisitos esperados antes de continuar con la ejecución.&lt;/li&gt;
 &lt;li&gt;Documentar supuestos en el código que deberían mantenerse verdaderos.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;aside class="note"&gt;
-En la práctica, no debes emplear la palabra clave &lt;code&gt;assert&lt;/code&gt; para verificar condiciones en producción, como puede ser la validación de datos de entrada. Esto es debido a que Python permite deshabilitar &lt;code&gt;assert&lt;/code&gt; con el fin de optimizar el funcionamiento de código en producción y, por tanto, tu validación quedaría sin efecto.
-&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;En la práctica, no debes emplear la palabra clave &lt;code&gt;assert&lt;/code&gt; para verificar condiciones en producción, como puede ser la validación de datos de entrada. Esto es debido a que Python permite deshabilitar &lt;code&gt;assert&lt;/code&gt; con el fin de optimizar el funcionamiento de código en producción y, por tanto, tu validación quedaría sin efecto.&lt;/p&gt;
+&lt;/div&gt;
 &lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
 &lt;p&gt;La palabra clave &lt;code&gt;assert&lt;/code&gt; en Python garantiza que ciertas precondiciones se mantengan durante la ejecución de un programa. Es especialmente valiosa durante la fase de desarrollo y depuración, pues permite identificar rápidamente errores lógicos y corregirlos.&lt;/p&gt;
 &lt;p&gt;Conocer y emplear &lt;code&gt;assert&lt;/code&gt; te ayuda a escribir código más robusto y confiable.&lt;/p&gt;</content><category term="Series"/><category term="python"/><category term="palabras clave"/></entry><entry><title>Palabras clave en Python: del</title><link href="https://pythonscouts.com/python-del/" rel="alternate"/><published>2025-12-27T12:00:00+01:00</published><updated>2025-12-27T12:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-12-27:/python-del/</id><summary type="html">&lt;p&gt;La palabra clave &lt;code&gt;del&lt;/code&gt; te permite eliminar variables, elementos de colecciones y atributos, liberando referencias y ayudándote a gestionar memoria.&lt;/p&gt;</summary><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
@@ -1714,10 +1714,9 @@ Related help topics: TRUTHVALUE
 &lt;span class="mi"&gt;4&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En este ejemplo, el ciclo &lt;code&gt;for&lt;/code&gt; itera sobre una lista de números, y &lt;code&gt;print(number)&lt;/code&gt; se ejecuta para cada número en la lista.&lt;/p&gt;
-&lt;aside class="note"&gt;
-Para aprender más sobre los ciclos &lt;code&gt;for&lt;/code&gt; revisa el tutorial &lt;a href="https://pythonscouts.com/ciclos-for-python/"&gt;Python a través de ejemplos: Ciclos o bucles &lt;code&gt;for&lt;/code&gt;&lt;/a&gt;.
-&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;Para aprender más sobre los ciclos &lt;code&gt;for&lt;/code&gt; revisa el tutorial &lt;a href="https://pythonscouts.com/ciclos-for-python/"&gt;Python a través de ejemplos: Ciclos o bucles &lt;code&gt;for&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
 &lt;p&gt;También puedes iterar sobre los caracteres de una &lt;a href="https://pythonscouts.com/valores-python/#valores-de-cadena-de-caracteres"&gt;cadena&lt;/a&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;letter&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Python&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;letter&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1838,10 +1837,9 @@ Para aprender más sobre los ciclos &lt;code&gt;for&lt;/code&gt; revisa el tutor
     &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;body&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;return_value&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;aside class="note"&gt;
-Los corchetes indican elementos opcionales. De modo similar, los corchetes angulares denotan elementos requerido.
-&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;Los corchetes indican elementos opcionales. De modo similar, los corchetes angulares denotan elementos requerido.&lt;/p&gt;
+&lt;/div&gt;
 &lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
 &lt;p&gt;Aquí tienes algunos ejemplos de cómo puedes usar &lt;code&gt;def&lt;/code&gt; para definir tus funciones:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;greet&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
@@ -2049,10 +2047,9 @@ Los corchetes indican elementos opcionales. De modo similar, los corchetes angul
 &lt;span class="n"&gt;Buenos&lt;/span&gt; &lt;span class="n"&gt;días&lt;/span&gt; &lt;span class="n"&gt;Pythonista&lt;/span&gt;&lt;span class="err"&gt;!&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En este ejemplo, el argumento &lt;code&gt;informal&lt;/code&gt; tiene un valor por defecto igual a &lt;code&gt;True&lt;/code&gt;. Esto significa que cuando llamas la función sin pasarle un valor explícito a &lt;code&gt;informal&lt;/code&gt; obtienes un saludo informal. Observa que cuando llamas a la función con &lt;code&gt;informal&lt;/code&gt; igual a &lt;a href="https://pythonscouts.com/python-false/"&gt;&lt;code&gt;False&lt;/code&gt;&lt;/a&gt; (el valor de verdad opuesto a &lt;code&gt;True&lt;/code&gt;), entonces el saludo se vuelve formal porque se ejecuta la cláusula &lt;code&gt;else&lt;/code&gt; de la condicional.&lt;/p&gt;
-&lt;aside class="note"&gt;
-En Python, es una práctica común y más idiomática no comparar explícitamente las condiciones con &lt;code&gt;True&lt;/code&gt; o &lt;code&gt;False&lt;/code&gt;. En lugar de &lt;code&gt;if informal == True&lt;/code&gt;, simplemente puedes usar &lt;code&gt;if informal&lt;/code&gt;. Esto hace que tu código sea más limpio y conciso.
-&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;En Python, es una práctica común y más idiomática no comparar explícitamente las condiciones con &lt;code&gt;True&lt;/code&gt; o &lt;code&gt;False&lt;/code&gt;. En lugar de &lt;code&gt;if informal == True&lt;/code&gt;, simplemente puedes usar &lt;code&gt;if informal&lt;/code&gt;. Esto hace que tu código sea más limpio y conciso.&lt;/p&gt;
+&lt;/div&gt;
 &lt;h2 id="uso-de-true"&gt;Uso de &lt;code&gt;True&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;Los casos de uso más comunes de la palabra clave &lt;code&gt;True&lt;/code&gt; incluyen los siguientes:&lt;/p&gt;
 &lt;ul&gt;
@@ -2094,10 +2091,9 @@ En Python, es una práctica común y más idiomática no comparar explícitament
 &lt;span class="n"&gt;Hola&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Ana&lt;/span&gt;&lt;span class="err"&gt;!&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En este segundo ejemplo, la función &lt;code&gt;greet()&lt;/code&gt; acepta el argumento &lt;code&gt;name&lt;/code&gt; cuyo valor por defecto es &lt;code&gt;None&lt;/code&gt;. Si llamas a la función sin argumentos, entonces obtienes &lt;a href="https://pythonscouts.com/python-hola-mundo/"&gt;&lt;code&gt;Hola, mundo!&lt;/code&gt;&lt;/a&gt; como respuesta. Si le pasas un nombre, la función saluda a la persona deseada.&lt;/p&gt;
-&lt;aside class="note"&gt;
-En Python, las funciones sin valor de retorno explícito retornan &lt;code&gt;None&lt;/code&gt;. Para visualizar el valor &lt;code&gt;None&lt;/code&gt; en una sesión interactiva, puedes emplear la función integrada &lt;code&gt;print()&lt;/code&gt;.
-&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;En Python, las funciones sin valor de retorno explícito retornan &lt;code&gt;None&lt;/code&gt;. Para visualizar el valor &lt;code&gt;None&lt;/code&gt; en una sesión interactiva, puedes emplear la función integrada &lt;code&gt;print()&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
 &lt;h2 id="uso-de-none"&gt;Uso de &lt;code&gt;None&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;Los casos de uso más comunes de la palabra clave &lt;code&gt;None&lt;/code&gt; incluyen los siguientes:&lt;/p&gt;
 &lt;ul&gt;
@@ -2261,10 +2257,9 @@ En Python, las funciones sin valor de retorno explícito retornan &lt;code&gt;No
 &lt;span class="n"&gt;puesto&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Programador&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Ambas maneras de iterar sobre las claves son equivalentes. La primera es más comúnmente usada y ligeramente más eficiente. Sin embargo, la segunda puede ser más explícita en algunas situaciones.&lt;/p&gt;
-&lt;aside class="note"&gt;
-El método &lt;code&gt;.keys()&lt;/code&gt; es redundante en este contexto. Iterar directamente sobre el diccionario es la manera preferida en la mayoría de los casos. Este método solo es útil si necesitas específicamente un objeto de &lt;a href="https://docs.python.org/es/3.13/library/stdtypes.html#dict-views" target="_blank"&gt;vista de claves&lt;/a&gt;.
-&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;El método &lt;code&gt;.keys()&lt;/code&gt; es redundante en este contexto. Iterar directamente sobre el diccionario es la manera preferida en la mayoría de los casos. Este método solo es útil si necesitas específicamente un objeto de &lt;a href="https://docs.python.org/es/3.13/library/stdtypes.html#dict-views"&gt;vista de claves&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
 &lt;p&gt;Para iterar sobre los valores, puedes emplear el método &lt;code&gt;.values()&lt;/code&gt; como se muestra en el siguiente ejemplo:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;person&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;values&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -2568,10 +2563,9 @@ El método &lt;code&gt;.keys()&lt;/code&gt; es redundante en este contexto. Iter
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Haciendo una analogía puedes comparar el MVC con un restaurante. La carta sería la vista que contiene la información sobre el menú, el mesero sería el controlador que recibe la orden del cliente y se la transmite al chef quien representa al modelo y se encarga de confeccionar el plato solicitado por el cliente.&lt;/p&gt;
-&lt;aside class="note"&gt;
-En muchas implementaciones de MVC, especialmente en aplicaciones web, las acciones del usuario no son directamente manejadas por la vista, sino que pasan primero por el controlador. La vista debería ser lo más pasiva posible, simplemente renderizando lo que el controlador le proporciona. El controlador debe ser quien maneje las acciones del usuario y decida qué hacer con ellas, incluyendo actualizar el modelo o cambiar lo que se muestra en la vista.
-&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;En muchas implementaciones de MVC, especialmente en aplicaciones web, las acciones del usuario no son directamente manejadas por la vista, sino que pasan primero por el controlador. La vista debería ser lo más pasiva posible, simplemente renderizando lo que el controlador le proporciona. El controlador debe ser quien maneje las acciones del usuario y decida qué hacer con ellas, incluyendo actualizar el modelo o cambiar lo que se muestra en la vista.&lt;/p&gt;
+&lt;/div&gt;
 &lt;p&gt;Una vez que el plato está listo, el chef se lo hace saber al mesero, quien finalmente sirve la comida al cliente en forma de un plato terminado que sería la nueva representación de la vista.&lt;/p&gt;
 &lt;p&gt;El chef y el cliente no tienen contacto directo, pues todo es gestionado por el mesero. Este es un principio básico de este patrón de diseño.&lt;/p&gt;
 &lt;h2 id="que-responsabilidades-tiene-cada-componente-del-patron-mvc"&gt;¿Qué responsabilidades tiene cada componente del patrón MVC?&lt;/h2&gt;
@@ -2752,10 +2746,9 @@ En muchas implementaciones de MVC, especialmente en aplicaciones web, las accion
 &lt;span class="kc"&gt;False&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Todas las expresiones de comparación retornan un valor lógico, ya sea &lt;code&gt;True&lt;/code&gt; o &lt;code&gt;False&lt;/code&gt;.&lt;/p&gt;
-&lt;aside class="note"&gt;
-Los ejemplos anteriores comparan valores numéricos, sin embargo, también es posible comparar cadenas, tuplas, listas y cualquier otro objeto que soporte los operadores de comparación.
-&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;Los ejemplos anteriores comparan valores numéricos, sin embargo, también es posible comparar cadenas, tuplas, listas y cualquier otro objeto que soporte los operadores de comparación.&lt;/p&gt;
+&lt;/div&gt;
 &lt;h2 id="logicas-o-booleanas"&gt;Lógicas o booleanas&lt;/h2&gt;
 &lt;p&gt;Se pueden formar expresiones lógicas o booleanas empleando los &lt;a href="https://pythonscouts.com/operadores-python/#logicos"&gt;operadores lógicos&lt;/a&gt; &lt;code&gt;and&lt;/code&gt;, &lt;code&gt;or&lt;/code&gt;, y &lt;code&gt;not&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
@@ -3310,10 +3303,9 @@ Los ejemplos anteriores comparan valores numéricos, sin embargo, también es po
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;BASE_PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;/proyectos&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En estos ejemplos, has creado algunas variables mediante la asignación de valores numéricos o de cadena de caracteres.&lt;/p&gt;
-&lt;aside class="note"&gt;
-Como regla general, emplearemos nombres de constantes en idioma inglés puesto que este es el idioma base para la programación actualmente.
-&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;Como regla general, emplearemos nombres de constantes en idioma inglés puesto que este es el idioma base para la programación actualmente.&lt;/p&gt;
+&lt;/div&gt;
 &lt;p&gt;A partir de este momento, puedes usar los nombres de estas constantes cuando quieras referirte a sus respectivos valores en tu código:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;PI&lt;/span&gt;
 &lt;span class="mf"&gt;3.1416&lt;/span&gt;
@@ -3330,10 +3322,9 @@ Como regla general, emplearemos nombres de constantes en idioma inglés puesto q
 &lt;p&gt;Al igual que las variables, las constantes no tienen un tipo de dato estático. Cuando se habla del tipo de dato de una constante, en realidad se trata del tipo de dato del objeto al que la constante apunta, ya sea un valor numérico o cualquier otro tipo de valor. Python determina este tipo de dato dinámicamente.&lt;/p&gt;
 &lt;h2 id="nombres-de-constantes"&gt;Nombres de constantes&lt;/h2&gt;
 &lt;p&gt;Los nombres de constantes en Python pueden tener cualquier longitud y consistir en letras mayúsculas (A-Z), dígitos (0-9) y el carácter de subrayado o guión bajo (&lt;code&gt;_&lt;/code&gt;). La única restricción es que, aunque un nombre de constante puede contener dígitos, el primer carácter del nombre no puede ser un dígito.&lt;/p&gt;
-&lt;aside class="note"&gt;
-Para una comprensión más profunda de las convenciones de estilo en Python, puedes consultar la &lt;a href="https://www.python.org/dev/peps/pep-0008/" target="_blank"&gt;Guía de Estilo para el Código Python (PEP 8)&lt;/a&gt;.
-&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;Para una comprensión más profunda de las convenciones de estilo en Python, puedes consultar la &lt;a href="https://www.python.org/dev/peps/pep-0008/"&gt;Guía de Estilo para el Código Python (PEP 8)&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
 &lt;p&gt;El uso de mayúsculas sostenidas es una convención y no una restricción del lenguaje. Python no te restringe en este sentido. Es decir, técnicamente, puedes nombrar una constante usando minúsculas, pero estarías violando la convención generalmente aceptada.&lt;/p&gt;
 &lt;h2 id="ventajas-de-usar-constantes"&gt;Ventajas de usar constantes&lt;/h2&gt;
 &lt;p&gt;Algunas ventajas de usar constantes en lugar de sus valores directamente en tu código incluyen:&lt;/p&gt;
@@ -3384,10 +3375,9 @@ Para una comprensión más profunda de las convenciones de estilo en Python, pue
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;message&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Bienvenidos a pythonscouts.com&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En estos ejemplos, has creado algunas variables mediante la asignación de &lt;a href="https://pythonscouts.com/valores-python/"&gt;valores&lt;/a&gt; numéricos o de cadena de caracteres.&lt;/p&gt;
-&lt;aside class="note"&gt;
-Como regla general, emplearemos nombres de variables en idioma inglés puesto que este es el idioma base para la programación actualmente.
-&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;Como regla general, emplearemos nombres de variables en idioma inglés puesto que este es el idioma base para la programación actualmente.&lt;/p&gt;
+&lt;/div&gt;
 &lt;p&gt;A partir de este momento, puedes usar el nombre de estas variables cuando quieras referirte al valor asignado en tu código:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt;
 &lt;span class="mi"&gt;42&lt;/span&gt;

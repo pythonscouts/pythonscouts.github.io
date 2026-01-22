@@ -743,8 +743,9 @@ PS&amp;gt; venv\Scripts\Activate.ps1
 &lt;p&gt;Como puedes ver, el layout renderiza los botones en las posiciones correspondientes sin necesidad de calcular las coordenadas manualmente. Al redimensionar la ventana, notarás que los botones se mantienen en sus posiciones.&lt;/p&gt;
 &lt;h2 id="conectando-eventos-con-callbacks-en-kivy"&gt;Conectando eventos con callbacks en Kivy&lt;/h2&gt;
 &lt;p&gt;En Kivy, la mayoría de los widgets te permiten vincular eventos y propiedades con funciones de callback mediante el método &lt;code&gt;.bind()&lt;/code&gt;. Esta es la base para reaccionar a eventos del usuario, como clics, selecciones y entradas de texto.&lt;/p&gt;
-&lt;aside class="note"&gt;Es importante que sepas que no es lo mismo enlazar un evento que enlazar una propiedad. Por ejemplo, &lt;code&gt;on_press&lt;/code&gt; (evento) suele llamar un callback con un solo argumento: la instancia del widget. En contraste, &lt;code&gt;.text&lt;/code&gt;, &lt;code&gt;.active&lt;/code&gt; o &lt;code&gt;.value&lt;/code&gt; (propiedades) invocan un callback con dos argumentos: la instancia y el nuevo valor.&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;Es importante que sepas que no es lo mismo enlazar un evento que enlazar una propiedad. Por ejemplo, &lt;code&gt;on_press&lt;/code&gt; (evento) suele llamar un callback con un solo argumento: la instancia del widget. En contraste, &lt;code&gt;.text&lt;/code&gt;, &lt;code&gt;.active&lt;/code&gt; o &lt;code&gt;.value&lt;/code&gt; (propiedades) invocan un callback con dos argumentos: la instancia y el nuevo valor.&lt;/p&gt;
+&lt;/div&gt;
 &lt;h3 id="enlazar-eventos"&gt;Enlazar eventos&lt;/h3&gt;
 &lt;p&gt;Cuando quieres ejecutar una acción al pulsar un botón, puedes enlazar el evento &lt;code&gt;on_press&lt;/code&gt; (al presionar) u &lt;code&gt;on_release&lt;/code&gt; (al soltar) a una función o método. En la función (callback), el parámetro &lt;code&gt;instance&lt;/code&gt; te permite identificar qué botón disparó o generó el evento.&lt;/p&gt;
 &lt;p&gt;Considera el siguiente ejemplo:&lt;/p&gt;
@@ -903,8 +904,9 @@ RootWidget:
         &lt;span class="k"&gt;continue&lt;/span&gt;
     &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;aside class="note"&gt;Si &lt;code&gt;continue&lt;/code&gt; queda como última sentencia del cuerpo del bucle, es innecesaria porque no hay código que omitir y el bucle pasa igual a la siguiente iteración.&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;Si &lt;code&gt;continue&lt;/code&gt; queda como última sentencia del cuerpo del bucle, es innecesaria porque no hay código que omitir y el bucle pasa igual a la siguiente iteración.&lt;/p&gt;
+&lt;/div&gt;
 &lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
 &lt;p&gt;A continuación, algunos ejemplos prácticos de cómo emplear &lt;code&gt;continue&lt;/code&gt;. Comenzamos con un ejemplo de cómo saltar números pares en un bucle &lt;code&gt;for&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
@@ -1146,10 +1148,9 @@ RootWidget:
 &lt;li&gt;Asegurarse de que los &lt;a href="/valores-python/"&gt;valores&lt;/a&gt; de las &lt;a href="/variables-python/"&gt;variables&lt;/a&gt; cumplen con los requisitos esperados antes de continuar con la ejecución.&lt;/li&gt;
 &lt;li&gt;Documentar supuestos en el código que deberían mantenerse verdaderos.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;aside class="note"&gt;
-En la práctica, no debes emplear la palabra clave &lt;code&gt;assert&lt;/code&gt; para verificar condiciones en producción, como puede ser la validación de datos de entrada. Esto es debido a que Python permite deshabilitar &lt;code&gt;assert&lt;/code&gt; con el fin de optimizar el funcionamiento de código en producción y, por tanto, tu validación quedaría sin efecto.
-&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;En la práctica, no debes emplear la palabra clave &lt;code&gt;assert&lt;/code&gt; para verificar condiciones en producción, como puede ser la validación de datos de entrada. Esto es debido a que Python permite deshabilitar &lt;code&gt;assert&lt;/code&gt; con el fin de optimizar el funcionamiento de código en producción y, por tanto, tu validación quedaría sin efecto.&lt;/p&gt;
+&lt;/div&gt;
 &lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
 &lt;p&gt;La palabra clave &lt;code&gt;assert&lt;/code&gt; en Python garantiza que ciertas precondiciones se mantengan durante la ejecución de un programa. Es especialmente valiosa durante la fase de desarrollo y depuración, pues permite identificar rápidamente errores lógicos y corregirlos.&lt;/p&gt;
 &lt;p&gt;Conocer y emplear &lt;code&gt;assert&lt;/code&gt; te ayuda a escribir código más robusto y confiable.&lt;/p&gt;</content><category term="Series"/><category term="python"/><category term="palabras clave"/></entry><entry><title>Palabras clave en Python: del</title><link href="https://pythonscouts.com/python-del/" rel="alternate"/><published>2025-12-27T12:00:00+01:00</published><updated>2025-12-27T12:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-12-27:/python-del/</id><summary type="html">&lt;p&gt;La palabra clave &lt;code&gt;del&lt;/code&gt; te permite eliminar variables, elementos de colecciones y atributos, liberando referencias y ayudándote a gestionar memoria.&lt;/p&gt;</summary><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
@@ -2332,10 +2333,9 @@ Related help topics: TRUTHVALUE
 &lt;span class="mi"&gt;4&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En este ejemplo, el ciclo &lt;code&gt;for&lt;/code&gt; itera sobre una lista de números, y &lt;code&gt;print(number)&lt;/code&gt; se ejecuta para cada número en la lista.&lt;/p&gt;
-&lt;aside class="note"&gt;
-Para aprender más sobre los ciclos &lt;code&gt;for&lt;/code&gt; revisa el tutorial &lt;a href="https://pythonscouts.com/ciclos-for-python/"&gt;Python a través de ejemplos: Ciclos o bucles &lt;code&gt;for&lt;/code&gt;&lt;/a&gt;.
-&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;Para aprender más sobre los ciclos &lt;code&gt;for&lt;/code&gt; revisa el tutorial &lt;a href="https://pythonscouts.com/ciclos-for-python/"&gt;Python a través de ejemplos: Ciclos o bucles &lt;code&gt;for&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
 &lt;p&gt;También puedes iterar sobre los caracteres de una &lt;a href="https://pythonscouts.com/valores-python/#valores-de-cadena-de-caracteres"&gt;cadena&lt;/a&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;letter&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Python&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;letter&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -2456,10 +2456,9 @@ Para aprender más sobre los ciclos &lt;code&gt;for&lt;/code&gt; revisa el tutor
     &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;body&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;return_value&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;aside class="note"&gt;
-Los corchetes indican elementos opcionales. De modo similar, los corchetes angulares denotan elementos requerido.
-&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;Los corchetes indican elementos opcionales. De modo similar, los corchetes angulares denotan elementos requerido.&lt;/p&gt;
+&lt;/div&gt;
 &lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
 &lt;p&gt;Aquí tienes algunos ejemplos de cómo puedes usar &lt;code&gt;def&lt;/code&gt; para definir tus funciones:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;greet&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
@@ -2667,10 +2666,9 @@ Los corchetes indican elementos opcionales. De modo similar, los corchetes angul
 &lt;span class="n"&gt;Buenos&lt;/span&gt; &lt;span class="n"&gt;días&lt;/span&gt; &lt;span class="n"&gt;Pythonista&lt;/span&gt;&lt;span class="err"&gt;!&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En este ejemplo, el argumento &lt;code&gt;informal&lt;/code&gt; tiene un valor por defecto igual a &lt;code&gt;True&lt;/code&gt;. Esto significa que cuando llamas la función sin pasarle un valor explícito a &lt;code&gt;informal&lt;/code&gt; obtienes un saludo informal. Observa que cuando llamas a la función con &lt;code&gt;informal&lt;/code&gt; igual a &lt;a href="https://pythonscouts.com/python-false/"&gt;&lt;code&gt;False&lt;/code&gt;&lt;/a&gt; (el valor de verdad opuesto a &lt;code&gt;True&lt;/code&gt;), entonces el saludo se vuelve formal porque se ejecuta la cláusula &lt;code&gt;else&lt;/code&gt; de la condicional.&lt;/p&gt;
-&lt;aside class="note"&gt;
-En Python, es una práctica común y más idiomática no comparar explícitamente las condiciones con &lt;code&gt;True&lt;/code&gt; o &lt;code&gt;False&lt;/code&gt;. En lugar de &lt;code&gt;if informal == True&lt;/code&gt;, simplemente puedes usar &lt;code&gt;if informal&lt;/code&gt;. Esto hace que tu código sea más limpio y conciso.
-&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;En Python, es una práctica común y más idiomática no comparar explícitamente las condiciones con &lt;code&gt;True&lt;/code&gt; o &lt;code&gt;False&lt;/code&gt;. En lugar de &lt;code&gt;if informal == True&lt;/code&gt;, simplemente puedes usar &lt;code&gt;if informal&lt;/code&gt;. Esto hace que tu código sea más limpio y conciso.&lt;/p&gt;
+&lt;/div&gt;
 &lt;h2 id="uso-de-true"&gt;Uso de &lt;code&gt;True&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;Los casos de uso más comunes de la palabra clave &lt;code&gt;True&lt;/code&gt; incluyen los siguientes:&lt;/p&gt;
 &lt;ul&gt;
@@ -2712,10 +2710,9 @@ En Python, es una práctica común y más idiomática no comparar explícitament
 &lt;span class="n"&gt;Hola&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Ana&lt;/span&gt;&lt;span class="err"&gt;!&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En este segundo ejemplo, la función &lt;code&gt;greet()&lt;/code&gt; acepta el argumento &lt;code&gt;name&lt;/code&gt; cuyo valor por defecto es &lt;code&gt;None&lt;/code&gt;. Si llamas a la función sin argumentos, entonces obtienes &lt;a href="https://pythonscouts.com/python-hola-mundo/"&gt;&lt;code&gt;Hola, mundo!&lt;/code&gt;&lt;/a&gt; como respuesta. Si le pasas un nombre, la función saluda a la persona deseada.&lt;/p&gt;
-&lt;aside class="note"&gt;
-En Python, las funciones sin valor de retorno explícito retornan &lt;code&gt;None&lt;/code&gt;. Para visualizar el valor &lt;code&gt;None&lt;/code&gt; en una sesión interactiva, puedes emplear la función integrada &lt;code&gt;print()&lt;/code&gt;.
-&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;En Python, las funciones sin valor de retorno explícito retornan &lt;code&gt;None&lt;/code&gt;. Para visualizar el valor &lt;code&gt;None&lt;/code&gt; en una sesión interactiva, puedes emplear la función integrada &lt;code&gt;print()&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
 &lt;h2 id="uso-de-none"&gt;Uso de &lt;code&gt;None&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;Los casos de uso más comunes de la palabra clave &lt;code&gt;None&lt;/code&gt; incluyen los siguientes:&lt;/p&gt;
 &lt;ul&gt;
@@ -2932,10 +2929,9 @@ En Python, las funciones sin valor de retorno explícito retornan &lt;code&gt;No
 &lt;span class="n"&gt;puesto&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Programador&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Ambas maneras de iterar sobre las claves son equivalentes. La primera es más comúnmente usada y ligeramente más eficiente. Sin embargo, la segunda puede ser más explícita en algunas situaciones.&lt;/p&gt;
-&lt;aside class="note"&gt;
-El método &lt;code&gt;.keys()&lt;/code&gt; es redundante en este contexto. Iterar directamente sobre el diccionario es la manera preferida en la mayoría de los casos. Este método solo es útil si necesitas específicamente un objeto de &lt;a href="https://docs.python.org/es/3.13/library/stdtypes.html#dict-views" target="_blank"&gt;vista de claves&lt;/a&gt;.
-&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;El método &lt;code&gt;.keys()&lt;/code&gt; es redundante en este contexto. Iterar directamente sobre el diccionario es la manera preferida en la mayoría de los casos. Este método solo es útil si necesitas específicamente un objeto de &lt;a href="https://docs.python.org/es/3.13/library/stdtypes.html#dict-views"&gt;vista de claves&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
 &lt;p&gt;Para iterar sobre los valores, puedes emplear el método &lt;code&gt;.values()&lt;/code&gt; como se muestra en el siguiente ejemplo:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;person&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;values&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -3186,10 +3182,9 @@ El método &lt;code&gt;.keys()&lt;/code&gt; es redundante en este contexto. Iter
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;aside class="note"&gt;
-Usar &lt;code&gt;venv&lt;/code&gt; como nombre de un entorno virtual de Python es una práctica común. Sin embargo, no es obligatorio hacerlo, puedes emplear el nombre que desees.
-&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;Usar &lt;code&gt;venv&lt;/code&gt; como nombre de un entorno virtual de Python es una práctica común. Sin embargo, no es obligatorio hacerlo, puedes emplear el nombre que desees.&lt;/p&gt;
+&lt;/div&gt;
 &lt;h2 id="crear-un-entorno-virtual-python-en-macos"&gt;Crear un entorno virtual Python en macOS&lt;/h2&gt;
 &lt;p&gt;En macOS, para crear un entorno virtual de Python, solo necesitas tener Python correctamente &lt;a href="https://pythonscouts.com/instalar-python-macos/"&gt;instalado&lt;/a&gt; en tu sistema. Una vez instalado, puedes seguir los siguientes pasos para crear un entorno virtual de Python:&lt;/p&gt;
 &lt;ol&gt;
@@ -3254,10 +3249,9 @@ Usar &lt;code&gt;venv&lt;/code&gt; como nombre de un entorno virtual de Python e
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;aside class="note"&gt;
-En Ubuntu, &lt;code&gt;pip&lt;/code&gt; tampoco viene instalado por defecto. Para poder usar esta herramienta, debes instalarla con el comando &lt;code&gt;sudo apt install python3-pip&lt;/code&gt;.
-&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;En Ubuntu, &lt;code&gt;pip&lt;/code&gt; tampoco viene instalado por defecto. Para poder usar esta herramienta, debes instalarla con el comando &lt;code&gt;sudo apt install python3-pip&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
 &lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
 &lt;p&gt;En Python, las buenas prácticas recomiendan el empleo de entornos virtuales dedicados para cada uno de tus proyectos. Siguiendo los pasos de esta guía, puedes crear y activar entornos virtuales de Python de manera eficiente en el sistema operativo que estés usando en tu computadora.&lt;/p&gt;</content><category term="Guías"/><category term="python"/></entry><entry><title>Iniciando con PySide6 para desarrollo GUI</title><link href="https://pythonscouts.com/iniciando-con-pyside6-python/" rel="alternate"/><published>2025-01-21T21:40:00+01:00</published><updated>2025-01-21T21:40:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-01-21:/iniciando-con-pyside6-python/</id><summary type="html">&lt;p&gt;En Python, PySide6 es una biblioteca que proporciona el enlace oficial de Python con Qt, que es un framework de desarrollo de aplicaciones de interfaz gráfica de usuario (GUI).&lt;/p&gt;</summary><content type="html">&lt;p&gt;Para desarrollar este tipo de aplicaciones en Python, puedes emplear una amplia variedad de bibliotecas y frameworks, incluyendo &lt;a href="https://docs.python.org/3/library/tkinter.html"&gt;Tkinter&lt;/a&gt;, &lt;a href="https://realpython.com/python-gui-with-wxpython/"&gt;wxPython&lt;/a&gt;, &lt;a href="https://www.riverbankcomputing.com/software/pyqt/intro"&gt;PyQt&lt;/a&gt;, entre otras. Sin embargo, &lt;a href="https://wiki.qt.io/Qt_for_Python"&gt;PySide6&lt;/a&gt; es una de las bibliotecas más populares y sólidas disponibles.&lt;/p&gt;
 &lt;p&gt;En este tutorial, aprenderás los conceptos básicos para construir aplicaciones GUI usando Python y PySide6.&lt;/p&gt;
@@ -3413,10 +3407,9 @@ PS&amp;gt; venv\Scripts\activate.bat
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Botones en PySide6&lt;/em&gt;&lt;/div&gt;
 
 &lt;p&gt;Botones como estos son quizás los widgets más utilizados en cualquier GUI. Cuando alguien hace clic en ellos, tu aplicación ordena a la computadora realizar acciones. Así es como puedes ejecutar cálculos cuando un usuario hace clic en un botón.&lt;/p&gt;
-&lt;aside class="note"&gt;
-En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; que representa un gestor de disposición que permite organizar los widgets con una orientación vertical. Más sobre gestores de disposición en un momento.
-&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; que representa un gestor de disposición que permite organizar los widgets con una orientación vertical. Más sobre gestores de disposición en un momento.&lt;/p&gt;
+&lt;/div&gt;
 &lt;h3 id="campos-de-entrada-de-texto"&gt;Campos de entrada de texto&lt;/h3&gt;
 &lt;p&gt;Los &lt;strong&gt;campos de entrada de texto&lt;/strong&gt; son widgets comunes también. Estos widgets te permite ingresar una sola línea de texto y puedes crearlos con la clase &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QLineEdit.html"&gt;&lt;code&gt;QLineEdit&lt;/code&gt;&lt;/a&gt;. Los campos de entrada de texto son útiles cuando necesitas obtener información del usuario como texto simple.&lt;/p&gt;
 &lt;p&gt;Para un ejemplo, crea un archivo &lt;code&gt;line_edits.py&lt;/code&gt; y escribe el siguiente código en él:&lt;/p&gt;
@@ -4096,8 +4089,9 @@ En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; 
 &lt;span class="go"&gt;Python 3.10.12&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Este comando imprime la versión de Python que tienes instalada por defecto. Con esto has concluido la instalación de Python usando el gestor de paquetes de tu distribución Linux. Ahora estás listo para escribir tu &lt;a href="https://pythonscouts.com/python-hola-mundo/"&gt;primer programa&lt;/a&gt;.&lt;/p&gt;
-&lt;aside class="note"&gt;Es importante que sepas que la versión de Python disponible en los repositorios oficiales de Debian, Ubuntu y derivados puede estar relativamente actualizada con respecto a las últimas versiones liberadas. Para instalar la última versión de Python, deberás compilarla desde sus &lt;a href="https://www.python.org/downloads/source/" target="_blank"&gt;fuentes&lt;/a&gt; o emplear herramientas como &lt;a href="https://github.com/pyenv/pyenv" target="_blank"&gt;&lt;code&gt;pyenv&lt;/code&gt;&lt;/a&gt; que te permiten gestionar varias versiones de Python en tu computadora.&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;Es importante que sepas que la versión de Python disponible en los repositorios oficiales de Debian, Ubuntu y derivados puede estar relativamente actualizada con respecto a las últimas versiones liberadas. Para instalar la última versión de Python, deberás compilarla desde sus &lt;a href="https://www.python.org/downloads/source/"&gt;fuentes&lt;/a&gt; o emplear herramientas como &lt;a href="https://github.com/pyenv/pyenv"&gt;&lt;code&gt;pyenv&lt;/code&gt;&lt;/a&gt; que te permiten gestionar varias versiones de Python en tu computadora.&lt;/p&gt;
+&lt;/div&gt;
 &lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
 &lt;p&gt;Instalar Python en tu ordenador es el primer paso en tu empeño de aprender a programar con el lenguaje. Nuevamente, recuerda que los pasos a seguir para completar la instalación en tu distribución Linux basada en Debian o Ubuntu son los siguientes:&lt;/p&gt;
 &lt;ol&gt;
@@ -4717,10 +4711,9 @@ PS&amp;gt; venv\Scripts\activate.bat
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Botones en PyQt&lt;/em&gt;&lt;/div&gt;
 
 &lt;p&gt;Botones como estos son quizás los widgets más utilizados en cualquier GUI. Cuando alguien hace clic en ellos, tu aplicación ordena a la computadora realizar acciones. Así es como puedes ejecutar cálculos cuando un usuario hace clic en un botón.&lt;/p&gt;
-&lt;aside class="note"&gt;
-    En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; que representa un gestor de disposición que permite organizar los widgets con una orientación vertical. Más sobre gestores de disposición en un momento.
-&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; que representa un gestor de disposición que permite organizar los widgets con una orientación vertical. Más sobre gestores de disposición en un momento.&lt;/p&gt;
+&lt;/div&gt;
 &lt;h3 id="campos-de-entrada-de-texto"&gt;Campos de entrada de texto&lt;/h3&gt;
 &lt;p&gt;Los &lt;strong&gt;campos de entrada de texto&lt;/strong&gt; son widgets comunes también. Estos widgets te permite ingresar una sola línea de texto y puedes crearlos con la clase &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qlineedit.html"&gt;&lt;code&gt;QLineEdit&lt;/code&gt;&lt;/a&gt;. Los campos de entrada de texto son útiles cuando necesitas obtener información del usuario como texto simple.&lt;/p&gt;
 &lt;p&gt;Para un ejemplo, crea un archivo &lt;code&gt;line_edits.py&lt;/code&gt; y escribe el siguiente código:&lt;/p&gt;
@@ -5272,10 +5265,9 @@ PS&amp;gt; venv\Scripts\activate.bat
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Haciendo una analogía puedes comparar el MVC con un restaurante. La carta sería la vista que contiene la información sobre el menú, el mesero sería el controlador que recibe la orden del cliente y se la transmite al chef quien representa al modelo y se encarga de confeccionar el plato solicitado por el cliente.&lt;/p&gt;
-&lt;aside class="note"&gt;
-En muchas implementaciones de MVC, especialmente en aplicaciones web, las acciones del usuario no son directamente manejadas por la vista, sino que pasan primero por el controlador. La vista debería ser lo más pasiva posible, simplemente renderizando lo que el controlador le proporciona. El controlador debe ser quien maneje las acciones del usuario y decida qué hacer con ellas, incluyendo actualizar el modelo o cambiar lo que se muestra en la vista.
-&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;En muchas implementaciones de MVC, especialmente en aplicaciones web, las acciones del usuario no son directamente manejadas por la vista, sino que pasan primero por el controlador. La vista debería ser lo más pasiva posible, simplemente renderizando lo que el controlador le proporciona. El controlador debe ser quien maneje las acciones del usuario y decida qué hacer con ellas, incluyendo actualizar el modelo o cambiar lo que se muestra en la vista.&lt;/p&gt;
+&lt;/div&gt;
 &lt;p&gt;Una vez que el plato está listo, el chef se lo hace saber al mesero, quien finalmente sirve la comida al cliente en forma de un plato terminado que sería la nueva representación de la vista.&lt;/p&gt;
 &lt;p&gt;El chef y el cliente no tienen contacto directo, pues todo es gestionado por el mesero. Este es un principio básico de este patrón de diseño.&lt;/p&gt;
 &lt;h2 id="que-responsabilidades-tiene-cada-componente-del-patron-mvc"&gt;¿Qué responsabilidades tiene cada componente del patrón MVC?&lt;/h2&gt;
@@ -5456,10 +5448,9 @@ En muchas implementaciones de MVC, especialmente en aplicaciones web, las accion
 &lt;span class="kc"&gt;False&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Todas las expresiones de comparación retornan un valor lógico, ya sea &lt;code&gt;True&lt;/code&gt; o &lt;code&gt;False&lt;/code&gt;.&lt;/p&gt;
-&lt;aside class="note"&gt;
-Los ejemplos anteriores comparan valores numéricos, sin embargo, también es posible comparar cadenas, tuplas, listas y cualquier otro objeto que soporte los operadores de comparación.
-&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;Los ejemplos anteriores comparan valores numéricos, sin embargo, también es posible comparar cadenas, tuplas, listas y cualquier otro objeto que soporte los operadores de comparación.&lt;/p&gt;
+&lt;/div&gt;
 &lt;h2 id="logicas-o-booleanas"&gt;Lógicas o booleanas&lt;/h2&gt;
 &lt;p&gt;Se pueden formar expresiones lógicas o booleanas empleando los &lt;a href="https://pythonscouts.com/operadores-python/#logicos"&gt;operadores lógicos&lt;/a&gt; &lt;code&gt;and&lt;/code&gt;, &lt;code&gt;or&lt;/code&gt;, y &lt;code&gt;not&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
@@ -5995,10 +5986,9 @@ Los ejemplos anteriores comparan valores numéricos, sin embargo, también es po
 &lt;/div&gt;
 &lt;h2 id="convertir-la-lista-en-un-conjunto-y-comprobar-si-contiene-un-unico-elemento"&gt;Convertir la lista en un conjunto y comprobar si contiene un único elemento&lt;/h2&gt;
 &lt;p&gt;Una vía rápida para determinar si todos los elementos de una lista son iguales es convertir la lista en un conjunto usando la clase &lt;a href="https://docs.python.org/es/3/library/functions.html#func-set"&gt;&lt;code&gt;set()&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
-&lt;aside class="note"&gt;
-Como premisa y en aras de la simplicidad, asumiremos que se trata de una lista no vacía que contiene elementos del mismo tipo de dato, ya sea números, cadenas, u otros.
-&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;Como premisa y en aras de la simplicidad, asumiremos que se trata de una lista no vacía que contiene elementos del mismo tipo de dato, ya sea números, cadenas, u otros.&lt;/p&gt;
+&lt;/div&gt;
 &lt;p&gt;Los conjuntos son tipos de datos que no pueden contener elementos repetidos. Por tanto, si conviertes tu lista en un conjunto y terminas con un conjunto de un único elemento, entonces puedes concluir que todos los elementos de tu lista son iguales:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;numbers&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;numbers&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
@@ -6023,10 +6013,9 @@ Como premisa y en aras de la simplicidad, asumiremos que se trata de una lista n
 &lt;p&gt;Esta técnica para determinar si todos los elementos de una lista son iguales emplea una expresión generadora que produce &lt;a href="https://pythonscouts.com/valores-python/"&gt;valores&lt;/a&gt; booleanos que resultan de evaluar la &lt;a href="https://pythonscouts.com/expresiones-python/"&gt;expresión&lt;/a&gt; &lt;code&gt;item == letters[0]&lt;/code&gt;. Luego, &lt;code&gt;all()&lt;/code&gt; verifica si todos los elementos resultantes son &lt;code&gt;True&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="ordenar-la-lista-y-comparar-el-primer-y-el-ultimo-elemento"&gt;Ordenar la lista y comparar el primer y el último elemento&lt;/h2&gt;
 &lt;p&gt;Otra manera de saber si todos los elementos de una lista son iguales es ordenar la lista y comparar el primer y el último elemento.&lt;/p&gt;
-&lt;aside class="note"&gt;
-Debes saber que esta técnica puedes ser muy ineficiente especialmente cuando tienes una lista muy larga, pues el algoritmo de ordenamiento puede tomar un tiempo considerable. Además, ordenar la lista modifica el orden original de los elementos, lo cual puede no ser deseado.
-&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;Debes saber que esta técnica puedes ser muy ineficiente especialmente cuando tienes una lista muy larga, pues el algoritmo de ordenamiento puede tomar un tiempo considerable. Además, ordenar la lista modifica el orden original de los elementos, lo cual puede no ser deseado.&lt;/p&gt;
+&lt;/div&gt;
 &lt;p&gt;Considera los siguientes ejemplos:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;numbers&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;numbers&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sort&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
@@ -6076,10 +6065,9 @@ Debes saber que esta técnica puedes ser muy ineficiente especialmente cuando ti
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;BASE_PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;/proyectos&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En estos ejemplos, has creado algunas variables mediante la asignación de valores numéricos o de cadena de caracteres.&lt;/p&gt;
-&lt;aside class="note"&gt;
-Como regla general, emplearemos nombres de constantes en idioma inglés puesto que este es el idioma base para la programación actualmente.
-&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;Como regla general, emplearemos nombres de constantes en idioma inglés puesto que este es el idioma base para la programación actualmente.&lt;/p&gt;
+&lt;/div&gt;
 &lt;p&gt;A partir de este momento, puedes usar los nombres de estas constantes cuando quieras referirte a sus respectivos valores en tu código:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;PI&lt;/span&gt;
 &lt;span class="mf"&gt;3.1416&lt;/span&gt;
@@ -6096,10 +6084,9 @@ Como regla general, emplearemos nombres de constantes en idioma inglés puesto q
 &lt;p&gt;Al igual que las variables, las constantes no tienen un tipo de dato estático. Cuando se habla del tipo de dato de una constante, en realidad se trata del tipo de dato del objeto al que la constante apunta, ya sea un valor numérico o cualquier otro tipo de valor. Python determina este tipo de dato dinámicamente.&lt;/p&gt;
 &lt;h2 id="nombres-de-constantes"&gt;Nombres de constantes&lt;/h2&gt;
 &lt;p&gt;Los nombres de constantes en Python pueden tener cualquier longitud y consistir en letras mayúsculas (A-Z), dígitos (0-9) y el carácter de subrayado o guión bajo (&lt;code&gt;_&lt;/code&gt;). La única restricción es que, aunque un nombre de constante puede contener dígitos, el primer carácter del nombre no puede ser un dígito.&lt;/p&gt;
-&lt;aside class="note"&gt;
-Para una comprensión más profunda de las convenciones de estilo en Python, puedes consultar la &lt;a href="https://www.python.org/dev/peps/pep-0008/" target="_blank"&gt;Guía de Estilo para el Código Python (PEP 8)&lt;/a&gt;.
-&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;Para una comprensión más profunda de las convenciones de estilo en Python, puedes consultar la &lt;a href="https://www.python.org/dev/peps/pep-0008/"&gt;Guía de Estilo para el Código Python (PEP 8)&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
 &lt;p&gt;El uso de mayúsculas sostenidas es una convención y no una restricción del lenguaje. Python no te restringe en este sentido. Es decir, técnicamente, puedes nombrar una constante usando minúsculas, pero estarías violando la convención generalmente aceptada.&lt;/p&gt;
 &lt;h2 id="ventajas-de-usar-constantes"&gt;Ventajas de usar constantes&lt;/h2&gt;
 &lt;p&gt;Algunas ventajas de usar constantes en lugar de sus valores directamente en tu código incluyen:&lt;/p&gt;
@@ -6150,10 +6137,9 @@ Para una comprensión más profunda de las convenciones de estilo en Python, pue
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;message&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Bienvenidos a pythonscouts.com&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En estos ejemplos, has creado algunas variables mediante la asignación de &lt;a href="https://pythonscouts.com/valores-python/"&gt;valores&lt;/a&gt; numéricos o de cadena de caracteres.&lt;/p&gt;
-&lt;aside class="note"&gt;
-Como regla general, emplearemos nombres de variables en idioma inglés puesto que este es el idioma base para la programación actualmente.
-&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;Como regla general, emplearemos nombres de variables en idioma inglés puesto que este es el idioma base para la programación actualmente.&lt;/p&gt;
+&lt;/div&gt;
 &lt;p&gt;A partir de este momento, puedes usar el nombre de estas variables cuando quieras referirte al valor asignado en tu código:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt;
 &lt;span class="mi"&gt;42&lt;/span&gt;
@@ -6451,10 +6437,9 @@ Hola, Mundo!
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Página de descargas de Python para Windows&lt;/em&gt;&lt;/div&gt;
 
 &lt;p&gt;Una vez en la página de descargas, es recomendable que descargues la versión más reciente de Python que aparecerá como la primera opción. De esta manera, tendrás acceso a las últimas novedades del lenguaje y estarás al día con las correcciones de errores y los parches de seguridad.&lt;/p&gt;
-&lt;aside class="note"&gt;
-En esta guía, emplearás el instalador ejecutable (&lt;code&gt;.exe&lt;/code&gt;) que puedes obtener haciendo click en el botón amarillo.
-&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;En esta guía, emplearás el instalador ejecutable (&lt;code&gt;.exe&lt;/code&gt;) que puedes obtener haciendo click en el botón amarillo.&lt;/p&gt;
+&lt;/div&gt;
 &lt;p&gt;Luego de estas consideraciones, has click en la versión de tu preferencia para comenzar la descarga del instalador de Python. Concluida la descarga, estás listo para el próximo paso.&lt;/p&gt;
 &lt;h3 id="paso-2-ejecutar-el-instalador-de-python"&gt;Paso 2: Ejecutar el instalador de Python&lt;/h3&gt;
 &lt;p&gt;Ejecuta el instalador de Python, ya sea desde tu carpeta de descargas o desde tu navegador de Internet. Al ejecutar el programa, aparecerá la ventana siguiente en tu pantalla:&lt;/p&gt;
@@ -6477,10 +6462,9 @@ En esta guía, emplearás el instalador ejecutable (&lt;code&gt;.exe&lt;/code&gt
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Instalador de Python, segunda ventana - Características Opcionales&lt;/em&gt;&lt;/div&gt;
 
 &lt;p&gt;En esta ventana, todas las opciones están seleccionadas por defecto, lo cual es recomendable. Sin embargo, si no tienes pensado emplear IDLE en tu proceso de aprendizaje y desarrollo, entonces puedes desmarcar esta opción. El resto de las opciones deberías mantenerlas seleccionadas para evitar futuros problemas.&lt;/p&gt;
-&lt;aside class="note"&gt;
-IDLE es el entorno de desarrollo integrado (IDE) por defecto de Python. Este programa provee una interfaz gráfica para trabajo con el lenguaje y su intérprete. Como regla general, está incluido en el instalador oficial en todas sus versiones.
-&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;IDLE es el entorno de desarrollo integrado (IDE) por defecto de Python. Este programa provee una interfaz gráfica para trabajo con el lenguaje y su intérprete. Como regla general, está incluido en el instalador oficial en todas sus versiones.&lt;/p&gt;
+&lt;/div&gt;
 &lt;p&gt;Una vez que hayas decidido las característica opcionales que deseas, puedes hacer click en el botón &lt;em&gt;Next&lt;/em&gt; (Siguiente) para continuar. Te aparecerá la siguiente ventana:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/instalar-python-windows/instalador-python-tercera-ventana-opciones-avanzadas.png" class="mx-auto d-block mt-2" alt="Instalador de Python, tercera ventana - Opciones Avanzadas"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Instalador de Python, tercera ventana - Opciones Avanzadas&lt;/em&gt;&lt;/div&gt;
@@ -6582,10 +6566,9 @@ Python 3.11.5
 
 &lt;p&gt;Una vez en la página de descargas, es recomendable que descargues la versión más reciente que aparecerá como la primera opción. De esta manera, tendrás acceso a las últimas novedades del lenguaje y estarás al día con las correcciones de errores y los parches de seguridad.&lt;/p&gt;
 &lt;p&gt;También puedes seleccionar una versión más antigua si lo deseas. Para esto, desplázate hacia abajo en la página de descargas e identifica la versión deseada.&lt;/p&gt;
-&lt;aside class="note"&gt;
-En esta guía, emplearás el instalador universal (&lt;code&gt;.pkg&lt;/code&gt;) de 64-bit para macOS 10.9 o superior. Este instalador provee la versión 3.11.5 de Python. Puedes descargarlo directamente haciendo click en el botón amarillo.
-&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;En esta guía, emplearás el instalador universal (&lt;code&gt;.pkg&lt;/code&gt;) de 64-bit para macOS 10.9 o superior. Este instalador provee la versión 3.11.5 de Python. Puedes descargarlo directamente haciendo click en el botón amarillo.&lt;/p&gt;
+&lt;/div&gt;
 &lt;p&gt;Luego de estas consideraciones, has click en la versión de tu preferencia para comenzar la descarga del instalador de Python. Una vez concluida la descarga, estás listo para el próximo paso.&lt;/p&gt;
 &lt;h2 id="paso-2-ejecutar-el-instalador-de-python"&gt;Paso 2: Ejecutar el instalador de Python&lt;/h2&gt;
 &lt;p&gt;Ejecuta el instalador de Python ya sea desde tu carpeta de descargas, desde tu navegador, o desde el dock de tu escritorio macOS. Al ejecutar el programa, aparecerá la ventana siguiente en tu pantalla:&lt;/p&gt;
@@ -6627,10 +6610,9 @@ En esta guía, emplearás el instalador universal (&lt;code&gt;.pkg&lt;/code&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Instalador de Python, quinta ventana: Instalación personalizada, opciones&lt;/em&gt;&lt;/div&gt;
 
 &lt;p&gt;Si no tienes pensado emplear IDLE en tu proceso de aprendizaje y desarrollo, entonces puedes desmarcar esta opción. El resto de las opciones son recomendables para evitar futuros problemas, así que no deberías desmarcarlas.&lt;/p&gt;
-&lt;aside class="note"&gt;
-IDLE es el entorno de desarrollo integrado (IDE) por defecto de Python. Este programa provee una interfaz gráfica para trabajo con el lenguaje y su intérprete. Como regla general, está incluido en el instalador oficial en todas sus versiones.
-&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;IDLE es el entorno de desarrollo integrado (IDE) por defecto de Python. Este programa provee una interfaz gráfica para trabajo con el lenguaje y su intérprete. Como regla general, está incluido en el instalador oficial en todas sus versiones.&lt;/p&gt;
+&lt;/div&gt;
 &lt;p&gt;Una vez que hayas personalizado tu instalación, puedes hacer click en el botón &lt;em&gt;Install&lt;/em&gt; para comenzar. Deberás introducir tu nombre de usuario y tu contraseña. Ten en cuenta que debes tener privilegios administrativos para concluir la instalación.&lt;/p&gt;
 &lt;p&gt;El proceso de instalación comenzará:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/instalar-python-macos/instalador-python-sexta-ventana-instalacion.png" class="img-fluid mt-2" alt="Instalador de Python, sexta ventana: Instalación"&gt;&lt;/p&gt;

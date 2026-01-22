@@ -52,8 +52,8 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://pythonscouts.com/iniciando-con-kivy-python/">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202601221954">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202601221954">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202601222050">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202601222050">
     <!-- Preconnect to CDNs -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
@@ -66,9 +66,9 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202601221954">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202601222050">
     <!-- Stork Search - Deferred -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202601221954">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202601222050">
 
 
     <!-- Article tags -->
@@ -112,13 +112,13 @@
     <meta name="twitter:image:alt" content="Iniciando con Kivy para desarrollo GUI">
 
     <!-- Custom CSS for article -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202601221954">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202601222050">
 </head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
 <script
-    src="https://pythonscouts.com/theme/js/analytics.js?v=202601221954"
+    src="https://pythonscouts.com/theme/js/analytics.js?v=202601222050"
     defer
     data-analytics-id="G-R3C5PFSQ1S">
 </script>
@@ -657,8 +657,9 @@ PS&gt; venv\Scripts\Activate.ps1
 <p>Como puedes ver, el layout renderiza los botones en las posiciones correspondientes sin necesidad de calcular las coordenadas manualmente. Al redimensionar la ventana, notarás que los botones se mantienen en sus posiciones.</p>
 <h2 id="conectando-eventos-con-callbacks-en-kivy">Conectando eventos con callbacks en Kivy</h2>
 <p>En Kivy, la mayoría de los widgets te permiten vincular eventos y propiedades con funciones de callback mediante el método <code>.bind()</code>. Esta es la base para reaccionar a eventos del usuario, como clics, selecciones y entradas de texto.</p>
-<aside class="note">Es importante que sepas que no es lo mismo enlazar un evento que enlazar una propiedad. Por ejemplo, <code>on_press</code> (evento) suele llamar un callback con un solo argumento: la instancia del widget. En contraste, <code>.text</code>, <code>.active</code> o <code>.value</code> (propiedades) invocan un callback con dos argumentos: la instancia y el nuevo valor.</aside>
-
+<div class="admonition note">
+<p>Es importante que sepas que no es lo mismo enlazar un evento que enlazar una propiedad. Por ejemplo, <code>on_press</code> (evento) suele llamar un callback con un solo argumento: la instancia del widget. En contraste, <code>.text</code>, <code>.active</code> o <code>.value</code> (propiedades) invocan un callback con dos argumentos: la instancia y el nuevo valor.</p>
+</div>
 <h3 id="enlazar-eventos">Enlazar eventos</h3>
 <p>Cuando quieres ejecutar una acción al pulsar un botón, puedes enlazar el evento <code>on_press</code> (al presionar) u <code>on_release</code> (al soltar) a una función o método. En la función (callback), el parámetro <code>instance</code> te permite identificar qué botón disparó o generó el evento.</p>
 <p>Considera el siguiente ejemplo:</p>
@@ -873,12 +874,12 @@ RootWidget:
     <!-- JS Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
     <!-- Stork and site scripts -->
-    <script src="https://pythonscouts.com/theme/js/stork.js?v=202601221954" defer></script>
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202601222050" defer></script>
     <script
-        src="https://pythonscouts.com/theme/js/site.js?v=202601221954"
+        src="https://pythonscouts.com/theme/js/site.js?v=202601222050"
         defer
         data-stork-name="sitesearch"
-        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202601221954"
+        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202601222050"
         data-stork-index="https://pythonscouts.com/search-index.st">
     </script>
 

@@ -384,8 +384,9 @@ PS&amp;gt; venv\Scripts\Activate.ps1
 &lt;p&gt;Como puedes ver, el layout renderiza los botones en las posiciones correspondientes sin necesidad de calcular las coordenadas manualmente. Al redimensionar la ventana, notarás que los botones se mantienen en sus posiciones.&lt;/p&gt;
 &lt;h2 id="conectando-eventos-con-callbacks-en-kivy"&gt;Conectando eventos con callbacks en Kivy&lt;/h2&gt;
 &lt;p&gt;En Kivy, la mayoría de los widgets te permiten vincular eventos y propiedades con funciones de callback mediante el método &lt;code&gt;.bind()&lt;/code&gt;. Esta es la base para reaccionar a eventos del usuario, como clics, selecciones y entradas de texto.&lt;/p&gt;
-&lt;aside class="note"&gt;Es importante que sepas que no es lo mismo enlazar un evento que enlazar una propiedad. Por ejemplo, &lt;code&gt;on_press&lt;/code&gt; (evento) suele llamar un callback con un solo argumento: la instancia del widget. En contraste, &lt;code&gt;.text&lt;/code&gt;, &lt;code&gt;.active&lt;/code&gt; o &lt;code&gt;.value&lt;/code&gt; (propiedades) invocan un callback con dos argumentos: la instancia y el nuevo valor.&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;Es importante que sepas que no es lo mismo enlazar un evento que enlazar una propiedad. Por ejemplo, &lt;code&gt;on_press&lt;/code&gt; (evento) suele llamar un callback con un solo argumento: la instancia del widget. En contraste, &lt;code&gt;.text&lt;/code&gt;, &lt;code&gt;.active&lt;/code&gt; o &lt;code&gt;.value&lt;/code&gt; (propiedades) invocan un callback con dos argumentos: la instancia y el nuevo valor.&lt;/p&gt;
+&lt;/div&gt;
 &lt;h3 id="enlazar-eventos"&gt;Enlazar eventos&lt;/h3&gt;
 &lt;p&gt;Cuando quieres ejecutar una acción al pulsar un botón, puedes enlazar el evento &lt;code&gt;on_press&lt;/code&gt; (al presionar) u &lt;code&gt;on_release&lt;/code&gt; (al soltar) a una función o método. En la función (callback), el parámetro &lt;code&gt;instance&lt;/code&gt; te permite identificar qué botón disparó o generó el evento.&lt;/p&gt;
 &lt;p&gt;Considera el siguiente ejemplo:&lt;/p&gt;
@@ -676,10 +677,9 @@ PS&amp;gt; venv\Scripts\activate.bat
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Botones en PySide6&lt;/em&gt;&lt;/div&gt;
 
 &lt;p&gt;Botones como estos son quizás los widgets más utilizados en cualquier GUI. Cuando alguien hace clic en ellos, tu aplicación ordena a la computadora realizar acciones. Así es como puedes ejecutar cálculos cuando un usuario hace clic en un botón.&lt;/p&gt;
-&lt;aside class="note"&gt;
-En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; que representa un gestor de disposición que permite organizar los widgets con una orientación vertical. Más sobre gestores de disposición en un momento.
-&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; que representa un gestor de disposición que permite organizar los widgets con una orientación vertical. Más sobre gestores de disposición en un momento.&lt;/p&gt;
+&lt;/div&gt;
 &lt;h3 id="campos-de-entrada-de-texto"&gt;Campos de entrada de texto&lt;/h3&gt;
 &lt;p&gt;Los &lt;strong&gt;campos de entrada de texto&lt;/strong&gt; son widgets comunes también. Estos widgets te permite ingresar una sola línea de texto y puedes crearlos con la clase &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QLineEdit.html"&gt;&lt;code&gt;QLineEdit&lt;/code&gt;&lt;/a&gt;. Los campos de entrada de texto son útiles cuando necesitas obtener información del usuario como texto simple.&lt;/p&gt;
 &lt;p&gt;Para un ejemplo, crea un archivo &lt;code&gt;line_edits.py&lt;/code&gt; y escribe el siguiente código en él:&lt;/p&gt;
@@ -1783,10 +1783,9 @@ PS&amp;gt; venv\Scripts\activate.bat
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Botones en PyQt&lt;/em&gt;&lt;/div&gt;
 
 &lt;p&gt;Botones como estos son quizás los widgets más utilizados en cualquier GUI. Cuando alguien hace clic en ellos, tu aplicación ordena a la computadora realizar acciones. Así es como puedes ejecutar cálculos cuando un usuario hace clic en un botón.&lt;/p&gt;
-&lt;aside class="note"&gt;
-    En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; que representa un gestor de disposición que permite organizar los widgets con una orientación vertical. Más sobre gestores de disposición en un momento.
-&lt;/aside&gt;
-
+&lt;div class="admonition note"&gt;
+&lt;p&gt;En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; que representa un gestor de disposición que permite organizar los widgets con una orientación vertical. Más sobre gestores de disposición en un momento.&lt;/p&gt;
+&lt;/div&gt;
 &lt;h3 id="campos-de-entrada-de-texto"&gt;Campos de entrada de texto&lt;/h3&gt;
 &lt;p&gt;Los &lt;strong&gt;campos de entrada de texto&lt;/strong&gt; son widgets comunes también. Estos widgets te permite ingresar una sola línea de texto y puedes crearlos con la clase &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qlineedit.html"&gt;&lt;code&gt;QLineEdit&lt;/code&gt;&lt;/a&gt;. Los campos de entrada de texto son útiles cuando necesitas obtener información del usuario como texto simple.&lt;/p&gt;
 &lt;p&gt;Para un ejemplo, crea un archivo &lt;code&gt;line_edits.py&lt;/code&gt; y escribe el siguiente código:&lt;/p&gt;
