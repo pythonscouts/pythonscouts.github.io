@@ -51,8 +51,8 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://pythonscouts.com/python-yield/">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202601221559">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202601221559">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202601221954">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202601221954">
     <!-- Preconnect to CDNs -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
@@ -65,9 +65,9 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202601221559">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202601221954">
     <!-- Stork Search - Deferred -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202601221559">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202601221954">
 
 
     <!-- Article tags -->
@@ -110,13 +110,13 @@
     <meta name="twitter:image:alt" content="Palabras clave en Python: yield">
 
     <!-- Custom CSS for article -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202601221559">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202601221954">
 </head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
 <script
-    src="https://pythonscouts.com/theme/js/analytics.js?v=202601221559"
+    src="https://pythonscouts.com/theme/js/analytics.js?v=202601221954"
     defer
     data-analytics-id="G-R3C5PFSQ1S">
 </script>
@@ -271,7 +271,6 @@
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">generator</span><span class="p">():</span>
     <span class="k">yield</span> <span class="n">value</span>
 </code></pre></div>
-
 <p>Solo necesitas incluir la <a href="/python-palabras-clave/">palabra clave</a> <code>yield</code> seguida del <a href="/valores-python/">valor</a> que deseas devolver.</p>
 <p>Los generadores también pueden incluir varios <code>yield</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">gen_numbers</span><span class="p">():</span>
@@ -279,13 +278,11 @@
     <span class="k">yield</span> <span class="mi">1</span>
     <span class="k">yield</span> <span class="mi">2</span>
 </code></pre></div>
-
 <p>Finalmente, es común usar <code>yield</code> en un <a href="/ciclos-for-python/">ciclo <code>for</code></a>:</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">gen_numbers</span><span class="p">():</span>
     <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
         <span class="k">yield</span> <span class="n">number</span>
 </code></pre></div>
-
 <h2 id="ejemplos-practicos">Ejemplos prácticos</h2>
 <p>Veamos un ejemplo de cómo se usa la palabra clave <code>yield</code> en Python:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">counter</span><span class="p">():</span>
@@ -308,7 +305,6 @@
     <span class="o">...</span>
 <span class="ne">StopIteration</span>
 </code></pre></div>
-
 <p>En este ejemplo, la función <code>counter()</code> es un generador que utiliza <code>yield</code> para devolver los valores <code>0</code>, <code>1</code> y <code>2</code>, uno a la vez, cada vez que se llama a <code>next()</code> en el generador.</p>
 <p>Si intentas llamar a <code>next(gen)</code> una vez que el generador ha producido todos sus valores, Python lanzará una excepción <code>StopIteration</code>. Esta excepción indica que no quedan más elementos por generar y es el comportamiento esperado para finalizar la iteración.</p>
 <p>En la mayoría de los casos, usarás un ciclo <a href="/python-for/"><code>for</code></a> para iterar sobre el generador:</p>
@@ -319,7 +315,6 @@
 <span class="mi">1</span>
 <span class="mi">2</span>
 </code></pre></div>
-
 <p>En este ejemplo, el ciclo for gestiona automáticamente el fin de la iteración cuando ocurre la excepción <code>StopIteration</code>.</p>
 <h2 id="uso-de-yield">Uso de <code>yield</code></h2>
 <p>Los casos de uso más comunes de la palabra clave <code>yield</code> incluyen los siguientes:</p>
@@ -408,12 +403,12 @@
     <!-- JS Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
     <!-- Stork and site scripts -->
-    <script src="https://pythonscouts.com/theme/js/stork.js?v=202601221559" defer></script>
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202601221954" defer></script>
     <script
-        src="https://pythonscouts.com/theme/js/site.js?v=202601221559"
+        src="https://pythonscouts.com/theme/js/site.js?v=202601221954"
         defer
         data-stork-name="sitesearch"
-        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202601221559"
+        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202601221954"
         data-stork-index="https://pythonscouts.com/search-index.st">
     </script>
 

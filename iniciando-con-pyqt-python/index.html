@@ -51,8 +51,8 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://pythonscouts.com/iniciando-con-pyqt-python/">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202601221559">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202601221559">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202601221954">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202601221954">
     <!-- Preconnect to CDNs -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
@@ -65,9 +65,9 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202601221559">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202601221954">
     <!-- Stork Search - Deferred -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202601221559">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202601221954">
 
 
     <!-- Article tags -->
@@ -110,13 +110,13 @@
     <meta name="twitter:image:alt" content="Iniciando con PyQt para desarrollo GUI">
 
     <!-- Custom CSS for article -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202601221559">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202601221954">
 </head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
 <script
-    src="https://pythonscouts.com/theme/js/analytics.js?v=202601221559"
+    src="https://pythonscouts.com/theme/js/analytics.js?v=202601221954"
     defer
     data-analytics-id="G-R3C5PFSQ1S">
 </script>
@@ -319,7 +319,6 @@
 PS&gt; venv\Scripts\activate.bat
 (venv) PS&gt; python -m pip install pyqt6
 </code></pre></div>
-
 <p>Con estos comandos, primero creas y activas un entorno virtual Python y luego instalas PyQt dese PyPI.</p>
 <h3 id="en-linux-y-macos">En Linux y macOS</h3>
 <p>En Linux y macOS el proceso es el mismo y puedes realizarlo con los siguientes comandos:</p>
@@ -327,7 +326,6 @@ PS&gt; venv\Scripts\activate.bat
 <span class="gp">$ </span><span class="nb">source</span><span class="w"> </span>venv/bin/activate
 <span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>pyqt6
 </code></pre></div>
-
 <p>Nuevamente, primero creas un entorno virtual usando el módulo <code>venv</code> de la biblioteca estándar de Python. Luego lo activas, y finalmente instalas PyQt.</p>
 <h2 id="creando-una-aplicacion-pyqt">Creando una aplicación PyQt</h2>
 <p>Con PyQt instalado, estás listo para crear tu primera aplicación GUI. Para comenzar, crearás una aplicación de <code>Hola, Mundo!</code>. Aquí están los pasos a seguir:</p>
@@ -341,14 +339,12 @@ PS&gt; venv\Scripts\activate.bat
 <p>Crea un nuevo archivo Python llamado <code>app.py</code> en tu directorio de trabajo actual:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PyQt6.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QLabel</span><span class="p">,</span> <span class="n">QWidget</span>
 </code></pre></div>
-
 <p>En esta línea de código, importas <code>QApplication</code>, <a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qlabel.html"><code>QLabel</code></a>, y <a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qwidget.html"><code>QWidget</code></a> desde <a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qtwidgets-module.html"><code>QtWidgets</code></a>. Con esto, has cumplido con el primer paso.</p>
 <p>Para completar el segundo paso, necesitas crear una instancia de <code>QApplication</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PyQt6.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QLabel</span><span class="p">,</span> <span class="n">QWidget</span>
 
 <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">([])</span>
 </code></pre></div>
-
 <p>En esta línea de código, creas la instancia de <code>QApplication</code>. Es necesario crear esta instancia antes de crear cualquier objeto GUI en PyQt.</p>
 <p>El tercer paso consiste en crear la GUI o ventana principal de la aplicación. Para este ejemplo, la GUI se basará en la clase <code>QWidget</code>, que es la clase base de todos los objetos de interfaz de usuario en PyQt.</p>
 <p>Así es como puedes crear la GUI de la app:</p>
@@ -362,7 +358,6 @@ PS&gt; venv\Scripts\activate.bat
 <span class="n">hello</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot;&lt;h1&gt;Hola, Mundo!&lt;/h1&gt;&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">window</span><span class="p">)</span>
 <span class="n">hello</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
 </code></pre></div>
-
 <p>En este código, <code>window</code> es una instancia de <code>QWidget</code>, la cual proporciona todas las características que necesitarás para crear la ventana de la aplicación.</p>
 <p>Como su nombre sugiere, el método <code>.setWindowTitle()</code> te permite establecer el título de la ventana en tu aplicación. En este ejemplo, la ventana de la app mostrará <code>PyQt Demo</code> en su barra de título.</p>
 <p>Puedes usar <code>.setGeometry()</code> para definir el tamaño de la ventana y la posición en la pantalla. Los dos primeros argumentos son las coordenadas de pantalla <code>x</code> y <code>y</code> donde se colocará la ventana. El tercer y cuarto argumentos son el ancho y alto de la ventana.</p>
@@ -382,12 +377,10 @@ PS&gt; venv\Scripts\activate.bat
 <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 <span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span>
 </code></pre></div>
-
 <p>En las dos últimas líneas, llamas el método <code>.show()</code> en <code>window</code> para mostrar la ventana en la pantalla. Luego, inicias el bucle de eventos de la aplicación ejecutando <code>.exec()</code> y ya está.</p>
 <p>Puedes ejecutar tu primera aplicación PyQt con el siguiente comando:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>python<span class="w"> </span>app.py
 </code></pre></div>
-
 <p>Al ejecutar este comando, verás una ventana que lucirá como la siguiente:</p>
 <p><img src="../images/articles/iniciando-con-pyqt-python/pyqt-demo-app.png" class="mx-auto d-block mt-2" alt="Aplicación 'Hola, Mundo!' con PyQt y Python"></p>
 <div class="text-center mb-5 lead"><em>Aplicación "Hola, Mundo!" con PyQt y Python</em></div>
@@ -422,7 +415,6 @@ PS&gt; venv\Scripts\activate.bat
 <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 <span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span>
 </code></pre></div>
-
 <p>En este ejemplo, primero añades la clase <code>QPushButton</code> a tus objetos importados. El bucle <code>for</code> itera sobre una lista de nombres de botones comunes y crea un botón con cada uno de los nombres definidos. Así es como se verá tu aplicación al ejecutarla desde tu terminal:</p>
 <p><img src="../images/articles/iniciando-con-pyqt-python/pyqt-botones.png" class="mx-auto d-block mt-2" alt="Botones en PyQt"></p>
 <div class="text-center mb-5 lead"><em>Botones en PyQt</em></div>
@@ -458,7 +450,6 @@ PS&gt; venv\Scripts\activate.bat
 <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 <span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span>
 </code></pre></div>
-
 <p>En el bucle de este ejemplo, creas tres campos de texto para permitir que el usuario introduzca su nombre, usuario y contraseña:</p>
 <p><img src="../images/articles/iniciando-con-pyqt-python/pyqt-campos-de-texto.png" class="mx-auto d-block mt-2" alt="Campos de texto en PyQt"></p>
 <div class="text-center mb-5 lead"><em>Campos de texto en PyQt</em></div>
@@ -491,7 +482,6 @@ PS&gt; venv\Scripts\activate.bat
 <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 <span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span>
 </code></pre></div>
-
 <p>En este ejemplo, creas <code>combo</code> como una instancia de <code>QComboBox</code>. Esta instancia contendrá una lista desplegable con una serie de nombres de bibliotecas Python para desarrollo de aplicaciones GUI. Cuando ejecutas esta aplicación desde tu línea de comandos, obtienes una ventana como la siguiente:</p>
 <p><img src="../images/articles/iniciando-con-pyqt-python/pyqt-lista-desplegable.png" class="mx-auto d-block mt-2" alt="Lista desplegable en PyQt"></p>
 <div class="text-center mb-5 lead"><em>Lista desplegable en PyQt</em></div>
@@ -524,7 +514,6 @@ PS&gt; venv\Scripts\activate.bat
 <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 <span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span>
 </code></pre></div>
-
 <p>En este ejemplo, creas una aplicación que muestra un texto descriptivo, <code>"¿Qué prefieres?"</code>, seguido de una serie de botones radiales, que representan opciones entre las que el usuario puede elegir. En este caso, las opciones son "Pizza", "Hamburguesa", "Pasta" y "Pollo asado". Para crear los botones, empleas un ciclo <code>for</code> que itera sobre la lista de comidas.</p>
 <p>Al hacer clic en uno de los botones, este se activa y los demás se desactivan automáticamente. Esto los hace ideales para preguntas de selección única, como preferencias o respuestas a encuestas:</p>
 <p><img src="../images/articles/iniciando-con-pyqt-python/pyqt-botones-radiales.png" class="mx-auto d-block mt-2" alt="Botones radiales en PyQt"></p>
@@ -568,7 +557,6 @@ PS&gt; venv\Scripts\activate.bat
 <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 <span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span>
 </code></pre></div>
-
 <p>En este ejemplo, creas una instancia de <code>QHBoxLayout</code> llamada <code>layout</code>. Luego agregas los tres botones en un ciclo usando el método <code>.addWidget()</code>. La aplicación resultante luce como se muestra a continuación:</p>
 <p><img src="../images/articles/iniciando-con-pyqt-python/pyqt-gestor-disposicion-horizontal.png" class="mx-auto d-block mt-2" alt="Gestor de disposición horizontal en PyQt"></p>
 <div class="text-center mb-5 lead"><em>Gestor de disposición horizontal en PyQt</em></div>
@@ -600,7 +588,6 @@ PS&gt; venv\Scripts\activate.bat
 <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 <span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span>
 </code></pre></div>
-
 <p>En este ejemplo, creas una instancia de <code>QVBoxLayout</code> llamada <code>layout</code>. En el ciclo <code>for</code>, añades tres botones a <code>layout</code> empleando <code>.addWidget()</code>. Cuando ejecutas esta aplicación de ejemplo, obtienes una ventana que se ve como la siguiente:</p>
 <p><img src="../images/articles/iniciando-con-pyqt-python/pyqt-gestor-disposicion-vertical.png" class="mx-auto d-block mt-2" alt="Gestor de disposición vertical en PyQt"></p>
 <div class="text-center mb-5 lead"><em>Gestor de disposición vertical en PyQt</em></div>
@@ -648,7 +635,6 @@ PS&gt; venv\Scripts\activate.bat
 <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 <span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span>
 </code></pre></div>
-
 <p>En este ejemplo, creas una aplicación que utiliza un objeto <code>QGridLayout</code> para organizar sus widgets en la pantalla. Nuevamente, para añadir los botones, empleas un ciclo <code>for</code> y el método <code>.addWidget()</code>. Nota que el segundo y tercer argumento que pasas al métodos son números enteros que definen la posición de cada widget en la cuadrícula.</p>
 <p>Finalmente, pasas dos argumentos más a <code>.addWidget()</code>. Estos argumentos son <code>rowSpan</code> y <code>columnSpan</code> los cuales sirven para hacer que un widget ocupe más de una fila o columna. En este ejemplo, el último botón ocupa una fila y dos columnas.</p>
 <p>Si ejecutas este código desde tu línea de comandos, obtendrás una ventana que luce así:</p>
@@ -681,7 +667,6 @@ PS&gt; venv\Scripts\activate.bat
 <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 <span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span>
 </code></pre></div>
-
 <p><code>QFormLayout</code> tiene un método llamado <code>.addRow()</code> que puedes usar para agregar una fila de dos widgets al formulario. El primer argumento de <code>.addRow()</code> debe ser una etiqueta o una cadena. El segundo argumento puede ser cualquier widget que permita al usuario ingresar o editar datos. En este ejemplo específico, has usado campos de entrada de texto, <code>QLineEdit</code>.</p>
 <p>Si ejecutas este código, obtendrás una ventana similar a la siguiente:</p>
 <p><img src="../images/articles/iniciando-con-pyqt-python/pyqt-gestor-disposicion-formulario.png" class="mx-auto d-block mt-2" alt="Gestor de disposición para formulario en PyQt"></p>
@@ -774,7 +759,6 @@ PS&gt; venv\Scripts\activate.bat
     <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
     <span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span>
 </code></pre></div>
-
 <p>Primeramente, creas una clase llamada <code>Window</code> que hereda de <code>QMainWindow</code>. Dentro del método <code>.__init__()</code>, llamas al inicializador de la clase base. El argumento <code>parent</code> se establece en <code>None</code> porque esta es la ventana principal de tu aplicación, por lo que no debe tener una ventana padre.</p>
 <p>Luego, estableces el título de la ventana y creas un objeto <code>QLabel</code> para usar como widget central de la ventana. Finalmente, llamas los métodos no públicos <code>._createMenu()</code>, <code>._createToolBar()</code>, <code>._createStatusBar()</code> para crear el menú principal, una barra de herramientas y la barra de estado.</p>
 <p>El widget central y la barra de estado muestran mensajes identificativos. El menú y la barra de herramientas mostrarán una opción para salir de la aplicación.</p>
@@ -835,7 +819,6 @@ PS&gt; venv\Scripts\activate.bat
 <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 <span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span>
 </code></pre></div>
-
 <p>En este ejemplo, usas la clase <code>QDialog</code> como la base para crear una ventana de diálogo. Para definir el diseño del diálogo, usas un <code>QVBoxLayout</code> y un <code>QFormLayout</code>. Con ellos, estableces el diseño principal que consiste en un formulario para entrada de datos y dos botones para aceptar o cancelar la entrada de datos.</p>
 <p>Empleas la clase <code>QDialogButtonBox</code> para gestionar los botones estándar del diálogo <em>OK</em> y <em>Cancel</em>. Este widget es muy útil porque gestiona automáticamente las interacciones comunes de los botones como cerrar el cuadro de diálogo o confirmar acciones.</p>
 <p>El código anterior mostrará una ventana que se verá así:</p>
@@ -923,7 +906,6 @@ PS&gt; venv\Scripts\activate.bat
 
 <span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span>
 </code></pre></div>
-
 <p>En esta aplicación, lo primero que haces es mostrar un mensaje empleando <code>QMessageBox.information()</code>. Luego, empleas <code>QFileDialog.getOpenFileName()</code> para generar un diálogo que te permite abrir un archivo seleccionado. Seguidamente, creas diálogos para seleccionar un color y una fuente. Finalmente, creas un diálogo que le da al usuario la posibilidad de introducir un número entero de manera rápida.</p>
 <p>Los cuadros de mensaje y los diálogos estándar son herramientas esenciales para cualquier aplicación PyQt que requiera interacción con el usuario.</p>
 <h2 id="conclusion">Conclusión</h2>
@@ -1014,12 +996,12 @@ PS&gt; venv\Scripts\activate.bat
     <!-- JS Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
     <!-- Stork and site scripts -->
-    <script src="https://pythonscouts.com/theme/js/stork.js?v=202601221559" defer></script>
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202601221954" defer></script>
     <script
-        src="https://pythonscouts.com/theme/js/site.js?v=202601221559"
+        src="https://pythonscouts.com/theme/js/site.js?v=202601221954"
         defer
         data-stork-name="sitesearch"
-        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202601221559"
+        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202601221954"
         data-stork-index="https://pythonscouts.com/search-index.st">
     </script>
 

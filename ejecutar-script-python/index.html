@@ -50,8 +50,8 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://pythonscouts.com/ejecutar-script-python/">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202601221559">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202601221559">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202601221954">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202601221954">
     <!-- Preconnect to CDNs -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
@@ -64,9 +64,9 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202601221559">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202601221954">
     <!-- Stork Search - Deferred -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202601221559">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202601221954">
 
 
     <!-- Article tags -->
@@ -108,13 +108,13 @@
     <meta name="twitter:image:alt" content="Cómo ejecutar un script Python?">
 
     <!-- Custom CSS for article -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202601221559">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202601221954">
 </head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
 <script
-    src="https://pythonscouts.com/theme/js/analytics.js?v=202601221559"
+    src="https://pythonscouts.com/theme/js/analytics.js?v=202601221954"
     defer
     data-analytics-id="G-R3C5PFSQ1S">
 </script>
@@ -283,19 +283,16 @@
 <p>Probablemente la manera más comúnmente empleada para ejecutar un script Python es usando el comando <code>python</code> desde la línea de comandos o terminal del sistema operativo. Antes de entrar en el comando específico, abre tu editor de texto favorito, crea un nuevo archivo <code>.py</code> y escribe el código siguiente en él:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hola, Mundo!&#39;</span><span class="p">)</span>
 </code></pre></div>
-
 <p>Este script es el típico programa <a href="https://pythonscouts.com/python-hola-mundo/"><code>"Hola, Mundo!"</code></a> que generalmente escribes cuando comienzas a aprender un lenguaje de programación. Guarda el archivo en tu directorio de trabajo y llámalo <code>script.py</code>.</p>
 <p>Abre una ventana de terminal en tu directorio de trabajo actual y ejecuta el siguiente comando:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>python<span class="w"> </span>script.py
 <span class="go">Hola, Mundo!</span>
 </code></pre></div>
-
 <p>Inmediatamente después de presionar <em>Enter</em>, verás en pantalla la frase <code>Hola, Mundo!</code>. Con eso acabas de ejecutar tu primer script Python! Es muy probable que uses esta forma de ejecutar scripts a menudo en tu ciclo de desarrollo o incluso en tus tareas diarias.</p>
 <p>En sistemas Windows, además del comando <code>python</code>, también puedes emplear el lanzador <code>py</code> desde <a href="https://es.wikipedia.org/wiki/PowerShell">PowerSell</a>:</p>
 <div class="highlight"><pre><span></span><code>PS&gt; py script.py
 Hola, Mundo!
 </code></pre></div>
-
 <p>El lanzador <code>py</code> está disponible en todas las versiones de Python a partir de 3.3, así que no debes tener problemas para emplearlo.</p>
 <h2 id="ejecutar-scripts-directamente-como-un-comando">Ejecutar scripts directamente como un comando</h2>
 <p>Si estas acostumbrado a crear scripts Python utilitarios para automatizar tareas repetitivas en tu entorno de trabajo, entonces es probable que desees simplificar el proceso de ejecución. En la mayoría de los casos sería más práctico ejecutar el script directamente como un comando independiente sin el auxilio del comando <code>python</code>.</p>
@@ -306,24 +303,20 @@ Hola, Mundo!
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hola, Mundo!&#39;</span><span class="p">)</span>
 </code></pre></div>
-
 <p>Este comentario especial es conocido como <a href="https://es.wikipedia.org/wiki/Shebang">shebang</a> y lo puede incluir en tu código fuente para decirle al shell de tu sistema operativo dónde puede encontrar el intérprete requerido para ejecutar el código del archivo.</p>
 <p>Para ejecutar un script Python que ya incluye el shebang apropiado, debes también asignarle permisos de ejecución con el siguiente comando:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>chmod<span class="w"> </span>+x<span class="w"> </span>script.py
 </code></pre></div>
-
 <p>Con este comando, le asignas permisos de ejecución a tu script. Ahora estás listo para ejecutarlo directamente empleando el nombre del archivo en la terminal:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>./script.py
 <span class="go">Hola, Mundo!</span>
 </code></pre></div>
-
 <p>Listo! Tu script ahora funciona como si fuese un comando. Si deseas que tu script se parezca aún más a un comando estándar, puedes remover de su nombre la extensión <code>.py</code>. Adicionalmente, puedes añadir el directorio que contiene tu script en el <a href="https://es.wikipedia.org/wiki/PATH_(inform%C3%A1tica)"><code>PATH</code></a> de tu sistema y lo tendrás disponible como un comando real desde cualquier directorio de trabajo.</p>
 <h3 id="en-sistemas-windows">En sistemas Windows</h3>
 <p>En sistemas Windows con Python <a href="https://pythonscouts.com/instalar-python-windows/">instalado</a>, puedes ejecutar un script directamente desde una ventana de PowerShell abierta en el directorio que contiene el script:</p>
 <div class="highlight"><pre><span></span><code>PS&gt; .\script.py
 Hola, Mundo!
 </code></pre></div>
-
 <p>Esta técnica funciona gracias a que Windows automáticamente asocia los archivos <code>.py</code> y <code>.pyw</code> con los programas <code>python.exe</code> y <code>pythonw.exe</code>, respectivamente.</p>
 <h2 id="ejecutar-scripts-desde-un-ide-o-editor-de-texto">Ejecutar scripts desde un IDE o editor de texto</h2>
 <p>Otra vía que puedes emplear para ejecutar tus scripts Python es usar un IDE (Integrated Development Environment, por sus siglas en inglés) como <a href="https://www.jetbrains.com/es-es/pycharm/">PyCharm</a> o un editor de código avanzado, como puede ser <a href="https://code.visualstudio.com/">Visual Studio Code</a>.</p>
@@ -408,12 +401,12 @@ Hola, Mundo!
     <!-- JS Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
     <!-- Stork and site scripts -->
-    <script src="https://pythonscouts.com/theme/js/stork.js?v=202601221559" defer></script>
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202601221954" defer></script>
     <script
-        src="https://pythonscouts.com/theme/js/site.js?v=202601221559"
+        src="https://pythonscouts.com/theme/js/site.js?v=202601221954"
         defer
         data-stork-name="sitesearch"
-        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202601221559"
+        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202601221954"
         data-stork-index="https://pythonscouts.com/search-index.st">
     </script>
 

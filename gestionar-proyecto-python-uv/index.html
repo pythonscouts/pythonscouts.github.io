@@ -50,8 +50,8 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://pythonscouts.com/gestionar-proyecto-python-uv/">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202601221559">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202601221559">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202601221954">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202601221954">
     <!-- Preconnect to CDNs -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
@@ -64,9 +64,9 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202601221559">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202601221954">
     <!-- Stork Search - Deferred -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202601221559">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202601221954">
 
 
     <!-- Article tags -->
@@ -108,13 +108,13 @@
     <meta name="twitter:image:alt" content="Cómo gestionar un proyecto Python con uv?">
 
     <!-- Custom CSS for article -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202601221559">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202601221954">
 </head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
 <script
-    src="https://pythonscouts.com/theme/js/analytics.js?v=202601221559"
+    src="https://pythonscouts.com/theme/js/analytics.js?v=202601221954"
     defer
     data-analytics-id="G-R3C5PFSQ1S">
 </script>
@@ -282,28 +282,23 @@
 <p>En macOS y Linux, puedes instalar <code>uv</code> con el commando siguiente:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>curl<span class="w"> </span>-LsSf<span class="w"> </span>https://astral.sh/uv/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
 </code></pre></div>
-
 <p>Si no dispones de <code>curl</code> en tu sistema, entonces puedes usar <code>wget</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>wget<span class="w"> </span>-qO-<span class="w"> </span>https://astral.sh/uv/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
 </code></pre></div>
-
 <p>En Windows, puedes usar el commando:</p>
 <div class="highlight"><pre><span></span><code>PS&gt; powershell -ExecutionPolicy ByPass -c &quot;irm https://astral.sh/uv/install.ps1 | iex&quot;
 </code></pre></div>
-
 <p>Una vez concluida la instalación, <code>uv</code> estará disponible en tu sistema. Puedes comprobarla con el comando <code>uv --version</code>.</p>
 <h2 id="gestionar-multiples-versiones-de-python">Gestionar múltiples versiones de Python</h2>
 <p>Con <code>uv</code> puedes instalar y usar distintas versiones de Python fácilmente. Para instalar una versión de Python, por ejemplo la 3.13, usa el comando siguiente:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>uv<span class="w"> </span>python<span class="w"> </span>install<span class="w"> </span><span class="m">3</span>.13
 </code></pre></div>
-
 <p>Esto te permite trabajar con varios proyectos que requieran versiones diferentes del lenguaje.</p>
 <p>Con el comando <code>uv python list</code>, puedes listar las versiones disponibles y con <code>uv python pin &lt;version&gt;</code>, puedes fijar la versión de Python que quiere emplear en un proyecto específico.</p>
 <h2 id="iniciar-un-proyecto-python-con-uv">Iniciar un proyecto Python con <code>uv</code></h2>
 <p>Con <code>uv</code> puedes crear la estructura inicial de tus nuevos proyectos:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>uv<span class="w"> </span>init<span class="w"> </span>project_name
 </code></pre></div>
-
 <p>Este comando crea la estructura de proyecto siguiente:</p>
 <div class="highlight"><pre><span></span><code>project_name/
 │
@@ -314,7 +309,6 @@
 ├── main.py
 └── pyproject.toml
 </code></pre></div>
-
 <p>Aquí tienes un repositorio Git con su correspondiente archivo <code>.gitignore</code>. Luego tienes el archivo <code>.python-version</code> donde <code>uv</code> almacena la versión de Python para el proyecto. El archivo <code>README.md</code> provee el espacio para la documentación básica del proyecto.</p>
 <p>Seguidamente tienes el archivo <code>main.py</code> que es el script de entrada del proyecto. Puedes modificarlo según tus necesidades o puedes incluso reemplazarlo por otro. Finalmente, tienes el archivo <code>pyproject.toml</code> que contiene la configuración necesaria para construir y distribuir tu proyecto.</p>
 <p>Alternativamente, puedes emplear varias estructuras disponibles en dependencia de tus necesidades:</p>
@@ -323,7 +317,6 @@
 <span class="gp">$ </span>uv<span class="w"> </span>init<span class="w"> </span>--pkg<span class="w"> </span>package_name
 <span class="gp">$ </span>uv<span class="w"> </span>init<span class="w"> </span>--script<span class="w"> </span>script_name
 </code></pre></div>
-
 <p>Cada tipo genera una estructura inicial de archivos adaptada al caso. Puedes usar esta estructura como punto de partida para programar tu proyecto.</p>
 <p>Debes notar que estos comandos crean el directorio raíz del proyecto usando el nombre suministrado. Si ya has creado el directorio, entonces puedes ejecutar <code>uv init .</code> dentro del mismo.</p>
 <p>Una vez que has inicializado un proyecto de aplicación, puedes ejecutarlo con el comando <code>uv run main.py</code>.</p>
@@ -335,7 +328,6 @@
 <p>Luego que has inicializado tu proyecto, puedes crear un entorno virtual Python manualmente:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>uv<span class="w"> </span>venv
 </code></pre></div>
-
 <p>El nombre del directorio del entorno virtual es <code>.venv</code> por defecto, pero puede usar el nombre que desees con solo añadirlo después del subcomando <code>venv</code>.</p>
 <p>El entorno virtual hará referencia al intérprete de Python disponible directamente en tu sistema, entorno de trabajo o shell.</p>
 <p>Debes saber que el entorno virtual se crea automáticamente (si es que no existe) cuando ejecutas comandos como <code>uv run</code>, <code>uv add</code>, <code>uv sync</code>, o <code>uv lock</code>.</p>
@@ -344,26 +336,22 @@
 <p>Por ejemplo, digamos que estás creando un proyecto the Inteligencia Artificial y quieres emplear la API de OpenAI. Puedes instalar la librería <code>openai</code> con el siguiente commando:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>uv<span class="w"> </span>add<span class="w"> </span>openai
 </code></pre></div>
-
 <p>Este comando añade la librería <code>openai</code> al proyecto como dependencia de ejecución.</p>
 <h3 id="instalar-dependencias-de-desarrollo">Instalar dependencias de desarrollo</h3>
 <p>Las dependencias de desarrollo son aquellas que necesitas durante el ciclo de desarrollo de tu proyecto. Por ejemplo, puedes necesitar <code>pytest</code> para escribir y ejecutar test unitarios para tu proyecto:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>uv<span class="w"> </span>add<span class="w"> </span>--dev<span class="w"> </span>pytest
 </code></pre></div>
-
 <p>Este comando instala <code>pytest</code> como dependencia de desarrollo, actualizando los archivos <code>uv.lock</code> y <code>pyproject.toml</code> de manera adecuada.</p>
 <h3 id="desinstalar-dependencias">Desinstalar dependencias</h3>
 <p>Para eliminar un paquete o biblioteca que ya habías instalado y que no necesitas más, puedes usar el comando siguiente:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>uv<span class="w"> </span>remove<span class="w"> </span>pytest
 </code></pre></div>
-
 <p>Este comando desinstala la biblioteca <code>pytest</code> y todas sus dependencias transitivas, dejando tu entorno virtual de trabajo limpio de paquetes no necesarios. También actualiza el archivo <code>uv.lock</code> de acuerdo con los cambios.</p>
 <h2 id="distribuir-y-publicar-el-proyecto">Distribuir y publicar el proyecto</h2>
 <p>Con <code>uv</code> también puedes empaquetar y publicar tu proyecto:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>uv<span class="w"> </span>build
 <span class="gp">$ </span>uv<span class="w"> </span>publish<span class="w"> </span>--token<span class="w"> </span>tu_token_aquí
 </code></pre></div>
-
 <p>El primer comando genera los artefactos de distribución que se guardan en el directorio <code>dist/</code> por defecto. El segundo comando sube estos artefactos a PyPI.</p>
 <p>Debes notar que para que estos comandos funcionen correctamente, es necesario configurar el script de entrada del proyecto y el sistema de construcción (build system). Todo esto en el archivo <code>pyproject.toml</code> de tu proyecto.</p>
 <h2 id="conclusion">Conclusión</h2>
@@ -445,12 +433,12 @@
     <!-- JS Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
     <!-- Stork and site scripts -->
-    <script src="https://pythonscouts.com/theme/js/stork.js?v=202601221559" defer></script>
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202601221954" defer></script>
     <script
-        src="https://pythonscouts.com/theme/js/site.js?v=202601221559"
+        src="https://pythonscouts.com/theme/js/site.js?v=202601221954"
         defer
         data-stork-name="sitesearch"
-        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202601221559"
+        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202601221954"
         data-stork-index="https://pythonscouts.com/search-index.st">
     </script>
 

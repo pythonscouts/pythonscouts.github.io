@@ -51,8 +51,8 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://pythonscouts.com/python-and/">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202601221559">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202601221559">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202601221954">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202601221954">
     <!-- Preconnect to CDNs -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
@@ -65,9 +65,9 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202601221559">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202601221954">
     <!-- Stork Search - Deferred -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202601221559">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202601221954">
 
 
     <!-- Article tags -->
@@ -110,13 +110,13 @@
     <meta name="twitter:image:alt" content="Palabras clave en Python: and">
 
     <!-- Custom CSS for article -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202601221559">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202601221954">
 </head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
 <script
-    src="https://pythonscouts.com/theme/js/analytics.js?v=202601221559"
+    src="https://pythonscouts.com/theme/js/analytics.js?v=202601221954"
     defer
     data-analytics-id="G-R3C5PFSQ1S">
 </script>
@@ -278,7 +278,6 @@
 <p>La sintaxis para usar <code>and</code> es como se muestra a continuación:</p>
 <div class="highlight"><pre><span></span><code><span class="n">expression_1</span> <span class="ow">and</span> <span class="n">expression_2</span> <span class="p">[</span><span class="ow">and</span> <span class="o">...</span> <span class="ow">and</span> <span class="n">expression_n</span><span class="p">]</span>
 </code></pre></div>
-
 <p>Cada una de las expresiones involucradas puede ser cualquier expresión u objeto Python. La parte de la sintaxis encerrada entre corchetes es opcional y expresa la posibilidad de encadenar múltiples expresiones con varias instancias de <code>and</code>.</p>
 <p>Es importante recordar que todos los objetos Python tienen un valor de verdad asociado. Por lo tanto, <code>and</code> puede relacionar cualquier objeto y no está limitado a expresiones booleanas que devuelvan <a href="https://pythonscouts.com/python-true/"><code>True</code></a> o <a href="https://pythonscouts.com/python-false/"><code>False</code></a>.</p>
 <p>La tabla de verdad del operador cuando lo usamos con expresiones lógicas se resume a continuación:</p>
@@ -360,7 +359,6 @@
 <span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">3</span> <span class="ow">and</span> <span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">4</span>
 <span class="kc">False</span>
 </code></pre></div>
-
 <p>En estos ejemplos, <code>and</code> evalúa dos objetos o expresiones booleanas. Si ambas son verdaderas, el resultado es <code>True</code>. Si alguna de ellas es falsa, el resultado es <code>False</code>.</p>
 <p>Experimentar con expresiones que devuelvan otros tipos de datos te permitirá familiarizarte con el comportamiento del operador en estas situaciones:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">1</span> <span class="ow">and</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">3</span>
@@ -378,7 +376,6 @@
 <span class="o">&gt;&gt;&gt;</span> <span class="p">{}</span> <span class="ow">and</span> <span class="mi">3</span>
 <span class="p">{}</span>
 </code></pre></div>
-
 <p>En estos ejemplos, se usa <code>and</code> para conectar expresiones y objetos que devuelven tipos no booleanos. En cada caso, se obtiene un objeto en lugar de un valor <code>True</code> o <code>False</code>. Esta característica de <code>and</code> es útil para evaluar expresiones condicionalmente aprovechando la evaluación de cortocircuito.</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">current_user</span> <span class="o">=</span> <span class="s2">&quot;juan&quot;</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">user_name</span> <span class="o">=</span> <span class="n">current_user</span> <span class="ow">and</span> <span class="n">current_user</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
@@ -390,7 +387,6 @@
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">user_name</span><span class="p">)</span>
 <span class="kc">None</span>
 </code></pre></div>
-
 <p>En este ejemplo, cuando tienes un usuario activo, puedes usar <code>and</code> para modificar el nombre de usuario para que se muestre con letra inicial mayúscula. Si por el contrario, no tienes ningún usuario activo (<code>current_user = None</code>), la expresión de la derecha no se evalúa.</p>
 <p>Cómo puedes confirmar que la expresión de la derecha no se evaluó? Si intentas llamar al método <code>.title()</code> en el objeto <a href="https://pythonscouts.com/python-none/"><code>None</code></a>, Python genera una excepción de tipo <code>AttributeError</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">current_user</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
@@ -398,7 +394,6 @@
     <span class="o">...</span>
 <span class="ne">AttributeError</span><span class="p">:</span> <span class="s1">&#39;NoneType&#39;</span> <span class="nb">object</span> <span class="n">has</span> <span class="n">no</span> <span class="n">attribute</span> <span class="s1">&#39;title&#39;</span>
 </code></pre></div>
-
 <p>El hecho de recibir esta excepción confirma que la expresión del lado derecho, <code>current_user.title()</code>, no se ejecutó en tu ejemplo original.</p>
 <h2 id="uso-de-and">Uso de <code>and</code></h2>
 <p>Los casos de uso más comunes de la palabra clave <code>and</code> incluyen los siguientes:</p>
@@ -487,12 +482,12 @@
     <!-- JS Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
     <!-- Stork and site scripts -->
-    <script src="https://pythonscouts.com/theme/js/stork.js?v=202601221559" defer></script>
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202601221954" defer></script>
     <script
-        src="https://pythonscouts.com/theme/js/site.js?v=202601221559"
+        src="https://pythonscouts.com/theme/js/site.js?v=202601221954"
         defer
         data-stork-name="sitesearch"
-        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202601221559"
+        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202601221954"
         data-stork-index="https://pythonscouts.com/search-index.st">
     </script>
 

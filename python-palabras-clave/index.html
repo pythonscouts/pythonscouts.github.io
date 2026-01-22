@@ -51,8 +51,8 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://pythonscouts.com/python-palabras-clave/">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202601221559">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202601221559">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202601221954">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202601221954">
     <!-- Preconnect to CDNs -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
@@ -65,9 +65,9 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202601221559">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202601221954">
     <!-- Stork Search - Deferred -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202601221559">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202601221954">
 
 
     <!-- Article tags -->
@@ -110,13 +110,13 @@
     <meta name="twitter:image:alt" content="Palabras clave en Python: ¿Cuáles son?">
 
     <!-- Custom CSS for article -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202601221559">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202601221954">
 </head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
 <script
-    src="https://pythonscouts.com/theme/js/analytics.js?v=202601221559"
+    src="https://pythonscouts.com/theme/js/analytics.js?v=202601221954"
     defer
     data-analytics-id="G-R3C5PFSQ1S">
 </script>
@@ -344,7 +344,6 @@
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">kwlist</span> <span class="o">+</span> <span class="n">softkwlist</span><span class="p">)</span>
 <span class="mi">39</span>
 </code></pre></div>
-
 <p>El módulo <a href="https://docs.python.org/es/3/library/keyword.html#module-keyword"><code>keyword</code></a> de la <a href="https://docs.python.org/es/3/library/index.html">biblioteca estándar</a> exporta las listas <a href="https://docs.python.org/es/3/library/keyword.html#keyword.kwlist"><code>kwlist</code></a> y <a href="https://docs.python.org/es/3/reference/lexical_analysis.html#soft-keywords"><code>softkwlist</code></a> que contienen todas las palabras clave de Python. En el código anterior, primeramente importas <code>kwlist</code> y <code>softkwlist</code> desde <code>keyword</code> y luego muestras su contenido. Python 3.13 tiene 39 palabras clave, incluidas las suaves, tal y como resulta de ejecutar <code>len(kwlist + softkwlist)</code> en la última línea de código del ejemplo.</p>
 <p>Debes tener en cuenta que el número de palabras clave varía en dependencia de la versión de Python que estés usando actualmente.</p>
 <p>Otra manera de consultar las palabras clave de Python es mediante la función <a href="https://pythonscouts.com/obtener-ayuda-python/#2-el-sistema-interactivo-de-ayuda-help"><code>help()</code></a>. Se trata de una función incluida (<em>built-in</em>) que te permite consultar la documentación y obtener ayuda rápida sobre cualquier objeto en Python.</p>
@@ -369,7 +368,6 @@
 <span class="k">await</span>               <span class="k">finally</span>             <span class="k">nonlocal</span>            <span class="k">yield</span>
 <span class="k">break</span>               <span class="k">for</span>                 <span class="ow">not</span>
 </code></pre></div>
-
 <p>En este caso, cuando ejecutas <code>help()</code> en una sesión interactiva de Python, entras inmediatamente al sistema de ayuda integrado del lenguaje. El indicador (<em>prompt</em>) <code>help&gt;</code> te hace saber que estás dentro. Una vez allí, tecleas el comando <code>keywords</code> y presionas <em>Enter</em>. Esta acción te devuelve el listado de palabras clave de tu versión específica del lenguaje.</p>
 <p>Es importante que domines las palabras clave o reservadas de Python, y sobre todo que conozcas su significado en español. A continuación, un resumen que incluye la traducción al español y una breve descripción de cada palabra clave:</p>
 <table>
@@ -614,7 +612,6 @@ present, is executed.
 
 Related help topics: TRUTHVALUE
 </code></pre></div>
-
 <p>Si introduces una palabra clave o palabra reservada cualquiera (<code>if</code> en el ejemplo anterior) en el indicador (<em>prompt</em>) del sistema de ayuda de Python, obtienes acceso directo a la documentación de la misma. Esta documentación solo aparece en idioma inglés. Si deseas obtener ayuda en idioma español, entonces puedes usar la <a href="https://docs.python.org/es/3/index.html">documentación oficial en español</a>.</p>
 <p>Es importante que sepas que cuando consultas una página de documentación específica en el sistema de ayuda integrado, tendrás que presionar la tecla <em>Q</em> en tu teclado para poder salir de la página y regresar a la ayuda.</p>
 <p>El sistema de ayuda integrado te ofrece además una guía de temas relacionados con la palabra clave que estés consultando. En la última línea del ejemplo anterior puedes leer <code>Related help topics: TRUTHVALUE</code>. Si introduces <code>TRUTHVALUE</code> y presionas <em>Enter</em>, obtendrás la página de ayuda correspondiente. Adelántate y experiméntalo tú mismo.</p>
@@ -626,13 +623,11 @@ Related help topics: TRUTHVALUE
           <span class="o">^</span>
 <span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">syntax</span>
 </code></pre></div>
-
 <p>En este ejemplo, cuando tratas de usar <code>class</code> como un nombre de variable, recibes una excepción de tipo <code>SyntaxError</code>. Sin embargo, este no es siempre el caso. Python también tiene <a href="https://docs.python.org/es/3/reference/lexical_analysis.html#soft-keywords">palabras clave suaves</a> que en determinado contexto, puedes emplear como nombres. Las más comunes son <code>match</code> y <code>case</code>, que solo están restringidas en el contexto de sentencias <a href="https://docs.python.org/es/3/reference/compound_stmts.html#match"><code>match</code></a>:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">match</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">match</span>
 <span class="kc">True</span>
 </code></pre></div>
-
 <p>Este ejemplo demuestra que puedes emplear la palabra reservada <code>match</code> como un nombre de variable. En este caso, Python no levanta una excepción como lo hace con otras palabras reservadas.</p>
 <p>En cualquier caso, debes evitar emplear palabras clave como nombres o identificadores de variables, funciones, clases, módulos, paquetes o de cualquier otra estructura u objeto Python. Emplearlas de esta forma podría generar problemas difíciles de identificar y resolver en tu código.</p>
 <h2 id="resumiendo">Resumiendo</h2>
@@ -721,12 +716,12 @@ Related help topics: TRUTHVALUE
     <!-- JS Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
     <!-- Stork and site scripts -->
-    <script src="https://pythonscouts.com/theme/js/stork.js?v=202601221559" defer></script>
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202601221954" defer></script>
     <script
-        src="https://pythonscouts.com/theme/js/site.js?v=202601221559"
+        src="https://pythonscouts.com/theme/js/site.js?v=202601221954"
         defer
         data-stork-name="sitesearch"
-        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202601221559"
+        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202601221954"
         data-stork-index="https://pythonscouts.com/search-index.st">
     </script>
 

@@ -50,8 +50,8 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://pythonscouts.com/elementos-iguales-lista-python/">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202601221559">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202601221559">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202601221954">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202601221954">
     <!-- Preconnect to CDNs -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
@@ -64,9 +64,9 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202601221559">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202601221954">
     <!-- Stork Search - Deferred -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202601221559">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202601221954">
 
 
     <!-- Article tags -->
@@ -108,13 +108,13 @@
     <meta name="twitter:image:alt" content="Cómo saber si todos los elementos en una lista son iguales en Python?">
 
     <!-- Custom CSS for article -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202601221559">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202601221954">
 </head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
 <script
-    src="https://pythonscouts.com/theme/js/analytics.js?v=202601221559"
+    src="https://pythonscouts.com/theme/js/analytics.js?v=202601221954"
     defer
     data-analytics-id="G-R3C5PFSQ1S">
 </script>
@@ -282,7 +282,6 @@ Como premisa y en aras de la simplicidad, asumiremos que se trata de una lista n
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">letters</span><span class="p">))</span> <span class="o">==</span> <span class="mi">1</span>
 <span class="kc">False</span>
 </code></pre></div>
-
 <p>En estos ejemplos, combinas las funciones <code>set()</code> y <a href="https://docs.python.org/es/3/library/functions.html#len"><code>len()</code></a>. Si terminas con un conjunto de uno solo elemento, entonces sabes que todos los elementos de tu lista original son iguales.</p>
 <h2 id="usar-la-funcion-all-para-comparar-el-primer-elemento-con-los-restantes">Usar la función <code>all()</code> para comparar el primer elemento con los restantes</h2>
 <p>Puedes emplear la función <a href="https://docs.python.org/es/3/library/functions.html#all"><code>all()</code></a> para determinar si todos los elementos de una lista son iguales. Esta función te permite comprobar si todos los elementos de un iterable son verdaderos. Para cumplir con tu tarea, puedes comparar el primer elemento de tu lista con el resto de los elementos.</p>
@@ -295,7 +294,6 @@ Como premisa y en aras de la simplicidad, asumiremos que se trata de una lista n
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">all</span><span class="p">(</span><span class="n">item</span> <span class="o">==</span> <span class="n">letters</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">letters</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
 <span class="kc">False</span>
 </code></pre></div>
-
 <p>Esta técnica para determinar si todos los elementos de una lista son iguales emplea una expresión generadora que produce <a href="https://pythonscouts.com/valores-python/">valores</a> booleanos que resultan de evaluar la <a href="https://pythonscouts.com/expresiones-python/">expresión</a> <code>item == letters[0]</code>. Luego, <code>all()</code> verifica si todos los elementos resultantes son <code>True</code>.</p>
 <h2 id="ordenar-la-lista-y-comparar-el-primer-y-el-ultimo-elemento">Ordenar la lista y comparar el primer y el último elemento</h2>
 <p>Otra manera de saber si todos los elementos de una lista son iguales es ordenar la lista y comparar el primer y el último elemento.</p>
@@ -316,7 +314,6 @@ Debes saber que esta técnica puedes ser muy ineficiente especialmente cuando ti
 <span class="o">&gt;&gt;&gt;</span> <span class="n">letters</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">letters</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 <span class="kc">False</span>
 </code></pre></div>
-
 <p>En este ejemplo, ordenas la lista con el método <a href="https://docs.python.org/es/3/library/stdtypes.html#list.sort"><code>.sort()</code></a> y luego comparas el primer y el último elemento usando una comparación de igualdad. Si estos elementos son iguales, entonces todos los elementos de tu lista son iguales.</p>
 <h2 id="en-resumen">En resumen</h2>
 <p>En esta guía, has aprendido tres técnicas diferentes para determinar si todos los elementos en una lista de Python son iguales:</p>
@@ -403,12 +400,12 @@ Debes saber que esta técnica puedes ser muy ineficiente especialmente cuando ti
     <!-- JS Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
     <!-- Stork and site scripts -->
-    <script src="https://pythonscouts.com/theme/js/stork.js?v=202601221559" defer></script>
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202601221954" defer></script>
     <script
-        src="https://pythonscouts.com/theme/js/site.js?v=202601221559"
+        src="https://pythonscouts.com/theme/js/site.js?v=202601221954"
         defer
         data-stork-name="sitesearch"
-        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202601221559"
+        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202601221954"
         data-stork-index="https://pythonscouts.com/search-index.st">
     </script>
 

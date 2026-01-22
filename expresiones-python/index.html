@@ -50,8 +50,8 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://pythonscouts.com/expresiones-python/">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202601221559">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202601221559">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202601221954">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202601221954">
     <!-- Preconnect to CDNs -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
@@ -64,9 +64,9 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202601221559">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202601221954">
     <!-- Stork Search - Deferred -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202601221559">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202601221954">
 
 
     <!-- Article tags -->
@@ -108,13 +108,13 @@
     <meta name="twitter:image:alt" content="Python a través de ejemplos: Expresiones">
 
     <!-- Custom CSS for article -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202601221559">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202601221954">
 </head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
 <script
-    src="https://pythonscouts.com/theme/js/analytics.js?v=202601221559"
+    src="https://pythonscouts.com/theme/js/analytics.js?v=202601221954"
     defer
     data-analytics-id="G-R3C5PFSQ1S">
 </script>
@@ -283,7 +283,6 @@
 <span class="o">&gt;&gt;&gt;</span> <span class="mi">8</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">200</span> <span class="o">/</span> <span class="mi">2</span>
 <span class="mf">164.0</span>
 </code></pre></div>
-
 <p>En estos ejemplos, construyes expresiones usando <a href="https://pythonscouts.com/operadores-python/#aritmeticos">operadores aritméticos</a> para combinar valores numéricos y funciones que dan como resultado un número.</p>
 <p>Las expresiones aritméticas también pueden emplear <a href="https://pythonscouts.com/variables-python/">variables</a> y <a href="https://pythonscouts.com/constantes-python/">constantes</a> en lugar de literales numéricos:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">radius</span> <span class="o">=</span> <span class="mi">10</span>
@@ -292,7 +291,6 @@
 <span class="o">&gt;&gt;&gt;</span> <span class="n">circle_area</span>
 <span class="mf">314.2</span>
 </code></pre></div>
-
 <p>En este ejemplo, utilizamos una variable y una constante para crear una expresión que retorna el área de un círculo a partir del radio. Como las expresiones siempre retornan un valor, puedes emplear una variable para mantener una referencia al resultado.</p>
 <h2 id="comparacion">Comparación</h2>
 <p>Por su parte, las expresiones de comparación son aquellas que nos permiten comparar objetos entre sí. Estas expresiones son útiles para decidir el flujo de ejecución de tus programas en función del cumplimiento de determinadas <a href="https://pythonscouts.com/condicionales-python/">condiciones</a>.</p>
@@ -313,7 +311,6 @@
 <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">&lt;=</span> <span class="n">b</span>
 <span class="kc">False</span>
 </code></pre></div>
-
 <p>Todas las expresiones de comparación retornan un valor lógico, ya sea <code>True</code> o <code>False</code>.</p>
 <aside class="note">
 Los ejemplos anteriores comparan valores numéricos, sin embargo, también es posible comparar cadenas, tuplas, listas y cualquier otro objeto que soporte los operadores de comparación.
@@ -331,7 +328,6 @@ Los ejemplos anteriores comparan valores numéricos, sin embargo, también es po
 <span class="o">&gt;&gt;&gt;</span> <span class="ow">not</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span>
 <span class="kc">False</span>
 </code></pre></div>
-
 <p>En estos ejemplos las expresiones retornan valores booleanos. Es decir, <code>True</code> o <code>False</code>. Sin embargo, no todas las expresiones lógicas retornan valores booleanos.</p>
 <p>Si los operandos involucrados son objetos o expresiones con un valor no booleano, entonces los operadores <code>and</code> y <code>or</code> retornan uno de los operandos dependiendo de sus valores de verdad:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="ow">and</span> <span class="s2">&quot;Hola&quot;</span>
@@ -348,7 +344,6 @@ Los ejemplos anteriores comparan valores numéricos, sin embargo, también es po
 <span class="o">&gt;&gt;&gt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="mf">3.14</span>
 <span class="mf">3.14</span>
 </code></pre></div>
-
 <p>La siguiente tabla resume el comportamiento de los operadores <code>and</code> y <code>or</code> con operandos cuyos valores no son booleanos:</p>
 <table>
 <thead>
@@ -389,14 +384,12 @@ Los ejemplos anteriores comparan valores numéricos, sin embargo, también es po
 <span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="s2">&quot;Juan&quot;</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="s2">&quot;Programador&quot;</span><span class="p">,</span> <span class="s2">&quot;España&quot;</span><span class="p">)</span>
 <span class="p">(</span><span class="s1">&#39;Juan&#39;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s1">&#39;Programador&#39;</span><span class="p">,</span> <span class="s1">&#39;España&#39;</span><span class="p">)</span>
 </code></pre></div>
-
 <p>En el primer ejemplo, concatenas varias cadenas para formar una cadena final. De modo similar, haces con listas y con tuplas. Sin embargo, debes notar que los operandos deben ser del mismo tipo de datos. Considera el ejemplo siguiente:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="s2">&quot;Juan&quot;</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;Programador&quot;</span><span class="p">,</span> <span class="s2">&quot;España&quot;</span><span class="p">]</span>
 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
     <span class="o">...</span>
 <span class="ne">TypeError</span><span class="p">:</span> <span class="n">can</span> <span class="n">only</span> <span class="n">concatenate</span> <span class="nb">tuple</span> <span class="p">(</span><span class="ow">not</span> <span class="s2">&quot;list&quot;</span><span class="p">)</span> <span class="n">to</span> <span class="nb">tuple</span>
 </code></pre></div>
-
 <p>Si tratas de concatenar una tupla con una lista, entonces recibirás una excepción <code>TypeError</code>.</p>
 <p>En lo que respecta a las expresiones de repetición, debes emplear el operador de repetición (<code>*</code>). Uno de los operandos será un número entero que representa el número de veces que deseas repetir el segundo operando. Este último puede ser una cadena, una lista, o una tupla:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;Hola!&quot;</span> <span class="o">*</span> <span class="mi">3</span>
@@ -408,7 +401,6 @@ Los ejemplos anteriores comparan valores numéricos, sin embargo, también es po
 <span class="o">&gt;&gt;&gt;</span> <span class="mi">4</span> <span class="o">*</span> <span class="p">(</span><span class="s2">&quot;uno&quot;</span><span class="p">,</span> <span class="s2">&quot;dos&quot;</span><span class="p">)</span>
 <span class="p">(</span><span class="s1">&#39;uno&#39;</span><span class="p">,</span> <span class="s1">&#39;dos&#39;</span><span class="p">,</span> <span class="s1">&#39;uno&#39;</span><span class="p">,</span> <span class="s1">&#39;dos&#39;</span><span class="p">,</span> <span class="s1">&#39;uno&#39;</span><span class="p">,</span> <span class="s1">&#39;dos&#39;</span><span class="p">,</span> <span class="s1">&#39;uno&#39;</span><span class="p">,</span> <span class="s1">&#39;dos&#39;</span><span class="p">)</span>
 </code></pre></div>
-
 <p>El operador de repetición te permite repetir un objeto un determinado número de veces. Debes notar que el orden de los operandos no altera el resultado.</p>
 <h2 id="precedencia-de-operadores">Precedencia de operadores</h2>
 <p>Cuando trabajas con expresiones que combinan diferentes tipos de operadores, debes considerar que los operadores tienen un orden de precedencia que define cuál operación se evalúa primero. A continuación un breve resumen de este orden.</p>
@@ -416,13 +408,11 @@ Los ejemplos anteriores comparan valores numéricos, sin embargo, también es po
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="mi">4</span>
 <span class="mi">20</span>
 </code></pre></div>
-
 <p>En esta expresión, se evalúa <code>(2 + 3)</code> primero y se obtiene <code>5</code>. Luego, se desarrolla la multiplicación y resulta en <code>20</code>.</p>
 <p><strong>Exponenciación</strong> <code>**</code>. El operador de potencia tiene la segunda mayor precedencia:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">3</span><span class="o">**</span><span class="mi">2</span>
 <span class="mi">18</span>
 </code></pre></div>
-
 <p>Se evalúa primero la exponenciación <code>(3**2)</code> y se obtiene <code>9</code>. Luego, se realiza la multiplicación y se obtiene <code>18</code>.</p>
 <p><strong>Operadores unarios</strong> <code>+x</code>, <code>-x</code>, <code>~x</code>. Los operadores unarios como el negativo <code>-</code> y el positivo <code>+</code> se aplican antes que la mayoría de los operadores. Sin embargo, su precedencia es menor que la del operador de exponenciación:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="o">-</span><span class="mi">3</span><span class="o">**</span><span class="mi">2</span>
@@ -431,62 +421,52 @@ Los ejemplos anteriores comparan valores numéricos, sin embargo, también es po
 <span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
 <span class="mi">9</span>
 </code></pre></div>
-
 <p>La primera expresión se evalúa como <code>-(3**2) = -9</code> en lugar de como <code>(-3)**2 = 9</code> que sería lo esperado en matemáticas.</p>
 <p><strong>Multiplicación</strong>, <strong>División</strong>, <strong>Módulo</strong> y <strong>División entera</strong> <code>*</code>, <code>/</code>, <code>%</code>, <code>//</code>. Todos estos operadores tienen la misma precedencia y se evalúan de izquierda a derecha según aparecen en las expresiones:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">2</span>
 <span class="mi">20</span>
 </code></pre></div>
-
 <p>Se evalúa primero la multiplicación y luego la suma <code>10 + (5 * 2)</code>.</p>
 <p><strong>Suma</strong> y <strong>Resta</strong> <code>+</code>, <code>-</code>. Tienen precedencia menor que la multiplicación y se evalúan después de ella:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mi">10</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span>
 <span class="mi">11</span>
 </code></pre></div>
-
 <p>Se evalúa de izquierda a derecha: primero <code>10 - 2</code> y luego <code>8 + 3</code>.</p>
 <p><strong>Operadores de desplazamiento de bits</strong> <code>&lt;&lt;</code>, <code>&gt;&gt;</code>. Los operadores de desplazamiento tienen menor precedencia que los aritméticos:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span>
 <span class="mi">12</span>
 </code></pre></div>
-
 <p>Se evalúa como <code>(1 + 2) &lt;&lt; 2</code>.</p>
 <p><strong>Operadores de comparación</strong> <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code>. Los operadores de comparación se evalúan después de los aritméticos y de los de desplazamiento:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">10</span>
 <span class="kc">True</span>
 </code></pre></div>
-
 <p>Se evalúa como <code>(3 * 2) &lt; 10</code>.</p>
 <p><strong>Operadores de igualdad</strong> <code>==</code>, <code>!=</code>. Tienen menor precedencia que los operadores de comparación:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">5</span>
 <span class="kc">True</span>
 </code></pre></div>
-
 <p>Se evalúa primero <code>3 + 2</code> y luego <code>5 == 5</code>.</p>
 <p><strong>Operadores de bits</strong> <code>&amp;</code>, <code>^</code>, <code>|</code>. Se evalúan en el siguiente orden: <code>&amp;</code> (AND bit a bit), <code>^</code> (XOR bit a bit), <code>|</code> (OR bit a bit):</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mi">3</span> <span class="o">&amp;</span> <span class="mi">2</span> <span class="o">|</span> <span class="mi">1</span>
 <span class="mi">1</span>
 </code></pre></div>
-
 <p>Se evalúa como <code>(3 &amp; 2) | 1</code>.</p>
 <p><strong>Operadores lógicos</strong> <code>not</code>, <code>and</code>, <code>or</code>. El operador <code>not</code> tiene mayor precedencia que <code>and</code>, que a su vez tiene mayor precedencia que <code>or</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="ow">not</span> <span class="kc">True</span> <span class="ow">or</span> <span class="kc">False</span> <span class="ow">and</span> <span class="kc">True</span>
 <span class="kc">False</span>
 </code></pre></div>
-
 <p>Se evalúa como <code>(not True) or (False and True)</code>.</p>
 <p><strong>Operadores de pertenencia e identidad</strong> <code>in</code>, <code>not in</code>, <code>is</code>, <code>is not</code>. Estos operadores tienen precedencia baja y se evalúan antes que los operadores lógicos:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;m&quot;</span> <span class="ow">in</span> <span class="s2">&quot;mango&quot;</span> <span class="ow">and</span> <span class="kc">None</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
 <span class="kc">False</span>
 </code></pre></div>
-
 <p>Se evalúa como <code>("m" in "mango") and (None is not None)</code>.</p>
 <p><strong>Operadores de asignación</strong> <code>=</code>, <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>//=</code>, <code>**=</code>, y <code>%=</code>. Los operadores de asignación tienen la menor precedencia, lo cual permite que los cálculos se realicen antes de asignar el valor final:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">5</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">x</span>
 <span class="mi">13</span>
 </code></pre></div>
-
 <p>Primero se evalúa <code>3 + (2 * 5)</code> y luego se asigna el resultado a la variable <code>x</code>.</p>
 <h2 id="conclusiones">Conclusiones</h2>
 <p>Has aprendido sobre las expresiones en Python y cómo formarlas usando diferentes tipos de operadores, como los aritméticos, de comparación, lógicos, de concatenación y repetición. También has conocido la importancia de la precedencia de operadores en la evaluación de expresiones complejas.</p>
@@ -569,12 +549,12 @@ Los ejemplos anteriores comparan valores numéricos, sin embargo, también es po
     <!-- JS Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
     <!-- Stork and site scripts -->
-    <script src="https://pythonscouts.com/theme/js/stork.js?v=202601221559" defer></script>
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202601221954" defer></script>
     <script
-        src="https://pythonscouts.com/theme/js/site.js?v=202601221559"
+        src="https://pythonscouts.com/theme/js/site.js?v=202601221954"
         defer
         data-stork-name="sitesearch"
-        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202601221559"
+        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202601221954"
         data-stork-index="https://pythonscouts.com/search-index.st">
     </script>
 

@@ -4,7 +4,6 @@
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;generator&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
     &lt;span class="k"&gt;yield&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Solo necesitas incluir la &lt;a href="/python-palabras-clave/"&gt;palabra clave&lt;/a&gt; &lt;code&gt;yield&lt;/code&gt; seguida del &lt;a href="/valores-python/"&gt;valor&lt;/a&gt; que deseas devolver.&lt;/p&gt;
 &lt;p&gt;Los generadores también pueden incluir varios &lt;code&gt;yield&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;gen_numbers&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
@@ -12,13 +11,11 @@
     &lt;span class="k"&gt;yield&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
     &lt;span class="k"&gt;yield&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Finalmente, es común usar &lt;code&gt;yield&lt;/code&gt; en un &lt;a href="/ciclos-for-python/"&gt;ciclo &lt;code&gt;for&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;gen_numbers&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
     &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
         &lt;span class="k"&gt;yield&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
 &lt;p&gt;Veamos un ejemplo de cómo se usa la palabra clave &lt;code&gt;yield&lt;/code&gt; en Python:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;counter&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
@@ -41,7 +38,6 @@
     &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="ne"&gt;StopIteration&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, la función &lt;code&gt;counter()&lt;/code&gt; es un generador que utiliza &lt;code&gt;yield&lt;/code&gt; para devolver los valores &lt;code&gt;0&lt;/code&gt;, &lt;code&gt;1&lt;/code&gt; y &lt;code&gt;2&lt;/code&gt;, uno a la vez, cada vez que se llama a &lt;code&gt;next()&lt;/code&gt; en el generador.&lt;/p&gt;
 &lt;p&gt;Si intentas llamar a &lt;code&gt;next(gen)&lt;/code&gt; una vez que el generador ha producido todos sus valores, Python lanzará una excepción &lt;code&gt;StopIteration&lt;/code&gt;. Esta excepción indica que no quedan más elementos por generar y es el comportamiento esperado para finalizar la iteración.&lt;/p&gt;
 &lt;p&gt;En la mayoría de los casos, usarás un ciclo &lt;a href="/python-for/"&gt;&lt;code&gt;for&lt;/code&gt;&lt;/a&gt; para iterar sobre el generador:&lt;/p&gt;
@@ -52,7 +48,6 @@
 &lt;span class="mi"&gt;1&lt;/span&gt;
 &lt;span class="mi"&gt;2&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, el ciclo for gestiona automáticamente el fin de la iteración cuando ocurre la excepción &lt;code&gt;StopIteration&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="uso-de-yield"&gt;Uso de &lt;code&gt;yield&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;Los casos de uso más comunes de la palabra clave &lt;code&gt;yield&lt;/code&gt; incluyen los siguientes:&lt;/p&gt;
@@ -80,32 +75,25 @@
 &lt;p&gt;La sintaxis básica para utilizar &lt;code&gt;from&lt;/code&gt; junto con &lt;a href="/python-import/"&gt;&lt;code&gt;import&lt;/code&gt;&lt;/a&gt; es la siguiente:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;module_name&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;specific_component&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Si necesitas crear un alias para evitar conflictos de nombres o simplificar el uso, puedes usar &lt;a href="/python-as/"&gt;&lt;code&gt;as&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;module_name&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;specific_component&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;alias&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;También puedes importar múltiples componentes separados por comas:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;module_name&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;component1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;component2&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Además, puedes usar &lt;code&gt;*&lt;/code&gt; para importar todos los componentes del módulo:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;module_name&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Esta sintaxis se conoce como &lt;strong&gt;wildcard import&lt;/strong&gt; y es común en secciones de trabajo interactivas. Sin embargo, no se recomienda usarla en código en producción pues puede causar conflictos de nombres y dificultar la depuración.&lt;/p&gt;
 &lt;p&gt;Sintaxis para el uso con &lt;a href="/python-raise/"&gt;&lt;code&gt;raise&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;raise&lt;/span&gt; &lt;span class="n"&gt;NewException&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;mensaje&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;original_exception&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Si deseas suprimir el contexto de la excepción original, puedes usar &lt;a href="/python-none/"&gt;&lt;code&gt;None&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;raise&lt;/span&gt; &lt;span class="n"&gt;NewException&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;mensaje&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Sintaxis para el uso con &lt;code&gt;yield&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;yield from&lt;/span&gt; &lt;span class="n"&gt;iterable&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Esta sintaxis equivale a iterar sobre el iterable y producir cada elemento uno por uno.&lt;/p&gt;
 &lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
 &lt;p&gt;Aquí hay algunos ejemplos que ilustran cómo se usa la palabra clave &lt;code&gt;from&lt;/code&gt;:&lt;/p&gt;
@@ -113,7 +101,6 @@
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;pi&lt;/span&gt;
 &lt;span class="mf"&gt;3.141592653589793&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, solo se importa &lt;code&gt;pi&lt;/code&gt; del módulo &lt;code&gt;math&lt;/code&gt;, permitiéndote usarlo directamente sin tener que prefijarlo con &lt;code&gt;math&lt;/code&gt;.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;datetime&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;timedelta&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;now&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;now&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
@@ -121,7 +108,6 @@
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;future&lt;/span&gt;
 &lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2023&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;27&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;34&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;401213&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, se importan &lt;code&gt;datetime&lt;/code&gt; y &lt;code&gt;timedelta&lt;/code&gt; del módulo &lt;code&gt;datetime&lt;/code&gt;. Esto permite trabajar con fechas y tiempos de manera más directa.&lt;/p&gt;
 &lt;p&gt;A continuación, un ejemplo de encadenamiento de excepciones con &lt;code&gt;raise from&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;connect_to_database&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;connection_string&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
@@ -143,7 +129,6 @@
     &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="ne"&gt;RuntimeError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;error&lt;/span&gt; &lt;span class="n"&gt;en&lt;/span&gt; &lt;span class="n"&gt;la&lt;/span&gt; &lt;span class="n"&gt;base&lt;/span&gt; &lt;span class="n"&gt;de&lt;/span&gt; &lt;span class="n"&gt;datos&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, se preserva la excepción original (&lt;code&gt;ConnectionError&lt;/code&gt;) como causa directa del nuevo error (&lt;code&gt;RuntimeError&lt;/code&gt;).&lt;/p&gt;
 &lt;p&gt;Finalmente, un ejemplo de delegación de iteración con &lt;code&gt;yield from&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;combine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;first&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;second&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
@@ -154,7 +139,6 @@
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;combine&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;]))&lt;/span&gt;
 &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, &lt;code&gt;yield from&lt;/code&gt; delega la iteración a cada lista, produciendo sus elementos sin necesidad de un bucle explícito.&lt;/p&gt;
 &lt;h2 id="uso-de-from"&gt;Uso de &lt;code&gt;from&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;Los casos de uso más comunes de la palabra clave &lt;code&gt;from&lt;/code&gt; incluyen los siguientes:&lt;/p&gt;
@@ -173,7 +157,6 @@
 &lt;p&gt;La sintaxis para utilizar &lt;code&gt;or&lt;/code&gt; es la siguiente:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;expr1&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="n"&gt;expr2&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Donde &lt;code&gt;expr1&lt;/code&gt; y &lt;code&gt;expr2&lt;/code&gt; son las expresiones lógicas que deseas evaluar. Si alguna de ellas es verdadera, el resultado será &lt;a href="/python-true/"&gt;&lt;code&gt;True&lt;/code&gt;&lt;/a&gt;. Si ambas son falsas, el resultado es &lt;a href="/python-false/"&gt;&lt;code&gt;False&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;El operador &lt;code&gt;or&lt;/code&gt; aplica lo que se conoce como evaluación diferida (short-circuiting): si &lt;code&gt;expr1&lt;/code&gt; es verdadera, entonces Python no evalúa &lt;code&gt;expr2&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Además, &lt;code&gt;or&lt;/code&gt; devuelve el primer operando con valor de verdad verdadero (truthy). Si ninguno es verdadero, devuelve el último operando. Por lo tanto, no siempre devuelve &lt;code&gt;True&lt;/code&gt; o &lt;code&gt;False&lt;/code&gt;.&lt;/p&gt;
@@ -217,7 +200,6 @@
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;
 &lt;span class="kc"&gt;False&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En estos ejemplos, el operador &lt;code&gt;or&lt;/code&gt; evalúa las expresiones a la izquierda y a la derecha. Si alguna de las expresiones es verdadera, el resultado de toda la expresión es &lt;code&gt;True&lt;/code&gt;. En el caso de que ambas expresiones sean falsas, el resultado es &lt;code&gt;False&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Si usamos &lt;code&gt;or&lt;/code&gt; con objetos concretos o con expresiones que retornan objetos distintos de &lt;code&gt;True&lt;/code&gt; o &lt;code&gt;False&lt;/code&gt;, tenemos el comportamiento siguiente:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;default&amp;quot;&lt;/span&gt;
@@ -232,7 +214,6 @@
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
 &lt;span class="p"&gt;[]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En estos ejemplos, el operador devuelve objetos concretos en lugar de los valores &lt;code&gt;True&lt;/code&gt; o &lt;code&gt;False&lt;/code&gt;. Esto se debe a a todo objeto en Python tiene un valor de verdad intrínseco. Estos son los objectos considerados falsos:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
@@ -263,12 +244,10 @@
 &lt;p&gt;La sintaxis básica para usar &lt;code&gt;raise&lt;/code&gt; es la siguiente:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;raise&lt;/span&gt; &lt;span class="n"&gt;ExceptionType&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;mensaje opcional&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Aquí, &lt;code&gt;ExceptionType&lt;/code&gt; es el tipo de excepción que deseas generar o lanzar, y el &lt;code&gt;"mensaje opcional"&lt;/code&gt; proporciona más detalles sobre la excepción.&lt;/p&gt;
 &lt;p&gt;Para encadenar excepciones y conservar el contexto del error original, puedes usar la &lt;a href="/python-palabras-clave/"&gt;palabra clave&lt;/a&gt; &lt;code&gt;from&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;raise&lt;/span&gt; &lt;span class="n"&gt;NewException&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;mensaje&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;original_exception&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Esto permite que la nueva excepción conserve la traza (traceback) de la excepción original, facilitando la depuración.&lt;/p&gt;
 &lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
 &lt;p&gt;Aquí tienes algunos ejemplos que muestran cómo usar &lt;code&gt;raise&lt;/code&gt;:&lt;/p&gt;
@@ -277,7 +256,6 @@
     &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="ne"&gt;ValueError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;este&lt;/span&gt; &lt;span class="n"&gt;es&lt;/span&gt; &lt;span class="n"&gt;un&lt;/span&gt; &lt;span class="n"&gt;error&lt;/span&gt; &lt;span class="n"&gt;de&lt;/span&gt; &lt;span class="n"&gt;valor&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, &lt;code&gt;raise&lt;/code&gt; genera un &lt;code&gt;ValueError&lt;/code&gt; con un mensaje personalizado.&lt;/p&gt;
 &lt;p&gt;También puedes definir tus propias excepciones personalizadas y generarlas con &lt;code&gt;raise&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;CustomException&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ne"&gt;Exception&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
@@ -289,7 +267,6 @@
     &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="n"&gt;CustomException&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;esto&lt;/span&gt; &lt;span class="n"&gt;es&lt;/span&gt; &lt;span class="n"&gt;un&lt;/span&gt; &lt;span class="n"&gt;error&lt;/span&gt; &lt;span class="n"&gt;personalizado&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Aquí, defines una nueva clase de excepción llamada &lt;code&gt;CustomException&lt;/code&gt; que hereda de &lt;code&gt;Exception&lt;/code&gt;, y luego la lanzas usando &lt;code&gt;raise&lt;/code&gt;.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;abc&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -306,7 +283,6 @@
     &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="ne"&gt;RuntimeError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;error&lt;/span&gt; &lt;span class="n"&gt;al&lt;/span&gt; &lt;span class="n"&gt;convertir&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;entero&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Aquí, &lt;code&gt;raise ... from ...&lt;/code&gt; permite que la excepción &lt;code&gt;RuntimeError&lt;/code&gt; conserve la traza de la excepción original, facilitando la depuración.&lt;/p&gt;
 &lt;p&gt;En la práctica, debes generar excepciones en código de bajo nivel (backend) y capturarlas en código de alto nivel (frontend).&lt;/p&gt;
 &lt;h2 id="uso-de-raise"&gt;Uso de &lt;code&gt;raise&lt;/code&gt;&lt;/h2&gt;
@@ -337,7 +313,6 @@
 &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="c1"&gt;# Código si ninguna de las condiciones anteriores es verdadera&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
 &lt;p&gt;Veamos un ejemplo de cómo puedes usar la palabra clave &lt;code&gt;elif&lt;/code&gt; en Python:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
@@ -353,7 +328,6 @@
 &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="n"&gt;es&lt;/span&gt; &lt;span class="n"&gt;diez&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, &lt;code&gt;x&lt;/code&gt; es &lt;code&gt;10&lt;/code&gt;. La primera condición &lt;code&gt;if&lt;/code&gt; es falsa, el primer &lt;code&gt;elif&lt;/code&gt; también es falso, pero el segundo &lt;code&gt;elif&lt;/code&gt; es verdadero, por lo que se ejecuta ese bloque y se imprime &lt;code&gt;"x es diez"&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Debes tener en cuenta que &lt;code&gt;elif&lt;/code&gt; se adecúa mejor a situaciones donde tus condiciones son mutuamente excluyentes y evalúan el estado de una misma variable. Python evalúa las ramas en orden y ejecuta solo la primera condición verdadera, por lo que usar &lt;code&gt;elif&lt;/code&gt; deja claro que solo una rama debe ejecutarse.&lt;/p&gt;
 &lt;p&gt;Un ejemplo típico de condiciones mutuamente excluyentes es cuando necesitas clasificar códigos de estado HTTP según su rango de valores:&lt;/p&gt;
@@ -374,7 +348,6 @@
 &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="n"&gt;Error&lt;/span&gt; &lt;span class="k"&gt;del&lt;/span&gt; &lt;span class="n"&gt;cliente&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Aquí, todas las condiciones evalúan el estado de una misma variable, &lt;code&gt;status_code&lt;/code&gt;, y solo una rama debe ejecutarse. Por eso, &lt;code&gt;elif&lt;/code&gt; es la opción natural.&lt;/p&gt;
 &lt;p&gt;Si necesitas comprobar condiciones independientes donde podrían cumplirse varias, utiliza un bloque &lt;code&gt;if&lt;/code&gt; separado para cada una.&lt;/p&gt;
 &lt;h2 id="uso-de-elif"&gt;Uso de &lt;code&gt;elif&lt;/code&gt;&lt;/h2&gt;
@@ -407,7 +380,6 @@
         &lt;span class="k"&gt;continue&lt;/span&gt;
     &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;aside class="note"&gt;Si &lt;code&gt;continue&lt;/code&gt; queda como última sentencia del cuerpo del bucle, es innecesaria porque no hay código que omitir y el bucle pasa igual a la siguiente iteración.&lt;/aside&gt;
 
 &lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
@@ -421,7 +393,6 @@
 &lt;span class="mi"&gt;3&lt;/span&gt;
 &lt;span class="mi"&gt;5&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Un caso de uso típico de &lt;code&gt;while&lt;/code&gt; es validar la entrada del usuario. En el ejemplo siguiente, &lt;code&gt;continue&lt;/code&gt; evita ejecutar el resto del cuerpo del bucle cuando la entrada es inválida:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="n"&gt;raw&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Edad (Enter para salir): &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strip&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
@@ -441,7 +412,6 @@
 
     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Edad registrada: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;age&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En bucles anidados, &lt;code&gt;continue&lt;/code&gt; afecta solo al bucle más interno:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;pairs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
 
@@ -455,7 +425,6 @@
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;pairs&lt;/span&gt;
 &lt;span class="p"&gt;[(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;El bloque &lt;code&gt;else&lt;/code&gt; de un bucle aún se ejecuta si usas &lt;code&gt;continue&lt;/code&gt;. Solo &lt;code&gt;break&lt;/code&gt; lo evita:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
@@ -468,14 +437,12 @@
 &lt;span class="mi"&gt;3&lt;/span&gt;
 &lt;span class="n"&gt;Terminó&lt;/span&gt; &lt;span class="n"&gt;sin&lt;/span&gt; &lt;span class="n"&gt;usar&lt;/span&gt; &lt;span class="k"&gt;break&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Errores comunes:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;function&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="k"&gt;continue&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="ne"&gt;SyntaxError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;continue&amp;#39;&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;properly&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;loop&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Como ves, &lt;code&gt;continue&lt;/code&gt; solo puede emplearse dentro de un ciclo.&lt;/p&gt;
 &lt;h2 id="uso-de-continue"&gt;Uso de &lt;code&gt;continue&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;Los casos de uso más comunes de la palabra clave &lt;code&gt;continue&lt;/code&gt; incluyen los siguientes:&lt;/p&gt;
@@ -501,14 +468,12 @@
 &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="c1"&gt;# Bloque que se ejecuta si la condición es falsa&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Y en un &lt;a href="/ciclos-for-python/"&gt;bucle &lt;code&gt;for&lt;/code&gt;&lt;/a&gt;, se usa así:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;iterable&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="c1"&gt;# Código para cada item&lt;/span&gt;
 &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="c1"&gt;# Código si el bucle completa sin interrupciones&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En la práctica, no deberías emplear &lt;code&gt;else&lt;/code&gt; en ciclos que no contienen una sentencia &lt;a href="/python-break/"&gt;&lt;code&gt;break&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;También puedes usar &lt;code&gt;else&lt;/code&gt; junto con bloques &lt;code&gt;try&lt;/code&gt; para ejecutar código solo si no ocurre ninguna excepción:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
@@ -518,7 +483,6 @@
 &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="c1"&gt;# Código que se ejecuta si no ocurre ninguna excepción&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
 &lt;p&gt;Aquí tienes algunos ejemplos que muestran cómo se usa &lt;code&gt;else&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
@@ -530,7 +494,6 @@
 &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;es&lt;/span&gt; &lt;span class="n"&gt;mayor&lt;/span&gt; &lt;span class="n"&gt;que&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, como &lt;code&gt;x&lt;/code&gt; es menor que &lt;code&gt;5&lt;/code&gt;, el bloque de código dentro del &lt;code&gt;if&lt;/code&gt; no se ejecuta. En su lugar, se ejecuta el código dentro de &lt;code&gt;else&lt;/code&gt;.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -541,7 +504,6 @@
 &lt;span class="mi"&gt;2&lt;/span&gt;
 &lt;span class="n"&gt;Bucle&lt;/span&gt; &lt;span class="n"&gt;completado&lt;/span&gt; &lt;span class="n"&gt;sin&lt;/span&gt; &lt;span class="n"&gt;interrupciones&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En el ejemplo anterior, el ciclo se completa sin interrupciones, por lo que el bloque &lt;code&gt;else&lt;/code&gt; se ejecuta.&lt;/p&gt;
 &lt;p&gt;Ahora considera lo que ocurre si usas &lt;code&gt;break&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
@@ -555,7 +517,6 @@
 &lt;span class="mi"&gt;1&lt;/span&gt;
 &lt;span class="err"&gt;¡&lt;/span&gt;&lt;span class="n"&gt;Se&lt;/span&gt; &lt;span class="n"&gt;encontró&lt;/span&gt; &lt;span class="n"&gt;el&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="err"&gt;!&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este caso, el bucle se interrumpe con &lt;code&gt;break&lt;/code&gt; y el bloque &lt;code&gt;else&lt;/code&gt; no se ejecuta.&lt;/p&gt;
 &lt;h2 id="uso-de-else"&gt;Uso de &lt;code&gt;else&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;Los casos de uso más comunes de la palabra clave &lt;code&gt;else&lt;/code&gt; incluyen los siguientes:&lt;/p&gt;
@@ -588,7 +549,6 @@
         &lt;span class="k"&gt;break&lt;/span&gt;
     &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Coloca &lt;code&gt;break&lt;/code&gt; dentro del cuerpo de un bucle para interrumpir su ejecución cuando se cumpla una determinada condición.&lt;/p&gt;
 &lt;p&gt;En general, no debes usar &lt;code&gt;break&lt;/code&gt; directamente en el cuerpo del ciclo, pues eso provocaría que solo se realice una iteración. En su lugar, debes colocarla dentro de una sentencia &lt;a href="/condicionales-python/"&gt;condicional&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
@@ -604,7 +564,6 @@
 &lt;span class="mi"&gt;3&lt;/span&gt;
 &lt;span class="mi"&gt;4&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, el bucle &lt;a href="/ciclos-for-python/"&gt;&lt;code&gt;for&lt;/code&gt;&lt;/a&gt; se detiene cuando &lt;code&gt;n&lt;/code&gt; es igual a &lt;code&gt;5&lt;/code&gt;, por lo que solo se imprimen los números del &lt;code&gt;0&lt;/code&gt; al &lt;code&gt;4&lt;/code&gt;.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
 
@@ -618,7 +577,6 @@
 &lt;span class="mi"&gt;1&lt;/span&gt;
 &lt;span class="mi"&gt;2&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Aquí, el bucle &lt;a href="/python-while/"&gt;&lt;code&gt;while&lt;/code&gt;&lt;/a&gt; se ejecuta indefinidamente hasta que &lt;code&gt;i&lt;/code&gt; alcanza &lt;code&gt;3&lt;/code&gt;, momento en el que &lt;code&gt;break&lt;/code&gt; interrumpe el ciclo.&lt;/p&gt;
 &lt;h2 id="uso-de-break"&gt;Uso de &lt;code&gt;break&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;Los casos de uso más comunes de la &lt;a href="/python-palabras-clave/"&gt;palabra clave&lt;/a&gt; &lt;code&gt;break&lt;/code&gt; incluyen los siguientes:&lt;/p&gt;
@@ -640,7 +598,6 @@
 &lt;h2 id="sintaxis"&gt;Sintaxis&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="n"&gt;condition&lt;/span&gt;&lt;span class="p"&gt;[,&lt;/span&gt; &lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;condition&lt;/code&gt;: Una expresión que se evalúa como verdadera o falsa.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;message&lt;/code&gt;: Un mensaje (Opcional) de error que se mostrará si la condición es falsa.&lt;/li&gt;
@@ -657,7 +614,6 @@
     &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="ne"&gt;AssertionError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;y&amp;#39;&lt;/span&gt; &lt;span class="n"&gt;debería&lt;/span&gt; &lt;span class="n"&gt;ser&lt;/span&gt; &lt;span class="n"&gt;mayor&lt;/span&gt; &lt;span class="n"&gt;que&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En el primer ejemplo, la condición &lt;code&gt;x &amp;gt; 5&lt;/code&gt; es verdadera, por lo que no ocurre nada ni se imprime ningún mensaje en pantalla.&lt;/p&gt;
 &lt;p&gt;En el segundo ejemplo, la condición &lt;code&gt;y &amp;gt; 5&lt;/code&gt; es falsa, por lo que se lanza un &lt;code&gt;AssertionError&lt;/code&gt; con el mensaje especificado.&lt;/p&gt;
 &lt;h2 id="uso-de-assert"&gt;Uso de &lt;code&gt;assert&lt;/code&gt;&lt;/h2&gt;
@@ -684,13 +640,11 @@ En la práctica, no debes emplear la palabra clave &lt;code&gt;assert&lt;/code&g
 &lt;p&gt;La sintaxis básica para usar &lt;code&gt;del&lt;/code&gt; es la siguiente:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;del&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;También puedes usarla para eliminar elementos de una lista, pares de un diccionario o atributos de un objeto:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;del&lt;/span&gt; &lt;span class="n"&gt;a_list&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="k"&gt;del&lt;/span&gt; &lt;span class="n"&gt;a_dict&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="k"&gt;del&lt;/span&gt; &lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;attribute&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
 &lt;p&gt;Veamos algunos ejemplos de cómo se usa &lt;code&gt;del&lt;/code&gt; en diferentes contextos:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
@@ -701,21 +655,18 @@ En la práctica, no debes emplear la palabra clave &lt;code&gt;assert&lt;/code&g
     &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="ne"&gt;NameError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;x&amp;#39;&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;defined&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, la &lt;a href="/variables-python/"&gt;variable&lt;/a&gt; &lt;code&gt;x&lt;/code&gt; se elimina con &lt;code&gt;del&lt;/code&gt;. Cualquier intento de acceder a ella después de eliminada genera un error.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;numbers&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;del&lt;/span&gt; &lt;span class="n"&gt;numbers&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;numbers&lt;/span&gt;
 &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Aquí, usas &lt;code&gt;del&lt;/code&gt; para eliminar el elemento en el índice &lt;code&gt;2&lt;/code&gt; de la lista, modificando la lista original.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;letters&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;a&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;b&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;c&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;del&lt;/span&gt; &lt;span class="n"&gt;letters&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;b&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;letters&lt;/span&gt;
 &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;c&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En diccionarios, &lt;code&gt;del dic["key"]&lt;/code&gt; elimina el par clave-valor correspondiente. Si la clave no existe, se lanza una excepción &lt;code&gt;KeyError&lt;/code&gt;.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;DemoClase&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
@@ -729,7 +680,6 @@ En la práctica, no debes emplear la palabra clave &lt;code&gt;assert&lt;/code&g
     &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="ne"&gt;AttributeError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;DemoClase&amp;#39;&lt;/span&gt; &lt;span class="nb"&gt;object&lt;/span&gt; &lt;span class="n"&gt;has&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;attribute&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;attribute&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, empleas &lt;code&gt;del&lt;/code&gt; para eliminar un atributo de un objeto, lo que resulta en un error si intentas acceder a él después de haberlo eliminado.&lt;/p&gt;
 &lt;h2 id="uso-de-del"&gt;Uso de &lt;code&gt;del&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;Los casos de uso más comunes de la &lt;a href="/python-palabras-clave/"&gt;palabra clave&lt;/a&gt; &lt;code&gt;del&lt;/code&gt; incluyen los siguientes:&lt;/p&gt;
@@ -753,7 +703,6 @@ En la práctica, no debes emplear la palabra clave &lt;code&gt;assert&lt;/code&g
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;expression&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;variable&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
     &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;La porción &lt;code&gt;[as variable]&lt;/code&gt; es opcional y solo la necesitas cuando quieres una referencia al valor generado por la expresión.&lt;/p&gt;
 &lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
 &lt;p&gt;A continuación algunos ejemplos que muestran cómo se usa la palabra clave &lt;code&gt;with&lt;/code&gt;:&lt;/p&gt;
@@ -762,7 +711,6 @@ En la práctica, no debes emplear la palabra clave &lt;code&gt;assert&lt;/code&g
 
 &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;content&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, &lt;code&gt;with&lt;/code&gt; se utiliza para abrir un archivo llamado &lt;code&gt;archivo.txt&lt;/code&gt; en modo de lectura. El archivo se asigna a la &lt;a href="/variables-python/"&gt;variable&lt;/a&gt; &lt;code&gt;file&lt;/code&gt;, y luego se lee su contenido. Una vez que el bloque &lt;code&gt;with&lt;/code&gt; se completa, el archivo se cierra automáticamente, liberando el recurso incluso si ocurre una excepción.&lt;/p&gt;
 &lt;p&gt;Otro ejemplo podría ser:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;threading&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Lock&lt;/span&gt;
@@ -771,7 +719,6 @@ En la práctica, no debes emplear la palabra clave &lt;code&gt;assert&lt;/code&g
     &lt;span class="c1"&gt;# Código que requiere acceso exclusivo&lt;/span&gt;
     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Bloque protegido por un lock&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Aquí, utilizas &lt;code&gt;with&lt;/code&gt; para adquirir un lock antes de ejecutar un bloque de código que requiere acceso exclusivo a un recurso compartido. El lock se libera automáticamente al salir del bloque &lt;code&gt;with&lt;/code&gt; de modo que otros hilos o procesos puedan usar el recurso compartido.&lt;/p&gt;
 &lt;h2 id="uso-de-with"&gt;Uso de &lt;code&gt;with&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;Los casos de uso más comunes de la palabra clave &lt;code&gt;with&lt;/code&gt; incluyen los siguientes:&lt;/p&gt;
@@ -793,7 +740,6 @@ En la práctica, no debes emplear la palabra clave &lt;code&gt;assert&lt;/code&g
 &lt;p&gt;La sintaxis de la &lt;a href="/python-palabras-clave/"&gt;palabra clave&lt;/a&gt; &lt;code&gt;pass&lt;/code&gt; es extremadamente sencilla, ya que solo consiste en la palabra en sí:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;pass&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
 &lt;p&gt;Aquí tienes algunos ejemplos rápidos que muestran cómo se usa la palabra clave &lt;code&gt;pass&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;CustomException&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ne"&gt;Exception&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
@@ -811,7 +757,6 @@ En la práctica, no debes emplear la palabra clave &lt;code&gt;assert&lt;/code&g
 &lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="ne"&gt;FileNotFoundError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;         &lt;span class="k"&gt;pass&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En el primer ejemplo, &lt;code&gt;pass&lt;/code&gt; se utiliza para crear una excepción personalizada sin añadir comportamiento adicional.&lt;/p&gt;
 &lt;p&gt;En el segundo ejemplo, la función &lt;code&gt;load_data()&lt;/code&gt; aún no hace nada. En este caso, &lt;code&gt;pass&lt;/code&gt; sirve como un recordatorio para implementar la lógica más tarde sin que el código genere un error de sintaxis.&lt;/p&gt;
 &lt;p&gt;En el tercer ejemplo, usas &lt;code&gt;pass&lt;/code&gt; en un bloque &lt;code&gt;except&lt;/code&gt; para ignorar explícitamente el error que ocurre si el archivo que intentas borrar no existe.&lt;/p&gt;
@@ -842,7 +787,6 @@ En la práctica, no debes emplear la palabra clave &lt;code&gt;assert&lt;/code&g
 &lt;p&gt;Esta es la sintaxis:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;arguments&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;expression&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Al igual que las funciones creadas con &lt;a href="/python-def/"&gt;&lt;code&gt;def&lt;/code&gt;&lt;/a&gt;, las lambdas aceptan &lt;a href="/valores-python/"&gt;valores&lt;/a&gt; por defecto, argumentos posicionales y hasta &lt;code&gt;*args&lt;/code&gt; o &lt;code&gt;**kwargs&lt;/code&gt;. Lo que no puedes hacer es escribir varias sentencias dentro del cuerpo de una &lt;code&gt;lambda&lt;/code&gt; porque únicamente admiten una expresión.&lt;/p&gt;
 &lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
 &lt;p&gt;A continuación algunos ejemplos:&lt;/p&gt;
@@ -855,7 +799,6 @@ En la práctica, no debes emplear la palabra clave &lt;code&gt;assert&lt;/code&g
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;multipliers&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="mi"&gt;8&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, cada &lt;code&gt;lambda&lt;/code&gt; captura el valor de &lt;code&gt;n&lt;/code&gt; mediante un parámetro con valor por defecto. Al final del &lt;a href="/ciclos-for-python/"&gt;ciclo &lt;code&gt;for&lt;/code&gt;&lt;/a&gt; obtienes una lista de funciones a las que puedes pasar un valor para multiplicarlo por la &lt;code&gt;n&lt;/code&gt; correspondiente.&lt;/p&gt;
 &lt;p&gt;Las lambdas brillan cuando las combinas con funciones que aceptan otras funciones como argumento:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;words&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;SALUDO&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;mañana&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;funciones&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
@@ -871,7 +814,6 @@ En la práctica, no debes emplear la palabra clave &lt;code&gt;assert&lt;/code&g
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;reduce&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;acc&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;acc&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;numbers&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="mi"&gt;5&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;sorted()&lt;/code&gt; usa la &lt;code&gt;lambda&lt;/code&gt; para normalizar cada elemento antes de comparar.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;filter()&lt;/code&gt; filtra la lista para mantener solo los números positivos.&lt;/li&gt;
@@ -899,27 +841,21 @@ En la práctica, no debes emplear la palabra clave &lt;code&gt;assert&lt;/code&g
 &lt;p&gt;La forma más directa de cargar un módulo consiste en escribir su nombre después de la &lt;a href="/python-palabras-clave/"&gt;palabra clave&lt;/a&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;module_name&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;También puedes asignar un alias que resulte más corto o significativo, aprovechando la palabra clave &lt;a href="/python-as/"&gt;&lt;code&gt;as&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;module_name&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;alias&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Otra opción consiste en traer símbolos concretos desde el módulo para usarlos directamente:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;module_name&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Si lo necesitas, también puedes renombrar el símbolo importado:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;module_name&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;alias&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Los imports selectivos te permiten traer únicamente los nombres que necesitas:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;math&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;pi&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;sqrt&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Finalmente, los imports relativos privilegian módulos dentro de tu propio paquete:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;.helpers&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;parse_config&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Este estilo solo funciona dentro de paquetes y ayuda a mantener rutas cortas y claras.&lt;/p&gt;
 &lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
 &lt;p&gt;A continuación algunos ejemplos prácticos de cómo usar la palabra clave &lt;code&gt;import&lt;/code&gt;:&lt;/p&gt;
@@ -935,7 +871,6 @@ En la práctica, no debes emplear la palabra clave &lt;code&gt;assert&lt;/code&g
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;median&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
 &lt;span class="mf"&gt;4.0&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Estos ejemplos muestran cómo &lt;code&gt;import&lt;/code&gt; activa capacidades adicionales sin necesidad de duplicar código ni copiar archivos.&lt;/p&gt;
 &lt;h2 id="cuando-usar-import"&gt;Cuándo usar &lt;code&gt;import&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;Los usos más frecuentes de la palabra clave &lt;code&gt;import&lt;/code&gt; incluyen los siguientes:&lt;/p&gt;
@@ -971,19 +906,16 @@ En la práctica, no debes emplear la palabra clave &lt;code&gt;assert&lt;/code&g
 &lt;p&gt;&lt;strong&gt;Importar módulos con alias:&lt;/strong&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;module_name&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;alias_name&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;&lt;strong&gt;Capturar excepciones:&lt;/strong&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="c1"&gt;# Code that may raise an exception&lt;/span&gt;
 &lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="n"&gt;ExceptionType&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="c1"&gt;# Handle the exception&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;&lt;strong&gt;Gestionar contexto con with:&lt;/strong&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;expression&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;variable&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="c1"&gt;# Code that uses variable&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
 &lt;p&gt;Aquí tienes algunos ejemplos de cómo se usa &lt;code&gt;as&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
@@ -997,7 +929,6 @@ En la práctica, no debes emplear la palabra clave &lt;code&gt;assert&lt;/code&g
 &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="n"&gt;Error&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;division&lt;/span&gt; &lt;span class="n"&gt;by&lt;/span&gt; &lt;span class="n"&gt;zero&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En el primer ejemplo, se importa el módulo &lt;code&gt;numpy&lt;/code&gt; y se le asigna el alias &lt;code&gt;np&lt;/code&gt;, lo que permite referirse a él de forma más concisa.&lt;/p&gt;
 &lt;p&gt;En el segundo ejemplo, &lt;code&gt;as&lt;/code&gt; se utiliza para capturar una excepción y asignarla a la variable &lt;code&gt;error&lt;/code&gt;, permitiendo manejarla e imprimir un mensaje de error.&lt;/p&gt;
 &lt;h2 id="uso-de-as"&gt;Uso de &lt;code&gt;as&lt;/code&gt;&lt;/h2&gt;
@@ -1087,7 +1018,6 @@ En la práctica, no debes emplear la palabra clave &lt;code&gt;assert&lt;/code&g
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;kwlist&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;softkwlist&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="mi"&gt;39&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;El módulo &lt;a href="https://docs.python.org/es/3/library/keyword.html#module-keyword"&gt;&lt;code&gt;keyword&lt;/code&gt;&lt;/a&gt; de la &lt;a href="https://docs.python.org/es/3/library/index.html"&gt;biblioteca estándar&lt;/a&gt; exporta las listas &lt;a href="https://docs.python.org/es/3/library/keyword.html#keyword.kwlist"&gt;&lt;code&gt;kwlist&lt;/code&gt;&lt;/a&gt; y &lt;a href="https://docs.python.org/es/3/reference/lexical_analysis.html#soft-keywords"&gt;&lt;code&gt;softkwlist&lt;/code&gt;&lt;/a&gt; que contienen todas las palabras clave de Python. En el código anterior, primeramente importas &lt;code&gt;kwlist&lt;/code&gt; y &lt;code&gt;softkwlist&lt;/code&gt; desde &lt;code&gt;keyword&lt;/code&gt; y luego muestras su contenido. Python 3.13 tiene 39 palabras clave, incluidas las suaves, tal y como resulta de ejecutar &lt;code&gt;len(kwlist + softkwlist)&lt;/code&gt; en la última línea de código del ejemplo.&lt;/p&gt;
 &lt;p&gt;Debes tener en cuenta que el número de palabras clave varía en dependencia de la versión de Python que estés usando actualmente.&lt;/p&gt;
 &lt;p&gt;Otra manera de consultar las palabras clave de Python es mediante la función &lt;a href="https://pythonscouts.com/obtener-ayuda-python/#2-el-sistema-interactivo-de-ayuda-help"&gt;&lt;code&gt;help()&lt;/code&gt;&lt;/a&gt;. Se trata de una función incluida (&lt;em&gt;built-in&lt;/em&gt;) que te permite consultar la documentación y obtener ayuda rápida sobre cualquier objeto en Python.&lt;/p&gt;
@@ -1112,7 +1042,6 @@ En la práctica, no debes emplear la palabra clave &lt;code&gt;assert&lt;/code&g
 &lt;span class="k"&gt;await&lt;/span&gt;               &lt;span class="k"&gt;finally&lt;/span&gt;             &lt;span class="k"&gt;nonlocal&lt;/span&gt;            &lt;span class="k"&gt;yield&lt;/span&gt;
 &lt;span class="k"&gt;break&lt;/span&gt;               &lt;span class="k"&gt;for&lt;/span&gt;                 &lt;span class="ow"&gt;not&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este caso, cuando ejecutas &lt;code&gt;help()&lt;/code&gt; en una sesión interactiva de Python, entras inmediatamente al sistema de ayuda integrado del lenguaje. El indicador (&lt;em&gt;prompt&lt;/em&gt;) &lt;code&gt;help&amp;gt;&lt;/code&gt; te hace saber que estás dentro. Una vez allí, tecleas el comando &lt;code&gt;keywords&lt;/code&gt; y presionas &lt;em&gt;Enter&lt;/em&gt;. Esta acción te devuelve el listado de palabras clave de tu versión específica del lenguaje.&lt;/p&gt;
 &lt;p&gt;Es importante que domines las palabras clave o reservadas de Python, y sobre todo que conozcas su significado en español. A continuación, un resumen que incluye la traducción al español y una breve descripción de cada palabra clave:&lt;/p&gt;
 &lt;table&gt;
@@ -1357,7 +1286,6 @@ present, is executed.
 
 Related help topics: TRUTHVALUE
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Si introduces una palabra clave o palabra reservada cualquiera (&lt;code&gt;if&lt;/code&gt; en el ejemplo anterior) en el indicador (&lt;em&gt;prompt&lt;/em&gt;) del sistema de ayuda de Python, obtienes acceso directo a la documentación de la misma. Esta documentación solo aparece en idioma inglés. Si deseas obtener ayuda en idioma español, entonces puedes usar la &lt;a href="https://docs.python.org/es/3/index.html"&gt;documentación oficial en español&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Es importante que sepas que cuando consultas una página de documentación específica en el sistema de ayuda integrado, tendrás que presionar la tecla &lt;em&gt;Q&lt;/em&gt; en tu teclado para poder salir de la página y regresar a la ayuda.&lt;/p&gt;
 &lt;p&gt;El sistema de ayuda integrado te ofrece además una guía de temas relacionados con la palabra clave que estés consultando. En la última línea del ejemplo anterior puedes leer &lt;code&gt;Related help topics: TRUTHVALUE&lt;/code&gt;. Si introduces &lt;code&gt;TRUTHVALUE&lt;/code&gt; y presionas &lt;em&gt;Enter&lt;/em&gt;, obtendrás la página de ayuda correspondiente. Adelántate y experiméntalo tú mismo.&lt;/p&gt;
@@ -1369,13 +1297,11 @@ Related help topics: TRUTHVALUE
           &lt;span class="o"&gt;^&lt;/span&gt;
 &lt;span class="ne"&gt;SyntaxError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;invalid&lt;/span&gt; &lt;span class="n"&gt;syntax&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, cuando tratas de usar &lt;code&gt;class&lt;/code&gt; como un nombre de variable, recibes una excepción de tipo &lt;code&gt;SyntaxError&lt;/code&gt;. Sin embargo, este no es siempre el caso. Python también tiene &lt;a href="https://docs.python.org/es/3/reference/lexical_analysis.html#soft-keywords"&gt;palabras clave suaves&lt;/a&gt; que en determinado contexto, puedes emplear como nombres. Las más comunes son &lt;code&gt;match&lt;/code&gt; y &lt;code&gt;case&lt;/code&gt;, que solo están restringidas en el contexto de sentencias &lt;a href="https://docs.python.org/es/3/reference/compound_stmts.html#match"&gt;&lt;code&gt;match&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;match&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;match&lt;/span&gt;
 &lt;span class="kc"&gt;True&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Este ejemplo demuestra que puedes emplear la palabra reservada &lt;code&gt;match&lt;/code&gt; como un nombre de variable. En este caso, Python no levanta una excepción como lo hace con otras palabras reservadas.&lt;/p&gt;
 &lt;p&gt;En cualquier caso, debes evitar emplear palabras clave como nombres o identificadores de variables, funciones, clases, módulos, paquetes o de cualquier otra estructura u objeto Python. Emplearlas de esta forma podría generar problemas difíciles de identificar y resolver en tu código.&lt;/p&gt;
 &lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
@@ -1400,7 +1326,6 @@ Related help topics: TRUTHVALUE
     &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;exprssion&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Donde &lt;code&gt;exprssion&lt;/code&gt; es opcional y representa el valor que deseas devolver. Si no proporcionas ninguna expresión, la función devolverá &lt;a href="https://pythonscouts.com/python-none/"&gt;&lt;code&gt;None&lt;/code&gt;&lt;/a&gt; de manera predeterminada.&lt;/p&gt;
 &lt;p&gt;Si omites la sentencia &lt;code&gt;return&lt;/code&gt;, Python automáticamente devuelve &lt;code&gt;None&lt;/code&gt; al concluir la ejecución de tu función.&lt;/p&gt;
 &lt;p&gt;También debes tener en cuenta que solo puedes usar &lt;code&gt;return&lt;/code&gt; dentro de funciones.&lt;/p&gt;
@@ -1414,7 +1339,6 @@ Related help topics: TRUTHVALUE
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;
 &lt;span class="mi"&gt;8&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, la función &lt;code&gt;add()&lt;/code&gt; toma dos argumentos numéricos &lt;code&gt;a&lt;/code&gt; y &lt;code&gt;b&lt;/code&gt;, y utiliza &lt;code&gt;return&lt;/code&gt; para devolver la suma de estos. El valor devuelto se almacena en la &lt;a href="https://pythonscouts.com/variables-python/"&gt;variable&lt;/a&gt; &lt;code&gt;result&lt;/code&gt;.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;no_return&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Hola!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1426,7 +1350,6 @@ Related help topics: TRUTHVALUE
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="kc"&gt;None&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Aquí, la función &lt;code&gt;no_return()&lt;/code&gt; imprime un mensaje y luego usa &lt;code&gt;return&lt;/code&gt; sin una expresión o valor de retorno, lo que significa que devuelve &lt;code&gt;None&lt;/code&gt; implícitamente.&lt;/p&gt;
 &lt;p&gt;Obtendrás el mismo resultado o comportamiento si obvias por completo la sentencia &lt;code&gt;return&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="uso-de-return"&gt;Uso de &lt;code&gt;return&lt;/code&gt;&lt;/h2&gt;
@@ -1457,7 +1380,6 @@ Related help topics: TRUTHVALUE
     &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;method&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
         &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
 &lt;p&gt;Aquí tienes un ejemplo rápido que ilustra cómo se usa la palabra clave &lt;code&gt;class&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Dog&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
@@ -1474,7 +1396,6 @@ Related help topics: TRUTHVALUE
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;fido&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;
 &lt;span class="s1"&gt;&amp;#39;Fido&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, definimos una clase &lt;code&gt;Dog&lt;/code&gt; que tiene un método &lt;code&gt;.bark()&lt;/code&gt;. Cuando creamos un objeto &lt;code&gt;fido&lt;/code&gt; de la clase &lt;code&gt;Dog&lt;/code&gt;, podemos llamar sus métodos para que realice acciones, como ladrar con &lt;code&gt;.bark()&lt;/code&gt;. También podemos acceder a sus atributos o datos con la notación de punto.&lt;/p&gt;
 &lt;h2 id="uso-de-class"&gt;Uso de &lt;code&gt;class&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;Los casos de uso más comunes de la palabra clave &lt;code&gt;class&lt;/code&gt; incluyen los siguientes:&lt;/p&gt;
@@ -1616,7 +1537,6 @@ Related help topics: TRUTHVALUE
     &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__repr__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="vm"&gt;__class__&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="vm"&gt;__name__&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;(size=&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_size&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;)&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;El atributo &lt;code&gt;._size&lt;/code&gt; almacena el tamaño fijo del arreglo o el número de posiciones disponibles, mientras que &lt;code&gt;._data&lt;/code&gt; proporciona un arreglo de bajo nivel creado con &lt;code&gt;ctypes.py_object * size&lt;/code&gt;, donde se guardan las referencias a los objetos de Python.&lt;/p&gt;
 &lt;p&gt;En &lt;code&gt;._type&lt;/code&gt;, se guarda el tipo de dato de los elementos del arreglo. Una vez que asignas el primer valor no nulo, solo se permiten valores de ese mismo tipo.&lt;/p&gt;
 &lt;p&gt;El método &lt;code&gt;.clear()&lt;/code&gt; recorre todas las posiciones del arreglo y les asigna &lt;code&gt;value&lt;/code&gt; o &lt;code&gt;None&lt;/code&gt;. Si &lt;code&gt;._type&lt;/code&gt; ya está fijado, comprueba que &lt;code&gt;value&lt;/code&gt; coincida con ese tipo.&lt;/p&gt;
@@ -1637,14 +1557,12 @@ Related help topics: TRUTHVALUE
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;Array&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;h3 id="acceso-y-modificacion-de-elementos"&gt;Acceso y modificación de elementos&lt;/h3&gt;
 &lt;p&gt;Puedes leer y escribir elementos con el operador de indexado &lt;code&gt;[index]&lt;/code&gt;, igual que en una lista:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;42&lt;/span&gt;  &lt;span class="c1"&gt;# Establece el primer elemento a 42&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="mi"&gt;42&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Si intentas asignar un valor de un tipo de dato diferente al que ya tiene el arreglo, o usar un índice fuera del rango válido, obtendrás errores claros:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Array&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
@@ -1661,7 +1579,6 @@ Related help topics: TRUTHVALUE
     &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="ne"&gt;IndexError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Index&lt;/span&gt; &lt;span class="n"&gt;out&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mf"&gt;3.&lt;/span&gt; &lt;span class="n"&gt;Valid&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;h3 id="limpiar-el-arreglo"&gt;Limpiar el arreglo&lt;/h3&gt;
 &lt;p&gt;El método &lt;code&gt;.clear()&lt;/code&gt; restablece todos los elementos asignándoles el valor especificado. El valor predeterminado es &lt;code&gt;None&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Array&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1670,7 +1587,6 @@ Related help topics: TRUTHVALUE
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;Array&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;h3 id="longitud-y-pertenencia"&gt;Longitud y pertenencia&lt;/h3&gt;
 &lt;p&gt;El método &lt;code&gt;.__len__()&lt;/code&gt; devuelve el tamaño del arreglo, mientras que &lt;code&gt;.__contains__()&lt;/code&gt; verifica si un elemento existe en el arreglo:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Array&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1684,7 +1600,6 @@ Related help topics: TRUTHVALUE
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;42&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;
 &lt;span class="kc"&gt;True&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;h3 id="iteracion"&gt;Iteración&lt;/h3&gt;
 &lt;p&gt;Los métodos &lt;code&gt;.__iter__()&lt;/code&gt; y &lt;code&gt;.__reversed__()&lt;/code&gt; permiten iterar sobre el arreglo tanto hacia adelante como hacia atrás:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Array&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1712,7 +1627,6 @@ Related help topics: TRUTHVALUE
 &lt;span class="mi"&gt;2&lt;/span&gt;
 &lt;span class="mi"&gt;1&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;h3 id="representacion-en-cadena"&gt;Representación en cadena&lt;/h3&gt;
 &lt;p&gt;Los métodos &lt;code&gt;.__str__()&lt;/code&gt; y &lt;code&gt;.__repr__()&lt;/code&gt; son más bien utilitarios y proporcionan representaciones legibles para humanos y amigables para desarrolladores:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Array&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1724,7 +1638,6 @@ Related help topics: TRUTHVALUE
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;repr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;span class="n"&gt;Array&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;size&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;h2 id="conclusion"&gt;Conclusión&lt;/h2&gt;
 &lt;p&gt;Has aprendido cómo implementar un arreglo de tamaño fijo que proporciona operaciones esenciales como indexación, iteración y pertenencia, al tiempo que refuerza la consistencia del tipo de dato de sus elementos. Este conocimiento te sirve de base para entender estructuras de datos fundamentales en Python.&lt;/p&gt;</content><category term="Series"/><category term="python"/></entry><entry><title>Palabras clave en Python: while</title><link href="https://pythonscouts.com/python-while/" rel="alternate"/><published>2025-11-22T21:40:00+01:00</published><updated>2025-11-22T21:40:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-11-22:/python-while/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;while&lt;/code&gt; te permite definir bucles que ejecutan un bloque de código repetidamente mientras una condición sea verdadera.&lt;/p&gt;</summary><content type="html">&lt;p&gt;La &lt;a href="https://pythonscouts.com/python-palabras-clave/"&gt;palabra clave&lt;/a&gt; &lt;code&gt;while&lt;/code&gt; en Python define una estructura de control llamada bucle. Este tipo de bucle te permite ejecutar un bloque de código múltiples veces mientras una condición lógica sea verdadera. Si la condición es falsa desde el principio, el cuerpo del bucle no se ejecuta ni una sola vez.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
@@ -1739,7 +1652,6 @@ Related help topics: TRUTHVALUE
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;condition&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
 &lt;p&gt;Aquí tienes algunos ejemplos que muestran cómo crear bucles &lt;code&gt;while&lt;/code&gt; en Python:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;counter&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
@@ -1753,7 +1665,6 @@ Related help topics: TRUTHVALUE
 &lt;span class="mi"&gt;3&lt;/span&gt;
 &lt;span class="mi"&gt;4&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, el bucle &lt;code&gt;while&lt;/code&gt; se ejecuta mientras &lt;code&gt;counter&lt;/code&gt; sea menor que 5. En cada repetición, se imprime el valor actual de &lt;code&gt;counter&lt;/code&gt; y luego se incrementa en &lt;code&gt;1&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;El siguiente ejemplo muestra cómo usar un bucle &lt;code&gt;while&lt;/code&gt; para contar hacia atrás:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
@@ -1768,7 +1679,6 @@ Related help topics: TRUTHVALUE
 &lt;span class="mi"&gt;2&lt;/span&gt;
 &lt;span class="mi"&gt;1&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Aquí, el bucle &lt;code&gt;while&lt;/code&gt; se ejecuta mientras &lt;code&gt;number&lt;/code&gt; sea mayor que 0, imprimiendo el valor de &lt;code&gt;number&lt;/code&gt; y luego disminuyéndolo en &lt;code&gt;1&lt;/code&gt; en cada iteración.&lt;/p&gt;
 &lt;h2 id="uso-de-while"&gt;Uso de &lt;code&gt;while&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;Los casos de uso más comunes de la palabra clave &lt;code&gt;while&lt;/code&gt; incluyen los siguientes:&lt;/p&gt;
@@ -1792,7 +1702,6 @@ Related help topics: TRUTHVALUE
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;variable&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;iterable&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Donde &lt;code&gt;variable&lt;/code&gt; toma el valor de cada elemento en el &lt;code&gt;iterable&lt;/code&gt;, y el bloque de código se ejecuta para cada uno de estos valores.&lt;/p&gt;
 &lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
 &lt;p&gt;A continuación algunos ejemplos de cómo usar el ciclo &lt;code&gt;for&lt;/code&gt; en tu código:&lt;/p&gt;
@@ -1804,7 +1713,6 @@ Related help topics: TRUTHVALUE
 &lt;span class="mi"&gt;3&lt;/span&gt;
 &lt;span class="mi"&gt;4&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, el ciclo &lt;code&gt;for&lt;/code&gt; itera sobre una lista de números, y &lt;code&gt;print(number)&lt;/code&gt; se ejecuta para cada número en la lista.&lt;/p&gt;
 &lt;aside class="note"&gt;
 Para aprender más sobre los ciclos &lt;code&gt;for&lt;/code&gt; revisa el tutorial &lt;a href="https://pythonscouts.com/ciclos-for-python/"&gt;Python a través de ejemplos: Ciclos o bucles &lt;code&gt;for&lt;/code&gt;&lt;/a&gt;.
@@ -1821,7 +1729,6 @@ Para aprender más sobre los ciclos &lt;code&gt;for&lt;/code&gt; revisa el tutor
 &lt;span class="n"&gt;o&lt;/span&gt;
 &lt;span class="n"&gt;n&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Aquí, el ciclo &lt;code&gt;for&lt;/code&gt; recorre cada caracter de la cadena &lt;code&gt;"Python"&lt;/code&gt; e imprime cada uno de ellos en pantalla.&lt;/p&gt;
 &lt;p&gt;El ejemplo siguiente muestra cómo iterar sobre un diccionario y acceder a sus claves y valores:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;students&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -1837,7 +1744,6 @@ Para aprender más sobre los ciclos &lt;code&gt;for&lt;/code&gt; revisa el tutor
 &lt;span class="n"&gt;Luis&lt;/span&gt; &lt;span class="n"&gt;tiene&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt; &lt;span class="n"&gt;años&lt;/span&gt;
 &lt;span class="n"&gt;María&lt;/span&gt; &lt;span class="n"&gt;tiene&lt;/span&gt; &lt;span class="mi"&gt;19&lt;/span&gt; &lt;span class="n"&gt;años&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este caso, el método &lt;code&gt;.items()&lt;/code&gt; devuelve pares de clave y valor que puedes desempaquetar directamente en el ciclo &lt;code&gt;for&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="uso-de-for"&gt;Uso de &lt;code&gt;for&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;Los casos de uso más comunes de la palabra clave &lt;code&gt;for&lt;/code&gt; incluyen los siguientes:&lt;/p&gt;
@@ -1862,7 +1768,6 @@ Para aprender más sobre los ciclos &lt;code&gt;for&lt;/code&gt; revisa el tutor
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;condition&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Puedes extender una sentencia &lt;code&gt;if&lt;/code&gt; con las palabras clave &lt;code&gt;elif&lt;/code&gt; y &lt;code&gt;else&lt;/code&gt; para gestionar múltiples condiciones:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;condition1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;  &lt;span class="c1"&gt;# Se ejecuta si condition1 es verdadera&lt;/span&gt;
@@ -1874,7 +1779,6 @@ Para aprender más sobre los ciclos &lt;code&gt;for&lt;/code&gt; revisa el tutor
 &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;  &lt;span class="c1"&gt;# Se ejecuta si ninguna de las condiciones anteriores es verdadera&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Puedes usar tantas cláusulas &lt;code&gt;elif&lt;/code&gt; como necesites, pero solo puedes tener una única cláusula &lt;code&gt;else&lt;/code&gt;. La cláusula &lt;code&gt;else&lt;/code&gt; siempre debe aparecer al final.&lt;/p&gt;
 &lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
 &lt;p&gt;Estos son algunos ejemplos de cómo usar la palabra clave &lt;code&gt;if&lt;/code&gt;:&lt;/p&gt;
@@ -1885,7 +1789,6 @@ Para aprender más sobre los ciclos &lt;code&gt;for&lt;/code&gt; revisa el tutor
 &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="n"&gt;es&lt;/span&gt; &lt;span class="n"&gt;mayor&lt;/span&gt; &lt;span class="n"&gt;que&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, como &lt;code&gt;x&lt;/code&gt; es mayor que &lt;code&gt;5&lt;/code&gt;, el bloque de código de la sentencia &lt;code&gt;if&lt;/code&gt; se ejecuta y la función &lt;code&gt;print()&lt;/code&gt; muestra el mensaje correspondiente.&lt;/p&gt;
 &lt;p&gt;La cláusula &lt;code&gt;else&lt;/code&gt; funciona como bloque por defecto:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
@@ -1897,7 +1800,6 @@ Para aprender más sobre los ciclos &lt;code&gt;for&lt;/code&gt; revisa el tutor
 &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;es&lt;/span&gt; &lt;span class="n"&gt;mayor&lt;/span&gt; &lt;span class="n"&gt;que&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Aquí, como &lt;code&gt;y&lt;/code&gt; no es mayor que &lt;code&gt;5&lt;/code&gt;, se ejecuta el bloque de código asociado a &lt;code&gt;else&lt;/code&gt; y la función &lt;code&gt;print()&lt;/code&gt; muestra el mensaje en pantalla.&lt;/p&gt;
 &lt;p&gt;Ahora considera el ejemplo siguiente:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;
@@ -1911,7 +1813,6 @@ Para aprender más sobre los ciclos &lt;code&gt;for&lt;/code&gt; revisa el tutor
 &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="n"&gt;es&lt;/span&gt; &lt;span class="n"&gt;mayor&lt;/span&gt; &lt;span class="n"&gt;que&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="n"&gt;pero&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;mayor&lt;/span&gt; &lt;span class="n"&gt;que&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, &lt;code&gt;z&lt;/code&gt; es mayor que &lt;code&gt;5&lt;/code&gt; pero no mayor que &lt;code&gt;10&lt;/code&gt;, por lo que se ejecuta el bloque de código asociado a &lt;code&gt;elif&lt;/code&gt; y la función &lt;code&gt;print()&lt;/code&gt; muestra el mensaje especificado.&lt;/p&gt;
 &lt;h2 id="uso-de-if"&gt;Uso de &lt;code&gt;if&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;Los casos de uso más comunes de la palabra clave &lt;code&gt;if&lt;/code&gt; incluyen los siguientes:&lt;/p&gt;
@@ -1937,7 +1838,6 @@ Para aprender más sobre los ciclos &lt;code&gt;for&lt;/code&gt; revisa el tutor
     &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;body&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;return_value&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;aside class="note"&gt;
 Los corchetes indican elementos opcionales. De modo similar, los corchetes angulares denotan elementos requerido.
 &lt;/aside&gt;
@@ -1951,7 +1851,6 @@ Los corchetes indican elementos opcionales. De modo similar, los corchetes angul
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;greet&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="err"&gt;¡&lt;/span&gt;&lt;span class="n"&gt;Hola&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Mundo&lt;/span&gt;&lt;span class="err"&gt;!&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, has definido una función llamada &lt;code&gt;greet()&lt;/code&gt; que imprime &lt;code&gt;¡Hola, Mundo!&lt;/code&gt; cuando la llamas.&lt;/p&gt;
 &lt;p&gt;La función &lt;code&gt;add()&lt;/code&gt; permite sumar dos números:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
@@ -1961,7 +1860,6 @@ Los corchetes indican elementos opcionales. De modo similar, los corchetes angul
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="mi"&gt;8&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Aquí, la función &lt;code&gt;add()&lt;/code&gt; toma dos argumentos &lt;code&gt;a&lt;/code&gt; y &lt;code&gt;b&lt;/code&gt; que deben ser números, y devuelve su suma. Cuando llamas a &lt;code&gt;add(3, 5)&lt;/code&gt;, obtienes el resultado &lt;code&gt;8&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="uso-de-def"&gt;Uso de &lt;code&gt;def&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;Los casos de uso más comunes de la palabra clave &lt;code&gt;def&lt;/code&gt; incluyen los siguientes:&lt;/p&gt;
@@ -1986,7 +1884,6 @@ Los corchetes indican elementos opcionales. De modo similar, los corchetes angul
 &lt;p&gt;La sintaxis para usar &lt;code&gt;and&lt;/code&gt; es como se muestra a continuación:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;expression_1&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;expression_2&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="o"&gt;...&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;expression_n&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Cada una de las expresiones involucradas puede ser cualquier expresión u objeto Python. La parte de la sintaxis encerrada entre corchetes es opcional y expresa la posibilidad de encadenar múltiples expresiones con varias instancias de &lt;code&gt;and&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Es importante recordar que todos los objetos Python tienen un valor de verdad asociado. Por lo tanto, &lt;code&gt;and&lt;/code&gt; puede relacionar cualquier objeto y no está limitado a expresiones booleanas que devuelvan &lt;a href="https://pythonscouts.com/python-true/"&gt;&lt;code&gt;True&lt;/code&gt;&lt;/a&gt; o &lt;a href="https://pythonscouts.com/python-false/"&gt;&lt;code&gt;False&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;La tabla de verdad del operador cuando lo usamos con expresiones lógicas se resume a continuación:&lt;/p&gt;
@@ -2068,7 +1965,6 @@ Los corchetes indican elementos opcionales. De modo similar, los corchetes angul
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;
 &lt;span class="kc"&gt;False&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En estos ejemplos, &lt;code&gt;and&lt;/code&gt; evalúa dos objetos o expresiones booleanas. Si ambas son verdaderas, el resultado es &lt;code&gt;True&lt;/code&gt;. Si alguna de ellas es falsa, el resultado es &lt;code&gt;False&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Experimentar con expresiones que devuelvan otros tipos de datos te permitirá familiarizarte con el comportamiento del operador en estas situaciones:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
@@ -2086,7 +1982,6 @@ Los corchetes indican elementos opcionales. De modo similar, los corchetes angul
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
 &lt;span class="p"&gt;{}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En estos ejemplos, se usa &lt;code&gt;and&lt;/code&gt; para conectar expresiones y objetos que devuelven tipos no booleanos. En cada caso, se obtiene un objeto en lugar de un valor &lt;code&gt;True&lt;/code&gt; o &lt;code&gt;False&lt;/code&gt;. Esta característica de &lt;code&gt;and&lt;/code&gt; es útil para evaluar expresiones condicionalmente aprovechando la evaluación de cortocircuito.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;current_user&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;juan&amp;quot;&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;user_name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;current_user&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;current_user&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
@@ -2098,7 +1993,6 @@ Los corchetes indican elementos opcionales. De modo similar, los corchetes angul
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;user_name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="kc"&gt;None&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, cuando tienes un usuario activo, puedes usar &lt;code&gt;and&lt;/code&gt; para modificar el nombre de usuario para que se muestre con letra inicial mayúscula. Si por el contrario, no tienes ningún usuario activo (&lt;code&gt;current_user = None&lt;/code&gt;), la expresión de la derecha no se evalúa.&lt;/p&gt;
 &lt;p&gt;Cómo puedes confirmar que la expresión de la derecha no se evaluó? Si intentas llamar al método &lt;code&gt;.title()&lt;/code&gt; en el objeto &lt;a href="https://pythonscouts.com/python-none/"&gt;&lt;code&gt;None&lt;/code&gt;&lt;/a&gt;, Python genera una excepción de tipo &lt;code&gt;AttributeError&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;current_user&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
@@ -2106,7 +2000,6 @@ Los corchetes indican elementos opcionales. De modo similar, los corchetes angul
     &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="ne"&gt;AttributeError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;NoneType&amp;#39;&lt;/span&gt; &lt;span class="nb"&gt;object&lt;/span&gt; &lt;span class="n"&gt;has&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;attribute&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;title&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;El hecho de recibir esta excepción confirma que la expresión del lado derecho, &lt;code&gt;current_user.title()&lt;/code&gt;, no se ejecutó en tu ejemplo original.&lt;/p&gt;
 &lt;h2 id="uso-de-and"&gt;Uso de &lt;code&gt;and&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;Los casos de uso más comunes de la palabra clave &lt;code&gt;and&lt;/code&gt; incluyen los siguientes:&lt;/p&gt;
@@ -2129,7 +2022,6 @@ Los corchetes indican elementos opcionales. De modo similar, los corchetes angul
 &lt;p&gt;La sintaxis para usar &lt;code&gt;True&lt;/code&gt; es bastante sencilla pues se trata de una constante booleana. Solo necesitas usarla directamente en tus declaraciones o expresiones. Por ejemplo, en una asignación como la siguiente:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;variable&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
 &lt;p&gt;Considera algunos ejemplos rápidos para comprender mejor la manera en que &lt;code&gt;True&lt;/code&gt; puede aparecer generalmente en tu código Python:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;
@@ -2141,7 +2033,6 @@ Los corchetes indican elementos opcionales. De modo similar, los corchetes angul
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;isinstance&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;3.14&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="kc"&gt;True&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En estos ejemplos, &lt;code&gt;True&lt;/code&gt; es el resultado de evaluar expresiones lógicas que son verdaderas. En el primer ejemplo, &lt;code&gt;5&lt;/code&gt; es menor que &lt;code&gt;6&lt;/code&gt;. En el segundo ejemplo, &lt;code&gt;4&lt;/code&gt; está presente en la lista, y en el tercer ejemplo, el número 3.14 es de tipo &lt;code&gt;float&lt;/code&gt;. Todas estas expresiones resultan ser verdaderas, por lo tanto devuelven &lt;code&gt;True&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Un uso práctico común donde ves a &lt;code&gt;True&lt;/code&gt; empleado de manera explícita es cuando funciona como valor por defecto de argumentos de funciones:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;greet&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;informal&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
@@ -2157,7 +2048,6 @@ Los corchetes indican elementos opcionales. De modo similar, los corchetes angul
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;greet&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Pythonista&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;informal&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;Buenos&lt;/span&gt; &lt;span class="n"&gt;días&lt;/span&gt; &lt;span class="n"&gt;Pythonista&lt;/span&gt;&lt;span class="err"&gt;!&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, el argumento &lt;code&gt;informal&lt;/code&gt; tiene un valor por defecto igual a &lt;code&gt;True&lt;/code&gt;. Esto significa que cuando llamas la función sin pasarle un valor explícito a &lt;code&gt;informal&lt;/code&gt; obtienes un saludo informal. Observa que cuando llamas a la función con &lt;code&gt;informal&lt;/code&gt; igual a &lt;a href="https://pythonscouts.com/python-false/"&gt;&lt;code&gt;False&lt;/code&gt;&lt;/a&gt; (el valor de verdad opuesto a &lt;code&gt;True&lt;/code&gt;), entonces el saludo se vuelve formal porque se ejecuta la cláusula &lt;code&gt;else&lt;/code&gt; de la condicional.&lt;/p&gt;
 &lt;aside class="note"&gt;
 En Python, es una práctica común y más idiomática no comparar explícitamente las condiciones con &lt;code&gt;True&lt;/code&gt; o &lt;code&gt;False&lt;/code&gt;. En lugar de &lt;code&gt;if informal == True&lt;/code&gt;, simplemente puedes usar &lt;code&gt;if informal&lt;/code&gt;. Esto hace que tu código sea más limpio y conciso.
@@ -2186,12 +2076,10 @@ En Python, es una práctica común y más idiomática no comparar explícitament
 &lt;p&gt;La sintaxis para &lt;code&gt;None&lt;/code&gt; es simplemente usar la palabra tal y como se escribe, incluida la mayúscula inicial, cuando desees establecer un valor nulo:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;variable&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
 &lt;p&gt;Aquí tienes algunos ejemplos rápidos del uso de la palabra clave &lt;code&gt;None&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;username&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, &lt;code&gt;None&lt;/code&gt; indica que la variable &lt;code&gt;username&lt;/code&gt; aún no tiene un valor definido.&lt;/p&gt;
 &lt;p&gt;Es muy común usar &lt;code&gt;None&lt;/code&gt; como valor por defecto de argumentos en funciones:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;greet&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
@@ -2205,7 +2093,6 @@ En Python, es una práctica común y más idiomática no comparar explícitament
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;greet&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Ana&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;Hola&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Ana&lt;/span&gt;&lt;span class="err"&gt;!&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este segundo ejemplo, la función &lt;code&gt;greet()&lt;/code&gt; acepta el argumento &lt;code&gt;name&lt;/code&gt; cuyo valor por defecto es &lt;code&gt;None&lt;/code&gt;. Si llamas a la función sin argumentos, entonces obtienes &lt;a href="https://pythonscouts.com/python-hola-mundo/"&gt;&lt;code&gt;Hola, mundo!&lt;/code&gt;&lt;/a&gt; como respuesta. Si le pasas un nombre, la función saluda a la persona deseada.&lt;/p&gt;
 &lt;aside class="note"&gt;
 En Python, las funciones sin valor de retorno explícito retornan &lt;code&gt;None&lt;/code&gt;. Para visualizar el valor &lt;code&gt;None&lt;/code&gt; en una sesión interactiva, puedes emplear la función integrada &lt;code&gt;print()&lt;/code&gt;.
@@ -2231,13 +2118,11 @@ En Python, las funciones sin valor de retorno explícito retornan &lt;code&gt;No
 &lt;p&gt;La sintaxis de &lt;code&gt;False&lt;/code&gt; consiste en usar la palabra clave tal cual se escribe (incluyendo la inicial mayúscula) en expresiones o sentencias, como en comparaciones o evaluaciones booleanas:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;is_registered&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;False&lt;/code&gt; puede ser el resultado de evaluar una expresión booleana en Python:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;
 &lt;span class="kc"&gt;False&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, &lt;code&gt;5&lt;/code&gt; es menor que &lt;code&gt;6&lt;/code&gt;, por lo tanto, Python evalúa la expresión y retorna &lt;code&gt;False&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;También es común emplear &lt;code&gt;False&lt;/code&gt; como valor por defecto de argumentos en funciones y métodos:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;greet&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;verbose&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
@@ -2252,13 +2137,11 @@ En Python, las funciones sin valor de retorno explícito retornan &lt;code&gt;No
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;greet&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Scout&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;verbose&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;Hola&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Scout&lt;/span&gt;&lt;span class="err"&gt;!&lt;/span&gt; &lt;span class="n"&gt;Cómo&lt;/span&gt; &lt;span class="n"&gt;estás&lt;/span&gt; &lt;span class="n"&gt;hoy&lt;/span&gt;&lt;span class="err"&gt;?&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, el argumento &lt;code&gt;verbose&lt;/code&gt; es falso por defecto. &lt;code&gt;False&lt;/code&gt; se emplea comúnmente para establecer el valor por defecto de argumentos que operan como indicadores (flags) booleanos.&lt;/p&gt;
 &lt;p&gt;También puedes emplear &lt;code&gt;False&lt;/code&gt; como valor inicial de variables booleanas:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;is_active&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;has_permission&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En estos ejemplos, &lt;code&gt;False&lt;/code&gt; te permite establecer un valor inicial para variables que pueden ser verdaderas o falsas.&lt;/p&gt;
 &lt;h2 id="uso-de-false"&gt;Uso de &lt;code&gt;False&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;Los casos de uso más comunes de la palabra clave &lt;code&gt;False&lt;/code&gt; incluyen los siguientes:&lt;/p&gt;
@@ -2292,7 +2175,6 @@ En Python, las funciones sin valor de retorno explícito retornan &lt;code&gt;No
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;variable&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;iterable&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;&lt;code&gt;variable&lt;/code&gt;&lt;/strong&gt;: variable del ciclo que mantiene una referencia al elemento actual de la secuencia.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;&lt;code&gt;iterable&lt;/code&gt;&lt;/strong&gt;: objeto iterable sobre el que se realiza la iteración.&lt;/li&gt;
@@ -2311,7 +2193,6 @@ En Python, las funciones sin valor de retorno explícito retornan &lt;code&gt;No
 &lt;span class="n"&gt;banana&lt;/span&gt;
 &lt;span class="n"&gt;cereza&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, el ciclo recorre la lista de frutas e imprime cada elemento. La &lt;a href="https://pythonscouts.com/variables-python/"&gt;variable&lt;/a&gt; &lt;code&gt;fruit&lt;/code&gt; es la variable del ciclo, y la lista &lt;code&gt;fruits&lt;/code&gt; es el objeto iterable. La llamada a &lt;code&gt;print()&lt;/code&gt; representa el bloque de código del bucle. Este bloque generalmente opera sobre o con los elementos del iterable.&lt;/p&gt;
 &lt;p&gt;También puedes emplear un ciclo &lt;code&gt;for&lt;/code&gt; para poblar una lista vacía con &lt;a href="https://pythonscouts.com/valores-python/"&gt;valores&lt;/a&gt; generados a partir de alguna operación o cálculo:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;squares&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
@@ -2321,7 +2202,6 @@ En Python, las funciones sin valor de retorno explícito retornan &lt;code&gt;No
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;squares&lt;/span&gt;
 &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, creas una lista vacía para almacenar los cuadrados de los valores almacenados en una lista de números. El método &lt;code&gt;.append()&lt;/code&gt; te permite agregar valores individuales al final de una lista.&lt;/p&gt;
 &lt;p&gt;El ciclo &lt;code&gt;for&lt;/code&gt; funciona de igual manera con tuplas:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;person&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Juan&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;35&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Programador&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Cuba&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -2333,7 +2213,6 @@ En Python, las funciones sin valor de retorno explícito retornan &lt;code&gt;No
 &lt;span class="n"&gt;Programador&lt;/span&gt;
 &lt;span class="n"&gt;Cuba&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, iteras sobre una tupla con un ciclo &lt;code&gt;for&lt;/code&gt;. Nuevamente, el ciclo solo imprime cada elemento de la tupla en tu pantalla.&lt;/p&gt;
 &lt;h3 id="cadenas-de-texto"&gt;Cadenas de texto&lt;/h3&gt;
 &lt;p&gt;También puedes usar un bucle &lt;code&gt;for&lt;/code&gt; para recorrer los caracteres de una cadena de texto:&lt;/p&gt;
@@ -2349,7 +2228,6 @@ En Python, las funciones sin valor de retorno explícito retornan &lt;code&gt;No
 &lt;span class="n"&gt;n&lt;/span&gt;
 &lt;span class="err"&gt;!&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Cada iteración de este bucle imprime un carácter de la cadena original.&lt;/p&gt;
 &lt;h3 id="rangos-de-valores"&gt;Rangos de valores&lt;/h3&gt;
 &lt;p&gt;La función incorporada &lt;a href="https://docs.python.org/es/3/library/functions.html#func-range"&gt;&lt;code&gt;range()&lt;/code&gt;&lt;/a&gt; genera secuencias de números enteros:&lt;/p&gt;
@@ -2362,7 +2240,6 @@ En Python, las funciones sin valor de retorno explícito retornan &lt;code&gt;No
 &lt;span class="mi"&gt;3&lt;/span&gt;
 &lt;span class="mi"&gt;4&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Aquí, &lt;code&gt;range(5)&lt;/code&gt; genera los números del &lt;code&gt;0&lt;/code&gt; al &lt;code&gt;4&lt;/code&gt;.&lt;/p&gt;
 &lt;h3 id="diccionarios-y-conjuntos"&gt;Diccionarios y conjuntos&lt;/h3&gt;
 &lt;p&gt;Los ciclos &lt;code&gt;for&lt;/code&gt; también te permiten iterar sobre diccionarios y conjuntos. En el caso de los diccionarios, puedes recorrer un diccionario por sus claves, valores, o items.&lt;/p&gt;
@@ -2383,7 +2260,6 @@ En Python, las funciones sin valor de retorno explícito retornan &lt;code&gt;No
 &lt;span class="n"&gt;edad&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;35&lt;/span&gt;
 &lt;span class="n"&gt;puesto&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Programador&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Ambas maneras de iterar sobre las claves son equivalentes. La primera es más comúnmente usada y ligeramente más eficiente. Sin embargo, la segunda puede ser más explícita en algunas situaciones.&lt;/p&gt;
 &lt;aside class="note"&gt;
 El método &lt;code&gt;.keys()&lt;/code&gt; es redundante en este contexto. Iterar directamente sobre el diccionario es la manera preferida en la mayoría de los casos. Este método solo es útil si necesitas específicamente un objeto de &lt;a href="https://docs.python.org/es/3.13/library/stdtypes.html#dict-views" target="_blank"&gt;vista de claves&lt;/a&gt;.
@@ -2397,7 +2273,6 @@ El método &lt;code&gt;.keys()&lt;/code&gt; es redundante en este contexto. Iter
 &lt;span class="mi"&gt;35&lt;/span&gt;
 &lt;span class="n"&gt;Programador&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Si deseas recorrer los pares clave-valor, puedes usar &lt;code&gt;.items()&lt;/code&gt; como se muestra en el siguiente ejemplo:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;person&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;items&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;-&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -2406,7 +2281,6 @@ El método &lt;code&gt;.keys()&lt;/code&gt; es redundante en este contexto. Iter
 &lt;span class="n"&gt;edad&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;35&lt;/span&gt;
 &lt;span class="n"&gt;puesto&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Programador&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Finalmente, los ciclos &lt;code&gt;for&lt;/code&gt; también te permiten recorrer conjuntos:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;colors&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;rojo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;azul&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;verde&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;amarillo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;color&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;colors&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
@@ -2417,7 +2291,6 @@ El método &lt;code&gt;.keys()&lt;/code&gt; es redundante en este contexto. Iter
 &lt;span class="n"&gt;verde&lt;/span&gt;
 &lt;span class="n"&gt;rojo&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Es fundamental que tengas en cuenta que los conjuntos en Python son colecciones no ordenadas de datos. Por esta razón, el ciclo itera sobre los elementos en un orden diferente al orden de inserción.&lt;/p&gt;
 &lt;h2 id="controlando-la-iteracion-con-break-y-continue"&gt;Controlando la iteración con &lt;code&gt;break&lt;/code&gt; y &lt;code&gt;continue&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;En Python, las sentencias &lt;code&gt;break&lt;/code&gt; y &lt;code&gt;continue&lt;/code&gt; te permiten controlar el flujo de ejecución en los ciclos &lt;code&gt;for&lt;/code&gt;. La función de estas sentencias es la siguiente:&lt;/p&gt;
@@ -2435,8 +2308,7 @@ El método &lt;code&gt;.keys()&lt;/code&gt; es redundante en este contexto. Iter
 &lt;span class="n"&gt;y&lt;/span&gt;
 &lt;span class="n"&gt;t&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Nota cómo la ejecución termina cuando la letra actual es &lt;code&gt;"h"&lt;/code&gt;. El resto de las letras no se imprimen. &lt;/p&gt;
+&lt;p&gt;Nota cómo la ejecución termina cuando la letra actual es &lt;code&gt;"h"&lt;/code&gt;. El resto de las letras no se imprimen.&lt;/p&gt;
 &lt;p&gt;Considera el siguiente ejemplo de cómo emplear &lt;code&gt;continue&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;letter&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;python&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;letter&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;h&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
@@ -2449,7 +2321,6 @@ El método &lt;code&gt;.keys()&lt;/code&gt; es redundante en este contexto. Iter
 &lt;span class="n"&gt;o&lt;/span&gt;
 &lt;span class="n"&gt;n&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, la letra &lt;code&gt;"h"&lt;/code&gt; no se imprime, pues la sentencia &lt;code&gt;continue&lt;/code&gt; salta a la próxima iteración sin ejecutar &lt;code&gt;print()&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="usando-la-clausula-else-en-ciclos-for"&gt;Usando la cláusula &lt;code&gt;else&lt;/code&gt; en ciclos &lt;code&gt;for&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;Como las &lt;a href="https://pythonscouts.com/condicionales-python/"&gt;sentencias condicionales&lt;/a&gt;, los ciclos &lt;code&gt;for&lt;/code&gt; pueden tener una cláusula &lt;code&gt;else&lt;/code&gt;. En los ciclos, el &lt;code&gt;else&lt;/code&gt; se ejecuta únicamente cuando el ciclo finaliza sin ser interrumpido por una sentencia &lt;code&gt;break&lt;/code&gt;:&lt;/p&gt;
@@ -2464,7 +2335,6 @@ El método &lt;code&gt;.keys()&lt;/code&gt; es redundante en este contexto. Iter
 &lt;span class="mi"&gt;3&lt;/span&gt;
 &lt;span class="n"&gt;Ciclo&lt;/span&gt; &lt;span class="n"&gt;finalizado&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Este ciclo termina naturalmente luego de recorrer el rango de valores completo. Entonces, el &lt;code&gt;else&lt;/code&gt; se ejecuta y ves el mensaje &lt;code&gt;Ciclo finalizado&lt;/code&gt; en la pantalla.&lt;/p&gt;
 &lt;p&gt;Si se usa una instrucción &lt;code&gt;break&lt;/code&gt;, el bloque &lt;code&gt;else&lt;/code&gt; no se ejecuta:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
@@ -2477,7 +2347,6 @@ El método &lt;code&gt;.keys()&lt;/code&gt; es redundante en este contexto. Iter
 &lt;span class="mi"&gt;0&lt;/span&gt;
 &lt;span class="mi"&gt;1&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Este ciclo termina cuando el valor de &lt;code&gt;i&lt;/code&gt; es igual a &lt;code&gt;2&lt;/code&gt;, en cuyo caso la cláusula &lt;code&gt;else&lt;/code&gt; no se ejecuta.&lt;/p&gt;
 &lt;p&gt;Es importante tener en cuenta que, cuando incluyes un bucle &lt;code&gt;for&lt;/code&gt; en una función y el bucle contiene una instrucción &lt;code&gt;return&lt;/code&gt;, entonces este termina al alcanzar dicha instrucción y la cláusula &lt;code&gt;else&lt;/code&gt; no se ejecuta.&lt;/p&gt;
 &lt;h2 id="usando-ciclos-for-anidados"&gt;Usando ciclos &lt;code&gt;for&lt;/code&gt; anidados&lt;/h2&gt;
@@ -2502,7 +2371,6 @@ El método &lt;code&gt;.keys()&lt;/code&gt; es redundante en este contexto. Iter
 &lt;span class="mi"&gt;8&lt;/span&gt;
 &lt;span class="mi"&gt;9&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Puedes anidar ciclos a tantos niveles como necesites. Sin embargo, esta práctica suele causar que tu código sea ineficiente y difícil de entender. Por lo tanto, es recomendable no anidar ciclos a más de dos niveles de profundidad.&lt;/p&gt;
 &lt;h2 id="conclusiones"&gt;Conclusiones&lt;/h2&gt;
 &lt;p&gt;Los ciclos o bucles &lt;strong&gt;&lt;code&gt;for&lt;/code&gt;&lt;/strong&gt; son esenciales en Python para realizar tareas repetitivas y manipular datos eficientemente. Con un ciclo &lt;code&gt;for&lt;/code&gt;, puedes recorrer diversos tipos de datos como listas, cadenas y diccionarios.&lt;/p&gt;
@@ -2531,7 +2399,6 @@ El método &lt;code&gt;.keys()&lt;/code&gt; es redundante en este contexto. Iter
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
 &lt;span class="kc"&gt;False&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Las condiciones más comunes usan operadores de &lt;a href="https://pythonscouts.com/operadores-python/#comparacion"&gt;comparación&lt;/a&gt; como &lt;code&gt;==&lt;/code&gt;, &lt;code&gt;!=&lt;/code&gt;, &lt;code&gt;&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;&lt;/code&gt;, &lt;code&gt;&amp;gt;=&lt;/code&gt;, y &lt;code&gt;&amp;lt;=&lt;/code&gt;. En estos casos, siempre obtendrás un valor booleano (&lt;code&gt;True&lt;/code&gt; o &lt;code&gt;False&lt;/code&gt;).&lt;/p&gt;
 &lt;p&gt;Las expresiones de &lt;a href="https://pythonscouts.com/operadores-python/#pertenencia"&gt;pertenencia&lt;/a&gt; también son empleadas como condiciones:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
@@ -2544,7 +2411,6 @@ El método &lt;code&gt;.keys()&lt;/code&gt; es redundante en este contexto. Iter
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;naranja&amp;quot;&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;manzana&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;banana&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;cereza&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="kc"&gt;False&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Estas expresiones permiten determinar si un valor u objeto específico forma parte de una serie de valores o colección.&lt;/p&gt;
 &lt;p&gt;También puedes crear condiciones empleando los operadores &lt;a href="https://pythonscouts.com/operadores-python/#logicos"&gt;lógicos&lt;/a&gt; &lt;code&gt;and&lt;/code&gt;, &lt;code&gt;or&lt;/code&gt;, y &lt;code&gt;not&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
@@ -2556,7 +2422,6 @@ El método &lt;code&gt;.keys()&lt;/code&gt; es redundante en este contexto. Iter
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
 &lt;span class="kc"&gt;False&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En el primer ejemplo, utilizas el operador &lt;code&gt;and&lt;/code&gt; para combinar dos expresiones de comparación. Si ambas son verdaderas, obtienes &lt;code&gt;True&lt;/code&gt;. En el segundo ejemplo, empleas el operador &lt;code&gt;or&lt;/code&gt;. En este caso, si al menos una de las expresiones evaluadas es verdadera, entonces obtienes &lt;code&gt;True&lt;/code&gt;. Finalmente, el operador &lt;code&gt;not&lt;/code&gt; te permite negar el resultado de evaluar una expresión o condición.&lt;/p&gt;
 &lt;p&gt;Finalmente, también es posible emplear valores y objetos individuales como condiciones. Esto es posible porque todos los objetos en Python tienen un valor de verdad inherente.&lt;/p&gt;
 &lt;p&gt;Python emplea las siguientes reglas para determinar el valor de verdad de los objetos:&lt;/p&gt;
@@ -2573,7 +2438,6 @@ El método &lt;code&gt;.keys()&lt;/code&gt; es redundante en este contexto. Iter
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;condition&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;code&lt;/span&gt; &lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;El bloque de código se ejecuta únicamente si la condición es verdadera. Considera el siguiente ejemplo:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
 
@@ -2586,7 +2450,6 @@ El método &lt;code&gt;.keys()&lt;/code&gt; es redundante en este contexto. Iter
 &lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;x es igual a 5&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;La primera condición es verdadera, por lo tanto la función &lt;code&gt;print()&lt;/code&gt; se ejecuta. Si la condición es falsa, el código dentro del bloque &lt;code&gt;if&lt;/code&gt; no se ejecuta, tal y como sucede en el segundo ejemplo.&lt;/p&gt;
 &lt;p&gt;Como ya sabes, todos los objetos en Python tienen un valor de verdad y por lo tanto los puedes emplear como condiciones en una sentencia condicional. Un ejemplo común es verificar si una lista contiene algún valor:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
@@ -2598,7 +2461,6 @@ El método &lt;code&gt;.keys()&lt;/code&gt; es redundante en este contexto. Iter
 &lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;la lista no está vacía&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En el primer ejemplo, la lista contiene valores y por lo tanto su valor de verdad es &lt;code&gt;True&lt;/code&gt;. En este caso, el bloque de código se ejecuta. En el segundo ejemplo, la lista está vacía y su valor de verdad es &lt;code&gt;False&lt;/code&gt;. Por esta razón, el bloque de código no se ejecuta.&lt;/p&gt;
 &lt;h2 id="condicionales-con-clausula-else"&gt;Condicionales con cláusula &lt;code&gt;else&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;La cláusula &lt;code&gt;else&lt;/code&gt; te permite manejar el caso en que la condición del &lt;code&gt;if&lt;/code&gt; es falsa. La sintaxis es la siguiente:&lt;/p&gt;
@@ -2607,7 +2469,6 @@ El método &lt;code&gt;.keys()&lt;/code&gt; es redundante en este contexto. Iter
 &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;El bloque bajo la cláusula &lt;code&gt;else&lt;/code&gt; se ejecuta si la condición es falsa:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
 
@@ -2618,7 +2479,6 @@ El método &lt;code&gt;.keys()&lt;/code&gt; es redundante en este contexto. Iter
 &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;es&lt;/span&gt; &lt;span class="n"&gt;mayor&lt;/span&gt; &lt;span class="n"&gt;que&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;El bloque &lt;code&gt;else&lt;/code&gt; es opcional y solo se ejecuta si la condición en el &lt;code&gt;if&lt;/code&gt; no se cumple.&lt;/p&gt;
 &lt;h2 id="condicionales-multiples-con-elif"&gt;Condicionales múltiples con &lt;code&gt;elif&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;Cuando necesitas evaluar más de una condición, puedes usar la cláusula &lt;code&gt;elif&lt;/code&gt; (abreviatura de &lt;code&gt;else if&lt;/code&gt;). Esta permite verificar varias condiciones una detrás de otra. La sintaxis es como sigue:&lt;/p&gt;
@@ -2634,7 +2494,6 @@ El método &lt;code&gt;.keys()&lt;/code&gt; es redundante en este contexto. Iter
 &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Puedes tener cualquier número de cláusulas &lt;code&gt;elif&lt;/code&gt;, pero solo un &lt;code&gt;if&lt;/code&gt; que es requerido y un &lt;code&gt;else&lt;/code&gt; que es opcional. Python evalúa las condiciones en orden. Una vez que encuentra una condición verdadera, el bloque correspondiente se ejecuta y los bloques restantes se ignoran. Si ninguna condición resulta verdadera, el bloque &lt;code&gt;else&lt;/code&gt; (si existe) se ejecuta.&lt;/p&gt;
 &lt;p&gt;Considera el ejemplo a continuación:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
@@ -2648,7 +2507,6 @@ El método &lt;code&gt;.keys()&lt;/code&gt; es redundante en este contexto. Iter
 &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="n"&gt;es&lt;/span&gt; &lt;span class="n"&gt;mayor&lt;/span&gt; &lt;span class="n"&gt;que&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="n"&gt;pero&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;mayor&lt;/span&gt; &lt;span class="n"&gt;que&lt;/span&gt; &lt;span class="mi"&gt;15&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, Python comienza evaluando la condición &lt;code&gt;x &amp;gt; 15&lt;/code&gt; la cual resulta falsa. Luego evalúa la siguiente condición &lt;code&gt;x &amp;gt; 5&lt;/code&gt; en la cláusula &lt;code&gt;elif&lt;/code&gt;. Como esta condición es verdadera, el bloque se ejecuta y la cláusula &lt;code&gt;else&lt;/code&gt; se ignora.&lt;/p&gt;
 &lt;h2 id="conclusiones"&gt;Conclusiones&lt;/h2&gt;
 &lt;p&gt;Has aprendido a escribir sentencias &lt;strong&gt;condicionales&lt;/strong&gt; en Python empleando las &lt;a href="https://pythonscouts.com/python-palabras-clave/"&gt;palabras clave&lt;/a&gt; &lt;code&gt;if&lt;/code&gt;, &lt;code&gt;else&lt;/code&gt;, y &lt;code&gt;elif&lt;/code&gt;. Las sentencias condicionales te permiten controlar el flujo de ejecución de un programa en función del cumplimiento de ciertas condiciones.&lt;/p&gt;
@@ -2760,7 +2618,6 @@ En muchas implementaciones de MVC, especialmente en aplicaciones web, las accion
     &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;get_greeting&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;choice&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;greetings&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;La class &lt;code&gt;Model&lt;/code&gt; maneja una serie de saludos almacenados en el atributo &lt;code&gt;.greetings&lt;/code&gt;. El método &lt;code&gt;.get_greeting()&lt;/code&gt; permite seleccionar un saludo aleatorio empleando la función &lt;code&gt;choice()&lt;/code&gt; del módulo &lt;code&gt;random&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Este modelo funciona independientemente de la vista que emplees. Para esto, cuenta con sus propios datos y los métodos necesarios para manipular adecuadamente estos datos.&lt;/p&gt;
 &lt;h3 id="la-vista"&gt;La vista&lt;/h3&gt;
@@ -2781,7 +2638,6 @@ En muchas implementaciones de MVC, especialmente en aplicaciones web, las accion
     &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;show_greeting&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;greeting&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
         &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;greetings_label&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;text&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;greeting&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En la vista &lt;code&gt;Window&lt;/code&gt; solo incluyes código &lt;code&gt;Tkinter&lt;/code&gt;. La vista debe ser autosuficiente, es decir, debe tener todos los métodos necesarios para actualizarse. En este caso, solo necesitas el método &lt;code&gt;.show_greeting()&lt;/code&gt;.&lt;/p&gt;
 &lt;h3 id="el-controlador"&gt;El controlador&lt;/h3&gt;
 &lt;p&gt;El controlador permite conectar la vista y el modelo. Es el único que debe tener conocimiento del resto de los componentes, vista y modelo. El controlador debe encargarse de guiar y gestionar las operaciones de acceso, modificación y actualización del modelo y de la vista.&lt;/p&gt;
@@ -2805,7 +2661,6 @@ En muchas implementaciones de MVC, especialmente en aplicaciones web, las accion
 &lt;span class="n"&gt;controller&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Controller&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Model&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="n"&gt;view&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Window&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
 &lt;span class="n"&gt;controller&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este archivo, defines una clase llamada &lt;code&gt;Controller&lt;/code&gt;. En el método &lt;code&gt;.__init__()&lt;/code&gt;, tomas como argumentos el modelo y la vista a emplear. Luego creas atributos para almacenar estos elementos y finalmente, conectas el botón Saludar de la vista con el método &lt;code&gt;._greet()&lt;/code&gt; del controlador.&lt;/p&gt;
 &lt;p&gt;El método &lt;code&gt;._greet()&lt;/code&gt; es lo que se conoce como un callback. Este método se ejecuta cuando haces click en el botón &lt;em&gt;Saludar&lt;/em&gt;. En este método, primeramente accedes al modelo con el fin de obtener el saludo usando el método &lt;code&gt;.get_greeting()&lt;/code&gt;. Luego, le indicas a la vista que muestre el saludo llamando el método &lt;code&gt;.show_greeting()&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Fíjate que el controlador usa los métodos del modelo o de la vista en función de la tarea a realizar. El controlador no debe implemente lógica de negocio o manipule directamente los datos del modelo. Su papel es coordinar las interacciones entre la vista y el modelo.&lt;/p&gt;
@@ -2813,7 +2668,6 @@ En muchas implementaciones de MVC, especialmente en aplicaciones web, las accion
 &lt;p&gt;Una vez definido el controlador, viene el código cliente donde creas una instancia del controlador y llamas el método &lt;code&gt;.run()&lt;/code&gt; para ejecutar la aplicación. Para probar cómo funciona tu aplicación, ejecuta el siguiente comando en una ventana del terminal. Asegúrate de estar en el directorio que contiene el archivo &lt;code&gt;app.py&lt;/code&gt; de tu aplicación:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;app.py
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Al presionar &lt;em&gt;Enter&lt;/em&gt;, verás en pantalla una ventana similar a la siguiente:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/patron-mvc-python/mvc-demo-python-tkinter.png" class="mx-auto d-block mt-2" alt="MVC demo app with Tkinter and Python"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;MVC demo app with Tkinter and Python&lt;/em&gt;&lt;/div&gt;
@@ -2869,7 +2723,6 @@ En muchas implementaciones de MVC, especialmente en aplicaciones web, las accion
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;200&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
 &lt;span class="mf"&gt;164.0&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En estos ejemplos, construyes expresiones usando &lt;a href="https://pythonscouts.com/operadores-python/#aritmeticos"&gt;operadores aritméticos&lt;/a&gt; para combinar valores numéricos y funciones que dan como resultado un número.&lt;/p&gt;
 &lt;p&gt;Las expresiones aritméticas también pueden emplear &lt;a href="https://pythonscouts.com/variables-python/"&gt;variables&lt;/a&gt; y &lt;a href="https://pythonscouts.com/constantes-python/"&gt;constantes&lt;/a&gt; en lugar de literales numéricos:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;radius&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
@@ -2878,7 +2731,6 @@ En muchas implementaciones de MVC, especialmente en aplicaciones web, las accion
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;circle_area&lt;/span&gt;
 &lt;span class="mf"&gt;314.2&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, utilizamos una variable y una constante para crear una expresión que retorna el área de un círculo a partir del radio. Como las expresiones siempre retornan un valor, puedes emplear una variable para mantener una referencia al resultado.&lt;/p&gt;
 &lt;h2 id="comparacion"&gt;Comparación&lt;/h2&gt;
 &lt;p&gt;Por su parte, las expresiones de comparación son aquellas que nos permiten comparar objetos entre sí. Estas expresiones son útiles para decidir el flujo de ejecución de tus programas en función del cumplimiento de determinadas &lt;a href="https://pythonscouts.com/condicionales-python/"&gt;condiciones&lt;/a&gt;.&lt;/p&gt;
@@ -2899,7 +2751,6 @@ En muchas implementaciones de MVC, especialmente en aplicaciones web, las accion
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;
 &lt;span class="kc"&gt;False&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Todas las expresiones de comparación retornan un valor lógico, ya sea &lt;code&gt;True&lt;/code&gt; o &lt;code&gt;False&lt;/code&gt;.&lt;/p&gt;
 &lt;aside class="note"&gt;
 Los ejemplos anteriores comparan valores numéricos, sin embargo, también es posible comparar cadenas, tuplas, listas y cualquier otro objeto que soporte los operadores de comparación.
@@ -2917,7 +2768,6 @@ Los ejemplos anteriores comparan valores numéricos, sin embargo, también es po
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;
 &lt;span class="kc"&gt;False&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En estos ejemplos las expresiones retornan valores booleanos. Es decir, &lt;code&gt;True&lt;/code&gt; o &lt;code&gt;False&lt;/code&gt;. Sin embargo, no todas las expresiones lógicas retornan valores booleanos.&lt;/p&gt;
 &lt;p&gt;Si los operandos involucrados son objetos o expresiones con un valor no booleano, entonces los operadores &lt;code&gt;and&lt;/code&gt; y &lt;code&gt;or&lt;/code&gt; retornan uno de los operandos dependiendo de sus valores de verdad:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Hola&amp;quot;&lt;/span&gt;
@@ -2934,7 +2784,6 @@ Los ejemplos anteriores comparan valores numéricos, sin embargo, también es po
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="mf"&gt;3.14&lt;/span&gt;
 &lt;span class="mf"&gt;3.14&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;La siguiente tabla resume el comportamiento de los operadores &lt;code&gt;and&lt;/code&gt; y &lt;code&gt;or&lt;/code&gt; con operandos cuyos valores no son booleanos:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -2975,14 +2824,12 @@ Los ejemplos anteriores comparan valores numéricos, sin embargo, también es po
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Juan&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;25&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Programador&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;España&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Juan&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;25&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Programador&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;España&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En el primer ejemplo, concatenas varias cadenas para formar una cadena final. De modo similar, haces con listas y con tuplas. Sin embargo, debes notar que los operandos deben ser del mismo tipo de datos. Considera el ejemplo siguiente:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Juan&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;25&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Programador&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;España&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="n"&gt;Traceback&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;most&lt;/span&gt; &lt;span class="n"&gt;recent&lt;/span&gt; &lt;span class="n"&gt;call&lt;/span&gt; &lt;span class="n"&gt;last&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="ne"&gt;TypeError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;can&lt;/span&gt; &lt;span class="n"&gt;only&lt;/span&gt; &lt;span class="n"&gt;concatenate&lt;/span&gt; &lt;span class="nb"&gt;tuple&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;list&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="nb"&gt;tuple&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Si tratas de concatenar una tupla con una lista, entonces recibirás una excepción &lt;code&gt;TypeError&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;En lo que respecta a las expresiones de repetición, debes emplear el operador de repetición (&lt;code&gt;*&lt;/code&gt;). Uno de los operandos será un número entero que representa el número de veces que deseas repetir el segundo operando. Este último puede ser una cadena, una lista, o una tupla:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Hola!&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
@@ -2994,7 +2841,6 @@ Los ejemplos anteriores comparan valores numéricos, sin embargo, también es po
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;uno&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;dos&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;uno&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;dos&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;uno&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;dos&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;uno&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;dos&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;uno&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;dos&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;El operador de repetición te permite repetir un objeto un determinado número de veces. Debes notar que el orden de los operandos no altera el resultado.&lt;/p&gt;
 &lt;h2 id="precedencia-de-operadores"&gt;Precedencia de operadores&lt;/h2&gt;
 &lt;p&gt;Cuando trabajas con expresiones que combinan diferentes tipos de operadores, debes considerar que los operadores tienen un orden de precedencia que define cuál operación se evalúa primero. A continuación un breve resumen de este orden.&lt;/p&gt;
@@ -3002,13 +2848,11 @@ Los ejemplos anteriores comparan valores numéricos, sin embargo, también es po
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;
 &lt;span class="mi"&gt;20&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En esta expresión, se evalúa &lt;code&gt;(2 + 3)&lt;/code&gt; primero y se obtiene &lt;code&gt;5&lt;/code&gt;. Luego, se desarrolla la multiplicación y resulta en &lt;code&gt;20&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Exponenciación&lt;/strong&gt; &lt;code&gt;**&lt;/code&gt;. El operador de potencia tiene la segunda mayor precedencia:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
 &lt;span class="mi"&gt;18&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Se evalúa primero la exponenciación &lt;code&gt;(3**2)&lt;/code&gt; y se obtiene &lt;code&gt;9&lt;/code&gt;. Luego, se realiza la multiplicación y se obtiene &lt;code&gt;18&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Operadores unarios&lt;/strong&gt; &lt;code&gt;+x&lt;/code&gt;, &lt;code&gt;-x&lt;/code&gt;, &lt;code&gt;~x&lt;/code&gt;. Los operadores unarios como el negativo &lt;code&gt;-&lt;/code&gt; y el positivo &lt;code&gt;+&lt;/code&gt; se aplican antes que la mayoría de los operadores. Sin embargo, su precedencia es menor que la del operador de exponenciación:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
@@ -3017,62 +2861,52 @@ Los ejemplos anteriores comparan valores numéricos, sin embargo, también es po
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
 &lt;span class="mi"&gt;9&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;La primera expresión se evalúa como &lt;code&gt;-(3**2) = -9&lt;/code&gt; en lugar de como &lt;code&gt;(-3)**2 = 9&lt;/code&gt; que sería lo esperado en matemáticas.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Multiplicación&lt;/strong&gt;, &lt;strong&gt;División&lt;/strong&gt;, &lt;strong&gt;Módulo&lt;/strong&gt; y &lt;strong&gt;División entera&lt;/strong&gt; &lt;code&gt;*&lt;/code&gt;, &lt;code&gt;/&lt;/code&gt;, &lt;code&gt;%&lt;/code&gt;, &lt;code&gt;//&lt;/code&gt;. Todos estos operadores tienen la misma precedencia y se evalúan de izquierda a derecha según aparecen en las expresiones:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
 &lt;span class="mi"&gt;20&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Se evalúa primero la multiplicación y luego la suma &lt;code&gt;10 + (5 * 2)&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Suma&lt;/strong&gt; y &lt;strong&gt;Resta&lt;/strong&gt; &lt;code&gt;+&lt;/code&gt;, &lt;code&gt;-&lt;/code&gt;. Tienen precedencia menor que la multiplicación y se evalúan después de ella:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
 &lt;span class="mi"&gt;11&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Se evalúa de izquierda a derecha: primero &lt;code&gt;10 - 2&lt;/code&gt; y luego &lt;code&gt;8 + 3&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Operadores de desplazamiento de bits&lt;/strong&gt; &lt;code&gt;&amp;lt;&amp;lt;&lt;/code&gt;, &lt;code&gt;&amp;gt;&amp;gt;&lt;/code&gt;. Los operadores de desplazamiento tienen menor precedencia que los aritméticos:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
 &lt;span class="mi"&gt;12&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Se evalúa como &lt;code&gt;(1 + 2) &amp;lt;&amp;lt; 2&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Operadores de comparación&lt;/strong&gt; &lt;code&gt;&amp;lt;&lt;/code&gt;, &lt;code&gt;&amp;lt;=&lt;/code&gt;, &lt;code&gt;&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;gt;=&lt;/code&gt;. Los operadores de comparación se evalúan después de los aritméticos y de los de desplazamiento:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
 &lt;span class="kc"&gt;True&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Se evalúa como &lt;code&gt;(3 * 2) &amp;lt; 10&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Operadores de igualdad&lt;/strong&gt; &lt;code&gt;==&lt;/code&gt;, &lt;code&gt;!=&lt;/code&gt;. Tienen menor precedencia que los operadores de comparación:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
 &lt;span class="kc"&gt;True&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Se evalúa primero &lt;code&gt;3 + 2&lt;/code&gt; y luego &lt;code&gt;5 == 5&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Operadores de bits&lt;/strong&gt; &lt;code&gt;&amp;amp;&lt;/code&gt;, &lt;code&gt;^&lt;/code&gt;, &lt;code&gt;|&lt;/code&gt;. Se evalúan en el siguiente orden: &lt;code&gt;&amp;amp;&lt;/code&gt; (AND bit a bit), &lt;code&gt;^&lt;/code&gt; (XOR bit a bit), &lt;code&gt;|&lt;/code&gt; (OR bit a bit):&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
 &lt;span class="mi"&gt;1&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Se evalúa como &lt;code&gt;(3 &amp;amp; 2) | 1&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Operadores lógicos&lt;/strong&gt; &lt;code&gt;not&lt;/code&gt;, &lt;code&gt;and&lt;/code&gt;, &lt;code&gt;or&lt;/code&gt;. El operador &lt;code&gt;not&lt;/code&gt; tiene mayor precedencia que &lt;code&gt;and&lt;/code&gt;, que a su vez tiene mayor precedencia que &lt;code&gt;or&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;
 &lt;span class="kc"&gt;False&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Se evalúa como &lt;code&gt;(not True) or (False and True)&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Operadores de pertenencia e identidad&lt;/strong&gt; &lt;code&gt;in&lt;/code&gt;, &lt;code&gt;not in&lt;/code&gt;, &lt;code&gt;is&lt;/code&gt;, &lt;code&gt;is not&lt;/code&gt;. Estos operadores tienen precedencia baja y se evalúan antes que los operadores lógicos:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;m&amp;quot;&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;mango&amp;quot;&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
 &lt;span class="kc"&gt;False&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Se evalúa como &lt;code&gt;("m" in "mango") and (None is not None)&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Operadores de asignación&lt;/strong&gt; &lt;code&gt;=&lt;/code&gt;, &lt;code&gt;+=&lt;/code&gt;, &lt;code&gt;-=&lt;/code&gt;, &lt;code&gt;*=&lt;/code&gt;, &lt;code&gt;/=&lt;/code&gt;, &lt;code&gt;//=&lt;/code&gt;, &lt;code&gt;**=&lt;/code&gt;, y &lt;code&gt;%=&lt;/code&gt;. Los operadores de asignación tienen la menor precedencia, lo cual permite que los cálculos se realicen antes de asignar el valor final:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;
 &lt;span class="mi"&gt;13&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Primero se evalúa &lt;code&gt;3 + (2 * 5)&lt;/code&gt; y luego se asigna el resultado a la variable &lt;code&gt;x&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="conclusiones"&gt;Conclusiones&lt;/h2&gt;
 &lt;p&gt;Has aprendido sobre las expresiones en Python y cómo formarlas usando diferentes tipos de operadores, como los aritméticos, de comparación, lógicos, de concatenación y repetición. También has conocido la importancia de la precedencia de operadores en la evaluación de expresiones complejas.&lt;/p&gt;
@@ -3123,7 +2957,6 @@ Los ejemplos anteriores comparan valores numéricos, sin embargo, también es po
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;  &lt;span class="c1"&gt;# No -3, porque -4 es el mayor entero &amp;lt;= -3.333&lt;/span&gt;
 &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Los operadores de adición, sustracción, multiplicación y división son casi idénticos a los que empleas en matemáticas.&lt;/p&gt;
 &lt;p&gt;El operador de módulo (&lt;code&gt;%&lt;/code&gt;) devuelve el resto de la división entera. El operador de exponenciación o potenciación te permite elevar números a una determinada potencia. Finalmente, el operador de división entera realiza una división que devuelve el mayor entero menor o igual al resultado de la división normal. Esto se conoce como división de piso.&lt;/p&gt;
 &lt;h2 id="asignacion"&gt;Asignación&lt;/h2&gt;
@@ -3168,7 +3001,6 @@ Los ejemplos anteriores comparan valores numéricos, sin embargo, también es po
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt;
 &lt;span class="mf"&gt;2.0&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En la práctica, Python tiene un operador de asignación (&lt;code&gt;=&lt;/code&gt;) y varios operadores de asignación aumentada. Los operadores de asignación aumentada son atajos que permiten actualizar el valor de una variable de forma rápida y concisa.&lt;/p&gt;
 &lt;h2 id="concatenacion"&gt;Concatenación&lt;/h2&gt;
 &lt;p&gt;Los operadores de concatenación te permiten unir cadenas de caracteres, listas y otros tipos de datos:&lt;/p&gt;
@@ -3204,7 +3036,6 @@ Los ejemplos anteriores comparan valores numéricos, sin embargo, también es po
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;letters&lt;/span&gt;
 &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;c&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;d&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Nuevamente, Python tiene un operador de concatenación (&lt;code&gt;+&lt;/code&gt;) y varios operadores de concatenación aumentada.&lt;/p&gt;
 &lt;h2 id="repeticion"&gt;Repetición&lt;/h2&gt;
 &lt;p&gt;Puedes usar los operadores de repetición para repetir un valor un número determinado de veces:&lt;/p&gt;
@@ -3222,7 +3053,6 @@ Los ejemplos anteriores comparan valores numéricos, sin embargo, también es po
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;a&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;b&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;El operador de repetición comúnmente se emplea con cadenas de caracteres cuando queremos repetir una determinada cadena. Nota que este operador requiere de un operando entero que representa el número de repeticiones y que puede estar a la derecha o izquierda del operador.&lt;/p&gt;
 &lt;h2 id="comparacion"&gt;Comparación&lt;/h2&gt;
 &lt;p&gt;Cuando necesitas comparar valores u objetos, puedes utilizar los operadores de comparación:&lt;/p&gt;
@@ -3266,7 +3096,6 @@ Los ejemplos anteriores comparan valores numéricos, sin embargo, también es po
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
 &lt;span class="kc"&gt;False&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Estos operadores son casi idénticos a los que usamos en las matemáticas. El operador de igualdad que se representa con dos símbolos de igualdad (&lt;code&gt;==&lt;/code&gt;) para diferenciarlo del operador de asignación. El operador de desigualdad se representa como &lt;code&gt;!=&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="logicos"&gt;Lógicos&lt;/h2&gt;
 &lt;p&gt;Los operadores lógicos o booleanos permiten crear &lt;a href="https://pythonscouts.com/expresiones-python/"&gt;expresiones&lt;/a&gt; lógicas que generalmente se utilizan en &lt;a href="https://pythonscouts.com/condicionales-python/"&gt;condiciones&lt;/a&gt;. Python tiene tres operadores booleanos: &lt;code&gt;and&lt;/code&gt;, &lt;code&gt;or&lt;/code&gt;, y &lt;code&gt;not&lt;/code&gt;. Los siguientes ejemplos muestran el funcionamiento de cada operador:&lt;/p&gt;
@@ -3296,7 +3125,6 @@ Los ejemplos anteriores comparan valores numéricos, sin embargo, también es po
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
 &lt;span class="kc"&gt;True&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Estos ejemplos expresan lo que se conoce como &lt;a href="https://es.wikipedia.org/wiki/Tabla_de_verdad"&gt;tabla de verdad&lt;/a&gt; de los operadores lógicos. Esta tabla resume los &lt;a href="https://es.wikipedia.org/wiki/Valor_de_verdad"&gt;valores de verdad&lt;/a&gt; que retornan los operadores en función del valor de verdad de los operandos.&lt;/p&gt;
 &lt;p&gt;Los operadores lógicos en Python también funcionan con objetos distintos de &lt;code&gt;True&lt;/code&gt; and &lt;code&gt;False&lt;/code&gt;. Todos los objetos tienen un valor de verdad en Python. Las reglas para determinar estos valores de verdad son las siguientes:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -3318,7 +3146,6 @@ Los ejemplos anteriores comparan valores numéricos, sin embargo, también es po
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Hola&amp;quot;&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="s1"&gt;&amp;#39;Hola&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;El operador &lt;code&gt;and&lt;/code&gt; retorna el operando derecho si el izquierdo es verdadero. Si el operando izquierdo es falso, entonces &lt;code&gt;and&lt;/code&gt; lo retorna inmediatamente sin evaluar el operando derecho. Esto se &lt;a href="https://es.wikipedia.org/wiki/Evaluaci%C3%B3n_de_cortocircuito"&gt;denomina evaluación de cortocircuito&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;En contraste, &lt;code&gt;or&lt;/code&gt; retorna el operando derecho si el izquierdo es falso. Si el operando izquierdo es verdadero, entonces &lt;code&gt;or&lt;/code&gt; lo retorna inmediatamente.&lt;/p&gt;
 &lt;h2 id="pertenencia"&gt;Pertenencia&lt;/h2&gt;
@@ -3352,7 +3179,6 @@ Los ejemplos anteriores comparan valores numéricos, sin embargo, también es po
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;address&amp;quot;&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;person&lt;/span&gt;
 &lt;span class="kc"&gt;False&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Por otro lado, el operador &lt;code&gt;not in&lt;/code&gt; permite determinar si un valor no pertenece a una serie de valores. Este operador devuelve &lt;code&gt;True&lt;/code&gt; cuando el valor no es parte de la colección de valores:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;# Verificar si un elemento NO está en una lista&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;fruits&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;manzana&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;banana&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;cereza&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
@@ -3382,7 +3208,6 @@ Los ejemplos anteriores comparan valores numéricos, sin embargo, también es po
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;name&amp;quot;&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;person&lt;/span&gt;
 &lt;span class="kc"&gt;False&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Los operadores de pertenencia funcionan con diferentes colecciones de datos como listas, duplas, conjuntos y diccionarios. Sin embargo, cuando necesitas realizar pruebas de pertenencia repetidamente, la opción más eficiente es emplear conjuntos.&lt;/p&gt;
 &lt;h2 id="identidad"&gt;Identidad&lt;/h2&gt;
 &lt;p&gt;En Python, cada objeto que se crea tiene una identidad única. En &lt;a href="https://es.wikipedia.org/wiki/CPython"&gt;CPython&lt;/a&gt;, esta identidad es un número entero que se corresponde con la dirección de memoria donde el objeto está almacenado.&lt;/p&gt;
@@ -3397,14 +3222,12 @@ Los ejemplos anteriores comparan valores numéricos, sin embargo, también es po
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;  &lt;span class="c1"&gt;# False, c es una lista independiente con el mismo contenido&lt;/span&gt;
 &lt;span class="kc"&gt;False&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;El operador &lt;code&gt;is not&lt;/code&gt; devuelve &lt;code&gt;True&lt;/code&gt; si dos variables no hacen referencia al mismo objeto en memoria:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;
 &lt;span class="kc"&gt;False&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;
 &lt;span class="kc"&gt;True&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Python realiza el caché de valores enteros en el rango de &lt;code&gt;-5&lt;/code&gt; a &lt;code&gt;256&lt;/code&gt;. Esto significa que cualquier número en este rango siempre apunta al mismo objeto en memoria:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;
@@ -3416,7 +3239,6 @@ Los ejemplos anteriores comparan valores numéricos, sin embargo, también es po
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt;  &lt;span class="c1"&gt;# False, por NO estar en el rango de valores en caché&lt;/span&gt;
 &lt;span class="kc"&gt;False&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Esta comportamiento de Python es una optimización de uso de memoria y se basa en el hecho de que posiblemente los enteros más comúnmente empleados están en ese rango de valores.&lt;/p&gt;
 &lt;h2 id="bitwise"&gt;Bitwise&lt;/h2&gt;
 &lt;p&gt;Los operadores de bits permiten manipular los bits de los números enteros directamente. Python cuenta con seis operadores de bit o bitwise. A continuación, algunos ejemplos que muestran cómo funcionan estos operadores:&lt;/p&gt;
@@ -3456,7 +3278,6 @@ Los ejemplos anteriores comparan valores numéricos, sin embargo, también es po
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;12&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;  &lt;span class="c1"&gt;# (En binario: 12 = 0000 1100, 12 &amp;gt;&amp;gt; 2 = 0000 0011 que es 3)&lt;/span&gt;
 &lt;span class="mi"&gt;3&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Los operadores a nivel de bits no son tan comunes en el desarrollo de aplicaciones de alto nivel. Sin embargo, son muy útiles en aplicaciones que requieren manipulación de datos a nivel de bits, incluidas la programación de sistemas, el procesamiento de señales, la criptografía, las redes, y los gráficos.&lt;/p&gt;
 &lt;h2 id="conclusiones"&gt;Conclusiones&lt;/h2&gt;
 &lt;p&gt;Has aprendido sobre los distintos tipos de operadores en Python, incluyendo aritméticos, de asignación, concatenación, repetición, comparación, lógicos, pertenencia, identidad y bitwise.&lt;/p&gt;
@@ -3488,7 +3309,6 @@ Los ejemplos anteriores comparan valores numéricos, sin embargo, también es po
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;LIGHT_SPEED&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;299792458&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;BASE_PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;/proyectos&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En estos ejemplos, has creado algunas variables mediante la asignación de valores numéricos o de cadena de caracteres.&lt;/p&gt;
 &lt;aside class="note"&gt;
 Como regla general, emplearemos nombres de constantes en idioma inglés puesto que este es el idioma base para la programación actualmente.
@@ -3504,7 +3324,6 @@ Como regla general, emplearemos nombres de constantes en idioma inglés puesto q
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;BASE_PATH&lt;/span&gt;
 &lt;span class="s1"&gt;&amp;#39;/proyectos&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Puedes usar las constantes para referirte a los valores que estas referencian. Estos valores se encuentran almacenados en posiciones específicas de la memoria de tu computadora. La constante es solo una vía para llegar al valor referenciado a través de un nombre legible.&lt;/p&gt;
 &lt;p&gt;Es importante notar que durante la ejecución de tu código, las constantes que has definido no deben cambiar su valor. Es decir, no &lt;em&gt;deberías&lt;/em&gt; reasignar una constante luego de haberla creado. Aunque técnicamente puedes asignar un nuevo valor a estas variables, hacerlo violaría la intención de usarlas como constantes.&lt;/p&gt;
 &lt;h2 id="tipos-de-datos-y-constantes"&gt;Tipos de datos y constantes&lt;/h2&gt;
@@ -3564,7 +3383,6 @@ Para una comprensión más profunda de las convenciones de estilo en Python, pue
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;language&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Python&amp;quot;&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;message&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Bienvenidos a pythonscouts.com&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En estos ejemplos, has creado algunas variables mediante la asignación de &lt;a href="https://pythonscouts.com/valores-python/"&gt;valores&lt;/a&gt; numéricos o de cadena de caracteres.&lt;/p&gt;
 &lt;aside class="note"&gt;
 Como regla general, emplearemos nombres de variables en idioma inglés puesto que este es el idioma base para la programación actualmente.
@@ -3580,7 +3398,6 @@ Como regla general, emplearemos nombres de variables en idioma inglés puesto qu
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;message&lt;/span&gt;
 &lt;span class="s1"&gt;&amp;#39;Bienvenidos a pythonscouts.com&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Puedes usar las variables para referirte a los valores que estas referencian. Estos valores se encuentran almacenados en posiciones específicas de la memoria de tu computadora. La variable solo es una vía para llegar al valor referenciado.&lt;/p&gt;
 &lt;p&gt;Durante la ejecución de tu código, tus variables pueden variar el valor referenciado. Es por eso que las llamamos &lt;em&gt;variables&lt;/em&gt;. Por ejemplo, el siguiente contador incrementa su valor de uno en uno durante la ejecución del código:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;count&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
@@ -3594,7 +3411,6 @@ Como regla general, emplearemos nombres de variables en idioma inglés puesto qu
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;count&lt;/span&gt;
 &lt;span class="mi"&gt;3&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Para cambiar el valor referenciado por una variable, lo que hacemos es reasignar la variable para que apunte a otro valor u objeto.&lt;/p&gt;
 &lt;h2 id="tipos-de-datos-y-variables"&gt;Tipos de datos y variables&lt;/h2&gt;
 &lt;p&gt;Python es un lenguaje de &lt;strong&gt;tipado dinámico&lt;/strong&gt;, lo que significa que el tipo de objeto al que una variable hace referencia puede cambiar durante la ejecución del programa.&lt;/p&gt;
@@ -3609,12 +3425,10 @@ Como regla general, emplearemos nombres de variables en idioma inglés puesto qu
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;
 &lt;span class="s1"&gt;&amp;#39;Una cadena&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Aunque esto es posible hacer que una variable se refiera a objetos de diferentes tipos de dato en diferentes momentos de su vida, esta práctica no es recomendable pues puede ocasionar errores durante la ejecución del código:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;upper&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="s1"&gt;&amp;#39;UNA CADENA&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, puedes ver cómo inicialmente la variable referencia un objeto de tipo cadena al cual le puedes aplicar el método &lt;code&gt;.upper()&lt;/code&gt; para convertir todas las letras en mayúsculas.&lt;/p&gt;
 &lt;p&gt;Ahora supongamos que un rato más tarde, el código reasigna la variable para referirse a un valor numérico entero. Cuando tratas de aplicar el método &lt;code&gt;.upper()&lt;/code&gt;, recibes una excepción &lt;code&gt;AttributeError&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;42&lt;/span&gt;
@@ -3623,7 +3437,6 @@ Como regla general, emplearemos nombres de variables en idioma inglés puesto qu
     &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="ne"&gt;AttributeError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;int&amp;#39;&lt;/span&gt; &lt;span class="nb"&gt;object&lt;/span&gt; &lt;span class="n"&gt;has&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;attribute&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;upper&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Los enteros no implementan el método &lt;code&gt;.upper()&lt;/code&gt; y esto provoca que tu código falle. Debido a problemas como este, es recomendable que tus variables no cambien el tipo de objetos al que apuntan durante su vida.&lt;/p&gt;
 &lt;h2 id="nombres-de-variables"&gt;Nombres de variables&lt;/h2&gt;
 &lt;p&gt;Los nombres de variables en Python pueden tener cualquier longitud y consistir en letras mayúsculas (A-Z) y minúsculas (a-z), dígitos (0-9) y el carácter de guión bajo (_). La única restricción es que, aunque un nombre de variable puede contener dígitos, el primer carácter de un nombre de variable no puede ser un dígito.&lt;/p&gt;
@@ -3633,14 +3446,12 @@ Como regla general, emplearemos nombres de variables en idioma inglés puesto qu
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;age&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;19&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;birth_day&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;02-10-2008&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Las variables identifican objetos y, por esta razón, generalmente se emplean sustantivos para los nombres de variables.&lt;/p&gt;
 &lt;p&gt;En el caso de nombres que requieren más de una palabra, se emplea un guión bajo para separar las palabras. En este caso, es común emplear un adjetivo junto con un sustantivo.&lt;/p&gt;
 &lt;p&gt;Las variables que apuntan a valores Booleanos (&lt;code&gt;True&lt;/code&gt; o &lt;code&gt;False&lt;/code&gt;) generalmente usan los prefijos &lt;code&gt;is_*&lt;/code&gt; y &lt;code&gt;has_*&lt;/code&gt; en inglés:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;is_active&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;has_permission&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;El uso de estos prefijos es una convención de estilo que ayuda a mejorar la legibilidad del código. No es un requisito estricto del lenguaje.&lt;/p&gt;
 &lt;h2 id="conclusiones"&gt;Conclusiones&lt;/h2&gt;
 &lt;p&gt;Has aprendido cómo funcionan las variables en Python, incluyendo su creación, asignación y uso. También has explorado el concepto de tipado dinámico y cómo gestionar los nombres de variables según las convenciones más empleadas en Python.&lt;/p&gt;
@@ -3674,7 +3485,6 @@ Como regla general, emplearemos nombres de variables en idioma inglés puesto qu
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;  &lt;span class="c1"&gt;# Un entero negativo&lt;/span&gt;
 &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;También puedes añadir un guión bajo como separador de miles en números de más de tres cifras:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;1000000&lt;/span&gt;  &lt;span class="c1"&gt;# Sin separador de miles en el literal&lt;/span&gt;
 &lt;span class="mi"&gt;1000000&lt;/span&gt;
@@ -3682,7 +3492,6 @@ Como regla general, emplearemos nombres de variables en idioma inglés puesto qu
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;1_000_000&lt;/span&gt;  &lt;span class="c1"&gt;# Con separador de miles en el literal&lt;/span&gt;
 &lt;span class="mi"&gt;1000000&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Esta forma de escribir números enteros mejora significativamente la legibilidad del código.&lt;/p&gt;
 &lt;h3 id="numeros-decimales"&gt;Números decimales&lt;/h3&gt;
 &lt;p&gt;Para crear valores de coma flotante o decimales, debes añadir un punto (&lt;code&gt;.&lt;/code&gt;) luego de la parte entera y finalmente la fracción decimal:&lt;/p&gt;
@@ -3710,7 +3519,6 @@ Como regla general, emplearemos nombres de variables en idioma inglés puesto qu
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mf"&gt;1_000_000.02&lt;/span&gt;  &lt;span class="c1"&gt;# Con separador de miles en el literal&lt;/span&gt;
 &lt;span class="mf"&gt;1000000.02&lt;/span&gt;  &lt;span class="c1"&gt;# Sin separador de miles en la salida&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Dependiendo del contexto, puedes escribir los números decimales de diferentes maneras, que son muy similares a como los escribes en matemáticas.&lt;/p&gt;
 &lt;p&gt;Sin embargo, la notación científica es un poco diferente. Para expresar un número en esta notación, debes usar la letra &lt;code&gt;e&lt;/code&gt; o &lt;code&gt;E&lt;/code&gt; seguida del exponente.&lt;/p&gt;
 &lt;h3 id="numeros-complejos"&gt;Números complejos&lt;/h3&gt;
@@ -3730,7 +3538,6 @@ Como regla general, emplearemos nombres de variables en idioma inglés puesto qu
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;
 &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Los números complejos tienen una parte real y otra imaginaria. En notación matemática, generalmente se emplea la letra &lt;code&gt;i&lt;/code&gt; para la parte imaginaria, pero en Python se usa la &lt;code&gt;j&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="valores-de-cadena-de-caracteres"&gt;Valores de cadena de caracteres&lt;/h2&gt;
 &lt;p&gt;Cuando necesitas trabajar con cadenas de caracteres o texto, puedes emplear valores o literales que generalmente se forman con el texto entre comillas.&lt;/p&gt;
@@ -3750,19 +3557,16 @@ Como regla general, emplearemos nombres de variables en idioma inglés puesto qu
 &lt;span class="s2"&gt;... que ocupa varias líneas físicas&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
 &lt;span class="s1"&gt;&amp;#39;Texto entre comillas dobles triplicadas&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s1"&gt;que ocupa varias líneas físicas&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Para crear cadenas de texto que ocupen una única línea física, puedes emplear comillas simples o dobles. Para crear cadenas de texto que ocupen múltiples líneas, emplea comillas simples o dobles triplicadas.&lt;/p&gt;
 &lt;p&gt;Ahora bien, ¿qué puedes hacer si necesitas incluir los caracteres de comillas en una cadena de texto? En este caso, puedes alternar las comillas:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Alterna &amp;quot;comillas&amp;quot; para incluirlas en el texto&amp;#39;&lt;/span&gt;
 &lt;span class="s1"&gt;&amp;#39;Alterna &amp;quot;comillas&amp;quot; para incluirlas en el texto&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este caso, usaste las comillas simples para delimitar la cadena y así poder incluir las comillas dobles en el texto.&lt;/p&gt;
 &lt;p&gt;Otra forma de hacerlo es escapar las comillas con una barra invertida (&lt;code&gt;\&lt;/code&gt;) como en el siguiente ejemplo:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Escapa las &lt;/span&gt;&lt;span class="se"&gt;\&amp;quot;&lt;/span&gt;&lt;span class="s2"&gt;comillas&lt;/span&gt;&lt;span class="se"&gt;\&amp;quot;&lt;/span&gt;&lt;span class="s2"&gt; con un backslash&amp;quot;&lt;/span&gt;
 &lt;span class="s1"&gt;&amp;#39;Escapa las &amp;quot;comillas&amp;quot; con un backslash&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Python tiene varias otras &lt;a href="https://docs.python.org/es/3/reference/lexical_analysis.html#escape-sequences"&gt;secuencias de escape&lt;/a&gt; que puedes emplear en tus cadenas de caracteres. Estas secuencias implican el uso de la barra invertida y son útiles cuando necesitas incluir caracteres con significado especial en tus cadenas.&lt;/p&gt;
 &lt;h3 id="literales-de-cadena-sin-formato"&gt;Literales de cadena sin formato&lt;/h3&gt;
 &lt;p&gt;Los literales de cadenas pueden tener como prefijo la letra &lt;code&gt;r&lt;/code&gt; o &lt;code&gt;R&lt;/code&gt;. Estos son literales de cadena sin formato (raw strings) y tratan las barras invertidas como caracteres literales, por lo que son muy útiles y comunes en expresiones regulares.&lt;/p&gt;
@@ -3770,7 +3574,6 @@ Como regla general, emplearemos nombres de variables en idioma inglés puesto qu
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b&amp;quot;&lt;/span&gt;
 &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;.[A-Z|a-z]{2,}&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;b&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Cuando necesitas incluir barras invertidas y otros caracteres que pueden tener significados especiales en tus cadenas, puedes usar cadenas sin formato.&lt;/p&gt;
 &lt;p&gt;Finalmente, están las f-strings o literales formateados. Estos te permiten interpolar y formatear valores en tus cadenas empleando campos de reemplazo delimitados por llaves (&lt;code&gt;{}&lt;/code&gt;) en el literal:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;balance&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;5425.9292&lt;/span&gt;
@@ -3778,7 +3581,6 @@ Como regla general, emplearemos nombres de variables en idioma inglés puesto qu
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Balance general: $&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;balance&lt;/span&gt;&lt;span class="si"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;,.2f&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
 &lt;span class="s1"&gt;&amp;#39;Balance general: $5,425.93&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;El campo de reemplazo en esta f-string contiene una &lt;a href="https://pythonscouts.com/variables-python/"&gt;variable&lt;/a&gt; llamada &lt;code&gt;balance&lt;/code&gt;. Esta variable provee el valor que necesitamos interpolar en la cadena. Luego tenemos el especificador de formato que comienza con el caracter de dos puntos (&lt;code&gt;:&lt;/code&gt;). En este caso, formateas el valor como un valor decimal con dos lugares después del punto y empleando una coma (&lt;code&gt;,&lt;/code&gt;) como separador de miles.&lt;/p&gt;
 &lt;h2 id="conclusiones"&gt;Conclusiones&lt;/h2&gt;
 &lt;p&gt;Ahora sabes lo básico sobre los valores o literales en Python, incluidos valores numéricos como los números enteros, decimales y complejos. También aprendiste sobre los valores de cadenas de caracteres.&lt;/p&gt;

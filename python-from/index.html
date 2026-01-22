@@ -51,8 +51,8 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://pythonscouts.com/python-from/">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202601221559">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202601221559">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202601221954">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202601221954">
     <!-- Preconnect to CDNs -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
@@ -65,9 +65,9 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202601221559">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202601221954">
     <!-- Stork Search - Deferred -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202601221559">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202601221954">
 
 
     <!-- Article tags -->
@@ -110,13 +110,13 @@
     <meta name="twitter:image:alt" content="Palabras clave en Python: from">
 
     <!-- Custom CSS for article -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202601221559">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202601221954">
 </head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
 <script
-    src="https://pythonscouts.com/theme/js/analytics.js?v=202601221559"
+    src="https://pythonscouts.com/theme/js/analytics.js?v=202601221954"
     defer
     data-analytics-id="G-R3C5PFSQ1S">
 </script>
@@ -283,32 +283,25 @@
 <p>La sintaxis básica para utilizar <code>from</code> junto con <a href="/python-import/"><code>import</code></a> es la siguiente:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">module_name</span> <span class="kn">import</span> <span class="n">specific_component</span>
 </code></pre></div>
-
 <p>Si necesitas crear un alias para evitar conflictos de nombres o simplificar el uso, puedes usar <a href="/python-as/"><code>as</code></a>:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">module_name</span> <span class="kn">import</span> <span class="n">specific_component</span> <span class="k">as</span> <span class="n">alias</span>
 </code></pre></div>
-
 <p>También puedes importar múltiples componentes separados por comas:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">module_name</span> <span class="kn">import</span> <span class="n">component1</span><span class="p">,</span> <span class="n">component2</span>
 </code></pre></div>
-
 <p>Además, puedes usar <code>*</code> para importar todos los componentes del módulo:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">module_name</span> <span class="kn">import</span> <span class="o">*</span>
 </code></pre></div>
-
 <p>Esta sintaxis se conoce como <strong>wildcard import</strong> y es común en secciones de trabajo interactivas. Sin embargo, no se recomienda usarla en código en producción pues puede causar conflictos de nombres y dificultar la depuración.</p>
 <p>Sintaxis para el uso con <a href="/python-raise/"><code>raise</code></a>:</p>
 <div class="highlight"><pre><span></span><code><span class="k">raise</span> <span class="n">NewException</span><span class="p">(</span><span class="s2">&quot;mensaje&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">original_exception</span>
 </code></pre></div>
-
 <p>Si deseas suprimir el contexto de la excepción original, puedes usar <a href="/python-none/"><code>None</code></a>:</p>
 <div class="highlight"><pre><span></span><code><span class="k">raise</span> <span class="n">NewException</span><span class="p">(</span><span class="s2">&quot;mensaje&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="kc">None</span>
 </code></pre></div>
-
 <p>Sintaxis para el uso con <code>yield</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="k">yield from</span> <span class="n">iterable</span>
 </code></pre></div>
-
 <p>Esta sintaxis equivale a iterar sobre el iterable y producir cada elemento uno por uno.</p>
 <h2 id="ejemplos-practicos">Ejemplos prácticos</h2>
 <p>Aquí hay algunos ejemplos que ilustran cómo se usa la palabra clave <code>from</code>:</p>
@@ -316,7 +309,6 @@
 <span class="o">&gt;&gt;&gt;</span> <span class="n">pi</span>
 <span class="mf">3.141592653589793</span>
 </code></pre></div>
-
 <p>En este ejemplo, solo se importa <code>pi</code> del módulo <code>math</code>, permitiéndote usarlo directamente sin tener que prefijarlo con <code>math</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
@@ -324,7 +316,6 @@
 <span class="o">&gt;&gt;&gt;</span> <span class="n">future</span>
 <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2023</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">401213</span><span class="p">)</span>
 </code></pre></div>
-
 <p>En este ejemplo, se importan <code>datetime</code> y <code>timedelta</code> del módulo <code>datetime</code>. Esto permite trabajar con fechas y tiempos de manera más directa.</p>
 <p>A continuación, un ejemplo de encadenamiento de excepciones con <code>raise from</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">connect_to_database</span><span class="p">(</span><span class="n">connection_string</span><span class="p">):</span>
@@ -346,7 +337,6 @@
     <span class="o">...</span>
 <span class="ne">RuntimeError</span><span class="p">:</span> <span class="n">error</span> <span class="n">en</span> <span class="n">la</span> <span class="n">base</span> <span class="n">de</span> <span class="n">datos</span>
 </code></pre></div>
-
 <p>En este ejemplo, se preserva la excepción original (<code>ConnectionError</code>) como causa directa del nuevo error (<code>RuntimeError</code>).</p>
 <p>Finalmente, un ejemplo de delegación de iteración con <code>yield from</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">combine</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
@@ -357,7 +347,6 @@
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span><span class="n">combine</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]))</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 </code></pre></div>
-
 <p>En este ejemplo, <code>yield from</code> delega la iteración a cada lista, produciendo sus elementos sin necesidad de un bucle explícito.</p>
 <h2 id="uso-de-from">Uso de <code>from</code></h2>
 <p>Los casos de uso más comunes de la palabra clave <code>from</code> incluyen los siguientes:</p>
@@ -449,12 +438,12 @@
     <!-- JS Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
     <!-- Stork and site scripts -->
-    <script src="https://pythonscouts.com/theme/js/stork.js?v=202601221559" defer></script>
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202601221954" defer></script>
     <script
-        src="https://pythonscouts.com/theme/js/site.js?v=202601221559"
+        src="https://pythonscouts.com/theme/js/site.js?v=202601221954"
         defer
         data-stork-name="sitesearch"
-        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202601221559"
+        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202601221954"
         data-stork-index="https://pythonscouts.com/search-index.st">
     </script>
 

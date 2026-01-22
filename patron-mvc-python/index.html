@@ -50,8 +50,8 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://pythonscouts.com/patron-mvc-python/">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202601221559">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202601221559">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202601221954">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202601221954">
     <!-- Preconnect to CDNs -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
@@ -64,9 +64,9 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202601221559">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202601221954">
     <!-- Stork Search - Deferred -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202601221559">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202601221954">
 
 
     <!-- Article tags -->
@@ -108,13 +108,13 @@
     <meta name="twitter:image:alt" content="Patrones de diseño en Python: Modelo-Vista-Controlador (MVC)">
 
     <!-- Custom CSS for article -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202601221559">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202601221954">
 </head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
 <script
-    src="https://pythonscouts.com/theme/js/analytics.js?v=202601221559"
+    src="https://pythonscouts.com/theme/js/analytics.js?v=202601221954"
     defer
     data-analytics-id="G-R3C5PFSQ1S">
 </script>
@@ -367,7 +367,6 @@ En muchas implementaciones de MVC, especialmente en aplicaciones web, las accion
     <span class="k">def</span> <span class="nf">get_greeting</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">choice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">greetings</span><span class="p">)</span>
 </code></pre></div>
-
 <p>La class <code>Model</code> maneja una serie de saludos almacenados en el atributo <code>.greetings</code>. El método <code>.get_greeting()</code> permite seleccionar un saludo aleatorio empleando la función <code>choice()</code> del módulo <code>random</code>.</p>
 <p>Este modelo funciona independientemente de la vista que emplees. Para esto, cuenta con sus propios datos y los métodos necesarios para manipular adecuadamente estos datos.</p>
 <h3 id="la-vista">La vista</h3>
@@ -388,7 +387,6 @@ En muchas implementaciones de MVC, especialmente en aplicaciones web, las accion
     <span class="k">def</span> <span class="nf">show_greeting</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">greeting</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">greetings_label</span><span class="p">[</span><span class="s2">&quot;text&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">greeting</span>
 </code></pre></div>
-
 <p>En la vista <code>Window</code> solo incluyes código <code>Tkinter</code>. La vista debe ser autosuficiente, es decir, debe tener todos los métodos necesarios para actualizarse. En este caso, solo necesitas el método <code>.show_greeting()</code>.</p>
 <h3 id="el-controlador">El controlador</h3>
 <p>El controlador permite conectar la vista y el modelo. Es el único que debe tener conocimiento del resto de los componentes, vista y modelo. El controlador debe encargarse de guiar y gestionar las operaciones de acceso, modificación y actualización del modelo y de la vista.</p>
@@ -412,7 +410,6 @@ En muchas implementaciones de MVC, especialmente en aplicaciones web, las accion
 <span class="n">controller</span> <span class="o">=</span> <span class="n">Controller</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">Model</span><span class="p">(),</span> <span class="n">view</span><span class="o">=</span><span class="n">Window</span><span class="p">())</span>
 <span class="n">controller</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </code></pre></div>
-
 <p>En este archivo, defines una clase llamada <code>Controller</code>. En el método <code>.__init__()</code>, tomas como argumentos el modelo y la vista a emplear. Luego creas atributos para almacenar estos elementos y finalmente, conectas el botón Saludar de la vista con el método <code>._greet()</code> del controlador.</p>
 <p>El método <code>._greet()</code> es lo que se conoce como un callback. Este método se ejecuta cuando haces click en el botón <em>Saludar</em>. En este método, primeramente accedes al modelo con el fin de obtener el saludo usando el método <code>.get_greeting()</code>. Luego, le indicas a la vista que muestre el saludo llamando el método <code>.show_greeting()</code>.</p>
 <p>Fíjate que el controlador usa los métodos del modelo o de la vista en función de la tarea a realizar. El controlador no debe implemente lógica de negocio o manipule directamente los datos del modelo. Su papel es coordinar las interacciones entre la vista y el modelo.</p>
@@ -420,7 +417,6 @@ En muchas implementaciones de MVC, especialmente en aplicaciones web, las accion
 <p>Una vez definido el controlador, viene el código cliente donde creas una instancia del controlador y llamas el método <code>.run()</code> para ejecutar la aplicación. Para probar cómo funciona tu aplicación, ejecuta el siguiente comando en una ventana del terminal. Asegúrate de estar en el directorio que contiene el archivo <code>app.py</code> de tu aplicación:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>python<span class="w"> </span>app.py
 </code></pre></div>
-
 <p>Al presionar <em>Enter</em>, verás en pantalla una ventana similar a la siguiente:</p>
 <p><img src="../images/articles/patron-mvc-python/mvc-demo-python-tkinter.png" class="mx-auto d-block mt-2" alt="MVC demo app with Tkinter and Python"></p>
 <div class="text-center mb-5 lead"><em>MVC demo app with Tkinter and Python</em></div>
@@ -531,12 +527,12 @@ En muchas implementaciones de MVC, especialmente en aplicaciones web, las accion
     <!-- JS Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
     <!-- Stork and site scripts -->
-    <script src="https://pythonscouts.com/theme/js/stork.js?v=202601221559" defer></script>
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202601221954" defer></script>
     <script
-        src="https://pythonscouts.com/theme/js/site.js?v=202601221559"
+        src="https://pythonscouts.com/theme/js/site.js?v=202601221954"
         defer
         data-stork-name="sitesearch"
-        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202601221559"
+        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202601221954"
         data-stork-index="https://pythonscouts.com/search-index.st">
     </script>
 

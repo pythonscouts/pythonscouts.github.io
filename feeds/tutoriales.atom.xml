@@ -43,11 +43,10 @@
 &lt;p&gt;La forma recomendada de instalar Kivy es usar un &lt;a href="/entorno-virtual-python/"&gt;entorno virtual&lt;/a&gt; y luego instalar el framework desde &lt;a href="https://pypi.org/project/Kivy/"&gt;PyPI&lt;/a&gt;. Los comandos necesarios pueden variar un poco según tu sistema operativo.&lt;/p&gt;
 &lt;h3 id="en-windows"&gt;En Windows&lt;/h3&gt;
 &lt;p&gt;En Windows, puedes crear el entorno virtual e instalar Kivy ejecutando los comandos siguientes:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;venv&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;venv&lt;/span&gt;
-&lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;venv&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Scripts&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Activate&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ps1&lt;/span&gt;
-&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;venv&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;pip&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;kivy[base]&amp;quot;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;PS&amp;gt; python -m venv venv
+PS&amp;gt; venv\Scripts\Activate.ps1
+(venv) PS&amp;gt; python -m pip install &amp;quot;kivy[base]&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Con estos comandos, primero creas y activas un entorno virtual de Python y luego instalas Kivy desde PyPI. Opcionalmente, puedes instalar los ejemplos de Kivy con el paquete &lt;code&gt;kivy_examples&lt;/code&gt;.&lt;/p&gt;
 &lt;h3 id="en-linux-y-macos"&gt;En Linux y macOS&lt;/h3&gt;
 &lt;p&gt;En Linux y macOS el proceso es similar y puedes realizarlo con los siguientes comandos:&lt;/p&gt;
@@ -55,7 +54,6 @@
 &lt;span class="gp"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;source&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;venv/bin/activate
 &lt;span class="gp gp-VirtualEnv"&gt;(venv)&lt;/span&gt; &lt;span class="gp"&gt;$ &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;kivy[base]&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Kivy también ofrece las variantes &lt;code&gt;kivy[base,media]&lt;/code&gt; o &lt;code&gt;kivy[full]&lt;/code&gt; para incluir más opciones y funcionalidades, como, por ejemplo, el manejo de audio y video. Si estás comenzando, &lt;code&gt;kivy[base]&lt;/code&gt; suele ser suficiente.&lt;/p&gt;
 &lt;h2 id="creando-una-aplicacion-kivy"&gt;Creando una aplicación Kivy&lt;/h2&gt;
 &lt;p&gt;Una aplicación mínima en Kivy generalmente requiere que sigas los pasos siguientes:&lt;/p&gt;
@@ -74,13 +72,11 @@
 
 &lt;span class="n"&gt;HelloApp&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, importas &lt;code&gt;App&lt;/code&gt; como la clase base de tu aplicación. También importas &lt;code&gt;Label&lt;/code&gt; para mostrar texto en pantalla. Luego defines &lt;code&gt;HelloApp&lt;/code&gt; heredando de &lt;code&gt;App&lt;/code&gt; e implementas &lt;code&gt;.build()&lt;/code&gt; para construir la interfaz. El widget que devuelves en este método será la raíz del árbol de widgets de Kivy. En este ejemplo, usas el &lt;code&gt;Label&lt;/code&gt; con el texto &lt;code&gt;Hola, Mundo!&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Por último, creas la instancia de &lt;code&gt;HelloApp&lt;/code&gt; y llamas al método &lt;code&gt;.run()&lt;/code&gt;. Con esto, Kivy inicia la aplicación y su bucle principal de eventos, abre la ventana y renderiza el &lt;code&gt;Label&lt;/code&gt; que devolviste en &lt;code&gt;.build()&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Puedes ejecutar la aplicación con el comando siguiente:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;hello.py
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Una vez que ejecutas este comando, verás en pantalla una ventana que luce como la siguiente:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/iniciando-con-kivy-python/kivy-demo-app.png" class="mx-auto d-block mt-2" style="max-width: 800px; width: 100%; height: auto;" alt="Aplicación 'Hola, Mundo!' con Kivy y Python"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Aplicación "Hola, Mundo!" con Kivy y Python&lt;/em&gt;&lt;/div&gt;
@@ -110,7 +106,6 @@
 
 &lt;span class="n"&gt;ButtonsApp&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, la clase &lt;code&gt;ButtonsApp&lt;/code&gt; crea una ventana que muestra varios botones en una columna. En &lt;code&gt;.build()&lt;/code&gt;, primero configuras la ventana con un título y un tamaño apropiado. Luego, creas un &lt;code&gt;BoxLayout&lt;/code&gt; vertical con &lt;code&gt;padding&lt;/code&gt; y &lt;code&gt;spacing&lt;/code&gt; para garantizar margen interno y separación entre los botones.&lt;/p&gt;
 &lt;p&gt;El &lt;a href="/ciclos-for-python/"&gt;ciclo &lt;code&gt;for&lt;/code&gt;&lt;/a&gt; recorre la lista de botones y los crea para luego añadirlos al layout con &lt;code&gt;.add_widget()&lt;/code&gt;. Al final, &lt;code&gt;.build()&lt;/code&gt; devuelve el layout como widget raíz.&lt;/p&gt;
 &lt;p&gt;Cuando corres la aplicación, obtienes una ventana como la siguiente:&lt;/p&gt;
@@ -140,7 +135,6 @@
 
 &lt;span class="n"&gt;TextInputApp&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Este ejemplo muestra cómo usar &lt;code&gt;TextInput&lt;/code&gt; para crear campos de texto. En el ciclo &lt;code&gt;for&lt;/code&gt;, creas tres instancias de &lt;code&gt;TextInput&lt;/code&gt; y las agregas al &lt;code&gt;BoxLayout&lt;/code&gt;, de modo que cada campo aparezca apilado en la ventana. La propiedad &lt;code&gt;hint_text&lt;/code&gt; actúa como texto de ayuda (placeholder) y le indica al usuario qué debe escribir en cada campo.&lt;/p&gt;
 &lt;p&gt;Además, al establecer &lt;code&gt;multiline=False&lt;/code&gt;, le dices a &lt;code&gt;TextInput&lt;/code&gt; que actúe como un campo de una sola línea.&lt;/p&gt;
 &lt;p&gt;A continuación se muestra cómo luce tu aplicación:&lt;/p&gt;
@@ -189,7 +183,6 @@
 
 &lt;span class="n"&gt;CheckBoxApp&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, creas una lista de opciones con casillas de verificación usando objetos &lt;code&gt;CheckBox&lt;/code&gt;. Creas un &lt;code&gt;BoxLayout&lt;/code&gt; vertical para la aplicación y, para cada opción, construyes una fila horizontal (&lt;code&gt;row&lt;/code&gt;) en la que insertas un checkbox. Al fijar &lt;code&gt;size_hint_x=None&lt;/code&gt; y un &lt;code&gt;width&lt;/code&gt; concreto, aseguras que todas las casillas tengan el mismo ancho y queden alineadas de forma consistente, una por fila, justo a la izquierda del texto.&lt;/p&gt;
 &lt;p&gt;Luego añades un &lt;code&gt;Label&lt;/code&gt; con el texto de la opción y lo ajustas al tamaño real del contenido para que el texto quede pegado al checkbox sin ocupar el resto de la fila.&lt;/p&gt;
 &lt;p&gt;Finalmente, agregas cada fila al layout principal, lo que produce una columna de filas, cada una con su checkbox y su descripción al lado.&lt;/p&gt;
@@ -227,7 +220,6 @@
 
 &lt;span class="n"&gt;SliderApp&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, organizas la UI en un &lt;code&gt;BoxLayout&lt;/code&gt; vertical, con un &lt;code&gt;Label&lt;/code&gt; arriba y un &lt;code&gt;Slider&lt;/code&gt; abajo. Creas el &lt;code&gt;Slider&lt;/code&gt; con &lt;code&gt;min=0&lt;/code&gt;, &lt;code&gt;max=100&lt;/code&gt; y &lt;code&gt;value=0&lt;/code&gt;, que son los parámetros típicos para definir el rango y el valor inicial de este widget.&lt;/p&gt;
 &lt;p&gt;Luego, conectas el &lt;code&gt;Slider&lt;/code&gt; con el &lt;code&gt;Label&lt;/code&gt; mediante la función &lt;code&gt;on_value()&lt;/code&gt;, que recibe el nuevo valor del control y actualiza el texto del label según los cambios. Al hacer &lt;code&gt;slider.bind(value=on_value)&lt;/code&gt;, le dices a Kivy que ejecute esa función cada vez que cambie la propiedad &lt;code&gt;.value&lt;/code&gt; del &lt;code&gt;Slider&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Ejecuta la app y obtendrás una ventana como la siguiente:&lt;/p&gt;
@@ -264,7 +256,6 @@
 
 &lt;span class="n"&gt;SpinnerApp&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, creas una lista desplegable usando &lt;code&gt;Spinner&lt;/code&gt;. La lista muestra un texto inicial: &lt;code&gt;Framework GUI favorito&lt;/code&gt;. Luego, añades una colección (tupla) de opciones entre las cuales el usuario podrá seleccionar una a la vez.&lt;/p&gt;
 &lt;p&gt;Si ejecutas esta aplicación, obtendrás una ventana como la siguiente:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/iniciando-con-kivy-python/kivy-lista-desplegable.png" class="mx-auto d-block mt-2" alt="Lista desplegable en Kivy"&gt;&lt;/p&gt;
@@ -294,7 +285,6 @@
 
 &lt;span class="n"&gt;BoxLayoutApp&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;La orientación horizontal es la orientación por defecto del &lt;code&gt;BoxLayout&lt;/code&gt;, así que puedes obtener el mismo resultado si omites el argumento &lt;code&gt;orientation&lt;/code&gt; al crear la instancia de &lt;code&gt;BoxLayout&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;En un &lt;code&gt;BoxLayout&lt;/code&gt;, el &lt;code&gt;padding&lt;/code&gt; controla el margen interno del layout, es decir, el espacio entre el borde del contenedor y sus widgets hijos. En cambio, el &lt;code&gt;spacing&lt;/code&gt; controla el espacio entre los widgets hijos. En este ejemplo, sería el espacio (en píxeles) que dejas entre un botón y el siguiente, ya sea en una columna (vertical) o en una fila (horizontal).&lt;/p&gt;
 &lt;p&gt;Así es como luce esta aplicación:&lt;/p&gt;
@@ -321,7 +311,6 @@
 
 &lt;span class="n"&gt;BoxLayoutApp&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Al ejecutar esta app, obtienes una ventana como la siguiente:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/iniciando-con-kivy-python/kivy-layout-vertical.png" class="mx-auto d-block mt-2" alt="Disposición vertical de widgets en Kivy"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Disposición vertical de widgets en Kivy&lt;/em&gt;&lt;/div&gt;
@@ -348,7 +337,6 @@
 
 &lt;span class="n"&gt;GridLayoutApp&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, creas una app que organiza botones en una cuadrícula de dos columnas usando un &lt;code&gt;GridLayout&lt;/code&gt;. Con &lt;code&gt;cols=2&lt;/code&gt; estableces cuántas columnas tendrá la cuadrícula.&lt;/p&gt;
 &lt;p&gt;Luego, en el ciclo &lt;code&gt;for&lt;/code&gt;, creas seis botones y los vas añadiendo con &lt;code&gt;.add_widget()&lt;/code&gt;. Kivy no coloca widgets en una fila o columna especificada, sino que asigna la posición automáticamente según el orden (&lt;code&gt;index&lt;/code&gt;) en que agregas los widgets.&lt;/p&gt;
 &lt;p&gt;Si ejecutas la aplicación, obtendrás una ventana como la siguiente:&lt;/p&gt;
@@ -387,7 +375,6 @@
 
 &lt;span class="n"&gt;FloatLayoutApp&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Aquí, creas una app con un &lt;code&gt;FloatLayout&lt;/code&gt; que te permite posicionar y dimensionar sus widgets hijos a partir de sus propiedades &lt;code&gt;size_hint&lt;/code&gt; y &lt;code&gt;pos_hint&lt;/code&gt;. El &lt;code&gt;button1&lt;/code&gt; ocupará el 50% del ancho y el 20% del alto del contenedor, lo cual logras con &lt;code&gt;size_hint&lt;/code&gt;. Con &lt;code&gt;pos_hint&lt;/code&gt;, lo anclas al centro del layout.&lt;/p&gt;
 &lt;p&gt;El &lt;code&gt;button2&lt;/code&gt; muestra otra forma común de ubicar elementos en &lt;code&gt;FloatLayout&lt;/code&gt;. En este caso, usas &lt;code&gt;pos_hint={"right": 1, "y": 0}&lt;/code&gt; para indicar que el borde derecho del botón debe coincidir con el borde derecho del contenedor (&lt;code&gt;right=1&lt;/code&gt;) y que su posición vertical esté pegada al borde inferior (&lt;code&gt;y=0&lt;/code&gt;). Además, &lt;code&gt;size_hint&lt;/code&gt; lo hace ocupar el 30% de ancho y el 10% de alto del layout.&lt;/p&gt;
 &lt;p&gt;Tu aplicación debe lucir como la siguiente:&lt;/p&gt;
@@ -432,7 +419,6 @@
 
 &lt;span class="n"&gt;ButtonsCallbacksApp&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, creas una app que muestra un &lt;code&gt;Label&lt;/code&gt; con el texto &lt;code&gt;"Presionaste: ..."&lt;/code&gt;. Este label mostrará el resultado de la interacción con los botones.&lt;/p&gt;
 &lt;p&gt;Luego, creas una función llamada &lt;code&gt;on_press()&lt;/code&gt; que actualizará el texto del label según el botón que presiones. En el bucle, creas tres botones y los enlazas con &lt;code&gt;on_press()&lt;/code&gt; mediante &lt;code&gt;.bind()&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Al ejecutar la app, obtendrás lo siguiente:&lt;/p&gt;
@@ -471,7 +457,6 @@
 
 &lt;span class="n"&gt;BindPropertiesApp&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, creas una app con un &lt;code&gt;TextInput&lt;/code&gt; y un &lt;code&gt;Label&lt;/code&gt;. El &lt;code&gt;TextInput&lt;/code&gt; funciona como campo de entrada, mientras que el &lt;code&gt;Label&lt;/code&gt; sirve como salida para mostrar lo que el usuario va escribiendo.&lt;/p&gt;
 &lt;p&gt;La clave está en la función &lt;code&gt;on_text()&lt;/code&gt;. Como aquí enlazas una &lt;strong&gt;propiedad&lt;/strong&gt; (&lt;code&gt;.text&lt;/code&gt;), Kivy llama al callback con dos argumentos: la instancia del widget que cambió (&lt;code&gt;instance&lt;/code&gt;) y el nuevo valor de la propiedad (&lt;code&gt;value&lt;/code&gt;). En consecuencia, cada vez que el usuario modifica el contenido del &lt;code&gt;TextInput&lt;/code&gt;, el callback actualiza el texto del &lt;code&gt;Label&lt;/code&gt; con &lt;code&gt;display.text = ...&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Al ejecutar la app, obtendrás lo siguiente:&lt;/p&gt;
@@ -487,7 +472,6 @@
 ├── main.py
 └── contador.kv
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;El archivo &lt;code&gt;main.py&lt;/code&gt; define la aplicación y el widget raíz con la lógica de la aplicación:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.app&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;App&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.core.window&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Window&lt;/span&gt;
@@ -509,26 +493,24 @@
 
 &lt;span class="n"&gt;ContadorApp&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Este código no define elementos gráficos para la UI de tu aplicación. Puedes hacer este trabajo en &lt;code&gt;contador.kv&lt;/code&gt;. Para este ejemplo, añadirás un label y un botón:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;RootWidget&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;:&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;orientation&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;vertical&amp;quot;&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;padding&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;20&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;spacing&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;10&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;RootWidget&amp;gt;:
+    orientation: &amp;quot;vertical&amp;quot;
+    padding: 20
+    spacing: 10
 
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nt"&gt;text&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Clics: &amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;str&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;root&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;count&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
-&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nt"&gt;font_size&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;24sp&amp;quot;&lt;/span&gt;
+    Label:
+        text: &amp;quot;Clics: &amp;quot; + str(root.count)
+        font_size: &amp;quot;24sp&amp;quot;
 
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;Button&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nt"&gt;text&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Incrementar&amp;quot;&lt;/span&gt;
-&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nt"&gt;size_hint&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;1&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;None&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
-&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nt"&gt;height&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;48&lt;/span&gt;
-&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nt"&gt;on_press&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;root&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;increment&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;
+    Button:
+        text: &amp;quot;Incrementar&amp;quot;
+        size_hint: (1, None)
+        height: 48
+        on_press: root.increment()
 
-&lt;span class="nt"&gt;RootWidget&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+RootWidget:
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Con este código en su lugar, la aplicación lucirá como se muestra a continuación:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/iniciando-con-kivy-python/kivy-kv-language.png" class="mx-auto d-block mt-2" alt="KV language en Kivy"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;KV language en Kivy&lt;/em&gt;&lt;/div&gt;
@@ -593,7 +575,6 @@
 PS&amp;gt; venv\Scripts\activate.bat
 (venv) PS&amp;gt; python -m pip install pyside6
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Con estos comandos, primero creas y activas un entorno virtual Python y luego instalas PySide6 desde PyPI.&lt;/p&gt;
 &lt;h3 id="en-linux-y-macos"&gt;En Linux y macOS&lt;/h3&gt;
 &lt;p&gt;En Linux y macOS el proceso es el mismo y puedes realizarlo con los siguientes comandos:&lt;/p&gt;
@@ -601,7 +582,6 @@ PS&amp;gt; venv\Scripts\activate.bat
 &lt;span class="gp"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;source&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;venv/bin/activate
 &lt;span class="gp gp-VirtualEnv"&gt;(venv)&lt;/span&gt; &lt;span class="gp"&gt;$ &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;pyside6
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Nuevamente, primero creas un entorno virtual usando el módulo &lt;code&gt;venv&lt;/code&gt; de la biblioteca estándar de Python. Luego lo activas, y finalmente instalas PySide6.&lt;/p&gt;
 &lt;h2 id="creando-una-aplicacion-pyside6"&gt;Creando una aplicación PySide6&lt;/h2&gt;
 &lt;p&gt;Con PySide6 instalado, estás listo para crear tu primera aplicación GUI. Para comenzar, crearás una aplicación de &lt;code&gt;Hola, Mundo!&lt;/code&gt;. Aquí están los pasos a seguir:&lt;/p&gt;
@@ -615,14 +595,12 @@ PS&amp;gt; venv\Scripts\activate.bat
 &lt;p&gt;Crea un nuevo archivo Python llamado &lt;code&gt;app.py&lt;/code&gt; en tu directorio de trabajo actual:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En esta línea de código, importas &lt;code&gt;QApplication&lt;/code&gt;, &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QLabel.html"&gt;&lt;code&gt;QLabel&lt;/code&gt;&lt;/a&gt;, y &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QWidget.html"&gt;&lt;code&gt;QWidget&lt;/code&gt;&lt;/a&gt; desde &lt;code&gt;QtWidgets&lt;/code&gt;. Con esto, has cumplido con el primer paso.&lt;/p&gt;
 &lt;p&gt;Para completar el segundo paso, necesitas crear una instancia de &lt;code&gt;QApplication&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;
 
 &lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;([])&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En esta línea de código, creas la instancia de &lt;code&gt;QApplication&lt;/code&gt;. Es necesario crear esta instancia antes de crear cualquier objeto GUI en PySide6.&lt;/p&gt;
 &lt;p&gt;El tercer paso consiste en crear la GUI o ventana principal de la aplicación. Para este ejemplo, la GUI se basará en la clase &lt;code&gt;QWidget&lt;/code&gt;, que es la clase base de todos los objetos de interfaz de usuario en PySide6.&lt;/p&gt;
 &lt;p&gt;Así es como puedes crear la GUI de la app:&lt;/p&gt;
@@ -636,7 +614,6 @@ PS&amp;gt; venv\Scripts\activate.bat
 &lt;span class="n"&gt;hello&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;lt;h1&amp;gt;Hola, Mundo!&amp;lt;/h1&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;parent&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;hello&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;move&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;60&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este código, &lt;code&gt;window&lt;/code&gt; es una instancia de &lt;code&gt;QWidget&lt;/code&gt;, la cual proporciona todas las características que necesitarás para crear la ventana de la aplicación.&lt;/p&gt;
 &lt;p&gt;Como su nombre sugiere, el método &lt;code&gt;.setWindowTitle()&lt;/code&gt; te permite establecer el título de la ventana en tu aplicación. En este ejemplo, la ventana de la app mostrará &lt;code&gt;PySide6 Demo&lt;/code&gt; en su barra de título.&lt;/p&gt;
 &lt;p&gt;Puedes usar &lt;code&gt;.setGeometry()&lt;/code&gt; para definir el tamaño de la ventana y la posición en la pantalla. Los dos primeros argumentos son las coordenadas de pantalla &lt;code&gt;x&lt;/code&gt; y &lt;code&gt;y&lt;/code&gt; donde se colocará la ventana. El tercer y cuarto argumentos son el ancho y alto de la ventana.&lt;/p&gt;
@@ -656,12 +633,10 @@ PS&amp;gt; venv\Scripts\activate.bat
 &lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En las dos últimas líneas, llamas el método &lt;code&gt;.show()&lt;/code&gt; en &lt;code&gt;window&lt;/code&gt; para mostrar la ventana en la pantalla. Luego, inicias el bucle de eventos de la aplicación ejecutando &lt;code&gt;.exec()&lt;/code&gt; y ya está.&lt;/p&gt;
 &lt;p&gt;Puedes ejecutar tu primera aplicación PySide6 con el siguiente comando:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;app.py
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Al ejecutar este comando, verás una ventana que lucirá como la siguiente:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/iniciando-con-pyside6-python/pyside6-demo-app.png" class="mx-auto d-block mt-2" alt="Aplicación 'Hola, Mundo!' con PySide6 y Python"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Aplicación "Hola, Mundo!" con PySide6 y Python&lt;/em&gt;&lt;/div&gt;
@@ -696,7 +671,6 @@ PS&amp;gt; venv\Scripts\activate.bat
 &lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, primero añades la clase &lt;code&gt;QPushButton&lt;/code&gt; a tus objetos importados. El bucle &lt;code&gt;for&lt;/code&gt; itera sobre una lista de nombres de botones comunes y crea un botón con cada uno de los nombres definidos. Así es como se verá tu aplicación al ejecutarla desde tu terminal:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/iniciando-con-pyside6-python/pyside6-botones.png" class="mx-auto d-block mt-2" alt="Botones en PySide6"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Botones en PySide6&lt;/em&gt;&lt;/div&gt;
@@ -732,7 +706,6 @@ En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; 
 &lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En el bucle de este ejemplo, creas tres campos de texto para permitir que el usuario introduzca su nombre, usuario y contraseña:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/iniciando-con-pyside6-python/pyside6-campos-de-texto.png" class="mx-auto d-block mt-2" alt="Campos de texto en PySide6"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Campos de texto en PySide6&lt;/em&gt;&lt;/div&gt;
@@ -763,7 +736,6 @@ En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; 
 &lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, creas &lt;code&gt;combo&lt;/code&gt; como una instancia de &lt;code&gt;QComboBox&lt;/code&gt;. Esta instancia contendrá una lista desplegable con una serie de nombres de bibliotecas Python para desarrollo de aplicaciones GUI. Cuando ejecutas esta aplicación desde tu línea de comandos, obtienes una ventana como la siguiente:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/iniciando-con-pyside6-python/pyside6-lista-desplegable.png" class="mx-auto d-block mt-2" alt="Lista desplegable en PySide6"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Lista desplegable en PySide6&lt;/em&gt;&lt;/div&gt;
@@ -796,7 +768,6 @@ En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; 
 &lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, creas una aplicación que muestra un texto descriptivo, &lt;code&gt;"¿Qué prefieres?"&lt;/code&gt;, seguido de una serie de botones radiales, que representan opciones entre las que el usuario puede elegir. En este caso, las opciones son "Pizza", "Hamburguesa", "Pasta" y "Pollo asado". Para crear los botones, empleas un ciclo &lt;code&gt;for&lt;/code&gt; que itera sobre la lista de comidas.&lt;/p&gt;
 &lt;p&gt;Al hacer clic en uno de los botones, este se activa y los demás se desactivan automáticamente. Esto los hace ideales para preguntas de selección única, como preferencias o respuestas a encuestas:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/iniciando-con-pyside6-python/pyside6-botones-radiales.png" class="mx-auto d-block mt-2" alt="Botones radiales en PySide6"&gt;&lt;/p&gt;
@@ -840,7 +811,6 @@ En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; 
 &lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, creas una instancia de &lt;code&gt;QHBoxLayout&lt;/code&gt; llamada &lt;code&gt;layout&lt;/code&gt;. Luego agregas los tres botones en un ciclo usando el método &lt;code&gt;.addWidget()&lt;/code&gt;. La aplicación resultante luce como se muestra a continuación:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/iniciando-con-pyside6-python/pyside6-gestor-disposicion-horizontal.png" class="mx-auto d-block mt-2" alt="Gestor de disposición horizontal en PySide6"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Gestor de disposición horizontal en PySide6&lt;/em&gt;&lt;/div&gt;
@@ -872,7 +842,6 @@ En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; 
 &lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, creas una instancia de &lt;code&gt;QVBoxLayout&lt;/code&gt; llamada &lt;code&gt;layout&lt;/code&gt;. En el ciclo &lt;code&gt;for&lt;/code&gt;, añades tres botones a &lt;code&gt;layout&lt;/code&gt; empleando &lt;code&gt;.addWidget()&lt;/code&gt;. Cuando ejecutas esta aplicación de ejemplo, obtienes una ventana que se ve como la siguiente:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/iniciando-con-pyside6-python/pyside6-gestor-disposicion-vertical.png" class="mx-auto d-block mt-2" alt="Gestor de disposición vertical en PySide6"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Gestor de disposición vertical en PySide6&lt;/em&gt;&lt;/div&gt;
@@ -920,7 +889,6 @@ En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; 
 &lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, creas una aplicación que utiliza un objeto &lt;code&gt;QGridLayout&lt;/code&gt; para organizar sus widgets en la pantalla. Nuevamente, para añadir los botones, empleas un ciclo &lt;code&gt;for&lt;/code&gt; y el método &lt;code&gt;.addWidget()&lt;/code&gt;. Nota que el segundo y tercer argumento que pasas al métodos son números enteros que definen la posición de cada widget en la cuadrícula.&lt;/p&gt;
 &lt;p&gt;Finalmente, pasas dos argumentos más a &lt;code&gt;.addWidget()&lt;/code&gt;. Estos argumentos son &lt;code&gt;rowSpan&lt;/code&gt; y &lt;code&gt;columnSpan&lt;/code&gt; los cuales sirven para hacer que un widget ocupe más de una fila o columna. En este ejemplo, el último botón ocupa una fila y dos columnas.&lt;/p&gt;
 &lt;p&gt;Si ejecutas este código desde tu línea de comandos, obtendrás una ventana que luce así:&lt;/p&gt;
@@ -953,7 +921,6 @@ En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; 
 &lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;&lt;code&gt;QFormLayout&lt;/code&gt; tiene un método llamado &lt;code&gt;.addRow()&lt;/code&gt; que puedes usar para agregar una fila de dos widgets al formulario. El primer argumento de &lt;code&gt;.addRow()&lt;/code&gt; debe ser una etiqueta o una cadena. El segundo argumento puede ser cualquier widget que permita al usuario ingresar o editar datos. En este ejemplo específico, has usado campos de entrada de texto, &lt;code&gt;QLineEdit&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Si ejecutas este código, obtendrás una ventana similar a la siguiente:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/iniciando-con-pyside6-python/pyside6-gestor-disposicion-formulario.png" class="mx-auto d-block mt-2" alt="Gestor de disposición para formulario en PySide6"&gt;&lt;/p&gt;
@@ -1046,7 +1013,6 @@ En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; 
     &lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
     &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Primeramente, creas una clase llamada &lt;code&gt;Window&lt;/code&gt; que hereda de &lt;code&gt;QMainWindow&lt;/code&gt;. Dentro del método &lt;code&gt;.__init__()&lt;/code&gt;, llamas al inicializador de la clase base. El argumento &lt;code&gt;parent&lt;/code&gt; se establece en &lt;code&gt;None&lt;/code&gt; porque esta es la ventana principal de tu aplicación, por lo que no debe tener una ventana padre.&lt;/p&gt;
 &lt;p&gt;Luego, estableces el título de la ventana y creas un objeto &lt;code&gt;QLabel&lt;/code&gt; para usar como widget central de la ventana. Finalmente, llamas los métodos no públicos &lt;code&gt;._createMenu()&lt;/code&gt;, &lt;code&gt;._createToolBar()&lt;/code&gt;, &lt;code&gt;._createStatusBar()&lt;/code&gt; para crear el menú principal, una barra de herramientas y la barra de estado.&lt;/p&gt;
 &lt;p&gt;El widget central y la barra de estado muestran mensajes identificativos. El menú y la barra de herramientas mostrarán una opcion para salir de la aplicación.&lt;/p&gt;
@@ -1107,7 +1073,6 @@ En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; 
 &lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, usas la clase &lt;code&gt;QDialog&lt;/code&gt; como la base para crear una ventana de diálogo. Para definir el diseño del diálogo, usas un &lt;code&gt;QVBoxLayout&lt;/code&gt; y un &lt;code&gt;QFormLayout&lt;/code&gt;. Con ellos, estableces el diseño principal que consiste en un formulario para entrada de datos y dos botones para aceptar o cancelar la entrada de datos.&lt;/p&gt;
 &lt;p&gt;Empleas la clase &lt;code&gt;QDialogButtonBox&lt;/code&gt; para gestionar los botones estándar del diálogo &lt;em&gt;OK&lt;/em&gt; y &lt;em&gt;Cancel&lt;/em&gt;. Este widget es muy útil porque gestiona automáticamente las interacciones comunes de los botones como cerrar el cuadro de diálogo o confirmar acciones.&lt;/p&gt;
 &lt;p&gt;El código anterior mostrará una ventana que se verá así:&lt;/p&gt;
@@ -1195,7 +1160,6 @@ En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; 
 
 &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En esta aplicación, lo primero que haces es mostrar un mensaje empleando &lt;code&gt;QMessageBox.information()&lt;/code&gt;. Luego, empleas &lt;code&gt;QFileDialog.getOpenFileName()&lt;/code&gt; para generar un diálogo que te permite abrir un archivo seleccionado. Seguidamente, creas diálogos para seleccionar un color y una fuente. Finalmente, creas un diálogo que le da al usuario la posibilidad de introducir un número entero de manera rápida.&lt;/p&gt;
 &lt;p&gt;Los cuadros de mensaje y los diálogos estándar son herramientas esenciales para cualquier aplicación PySide6 que requiera interacción con el usuario.&lt;/p&gt;
 &lt;h2 id="conclusion"&gt;Conclusión&lt;/h2&gt;
@@ -1262,7 +1226,6 @@ En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; 
 &lt;p&gt;En sistemas Linux basados en Debian, como Ubuntu, puede que al instalar Python desde los repositorios oficiales de la distribución, Tkinter no venga en el paquete. En estos casos, puedes instalar Tkinter usando el siguiente comando:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;python3-tk
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Este comando descargará e instalará Tkinter en tu sistema. Es decir, Tkinter estará disponible en la instalación global de Python.&lt;/p&gt;
 &lt;h2 id="creando-una-aplicacion-tkinter"&gt;Creando una aplicación Tkinter&lt;/h2&gt;
 &lt;p&gt;Con Tkinter disponible, estás listo para crear tu primera aplicación GUI. Para comenzar, crearás una aplicación &lt;a href="https://pythonscouts.com/python-hola-mundo/"&gt;&lt;code&gt;"Hola, mundo!"&lt;/code&gt;&lt;/a&gt;. Aquí están los pasos a seguir:&lt;/p&gt;
@@ -1275,14 +1238,12 @@ En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; 
 &lt;p&gt;Crea un nuevo archivo Python llamado &lt;code&gt;app.py&lt;/code&gt; en tu directorio de trabajo actual y escribe el siguiente código:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En esta línea de código, importas el módulo &lt;code&gt;tkinter&lt;/code&gt; y lo renombras como &lt;code&gt;tk&lt;/code&gt; para facilitar su uso. Con esto, has cumplido con el primer paso.&lt;/p&gt;
 &lt;p&gt;Para completar el segundo paso, necesitas crear una instancia de &lt;code&gt;Tk&lt;/code&gt;, la cual usualmente llamarás &lt;code&gt;root&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
 
 &lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Tk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En esta línea de código, creas la instancia de &lt;code&gt;Tk&lt;/code&gt;. Esto inicializa la aplicación y prepara el entorno para comenzar a añadir widgets a la GUI de tu aplicación.&lt;/p&gt;
 &lt;p&gt;El tercer paso consiste en crear la ventana principal de la aplicación con los elementos gráficos deseados. Para este ejemplo, la GUI se basará en un widget &lt;code&gt;Label&lt;/code&gt; que mostrará el mensaje &lt;code&gt;"Hola, mundo!"&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Así es como puedes crear la GUI de la aplicación:&lt;/p&gt;
@@ -1295,7 +1256,6 @@ En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; 
 &lt;span class="n"&gt;hello&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Label&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Hola, mundo!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;font&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Arial&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;24&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;span class="n"&gt;hello&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pack&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pady&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este código, el método &lt;code&gt;.title()&lt;/code&gt; te permite establecer el título de la ventana de tu aplicación. En este ejemplo, la ventana de la aplicación mostrará &lt;code&gt;Tkinter Demo&lt;/code&gt; en su barra de título.&lt;/p&gt;
 &lt;p&gt;Puedes usar el método &lt;code&gt;.geometry()&lt;/code&gt; para definir el tamaño de la ventana. El argumento es una cadena que especifica el ancho y alto de la ventana en píxeles.&lt;/p&gt;
 &lt;p&gt;Cada aplicación GUI necesita widgets. Estos son los componentes gráficos que conforman la GUI de la aplicación. En este ejemplo, usas un widget &lt;code&gt;Label&lt;/code&gt; llamado &lt;code&gt;hello&lt;/code&gt; que te permitirá mostrar el mensaje &lt;code&gt;"Hola, mundo!"&lt;/code&gt; en la ventana de tu aplicación.&lt;/p&gt;
@@ -1312,11 +1272,9 @@ En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; 
 
 &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainloop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En la última línea, inicias el bucle de eventos de la aplicación ejecutando el método &lt;code&gt;.mainloop()&lt;/code&gt;. Eso es todo. Ahora puedes ejecutar tu primera aplicación Tkinter con el siguiente comando:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;app.py
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Al ejecutar este comando, verás una ventana que lucirá como la siguiente:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/iniciando-con-tkinter-python/tkinter-demo-app.png" class="mx-auto d-block mt-2" alt="Aplicación 'Hola, Mundo!' con Tkinter y Python"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Aplicación 'Hola, Mundo!' con Tkinter y Python&lt;/em&gt;&lt;/div&gt;
@@ -1341,7 +1299,6 @@ En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; 
 
 &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainloop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, creas botones en un bucle &lt;code&gt;for&lt;/code&gt; que itera sobre una lista de nombres de botones comunes y crea un botón con cada uno de los nombres definidos. Así es como se verá tu aplicación al ejecutarla desde tu terminal:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/iniciando-con-tkinter-python/tkinter-botones.png" class="mx-auto d-block mt-2" alt="Botones en Tkinter"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Botones en Tkinter&lt;/em&gt;&lt;/div&gt;
@@ -1364,7 +1321,6 @@ En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; 
 
 &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainloop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En el bucle de este ejemplo, creas tres campos de entrada de texto para permitir que el usuario introduzca su nombre, usuario y contraseña.&lt;/p&gt;
 &lt;p&gt;La captura a continuación muestra cómo debe lucir tu aplicación:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/iniciando-con-tkinter-python/tkinter-campos-de-texto.png" class="mx-auto d-block mt-2" alt="Campos de entrada de texto en Tkinter"&gt;&lt;/p&gt;
@@ -1396,7 +1352,6 @@ En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; 
 
 &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainloop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, creas &lt;code&gt;combobox&lt;/code&gt; como una instancia de &lt;code&gt;Combobox&lt;/code&gt;. Esta instancia contendrá una lista desplegable con una serie de nombres de bibliotecas Python para desarrollo de aplicaciones GUI. Cuando ejecutas esta aplicación desde tu línea de comandos, obtienes una ventana como la siguiente:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/iniciando-con-tkinter-python/tkinter-lista-desplegable.png" class="mx-auto d-block mt-2" alt="Lista desplegable en Tkinter"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Lista desplegable en Tkinter&lt;/em&gt;&lt;/div&gt;
@@ -1429,7 +1384,6 @@ En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; 
 
 &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainloop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, creas una aplicación que muestra un texto descriptivo, &lt;code&gt;"¿Qué prefieres?"&lt;/code&gt;, seguido de una serie de botones radiales, que representan alternativas entre las que el usuario puede elegir. En este caso, las alternativas son &lt;code&gt;"Pizza"&lt;/code&gt;, &lt;code&gt;"Hamburguesa"&lt;/code&gt;, &lt;code&gt;"Pasta"&lt;/code&gt; y &lt;code&gt;"Pollo asado"&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Para crear los botones, empleas un ciclo &lt;code&gt;for&lt;/code&gt; que itera sobre la lista de comidas. Por defecto, el primer botón (&lt;code&gt;foods[0]&lt;/code&gt;) de la lista estará seleccionado.&lt;/p&gt;
 &lt;p&gt;Al hacer clic en uno de los botones, este se activa y los demás se desactivan automáticamente. Este comportamiento los hace ideales para preguntas de selección única, como preferencias o respuestas a encuestas:&lt;/p&gt;
@@ -1465,7 +1419,6 @@ En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; 
 
 &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainloop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, el método &lt;code&gt;.pack()&lt;/code&gt; coloca los botones uno debajo del otro en la ventana de la aplicación, rellenando horizontalmente el espacio disponible con el argumento &lt;code&gt;fill&lt;/code&gt; y añadiendo algo de espacio a ambos lados con &lt;code&gt;padx&lt;/code&gt; y &lt;code&gt;pady&lt;/code&gt;:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/iniciando-con-tkinter-python/tkinter-gestor-de-geometria-pack-vertical.png" class="mx-auto d-block mt-2" alt="Disposición vertical por empaquetado con .pack() en Tkinter"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Disposición vertical por empaquetado con &lt;code&gt;.pack()&lt;/code&gt; en Tkinter&lt;/em&gt;&lt;/div&gt;
@@ -1485,7 +1438,6 @@ En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; 
 
 &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainloop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, asignas &lt;code&gt;"left"&lt;/code&gt; al argumento &lt;code&gt;side&lt;/code&gt; del método &lt;code&gt;.pack()&lt;/code&gt; para alinear los botones horizontalmente y la ventana de tu aplicación lucirá como se muestra a continuación:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/iniciando-con-tkinter-python/tkinter-gestor-de-geometria-pack-horizontal.png" class="mx-auto d-block mt-2" alt="Disposición horizontal por empaquetado con .pack() en Tkinter"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Disposición horizontal por empaquetado con &lt;code&gt;.pack()&lt;/code&gt; en Tkinter&lt;/em&gt;&lt;/div&gt;
@@ -1509,7 +1461,6 @@ En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; 
 
 &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainloop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, los botones se colocan en una cuadrícula de 2x2, lo que permite un control preciso sobre la disposición de los widgets:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/iniciando-con-tkinter-python/tkinter-gestor-de-geometria-grid.png" class="mx-auto d-block mt-2" alt="Disposición en cuadrícula con .grid() en Tkinter"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Disposición en cuadrícula con &lt;code&gt;.grid()&lt;/code&gt; en Tkinter&lt;/em&gt;&lt;/div&gt;
@@ -1530,7 +1481,6 @@ En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; 
 
 &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainloop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, los botones se colocan en posiciones absolutas dentro de la ventana, lo que permite un control preciso sobre su disposición:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/iniciando-con-tkinter-python/tkinter-gestor-de-geometria-place.png" class="mx-auto d-block mt-2" alt="Disposición por posición con .place() en Tkinter"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Disposición por posición con &lt;code&gt;.place()&lt;/code&gt; en Tkinter&lt;/em&gt;&lt;/div&gt;
@@ -1564,7 +1514,6 @@ En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; 
 
 &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainloop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, creas un menú con una opción para salir de la aplicación. Un &lt;code&gt;Label&lt;/code&gt; actúa como el widget central de la ventana. Cuando ejecutas esta aplicación, obtendrás una ventana que luce como la siguiente:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/iniciando-con-tkinter-python/tkinter-ventana-principal.png" class="mx-auto d-block mt-2" alt="Ventana principal en Tkinter"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Ventana principal en Tkinter&lt;/em&gt;&lt;/div&gt;
@@ -1630,7 +1579,6 @@ En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; 
 
 &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainloop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, cuando haces clic en el botón &lt;em&gt;Mostrar Mensaje&lt;/em&gt; aparece un cuadro de diálogo informativo con un mensaje para el usuario.&lt;/p&gt;
 &lt;h3 id="dialogos-integrados"&gt;Diálogos integrados&lt;/h3&gt;
 &lt;p&gt;También es común que tus aplicaciones tengan diálogos para realizar acciones secundarias que dependen de la entrada del usuario. Tkinter también ofrece diálogos integrados para abrir y guardar archivos, seleccionar colores, entre otros.&lt;/p&gt;
@@ -1669,7 +1617,6 @@ En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; 
 
 &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainloop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, un botón abre un cuadro de diálogo para seleccionar un archivo. Si se selecciona un archivo, se muestra un cuadro de mensaje con la ruta del archivo elegido.&lt;/p&gt;
 &lt;p&gt;Es importante que sepas que la función &lt;code&gt;.askopenfilename()&lt;/code&gt; no abre el archivo, solo devuelve la ruta del archivo seleccionado. Para manipular el archivo, debes abrirlo explícitamente con Python, usando la función integrada &lt;code&gt;open()&lt;/code&gt; u otra herramienta similar.&lt;/p&gt;
 &lt;h2 id="conclusion"&gt;Conclusión&lt;/h2&gt;
@@ -1735,7 +1682,6 @@ En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; 
 PS&amp;gt; venv\Scripts\activate.bat
 (venv) PS&amp;gt; python -m pip install pyqt6
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Con estos comandos, primero creas y activas un entorno virtual Python y luego instalas PyQt dese PyPI.&lt;/p&gt;
 &lt;h3 id="en-linux-y-macos"&gt;En Linux y macOS&lt;/h3&gt;
 &lt;p&gt;En Linux y macOS el proceso es el mismo y puedes realizarlo con los siguientes comandos:&lt;/p&gt;
@@ -1743,7 +1689,6 @@ PS&amp;gt; venv\Scripts\activate.bat
 &lt;span class="gp"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;source&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;venv/bin/activate
 &lt;span class="gp gp-VirtualEnv"&gt;(venv)&lt;/span&gt; &lt;span class="gp"&gt;$ &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;pyqt6
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Nuevamente, primero creas un entorno virtual usando el módulo &lt;code&gt;venv&lt;/code&gt; de la biblioteca estándar de Python. Luego lo activas, y finalmente instalas PyQt.&lt;/p&gt;
 &lt;h2 id="creando-una-aplicacion-pyqt"&gt;Creando una aplicación PyQt&lt;/h2&gt;
 &lt;p&gt;Con PyQt instalado, estás listo para crear tu primera aplicación GUI. Para comenzar, crearás una aplicación de &lt;code&gt;Hola, Mundo!&lt;/code&gt;. Aquí están los pasos a seguir:&lt;/p&gt;
@@ -1757,14 +1702,12 @@ PS&amp;gt; venv\Scripts\activate.bat
 &lt;p&gt;Crea un nuevo archivo Python llamado &lt;code&gt;app.py&lt;/code&gt; en tu directorio de trabajo actual:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En esta línea de código, importas &lt;code&gt;QApplication&lt;/code&gt;, &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qlabel.html"&gt;&lt;code&gt;QLabel&lt;/code&gt;&lt;/a&gt;, y &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qwidget.html"&gt;&lt;code&gt;QWidget&lt;/code&gt;&lt;/a&gt; desde &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qtwidgets-module.html"&gt;&lt;code&gt;QtWidgets&lt;/code&gt;&lt;/a&gt;. Con esto, has cumplido con el primer paso.&lt;/p&gt;
 &lt;p&gt;Para completar el segundo paso, necesitas crear una instancia de &lt;code&gt;QApplication&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;
 
 &lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;([])&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En esta línea de código, creas la instancia de &lt;code&gt;QApplication&lt;/code&gt;. Es necesario crear esta instancia antes de crear cualquier objeto GUI en PyQt.&lt;/p&gt;
 &lt;p&gt;El tercer paso consiste en crear la GUI o ventana principal de la aplicación. Para este ejemplo, la GUI se basará en la clase &lt;code&gt;QWidget&lt;/code&gt;, que es la clase base de todos los objetos de interfaz de usuario en PyQt.&lt;/p&gt;
 &lt;p&gt;Así es como puedes crear la GUI de la app:&lt;/p&gt;
@@ -1778,7 +1721,6 @@ PS&amp;gt; venv\Scripts\activate.bat
 &lt;span class="n"&gt;hello&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;lt;h1&amp;gt;Hola, Mundo!&amp;lt;/h1&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;parent&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;hello&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;move&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;60&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este código, &lt;code&gt;window&lt;/code&gt; es una instancia de &lt;code&gt;QWidget&lt;/code&gt;, la cual proporciona todas las características que necesitarás para crear la ventana de la aplicación.&lt;/p&gt;
 &lt;p&gt;Como su nombre sugiere, el método &lt;code&gt;.setWindowTitle()&lt;/code&gt; te permite establecer el título de la ventana en tu aplicación. En este ejemplo, la ventana de la app mostrará &lt;code&gt;PyQt Demo&lt;/code&gt; en su barra de título.&lt;/p&gt;
 &lt;p&gt;Puedes usar &lt;code&gt;.setGeometry()&lt;/code&gt; para definir el tamaño de la ventana y la posición en la pantalla. Los dos primeros argumentos son las coordenadas de pantalla &lt;code&gt;x&lt;/code&gt; y &lt;code&gt;y&lt;/code&gt; donde se colocará la ventana. El tercer y cuarto argumentos son el ancho y alto de la ventana.&lt;/p&gt;
@@ -1798,12 +1740,10 @@ PS&amp;gt; venv\Scripts\activate.bat
 &lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En las dos últimas líneas, llamas el método &lt;code&gt;.show()&lt;/code&gt; en &lt;code&gt;window&lt;/code&gt; para mostrar la ventana en la pantalla. Luego, inicias el bucle de eventos de la aplicación ejecutando &lt;code&gt;.exec()&lt;/code&gt; y ya está.&lt;/p&gt;
 &lt;p&gt;Puedes ejecutar tu primera aplicación PyQt con el siguiente comando:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;app.py
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Al ejecutar este comando, verás una ventana que lucirá como la siguiente:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/iniciando-con-pyqt-python/pyqt-demo-app.png" class="mx-auto d-block mt-2" alt="Aplicación 'Hola, Mundo!' con PyQt y Python"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Aplicación "Hola, Mundo!" con PyQt y Python&lt;/em&gt;&lt;/div&gt;
@@ -1838,7 +1778,6 @@ PS&amp;gt; venv\Scripts\activate.bat
 &lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, primero añades la clase &lt;code&gt;QPushButton&lt;/code&gt; a tus objetos importados. El bucle &lt;code&gt;for&lt;/code&gt; itera sobre una lista de nombres de botones comunes y crea un botón con cada uno de los nombres definidos. Así es como se verá tu aplicación al ejecutarla desde tu terminal:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/iniciando-con-pyqt-python/pyqt-botones.png" class="mx-auto d-block mt-2" alt="Botones en PyQt"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Botones en PyQt&lt;/em&gt;&lt;/div&gt;
@@ -1874,7 +1813,6 @@ PS&amp;gt; venv\Scripts\activate.bat
 &lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En el bucle de este ejemplo, creas tres campos de texto para permitir que el usuario introduzca su nombre, usuario y contraseña:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/iniciando-con-pyqt-python/pyqt-campos-de-texto.png" class="mx-auto d-block mt-2" alt="Campos de texto en PyQt"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Campos de texto en PyQt&lt;/em&gt;&lt;/div&gt;
@@ -1907,7 +1845,6 @@ PS&amp;gt; venv\Scripts\activate.bat
 &lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, creas &lt;code&gt;combo&lt;/code&gt; como una instancia de &lt;code&gt;QComboBox&lt;/code&gt;. Esta instancia contendrá una lista desplegable con una serie de nombres de bibliotecas Python para desarrollo de aplicaciones GUI. Cuando ejecutas esta aplicación desde tu línea de comandos, obtienes una ventana como la siguiente:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/iniciando-con-pyqt-python/pyqt-lista-desplegable.png" class="mx-auto d-block mt-2" alt="Lista desplegable en PyQt"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Lista desplegable en PyQt&lt;/em&gt;&lt;/div&gt;
@@ -1940,7 +1877,6 @@ PS&amp;gt; venv\Scripts\activate.bat
 &lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, creas una aplicación que muestra un texto descriptivo, &lt;code&gt;"¿Qué prefieres?"&lt;/code&gt;, seguido de una serie de botones radiales, que representan opciones entre las que el usuario puede elegir. En este caso, las opciones son "Pizza", "Hamburguesa", "Pasta" y "Pollo asado". Para crear los botones, empleas un ciclo &lt;code&gt;for&lt;/code&gt; que itera sobre la lista de comidas.&lt;/p&gt;
 &lt;p&gt;Al hacer clic en uno de los botones, este se activa y los demás se desactivan automáticamente. Esto los hace ideales para preguntas de selección única, como preferencias o respuestas a encuestas:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/iniciando-con-pyqt-python/pyqt-botones-radiales.png" class="mx-auto d-block mt-2" alt="Botones radiales en PyQt"&gt;&lt;/p&gt;
@@ -1984,7 +1920,6 @@ PS&amp;gt; venv\Scripts\activate.bat
 &lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, creas una instancia de &lt;code&gt;QHBoxLayout&lt;/code&gt; llamada &lt;code&gt;layout&lt;/code&gt;. Luego agregas los tres botones en un ciclo usando el método &lt;code&gt;.addWidget()&lt;/code&gt;. La aplicación resultante luce como se muestra a continuación:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/iniciando-con-pyqt-python/pyqt-gestor-disposicion-horizontal.png" class="mx-auto d-block mt-2" alt="Gestor de disposición horizontal en PyQt"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Gestor de disposición horizontal en PyQt&lt;/em&gt;&lt;/div&gt;
@@ -2016,7 +1951,6 @@ PS&amp;gt; venv\Scripts\activate.bat
 &lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, creas una instancia de &lt;code&gt;QVBoxLayout&lt;/code&gt; llamada &lt;code&gt;layout&lt;/code&gt;. En el ciclo &lt;code&gt;for&lt;/code&gt;, añades tres botones a &lt;code&gt;layout&lt;/code&gt; empleando &lt;code&gt;.addWidget()&lt;/code&gt;. Cuando ejecutas esta aplicación de ejemplo, obtienes una ventana que se ve como la siguiente:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/iniciando-con-pyqt-python/pyqt-gestor-disposicion-vertical.png" class="mx-auto d-block mt-2" alt="Gestor de disposición vertical en PyQt"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Gestor de disposición vertical en PyQt&lt;/em&gt;&lt;/div&gt;
@@ -2064,7 +1998,6 @@ PS&amp;gt; venv\Scripts\activate.bat
 &lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, creas una aplicación que utiliza un objeto &lt;code&gt;QGridLayout&lt;/code&gt; para organizar sus widgets en la pantalla. Nuevamente, para añadir los botones, empleas un ciclo &lt;code&gt;for&lt;/code&gt; y el método &lt;code&gt;.addWidget()&lt;/code&gt;. Nota que el segundo y tercer argumento que pasas al métodos son números enteros que definen la posición de cada widget en la cuadrícula.&lt;/p&gt;
 &lt;p&gt;Finalmente, pasas dos argumentos más a &lt;code&gt;.addWidget()&lt;/code&gt;. Estos argumentos son &lt;code&gt;rowSpan&lt;/code&gt; y &lt;code&gt;columnSpan&lt;/code&gt; los cuales sirven para hacer que un widget ocupe más de una fila o columna. En este ejemplo, el último botón ocupa una fila y dos columnas.&lt;/p&gt;
 &lt;p&gt;Si ejecutas este código desde tu línea de comandos, obtendrás una ventana que luce así:&lt;/p&gt;
@@ -2097,7 +2030,6 @@ PS&amp;gt; venv\Scripts\activate.bat
 &lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;&lt;code&gt;QFormLayout&lt;/code&gt; tiene un método llamado &lt;code&gt;.addRow()&lt;/code&gt; que puedes usar para agregar una fila de dos widgets al formulario. El primer argumento de &lt;code&gt;.addRow()&lt;/code&gt; debe ser una etiqueta o una cadena. El segundo argumento puede ser cualquier widget que permita al usuario ingresar o editar datos. En este ejemplo específico, has usado campos de entrada de texto, &lt;code&gt;QLineEdit&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Si ejecutas este código, obtendrás una ventana similar a la siguiente:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/iniciando-con-pyqt-python/pyqt-gestor-disposicion-formulario.png" class="mx-auto d-block mt-2" alt="Gestor de disposición para formulario en PyQt"&gt;&lt;/p&gt;
@@ -2190,7 +2122,6 @@ PS&amp;gt; venv\Scripts\activate.bat
     &lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
     &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Primeramente, creas una clase llamada &lt;code&gt;Window&lt;/code&gt; que hereda de &lt;code&gt;QMainWindow&lt;/code&gt;. Dentro del método &lt;code&gt;.__init__()&lt;/code&gt;, llamas al inicializador de la clase base. El argumento &lt;code&gt;parent&lt;/code&gt; se establece en &lt;code&gt;None&lt;/code&gt; porque esta es la ventana principal de tu aplicación, por lo que no debe tener una ventana padre.&lt;/p&gt;
 &lt;p&gt;Luego, estableces el título de la ventana y creas un objeto &lt;code&gt;QLabel&lt;/code&gt; para usar como widget central de la ventana. Finalmente, llamas los métodos no públicos &lt;code&gt;._createMenu()&lt;/code&gt;, &lt;code&gt;._createToolBar()&lt;/code&gt;, &lt;code&gt;._createStatusBar()&lt;/code&gt; para crear el menú principal, una barra de herramientas y la barra de estado.&lt;/p&gt;
 &lt;p&gt;El widget central y la barra de estado muestran mensajes identificativos. El menú y la barra de herramientas mostrarán una opción para salir de la aplicación.&lt;/p&gt;
@@ -2251,7 +2182,6 @@ PS&amp;gt; venv\Scripts\activate.bat
 &lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En este ejemplo, usas la clase &lt;code&gt;QDialog&lt;/code&gt; como la base para crear una ventana de diálogo. Para definir el diseño del diálogo, usas un &lt;code&gt;QVBoxLayout&lt;/code&gt; y un &lt;code&gt;QFormLayout&lt;/code&gt;. Con ellos, estableces el diseño principal que consiste en un formulario para entrada de datos y dos botones para aceptar o cancelar la entrada de datos.&lt;/p&gt;
 &lt;p&gt;Empleas la clase &lt;code&gt;QDialogButtonBox&lt;/code&gt; para gestionar los botones estándar del diálogo &lt;em&gt;OK&lt;/em&gt; y &lt;em&gt;Cancel&lt;/em&gt;. Este widget es muy útil porque gestiona automáticamente las interacciones comunes de los botones como cerrar el cuadro de diálogo o confirmar acciones.&lt;/p&gt;
 &lt;p&gt;El código anterior mostrará una ventana que se verá así:&lt;/p&gt;
@@ -2339,7 +2269,6 @@ PS&amp;gt; venv\Scripts\activate.bat
 
 &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;En esta aplicación, lo primero que haces es mostrar un mensaje empleando &lt;code&gt;QMessageBox.information()&lt;/code&gt;. Luego, empleas &lt;code&gt;QFileDialog.getOpenFileName()&lt;/code&gt; para generar un diálogo que te permite abrir un archivo seleccionado. Seguidamente, creas diálogos para seleccionar un color y una fuente. Finalmente, creas un diálogo que le da al usuario la posibilidad de introducir un número entero de manera rápida.&lt;/p&gt;
 &lt;p&gt;Los cuadros de mensaje y los diálogos estándar son herramientas esenciales para cualquier aplicación PyQt que requiera interacción con el usuario.&lt;/p&gt;
 &lt;h2 id="conclusion"&gt;Conclusión&lt;/h2&gt;

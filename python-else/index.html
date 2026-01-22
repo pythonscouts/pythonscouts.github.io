@@ -51,8 +51,8 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://pythonscouts.com/python-else/">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202601221559">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202601221559">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202601221954">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202601221954">
     <!-- Preconnect to CDNs -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
@@ -65,9 +65,9 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202601221559">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202601221954">
     <!-- Stork Search - Deferred -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202601221559">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202601221954">
 
 
     <!-- Article tags -->
@@ -110,13 +110,13 @@
     <meta name="twitter:image:alt" content="Palabras clave en Python: else">
 
     <!-- Custom CSS for article -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202601221559">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202601221954">
 </head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
 <script
-    src="https://pythonscouts.com/theme/js/analytics.js?v=202601221559"
+    src="https://pythonscouts.com/theme/js/analytics.js?v=202601221954"
     defer
     data-analytics-id="G-R3C5PFSQ1S">
 </script>
@@ -280,14 +280,12 @@
 <span class="k">else</span><span class="p">:</span>
     <span class="c1"># Bloque que se ejecuta si la condición es falsa</span>
 </code></pre></div>
-
 <p>Y en un <a href="/ciclos-for-python/">bucle <code>for</code></a>, se usa así:</p>
 <div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">iterable</span><span class="p">:</span>
     <span class="c1"># Código para cada item</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="c1"># Código si el bucle completa sin interrupciones</span>
 </code></pre></div>
-
 <p>En la práctica, no deberías emplear <code>else</code> en ciclos que no contienen una sentencia <a href="/python-break/"><code>break</code></a>.</p>
 <p>También puedes usar <code>else</code> junto con bloques <code>try</code> para ejecutar código solo si no ocurre ninguna excepción:</p>
 <div class="highlight"><pre><span></span><code><span class="k">try</span><span class="p">:</span>
@@ -297,7 +295,6 @@
 <span class="k">else</span><span class="p">:</span>
     <span class="c1"># Código que se ejecuta si no ocurre ninguna excepción</span>
 </code></pre></div>
-
 <h2 id="ejemplos-practicos">Ejemplos prácticos</h2>
 <p>Aquí tienes algunos ejemplos que muestran cómo se usa <code>else</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
@@ -309,7 +306,6 @@
 <span class="o">...</span>
 <span class="n">x</span> <span class="n">no</span> <span class="n">es</span> <span class="n">mayor</span> <span class="n">que</span> <span class="mi">5</span>
 </code></pre></div>
-
 <p>En este ejemplo, como <code>x</code> es menor que <code>5</code>, el bloque de código dentro del <code>if</code> no se ejecuta. En su lugar, se ejecuta el código dentro de <code>else</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
 <span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
@@ -320,7 +316,6 @@
 <span class="mi">2</span>
 <span class="n">Bucle</span> <span class="n">completado</span> <span class="n">sin</span> <span class="n">interrupciones</span>
 </code></pre></div>
-
 <p>En el ejemplo anterior, el ciclo se completa sin interrupciones, por lo que el bloque <code>else</code> se ejecuta.</p>
 <p>Ahora considera lo que ocurre si usas <code>break</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
@@ -334,7 +329,6 @@
 <span class="mi">1</span>
 <span class="err">¡</span><span class="n">Se</span> <span class="n">encontró</span> <span class="n">el</span> <span class="mi">2</span><span class="err">!</span>
 </code></pre></div>
-
 <p>En este caso, el bucle se interrumpe con <code>break</code> y el bloque <code>else</code> no se ejecuta.</p>
 <h2 id="uso-de-else">Uso de <code>else</code></h2>
 <p>Los casos de uso más comunes de la palabra clave <code>else</code> incluyen los siguientes:</p>
@@ -423,12 +417,12 @@
     <!-- JS Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
     <!-- Stork and site scripts -->
-    <script src="https://pythonscouts.com/theme/js/stork.js?v=202601221559" defer></script>
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202601221954" defer></script>
     <script
-        src="https://pythonscouts.com/theme/js/site.js?v=202601221559"
+        src="https://pythonscouts.com/theme/js/site.js?v=202601221954"
         defer
         data-stork-name="sitesearch"
-        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202601221559"
+        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202601221954"
         data-stork-index="https://pythonscouts.com/search-index.st">
     </script>
 
