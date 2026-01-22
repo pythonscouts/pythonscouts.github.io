@@ -1,5 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2026-01-21T13:05:00+01:00</updated><subtitle>Aprende Python en Español.</subtitle><entry><title>Palabras clave en Python: from</title><link href="https://pythonscouts.com/python-from/" rel="alternate"/><published>2026-01-21T13:05:00+01:00</published><updated>2026-01-21T13:05:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2026-01-21:/python-from/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;from&lt;/code&gt; se utiliza principalmente para importar módulos y sus componentes específicos de manera que puedas usarlos directamente en tu código.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Esta &lt;a href="/python-palabras-clave/"&gt;palabra clave&lt;/a&gt; se emplea generalmente en combinación con &lt;a href="/python-import/"&gt;&lt;code&gt;import&lt;/code&gt;&lt;/a&gt; y permite acceder solo a objetos específicos de un módulo sin cargar todo el contenido del módulo.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2026-01-22T16:00:00+01:00</updated><subtitle>Aprende Python en Español.</subtitle><entry><title>Palabras clave en Python: yield</title><link href="https://pythonscouts.com/python-yield/" rel="alternate"/><published>2026-01-22T16:00:00+01:00</published><updated>2026-01-22T16:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2026-01-22:/python-yield/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;yield&lt;/code&gt; se utiliza en una función para convertirla en un generador que produce una secuencia de valores de manera eficiente.&lt;/p&gt;</summary><content type="html">&lt;h2 id="sintaxis"&gt;Sintaxis&lt;/h2&gt;
+&lt;p&gt;La sintaxis para utilizar &lt;code&gt;yield&lt;/code&gt; en una función es la siguiente:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;generator&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;yield&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Solo necesitas incluir la &lt;a href="/python-palabras-clave/"&gt;palabra clave&lt;/a&gt; &lt;code&gt;yield&lt;/code&gt; seguida del &lt;a href="/valores-python/"&gt;valor&lt;/a&gt; que deseas devolver.&lt;/p&gt;
+&lt;p&gt;Los generadores también pueden incluir varios &lt;code&gt;yield&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;gen_numbers&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;yield&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+    &lt;span class="k"&gt;yield&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="k"&gt;yield&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Finalmente, es común usar &lt;code&gt;yield&lt;/code&gt; en un &lt;a href="/ciclos-for-python/"&gt;ciclo &lt;code&gt;for&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;gen_numbers&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;yield&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
+&lt;p&gt;Veamos un ejemplo de cómo se usa la palabra clave &lt;code&gt;yield&lt;/code&gt; en Python:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;counter&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;         &lt;span class="k"&gt;yield&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;         &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;gen&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;counter&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;next&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;gen&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;next&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;gen&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;next&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;gen&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="mi"&gt;2&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;next&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;gen&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;Traceback&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;most&lt;/span&gt; &lt;span class="n"&gt;recent&lt;/span&gt; &lt;span class="n"&gt;call&lt;/span&gt; &lt;span class="n"&gt;last&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="ne"&gt;StopIteration&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este ejemplo, la función &lt;code&gt;counter()&lt;/code&gt; es un generador que utiliza &lt;code&gt;yield&lt;/code&gt; para devolver los valores &lt;code&gt;0&lt;/code&gt;, &lt;code&gt;1&lt;/code&gt; y &lt;code&gt;2&lt;/code&gt;, uno a la vez, cada vez que se llama a &lt;code&gt;next()&lt;/code&gt; en el generador.&lt;/p&gt;
+&lt;p&gt;Si intentas llamar a &lt;code&gt;next(gen)&lt;/code&gt; una vez que el generador ha producido todos sus valores, Python lanzará una excepción &lt;code&gt;StopIteration&lt;/code&gt;. Esta excepción indica que no quedan más elementos por generar y es el comportamiento esperado para finalizar la iteración.&lt;/p&gt;
+&lt;p&gt;En la mayoría de los casos, usarás un ciclo &lt;a href="/python-for/"&gt;&lt;code&gt;for&lt;/code&gt;&lt;/a&gt; para iterar sobre el generador:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;count&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;counter&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este ejemplo, el ciclo for gestiona automáticamente el fin de la iteración cuando ocurre la excepción &lt;code&gt;StopIteration&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="uso-de-yield"&gt;Uso de &lt;code&gt;yield&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Los casos de uso más comunes de la palabra clave &lt;code&gt;yield&lt;/code&gt; incluyen los siguientes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Crear generadores que producen una secuencia de valores donde cada valor se genera bajo demanda, lo cual es útil para manejar grandes cantidades de datos haciendo un uso eficiente de la memoria.&lt;/li&gt;
+&lt;li&gt;Implementar algoritmos que requieren una pausa y reanudación de su estado, como iteradores personalizados.&lt;/li&gt;
+&lt;li&gt;Mejorar la eficiencia de memoria al no requerir que se almacenen todos los valores en la memoria al mismo tiempo.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
+&lt;p&gt;La palabra clave &lt;code&gt;yield&lt;/code&gt; en Python te permite crear generadores para gestionar y procesar grandes cantidades de datos de manera eficiente y con un uso mínimo de memoria.&lt;/p&gt;
+&lt;p&gt;Conocer y emplear &lt;code&gt;yield&lt;/code&gt; te permite escribir código más eficiente y legible, especialmente cuando trabajas con flujos de datos continuos o grandes.&lt;/p&gt;</content><category term="Series"/><category term="python"/><category term="palabras clave"/></entry><entry><title>Palabras clave en Python: from</title><link href="https://pythonscouts.com/python-from/" rel="alternate"/><published>2026-01-21T13:05:00+01:00</published><updated>2026-01-21T13:05:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2026-01-21:/python-from/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;from&lt;/code&gt; se utiliza principalmente para importar módulos y sus componentes específicos de manera que puedas usarlos directamente en tu código.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Esta &lt;a href="/python-palabras-clave/"&gt;palabra clave&lt;/a&gt; se emplea generalmente en combinación con &lt;a href="/python-import/"&gt;&lt;code&gt;import&lt;/code&gt;&lt;/a&gt; y permite acceder solo a objetos específicos de un módulo sin cargar todo el contenido del módulo.&lt;/p&gt;
 &lt;p&gt;Además, &lt;code&gt;from&lt;/code&gt; tiene otros usos en Python:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Con &lt;a href="/python-raise/"&gt;&lt;code&gt;raise&lt;/code&gt;&lt;/a&gt;: Encadena excepciones y preserva el contexto del error original.&lt;/li&gt;
