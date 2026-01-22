@@ -25,7 +25,7 @@
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;wget&lt;span class="w"&gt; &lt;/span&gt;-qO-&lt;span class="w"&gt; &lt;/span&gt;https://astral.sh/uv/install.sh&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;sh
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En Windows, puedes usar el commando:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;PS&amp;gt; powershell -ExecutionPolicy ByPass -c &amp;quot;irm https://astral.sh/uv/install.ps1 | iex&amp;quot;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;powershell&lt;/span&gt; &lt;span class="n"&gt;-ExecutionPolicy&lt;/span&gt; &lt;span class="n"&gt;ByPass&lt;/span&gt; &lt;span class="n"&gt;-c&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;irm https://astral.sh/uv/install.ps1 | iex&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Una vez concluida la instalación, &lt;code&gt;uv&lt;/code&gt; estará disponible en tu sistema. Puedes comprobarla con el comando &lt;code&gt;uv --version&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="gestionar-multiples-versiones-de-python"&gt;Gestionar múltiples versiones de Python&lt;/h2&gt;
@@ -510,8 +510,8 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Inmediatamente después de presionar &lt;em&gt;Enter&lt;/em&gt;, verás en pantalla la frase &lt;code&gt;Hola, Mundo!&lt;/code&gt;. Con eso acabas de ejecutar tu primer script Python! Es muy probable que uses esta forma de ejecutar scripts a menudo en tu ciclo de desarrollo o incluso en tus tareas diarias.&lt;/p&gt;
 &lt;p&gt;En sistemas Windows, además del comando &lt;code&gt;python&lt;/code&gt;, también puedes emplear el lanzador &lt;code&gt;py&lt;/code&gt; desde &lt;a href="https://es.wikipedia.org/wiki/PowerShell"&gt;PowerSell&lt;/a&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;PS&amp;gt; py script.py
-Hola, Mundo!
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="n"&gt;script&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="n"&gt;Hola&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Mundo&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;El lanzador &lt;code&gt;py&lt;/code&gt; está disponible en todas las versiones de Python a partir de 3.3, así que no debes tener problemas para emplearlo.&lt;/p&gt;
 &lt;h2 id="ejecutar-scripts-directamente-como-un-comando"&gt;Ejecutar scripts directamente como un comando&lt;/h2&gt;
@@ -534,8 +534,8 @@ Hola, Mundo!
 &lt;p&gt;Listo! Tu script ahora funciona como si fuese un comando. Si deseas que tu script se parezca aún más a un comando estándar, puedes remover de su nombre la extensión &lt;code&gt;.py&lt;/code&gt;. Adicionalmente, puedes añadir el directorio que contiene tu script en el &lt;a href="https://es.wikipedia.org/wiki/PATH_(inform%C3%A1tica)"&gt;&lt;code&gt;PATH&lt;/code&gt;&lt;/a&gt; de tu sistema y lo tendrás disponible como un comando real desde cualquier directorio de trabajo.&lt;/p&gt;
 &lt;h3 id="en-sistemas-windows"&gt;En sistemas Windows&lt;/h3&gt;
 &lt;p&gt;En sistemas Windows con Python &lt;a href="https://pythonscouts.com/instalar-python-windows/"&gt;instalado&lt;/a&gt;, puedes ejecutar un script directamente desde una ventana de PowerShell abierta en el directorio que contiene el script:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;PS&amp;gt; .\script.py
-Hola, Mundo!
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;.\&lt;/span&gt;&lt;span class="n"&gt;script&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="n"&gt;Hola&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Mundo&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Esta técnica funciona gracias a que Windows automáticamente asocia los archivos &lt;code&gt;.py&lt;/code&gt; y &lt;code&gt;.pyw&lt;/code&gt; con los programas &lt;code&gt;python.exe&lt;/code&gt; y &lt;code&gt;pythonw.exe&lt;/code&gt;, respectivamente.&lt;/p&gt;
 &lt;h2 id="ejecutar-scripts-desde-un-ide-o-editor-de-texto"&gt;Ejecutar scripts desde un IDE o editor de texto&lt;/h2&gt;
@@ -649,8 +649,8 @@ Hola, Mundo!
 &lt;p&gt;Esta ventana es la confirmación de que ha concluido la instalación de Python en tu sistema operativo Windows. Es recomendable que visites el link a la página sobre &lt;a href="https://docs.python.org/es/3.11/using/windows.html"&gt;cómo usar Python en Windows&lt;/a&gt;. Allí encontrarás información valiosa que puede servirte de mucho.&lt;/p&gt;
 &lt;h3 id="paso-3-verificar-la-instalacion-de-python"&gt;Paso 3: Verificar la instalación de Python&lt;/h3&gt;
 &lt;p&gt;Una vez que hayas ejecutado los pasos anteriores, Python estará instalado en tu sistema operativo. Para confirmar que lo tienes, abre una ventana de PowerShell y ejecuta el comando siguiente:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;PS&amp;gt; python --version
-Python 3.11.5
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="n"&gt;-version&lt;/span&gt;
+&lt;span class="n"&gt;Python&lt;/span&gt; &lt;span class="n"&gt;3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;11&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;5&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Este comando imprime la versión de Python que tienes instalada por defecto. Con esto has concluido la instalación de Python usando el instalador oficial para Windows. Ahora estás listo para escribir tu &lt;a href="https://pythonscouts.com/python-hola-mundo/"&gt;primer programa&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="instalar-python-desde-microsoft-store"&gt;Instalar Python desde Microsoft Store&lt;/h2&gt;
@@ -663,8 +663,8 @@ Python 3.11.5
 &lt;li&gt;Has click en el &lt;em&gt;Obtener&lt;/em&gt; (&lt;em&gt;Get&lt;/em&gt;) para descargar e instalar la versión seleccionada.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Una vez ejecutados esto pasos, deberás tener Python instalado en tu sistema operativo. Nuevamente, para confirmar que la instalación fue exitosa, abre tu PowerShell y ejecutar el comando siguiente:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;PS&amp;gt; Python --version
-Python 3.11.5
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt; &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="n"&gt;-version&lt;/span&gt;
+&lt;span class="n"&gt;Python&lt;/span&gt; &lt;span class="n"&gt;3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;11&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;5&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;El instalador de Python disponible en la tienda de aplicaciones Microsoft Store también incluye &lt;a href="https://pip.pypa.io/en/stable/"&gt;&lt;code&gt;pip&lt;/code&gt;&lt;/a&gt;, el gestor de paquetes por defecto de Python. Puedes confirmar que &lt;code&gt;pip&lt;/code&gt; también está instalado ejecutando &lt;code&gt;pip --version&lt;/code&gt; en tu sesión de PowerShell.&lt;/p&gt;
 &lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;

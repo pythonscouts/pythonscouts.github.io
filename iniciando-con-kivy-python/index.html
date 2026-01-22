@@ -52,8 +52,8 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://pythonscouts.com/iniciando-con-kivy-python/">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202601222050">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202601222050">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202601222128">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202601222128">
     <!-- Preconnect to CDNs -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
@@ -66,9 +66,9 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202601222050">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202601222128">
     <!-- Stork Search - Deferred -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202601222050">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202601222128">
 
 
     <!-- Article tags -->
@@ -112,13 +112,13 @@
     <meta name="twitter:image:alt" content="Iniciando con Kivy para desarrollo GUI">
 
     <!-- Custom CSS for article -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202601222050">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202601222128">
 </head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
 <script
-    src="https://pythonscouts.com/theme/js/analytics.js?v=202601222050"
+    src="https://pythonscouts.com/theme/js/analytics.js?v=202601222128"
     defer
     data-analytics-id="G-R3C5PFSQ1S">
 </script>
@@ -316,9 +316,9 @@
 <p>La forma recomendada de instalar Kivy es usar un <a href="/entorno-virtual-python/">entorno virtual</a> y luego instalar el framework desde <a href="https://pypi.org/project/Kivy/">PyPI</a>. Los comandos necesarios pueden variar un poco según tu sistema operativo.</p>
 <h3 id="en-windows">En Windows</h3>
 <p>En Windows, puedes crear el entorno virtual e instalar Kivy ejecutando los comandos siguientes:</p>
-<div class="highlight"><pre><span></span><code>PS&gt; python -m venv venv
-PS&gt; venv\Scripts\Activate.ps1
-(venv) PS&gt; python -m pip install &quot;kivy[base]&quot;
+<div class="highlight"><pre><span></span><code><span class="n">PS</span><span class="p">&gt;</span> <span class="n">python</span> <span class="n">-m</span> <span class="n">venv</span> <span class="n">venv</span>
+<span class="n">PS</span><span class="p">&gt;</span> <span class="n">venv</span><span class="p">\</span><span class="n">Scripts</span><span class="p">\</span><span class="n">Activate</span><span class="p">.</span><span class="n">ps1</span>
+<span class="p">(</span><span class="n">venv</span><span class="p">)</span> <span class="n">PS</span><span class="p">&gt;</span> <span class="n">python</span> <span class="n">-m</span> <span class="n">pip</span> <span class="n">install</span> <span class="s2">&quot;kivy[base]&quot;</span>
 </code></pre></div>
 <p>Con estos comandos, primero creas y activas un entorno virtual de Python y luego instalas Kivy desde PyPI. Opcionalmente, puedes instalar los ejemplos de Kivy con el paquete <code>kivy_examples</code>.</p>
 <h3 id="en-linux-y-macos">En Linux y macOS</h3>
@@ -348,7 +348,7 @@ PS&gt; venv\Scripts\Activate.ps1
 <p>En este ejemplo, importas <code>App</code> como la clase base de tu aplicación. También importas <code>Label</code> para mostrar texto en pantalla. Luego defines <code>HelloApp</code> heredando de <code>App</code> e implementas <code>.build()</code> para construir la interfaz. El widget que devuelves en este método será la raíz del árbol de widgets de Kivy. En este ejemplo, usas el <code>Label</code> con el texto <code>Hola, Mundo!</code>.</p>
 <p>Por último, creas la instancia de <code>HelloApp</code> y llamas al método <code>.run()</code>. Con esto, Kivy inicia la aplicación y su bucle principal de eventos, abre la ventana y renderiza el <code>Label</code> que devolviste en <code>.build()</code>.</p>
 <p>Puedes ejecutar la aplicación con el comando siguiente:</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>python<span class="w"> </span>hello.py
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>python<span class="w"> </span>hello.py
 </code></pre></div>
 <p>Una vez que ejecutas este comando, verás en pantalla una ventana que luce como la siguiente:</p>
 <p><img src="../images/articles/iniciando-con-kivy-python/kivy-demo-app.png" class="mx-auto d-block mt-2" style="max-width: 800px; width: 100%; height: auto;" alt="Aplicación 'Hola, Mundo!' con Kivy y Python"></p>
@@ -874,12 +874,12 @@ RootWidget:
     <!-- JS Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
     <!-- Stork and site scripts -->
-    <script src="https://pythonscouts.com/theme/js/stork.js?v=202601222050" defer></script>
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202601222128" defer></script>
     <script
-        src="https://pythonscouts.com/theme/js/site.js?v=202601222050"
+        src="https://pythonscouts.com/theme/js/site.js?v=202601222128"
         defer
         data-stork-name="sitesearch"
-        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202601222050"
+        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202601222128"
         data-stork-index="https://pythonscouts.com/search-index.st">
     </script>
 

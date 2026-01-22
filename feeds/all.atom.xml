@@ -402,9 +402,9 @@
 &lt;p&gt;La forma recomendada de instalar Kivy es usar un &lt;a href="/entorno-virtual-python/"&gt;entorno virtual&lt;/a&gt; y luego instalar el framework desde &lt;a href="https://pypi.org/project/Kivy/"&gt;PyPI&lt;/a&gt;. Los comandos necesarios pueden variar un poco según tu sistema operativo.&lt;/p&gt;
 &lt;h3 id="en-windows"&gt;En Windows&lt;/h3&gt;
 &lt;p&gt;En Windows, puedes crear el entorno virtual e instalar Kivy ejecutando los comandos siguientes:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;PS&amp;gt; python -m venv venv
-PS&amp;gt; venv\Scripts\Activate.ps1
-(venv) PS&amp;gt; python -m pip install &amp;quot;kivy[base]&amp;quot;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;-m&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt;
+&lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt;&lt;span class="p"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Scripts&lt;/span&gt;&lt;span class="p"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Activate&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ps1&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;venv&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;-m&lt;/span&gt; &lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;kivy[base]&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Con estos comandos, primero creas y activas un entorno virtual de Python y luego instalas Kivy desde PyPI. Opcionalmente, puedes instalar los ejemplos de Kivy con el paquete &lt;code&gt;kivy_examples&lt;/code&gt;.&lt;/p&gt;
 &lt;h3 id="en-linux-y-macos"&gt;En Linux y macOS&lt;/h3&gt;
@@ -434,7 +434,7 @@ PS&amp;gt; venv\Scripts\Activate.ps1
 &lt;p&gt;En este ejemplo, importas &lt;code&gt;App&lt;/code&gt; como la clase base de tu aplicación. También importas &lt;code&gt;Label&lt;/code&gt; para mostrar texto en pantalla. Luego defines &lt;code&gt;HelloApp&lt;/code&gt; heredando de &lt;code&gt;App&lt;/code&gt; e implementas &lt;code&gt;.build()&lt;/code&gt; para construir la interfaz. El widget que devuelves en este método será la raíz del árbol de widgets de Kivy. En este ejemplo, usas el &lt;code&gt;Label&lt;/code&gt; con el texto &lt;code&gt;Hola, Mundo!&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Por último, creas la instancia de &lt;code&gt;HelloApp&lt;/code&gt; y llamas al método &lt;code&gt;.run()&lt;/code&gt;. Con esto, Kivy inicia la aplicación y su bucle principal de eventos, abre la ventana y renderiza el &lt;code&gt;Label&lt;/code&gt; que devolviste en &lt;code&gt;.build()&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Puedes ejecutar la aplicación con el comando siguiente:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;hello.py
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;hello.py
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Una vez que ejecutas este comando, verás en pantalla una ventana que luce como la siguiente:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/iniciando-con-kivy-python/kivy-demo-app.png" class="mx-auto d-block mt-2" style="max-width: 800px; width: 100%; height: auto;" alt="Aplicación 'Hola, Mundo!' con Kivy y Python"&gt;&lt;/p&gt;
@@ -1542,7 +1542,8 @@ RootWidget:
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;kwlist&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;softkwlist&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="mi"&gt;39&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;El módulo &lt;a href="https://docs.python.org/es/3/library/keyword.html#module-keyword"&gt;&lt;code&gt;keyword&lt;/code&gt;&lt;/a&gt; de la &lt;a href="https://docs.python.org/es/3/library/index.html"&gt;biblioteca estándar&lt;/a&gt; exporta las listas &lt;a href="https://docs.python.org/es/3/library/keyword.html#keyword.kwlist"&gt;&lt;code&gt;kwlist&lt;/code&gt;&lt;/a&gt; y &lt;a href="https://docs.python.org/es/3/reference/lexical_analysis.html#soft-keywords"&gt;&lt;code&gt;softkwlist&lt;/code&gt;&lt;/a&gt; que contienen todas las palabras clave de Python. En el código anterior, primeramente importas &lt;code&gt;kwlist&lt;/code&gt; y &lt;code&gt;softkwlist&lt;/code&gt; desde &lt;code&gt;keyword&lt;/code&gt; y luego muestras su contenido. Python 3.13 tiene 39 palabras clave, incluidas las suaves, tal y como resulta de ejecutar &lt;code&gt;len(kwlist + softkwlist)&lt;/code&gt; en la última línea de código del ejemplo.&lt;/p&gt;
+&lt;p&gt;El módulo &lt;a href="https://docs.python.org/es/3/library/keyword.html#module-keyword"&gt;&lt;code&gt;keyword&lt;/code&gt;&lt;/a&gt; de la &lt;a href="https://docs.python.org/es/3/library/index.html"&gt;biblioteca estándar&lt;/a&gt; exporta las listas &lt;a href="https://docs.python.org/es/3/library/keyword.html#keyword.kwlist"&gt;&lt;code&gt;kwlist&lt;/code&gt;&lt;/a&gt; y &lt;a href="https://docs.python.org/es/3/reference/lexical_analysis.html#soft-keywords"&gt;&lt;code&gt;softkwlist&lt;/code&gt;&lt;/a&gt; que contienen todas las palabras clave de Python.&lt;/p&gt;
+&lt;p&gt;En el código anterior, primeramente importas &lt;code&gt;kwlist&lt;/code&gt; y &lt;code&gt;softkwlist&lt;/code&gt; desde &lt;code&gt;keyword&lt;/code&gt; y luego muestras su contenido. Python 3.13 tiene 39 palabras clave, incluidas las suaves, tal y como resulta de ejecutar &lt;code&gt;len(kwlist + softkwlist)&lt;/code&gt; en la última línea de código del ejemplo.&lt;/p&gt;
 &lt;p&gt;Debes tener en cuenta que el número de palabras clave varía en dependencia de la versión de Python que estés usando actualmente.&lt;/p&gt;
 &lt;p&gt;Otra manera de consultar las palabras clave de Python es mediante la función &lt;a href="https://pythonscouts.com/obtener-ayuda-python/#2-el-sistema-interactivo-de-ayuda-help"&gt;&lt;code&gt;help()&lt;/code&gt;&lt;/a&gt;. Se trata de una función incluida (&lt;em&gt;built-in&lt;/em&gt;) que te permite consultar la documentación y obtener ayuda rápida sobre cualquier objeto en Python.&lt;/p&gt;
 &lt;p&gt;Para consultar las palabras clave de Python por esta vía, primeramente ejecuta &lt;code&gt;help()&lt;/code&gt; para entrar al &lt;strong&gt;sistema de ayuda integrado&lt;/strong&gt; de Python. Luego consulta el contenido de la página de palabras clave usando el comando &lt;code&gt;keywords&lt;/code&gt; como en el ejemplo siguiente:&lt;/p&gt;
@@ -2016,7 +2017,11 @@ Related help topics: TRUTHVALUE
         &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;clear&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 
     &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;clear&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Optional&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Any&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_type&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="nb"&gt;isinstance&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_type&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+            &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_type&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
+            &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
+            &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="nb"&gt;isinstance&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_type&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;):&lt;/span&gt;
             &lt;span class="k"&gt;raise&lt;/span&gt; &lt;span class="ne"&gt;TypeError&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Expected type &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_type&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;, got &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
         &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_size&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
             &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_data&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;
@@ -2239,7 +2244,7 @@ Related help topics: TRUTHVALUE
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;wget&lt;span class="w"&gt; &lt;/span&gt;-qO-&lt;span class="w"&gt; &lt;/span&gt;https://astral.sh/uv/install.sh&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;sh
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En Windows, puedes usar el commando:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;PS&amp;gt; powershell -ExecutionPolicy ByPass -c &amp;quot;irm https://astral.sh/uv/install.ps1 | iex&amp;quot;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;powershell&lt;/span&gt; &lt;span class="n"&gt;-ExecutionPolicy&lt;/span&gt; &lt;span class="n"&gt;ByPass&lt;/span&gt; &lt;span class="n"&gt;-c&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;irm https://astral.sh/uv/install.ps1 | iex&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Una vez concluida la instalación, &lt;code&gt;uv&lt;/code&gt; estará disponible en tu sistema. Puedes comprobarla con el comando &lt;code&gt;uv --version&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="gestionar-multiples-versiones-de-python"&gt;Gestionar múltiples versiones de Python&lt;/h2&gt;
@@ -3302,9 +3307,9 @@ Related help topics: TRUTHVALUE
 &lt;p&gt;Para instalar PySide6 en tu computadora, la opción recomendada es instalar desde el índice de paquetes de Python, &lt;a href="https://realpython.com/pypi-publish-python-package/"&gt;PyPI&lt;/a&gt;, usando el comando &lt;code&gt;pip&lt;/code&gt;. Para esto, puedes crear un &lt;a href="https://docs.python.org/es/3.13/glossary.html#term-virtual-environment"&gt;entorno virtual de Python&lt;/a&gt; y luego instalar el paquete &lt;code&gt;pyside6&lt;/code&gt;, ejecuta lo siguiente en tu línea de comandos, dependiendo de tu sistema operativo.&lt;/p&gt;
 &lt;h3 id="en-windows"&gt;En Windows&lt;/h3&gt;
 &lt;p&gt;En Windows, puedes instalar PySide6 ejecutando los comandos:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;PS&amp;gt; python -m venv venv
-PS&amp;gt; venv\Scripts\activate.bat
-(venv) PS&amp;gt; python -m pip install pyside6
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;-m&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt;
+&lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt;&lt;span class="p"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Scripts&lt;/span&gt;&lt;span class="p"&gt;\&lt;/span&gt;&lt;span class="n"&gt;activate&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bat&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;venv&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;-m&lt;/span&gt; &lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;pyside6&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Con estos comandos, primero creas y activas un entorno virtual Python y luego instalas PySide6 desde PyPI.&lt;/p&gt;
 &lt;h3 id="en-linux-y-macos"&gt;En Linux y macOS&lt;/h3&gt;
@@ -4606,9 +4611,9 @@ PS&amp;gt; venv\Scripts\activate.bat
 &lt;p&gt;Para instalar PyQt en tu computadora, la opción recomendada es instalar desde el índice de paquetes de Python, &lt;a href="https://realpython.com/pypi-publish-python-package/"&gt;PyPI&lt;/a&gt;, usando el comando &lt;code&gt;pip&lt;/code&gt;. Para esto, puedes crear un &lt;a href="https://docs.python.org/es/3.13/glossary.html#term-virtual-environment"&gt;entorno virtual de Python&lt;/a&gt; y luego instalar el paquete &lt;code&gt;pyqt6&lt;/code&gt;, ejecuta lo siguiente en tu línea de comandos, dependiendo de tu sistema operativo.&lt;/p&gt;
 &lt;h3 id="en-windows"&gt;En Windows&lt;/h3&gt;
 &lt;p&gt;En Windows, puedes instalar PyQt ejecutando los comandos:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;PS&amp;gt; python -m venv venv
-PS&amp;gt; venv\Scripts\activate.bat
-(venv) PS&amp;gt; python -m pip install pyqt6
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;-m&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt;
+&lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt;&lt;span class="p"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Scripts&lt;/span&gt;&lt;span class="p"&gt;\&lt;/span&gt;&lt;span class="n"&gt;activate&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bat&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;venv&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;-m&lt;/span&gt; &lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;pyqt6&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Con estos comandos, primero creas y activas un entorno virtual Python y luego instalas PyQt dese PyPI.&lt;/p&gt;
 &lt;h3 id="en-linux-y-macos"&gt;En Linux y macOS&lt;/h3&gt;
@@ -6367,8 +6372,8 @@ PS&amp;gt; venv\Scripts\activate.bat
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Inmediatamente después de presionar &lt;em&gt;Enter&lt;/em&gt;, verás en pantalla la frase &lt;code&gt;Hola, Mundo!&lt;/code&gt;. Con eso acabas de ejecutar tu primer script Python! Es muy probable que uses esta forma de ejecutar scripts a menudo en tu ciclo de desarrollo o incluso en tus tareas diarias.&lt;/p&gt;
 &lt;p&gt;En sistemas Windows, además del comando &lt;code&gt;python&lt;/code&gt;, también puedes emplear el lanzador &lt;code&gt;py&lt;/code&gt; desde &lt;a href="https://es.wikipedia.org/wiki/PowerShell"&gt;PowerSell&lt;/a&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;PS&amp;gt; py script.py
-Hola, Mundo!
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="n"&gt;script&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="n"&gt;Hola&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Mundo&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;El lanzador &lt;code&gt;py&lt;/code&gt; está disponible en todas las versiones de Python a partir de 3.3, así que no debes tener problemas para emplearlo.&lt;/p&gt;
 &lt;h2 id="ejecutar-scripts-directamente-como-un-comando"&gt;Ejecutar scripts directamente como un comando&lt;/h2&gt;
@@ -6391,8 +6396,8 @@ Hola, Mundo!
 &lt;p&gt;Listo! Tu script ahora funciona como si fuese un comando. Si deseas que tu script se parezca aún más a un comando estándar, puedes remover de su nombre la extensión &lt;code&gt;.py&lt;/code&gt;. Adicionalmente, puedes añadir el directorio que contiene tu script en el &lt;a href="https://es.wikipedia.org/wiki/PATH_(inform%C3%A1tica)"&gt;&lt;code&gt;PATH&lt;/code&gt;&lt;/a&gt; de tu sistema y lo tendrás disponible como un comando real desde cualquier directorio de trabajo.&lt;/p&gt;
 &lt;h3 id="en-sistemas-windows"&gt;En sistemas Windows&lt;/h3&gt;
 &lt;p&gt;En sistemas Windows con Python &lt;a href="https://pythonscouts.com/instalar-python-windows/"&gt;instalado&lt;/a&gt;, puedes ejecutar un script directamente desde una ventana de PowerShell abierta en el directorio que contiene el script:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;PS&amp;gt; .\script.py
-Hola, Mundo!
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;.\&lt;/span&gt;&lt;span class="n"&gt;script&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="n"&gt;Hola&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Mundo&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Esta técnica funciona gracias a que Windows automáticamente asocia los archivos &lt;code&gt;.py&lt;/code&gt; y &lt;code&gt;.pyw&lt;/code&gt; con los programas &lt;code&gt;python.exe&lt;/code&gt; y &lt;code&gt;pythonw.exe&lt;/code&gt;, respectivamente.&lt;/p&gt;
 &lt;h2 id="ejecutar-scripts-desde-un-ide-o-editor-de-texto"&gt;Ejecutar scripts desde un IDE o editor de texto&lt;/h2&gt;
@@ -6506,8 +6511,8 @@ Hola, Mundo!
 &lt;p&gt;Esta ventana es la confirmación de que ha concluido la instalación de Python en tu sistema operativo Windows. Es recomendable que visites el link a la página sobre &lt;a href="https://docs.python.org/es/3.11/using/windows.html"&gt;cómo usar Python en Windows&lt;/a&gt;. Allí encontrarás información valiosa que puede servirte de mucho.&lt;/p&gt;
 &lt;h3 id="paso-3-verificar-la-instalacion-de-python"&gt;Paso 3: Verificar la instalación de Python&lt;/h3&gt;
 &lt;p&gt;Una vez que hayas ejecutado los pasos anteriores, Python estará instalado en tu sistema operativo. Para confirmar que lo tienes, abre una ventana de PowerShell y ejecuta el comando siguiente:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;PS&amp;gt; python --version
-Python 3.11.5
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="n"&gt;-version&lt;/span&gt;
+&lt;span class="n"&gt;Python&lt;/span&gt; &lt;span class="n"&gt;3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;11&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;5&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Este comando imprime la versión de Python que tienes instalada por defecto. Con esto has concluido la instalación de Python usando el instalador oficial para Windows. Ahora estás listo para escribir tu &lt;a href="https://pythonscouts.com/python-hola-mundo/"&gt;primer programa&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="instalar-python-desde-microsoft-store"&gt;Instalar Python desde Microsoft Store&lt;/h2&gt;
@@ -6520,8 +6525,8 @@ Python 3.11.5
 &lt;li&gt;Has click en el &lt;em&gt;Obtener&lt;/em&gt; (&lt;em&gt;Get&lt;/em&gt;) para descargar e instalar la versión seleccionada.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Una vez ejecutados esto pasos, deberás tener Python instalado en tu sistema operativo. Nuevamente, para confirmar que la instalación fue exitosa, abre tu PowerShell y ejecutar el comando siguiente:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;PS&amp;gt; Python --version
-Python 3.11.5
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt; &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="n"&gt;-version&lt;/span&gt;
+&lt;span class="n"&gt;Python&lt;/span&gt; &lt;span class="n"&gt;3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;11&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;5&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;El instalador de Python disponible en la tienda de aplicaciones Microsoft Store también incluye &lt;a href="https://pip.pypa.io/en/stable/"&gt;&lt;code&gt;pip&lt;/code&gt;&lt;/a&gt;, el gestor de paquetes por defecto de Python. Puedes confirmar que &lt;code&gt;pip&lt;/code&gt; también está instalado ejecutando &lt;code&gt;pip --version&lt;/code&gt; en tu sesión de PowerShell.&lt;/p&gt;
 &lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
