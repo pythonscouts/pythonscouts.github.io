@@ -8,6 +8,11 @@ url = "/acerca/"
 title = "Acerca"
 
 [[input.files]]
+path = "python-not/index.html"
+url = "/python-not/"
+title = "Palabras clave en Python: not"
+
+[[input.files]]
 path = "python-yield/index.html"
 url = "/python-yield/"
 title = "Palabras clave en Python: yield"

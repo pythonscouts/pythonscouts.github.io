@@ -1,5 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2026-01-22T16:00:00+01:00</updated><subtitle>Aprende Python en Español.</subtitle><entry><title>Palabras clave en Python: yield</title><link href="https://pythonscouts.com/python-yield/" rel="alternate"/><published>2026-01-22T16:00:00+01:00</published><updated>2026-01-22T16:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2026-01-22:/python-yield/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;yield&lt;/code&gt; se utiliza en una función para convertirla en un generador que produce una secuencia de valores de manera eficiente.&lt;/p&gt;</summary><content type="html">&lt;h2 id="sintaxis"&gt;Sintaxis&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2026-01-31T12:00:00+01:00</updated><subtitle>Aprende Python en Español.</subtitle><entry><title>Palabras clave en Python: not</title><link href="https://pythonscouts.com/python-not/" rel="alternate"/><published>2026-01-31T12:00:00+01:00</published><updated>2026-01-31T12:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2026-01-31:/python-not/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;not&lt;/code&gt; es un operador lógico que se utiliza para invertir el valor de verdad de una expresión u objeto.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Cuando usas &lt;code&gt;not&lt;/code&gt;, estás diciendo esencialmente "no" al valor de verdad que se evalúa, convirtiendo &lt;code&gt;True&lt;/code&gt; en &lt;code&gt;False&lt;/code&gt; y viceversa.&lt;/p&gt;
+&lt;h2 id="sintaxis"&gt;Sintaxis&lt;/h2&gt;
+&lt;p&gt;La sintaxis para utilizar &lt;code&gt;not&lt;/code&gt; es bastante sencilla:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;expression&lt;/span&gt;
+&lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;obj&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Aquí, &lt;code&gt;expression&lt;/code&gt; es cualquier &lt;a href="/expresiones-python/"&gt;expresión&lt;/a&gt; que retorne un valor booleano o no. Mientras que &lt;code&gt;obj&lt;/code&gt; es cualquier objeto Python.&lt;/p&gt;
+&lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
+&lt;p&gt;Veamos algunos ejemplos de cómo puedes usar &lt;code&gt;not&lt;/code&gt; en Python:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;
+&lt;span class="kc"&gt;False&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
+&lt;span class="kc"&gt;True&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="kc"&gt;False&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
+&lt;span class="kc"&gt;True&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;En estos ejemplos, puedes ver la lógica de funcionamiento del operador. Cuando ejecutas &lt;code&gt;not True&lt;/code&gt;, el resultado es &lt;a href="/python-false/"&gt;&lt;code&gt;False&lt;/code&gt;&lt;/a&gt; y &lt;code&gt;not False&lt;/code&gt; se convierte en &lt;a href="/python-true/"&gt;&lt;code&gt;True&lt;/code&gt;&lt;/a&gt;. También puedes ver cómo se puede aplicar &lt;code&gt;not&lt;/code&gt; a expresiones más complejas como comparaciones.&lt;/p&gt;
+&lt;p&gt;A diferencia de otros operadores lógicos como &lt;a href="/python-and/"&gt;&lt;code&gt;and&lt;/code&gt;&lt;/a&gt; y &lt;a href="/python-or/"&gt;&lt;code&gt;or&lt;/code&gt;&lt;/a&gt;, &lt;code&gt;not&lt;/code&gt; siempre devuelve un valor booleano:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
+&lt;span class="kc"&gt;False&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+&lt;span class="kc"&gt;True&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Cuando empleas &lt;code&gt;not&lt;/code&gt; con objetos o &lt;a href="/valores-python/"&gt;valores&lt;/a&gt;, en lugar de con expresiones booleanas, Python determina el valor de verdad del objeto y lo convierte en el valor opuesto.&lt;/p&gt;
+&lt;p&gt;También puedes combinar &lt;code&gt;not&lt;/code&gt; con &lt;code&gt;and&lt;/code&gt; y &lt;code&gt;or&lt;/code&gt;. Estos operadores son fundamentales para construir &lt;a href="/condicionales-python/"&gt;condiciones&lt;/a&gt; y controlar el flujo de tus programas.&lt;/p&gt;
+&lt;h2 id="uso-de-not"&gt;Uso de &lt;code&gt;not&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Los casos de uso más comunes de la palabra clave &lt;code&gt;not&lt;/code&gt; incluyen los siguientes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Invertir el valor de una expresión booleana en sentencias de control de flujo, como &lt;code&gt;if&lt;/code&gt; y &lt;a href="/python-while/"&gt;&lt;code&gt;while&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Simplificar las condiciones lógicas en el código para hacerlo más legible.&lt;/li&gt;
+&lt;li&gt;Negar condiciones en expresiones condicionales para ejecutar bloques de código específicos.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
+&lt;p&gt;La palabra clave &lt;code&gt;not&lt;/code&gt; en Python invierte el valor de verdad de un objeto, lo que te permite tener un mayor control sobre las condiciones lógicas en tu código.&lt;/p&gt;
+&lt;p&gt;Conocer y usar &lt;code&gt;not&lt;/code&gt; de forma eficiente puede simplificar tus sentencias de control de flujo y mejorar la claridad del código al manejar condiciones negativas.&lt;/p&gt;</content><category term="Series"/><category term="python"/><category term="palabras clave"/></entry><entry><title>Palabras clave en Python: yield</title><link href="https://pythonscouts.com/python-yield/" rel="alternate"/><published>2026-01-22T16:00:00+01:00</published><updated>2026-01-22T16:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2026-01-22:/python-yield/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;yield&lt;/code&gt; se utiliza en una función para convertirla en un generador que produce una secuencia de valores de manera eficiente.&lt;/p&gt;</summary><content type="html">&lt;h2 id="sintaxis"&gt;Sintaxis&lt;/h2&gt;
 &lt;p&gt;La sintaxis para utilizar &lt;code&gt;yield&lt;/code&gt; en una función es la siguiente:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;generator&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
     &lt;span class="k"&gt;yield&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;
