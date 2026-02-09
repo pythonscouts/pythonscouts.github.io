@@ -1,5 +1,245 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts - Tutoriales</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/tutoriales.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2026-01-02T16:45:00+01:00</updated><subtitle>Aprende Python en Español.</subtitle><entry><title>Iniciando con Kivy para desarrollo GUI</title><link href="https://pythonscouts.com/iniciando-con-kivy-python/" rel="alternate"/><published>2026-01-02T16:45:00+01:00</published><updated>2026-01-02T16:45:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2026-01-02:/iniciando-con-kivy-python/</id><summary type="html">&lt;p&gt;Kivy es un framework para construir aplicaciones con interfaz gráfica (GUI) multiplataforma. Provee widgets, layouts, eventos y más.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Si quieres crear interfaces gráficas en Python con un enfoque moderno y con soporte para gestos y multitouch en dispositivos móviles y táctiles, Kivy es una buena opción.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts - Tutoriales</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/tutoriales.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2026-02-09T22:20:00+01:00</updated><subtitle>Aprende Python en Español.</subtitle><entry><title>Iniciando con FastAPI para desarrollo de APIs</title><link href="https://pythonscouts.com/iniciando-con-fastapi-python/" rel="alternate"/><published>2026-02-09T22:20:00+01:00</published><updated>2026-02-09T22:20:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2026-02-09:/iniciando-con-fastapi-python/</id><summary type="html">&lt;p&gt;FastAPI es un framework web moderno y de alto rendimiento para construir APIs con Python. Está basado en el empleo de indicadores de tipo (type hints) y estándares abiertos como OpenAPI.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Para desarrollar &lt;a href="https://en.wikipedia.org/wiki/Web_API" target="_blank"&gt;APIs&lt;/a&gt; modernas y robustas con Python, puedes emplear una variedad de &lt;em&gt;frameworks&lt;/em&gt;, incluyendo &lt;a href="https://www.django-rest-framework.org/" target="_blank"&gt;Django REST Framework&lt;/a&gt;, &lt;a href="https://flask.palletsprojects.com/" target="_blank"&gt;Flask&lt;/a&gt;, &lt;a href="https://falconframework.org/" target="_blank"&gt;Falcon&lt;/a&gt;, entre otros. Sin embargo, &lt;a href="https://fastapi.tiangolo.com/" target="_blank"&gt;FastAPI&lt;/a&gt; se ha convertido en una de las opciones más populares y sólidas disponibles gracias a su alto rendimiento y su enfoque en la productividad del desarrollador.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;En este tutorial, aprenderás cómo:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Instalar&lt;/strong&gt; FastAPI y configurarlo en tu computadora&lt;/li&gt;
+&lt;li&gt;Crear tu primera &lt;strong&gt;API&lt;/strong&gt; con un endpoint básico&lt;/li&gt;
+&lt;li&gt;Usar &lt;strong&gt;parámetros de ruta&lt;/strong&gt; y &lt;strong&gt;parámetros de query&lt;/strong&gt; para recibir datos&lt;/li&gt;
+&lt;li&gt;Validar datos de entrada con &lt;strong&gt;modelos Pydantic&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Aprovechar la &lt;strong&gt;documentación interactiva&lt;/strong&gt; automática&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Para obtener el máximo de este tutorial, debes conocer lo básico de programación con Python, especialmente temas relacionados con &lt;a href="/python-def/"&gt;funciones&lt;/a&gt;, decoradores y &lt;a href="https://docs.python.org/es/3.14/glossary.html#term-type-hint" target="_blank"&gt;&lt;em&gt;type hints&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#conociendo-fastapi"&gt;Conociendo FastAPI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#instalando-fastapi"&gt;Instalando FastAPI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#creando-una-aplicacion-fastapi"&gt;Creando una aplicación FastAPI&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#ejecutando-el-servidor"&gt;Ejecutando el servidor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#documentacion-interactiva"&gt;Documentación interactiva&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#explorando-las-operaciones-http"&gt;Explorando las operaciones HTTP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#usando-parametros-de-ruta"&gt;Usando parámetros de ruta&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#usando-parametros-de-query"&gt;Usando parámetros de query&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#validando-datos-con-modelos-pydantic"&gt;Validando datos con modelos Pydantic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#demo-api-con-fastapi-autos"&gt;Demo API con FastAPI: Autos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#conclusion"&gt;Conclusión&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="conociendo-fastapi"&gt;Conociendo FastAPI&lt;/h2&gt;
+&lt;p&gt;FastAPI es un &lt;em&gt;web framework&lt;/em&gt; moderno y de alto rendimiento para construir APIs con Python 3.9+ basado en los indicadores de tipo estándar (&lt;a href="https://docs.python.org/3/library/typing.html" target="_blank"&gt;&lt;em&gt;type hints&lt;/em&gt;&lt;/a&gt;). Sus características principales incluyen:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Rapidez&lt;/strong&gt;: Muy alto rendimiento, a la par con NodeJS y Go, gracias a Starlette y Pydantic&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Rápido de programar&lt;/strong&gt;: Incrementa la velocidad de desarrollo entre 200% y 300%&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Menos errores&lt;/strong&gt;: Reduce alrededor del 40% de errores inducidos por desarrolladores&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Intuitivo&lt;/strong&gt;: Gran soporte en editores con autocompletado en todas partes, lo que reduce el tiempo de depuración&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fácil&lt;/strong&gt;: Diseñado para ser fácil de usar y aprender, lo que reduce el tiempo leyendo documentación&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Corto&lt;/strong&gt;: Minimiza la duplicación de código con múltiples funcionalidades para cada declaración de parámetros&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Robusto&lt;/strong&gt;: Código listo para producción con documentación interactiva automática&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Basado en estándares&lt;/strong&gt;: Totalmente compatible con los estándares abiertos para APIs, como OpenAPI y JSON Schema&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;FastAPI se apoya internamente en dos bibliotecas clave: &lt;a href="https://www.starlette.io/" target="_blank"&gt;Starlette&lt;/a&gt; para la parte web y &lt;a href="https://docs.pydantic.dev/" target="_blank"&gt;Pydantic&lt;/a&gt; para la validación de datos. Esta combinación le permite alcanzar un rendimiento comparable al de &lt;em&gt;frameworks&lt;/em&gt; escritos en Go o NodeJS.&lt;/p&gt;
+&lt;h2 id="instalando-fastapi"&gt;Instalando FastAPI&lt;/h2&gt;
+&lt;p&gt;Para comenzar a trabajar con FastAPI, necesitas instalarlo junto con un servidor ASGI (&lt;em&gt;Asynchronous Server Gateway Interface&lt;/em&gt;), como &lt;code&gt;uvicorn&lt;/code&gt;, que será el encargado de ejecutar tu aplicación.&lt;/p&gt;
+&lt;p&gt;Si estás utilizando &lt;code&gt;uv&lt;/code&gt; para &lt;a href="/gestionar-proyecto-python-uv/"&gt;gestionar tu proyecto&lt;/a&gt;, lo cual es recomendado, puedes añadir las dependencias con el siguiente comando:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;uv&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;fastapi&lt;span class="w"&gt; &lt;/span&gt;uvicorn
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Alternativamente, puedes usar &lt;code&gt;pip&lt;/code&gt; directamente en tu &lt;a href="/entorno-virtual-python/"&gt;entorno virtual Python&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp gp-VirtualEnv"&gt;(.venv)&lt;/span&gt; &lt;span class="gp"&gt;$ &lt;/span&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;fastapi&lt;span class="w"&gt; &lt;/span&gt;uvicorn
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id="creando-una-aplicacion-fastapi"&gt;Creando una aplicación FastAPI&lt;/h2&gt;
+&lt;p&gt;Con FastAPI instalado, estás listo para crear tu primera API. Para comenzar, crearás una aplicación de &lt;a href="/python-hola-mundo/"&gt;Hola, Mundo!&lt;/a&gt; Crea un archivo llamado &lt;code&gt;main.py&lt;/code&gt; con el siguiente contenido:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;fastapi&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;FastAPI&lt;/span&gt;
+
+&lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;FastAPI&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="nd"&gt;@app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;read_root&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;message&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Hola, Mundo!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Veamos qué está pasando en este código:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;from fastapi import FastAPI&lt;/code&gt;: Importas la clase principal &lt;code&gt;FastAPI&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;app = FastAPI()&lt;/code&gt;: Creas una instancia de la aplicación. Esta instancia &lt;code&gt;app&lt;/code&gt; será el punto de interacción principal para crear tu API&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;@app.get("/")&lt;/code&gt;: Este decorador le dice a FastAPI que la función que está justo debajo se encarga de manejar las peticiones que van al &lt;em&gt;path&lt;/em&gt; &lt;code&gt;/&lt;/code&gt;, es decir, la raíz, usando la operación HTTP &lt;strong&gt;GET&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;def read_root()&lt;/code&gt;: Esta es la función que define la lógica del &lt;em&gt;endpoint&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;return {"message": "Hola, Mundo!"}&lt;/code&gt;: Retornas un diccionario que FastAPI convierte a JSON y envía la respuesta en el formato esperado&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="ejecutando-el-servidor"&gt;Ejecutando el servidor&lt;/h3&gt;
+&lt;p&gt;Para ver tu aplicación en acción, ejecuta el siguiente comando en tu terminal. Asegúrate de estar en el mismo directorio que &lt;code&gt;main.py&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;uvicorn&lt;span class="w"&gt; &lt;/span&gt;main:app&lt;span class="w"&gt; &lt;/span&gt;--reload
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;La opción &lt;code&gt;--reload&lt;/code&gt; hace que el servidor se reinicie automáticamente cada vez que guardas cambios en tu código, lo cual es ideal durante el proceso de desarrollo.&lt;/p&gt;
+&lt;p&gt;Al ejecutarse el comando, verás una salida similar a esta:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;INFO:     Will watch for changes in these directories: [&amp;#39;/home/user/app&amp;#39;]
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [28720] using WatchFiles
+INFO:     Started server process [28722]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Abre tu navegador y ve a &lt;code&gt;http://127.0.0.1:8000&lt;/code&gt;. Verás la respuesta en JSON:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;message&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Hola, Mundo!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="documentacion-interactiva"&gt;Documentación interactiva&lt;/h3&gt;
+&lt;p&gt;Una de las características más deseables de FastAPI es que genera documentación interactiva automáticamente, sin escribir una sola línea extra de código. Puedes consultarla yendo a &lt;code&gt;http://127.0.0.1:8000/docs&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/articles/iniciando-con-fastapi-python/fastapi-docs.png" class="mx-auto d-block mt-2" style="max-width: 800px; width: 100%; height: auto;" alt="Documentación interactiva de FastAPI con Swagger UI"&gt;&lt;/p&gt;
+&lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Documentación interactiva automática (Swagger UI)&lt;/em&gt;&lt;/div&gt;
+
+&lt;p&gt;Desde aquí puedes ver tus &lt;em&gt;endpoints&lt;/em&gt;, probarlos directamente desde el navegador y examinar las respuestas en formato JSON. Esta funcionalidad es especialmente útil durante el desarrollo, puesto que te permite depurar y verificar tu API sin necesidad de herramientas externas como Postman o &lt;a href="https://curl.se/" target="_blank"&gt;cURL&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;También tienes disponible una documentación alternativa basada en ReDoc en &lt;code&gt;http://127.0.0.1:8000/redoc&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="explorando-las-operaciones-http"&gt;Explorando las operaciones HTTP&lt;/h2&gt;
+&lt;p&gt;Para construir APIs efectivas, es importante entender cómo funcionan las peticiones HTTP. Cuando un cliente, como un navegador o una app móvil, quiere interactuar con tu API, envía una petición o &lt;em&gt;request&lt;/em&gt;, y tu servidor devuelve una respuesta o &lt;em&gt;response&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;En FastAPI, cada operación de ruta corresponde a un método HTTP específico:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;GET&lt;/strong&gt;: Leer datos&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;POST&lt;/strong&gt;: Crear datos&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;PUT&lt;/strong&gt;: Actualizar datos&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DELETE&lt;/strong&gt;: Borrar datos&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Por eso usas &lt;code&gt;@app.get("/")&lt;/code&gt; para leer la raíz. Si quisieras crear un elemento, usarías &lt;code&gt;@app.post("/")&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="usando-parametros-de-ruta"&gt;Usando parámetros de ruta&lt;/h2&gt;
+&lt;p&gt;A menudo necesitarás obtener un elemento específico de tu API, por ejemplo, un usuario por su ID. FastAPI te permite hacer esto definiendo parámetros en la ruta.&lt;/p&gt;
+&lt;p&gt;Añade la siguiente función a tu archivo &lt;code&gt;main.py&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nd"&gt;@app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/items/&lt;/span&gt;&lt;span class="si"&gt;{item_id}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;read_item&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;item_id&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;item_id&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;item_id&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;El valor del argumento de ruta &lt;code&gt;item_id&lt;/code&gt; se pasará a tu función como el argumento &lt;code&gt;item_id&lt;/code&gt;. Observa el identificador de tipo: &lt;code&gt;item_id: int&lt;/code&gt;. Esto le dice a FastAPI que valide que el valor sea un entero. La validación es automática gracias a los &lt;em&gt;type hints&lt;/em&gt; de Python.&lt;/p&gt;
+&lt;p&gt;Si vas a &lt;code&gt;http://127.0.0.1:8000/items/5&lt;/code&gt;, verás:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;item_id&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Pero si intentas ir a &lt;code&gt;http://127.0.0.1:8000/items/foo&lt;/code&gt;, verás un error HTTP indicando que el valor no es un entero válido. FastAPI se encarga de esta validación automáticamente.&lt;/p&gt;
+&lt;h2 id="usando-parametros-de-query"&gt;Usando parámetros de &lt;em&gt;query&lt;/em&gt;&lt;/h2&gt;
+&lt;p&gt;Cuando declaras otros parámetros en la función que no son parte de la ruta, FastAPI los interpreta automáticamente como parámetros de &lt;em&gt;query&lt;/em&gt;, es decir, los que van después del signo de interrogación, &lt;code&gt;?&lt;/code&gt;, en la URL:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nd"&gt;@app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/items/&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;read_items&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;skip&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;limit&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;fake_items_db&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[{&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;item_name&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Foo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;item_name&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Bar&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;}]}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Aquí, &lt;code&gt;skip&lt;/code&gt; tiene un valor por defecto de &lt;code&gt;0&lt;/code&gt; y &lt;code&gt;limit&lt;/code&gt; de &lt;code&gt;10&lt;/code&gt;. Como son &lt;code&gt;int&lt;/code&gt;, FastAPI también los validará. Prueba ir a: &lt;code&gt;http://127.0.0.1:8000/items/?skip=0&amp;amp;limit=1&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Los parámetros de &lt;em&gt;query&lt;/em&gt; son opcionales cuando tienen valores por defecto. Si no proporcionas un valor, FastAPI usará el valor por defecto que definiste en la firma de la función.&lt;/p&gt;
+&lt;h2 id="validando-datos-con-modelos-pydantic"&gt;Validando datos con modelos Pydantic&lt;/h2&gt;
+&lt;p&gt;Para enviar datos a tu API, por ejemplo para crear un item, necesitas usar el cuerpo de la petición. FastAPI usa &lt;strong&gt;Pydantic&lt;/strong&gt; para esto, lo cual es una de sus mayores fortalezas.&lt;/p&gt;
+&lt;p&gt;Primero, importa &lt;code&gt;BaseModel&lt;/code&gt; de &lt;code&gt;pydantic&lt;/code&gt; y define tu modelo de datos con los campos necesarios:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pydantic&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;BaseModel&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Item&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;BaseModel&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;
+    &lt;span class="n"&gt;price&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;float&lt;/span&gt;
+    &lt;span class="n"&gt;is_offer&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;bool&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;En este modelo, &lt;code&gt;name&lt;/code&gt; y &lt;code&gt;price&lt;/code&gt; son campos obligatorios pues no tienen valor por defecto. En contraste, &lt;code&gt;is_offer&lt;/code&gt; es opcional y su valor por defecto es &lt;a href="/python-false/"&gt;&lt;code&gt;False&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Ahora, usa una &lt;code&gt;Item&lt;/code&gt; como un parámetro en tu operación POST para crear un nuevo item:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nd"&gt;@app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/items/&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;create_item&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Item&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="s2"&gt;&amp;quot;item_name&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="s2"&gt;&amp;quot;item_price&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;price&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="s2"&gt;&amp;quot;is_offer&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;is_offer&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;FastAPI hará lo siguiente automáticamente:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Leer el cuerpo de la petición como JSON&lt;/li&gt;
+&lt;li&gt;Convertir los tipos correspondientes si es necesario&lt;/li&gt;
+&lt;li&gt;Validar los datos y devolver un error si, por ejemplo, envías un &lt;em&gt;string&lt;/em&gt; en &lt;code&gt;price&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Entregarte el objeto &lt;code&gt;item&lt;/code&gt; en tu función, con autocompletado en tu editor&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Esta validación automática es una de las grandes ventajas de FastAPI frente a otros &lt;em&gt;frameworks&lt;/em&gt;. No necesitas escribir código de validación manual, lo que reduce la cantidad de errores y simplifica tu código considerablemente.&lt;/p&gt;
+&lt;p&gt;Puedes probar este &lt;em&gt;endpoint&lt;/em&gt; con &lt;code&gt;curl&lt;/code&gt; desde tu terminal:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;curl&lt;span class="w"&gt; &lt;/span&gt;-X&lt;span class="w"&gt; &lt;/span&gt;POST&lt;span class="w"&gt; &lt;/span&gt;http://127.0.0.1:8000/items/&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;-H&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Content-Type: application/json&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;-d&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;{&amp;quot;name&amp;quot;: &amp;quot;Laptop&amp;quot;, &amp;quot;price&amp;quot;: 999.99, &amp;quot;is_offer&amp;quot;: true}&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;La respuesta será:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;item_name&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Laptop&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;item_price&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;999.99&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;is_offer&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Si omites un campo obligatorio o envías un tipo incorrecto, FastAPI responderá con un error &lt;strong&gt;422&lt;/strong&gt; detallando exactamente qué falló en la validación.&lt;/p&gt;
+&lt;h2 id="demo-api-con-fastapi-autos"&gt;Demo API con FastAPI: Autos&lt;/h2&gt;
+&lt;p&gt;Ahora que conoces las bases de FastAPI, es momento de reunir todo en un ejemplo más completo. Crearás una pequeña API para gestionar un catálogo de autos que incluye operaciones GET y POST.&lt;/p&gt;
+&lt;p&gt;Crea un archivo llamado &lt;code&gt;cars.py&lt;/code&gt; con el siguiente contenido:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;fastapi&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;FastAPI&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pydantic&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;BaseModel&lt;/span&gt;
+
+&lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;FastAPI&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Base de datos simulada&lt;/span&gt;
+&lt;span class="n"&gt;cars_db&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;id&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;brand&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Toyota&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;model&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Corolla&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;year&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2022&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;id&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;brand&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Honda&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;model&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Civic&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;year&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2023&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
+&lt;span class="p"&gt;]&lt;/span&gt;
+
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Car&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;BaseModel&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;brand&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;
+    &lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;
+    &lt;span class="n"&gt;year&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;
+
+
+&lt;span class="nd"&gt;@app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/cars/&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;get_cars&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;cars_db&lt;/span&gt;
+
+
+&lt;span class="nd"&gt;@app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/cars/&lt;/span&gt;&lt;span class="si"&gt;{car_id}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;get_car&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;car_id&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;car&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;cars_db&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;car&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;id&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;car_id&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;car&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;error&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Auto no encontrado&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+
+
+&lt;span class="nd"&gt;@app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/cars/&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;create_car&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;car&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Car&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;new_id&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;max&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;id&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;cars_db&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="n"&gt;new_car&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;id&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;new_id&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;car&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;model_dump&lt;/span&gt;&lt;span class="p"&gt;()}&lt;/span&gt;
+    &lt;span class="n"&gt;cars_db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;new_car&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;new_car&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;En este ejemplo, usas una lista de diccionarios como base de datos simulada. La API expone tres &lt;em&gt;endpoints&lt;/em&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;GET /cars/&lt;/code&gt;&lt;/strong&gt;: Devuelve todos los autos del catálogo&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;GET /cars/{car_id}&lt;/code&gt;&lt;/strong&gt;: Devuelve un auto específico por su ID usando un parámetro de ruta&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;POST /cars/&lt;/code&gt;&lt;/strong&gt;: Crea un nuevo auto validando los datos con el modelo &lt;code&gt;Car&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ejecuta el servidor con:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;uvicorn&lt;span class="w"&gt; &lt;/span&gt;cars:app&lt;span class="w"&gt; &lt;/span&gt;--reload
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Ahora puedes consultar todos los autos:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;curl&lt;span class="w"&gt; &lt;/span&gt;http://127.0.0.1:8000/cars/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;La salida de este comando será la siguiente:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;[&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;id&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;brand&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Toyota&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;model&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Corolla&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;year&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;2022&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;id&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;brand&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Honda&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;model&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Civic&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;year&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;2023&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Para obtener un auto específico, puedes usar su &lt;code&gt;id&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;curl&lt;span class="w"&gt; &lt;/span&gt;http://127.0.0.1:8000/cars/1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;En este caso, obtendrás el JSON siguiente:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;id&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;brand&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Toyota&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;model&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Corolla&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;year&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;2022&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Finalmente, para crear un nuevo auto, puedes hacerlo así:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;curl&lt;span class="w"&gt; &lt;/span&gt;-X&lt;span class="w"&gt; &lt;/span&gt;POST&lt;span class="w"&gt; &lt;/span&gt;http://127.0.0.1:8000/cars/&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;-H&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Content-Type: application/json&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;-d&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;{&amp;quot;brand&amp;quot;: &amp;quot;Ford&amp;quot;, &amp;quot;model&amp;quot;: &amp;quot;Mustang&amp;quot;, &amp;quot;year&amp;quot;: 2024}&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Y obtendrás lo siguiente:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;id&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;brand&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Ford&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;model&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Mustang&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;&amp;quot;year&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;2024&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Con este ejemplo puedes ver cómo FastAPI te permite construir una API funcional con muy pocas líneas de código, combinando parámetros de ruta, modelos Pydantic y múltiples operaciones HTTP.&lt;/p&gt;
+&lt;h2 id="conclusion"&gt;Conclusión&lt;/h2&gt;
+&lt;p&gt;Las &lt;strong&gt;APIs&lt;/strong&gt; representan una parte esencial del desarrollo de software moderno. Python ofrece varios frameworks que pueden ayudarte a desarrollar APIs robustas y de alto rendimiento.&lt;/p&gt;
+&lt;p&gt;En este tutorial, aprendiste cómo usar &lt;strong&gt;FastAPI&lt;/strong&gt;, que es uno de los frameworks más populares y eficientes para el desarrollo de APIs en Python.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;En este tutorial, has aprendido a:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Instalar&lt;/strong&gt; FastAPI y configurarlo en tu computadora&lt;/li&gt;
+&lt;li&gt;Crear tu primera &lt;strong&gt;API&lt;/strong&gt; con un endpoint básico&lt;/li&gt;
+&lt;li&gt;Usar &lt;strong&gt;parámetros de ruta&lt;/strong&gt; y &lt;strong&gt;parámetros de query&lt;/strong&gt; para recibir datos&lt;/li&gt;
+&lt;li&gt;Validar datos de entrada con &lt;strong&gt;modelos Pydantic&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Aprovechar la &lt;strong&gt;documentación interactiva&lt;/strong&gt; automática&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ahora puedes usar tus conocimientos de Python y FastAPI para dar vida a tus propias APIs. Para seguir profundizando, puedes explorar la &lt;a href="https://fastapi.tiangolo.com/es/" target="_blank"&gt;documentación oficial&lt;/a&gt;, aprender sobre inyección de dependencias, conectar tu API a una base de datos o implementar autenticación con tokens JWT.&lt;/p&gt;</content><category term="Tutoriales"/><category term="fastapi"/><category term="web"/><category term="api"/><category term="python"/></entry><entry><title>Iniciando con Kivy para desarrollo GUI</title><link href="https://pythonscouts.com/iniciando-con-kivy-python/" rel="alternate"/><published>2026-01-02T16:45:00+01:00</published><updated>2026-01-02T16:45:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2026-01-02:/iniciando-con-kivy-python/</id><summary type="html">&lt;p&gt;Kivy es un framework para construir aplicaciones con interfaz gráfica (GUI) multiplataforma. Provee widgets, layouts, eventos y más.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Si quieres crear interfaces gráficas en Python con un enfoque moderno y con soporte para gestos y multitouch en dispositivos móviles y táctiles, Kivy es una buena opción.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#conociendo-kivy"&gt;Conociendo Kivy&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#instalando-kivy"&gt;Instalando Kivy&lt;/a&gt;&lt;ul&gt;
