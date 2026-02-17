@@ -8,6 +8,11 @@ url = "/acerca/"
 title = "Acerca"
 
 [[input.files]]
+path = "python-is/index.html"
+url = "/python-is/"
+title = "Palabras clave en Python: is"
+
+[[input.files]]
 path = "iniciando-con-fastapi-python/index.html"
 url = "/iniciando-con-fastapi-python/"
 title = "Iniciando con FastAPI para desarrollo de APIs"

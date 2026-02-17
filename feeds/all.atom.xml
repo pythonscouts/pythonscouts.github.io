@@ -1,5 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2026-02-09T22:20:00+01:00</updated><subtitle>Aprende Python en Español.</subtitle><entry><title>Iniciando con FastAPI para desarrollo de APIs</title><link href="https://pythonscouts.com/iniciando-con-fastapi-python/" rel="alternate"/><published>2026-02-09T22:20:00+01:00</published><updated>2026-02-09T22:20:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2026-02-09:/iniciando-con-fastapi-python/</id><summary type="html">&lt;p&gt;FastAPI es un framework web moderno y de alto rendimiento para construir APIs con Python. Está basado en el empleo de indicadores de tipo (type hints) y estándares abiertos como OpenAPI.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Para desarrollar &lt;a href="https://en.wikipedia.org/wiki/Web_API" target="_blank"&gt;APIs&lt;/a&gt; modernas y robustas con Python, puedes emplear una variedad de &lt;em&gt;frameworks&lt;/em&gt;, incluyendo &lt;a href="https://www.django-rest-framework.org/" target="_blank"&gt;Django REST Framework&lt;/a&gt;, &lt;a href="https://flask.palletsprojects.com/" target="_blank"&gt;Flask&lt;/a&gt;, &lt;a href="https://falconframework.org/" target="_blank"&gt;Falcon&lt;/a&gt;, entre otros. Sin embargo, &lt;a href="https://fastapi.tiangolo.com/" target="_blank"&gt;FastAPI&lt;/a&gt; se ha convertido en una de las opciones más populares y sólidas disponibles gracias a su alto rendimiento y su enfoque en la productividad del desarrollador.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2026-02-17T19:25:00+01:00</updated><subtitle>Aprende Python en Español.</subtitle><entry><title>Palabras clave en Python: is</title><link href="https://pythonscouts.com/python-is/" rel="alternate"/><published>2026-02-17T19:25:00+01:00</published><updated>2026-02-17T19:25:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2026-02-17:/python-is/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;is&lt;/code&gt; se utiliza para comprobar si dos referencias (variables) de objetos apuntan al mismo objeto en la memoria.&lt;/p&gt;</summary><content type="html">&lt;p&gt;A diferencia del &lt;a href="/operadores-python/"&gt;operador&lt;/a&gt; &lt;code&gt;==&lt;/code&gt;, que compara si los valores de dos objetos son iguales, es decir, si tienen el mismo contenido, &lt;code&gt;is&lt;/code&gt; te ayuda a verificar la identidad del objeto.&lt;/p&gt;
+&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#sintaxis"&gt;Sintaxis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#ejemplos-practicos"&gt;Ejemplos prácticos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#uso-de-is"&gt;Uso de is&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#resumiendo"&gt;Resumiendo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="sintaxis"&gt;Sintaxis&lt;/h2&gt;
+&lt;p&gt;La sintaxis para usar la palabra clave &lt;code&gt;is&lt;/code&gt; es bastante sencilla:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Aquí, &lt;code&gt;x&lt;/code&gt; y &lt;code&gt;y&lt;/code&gt; son las dos referencias que deseas comparar para ver si apuntan al mismo objeto.&lt;/p&gt;
+&lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
+&lt;p&gt;Veamos algunos ejemplos prácticos para entender mejor cómo funciona el operador &lt;code&gt;is&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;[:]&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;
+&lt;span class="kc"&gt;True&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;
+&lt;span class="kc"&gt;False&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;
+&lt;span class="kc"&gt;True&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;En el primer ejemplo, &lt;code&gt;a is b&lt;/code&gt; devuelve &lt;a href="/python-true/"&gt;&lt;code&gt;True&lt;/code&gt;&lt;/a&gt; porque &lt;code&gt;b&lt;/code&gt; es una referencia al mismo objeto que &lt;code&gt;a&lt;/code&gt; en la memoria.&lt;/p&gt;
+&lt;p&gt;En el segundo ejemplo, &lt;code&gt;a is c&lt;/code&gt; devuelve &lt;a href="/python-false/"&gt;&lt;code&gt;False&lt;/code&gt;&lt;/a&gt; porque &lt;code&gt;c&lt;/code&gt; es una copia superficial de &lt;code&gt;a&lt;/code&gt;, lo que significa que tienen el mismo contenido, pero son objetos diferentes en la memoria. Sin embargo, &lt;code&gt;a == c&lt;/code&gt; devuelve &lt;code&gt;True&lt;/code&gt; porque los valores son iguales.&lt;/p&gt;
+&lt;h2 id="uso-de-is"&gt;Uso de &lt;code&gt;is&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Los casos de uso más comunes de la palabra clave &lt;code&gt;is&lt;/code&gt; incluyen los siguientes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Comprobar si una &lt;a href="/variables-python/"&gt;variable&lt;/a&gt; es &lt;a href="/python-none/"&gt;&lt;code&gt;None&lt;/code&gt;&lt;/a&gt;, es decir, &lt;code&gt;variable is None&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Verificar la identidad de objetos inmutables como cadenas y números en ciertas situaciones.&lt;/li&gt;
+&lt;li&gt;&lt;a href="/python-if/"&gt;Controlar el flujo&lt;/a&gt; para tomar decisiones basadas en la identidad de los objetos.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
+&lt;p&gt;La palabra clave &lt;code&gt;is&lt;/code&gt; en Python te permite verificar la identidad de los objetos, asegurándote de que dos referencias apuntan al mismo objeto en la memoria.&lt;/p&gt;
+&lt;p&gt;Conocer cómo y cuándo usar &lt;code&gt;is&lt;/code&gt; te permite escribir código más preciso y eficiente, especialmente cuando trabajas con comparaciones de objetos y estructuras de datos complejas.&lt;/p&gt;</content><category term="Series"/><category term="python"/><category term="palabras clave"/></entry><entry><title>Iniciando con FastAPI para desarrollo de APIs</title><link href="https://pythonscouts.com/iniciando-con-fastapi-python/" rel="alternate"/><published>2026-02-09T22:20:00+01:00</published><updated>2026-02-09T22:20:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2026-02-09:/iniciando-con-fastapi-python/</id><summary type="html">&lt;p&gt;FastAPI es un framework web moderno y de alto rendimiento para construir APIs con Python. Está basado en el empleo de indicadores de tipo (type hints) y estándares abiertos como OpenAPI.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Para desarrollar &lt;a href="https://en.wikipedia.org/wiki/Web_API" target="_blank"&gt;APIs&lt;/a&gt; modernas y robustas con Python, puedes emplear una variedad de &lt;em&gt;frameworks&lt;/em&gt;, incluyendo &lt;a href="https://www.django-rest-framework.org/" target="_blank"&gt;Django REST Framework&lt;/a&gt;, &lt;a href="https://flask.palletsprojects.com/" target="_blank"&gt;Flask&lt;/a&gt;, &lt;a href="https://falconframework.org/" target="_blank"&gt;Falcon&lt;/a&gt;, entre otros. Sin embargo, &lt;a href="https://fastapi.tiangolo.com/" target="_blank"&gt;FastAPI&lt;/a&gt; se ha convertido en una de las opciones más populares y sólidas disponibles gracias a su alto rendimiento y su enfoque en la productividad del desarrollador.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;En este tutorial, aprenderás cómo:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Instalar&lt;/strong&gt; FastAPI y configurarlo en tu computadora&lt;/li&gt;
