@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es-es" class="h-100">
+
+<head>
+        <title>
+Python Scouts - Aprende Python en Español.    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Leodanis Pozo Ramos">
+    <meta name="description" content="Python Scouts es tu guía completa para aprender a programar en Python. Encuentra tutoriales, guías prácticas y series educativas en español para principiantes y autodidactas.">
+    <meta name="keywords" content="python, programación, tutoriales python, aprender python, python español, guías python">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="language" content="Spanish">
+    <meta name="generator" content="Pelican">
+    
+    <meta name="dcterms.rights" content="https://creativecommons.org/licenses/by-sa/4.0/">
+    <meta name="dcterms.rightsHolder" content="Leodanis Pozo Ramos">
+    <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Python Scouts - Aprende Python en Español.">
+    <meta property="og:description" content="Python Scouts es tu guía completa para aprender a programar en Python. Encuentra tutoriales, guías prácticas y series educativas en español.">
+    <meta property="og:url" content="https://pythonscouts.com">
+    <meta property="og:site_name" content="Python Scouts">
+    <meta property="og:locale" content="es_ES">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@lpozo78">
+    <meta name="twitter:title" content="Python Scouts - Aprende Python en Español.">
+    <meta name="twitter:description" content="Python Scouts es tu guía completa para aprender a programar en Python. Encuentra tutoriales, guías prácticas y series educativas en español.">
+    <!-- RSS feeds -->
+    <link href="https://pythonscouts.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Full Atom Feed" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://pythonscouts.com/7/">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202602201931">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202602201931">
+    <!-- Preconnect to CDNs -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <!-- Bootstrap CSS (deferred) -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+          crossorigin="anonymous">
+    <!-- Bootstrap Icons (self-hosted, deferred) -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202602201931">
+    <!-- Stork Search - Deferred -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202602201931">
+
+            <link rel="preload"
+                  as="image"
+                  href="https://pythonscouts.com/images/articles/python-except/featured.webp"
+                  imagesrcset="
+https://pythonscouts.com/images/articles/python-except/featured.webp 1400w, https://pythonscouts.com/images/articles/python-except/article.webp 900w, https://pythonscouts.com/images/articles/python-except/thumbnail.webp 300w                  "
+                  imagesizes="(min-width: 992px) 66vw, 100vw"
+                  fetchpriority="high">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
+<script
+    src="https://pythonscouts.com/theme/js/analytics.js?v=202602201931"
+    defer
+    data-analytics-id="G-R3C5PFSQ1S">
+</script>
+
+<body class="d-flex flex-column h-100">
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-md bg-white fixed-top border-bottom">
+        <div class="container-md content-px">
+            <a class="navbar-brand" href="/">
+            <img
+            src="https://pythonscouts.com/images/identity/header.webp"
+            alt="Python Scouts"
+            width="150"
+            height="50"
+            >
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Menú de Navegación">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav m-auto nav-link">
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/guias/" aria-current="page">
+                    Guías
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/series/" aria-current="page">
+                    Series
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/tutoriales/" aria-current="page">
+                    Tutoriales
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/acerca/" aria-current="page">
+                    Acerca
+                </a>
+                </li>
+            </ul>
+            <form class="d-flex search-form" role="search" style="min-width:240px;">
+                <div class="stork-wrapper">
+                <input
+                class="stork-input"
+                type="search"
+                id="site-search"
+                name="q"
+                placeholder="Buscar"
+                aria-label="Search"
+                data-stork="sitesearch"
+                >
+                </div>
+            </form>
+            </div>
+        </div>
+    </nav>
+    <main id="main-content" class="container-md content-px py-3" tabindex="-1">
+        <div class="stork-wrapper">
+            <div data-stork="sitesearch-output" class="stork-output"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+            </div>
+        </div>
+
+<!-- Featured Article with Getting Started Guide -->
+<section class="featured-section mb-5">
+    <div class="row g-4">
+        <!-- Featured Article (8 columns) -->
+        <div class="col-lg-8">
+            <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                <div class="row g-0">
+                    <!-- Top Image Section (Full Width) -->
+                    <div class="col-12 position-relative" style="height: 200px; overflow: hidden;">
+                        <picture>
+                            <source type="image/webp"
+                                    srcset="
+https://pythonscouts.com/images/articles/python-except/featured.webp 1400w, https://pythonscouts.com/images/articles/python-except/article.webp 900w, https://pythonscouts.com/images/articles/python-except/thumbnail.webp 300w                                    "
+                                    sizes="(min-width: 992px) 66vw, 100vw">
+                            <img src="https://pythonscouts.com/images/articles/python-except/featured.webp"
+                                 alt="Palabras clave en Python: except"
+                                 class="w-100 h-100"
+                                 style="object-fit: cover;"
+                                 loading="eager"
+                                 fetchpriority="high">
+                        </picture>
+                        <div class="position-absolute top-0 start-0 w-100 h-100" 
+                             style="background: linear-gradient(180deg, transparent 0%, transparent 50%, rgba(255,255,255,0.3) 70%, rgba(255,255,255,0.7) 85%, rgba(255,255,255,0.95) 95%, #fff 100%);">
+                        </div>
+                    </div>
+
+                    <!-- Content Section -->
+                    <div class="col-12 px-4 pb-4" style="margin-top: -50px; position: relative; z-index: 10;">
+                        <div class="mb-3">
+                            <span class="badge bg-primary text-white text-uppercase small me-2">
+                                Series
+                            </span>
+                            <span class="badge bg-warning text-dark badge-strong">
+                                <i class="bi bi-star-fill me-1"></i> Destacado
+                            </span>
+                        </div>
+
+                        <h2 class="h3 fw-bold mb-3">
+                            <a href="https://pythonscouts.com/python-except/" 
+                               class="text-dark text-decoration-none">
+                                Palabras clave en Python: except
+                            </a>
+                        </h2>
+
+                        <p class="text-muted-strong mb-4">
+                            En Python, la palabra clave except se utiliza junto con try para capturar y manejar excepciones, permitiéndote gestionar errores de forma controlada.
+                        </p>
+
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://pythonscouts.com/images/authors/leodanis-pozo-ramos.webp" 
+                                 alt="Leodanis Pozo Ramos" 
+                                 class="rounded-circle me-2"
+                                 style="width: 36px; height: 36px; object-fit: cover;"
+                                 loading="lazy"
+                                 width="36"
+                                 height="36">
+                            <div class="small">
+                                <a href="https://pythonscouts.com/author/leodanis-pozo-ramos/" 
+                                   class="fw-semibold text-decoration-none d-block">
+                                    Leodanis Pozo Ramos
+                                </a>
+                                <div class="text-muted-strong d-flex flex-wrap gap-2 align-items-center">
+                                    <i class="bi bi-calendar-event me-1"></i>20 feb 2026
+                                    <span class="d-inline-flex align-items-center gap-1">
+                                        <i class="bi bi-clock" aria-hidden="true"></i>2 min
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="https://pythonscouts.com/python-except/" 
+                           class="btn btn-success px-4">
+                            Leer artículo completo
+                            <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Getting Started Guide (4 columns) -->
+        <div class="col-lg-4">
+            <div class="card border-0 shadow rounded-4 h-100 p-4 getting-started-card">
+                <div class="mb-3">
+                    <span class="badge bg-success-subtle text-success border border-success px-3 py-2 mb-3">
+                        <i class="bi bi-rocket-takeoff-fill me-2"></i><span class="text-success-emphasis">Comienza Aquí</span>
+                    </span>
+                </div>
+                
+                <nav class="getting-started-nav" aria-label="Guía rápida">
+                    <ol class="list-unstyled mb-0">
+                        <li>
+                            <a href="https://pythonscouts.com/instalar-python-windows/" class="getting-started-link">
+                                <span class="getting-started-number">1</span>
+                                <span class="getting-started-copy flex-grow-1">
+                                    <span class="fw-semibold d-block">Instalar Python</span>
+                                    <span class="text-muted-strong small">Windows, macOS o Linux</span>
+                                </span>
+                                <i class="bi bi-chevron-right text-muted-strong"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://pythonscouts.com/python-hola-mundo/" class="getting-started-link">
+                                <span class="getting-started-number">2</span>
+                                <span class="getting-started-copy flex-grow-1">
+                                    <span class="fw-semibold d-block">Hola Mundo</span>
+                                    <span class="text-muted-strong small">Tu primer programa</span>
+                                </span>
+                                <i class="bi bi-chevron-right text-muted-strong"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://pythonscouts.com/variables-python/" class="getting-started-link">
+                                <span class="getting-started-number">3</span>
+                                <span class="getting-started-copy flex-grow-1">
+                                    <span class="fw-semibold d-block">Variables</span>
+                                    <span class="text-muted-strong small">Almacenar datos</span>
+                                </span>
+                                <i class="bi bi-chevron-right text-muted-strong"></i>
+                            </a>
+                        </li>
+                    </ol>
+                </nav>
+                
+                <div class="mt-4 pt-3 border-top">
+                    <a href="https://pythonscouts.com/guias/" class="btn btn-outline-success btn-sm w-100">
+                        Ver todas las guías
+                        <i class="bi bi-arrow-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<header id="article-list">
+    <div class="row">
+        <div class="col">
+            <p class="h1 pb-2">Todos nuestros <strong>artículos</strong></p>
+        </div>
+    </div>
+</header>
+
+<section>
+    <!-- List of Articles -->
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5">
+    <div class="col">
+        <article class="card h-100">
+            <a href="https://pythonscouts.com/python-hola-mundo/">
+                <img
+                    class="card-img-top img-fluid w-100"
+                    src="https://pythonscouts.com/images/articles/python-hola-mundo/article.webp"
+                    width="300"
+                    height="200"
+                    alt="Cómo escribir tu primer programa en Python: Hola, mundo!"
+                    loading="lazy">
+            </a>
+            <div class="py-3">
+                <a href="https://pythonscouts.com/python-hola-mundo/">
+                    <p class="card-title h5">Cómo escribir tu primer programa en Python: Hola, mundo!</p>
+                </a>
+                <div class="text-muted-strong pt-3 h6">
+                    <a href="https://pythonscouts.com/author/leodanis-pozo-ramos/">Leodanis Pozo Ramos</a>
+                </div>
+                <time class="text-muted-strong small d-flex align-items-center gap-2 mt-2">
+                    <span class="d-inline-flex align-items-center gap-1">
+                        <i class="bi bi-calendar-event" aria-hidden="true"></i>
+                        15 ago 2023
+                    </span>
+                    <span class="d-inline-flex align-items-center gap-1">
+                        <i class="bi bi-clock" aria-hidden="true"></i>
+                        5 min
+                    </span>
+                </time>
+            </div>
+        </article>
+    </div>
+</div>
+
+    <!-- Pagination -->
+
+<div class="row">
+    <div class="col-md-9 pb-2">
+        <nav>
+            <ul class="pagination custom-pagination justify-content-center">
+                <li class="page-item">
+                  <a class="page-link" href="https://pythonscouts.com/index.html" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item ">
+                  <a class="page-link" href="https://pythonscouts.com/index.html">
+                    1
+                  </a>
+                </li>
+                <li class="page-item ">
+                  <a class="page-link" href="https://pythonscouts.com/2/">
+                    2
+                  </a>
+                </li>
+                <li class="page-item ">
+                  <a class="page-link" href="https://pythonscouts.com/3/">
+                    3
+                  </a>
+                </li>
+                <li class="page-item ">
+                  <a class="page-link" href="https://pythonscouts.com/4/">
+                    4
+                  </a>
+                </li>
+                <li class="page-item ">
+                  <a class="page-link" href="https://pythonscouts.com/5/">
+                    5
+                  </a>
+                </li>
+                <li class="page-item ">
+                  <a class="page-link" href="https://pythonscouts.com/6/">
+                    6
+                  </a>
+                </li>
+                <li class="page-item active">
+                  <a class="page-link" href="https://pythonscouts.com/7/">
+                    7
+                  </a>
+                </li>
+                  
+            </ul>
+          </nav>
+    </div>
+</div>
+</section>
+    </main>
+
+<footer class="site-footer mt-auto">
+    <div class="footer-primary border-top border-success-subtle py-3">
+        <div class="container-md content-px">
+            <div class="row gy-3 align-items-center justify-content-between">
+                <div class="col-lg-6 col-md-7">
+                    <div class="d-flex flex-column flex-sm-row align-items-center align-items-sm-start gap-3 text-center text-sm-start">
+                        <a href="https://pythonscouts.com" class="d-inline-flex align-items-center text-decoration-none">
+                            <img src="https://pythonscouts.com/images/identity/logo-title.png" alt="Python Scouts" width="160" height="48" class="img-fluid footer-logo">
+                        </a>
+                        <p class="text-muted-strong footer-description mb-0">
+                            Python Scouts es tu espacio para aprender Python en español.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-5 text-center text-md-start">
+                    <h3 class="h6 text-uppercase text-success fw-semibold mb-2">Explora</h3>
+                    <nav aria-label="Footer navigation">
+                        <ul class="footer-links list-unstyled d-inline-flex flex-column gap-2 mb-0 text-start">
+                            <li><a href="https://pythonscouts.com/guias/">Guías</a></li>
+                            <li><a href="https://pythonscouts.com/series/">Series</a></li>
+                            <li><a href="https://pythonscouts.com/tutoriales/">Tutoriales</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-secondary py-3">
+        <div class="container-md content-px">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <div class="d-flex flex-column flex-sm-row align-items-center gap-2 text-center text-sm-start">
+                    <span class="text-white-50 small">
+                        &copy; 2023-2026 Leodanis Pozo Ramos.
+                    </span>
+                    <div class="d-flex align-items-center gap-2">
+                        <a href="https://creativecommons.org/licenses/by-sa/4.0/" 
+                           target="_blank" 
+                           rel="license noopener noreferrer"
+                           class="d-inline-block"
+                           style="background: white; padding: 4px 8px; border-radius: 4px;">
+                            <img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" 
+                                 alt="CC BY-SA 4.0" 
+                                 width="88" 
+                                 height="31"
+                                 style="border-width:0; display: block;">
+                        </a>
+                        <span class="text-white-50 small">
+                            Contenido licenciado bajo 
+                            <a href="https://creativecommons.org/licenses/by-sa/4.0/" 
+                               target="_blank" 
+                               rel="license noopener noreferrer"
+                               class="text-white text-decoration-none">
+                                CC BY-SA 4.0
+                                <i class="bi bi-box-arrow-up-right ms-1"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <span class="text-white-50 small">
+                    Imágenes cortesía de <a href="https://picsum.photos/" target="_blank" rel="noopener" class="text-white text-decoration-none">Picsum</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</footer>
+    <!-- JS Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
+    <!-- Stork and site scripts -->
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202602201931" defer></script>
+    <script
+        src="https://pythonscouts.com/theme/js/site.js?v=202602201931"
+        defer
+        data-stork-name="sitesearch"
+        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202602201931"
+        data-stork-index="https://pythonscouts.com/search-index.st">
+    </script>
+
+</body>
+</html>
