@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2026-02-21T19:30:00+01:00</updated><subtitle>Aprende Python en Español.</subtitle><entry><title>Palabras clave en Python: finally</title><link href="https://pythonscouts.com/python-finally/" rel="alternate"/><published>2026-02-21T19:30:00+01:00</published><updated>2026-02-21T19:30:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2026-02-21:/python-finally/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;finally&lt;/code&gt; se utiliza junto con &lt;code&gt;try&lt;/code&gt; para garantizar que un bloque de código se ejecute sin importar si ocurre una excepción.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Esto la convierte en una &lt;a href="/python-palabras-clave/"&gt;palabra clave&lt;/a&gt; especialmente útil para la limpieza de recursos, como cerrar archivos o conexiones de red, asegurando que estas operaciones se completen sin importar el resultado de los bloques &lt;a href="/python-try/"&gt;&lt;code&gt;try&lt;/code&gt;&lt;/a&gt; y &lt;a href="/python-except/"&gt;&lt;code&gt;except&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2026-02-25T21:30:00+01:00</updated><subtitle>Aprende Python en Español.</subtitle><entry><title>Palabras clave en Python: global</title><link href="https://pythonscouts.com/python-global/" rel="alternate"/><published>2026-02-25T21:30:00+01:00</published><updated>2026-02-25T21:30:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2026-02-25:/python-global/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;global&lt;/code&gt; te permite modificar variables globales desde funciones y gestionar el estado global de tu programa de forma controlada.&lt;/p&gt;</summary><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#sintaxis"&gt;Sintaxis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#ejemplos-practicos"&gt;Ejemplos prácticos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#uso-de-global"&gt;Uso de global&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#resumiendo"&gt;Resumiendo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="sintaxis"&gt;Sintaxis&lt;/h2&gt;
+&lt;p&gt;La sintaxis básica para usar la &lt;a href="/python-palabras-clave/"&gt;palabra clave&lt;/a&gt; &lt;code&gt;global&lt;/code&gt; es la siguiente:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;global&lt;/span&gt; &lt;span class="n"&gt;var_name&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Donde &lt;code&gt;var_name&lt;/code&gt; es el nombre de la &lt;a href="/variables-python/"&gt;variable&lt;/a&gt; global que deseas modificar dentro de una función.&lt;/p&gt;
+&lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
+&lt;p&gt;El ejemplo clásico es un contador global:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;counter&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;  &lt;span class="c1"&gt;# Variable global&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;increment&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="k"&gt;global&lt;/span&gt; &lt;span class="n"&gt;counter&lt;/span&gt;  &lt;span class="c1"&gt;# Declaración global&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="n"&gt;counter&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;increment&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;increment&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;# Contador incrementado&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;counter&lt;/span&gt;
+&lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;En este ejemplo, la función &lt;code&gt;increment()&lt;/code&gt; utiliza &lt;code&gt;global&lt;/code&gt; para modificar la variable &lt;code&gt;counter&lt;/code&gt; que se encuentra fuera de la función. Sin la declaración &lt;code&gt;global&lt;/code&gt;, intentar ejecutar &lt;code&gt;counter += 1&lt;/code&gt; dentro de la función provocaría un error (&lt;code&gt;UnboundLocalError&lt;/code&gt;), pues Python interpretaría que intentas modificar una variable local antes de haberle asignado un valor.&lt;/p&gt;
+&lt;div class="admonition note"&gt;
+&lt;p&gt;Aunque la palabra clave global puede ser útil en ciertos casos, gestionar el estado de un programa mediante variables globales no es una buena práctica de programación. El uso excesivo de variables globales puede dificultar el mantenimiento, la depuración y la reutilización del código. Siempre que sea posible, emplea alternativas como el &lt;a href="/python-def/"&gt;paso de argumentos&lt;/a&gt;, el retorno de valores o el uso de &lt;a href="/python-class/"&gt;clases y objetos&lt;/a&gt; para gestionar el estado.&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id="uso-de-global"&gt;Uso de &lt;code&gt;global&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Los casos de uso más comunes de la palabra clave &lt;code&gt;global&lt;/code&gt; incluyen los siguientes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Modificar una variable definida fuera del ámbito de la función actual.&lt;/li&gt;
+&lt;li&gt;Compartir una variable entre múltiples funciones dentro del mismo módulo.&lt;/li&gt;
+&lt;li&gt;Inicializar o reiniciar variables globales desde funciones cuando el estado global debe ser controlado explícitamente.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
+&lt;p&gt;La palabra clave &lt;code&gt;global&lt;/code&gt; en Python te permite modificar variables globales desde dentro de una función.&lt;/p&gt;
+&lt;p&gt;Conocer y emplear esta palabra clave puede facilitar la gestión del estado global del programa de manera controlada, aunque debe usarse con precaución para mantener un código limpio y fácil de mantener.&lt;/p&gt;</content><category term="Series"/><category term="python"/><category term="palabras clave"/></entry><entry><title>Palabras clave en Python: finally</title><link href="https://pythonscouts.com/python-finally/" rel="alternate"/><published>2026-02-21T19:30:00+01:00</published><updated>2026-02-21T19:30:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2026-02-21:/python-finally/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;finally&lt;/code&gt; se utiliza junto con &lt;code&gt;try&lt;/code&gt; para garantizar que un bloque de código se ejecute sin importar si ocurre una excepción.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Esto la convierte en una &lt;a href="/python-palabras-clave/"&gt;palabra clave&lt;/a&gt; especialmente útil para la limpieza de recursos, como cerrar archivos o conexiones de red, asegurando que estas operaciones se completen sin importar el resultado de los bloques &lt;a href="/python-try/"&gt;&lt;code&gt;try&lt;/code&gt;&lt;/a&gt; y &lt;a href="/python-except/"&gt;&lt;code&gt;except&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#sintaxis"&gt;Sintaxis&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#ejemplos-practicos"&gt;Ejemplos prácticos&lt;/a&gt;&lt;/li&gt;
