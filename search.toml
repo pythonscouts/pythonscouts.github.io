@@ -8,6 +8,11 @@ url = "/acerca/"
 title = "Acerca"
 
 [[input.files]]
+path = "python-nonlocal/index.html"
+url = "/python-nonlocal/"
+title = "Palabras clave en Python: nonlocal"
+
+[[input.files]]
 path = "python-global/index.html"
 url = "/python-global/"
 title = "Palabras clave en Python: global"
