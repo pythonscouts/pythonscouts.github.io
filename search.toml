@@ -8,6 +8,11 @@ url = "/acerca/"
 title = "Acerca"
 
 [[input.files]]
+path = "python-async/index.html"
+url = "/python-async/"
+title = "Palabras clave en Python: async"
+
+[[input.files]]
 path = "python-nonlocal/index.html"
 url = "/python-nonlocal/"
 title = "Palabras clave en Python: nonlocal"
