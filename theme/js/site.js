@@ -128,11 +128,22 @@
 
             btn.addEventListener("click", function () {
                 let code = pre.textContent;
-                // Smart copy: remove REPL prompts (>>> or ...), shell prompts ($), and env prompts ((venv) $, PS>)
-                // Smart copy: remove REPL prompts (>>> or ...), shell prompts ($), and env prompts ((venv) $, PS>)
-                code = code.replace(/^(?:\(.*\)\s+)?(?:>>> |\.\.\. |\$ |PS\s*> )/gm, "");
+                const lines = code.split("\n");
                 
-                navigator.clipboard.writeText(code).then(function () {
+                // If it looks like a REPL session (contains >>>), only copy prompt lines
+                if (code.includes(">>> ")) {
+                    code = lines
+                        .filter(line => line.startsWith(">>> ") || line.startsWith("... "))
+                        .map(line => line.replace(/^(?:>>> |\.\.\. )/, ""))
+                        .join("\n");
+                } else {
+                    // Standard shell/env prompt stripping
+                    code = lines
+                        .map(line => line.replace(/^(?:\(.*\)\s+)?(?:>>> |\.\.\. |\$ |PS\s*> )/gm, ""))
+                        .join("\n");
+                }
+                
+                navigator.clipboard.writeText(code.trim()).then(function () {
                     btn.innerHTML = '<i class="bi bi-clipboard-check"></i>';
                     btn.classList.add("copied");
                     setTimeout(function () {
