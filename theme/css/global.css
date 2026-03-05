@@ -12,6 +12,10 @@
     --ps-accent: #4caf50;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: "bootstrap-icons";
     src: url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/fonts/bootstrap-icons.woff2") format("woff2"),
@@ -21,6 +25,7 @@
 
 body {
     padding-top: 5em;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 1.2em;
     line-height: 1.5;
     color: var(--ps-gray);
@@ -64,12 +69,13 @@ body {
 h2, h3, h4, h5, h6 {
     margin-top: 1.5em;
     margin-bottom: .5em;
+    scroll-margin-top: 5rem;
 }
 /* Links */
 a {
     text-decoration: none;
     font-weight: 500;
-    color: #2D7A3E;
+    color: var(--ps-green);
 }
 
 a:hover {
@@ -87,23 +93,23 @@ a code {
 
 code a:hover,
 a code:hover {
-    color: #1a5c2a;
+    color: var(--ps-green-dark);
     text-decoration-style: solid;
 }
 
 .nav-link a {
     text-decoration: none;
     font-weight: 500;
-    color: #323F48;
+    color: var(--ps-gray);
 }
 
 .nav-link a:hover {
     text-decoration: none;
-    color: #2D7A3E;
+    color: var(--ps-green);
 }
 
 .bg-gray {
-    background: #F3F3F3;
+    background: var(--ps-gray-pale);
 }
 
 .bg-white {
@@ -111,7 +117,7 @@ a code:hover {
 }
 
 .text-green {
-    color: #2D7A3E;
+    color: var(--ps-green);
 }
 
 .text-muted-strong {
@@ -125,21 +131,21 @@ a code:hover {
 
 /* Custom button */
 button {
-    background: #2D7A3E;
-    color: white;
+    background: var(--ps-green);
+    color: var(--ps-white);
     border-radius: 5px;
     border: none;
     padding: 0.3em 0.6em;
 }
 
 button:hover {
-    background: #236030;
-    color: white;
+    background: var(--ps-green-dark);
+    color: var(--ps-white);
 }
 
 /* Custom pagination */
 .custom-pagination .page-link {
-    color: #2D7A3E;
+    color: var(--ps-green);
     background-color: white;
     border: 1px solid #dee2e6;
     border-radius: 8px;
@@ -150,16 +156,16 @@ button:hover {
 }
 
 .custom-pagination .page-link:hover {
-    background-color: #E8F5E9;
-    border-color: #2D7A3E;
+    background-color: var(--ps-green-light);
+    border-color: var(--ps-green);
     transform: translateY(-2px);
     box-shadow: 0 2px 8px rgba(45, 122, 62, 0.2);
 }
 
 .custom-pagination .active .page-link {
-    background-color: #2D7A3E;
-    border-color: #2D7A3E;
-    color: white;
+    background-color: var(--ps-green);
+    border-color: var(--ps-green);
+    color: var(--ps-white);
     box-shadow: 0 2px 8px rgba(45, 122, 62, 0.3);
 }
 
@@ -241,6 +247,14 @@ button:hover {
     line-height: 1.4;
 }
 
+.card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 /* Navigation Bar Effects */
 .navbar {
     transition: all 0.3s ease;
@@ -253,13 +267,27 @@ button:hover {
 }
 
 .navbar .search-form {
-    flex: 0 0 240px;
-    max-width: 100%;
+    flex: 0 0 auto;
+    align-items: center;
+}
+
+.search-input-wrapper {
+    width: 0;
+    overflow: hidden;
+    transition: width 0.3s ease;
+}
+
+.search-form.search-expanded .search-input-wrapper {
     width: 240px;
 }
 
-.navbar .stork-wrapper {
-    width: 100%;
+.search-toggle {
+    font-size: 1.1rem;
+    transition: color 0.2s ease;
+}
+
+.search-toggle:hover {
+    color: var(--ps-green) !important;
 }
 
 .navbar .stork-output {
@@ -279,6 +307,14 @@ button:hover {
         width: 100%;
         flex: 1 1 auto;
         margin-top: 1rem;
+    }
+
+    .search-input-wrapper {
+        width: 100% !important;
+    }
+
+    .search-toggle {
+        display: none !important;
     }
 }
 
@@ -352,7 +388,7 @@ button:hover {
 
 .stork-input:focus {
     outline: none;
-    border-color: #2D7A3E;
+    border-color: var(--ps-green);
     box-shadow: 0 0 0 3px rgba(45, 122, 62, 0.1);
 }
 
@@ -391,7 +427,7 @@ button:hover {
 
 .getting-started-link:hover {
     background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
-    border-color: #2D7A3E;
+    border-color: var(--ps-green);
     transform: translateX(4px);
     box-shadow: 0 4px 12px rgba(45, 122, 62, 0.15);
     color: inherit;
@@ -545,4 +581,42 @@ button:hover {
 .footer-description {
     font-size: 1rem;
     line-height: 1.5;
+}
+
+/* ========================================
+   BACK TO TOP BUTTON (Global)
+   ======================================== */
+
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--ps-green-subtle);
+    color: var(--ps-green-dark);
+    border: 2px solid var(--ps-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background 0.3s, color 0.3s;
+    z-index: 2000;
+    cursor: pointer;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background: var(--ps-green-dark);
+    color: var(--ps-white);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(45, 122, 62, 0.3);
 }

@@ -116,7 +116,7 @@ Clementine Bauch: 10 tareas pendientes
 &lt;p&gt;En este ejemplo, la función &lt;code&gt;greeting()&lt;/code&gt; utiliza &lt;code&gt;async&lt;/code&gt; y &lt;code&gt;await&lt;/code&gt; para pausar la ejecución durante un segundo entre las dos impresiones. La función &lt;code&gt;asyncio.run()&lt;/code&gt; se utiliza para ejecutar la función asíncrona.&lt;/p&gt;
 &lt;p&gt;El siguiente ejemplo muestra cómo &lt;code&gt;async&lt;/code&gt; te permite ejecutar varias solicitudes de red de forma concurrente. Para ello, usarás la biblioteca &lt;code&gt;aiohttp&lt;/code&gt; junto con la API pública &lt;a href="https://jsonplaceholder.typicode.com" target="_blank"&gt;JSONPlaceholder&lt;/a&gt; para obtener la información de varios usuarios al mismo tiempo.&lt;/p&gt;
 &lt;p&gt;Antes de ejecutar el ejemplo, instala &lt;code&gt;aiohttp&lt;/code&gt; en tu &lt;a href="/entorno-virtual-python/"&gt;entorno virtual&lt;/a&gt; con el siguiente comando:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;aiohttp
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;aiohttp
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Una vez instalada la biblioteca, crea un archivo con el siguiente código:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# fetch_users.py&lt;/span&gt;
@@ -4086,7 +4086,7 @@ Related help topics: TRUTHVALUE
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Desactivar el entorno y regresar al indicador (prompt) del sistema:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;deactivate&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;venv&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;deactivate&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
@@ -4117,7 +4117,7 @@ Related help topics: TRUTHVALUE
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Desactivar el entorno y regresar al indicador del sistema:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;deactivate
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp gp-VirtualEnv"&gt;(venv)&lt;/span&gt; &lt;span class="gp"&gt;$ &lt;/span&gt;deactivate
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
@@ -4153,7 +4153,7 @@ Related help topics: TRUTHVALUE
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Desactivar el entorno y regresar al indicador del sistema:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;deactivate
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp gp-VirtualEnv"&gt;(venv)&lt;/span&gt; &lt;span class="gp"&gt;$ &lt;/span&gt;deactivate
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/li&gt;
 &lt;/ol&gt;

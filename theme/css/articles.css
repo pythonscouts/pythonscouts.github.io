@@ -6,7 +6,7 @@ blockquote {
     border: 1px solid #e9ecef;
     border-left: 4px solid var(--ps-green);
     border-radius: 0 12px 12px 0;
-    color: #323F48;
+    color: var(--ps-gray);
     padding: 1.5rem 1.5rem 1.5rem 2rem;
     margin-top: 1.5em;
     margin-bottom: 1.5em;
@@ -14,7 +14,7 @@ blockquote {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 }
 blockquote:before {
-    color: #2D7A3E;
+    color: var(--ps-green);
     content: "\201C";
     font-size: 3em;
     line-height: 0.1em;
@@ -29,7 +29,7 @@ blockquote:before {
     border: 1px solid var(--ps-green-subtle);
     border-left: 4px solid var(--ps-green);
     border-radius: 0 12px 12px 0;
-    color: #323F48;
+    color: var(--ps-gray);
     padding: 1.5rem 1.5rem 1.5rem 2rem;
     margin-top: 1.5em;
     margin-bottom: 1.5em;
@@ -93,7 +93,7 @@ thead {
     font-size: 1.2em;
     font-weight: 600;
     margin: 0 0 1rem 0;
-    color: #323F48;
+    color: var(--ps-gray);
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -220,3 +220,121 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .vi { color: #000000 } /* Name.Variable.Instance */
 .highlight .vm { color: #000000 } /* Name.Variable.Magic */
 .highlight .il { color: #0000cf; font-weight: bold } /* Literal.Number.Integer.Long */
+
+/* ========================================
+   ARTICLE BODY WIDTH CONSTRAINT
+   ======================================== */
+
+.article-body {
+    max-width: 48rem;
+}
+
+/* ========================================
+   STICKY TOC SIDEBAR
+   ======================================== */
+
+.toc-sidebar {
+    position: sticky;
+    top: 5rem;
+    max-height: calc(100vh - 6rem);
+    overflow-y: auto;
+    padding-left: 1.5rem;
+}
+
+.toc-sidebar .toc {
+    border-left: 3px solid var(--ps-green);
+    border-radius: 0;
+    box-shadow: none;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    background: transparent;
+    padding: 1rem 0 1rem 1rem;
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.toc-sidebar .toc ul {
+    padding-left: 1rem;
+}
+
+.toc-sidebar .toc ul li {
+    padding: 0.25rem 0;
+}
+
+/* ========================================
+   PREV/NEXT ARTICLE NAVIGATION
+   ======================================== */
+
+.article-nav-link {
+    display: block;
+    padding: 1.25rem;
+    background: var(--ps-gray-pale);
+    border: 1px solid var(--ps-green-subtle);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    color: var(--ps-gray-strong);
+}
+
+.article-nav-link:hover {
+    background: var(--ps-green-subtle);
+    border-color: var(--ps-green);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(45, 122, 62, 0.15);
+    color: var(--ps-gray-strong);
+}
+
+.article-nav-title {
+    color: var(--ps-green-dark);
+    font-size: 1.05rem;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+/* ========================================
+   COPY BUTTON ON CODE BLOCKS
+   ======================================== */
+
+.highlight {
+    position: relative;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: var(--ps-green);
+    color: var(--ps-white);
+    border: none;
+    border-radius: 6px;
+    padding: 0.3em 0.4em;
+    font-size: 0.9em;
+    line-height: 1;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.2s ease;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.highlight:hover .copy-btn {
+    opacity: 0.7;
+}
+
+.copy-btn:hover {
+    opacity: 1 !important;
+    background: var(--ps-green-dark);
+}
+
+.copy-btn.copied {
+    background: var(--ps-accent);
+    opacity: 1 !important;
+}
+
+/* Hide decorative </> when copy button is present */
+.highlight.has-copy-btn::before {
+    display: none;
+}
+
