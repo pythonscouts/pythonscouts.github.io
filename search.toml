@@ -8,6 +8,11 @@ url = "/acerca/"
 title = "Acerca"
 
 [[input.files]]
+path = "python-await/index.html"
+url = "/python-await/"
+title = "Palabras clave en Python: await"
+
+[[input.files]]
 path = "python-async/index.html"
 url = "/python-async/"
 title = "Palabras clave en Python: async"
