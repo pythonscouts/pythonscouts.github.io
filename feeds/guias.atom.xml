@@ -18,13 +18,13 @@
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;h2 id="instalar-uv-en-tu-sistema"&gt;Instalar &lt;code&gt;uv&lt;/code&gt; en tu sistema&lt;/h2&gt;
-&lt;p&gt;En macOS y Linux, puedes instalar &lt;code&gt;uv&lt;/code&gt; con el commando siguiente:&lt;/p&gt;
+&lt;p&gt;En macOS y Linux, puedes instalar &lt;code&gt;uv&lt;/code&gt; con el comando siguiente:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;curl&lt;span class="w"&gt; &lt;/span&gt;-LsSf&lt;span class="w"&gt; &lt;/span&gt;https://astral.sh/uv/install.sh&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;sh
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Si no dispones de &lt;code&gt;curl&lt;/code&gt; en tu sistema, entonces puedes usar &lt;code&gt;wget&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;wget&lt;span class="w"&gt; &lt;/span&gt;-qO-&lt;span class="w"&gt; &lt;/span&gt;https://astral.sh/uv/install.sh&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;sh
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En Windows, puedes usar el commando:&lt;/p&gt;
+&lt;p&gt;En Windows, puedes usar el comando:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;powershell&lt;/span&gt; &lt;span class="n"&gt;-ExecutionPolicy&lt;/span&gt; &lt;span class="n"&gt;ByPass&lt;/span&gt; &lt;span class="n"&gt;-c&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;irm https://astral.sh/uv/install.ps1 | iex&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Una vez concluida la instalación, &lt;code&gt;uv&lt;/code&gt; estará disponible en tu sistema. Puedes comprobarla con el comando &lt;code&gt;uv --version&lt;/code&gt;.&lt;/p&gt;
@@ -72,7 +72,7 @@
 &lt;p&gt;Debes saber que el entorno virtual se crea automáticamente (si es que no existe) cuando ejecutas comandos como &lt;code&gt;uv run&lt;/code&gt;, &lt;code&gt;uv add&lt;/code&gt;, &lt;code&gt;uv sync&lt;/code&gt;, o &lt;code&gt;uv lock&lt;/code&gt;.&lt;/p&gt;
 &lt;h3 id="instalar-dependencias-de-ejecucion"&gt;Instalar dependencias de ejecución&lt;/h3&gt;
 &lt;p&gt;Las dependencias de ejecución son aquellas bibliotecas o paquetes que empleas directamente en el código de tu proyecto.&lt;/p&gt;
-&lt;p&gt;Por ejemplo, digamos que estás creando un proyecto the Inteligencia Artificial y quieres emplear la API de OpenAI. Puedes instalar la librería &lt;code&gt;openai&lt;/code&gt; con el siguiente commando:&lt;/p&gt;
+&lt;p&gt;Por ejemplo, digamos que estás creando un proyecto de Inteligencia Artificial y quieres emplear la API de OpenAI. Puedes instalar la librería &lt;code&gt;openai&lt;/code&gt; con el siguiente comando:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;uv&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;openai
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Este comando añade la librería &lt;code&gt;openai&lt;/code&gt; al proyecto como dependencia de ejecución.&lt;/p&gt;
@@ -111,7 +111,7 @@
 &lt;li&gt;&lt;a href="https://docs.python.org/es/3/reference/index.html" target="_blank"&gt;Language reference&lt;/a&gt;: Sintaxis del lenguaje&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://docs.python.org/es/3/howto/index.html" target="_blank"&gt;Cómos (&lt;em&gt;HOWTOs&lt;/em&gt;) de Python&lt;/a&gt;: Preguntas frecuentes&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Notarás que la documentación aún tiene fragmentos que no han sido traducidos completamente al Español. Te gustaría contribuir en la traducción? Consulta la &lt;a href="https://python-docs-es.readthedocs.io/es/3.13/CONTRIBUTING.html" target="_blank"&gt;guía de contribución&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Notarás que la documentación aún tiene fragmentos que no han sido traducidos completamente al Español. ¿Te gustaría contribuir en la traducción? Consulta la &lt;a href="https://python-docs-es.readthedocs.io/es/3.13/CONTRIBUTING.html" target="_blank"&gt;guía de contribución&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="2-el-sistema-interactivo-de-ayuda-help"&gt;2. El sistema interactivo de ayuda: &lt;code&gt;help()&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;La función integrada &lt;code&gt;help()&lt;/code&gt; proporciona información detallada sobre objetos, funciones y módulos:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;help&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -390,7 +390,7 @@
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;update
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Para poder ejecutar este comando, debes suministrar la contraseña del usuario root. De esto se encarga el comando &lt;code&gt;sudo&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Durante la ejecución de &lt;code&gt;apt update&lt;/code&gt;, el comando descargará los indices del repositorio y los actualizará en tu ordenador. De este modo, tendrás acceso a las últimas versiones disponibles para cada paquete de tu distribución. Con este paso, estás listo para instalar Python.&lt;/p&gt;
+&lt;p&gt;Durante la ejecución de &lt;code&gt;apt update&lt;/code&gt;, el comando descargará los índices del repositorio y los actualizará en tu ordenador. De este modo, tendrás acceso a las últimas versiones disponibles para cada paquete de tu distribución. Con este paso, estás listo para instalar Python.&lt;/p&gt;
 &lt;h2 id="paso-2-instalar-python-desde-los-repositorios-del-sistema"&gt;Paso 2: Instalar Python desde los repositorios del sistema&lt;/h2&gt;
 &lt;p&gt;Ahora que tienes la lista de paquetes actualizada, puedes instalar Python desde los repositorios de tu distribución con el siguiente comando:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;python3
@@ -496,7 +496,7 @@
 &lt;/div&gt;
 &lt;h2 id="scripts-y-programas-en-python"&gt;Scripts y programas en Python&lt;/h2&gt;
 &lt;p&gt;En informática, el término &lt;strong&gt;script&lt;/strong&gt; se emplea para designar un archivo que contiene una secuencia lógica de órdenes o comandos que un ordenador puede ejecutar. Con esto en mente, puedes definir un &lt;strong&gt;script Python&lt;/strong&gt; como una secuencia de instrucciones escritas en este lenguaje y que se almacena en un archivo de texto plano. Este archivo está diseñado para ser ejecutado directamente por el usuario.&lt;/p&gt;
-&lt;p&gt;El término script también suele emplearse para designar archivos que contienen código &lt;strong&gt;interpretado&lt;/strong&gt;. Es decir, código que require un intérprete que lo ejecute. Por ejemplo, los scripts que regularmente se emplean en sistemas Unix y que son escritos en lenguaje &lt;a href="https://es.wikipedia.org/wiki/Bash"&gt;Bash&lt;/a&gt; u otro lenguaje &lt;a href="https://es.wikipedia.org/wiki/Shell_de_Unix"&gt;shell&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;El término script también suele emplearse para designar archivos que contienen código &lt;strong&gt;interpretado&lt;/strong&gt;. Es decir, código que requiere un intérprete que lo ejecute. Por ejemplo, los scripts que regularmente se emplean en sistemas Unix y que son escritos en lenguaje &lt;a href="https://es.wikipedia.org/wiki/Bash"&gt;Bash&lt;/a&gt; u otro lenguaje &lt;a href="https://es.wikipedia.org/wiki/Shell_de_Unix"&gt;shell&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Los scripts pueden categorizarse como programas ejecutables. La diferencia es que los scripts son más simples que los programas o aplicaciones. Generalmente, se encargan de tareas específicas y poco complejas. Por ejemplo, puedes tener scripts para renombrar archivos en tu disco duro, automatizar la descarga de archivos, actualizar tu sistema, u otras tareas similares.&lt;/p&gt;
 &lt;p&gt;En contraste, los programas suelen ser más complejos y tener muchas más funcionalidades. Un editor de texto, un navegador, un particionador de discos son todos ejemplos de programas o aplicaciones. En cualquier caso, si usas Python para crear proyectos complejos como estos, tendrás un script de entrada (entry-point script) que te permite ejecutar el programa en cuestión.&lt;/p&gt;
 &lt;h2 id="ejecutar-scripts-con-el-comando-python"&gt;Ejecutar scripts con el comando &lt;code&gt;python&lt;/code&gt;&lt;/h2&gt;
@@ -799,7 +799,7 @@
 &lt;/div&gt;
 &lt;h2 id="que-es-python"&gt;Qué es Python?&lt;/h2&gt;
 &lt;p&gt;Python es un lenguaje de programación de alto nivel. Su sintaxis es muy clara y legible. Sus construcciones sintácticas se asemejan mucho al idioma inglés. Estas, y otras características, han propiciado que Python se convierta en un lenguaje muy popular, llegando a convertirse en una herramienta imprescindible para muchos profesionales de distintas disciplinas e industrias.&lt;/p&gt;
-&lt;p&gt;He aquí como la &lt;a href="https://docs.python.org/es/3/index.html"&gt;documentatión oficial&lt;/a&gt; define a Python:&lt;/p&gt;
+&lt;p&gt;He aquí como la &lt;a href="https://docs.python.org/es/3/index.html"&gt;documentación oficial&lt;/a&gt; define a Python:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Python es un lenguaje interpretado, interactivo y orientado a objetos. Incorpora módulos, excepciones, tipado dinámico, tipos de datos de muy alto nivel y clases. Python combina un poder destacado con una sintaxis muy clara. Tiene interfaces a muchas llamadas de sistema y bibliotecas, así como a varios sistemas de ventana, y es extensible en C o C++. También es usable como un lenguaje de extensión para aplicaciones que necesitan una interfaz programable. Por último, Python es portable: corre en muchas variantes de Unix, en Mac y en Windows 2000 y posteriores. (&lt;a href="https://docs.python.org/es/3/faq/general.html#what-is-python"&gt;Fuente&lt;/a&gt;)&lt;/p&gt;
 &lt;/blockquote&gt;

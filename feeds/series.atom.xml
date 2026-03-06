@@ -877,7 +877,7 @@ El archivo se cierra automáticamente al salir del bloque &lt;code&gt;with&lt;/c
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
 &lt;span class="p"&gt;[]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En estos ejemplos, el operador devuelve objetos concretos en lugar de los valores &lt;code&gt;True&lt;/code&gt; o &lt;code&gt;False&lt;/code&gt;. Esto se debe a a todo objeto en Python tiene un valor de verdad intrínseco. Estos son los objectos considerados falsos:&lt;/p&gt;
+&lt;p&gt;En estos ejemplos, el operador devuelve objetos concretos en lugar de los valores &lt;code&gt;True&lt;/code&gt; o &lt;code&gt;False&lt;/code&gt;. Esto se debe a que todo objeto en Python tiene un valor de verdad intrínseco. Estos son los objetos considerados falsos:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;constantes definidas para tener valor falso: &lt;code&gt;None&lt;/code&gt; y &lt;code&gt;False&lt;/code&gt;.&lt;/li&gt;
@@ -2096,7 +2096,7 @@ Related help topics: TRUTHVALUE
 &lt;li&gt;&lt;strong&gt;Homogéneo o heterogéneo&lt;/strong&gt;: Los arreglos pueden almacenar elementos del mismo tipo de dato o de tipos mixtos, dependiendo de la implementación.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;En Python, los arreglos no están integrados como una estructura de datos primitiva. La biblioteca estándar incluye el tipo &lt;code&gt;array.array&lt;/code&gt; para trabajar con datos numéricos homogéneos, pero en este artículo implementarás tu propio arreglo usando el módulo &lt;code&gt;ctypes&lt;/code&gt; para tener un mayor control de bajo nivel.&lt;/p&gt;
-&lt;p&gt;A través de ste ejercicio, podrás obtener una serie de habilidades fundamentales en Python, como puede ser el uso de clases y de métodos especiales, también conocidos como métodos mágicos o dunder.&lt;/p&gt;
+&lt;p&gt;A través de este ejercicio, podrás obtener una serie de habilidades fundamentales en Python, como puede ser el uso de clases y de métodos especiales, también conocidos como métodos mágicos o dunder.&lt;/p&gt;
 &lt;h2 id="operaciones-comunes-en-un-arreglo"&gt;Operaciones comunes en un arreglo&lt;/h2&gt;
 &lt;p&gt;A continuación, un resumen de las operaciones que soportará tu arreglo:&lt;/p&gt;
 &lt;table&gt;
@@ -2506,7 +2506,7 @@ Related help topics: TRUTHVALUE
     &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;return_value&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;div class="admonition note"&gt;
-&lt;p&gt;Los corchetes indican elementos opcionales. De modo similar, los corchetes angulares denotan elementos requerido.&lt;/p&gt;
+&lt;p&gt;Los corchetes indican elementos opcionales. De modo similar, los corchetes angulares denotan elementos requeridos.&lt;/p&gt;
 &lt;/div&gt;
 &lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
 &lt;p&gt;Aquí tienes algunos ejemplos de cómo puedes usar &lt;code&gt;def&lt;/code&gt; para definir tus funciones:&lt;/p&gt;
@@ -2729,7 +2729,7 @@ Related help topics: TRUTHVALUE
 &lt;/ul&gt;
 &lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
 &lt;p&gt;La palabra clave &lt;code&gt;True&lt;/code&gt; en Python es fundamental para evaluar condiciones y controlar el flujo de tu programa.&lt;/p&gt;
-&lt;p&gt;Conocer y emplear &lt;code&gt;True&lt;/code&gt; te permite trabajar eficazmente con estructuras lógicas y desarrollar programas que tomen decisiones de ejecución basadas en los resultados de las condiciones evaluadas.&lt;/p&gt;</content><category term="Series"/><category term="python"/><category term="palabras clave"/></entry><entry><title>Palabras clave en Python: None</title><link href="https://pythonscouts.com/python-none/" rel="alternate"/><published>2025-03-11T11:10:00+01:00</published><updated>2025-03-11T11:10:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-03-11:/python-none/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;None&lt;/code&gt; se utiliza para representar la ausencia de un valor o un valor nulo. &lt;code&gt;None&lt;/code&gt; un objeto único de su propia clase &lt;code&gt;NoneType&lt;/code&gt;.&lt;/p&gt;</summary><content type="html">&lt;p&gt;El objecto &lt;code&gt;None&lt;/code&gt; es comúnmente usado para indicar que una variable no tiene un valor real o valor con significado. Expresa ideas como inexistente, nulo, ninguno, nada y similares.&lt;/p&gt;
+&lt;p&gt;Conocer y emplear &lt;code&gt;True&lt;/code&gt; te permite trabajar eficazmente con estructuras lógicas y desarrollar programas que tomen decisiones de ejecución basadas en los resultados de las condiciones evaluadas.&lt;/p&gt;</content><category term="Series"/><category term="python"/><category term="palabras clave"/></entry><entry><title>Palabras clave en Python: None</title><link href="https://pythonscouts.com/python-none/" rel="alternate"/><published>2025-03-11T11:10:00+01:00</published><updated>2025-03-11T11:10:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-03-11:/python-none/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;None&lt;/code&gt; se utiliza para representar la ausencia de un valor o un valor nulo. &lt;code&gt;None&lt;/code&gt; es un objeto único de su propia clase &lt;code&gt;NoneType&lt;/code&gt;.&lt;/p&gt;</summary><content type="html">&lt;p&gt;El objeto &lt;code&gt;None&lt;/code&gt; es comúnmente usado para indicar que una variable no tiene un valor real o valor con significado. Expresa ideas como inexistente, nulo, ninguno, nada y similares.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#sintaxis"&gt;Sintaxis&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#ejemplos-practicos"&gt;Ejemplos prácticos&lt;/a&gt;&lt;/li&gt;
@@ -3485,7 +3485,7 @@ Related help topics: TRUTHVALUE
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Juan&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;25&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Programador&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;España&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Juan&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;25&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Programador&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;España&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En el primer ejemplo, concatenas varias cadenas para formar una cadena final. De modo similar, haces con listas y con tuplas. Sin embargo, debes notar que los operandos deben ser del mismo tipo de datos. Considera el ejemplo siguiente:&lt;/p&gt;
+&lt;p&gt;En el primer ejemplo, concatenas varias cadenas para formar una cadena final. De modo similar, lo haces con listas y con tuplas. Sin embargo, debes notar que los operandos deben ser del mismo tipo de datos. Considera el ejemplo siguiente:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Juan&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;25&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Programador&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;España&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="n"&gt;Traceback&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;most&lt;/span&gt; &lt;span class="n"&gt;recent&lt;/span&gt; &lt;span class="n"&gt;call&lt;/span&gt; &lt;span class="n"&gt;last&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="o"&gt;...&lt;/span&gt;

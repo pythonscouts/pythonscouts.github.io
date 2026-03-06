@@ -51,8 +51,8 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://pythonscouts.com/iniciando-con-pyside6-python/">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202603052242">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202603052242">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202603061856">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202603061856">
     <!-- Preconnect to CDNs -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
@@ -65,9 +65,9 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202603052242">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202603061856">
     <!-- Stork Search - Deferred -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202603052242">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202603061856">
 
 
     <!-- Article tags -->
@@ -113,13 +113,13 @@
     <meta name="twitter:image:alt" content="Iniciando con PySide6 para desarrollo GUI">
 
     <!-- Custom CSS for article -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202603052242">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202603061856">
 </head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
 <script
-    src="https://pythonscouts.com/theme/js/analytics.js?v=202603052242"
+    src="https://pythonscouts.com/theme/js/analytics.js?v=202603061856"
     defer
     data-analytics-id="G-R3C5PFSQ1S">
 </script>
@@ -318,7 +318,7 @@
 </div>
 <h2 id="conociendo-pyside6">Conociendo PySide6</h2>
 <p>PySide6 es una biblioteca que proporciona el enlace oficial entre Python y <a href="https://wiki.qt.io/About_Qt">Qt</a>, el cual es un framework de desarrollo en <a href="https://realpython.com/python-vs-cpp/">C++</a> para crear interfaces gráficas de usuario (GUIs). Proporciona <a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets.html">clases</a> y herramientas para la creación de GUIs, manejo de <a href="https://realpython.com/python-xml-parser/">XML</a>, comunicación de red, expresiones regulares, hilos, bases de datos SQL, navegación web y otras tecnologías disponibles en Qt.</p>
-<p>PySide6, también conocida como <a href="https://doc.qt.io/qtforpython-6/">Qt for Python</a>, es compatible con Windows, Linux, and macOS, por lo que puedes emplearla para desarrollar aplicaciones multiplataforma que tengan una apariencia nativa en cada plataforma.</p>
+<p>PySide6, también conocida como <a href="https://doc.qt.io/qtforpython-6/">Qt for Python</a>, es compatible con Windows, Linux y macOS, por lo que puedes emplearla para desarrollar aplicaciones multiplataforma que tengan una apariencia nativa en cada plataforma.</p>
 <p>Puedes usar PySide6 con una licencia comercial y en proyectos de código abierto con una licencia compatible con la licencia de Qt que estés empleando ya sea <a href="https://tldrlegal.com/license/gnu-lesser-general-public-license-v3-(lgpl-3)">LGPLv3</a> o <a href="https://tldrlegal.com/license/gnu-general-public-license-v2">GPLv2</a>.</p>
 <h2 id="instalando-pyside6">Instalando PySide6</h2>
 <p>Para instalar PySide6 en tu computadora, la opción recomendada es instalar desde el índice de paquetes de Python, <a href="https://realpython.com/pypi-publish-python-package/">PyPI</a>, usando el comando <code>pip</code>. Para esto, puedes crear un <a href="https://docs.python.org/es/3.13/glossary.html#term-virtual-environment">entorno virtual de Python</a> y luego instalar el paquete <code>pyside6</code>, ejecuta lo siguiente en tu línea de comandos, dependiendo de tu sistema operativo.</p>
@@ -767,7 +767,7 @@
 </code></pre></div>
 <p>Primeramente, creas una clase llamada <code>Window</code> que hereda de <code>QMainWindow</code>. Dentro del método <code>.__init__()</code>, llamas al inicializador de la clase base. El argumento <code>parent</code> se establece en <code>None</code> porque esta es la ventana principal de tu aplicación, por lo que no debe tener una ventana padre.</p>
 <p>Luego, estableces el título de la ventana y creas un objeto <code>QLabel</code> para usar como widget central de la ventana. Finalmente, llamas los métodos no públicos <code>._createMenu()</code>, <code>._createToolBar()</code>, <code>._createStatusBar()</code> para crear el menú principal, una barra de herramientas y la barra de estado.</p>
-<p>El widget central y la barra de estado muestran mensajes identificativos. El menú y la barra de herramientas mostrarán una opcion para salir de la aplicación.</p>
+<p>El widget central y la barra de estado muestran mensajes identificativos. El menú y la barra de herramientas mostrarán una opción para salir de la aplicación.</p>
 <p>En macOS, cuando ejecutas la aplicación de ejemplo anterior, obtendrás una ventana como la siguiente:</p>
 <p><img src="../images/articles/iniciando-con-pyside6-python/pyside6-ventana-principal-macOS.png" class="mx-auto d-block mt-2" alt="Ventana principal en PySide6 - macOS"></p>
 <div class="text-center mb-5 lead"><em>Ventana principal en PySide6 - macOS</em></div>
@@ -1045,12 +1045,12 @@
     <!-- JS Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
     <!-- Stork and site scripts -->
-    <script src="https://pythonscouts.com/theme/js/stork.js?v=202603052242" defer></script>
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202603061856" defer></script>
     <script
-        src="https://pythonscouts.com/theme/js/site.js?v=202603052242"
+        src="https://pythonscouts.com/theme/js/site.js?v=202603061856"
         defer
         data-stork-name="sitesearch"
-        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202603052242"
+        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202603061856"
         data-stork-index="https://pythonscouts.com/search-index.st">
     </script>
 
