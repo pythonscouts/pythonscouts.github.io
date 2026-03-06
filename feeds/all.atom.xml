@@ -2392,7 +2392,7 @@ RootWidget:
 &lt;blockquote&gt;
 &lt;p&gt;[Las palabras clave] Deben escribirse exactamente como están escritas aquí: (&lt;a href="https://docs.python.org/es/3/reference/lexical_analysis.html#keywords"&gt;Fuente&lt;/a&gt;)&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Cuando la documentación dice que deben escribirse de esta forma, esto incluye el detalle de las mayúsculas, como en los casos de &lt;a href="https://pythonscouts.com/python-none/"&gt;&lt;code&gt;None&lt;/code&gt;&lt;/a&gt;, &lt;a href="https://pythonscouts.com/python-false/"&gt;&lt;code&gt;False&lt;/code&gt;&lt;/a&gt; y &lt;a href="https://pythonscouts.com/python-true/"&gt;&lt;code&gt;True&lt;/code&gt;&lt;/a&gt;. Sí, Python discrimina entre mayúsculas y minúsculas, de modo que las variantes &lt;code&gt;True&lt;/code&gt; y &lt;code&gt;true&lt;/code&gt; no son equivalentes.&lt;/p&gt;
+&lt;p&gt;Cuando la documentación dice que deben escribirse de esta forma, esto incluye el detalle de las mayúsculas, como en los casos de &lt;a href="/python-none/"&gt;&lt;code&gt;None&lt;/code&gt;&lt;/a&gt;, &lt;a href="/python-false/"&gt;&lt;code&gt;False&lt;/code&gt;&lt;/a&gt; y &lt;a href="/python-true/"&gt;&lt;code&gt;True&lt;/code&gt;&lt;/a&gt;. Sí, Python discrimina entre mayúsculas y minúsculas, de modo que las variantes &lt;code&gt;True&lt;/code&gt; y &lt;code&gt;true&lt;/code&gt; no son equivalentes.&lt;/p&gt;
 &lt;p&gt;Cualquier error de escritura en una palabra clave provoca una excepción del tipo &lt;a href="https://docs.python.org/es/3/library/exceptions.html#NameError"&gt;&lt;code&gt;NameError&lt;/code&gt;&lt;/a&gt;. Este comportamiento se debe a que como la palabra está mal escrita, Python asume que se trata de un identificador o nombre y al no encontrar el nombre, levanta la excepción.&lt;/p&gt;
 &lt;p&gt;Con esta breve introducción al concepto de palabras clave, estás listo para conocer cuáles son las palabras clave de Python.&lt;/p&gt;
 &lt;h2 id="cuales-son-las-palabras-clave-de-python"&gt;¿Cuáles son las palabras clave de Python?&lt;/h2&gt;
@@ -2448,7 +2448,7 @@ RootWidget:
 &lt;p&gt;El módulo &lt;a href="https://docs.python.org/es/3/library/keyword.html#module-keyword"&gt;&lt;code&gt;keyword&lt;/code&gt;&lt;/a&gt; de la &lt;a href="https://docs.python.org/es/3/library/index.html"&gt;biblioteca estándar&lt;/a&gt; exporta las listas &lt;a href="https://docs.python.org/es/3/library/keyword.html#keyword.kwlist"&gt;&lt;code&gt;kwlist&lt;/code&gt;&lt;/a&gt; y &lt;a href="https://docs.python.org/es/3/reference/lexical_analysis.html#soft-keywords"&gt;&lt;code&gt;softkwlist&lt;/code&gt;&lt;/a&gt; que contienen todas las palabras clave de Python.&lt;/p&gt;
 &lt;p&gt;En el código anterior, primeramente importas &lt;code&gt;kwlist&lt;/code&gt; y &lt;code&gt;softkwlist&lt;/code&gt; desde &lt;code&gt;keyword&lt;/code&gt; y luego muestras su contenido. Python 3.13 tiene 39 palabras clave, incluidas las suaves, tal y como resulta de ejecutar &lt;code&gt;len(kwlist + softkwlist)&lt;/code&gt; en la última línea de código del ejemplo.&lt;/p&gt;
 &lt;p&gt;Debes tener en cuenta que el número de palabras clave varía en dependencia de la versión de Python que estés usando actualmente.&lt;/p&gt;
-&lt;p&gt;Otra manera de consultar las palabras clave de Python es mediante la función &lt;a href="https://pythonscouts.com/obtener-ayuda-python/#2-el-sistema-interactivo-de-ayuda-help"&gt;&lt;code&gt;help()&lt;/code&gt;&lt;/a&gt;. Se trata de una función incluida (&lt;em&gt;built-in&lt;/em&gt;) que te permite consultar la documentación y obtener ayuda rápida sobre cualquier objeto en Python.&lt;/p&gt;
+&lt;p&gt;Otra manera de consultar las palabras clave de Python es mediante la función &lt;a href="/obtener-ayuda-python/#2-el-sistema-interactivo-de-ayuda-help"&gt;&lt;code&gt;help()&lt;/code&gt;&lt;/a&gt;. Se trata de una función incluida (&lt;em&gt;built-in&lt;/em&gt;) que te permite consultar la documentación y obtener ayuda rápida sobre cualquier objeto en Python.&lt;/p&gt;
 &lt;p&gt;Para consultar las palabras clave de Python por esta vía, primeramente ejecuta &lt;code&gt;help()&lt;/code&gt; para entrar al &lt;strong&gt;sistema de ayuda integrado&lt;/strong&gt; de Python. Luego consulta el contenido de la página de palabras clave usando el comando &lt;code&gt;keywords&lt;/code&gt; como en el ejemplo siguiente:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;help&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 
@@ -2509,7 +2509,7 @@ RootWidget:
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;assert&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;afirmar&lt;/td&gt;
-&lt;td&gt;Verifica si una &lt;a href="https://pythonscouts.com/expresiones-python/"&gt;expresión&lt;/a&gt; es verdadera y lanza un error si es falsa&lt;/td&gt;
+&lt;td&gt;Verifica si una &lt;a href="/expresiones-python/"&gt;expresión&lt;/a&gt; es verdadera y lanza un error si es falsa&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;async&lt;/code&gt;&lt;/td&gt;
@@ -2579,12 +2579,12 @@ RootWidget:
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;global&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;global&lt;/td&gt;
-&lt;td&gt;Indica que una &lt;a href="https://pythonscouts.com/valores-python/"&gt;variable&lt;/a&gt; se define en el ámbito global&lt;/td&gt;
+&lt;td&gt;Indica que una &lt;a href="/valores-python/"&gt;variable&lt;/a&gt; se define en el ámbito global&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;if&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;si&lt;/td&gt;
-&lt;td&gt;Inicia una &lt;a href="https://pythonscouts.com/condicionales-python/"&gt;sentencia condicional&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Inicia una &lt;a href="/condicionales-python/"&gt;sentencia condicional&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;import&lt;/code&gt;&lt;/td&gt;
@@ -2740,7 +2740,7 @@ Related help topics: TRUTHVALUE
 &lt;li&gt;Las &lt;strong&gt;palabras clave de Python&lt;/strong&gt; y su significado&lt;/li&gt;
 &lt;li&gt;Cómo usar la función &lt;code&gt;help()&lt;/code&gt; para obtener &lt;strong&gt;ayuda&lt;/strong&gt; sobre las palabras clave&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Con estos conocimientos tienes las bases y las herramientas necesarias para profundizar en los conceptos y definiciones que encierra cada una de las palabras clave de Python.&lt;/p&gt;</content><category term="Series"/><category term="python"/><category term="palabras clave"/></entry><entry><title>Palabras clave en Python: return</title><link href="https://pythonscouts.com/python-return/" rel="alternate"/><published>2025-12-06T20:30:00+01:00</published><updated>2025-12-06T20:30:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-12-06:/python-return/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;return&lt;/code&gt; se utiliza para finalizar la ejecución de una función y enviar el resultado al código que llama a dicha función.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Esta &lt;a href="https://pythonscouts.com/python-palabras-clave/"&gt;palabra clave&lt;/a&gt; es una parte esencial de las funciones porque permite que estas devuelvan resultados útiles que puedes utilizar posteriormente en tu código.&lt;/p&gt;
+&lt;p&gt;Con estos conocimientos tienes las bases y las herramientas necesarias para profundizar en los conceptos y definiciones que encierra cada una de las palabras clave de Python.&lt;/p&gt;</content><category term="Series"/><category term="python"/><category term="palabras clave"/></entry><entry><title>Palabras clave en Python: return</title><link href="https://pythonscouts.com/python-return/" rel="alternate"/><published>2025-12-06T20:30:00+01:00</published><updated>2025-12-06T20:30:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-12-06:/python-return/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;return&lt;/code&gt; se utiliza para finalizar la ejecución de una función y enviar el resultado al código que llama a dicha función.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Esta &lt;a href="/python-palabras-clave/"&gt;palabra clave&lt;/a&gt; es una parte esencial de las funciones porque permite que estas devuelvan resultados útiles que puedes utilizar posteriormente en tu código.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#sintaxis"&gt;Sintaxis&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#ejemplos-practicos"&gt;Ejemplos prácticos&lt;/a&gt;&lt;/li&gt;
@@ -2754,7 +2754,7 @@ Related help topics: TRUTHVALUE
     &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;exprssion&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Donde &lt;code&gt;exprssion&lt;/code&gt; es opcional y representa el valor que deseas devolver. Si no proporcionas ninguna expresión, la función devolverá &lt;a href="https://pythonscouts.com/python-none/"&gt;&lt;code&gt;None&lt;/code&gt;&lt;/a&gt; de manera predeterminada.&lt;/p&gt;
+&lt;p&gt;Donde &lt;code&gt;exprssion&lt;/code&gt; es opcional y representa el valor que deseas devolver. Si no proporcionas ninguna expresión, la función devolverá &lt;a href="/python-none/"&gt;&lt;code&gt;None&lt;/code&gt;&lt;/a&gt; de manera predeterminada.&lt;/p&gt;
 &lt;p&gt;Si omites la sentencia &lt;code&gt;return&lt;/code&gt;, Python automáticamente devuelve &lt;code&gt;None&lt;/code&gt; al concluir la ejecución de tu función.&lt;/p&gt;
 &lt;p&gt;También debes tener en cuenta que solo puedes usar &lt;code&gt;return&lt;/code&gt; dentro de funciones.&lt;/p&gt;
 &lt;h2 id="ejemplos-practicos"&gt;Ejemplos prácticos&lt;/h2&gt;
@@ -2767,7 +2767,7 @@ Related help topics: TRUTHVALUE
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;
 &lt;span class="mi"&gt;8&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En este ejemplo, la función &lt;code&gt;add()&lt;/code&gt; toma dos argumentos numéricos &lt;code&gt;a&lt;/code&gt; y &lt;code&gt;b&lt;/code&gt;, y utiliza &lt;code&gt;return&lt;/code&gt; para devolver la suma de estos. El valor devuelto se almacena en la &lt;a href="https://pythonscouts.com/variables-python/"&gt;variable&lt;/a&gt; &lt;code&gt;result&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;En este ejemplo, la función &lt;code&gt;add()&lt;/code&gt; toma dos argumentos numéricos &lt;code&gt;a&lt;/code&gt; y &lt;code&gt;b&lt;/code&gt;, y utiliza &lt;code&gt;return&lt;/code&gt; para devolver la suma de estos. El valor devuelto se almacena en la &lt;a href="/variables-python/"&gt;variable&lt;/a&gt; &lt;code&gt;result&lt;/code&gt;.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;no_return&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Hola!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="k"&gt;return&lt;/span&gt;
@@ -3071,7 +3071,7 @@ Related help topics: TRUTHVALUE
 &lt;span class="n"&gt;Array&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;size&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id="conclusion"&gt;Conclusión&lt;/h2&gt;
-&lt;p&gt;Has aprendido cómo implementar un arreglo de tamaño fijo que proporciona operaciones esenciales como indexación, iteración y pertenencia, al tiempo que refuerza la consistencia del tipo de dato de sus elementos. Este conocimiento te sirve de base para entender estructuras de datos fundamentales en Python.&lt;/p&gt;</content><category term="Series"/><category term="python"/></entry><entry><title>Palabras clave en Python: while</title><link href="https://pythonscouts.com/python-while/" rel="alternate"/><published>2025-11-22T21:40:00+01:00</published><updated>2025-11-22T21:40:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-11-22:/python-while/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;while&lt;/code&gt; te permite definir bucles que ejecutan un bloque de código repetidamente mientras una condición sea verdadera.&lt;/p&gt;</summary><content type="html">&lt;p&gt;La &lt;a href="https://pythonscouts.com/python-palabras-clave/"&gt;palabra clave&lt;/a&gt; &lt;code&gt;while&lt;/code&gt; en Python define una estructura de control llamada bucle. Este tipo de bucle te permite ejecutar un bloque de código múltiples veces mientras una condición lógica sea verdadera. Si la condición es falsa desde el principio, el cuerpo del bucle no se ejecuta ni una sola vez.&lt;/p&gt;
+&lt;p&gt;Has aprendido cómo implementar un arreglo de tamaño fijo que proporciona operaciones esenciales como indexación, iteración y pertenencia, al tiempo que refuerza la consistencia del tipo de dato de sus elementos. Este conocimiento te sirve de base para entender estructuras de datos fundamentales en Python.&lt;/p&gt;</content><category term="Series"/><category term="python"/></entry><entry><title>Palabras clave en Python: while</title><link href="https://pythonscouts.com/python-while/" rel="alternate"/><published>2025-11-22T21:40:00+01:00</published><updated>2025-11-22T21:40:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-11-22:/python-while/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;while&lt;/code&gt; te permite definir bucles que ejecutan un bloque de código repetidamente mientras una condición sea verdadera.&lt;/p&gt;</summary><content type="html">&lt;p&gt;La &lt;a href="/python-palabras-clave/"&gt;palabra clave&lt;/a&gt; &lt;code&gt;while&lt;/code&gt; en Python define una estructura de control llamada bucle. Este tipo de bucle te permite ejecutar un bloque de código múltiples veces mientras una condición lógica sea verdadera. Si la condición es falsa desde el principio, el cuerpo del bucle no se ejecuta ni una sola vez.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#sintaxis"&gt;Sintaxis&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#ejemplos-practicos"&gt;Ejemplos prácticos&lt;/a&gt;&lt;/li&gt;
@@ -3122,7 +3122,7 @@ Related help topics: TRUTHVALUE
 &lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
 &lt;p&gt;El bucle &lt;code&gt;while&lt;/code&gt; es una herramienta muy útil en Python, pues te permite ejecutar código repetidamente mientras se cumpla una condición.&lt;/p&gt;
 &lt;p&gt;Conocer y utilizar la palabra clave &lt;code&gt;while&lt;/code&gt; te proporciona la flexibilidad de controlar el flujo de tu programa y manejar tareas repetitivas de manera eficiente.&lt;/p&gt;</content><category term="Series"/><category term="python"/><category term="palabras clave"/></entry><entry><title>Cómo gestionar un proyecto Python con uv?</title><link href="https://pythonscouts.com/gestionar-proyecto-python-uv/" rel="alternate"/><published>2025-10-05T22:55:00+02:00</published><updated>2025-10-05T22:55:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-10-05:/gestionar-proyecto-python-uv/</id><summary type="html">&lt;p&gt;La herramienta de línea de comandos &lt;code&gt;uv&lt;/code&gt; te permite gestionar proyectos Python y sus dependencias de manera eficiente y precisa.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Esta herramienta ofrece una alternativa rápida y completa a otras como &lt;code&gt;pip&lt;/code&gt;, &lt;code&gt;pip-tools&lt;/code&gt; o &lt;code&gt;poetry&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Con &lt;code&gt;uv&lt;/code&gt; puedes instalar diferentes versiones de Python, crear proyectos desde cero, gestionar &lt;a href="https://pythonscouts.com/entorno-virtual-python/"&gt;entornos virtuales&lt;/a&gt;, añadir y remover dependencias garantizando reproducibilidad, e incluso construir y publicar tus proyectos en PyPI. Todo desde un único flujo de trabajo.&lt;/p&gt;
+&lt;p&gt;Con &lt;code&gt;uv&lt;/code&gt; puedes instalar diferentes versiones de Python, crear proyectos desde cero, gestionar &lt;a href="/entorno-virtual-python/"&gt;entornos virtuales&lt;/a&gt;, añadir y remover dependencias garantizando reproducibilidad, e incluso construir y publicar tus proyectos en PyPI. Todo desde un único flujo de trabajo.&lt;/p&gt;
 &lt;p&gt;En esta guía aprenderás lo básico de cómo usar &lt;code&gt;uv&lt;/code&gt; para ejecutar las tareas más comunes de gestión de proyectos Python, desde la instalación hasta la distribución.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#instalar-uv-en-tu-sistema"&gt;Instalar uv en tu sistema&lt;/a&gt;&lt;/li&gt;
@@ -3216,7 +3216,7 @@ Related help topics: TRUTHVALUE
 &lt;p&gt;El primer comando genera los artefactos de distribución que se guardan en el directorio &lt;code&gt;dist/&lt;/code&gt; por defecto. El segundo comando sube estos artefactos a PyPI.&lt;/p&gt;
 &lt;p&gt;Debes notar que para que estos comandos funcionen correctamente, es necesario configurar el script de entrada del proyecto y el sistema de construcción (build system). Todo esto en el archivo &lt;code&gt;pyproject.toml&lt;/code&gt; de tu proyecto.&lt;/p&gt;
 &lt;h2 id="conclusion"&gt;Conclusión&lt;/h2&gt;
-&lt;p&gt;Con &lt;code&gt;uv&lt;/code&gt; puedes gestionar todo el ciclo de vida de un proyecto Python desde la línea de comandos de manera rápida, precisa y eficiente. Es una alternativa ligera y moderna frente a herramientas como &lt;code&gt;poetry&lt;/code&gt; y puede reemplazar la funcionalidad de herramientas como &lt;code&gt;pyenv&lt;/code&gt;, &lt;code&gt;pip&lt;/code&gt;, &lt;code&gt;venv&lt;/code&gt;, &lt;code&gt;pip-tools&lt;/code&gt;, &lt;code&gt;twine&lt;/code&gt; entre otras.&lt;/p&gt;</content><category term="Guías"/><category term="python"/></entry><entry><title>Palabras clave en Python: for</title><link href="https://pythonscouts.com/python-for/" rel="alternate"/><published>2025-10-02T20:00:00+02:00</published><updated>2025-10-02T20:00:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-10-02:/python-for/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;for&lt;/code&gt; se utiliza para iterar sobre secuencias de elementos como pueden ser las listas, tuplas, cadenas, o cualquier objeto que sea iterable.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Esta &lt;a href="https://pythonscouts.com/python-palabras-clave/"&gt;palabra clave&lt;/a&gt; define una estructura de control llamada &lt;strong&gt;ciclo&lt;/strong&gt; o &lt;strong&gt;bucle&lt;/strong&gt; que te permite ejecutar acciones sobre o con cada elemento en la secuencia, facilitando la automatización de tareas repetitivas.&lt;/p&gt;
+&lt;p&gt;Con &lt;code&gt;uv&lt;/code&gt; puedes gestionar todo el ciclo de vida de un proyecto Python desde la línea de comandos de manera rápida, precisa y eficiente. Es una alternativa ligera y moderna frente a herramientas como &lt;code&gt;poetry&lt;/code&gt; y puede reemplazar la funcionalidad de herramientas como &lt;code&gt;pyenv&lt;/code&gt;, &lt;code&gt;pip&lt;/code&gt;, &lt;code&gt;venv&lt;/code&gt;, &lt;code&gt;pip-tools&lt;/code&gt;, &lt;code&gt;twine&lt;/code&gt; entre otras.&lt;/p&gt;</content><category term="Guías"/><category term="python"/></entry><entry><title>Palabras clave en Python: for</title><link href="https://pythonscouts.com/python-for/" rel="alternate"/><published>2025-10-02T20:00:00+02:00</published><updated>2025-10-02T20:00:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-10-02:/python-for/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;for&lt;/code&gt; se utiliza para iterar sobre secuencias de elementos como pueden ser las listas, tuplas, cadenas, o cualquier objeto que sea iterable.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Esta &lt;a href="/python-palabras-clave/"&gt;palabra clave&lt;/a&gt; define una estructura de control llamada &lt;strong&gt;ciclo&lt;/strong&gt; o &lt;strong&gt;bucle&lt;/strong&gt; que te permite ejecutar acciones sobre o con cada elemento en la secuencia, facilitando la automatización de tareas repetitivas.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#sintaxis"&gt;Sintaxis&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#ejemplos-practicos"&gt;Ejemplos prácticos&lt;/a&gt;&lt;/li&gt;
@@ -3242,9 +3242,9 @@ Related help topics: TRUTHVALUE
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En este ejemplo, el ciclo &lt;code&gt;for&lt;/code&gt; itera sobre una lista de números, y &lt;code&gt;print(number)&lt;/code&gt; se ejecuta para cada número en la lista.&lt;/p&gt;
 &lt;div class="admonition note"&gt;
-&lt;p&gt;Para aprender más sobre los ciclos &lt;code&gt;for&lt;/code&gt; revisa el tutorial &lt;a href="https://pythonscouts.com/ciclos-for-python/"&gt;Python a través de ejemplos: Ciclos o bucles &lt;code&gt;for&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Para aprender más sobre los ciclos &lt;code&gt;for&lt;/code&gt; revisa el tutorial &lt;a href="/ciclos-for-python/"&gt;Python a través de ejemplos: Ciclos o bucles &lt;code&gt;for&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;También puedes iterar sobre los caracteres de una &lt;a href="https://pythonscouts.com/valores-python/#valores-de-cadena-de-caracteres"&gt;cadena&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;También puedes iterar sobre los caracteres de una &lt;a href="/valores-python/#valores-de-cadena-de-caracteres"&gt;cadena&lt;/a&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;letter&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Python&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;letter&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;
@@ -3397,7 +3397,7 @@ Related help topics: TRUTHVALUE
 &lt;/ul&gt;
 &lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
 &lt;p&gt;La palabra clave &lt;code&gt;def&lt;/code&gt; en Python es fundamental para definir funciones, lo que te permite estructurar tu código de manera eficiente y reutilizable.&lt;/p&gt;
-&lt;p&gt;Conocer y utilizar &lt;code&gt;def&lt;/code&gt; te ayuda a escribir programas más organizados y modulares, encapsulando lógica para tareas específicas.&lt;/p&gt;</content><category term="Series"/><category term="python"/><category term="palabras clave"/></entry><entry><title>Palabras clave en Python: and</title><link href="https://pythonscouts.com/python-and/" rel="alternate"/><published>2025-04-18T13:50:00+02:00</published><updated>2025-04-18T13:50:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-04-18:/python-and/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;and&lt;/code&gt; se utiliza como un operador lógico que conecta dos expresiones u objetos con el fin de verificar el valor de verdad de ambos.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Este operador es comúnmente empleado para combinar múltiples &lt;a href="https://pythonscouts.com/condicionales-python/"&gt;condiciones&lt;/a&gt; en una sola expresión lógica o condición compuesta. En este contexto, el operador devuelve un valor verdadero si ambas condiciones son verdaderas y un valor falso si al menos una de las condiciones es falsa.&lt;/p&gt;
+&lt;p&gt;Conocer y utilizar &lt;code&gt;def&lt;/code&gt; te ayuda a escribir programas más organizados y modulares, encapsulando lógica para tareas específicas.&lt;/p&gt;</content><category term="Series"/><category term="python"/><category term="palabras clave"/></entry><entry><title>Palabras clave en Python: and</title><link href="https://pythonscouts.com/python-and/" rel="alternate"/><published>2025-04-18T13:50:00+02:00</published><updated>2025-04-18T13:50:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-04-18:/python-and/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;and&lt;/code&gt; se utiliza como un operador lógico que conecta dos expresiones u objetos con el fin de verificar el valor de verdad de ambos.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Este operador es comúnmente empleado para combinar múltiples &lt;a href="/condicionales-python/"&gt;condiciones&lt;/a&gt; en una sola expresión lógica o condición compuesta. En este contexto, el operador devuelve un valor verdadero si ambas condiciones son verdaderas y un valor falso si al menos una de las condiciones es falsa.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#sintaxis"&gt;Sintaxis&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#ejemplos-practicos"&gt;Ejemplos prácticos&lt;/a&gt;&lt;/li&gt;
@@ -3410,7 +3410,7 @@ Related help topics: TRUTHVALUE
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;expression_1&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;expression_2&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="o"&gt;...&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;expression_n&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Cada una de las expresiones involucradas puede ser cualquier expresión u objeto Python. La parte de la sintaxis encerrada entre corchetes es opcional y expresa la posibilidad de encadenar múltiples expresiones con varias instancias de &lt;code&gt;and&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Es importante recordar que todos los objetos Python tienen un valor de verdad asociado. Por lo tanto, &lt;code&gt;and&lt;/code&gt; puede relacionar cualquier objeto y no está limitado a expresiones booleanas que devuelvan &lt;a href="https://pythonscouts.com/python-true/"&gt;&lt;code&gt;True&lt;/code&gt;&lt;/a&gt; o &lt;a href="https://pythonscouts.com/python-false/"&gt;&lt;code&gt;False&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Es importante recordar que todos los objetos Python tienen un valor de verdad asociado. Por lo tanto, &lt;code&gt;and&lt;/code&gt; puede relacionar cualquier objeto y no está limitado a expresiones booleanas que devuelvan &lt;a href="/python-true/"&gt;&lt;code&gt;True&lt;/code&gt;&lt;/a&gt; o &lt;a href="/python-false/"&gt;&lt;code&gt;False&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;La tabla de verdad del operador cuando lo usamos con expresiones lógicas se resume a continuación:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -3519,7 +3519,7 @@ Related help topics: TRUTHVALUE
 &lt;span class="kc"&gt;None&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En este ejemplo, cuando tienes un usuario activo, puedes usar &lt;code&gt;and&lt;/code&gt; para modificar el nombre de usuario para que se muestre con letra inicial mayúscula. Si por el contrario, no tienes ningún usuario activo (&lt;code&gt;current_user = None&lt;/code&gt;), la expresión de la derecha no se evalúa.&lt;/p&gt;
-&lt;p&gt;Cómo puedes confirmar que la expresión de la derecha no se evaluó? Si intentas llamar al método &lt;code&gt;.title()&lt;/code&gt; en el objeto &lt;a href="https://pythonscouts.com/python-none/"&gt;&lt;code&gt;None&lt;/code&gt;&lt;/a&gt;, Python genera una excepción de tipo &lt;code&gt;AttributeError&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;Cómo puedes confirmar que la expresión de la derecha no se evaluó? Si intentas llamar al método &lt;code&gt;.title()&lt;/code&gt; en el objeto &lt;a href="/python-none/"&gt;&lt;code&gt;None&lt;/code&gt;&lt;/a&gt;, Python genera una excepción de tipo &lt;code&gt;AttributeError&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;current_user&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;Traceback&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;most&lt;/span&gt; &lt;span class="n"&gt;recent&lt;/span&gt; &lt;span class="n"&gt;call&lt;/span&gt; &lt;span class="n"&gt;last&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="o"&gt;...&lt;/span&gt;
@@ -3535,7 +3535,7 @@ Related help topics: TRUTHVALUE
 &lt;/ul&gt;
 &lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
 &lt;p&gt;La palabra clave &lt;code&gt;and&lt;/code&gt; en Python es fundamental para crear condiciones compuestas que conecten múltiples condiciones simples entre sí.&lt;/p&gt;
-&lt;p&gt;Conocer y emplear &lt;code&gt;and&lt;/code&gt; te permite construir expresiones lógicas más complejas y precisas, lo cual es esencial para la toma de decisiones en tus programas.&lt;/p&gt;</content><category term="Series"/><category term="python"/><category term="palabras clave"/></entry><entry><title>Palabras clave en Python: True</title><link href="https://pythonscouts.com/python-true/" rel="alternate"/><published>2025-04-12T11:00:00+02:00</published><updated>2025-04-12T11:00:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-04-12:/python-true/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;True&lt;/code&gt; representa un valor booleano que indica que una condición u objeto es verdadero.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;code&gt;True&lt;/code&gt; es comúnmente el resultado de evaluar condiciones y expresa la veracidad de una declaración en el contexto de operaciones lógicas y de control de flujo como &lt;a href="https://pythonscouts.com/condicionales-python/"&gt;condicionales&lt;/a&gt; y ciclos &lt;code&gt;while&lt;/code&gt;. También puedes emplearla como valor por defecto de argumentos opcionales en funciones y métodos.&lt;/p&gt;
+&lt;p&gt;Conocer y emplear &lt;code&gt;and&lt;/code&gt; te permite construir expresiones lógicas más complejas y precisas, lo cual es esencial para la toma de decisiones en tus programas.&lt;/p&gt;</content><category term="Series"/><category term="python"/><category term="palabras clave"/></entry><entry><title>Palabras clave en Python: True</title><link href="https://pythonscouts.com/python-true/" rel="alternate"/><published>2025-04-12T11:00:00+02:00</published><updated>2025-04-12T11:00:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-04-12:/python-true/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;True&lt;/code&gt; representa un valor booleano que indica que una condición u objeto es verdadero.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;code&gt;True&lt;/code&gt; es comúnmente el resultado de evaluar condiciones y expresa la veracidad de una declaración en el contexto de operaciones lógicas y de control de flujo como &lt;a href="/condicionales-python/"&gt;condicionales&lt;/a&gt; y ciclos &lt;code&gt;while&lt;/code&gt;. También puedes emplearla como valor por defecto de argumentos opcionales en funciones y métodos.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#sintaxis"&gt;Sintaxis&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#ejemplos-practicos"&gt;Ejemplos prácticos&lt;/a&gt;&lt;/li&gt;
@@ -3573,7 +3573,7 @@ Related help topics: TRUTHVALUE
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;greet&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Pythonista&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;informal&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;Buenos&lt;/span&gt; &lt;span class="n"&gt;días&lt;/span&gt; &lt;span class="n"&gt;Pythonista&lt;/span&gt;&lt;span class="err"&gt;!&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En este ejemplo, el argumento &lt;code&gt;informal&lt;/code&gt; tiene un valor por defecto igual a &lt;code&gt;True&lt;/code&gt;. Esto significa que cuando llamas la función sin pasarle un valor explícito a &lt;code&gt;informal&lt;/code&gt; obtienes un saludo informal. Observa que cuando llamas a la función con &lt;code&gt;informal&lt;/code&gt; igual a &lt;a href="https://pythonscouts.com/python-false/"&gt;&lt;code&gt;False&lt;/code&gt;&lt;/a&gt; (el valor de verdad opuesto a &lt;code&gt;True&lt;/code&gt;), entonces el saludo se vuelve formal porque se ejecuta la cláusula &lt;code&gt;else&lt;/code&gt; de la condicional.&lt;/p&gt;
+&lt;p&gt;En este ejemplo, el argumento &lt;code&gt;informal&lt;/code&gt; tiene un valor por defecto igual a &lt;code&gt;True&lt;/code&gt;. Esto significa que cuando llamas la función sin pasarle un valor explícito a &lt;code&gt;informal&lt;/code&gt; obtienes un saludo informal. Observa que cuando llamas a la función con &lt;code&gt;informal&lt;/code&gt; igual a &lt;a href="/python-false/"&gt;&lt;code&gt;False&lt;/code&gt;&lt;/a&gt; (el valor de verdad opuesto a &lt;code&gt;True&lt;/code&gt;), entonces el saludo se vuelve formal porque se ejecuta la cláusula &lt;code&gt;else&lt;/code&gt; de la condicional.&lt;/p&gt;
 &lt;div class="admonition note"&gt;
 &lt;p&gt;En Python, es una práctica común y más idiomática no comparar explícitamente las condiciones con &lt;code&gt;True&lt;/code&gt; o &lt;code&gt;False&lt;/code&gt;. En lugar de &lt;code&gt;if informal == True&lt;/code&gt;, simplemente puedes usar &lt;code&gt;if informal&lt;/code&gt;. Esto hace que tu código sea más limpio y conciso.&lt;/p&gt;
 &lt;/div&gt;
@@ -3617,7 +3617,7 @@ Related help topics: TRUTHVALUE
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;greet&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Ana&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;Hola&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Ana&lt;/span&gt;&lt;span class="err"&gt;!&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En este segundo ejemplo, la función &lt;code&gt;greet()&lt;/code&gt; acepta el argumento &lt;code&gt;name&lt;/code&gt; cuyo valor por defecto es &lt;code&gt;None&lt;/code&gt;. Si llamas a la función sin argumentos, entonces obtienes &lt;a href="https://pythonscouts.com/python-hola-mundo/"&gt;&lt;code&gt;Hola, mundo!&lt;/code&gt;&lt;/a&gt; como respuesta. Si le pasas un nombre, la función saluda a la persona deseada.&lt;/p&gt;
+&lt;p&gt;En este segundo ejemplo, la función &lt;code&gt;greet()&lt;/code&gt; acepta el argumento &lt;code&gt;name&lt;/code&gt; cuyo valor por defecto es &lt;code&gt;None&lt;/code&gt;. Si llamas a la función sin argumentos, entonces obtienes &lt;a href="/python-hola-mundo/"&gt;&lt;code&gt;Hola, mundo!&lt;/code&gt;&lt;/a&gt; como respuesta. Si le pasas un nombre, la función saluda a la persona deseada.&lt;/p&gt;
 &lt;div class="admonition note"&gt;
 &lt;p&gt;En Python, las funciones sin valor de retorno explícito retornan &lt;code&gt;None&lt;/code&gt;. Para visualizar el valor &lt;code&gt;None&lt;/code&gt; en una sesión interactiva, puedes emplear la función integrada &lt;code&gt;print()&lt;/code&gt;.&lt;/p&gt;
 &lt;/div&gt;
@@ -3671,7 +3671,7 @@ Related help topics: TRUTHVALUE
 &lt;ul&gt;
 &lt;li&gt;Representar un valor de verdad falso en operaciones lógicas y comparaciones&lt;/li&gt;
 &lt;li&gt;Definir un valor predeterminado o por defecto para argumentos en funciones y métodos.&lt;/li&gt;
-&lt;li&gt;Determinar qué acción ejecutar en control de flujo como &lt;a href="https://pythonscouts.com/condicionales-python/"&gt;condicionales (&lt;code&gt;if&lt;/code&gt;)&lt;/a&gt; y ciclos &lt;code&gt;while&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Determinar qué acción ejecutar en control de flujo como &lt;a href="/condicionales-python/"&gt;condicionales (&lt;code&gt;if&lt;/code&gt;)&lt;/a&gt; y ciclos &lt;code&gt;while&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
 &lt;p&gt;La palabra clave &lt;code&gt;False&lt;/code&gt; en Python es fundamental para representar un valor booleano falso en evaluaciones lógicas y control de flujo.&lt;/p&gt;
@@ -3769,8 +3769,8 @@ Related help topics: TRUTHVALUE
 &lt;span class="n"&gt;banana&lt;/span&gt;
 &lt;span class="n"&gt;cereza&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En este ejemplo, el ciclo recorre la lista de frutas e imprime cada elemento. La &lt;a href="https://pythonscouts.com/variables-python/"&gt;variable&lt;/a&gt; &lt;code&gt;fruit&lt;/code&gt; es la variable del ciclo, y la lista &lt;code&gt;fruits&lt;/code&gt; es el objeto iterable. La llamada a &lt;code&gt;print()&lt;/code&gt; representa el bloque de código del bucle. Este bloque generalmente opera sobre o con los elementos del iterable.&lt;/p&gt;
-&lt;p&gt;También puedes emplear un ciclo &lt;code&gt;for&lt;/code&gt; para poblar una lista vacía con &lt;a href="https://pythonscouts.com/valores-python/"&gt;valores&lt;/a&gt; generados a partir de alguna operación o cálculo:&lt;/p&gt;
+&lt;p&gt;En este ejemplo, el ciclo recorre la lista de frutas e imprime cada elemento. La &lt;a href="/variables-python/"&gt;variable&lt;/a&gt; &lt;code&gt;fruit&lt;/code&gt; es la variable del ciclo, y la lista &lt;code&gt;fruits&lt;/code&gt; es el objeto iterable. La llamada a &lt;code&gt;print()&lt;/code&gt; representa el bloque de código del bucle. Este bloque generalmente opera sobre o con los elementos del iterable.&lt;/p&gt;
+&lt;p&gt;También puedes emplear un ciclo &lt;code&gt;for&lt;/code&gt; para poblar una lista vacía con &lt;a href="/valores-python/"&gt;valores&lt;/a&gt; generados a partir de alguna operación o cálculo:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;squares&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="n"&gt;squares&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -3898,7 +3898,7 @@ Related help topics: TRUTHVALUE
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En este ejemplo, la letra &lt;code&gt;"h"&lt;/code&gt; no se imprime, pues la sentencia &lt;code&gt;continue&lt;/code&gt; salta a la próxima iteración sin ejecutar &lt;code&gt;print()&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="usando-la-clausula-else-en-ciclos-for"&gt;Usando la cláusula &lt;code&gt;else&lt;/code&gt; en ciclos &lt;code&gt;for&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;Como las &lt;a href="https://pythonscouts.com/condicionales-python/"&gt;sentencias condicionales&lt;/a&gt;, los ciclos &lt;code&gt;for&lt;/code&gt; pueden tener una cláusula &lt;code&gt;else&lt;/code&gt;. En los ciclos, el &lt;code&gt;else&lt;/code&gt; se ejecuta únicamente cuando el ciclo finaliza sin ser interrumpido por una sentencia &lt;code&gt;break&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;Como las &lt;a href="/condicionales-python/"&gt;sentencias condicionales&lt;/a&gt;, los ciclos &lt;code&gt;for&lt;/code&gt; pueden tener una cláusula &lt;code&gt;else&lt;/code&gt;. En los ciclos, el &lt;code&gt;else&lt;/code&gt; se ejecuta únicamente cuando el ciclo finaliza sin ser interrumpido por una sentencia &lt;code&gt;break&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
@@ -3981,7 +3981,7 @@ Related help topics: TRUTHVALUE
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;A continuación una discusión más detallada de cada uno de estos pasos y su código Python asociado.&lt;/p&gt;
 &lt;h2 id="paso-1-importar-el-modulo-zipfile"&gt;Paso 1: Importar el módulo &lt;code&gt;zipfile&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;Primero, necesitas importar el módulo &lt;code&gt;zipfile&lt;/code&gt; en tu &lt;a href="https://pythonscouts.com/ejecutar-script-python/"&gt;script&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;Primero, necesitas importar el módulo &lt;code&gt;zipfile&lt;/code&gt; en tu &lt;a href="/ejecutar-script-python/"&gt;script&lt;/a&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;zipfile&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id="paso-2-instanciar-la-clase-zipfile"&gt;Paso 2: Instanciar la clase &lt;code&gt;ZipFile&lt;/code&gt;&lt;/h2&gt;
@@ -4060,7 +4060,7 @@ Related help topics: TRUTHVALUE
 &lt;h2 id="crear-un-entorno-virtual-python-en-windows"&gt;Crear un entorno virtual Python en Windows&lt;/h2&gt;
 &lt;p&gt;Los requisitos previos para crear un entorno virtual de Python en Windows son los siguientes:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Tener &lt;a href="https://pythonscouts.com/instalar-python-windows/"&gt;instalado&lt;/a&gt; Python.&lt;/li&gt;
+&lt;li&gt;Tener &lt;a href="/instalar-python-windows/"&gt;instalado&lt;/a&gt; Python.&lt;/li&gt;
 &lt;li&gt;Asegurarse de que &lt;code&gt;python&lt;/code&gt; y &lt;code&gt;pip&lt;/code&gt; funcionan correctamente.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Una vez que tu sistema cumple los requisitos previos, puedes crear un entorno virtual de Python siguiendo los pasos que a continuación se describen.&lt;/p&gt;
@@ -4094,7 +4094,7 @@ Related help topics: TRUTHVALUE
 &lt;p&gt;Usar &lt;code&gt;venv&lt;/code&gt; como nombre de un entorno virtual de Python es una práctica común. Sin embargo, no es obligatorio hacerlo, puedes emplear el nombre que desees.&lt;/p&gt;
 &lt;/div&gt;
 &lt;h2 id="crear-un-entorno-virtual-python-en-macos"&gt;Crear un entorno virtual Python en macOS&lt;/h2&gt;
-&lt;p&gt;En macOS, para crear un entorno virtual de Python, solo necesitas tener Python correctamente &lt;a href="https://pythonscouts.com/instalar-python-macos/"&gt;instalado&lt;/a&gt; en tu sistema. Una vez instalado, puedes seguir los siguientes pasos para crear un entorno virtual de Python:&lt;/p&gt;
+&lt;p&gt;En macOS, para crear un entorno virtual de Python, solo necesitas tener Python correctamente &lt;a href="/instalar-python-macos/"&gt;instalado&lt;/a&gt; en tu sistema. Una vez instalado, puedes seguir los siguientes pasos para crear un entorno virtual de Python:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Abrir la Terminal.&lt;/p&gt;
@@ -4124,7 +4124,7 @@ Related help topics: TRUTHVALUE
 &lt;h2 id="crear-un-entorno-virtual-python-en-linux-debianubuntu"&gt;Crear un entorno virtual Python en Linux (Debian/Ubuntu)&lt;/h2&gt;
 &lt;p&gt;Si tienes un sistema Linux basado en Debian o Ubuntu, entonces los requisitos son los siguientes:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Tener &lt;a href="http://localhost:8000/instalar-python-linux-debian-ubuntu/"&gt;instalado&lt;/a&gt; Python&lt;/li&gt;
+&lt;li&gt;Tener &lt;a href="/instalar-python-linux-debian-ubuntu/"&gt;instalado&lt;/a&gt; Python&lt;/li&gt;
 &lt;li&gt;Tener el módulo &lt;code&gt;venv&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;En Ubuntu, el módulo &lt;code&gt;venv&lt;/code&gt; no viene instalado por defecto. Si ese es tu sistema, entonces puedes instalar &lt;code&gt;venv&lt;/code&gt; con el siguiente comando:&lt;/p&gt;
@@ -4820,8 +4820,8 @@ Related help topics: TRUTHVALUE
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;h2 id="condiciones"&gt;Condiciones&lt;/h2&gt;
-&lt;p&gt;Una &lt;strong&gt;condición&lt;/strong&gt; es una &lt;a href="https://pythonscouts.com/expresiones-python/"&gt;expresión&lt;/a&gt; que evalúa si algo es verdadero (&lt;code&gt;True&lt;/code&gt;) o falso (&lt;code&gt;False&lt;/code&gt;). Las condiciones se emplean para controlar el flujo de un programa, permitiendo ejecutar diferentes bloques de código según el resultado obtenido al evaluarlas.&lt;/p&gt;
-&lt;p&gt;En Python, puedes crear varios tipos de condiciones. Por ejemplo, las siguientes condiciones comparan &lt;a href="https://pythonscouts.com/valores-python/"&gt;valores&lt;/a&gt; numéricos:&lt;/p&gt;
+&lt;p&gt;Una &lt;strong&gt;condición&lt;/strong&gt; es una &lt;a href="/expresiones-python/"&gt;expresión&lt;/a&gt; que evalúa si algo es verdadero (&lt;code&gt;True&lt;/code&gt;) o falso (&lt;code&gt;False&lt;/code&gt;). Las condiciones se emplean para controlar el flujo de un programa, permitiendo ejecutar diferentes bloques de código según el resultado obtenido al evaluarlas.&lt;/p&gt;
+&lt;p&gt;En Python, puedes crear varios tipos de condiciones. Por ejemplo, las siguientes condiciones comparan &lt;a href="/valores-python/"&gt;valores&lt;/a&gt; numéricos:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
 &lt;span class="kc"&gt;True&lt;/span&gt;
 
@@ -4834,8 +4834,8 @@ Related help topics: TRUTHVALUE
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
 &lt;span class="kc"&gt;False&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Las condiciones más comunes usan operadores de &lt;a href="https://pythonscouts.com/operadores-python/#comparacion"&gt;comparación&lt;/a&gt; como &lt;code&gt;==&lt;/code&gt;, &lt;code&gt;!=&lt;/code&gt;, &lt;code&gt;&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;&lt;/code&gt;, &lt;code&gt;&amp;gt;=&lt;/code&gt;, y &lt;code&gt;&amp;lt;=&lt;/code&gt;. En estos casos, siempre obtendrás un valor booleano (&lt;code&gt;True&lt;/code&gt; o &lt;code&gt;False&lt;/code&gt;).&lt;/p&gt;
-&lt;p&gt;Las expresiones de &lt;a href="https://pythonscouts.com/operadores-python/#pertenencia"&gt;pertenencia&lt;/a&gt; también son empleadas como condiciones:&lt;/p&gt;
+&lt;p&gt;Las condiciones más comunes usan operadores de &lt;a href="/operadores-python/#comparacion"&gt;comparación&lt;/a&gt; como &lt;code&gt;==&lt;/code&gt;, &lt;code&gt;!=&lt;/code&gt;, &lt;code&gt;&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;&lt;/code&gt;, &lt;code&gt;&amp;gt;=&lt;/code&gt;, y &lt;code&gt;&amp;lt;=&lt;/code&gt;. En estos casos, siempre obtendrás un valor booleano (&lt;code&gt;True&lt;/code&gt; o &lt;code&gt;False&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;Las expresiones de &lt;a href="/operadores-python/#pertenencia"&gt;pertenencia&lt;/a&gt; también son empleadas como condiciones:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="kc"&gt;True&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
@@ -4847,7 +4847,7 @@ Related help topics: TRUTHVALUE
 &lt;span class="kc"&gt;False&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Estas expresiones permiten determinar si un valor u objeto específico forma parte de una serie de valores o colección.&lt;/p&gt;
-&lt;p&gt;También puedes crear condiciones empleando los operadores &lt;a href="https://pythonscouts.com/operadores-python/#logicos"&gt;lógicos&lt;/a&gt; &lt;code&gt;and&lt;/code&gt;, &lt;code&gt;or&lt;/code&gt;, y &lt;code&gt;not&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;También puedes crear condiciones empleando los operadores &lt;a href="/operadores-python/#logicos"&gt;lógicos&lt;/a&gt; &lt;code&gt;and&lt;/code&gt;, &lt;code&gt;or&lt;/code&gt;, y &lt;code&gt;not&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
 &lt;span class="kc"&gt;True&lt;/span&gt;
 
@@ -4944,7 +4944,7 @@ Related help topics: TRUTHVALUE
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En este ejemplo, Python comienza evaluando la condición &lt;code&gt;x &amp;gt; 15&lt;/code&gt; la cual resulta falsa. Luego evalúa la siguiente condición &lt;code&gt;x &amp;gt; 5&lt;/code&gt; en la cláusula &lt;code&gt;elif&lt;/code&gt;. Como esta condición es verdadera, el bloque se ejecuta y la cláusula &lt;code&gt;else&lt;/code&gt; se ignora.&lt;/p&gt;
 &lt;h2 id="conclusiones"&gt;Conclusiones&lt;/h2&gt;
-&lt;p&gt;Has aprendido a escribir sentencias &lt;strong&gt;condicionales&lt;/strong&gt; en Python empleando las &lt;a href="https://pythonscouts.com/python-palabras-clave/"&gt;palabras clave&lt;/a&gt; &lt;code&gt;if&lt;/code&gt;, &lt;code&gt;else&lt;/code&gt;, y &lt;code&gt;elif&lt;/code&gt;. Las sentencias condicionales te permiten controlar el flujo de ejecución de un programa en función del cumplimiento de ciertas condiciones.&lt;/p&gt;
+&lt;p&gt;Has aprendido a escribir sentencias &lt;strong&gt;condicionales&lt;/strong&gt; en Python empleando las &lt;a href="/python-palabras-clave/"&gt;palabras clave&lt;/a&gt; &lt;code&gt;if&lt;/code&gt;, &lt;code&gt;else&lt;/code&gt;, y &lt;code&gt;elif&lt;/code&gt;. Las sentencias condicionales te permiten controlar el flujo de ejecución de un programa en función del cumplimiento de ciertas condiciones.&lt;/p&gt;
 &lt;p&gt;Comprender y utilizar correctamente las condicionales es fundamental para cualquier desarrollador de Python, pues ellas te permiten tomar decisiones en tiempo de ejecución. Esto es esencial para desarrollar aplicaciones que respondan adecuadamente a diferentes escenarios.&lt;/p&gt;
 &lt;p&gt;Ahora que sabes lo básico de las condicionales en Python, puedes aplicarlas para crear programas más complejos, y desarrollar aplicaciones que requieran lógica de decisión.&lt;/p&gt;</content><category term="Series"/><category term="python"/></entry><entry><title>Cómo instalar Python en tu sistema operativo Debian o Ubuntu Linux?</title><link href="https://pythonscouts.com/instalar-python-linux-debian-ubuntu/" rel="alternate"/><published>2025-01-20T15:45:00+01:00</published><updated>2025-01-20T15:45:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-01-20:/instalar-python-linux-debian-ubuntu/</id><summary type="html">&lt;p&gt;Instalar Python en tu computadora es el primer paso para aprender el lenguaje. Si usas Debian/Ubuntu, aquí encontrarás los pasos necesarios para instalar Python.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Emplearás &lt;code&gt;apt&lt;/code&gt; que es el gestor de paquetes de tu distribución Debian/Ubuntu y derivadas. Es recomendable que tengas experiencia de trabajo en sistemas Linux basados en Debian, como puede ser Ubuntu o Linux Mint, para poder seguir esta guía de instalación de Python.&lt;/p&gt;
 &lt;p&gt;Es especialmente importante que tengas conocimientos básicos sobre la terminal del sistema y sepas cómo emplearla.&lt;/p&gt;
@@ -4984,19 +4984,19 @@ Related help topics: TRUTHVALUE
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;python3
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Este comando descarga Python desde los repos y lo instala en tu ordenador. Esta será la instalación Python del sistema.&lt;/p&gt;
-&lt;p&gt;En Ubuntu, el paquete &lt;code&gt;python3&lt;/code&gt; no incluye todas las funcionalidades que vienen con el instalador oficial de Python para otros sistemas operativos como &lt;a href="https://pythonscouts.com/instalar-python-windows/"&gt;Windows&lt;/a&gt; y &lt;a href="https://pythonscouts.com/instalar-python-macos/"&gt;macOS&lt;/a&gt;. Por ejemplo, si necesitas trabajar con entornos virtuales, deberás instalar &lt;code&gt;python3-venv&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;En Ubuntu, el paquete &lt;code&gt;python3&lt;/code&gt; no incluye todas las funcionalidades que vienen con el instalador oficial de Python para otros sistemas operativos como &lt;a href="/instalar-python-windows/"&gt;Windows&lt;/a&gt; y &lt;a href="/instalar-python-macos/"&gt;macOS&lt;/a&gt;. Por ejemplo, si necesitas trabajar con entornos virtuales, deberás instalar &lt;code&gt;python3-venv&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;De modo similar, si deseas usar &lt;a href="https://pip.pypa.io/en/stable/"&gt;&lt;code&gt;pip&lt;/code&gt;&lt;/a&gt;, que es el instalador de paquetes para Python, deberás instalar el paquete &lt;code&gt;python3-pip&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Puedes disponer de estas dos herramientas al ejecutar el siguiente comando:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;python3-venv&lt;span class="w"&gt; &lt;/span&gt;python3-pip
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Al concluir la ejecución de este comando, tendrás acceso a crear nuevos entornos virtuales e instalar paquetes Python usando &lt;code&gt;pip&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Finalmente, si planeas crear aplicaciones con &lt;a href="https://pythonscouts.com/iniciando-con-tkinter-python/"&gt;interfaz gráfica (GUI) basada en Tkinter&lt;/a&gt;, debes instalar el paquete &lt;code&gt;python3-tk&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Finalmente, si planeas crear aplicaciones con &lt;a href="/iniciando-con-tkinter-python/"&gt;interfaz gráfica (GUI) basada en Tkinter&lt;/a&gt;, debes instalar el paquete &lt;code&gt;python3-tk&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="paso-3-verificar-la-instalacion"&gt;Paso 3: Verificar la instalación&lt;/h2&gt;
 &lt;p&gt;Una vez que hayas ejecutado los pasos anteriores, Python estará instalado en tu sistema operativo. Para confirmar que lo tienes, ejecuta el comando siguiente:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;python3&lt;span class="w"&gt; &lt;/span&gt;--version&lt;span class="w"&gt; &lt;/span&gt;
 &lt;span class="go"&gt;Python 3.10.12&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Este comando imprime la versión de Python que tienes instalada por defecto. Con esto has concluido la instalación de Python usando el gestor de paquetes de tu distribución Linux. Ahora estás listo para escribir tu &lt;a href="https://pythonscouts.com/python-hola-mundo/"&gt;primer programa&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Este comando imprime la versión de Python que tienes instalada por defecto. Con esto has concluido la instalación de Python usando el gestor de paquetes de tu distribución Linux. Ahora estás listo para escribir tu &lt;a href="/python-hola-mundo/"&gt;primer programa&lt;/a&gt;.&lt;/p&gt;
 &lt;div class="admonition note"&gt;
 &lt;p&gt;Es importante que sepas que la versión de Python disponible en los repositorios oficiales de Debian, Ubuntu y derivados puede estar relativamente actualizada con respecto a las últimas versiones liberadas. Para instalar la última versión de Python, deberás compilarla desde sus &lt;a href="https://www.python.org/downloads/source/"&gt;fuentes&lt;/a&gt; o emplear herramientas como &lt;a href="https://github.com/pyenv/pyenv"&gt;&lt;code&gt;pyenv&lt;/code&gt;&lt;/a&gt; que te permiten gestionar varias versiones de Python en tu computadora.&lt;/p&gt;
 &lt;/div&gt;
@@ -5056,7 +5056,7 @@ Related help topics: TRUTHVALUE
 &lt;h2 id="instalando-tkinter"&gt;Instalando Tkinter&lt;/h2&gt;
 &lt;p&gt;La mayoría de las distribuciones de Python ya incluyen Tkinter por defecto. Por lo tanto, es muy probable que no necesites instalarlo por separado. Sin embargo, si resulta que Tkinter no está disponible en tu sistema, puedes instalarlo de manera rápida.&lt;/p&gt;
 &lt;h3 id="en-windows-y-macos"&gt;En Windows y macOS&lt;/h3&gt;
-&lt;p&gt;Si instalaste Python empleando el instalador oficial para &lt;a href="https://pythonscouts.com/instalar-python-windows/"&gt;Windows&lt;/a&gt; y &lt;a href="https://pythonscouts.com/instalar-python-macos/"&gt;macOS&lt;/a&gt;, entonces Tkinter ya estará instalado. Si no está disponible, puedes reinstalar Python asegurándote de que la opción de instalación de Tkinter esté habilitada.&lt;/p&gt;
+&lt;p&gt;Si instalaste Python empleando el instalador oficial para &lt;a href="/instalar-python-windows/"&gt;Windows&lt;/a&gt; y &lt;a href="/instalar-python-macos/"&gt;macOS&lt;/a&gt;, entonces Tkinter ya estará instalado. Si no está disponible, puedes reinstalar Python asegurándote de que la opción de instalación de Tkinter esté habilitada.&lt;/p&gt;
 &lt;p&gt;En macOS, podría ser necesario instalar &lt;em&gt;Xcode&lt;/em&gt; o &lt;em&gt;Xcode Command Line Tools&lt;/em&gt; para que Tkinter funcione correctamente.&lt;/p&gt;
 &lt;h3 id="en-linux"&gt;En Linux&lt;/h3&gt;
 &lt;p&gt;En sistemas Linux basados en Debian, como Ubuntu, puede que al instalar Python desde los repositorios oficiales de la distribución, Tkinter no venga en el paquete. En estos casos, puedes instalar Tkinter usando el siguiente comando:&lt;/p&gt;
@@ -5064,7 +5064,7 @@ Related help topics: TRUTHVALUE
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Este comando descargará e instalará Tkinter en tu sistema. Es decir, Tkinter estará disponible en la instalación global de Python.&lt;/p&gt;
 &lt;h2 id="creando-una-aplicacion-tkinter"&gt;Creando una aplicación Tkinter&lt;/h2&gt;
-&lt;p&gt;Con Tkinter disponible, estás listo para crear tu primera aplicación GUI. Para comenzar, crearás una aplicación &lt;a href="https://pythonscouts.com/python-hola-mundo/"&gt;&lt;code&gt;"Hola, mundo!"&lt;/code&gt;&lt;/a&gt;. Aquí están los pasos a seguir:&lt;/p&gt;
+&lt;p&gt;Con Tkinter disponible, estás listo para crear tu primera aplicación GUI. Para comenzar, crearás una aplicación &lt;a href="/python-hola-mundo/"&gt;&lt;code&gt;"Hola, mundo!"&lt;/code&gt;&lt;/a&gt;. Aquí están los pasos a seguir:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Importa &lt;code&gt;tkinter&lt;/code&gt; como &lt;code&gt;tk&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;Crea una instancia de la clase &lt;code&gt;Tk&lt;/code&gt;.&lt;/li&gt;
@@ -5095,7 +5095,7 @@ Related help topics: TRUTHVALUE
 &lt;p&gt;En este código, el método &lt;code&gt;.title()&lt;/code&gt; te permite establecer el título de la ventana de tu aplicación. En este ejemplo, la ventana de la aplicación mostrará &lt;code&gt;Tkinter Demo&lt;/code&gt; en su barra de título.&lt;/p&gt;
 &lt;p&gt;Puedes usar el método &lt;code&gt;.geometry()&lt;/code&gt; para definir el tamaño de la ventana. El argumento es una cadena que especifica el ancho y alto de la ventana en píxeles.&lt;/p&gt;
 &lt;p&gt;Cada aplicación GUI necesita widgets. Estos son los componentes gráficos que conforman la GUI de la aplicación. En este ejemplo, usas un widget &lt;code&gt;Label&lt;/code&gt; llamado &lt;code&gt;hello&lt;/code&gt; que te permitirá mostrar el mensaje &lt;code&gt;"Hola, mundo!"&lt;/code&gt; en la ventana de tu aplicación.&lt;/p&gt;
-&lt;p&gt;El método &lt;code&gt;.pack()&lt;/code&gt; es un &lt;a href="https://pythonscouts.com/iniciando-con-tkinter-python/#usando-gestores-de-geometria"&gt;gestor de geometría&lt;/a&gt; se utiliza para colocar el widget en la ventana. El argumento &lt;code&gt;pady&lt;/code&gt; agrega un poco de espacio vertical alrededor del widget.&lt;/p&gt;
+&lt;p&gt;El método &lt;code&gt;.pack()&lt;/code&gt; es un &lt;a href="/iniciando-con-tkinter-python/#usando-gestores-de-geometria"&gt;gestor de geometría&lt;/a&gt; se utiliza para colocar el widget en la ventana. El argumento &lt;code&gt;pady&lt;/code&gt; agrega un poco de espacio vertical alrededor del widget.&lt;/p&gt;
 &lt;p&gt;Has finalizado el tercer paso, así que puedes continuar con el último paso y preparar tu aplicación Tkinter para su ejecución:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
 
@@ -6315,7 +6315,7 @@ Related help topics: TRUTHVALUE
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;h2 id="aritmeticas"&gt;Aritméticas&lt;/h2&gt;
-&lt;p&gt;Las expresiones aritméticas son aquellas expresiones basadas en operadores aritméticos que relacionan &lt;a href="https://pythonscouts.com/valores-python/"&gt;valores&lt;/a&gt; numéricos y funciones que retornan números:&lt;/p&gt;
+&lt;p&gt;Las expresiones aritméticas son aquellas expresiones basadas en operadores aritméticos que relacionan &lt;a href="/valores-python/"&gt;valores&lt;/a&gt; numéricos y funciones que retornan números:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;12&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;
 &lt;span class="mi"&gt;6&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;150&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
@@ -6327,8 +6327,8 @@ Related help topics: TRUTHVALUE
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;200&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
 &lt;span class="mf"&gt;164.0&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En estos ejemplos, construyes expresiones usando &lt;a href="https://pythonscouts.com/operadores-python/#aritmeticos"&gt;operadores aritméticos&lt;/a&gt; para combinar valores numéricos y funciones que dan como resultado un número.&lt;/p&gt;
-&lt;p&gt;Las expresiones aritméticas también pueden emplear &lt;a href="https://pythonscouts.com/variables-python/"&gt;variables&lt;/a&gt; y &lt;a href="https://pythonscouts.com/constantes-python/"&gt;constantes&lt;/a&gt; en lugar de literales numéricos:&lt;/p&gt;
+&lt;p&gt;En estos ejemplos, construyes expresiones usando &lt;a href="/operadores-python/#aritmeticos"&gt;operadores aritméticos&lt;/a&gt; para combinar valores numéricos y funciones que dan como resultado un número.&lt;/p&gt;
+&lt;p&gt;Las expresiones aritméticas también pueden emplear &lt;a href="/variables-python/"&gt;variables&lt;/a&gt; y &lt;a href="/constantes-python/"&gt;constantes&lt;/a&gt; en lugar de literales numéricos:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;radius&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;PI&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;3.142&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;circle_area&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;PI&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="nb"&gt;pow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;radius&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -6337,8 +6337,8 @@ Related help topics: TRUTHVALUE
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En este ejemplo, utilizamos una variable y una constante para crear una expresión que retorna el área de un círculo a partir del radio. Como las expresiones siempre retornan un valor, puedes emplear una variable para mantener una referencia al resultado.&lt;/p&gt;
 &lt;h2 id="comparacion"&gt;Comparación&lt;/h2&gt;
-&lt;p&gt;Por su parte, las expresiones de comparación son aquellas que nos permiten comparar objetos entre sí. Estas expresiones son útiles para decidir el flujo de ejecución de tus programas en función del cumplimiento de determinadas &lt;a href="https://pythonscouts.com/condicionales-python/"&gt;condiciones&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Por ejemplo, las expresiones siguientes comparan valores empleando &lt;a href="https://pythonscouts.com/operadores-python/#comparacion"&gt;operadores de comparación&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;Por su parte, las expresiones de comparación son aquellas que nos permiten comparar objetos entre sí. Estas expresiones son útiles para decidir el flujo de ejecución de tus programas en función del cumplimiento de determinadas &lt;a href="/condicionales-python/"&gt;condiciones&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Por ejemplo, las expresiones siguientes comparan valores empleando &lt;a href="/operadores-python/#comparacion"&gt;operadores de comparación&lt;/a&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
 
@@ -6360,7 +6360,7 @@ Related help topics: TRUTHVALUE
 &lt;p&gt;Los ejemplos anteriores comparan valores numéricos, sin embargo, también es posible comparar cadenas, tuplas, listas y cualquier otro objeto que soporte los operadores de comparación.&lt;/p&gt;
 &lt;/div&gt;
 &lt;h2 id="logicas-o-booleanas"&gt;Lógicas o booleanas&lt;/h2&gt;
-&lt;p&gt;Se pueden formar expresiones lógicas o booleanas empleando los &lt;a href="https://pythonscouts.com/operadores-python/#logicos"&gt;operadores lógicos&lt;/a&gt; &lt;code&gt;and&lt;/code&gt;, &lt;code&gt;or&lt;/code&gt;, y &lt;code&gt;not&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;Se pueden formar expresiones lógicas o booleanas empleando los &lt;a href="/operadores-python/#logicos"&gt;operadores lógicos&lt;/a&gt; &lt;code&gt;and&lt;/code&gt;, &lt;code&gt;or&lt;/code&gt;, y &lt;code&gt;not&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
 
@@ -6529,7 +6529,7 @@ Related help topics: TRUTHVALUE
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;h2 id="aritmeticos"&gt;Aritméticos&lt;/h2&gt;
-&lt;p&gt;Los operadores aritméticos son probablemente los más conocidos y empleados. Ellos permiten realizar operaciones aritméticas básicas entre &lt;a href="https://pythonscouts.com/valores-python/"&gt;valores&lt;/a&gt; numéricos:&lt;/p&gt;
+&lt;p&gt;Los operadores aritméticos son probablemente los más conocidos y empleados. Ellos permiten realizar operaciones aritméticas básicas entre &lt;a href="/valores-python/"&gt;valores&lt;/a&gt; numéricos:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;# Adición&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
 &lt;span class="mi"&gt;15&lt;/span&gt;
@@ -6701,7 +6701,7 @@ Related help topics: TRUTHVALUE
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Estos operadores son casi idénticos a los que usamos en las matemáticas. El operador de igualdad que se representa con dos símbolos de igualdad (&lt;code&gt;==&lt;/code&gt;) para diferenciarlo del operador de asignación. El operador de desigualdad se representa como &lt;code&gt;!=&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="logicos"&gt;Lógicos&lt;/h2&gt;
-&lt;p&gt;Los operadores lógicos o booleanos permiten crear &lt;a href="https://pythonscouts.com/expresiones-python/"&gt;expresiones&lt;/a&gt; lógicas que generalmente se utilizan en &lt;a href="https://pythonscouts.com/condicionales-python/"&gt;condiciones&lt;/a&gt;. Python tiene tres operadores booleanos: &lt;code&gt;and&lt;/code&gt;, &lt;code&gt;or&lt;/code&gt;, y &lt;code&gt;not&lt;/code&gt;. Los siguientes ejemplos muestran el funcionamiento de cada operador:&lt;/p&gt;
+&lt;p&gt;Los operadores lógicos o booleanos permiten crear &lt;a href="/expresiones-python/"&gt;expresiones&lt;/a&gt; lógicas que generalmente se utilizan en &lt;a href="/condicionales-python/"&gt;condiciones&lt;/a&gt;. Python tiene tres operadores booleanos: &lt;code&gt;and&lt;/code&gt;, &lt;code&gt;or&lt;/code&gt;, y &lt;code&gt;not&lt;/code&gt;. Los siguientes ejemplos muestran el funcionamiento de cada operador:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;# Operador and (y)&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;
 &lt;span class="kc"&gt;True&lt;/span&gt;
@@ -6918,7 +6918,7 @@ Related help topics: TRUTHVALUE
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;all&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;letters&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;letters&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:])&lt;/span&gt;
 &lt;span class="kc"&gt;False&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Esta técnica para determinar si todos los elementos de una lista son iguales emplea una expresión generadora que produce &lt;a href="https://pythonscouts.com/valores-python/"&gt;valores&lt;/a&gt; booleanos que resultan de evaluar la &lt;a href="https://pythonscouts.com/expresiones-python/"&gt;expresión&lt;/a&gt; &lt;code&gt;item == letters[0]&lt;/code&gt;. Luego, &lt;code&gt;all()&lt;/code&gt; verifica si todos los elementos resultantes son &lt;code&gt;True&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Esta técnica para determinar si todos los elementos de una lista son iguales emplea una expresión generadora que produce &lt;a href="/valores-python/"&gt;valores&lt;/a&gt; booleanos que resultan de evaluar la &lt;a href="/expresiones-python/"&gt;expresión&lt;/a&gt; &lt;code&gt;item == letters[0]&lt;/code&gt;. Luego, &lt;code&gt;all()&lt;/code&gt; verifica si todos los elementos resultantes son &lt;code&gt;True&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="ordenar-la-lista-y-comparar-el-primer-y-el-ultimo-elemento"&gt;Ordenar la lista y comparar el primer y el último elemento&lt;/h2&gt;
 &lt;p&gt;Otra manera de saber si todos los elementos de una lista son iguales es ordenar la lista y comparar el primer y el último elemento.&lt;/p&gt;
 &lt;div class="admonition note"&gt;
@@ -6945,7 +6945,7 @@ Related help topics: TRUTHVALUE
 &lt;li&gt;Utilizar la función &lt;code&gt;all()&lt;/code&gt; con una expresión generadora&lt;/li&gt;
 &lt;li&gt;Ordenar la lista y comparar el primer y el último elemento&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Cada técnica ofrece una forma útil de abordar el problema, proporcionando flexibilidad según las necesidades específicas de tu programa. Con estas habilidades, puedes implementar verificaciones de uniformidad de manera eficiente y rápida en tus proyectos de Python.&lt;/p&gt;</content><category term="Guías"/><category term="python"/></entry><entry><title>Python a través de ejemplos: Constantes</title><link href="https://pythonscouts.com/constantes-python/" rel="alternate"/><published>2024-10-26T06:00:00+02:00</published><updated>2024-10-26T06:00:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2024-10-26:/constantes-python/</id><summary type="html">&lt;p&gt;En Python, una constante es un nombre simbólico que permite referenciar un objeto cuyo valor no cambia durante la ejecución del programa. Como las variables, las constantes referencian objetos en memoria.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Python no tiene una sintaxis específica para las constantes como otros lenguajes de programación sí la tienen. Por esta razón, las constantes en Python son realmente &lt;a href="https://pythonscouts.com/variables-python/"&gt;variables&lt;/a&gt; que no cambian su &lt;a href="https://pythonscouts.com/valores-python/"&gt;valor&lt;/a&gt; durante la ejecución del código.&lt;/p&gt;
+&lt;p&gt;Cada técnica ofrece una forma útil de abordar el problema, proporcionando flexibilidad según las necesidades específicas de tu programa. Con estas habilidades, puedes implementar verificaciones de uniformidad de manera eficiente y rápida en tus proyectos de Python.&lt;/p&gt;</content><category term="Guías"/><category term="python"/></entry><entry><title>Python a través de ejemplos: Constantes</title><link href="https://pythonscouts.com/constantes-python/" rel="alternate"/><published>2024-10-26T06:00:00+02:00</published><updated>2024-10-26T06:00:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2024-10-26:/constantes-python/</id><summary type="html">&lt;p&gt;En Python, una constante es un nombre simbólico que permite referenciar un objeto cuyo valor no cambia durante la ejecución del programa. Como las variables, las constantes referencian objetos en memoria.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Python no tiene una sintaxis específica para las constantes como otros lenguajes de programación sí la tienen. Por esta razón, las constantes en Python son realmente &lt;a href="/variables-python/"&gt;variables&lt;/a&gt; que no cambian su &lt;a href="/valores-python/"&gt;valor&lt;/a&gt; durante la ejecución del código.&lt;/p&gt;
 &lt;p&gt;Al igual que las variables, las constantes consisten en dos cosas: un nombre y un valor asociado. El nombre describe claramente de qué trata la constante. El valor es la expresión concreta de la constante.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#constantes-comunes"&gt;Constantes comunes&lt;/a&gt;&lt;/li&gt;
@@ -6965,7 +6965,7 @@ Related help topics: TRUTHVALUE
 &lt;/ul&gt;
 &lt;p&gt;Estos ejemplos son valores constantes que se utilizan comúnmente en la vida cotidiana como en la ciencia. En programación, a menudo te encontrarás manejando estos y muchos otros valores similares.&lt;/p&gt;
 &lt;h2 id="constantes-en-python"&gt;Constantes en Python&lt;/h2&gt;
-&lt;p&gt;Para crear una constante en Python, se emplea la misma sintaxis que para crear una &lt;a href="https://pythonscouts.com/variables-python/"&gt;variable&lt;/a&gt;. Esto es, el operador de asignación (&lt;code&gt;=&lt;/code&gt;) separando el nombre de la constante a la izquierda y el valor a la derecha.&lt;/p&gt;
+&lt;p&gt;Para crear una constante en Python, se emplea la misma sintaxis que para crear una &lt;a href="/variables-python/"&gt;variable&lt;/a&gt;. Esto es, el operador de asignación (&lt;code&gt;=&lt;/code&gt;) separando el nombre de la constante a la izquierda y el valor a la derecha.&lt;/p&gt;
 &lt;p&gt;Como Python no tiene una sintaxis dedicada para definir constantes, la comunidad Python ha asumido y establecido una convención para definir los nombres de las constantes: emplear letras en mayúsculas separando las palabras con guiones bajos o caracteres de subrayado:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;PI&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;3.1416&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;EULER_NUMBER&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;2.718281828459045&lt;/span&gt;
@@ -7044,7 +7044,7 @@ Related help topics: TRUTHVALUE
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;language&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Python&amp;quot;&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;message&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Bienvenidos a pythonscouts.com&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En estos ejemplos, has creado algunas variables mediante la asignación de &lt;a href="https://pythonscouts.com/valores-python/"&gt;valores&lt;/a&gt; numéricos o de cadena de caracteres.&lt;/p&gt;
+&lt;p&gt;En estos ejemplos, has creado algunas variables mediante la asignación de &lt;a href="/valores-python/"&gt;valores&lt;/a&gt; numéricos o de cadena de caracteres.&lt;/p&gt;
 &lt;div class="admonition note"&gt;
 &lt;p&gt;Como regla general, emplearemos nombres de variables en idioma inglés puesto que este es el idioma base para la programación actualmente.&lt;/p&gt;
 &lt;/div&gt;
@@ -7241,10 +7241,10 @@ Related help topics: TRUTHVALUE
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Balance general: $&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;balance&lt;/span&gt;&lt;span class="si"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;,.2f&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
 &lt;span class="s1"&gt;&amp;#39;Balance general: $5,425.93&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;El campo de reemplazo en esta f-string contiene una &lt;a href="https://pythonscouts.com/variables-python/"&gt;variable&lt;/a&gt; llamada &lt;code&gt;balance&lt;/code&gt;. Esta variable provee el valor que necesitamos interpolar en la cadena. Luego tenemos el especificador de formato que comienza con el caracter de dos puntos (&lt;code&gt;:&lt;/code&gt;). En este caso, formateas el valor como un valor decimal con dos lugares después del punto y empleando una coma (&lt;code&gt;,&lt;/code&gt;) como separador de miles.&lt;/p&gt;
+&lt;p&gt;El campo de reemplazo en esta f-string contiene una &lt;a href="/variables-python/"&gt;variable&lt;/a&gt; llamada &lt;code&gt;balance&lt;/code&gt;. Esta variable provee el valor que necesitamos interpolar en la cadena. Luego tenemos el especificador de formato que comienza con el caracter de dos puntos (&lt;code&gt;:&lt;/code&gt;). En este caso, formateas el valor como un valor decimal con dos lugares después del punto y empleando una coma (&lt;code&gt;,&lt;/code&gt;) como separador de miles.&lt;/p&gt;
 &lt;h2 id="conclusiones"&gt;Conclusiones&lt;/h2&gt;
 &lt;p&gt;Ahora sabes lo básico sobre los valores o literales en Python, incluidos valores numéricos como los números enteros, decimales y complejos. También aprendiste sobre los valores de cadenas de caracteres.&lt;/p&gt;
-&lt;p&gt;Entender los valores y cómo crearlos es fundamental para cualquier desarrollador de Python, pues estos son la base sobre la que se construyen &lt;a href="https://pythonscouts.com/expresiones-python/"&gt;expresiones&lt;/a&gt; y sentencias más elaboradas.&lt;/p&gt;
+&lt;p&gt;Entender los valores y cómo crearlos es fundamental para cualquier desarrollador de Python, pues estos son la base sobre la que se construyen &lt;a href="/expresiones-python/"&gt;expresiones&lt;/a&gt; y sentencias más elaboradas.&lt;/p&gt;
 &lt;p&gt;Ahora que dominas estos conceptos, tienes las puertas abiertas para explorar temas más avanzados en Python.&lt;/p&gt;</content><category term="Series"/><category term="python"/></entry><entry><title>Cómo ejecutar un script Python?</title><link href="https://pythonscouts.com/ejecutar-script-python/" rel="alternate"/><published>2024-03-21T18:40:00+01:00</published><updated>2024-03-21T18:40:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2024-03-21:/ejecutar-script-python/</id><summary type="html">&lt;p&gt;Un script Python es un archivo que contiene una secuencia de código Python ejecutable. Este tipo de archivo está diseñado para ser ejecutado directamente, de la misma manera que un programa o aplicación.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ser capaz de ejecutar tus scripts y programas es una de las habilidades más importantes que debes tener como programador Python. En realidad ejecutar el código es la única forma de asegurarte que funciona como esperas. Además, para qué escribir código sino para ejecutarlo y que haga cosas por tí?&lt;/p&gt;
 &lt;p&gt;En este tutorial, aprenderás qué es un script o programa ejecutable en Python, cómo ejecutar scripts usando el comando &lt;code&gt;python&lt;/code&gt; o el propio script como un comando. Finalmente, aprenderás que también es posible ejecutar tus scripts desde tu IDE o editor de texto favorito, lo cual es muy conveniente durante el proceso de desarrollo.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
@@ -7268,7 +7268,7 @@ Related help topics: TRUTHVALUE
 &lt;p&gt;Probablemente la manera más comúnmente empleada para ejecutar un script Python es usando el comando &lt;code&gt;python&lt;/code&gt; desde la línea de comandos o terminal del sistema operativo. Antes de entrar en el comando específico, abre tu editor de texto favorito, crea un nuevo archivo &lt;code&gt;.py&lt;/code&gt; y escribe el código siguiente en él:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Hola, Mundo!&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Este script es el típico programa &lt;a href="https://pythonscouts.com/python-hola-mundo/"&gt;&lt;code&gt;"Hola, Mundo!"&lt;/code&gt;&lt;/a&gt; que generalmente escribes cuando comienzas a aprender un lenguaje de programación. Guarda el archivo en tu directorio de trabajo y llámalo &lt;code&gt;script.py&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Este script es el típico programa &lt;a href="/python-hola-mundo/"&gt;&lt;code&gt;"Hola, Mundo!"&lt;/code&gt;&lt;/a&gt; que generalmente escribes cuando comienzas a aprender un lenguaje de programación. Guarda el archivo en tu directorio de trabajo y llámalo &lt;code&gt;script.py&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Abre una ventana de terminal en tu directorio de trabajo actual y ejecuta el siguiente comando:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;script.py
 &lt;span class="go"&gt;Hola, Mundo!&lt;/span&gt;
@@ -7298,7 +7298,7 @@ Related help topics: TRUTHVALUE
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Listo! Tu script ahora funciona como si fuese un comando. Si deseas que tu script se parezca aún más a un comando estándar, puedes remover de su nombre la extensión &lt;code&gt;.py&lt;/code&gt;. Adicionalmente, puedes añadir el directorio que contiene tu script en el &lt;a href="https://es.wikipedia.org/wiki/PATH_(inform%C3%A1tica)"&gt;&lt;code&gt;PATH&lt;/code&gt;&lt;/a&gt; de tu sistema y lo tendrás disponible como un comando real desde cualquier directorio de trabajo.&lt;/p&gt;
 &lt;h3 id="en-sistemas-windows"&gt;En sistemas Windows&lt;/h3&gt;
-&lt;p&gt;En sistemas Windows con Python &lt;a href="https://pythonscouts.com/instalar-python-windows/"&gt;instalado&lt;/a&gt;, puedes ejecutar un script directamente desde una ventana de PowerShell abierta en el directorio que contiene el script:&lt;/p&gt;
+&lt;p&gt;En sistemas Windows con Python &lt;a href="/instalar-python-windows/"&gt;instalado&lt;/a&gt;, puedes ejecutar un script directamente desde una ventana de PowerShell abierta en el directorio que contiene el script:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;.\&lt;/span&gt;&lt;span class="n"&gt;script&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
 &lt;span class="n"&gt;Hola&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Mundo&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -7417,7 +7417,7 @@ Related help topics: TRUTHVALUE
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="n"&gt;-version&lt;/span&gt;
 &lt;span class="n"&gt;Python&lt;/span&gt; &lt;span class="n"&gt;3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;11&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;5&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Este comando imprime la versión de Python que tienes instalada por defecto. Con esto has concluido la instalación de Python usando el instalador oficial para Windows. Ahora estás listo para escribir tu &lt;a href="https://pythonscouts.com/python-hola-mundo/"&gt;primer programa&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Este comando imprime la versión de Python que tienes instalada por defecto. Con esto has concluido la instalación de Python usando el instalador oficial para Windows. Ahora estás listo para escribir tu &lt;a href="/python-hola-mundo/"&gt;primer programa&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="instalar-python-desde-microsoft-store"&gt;Instalar Python desde Microsoft Store&lt;/h2&gt;
 &lt;p&gt;Para los usuarios que comienzan con Python en un sistema operativo Windows, Microsoft recomienda instalar la aplicación desde su tienda de aplicaciones. Si prefieres instalar Python de esta forma, entonces puedes seguir los pasos siguientes:&lt;/p&gt;
 &lt;ol&gt;
@@ -7537,7 +7537,7 @@ Related help topics: TRUTHVALUE
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;--version&lt;span class="w"&gt; &lt;/span&gt;
 &lt;span class="go"&gt;Python 3.11.5&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Este comando imprime la versión de Python que tienes instalada por defecto. Con esto has concluido la instalación de Python usando el instalador oficial para masOS. Ahora estás listo para escribir tu &lt;a href="https://pythonscouts.com/python-hola-mundo/"&gt;primer programa&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Este comando imprime la versión de Python que tienes instalada por defecto. Con esto has concluido la instalación de Python usando el instalador oficial para masOS. Ahora estás listo para escribir tu &lt;a href="/python-hola-mundo/"&gt;primer programa&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
 &lt;p&gt;Instalar Python en tu ordenador es el primer paso en tu empeño de aprender a programar con el lenguaje. Nuevamente, recuerda que los pasos a seguir para completar la instalación son los siguientes:&lt;/p&gt;
 &lt;ol&gt;
@@ -7591,7 +7591,7 @@ Related help topics: TRUTHVALUE
 &lt;li&gt;Script&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;El modo &lt;strong&gt;interactivo&lt;/strong&gt; consiste en ejecutar el interprete Python desde tu línea de comandos o terminal usando el comando &lt;code&gt;python&lt;/code&gt;. Este modo de trabajo es útil cuando deseas probar ideas y fragmentos de código de manera rápida.&lt;/p&gt;
-&lt;p&gt;Por otro lado, el modo &lt;a href="https://pythonscouts.com/ejecutar-script-python/"&gt;script&lt;/a&gt; es cuando pones tu código en un archivo con extensión &lt;code&gt;.py&lt;/code&gt; y corres este archivo en tu ordenador como un programa ejecutable.&lt;/p&gt;
+&lt;p&gt;Por otro lado, el modo &lt;a href="/ejecutar-script-python/"&gt;script&lt;/a&gt; es cuando pones tu código en un archivo con extensión &lt;code&gt;.py&lt;/code&gt; y corres este archivo en tu ordenador como un programa ejecutable.&lt;/p&gt;
 &lt;p&gt;En las secciones siguientes, aprenderás a crear tu &lt;em&gt;Hola, mundo!&lt;/em&gt; usando Python en los dos modos de trabajo descritos.&lt;/p&gt;
 &lt;h3 id="hola-mundo-desde-una-sesion-interactiva"&gt;&lt;code&gt;Hola, mundo!&lt;/code&gt; desde una sesión interactiva&lt;/h3&gt;
 &lt;p&gt;Para comenzar una sesión interactiva de Python, abre una ventana de línea de comandos o terminal en tu computadora. Los pasos para abrir una terminal variarán en dependencia de tu sistema operativo. En macOS y Linux, generalmente encontrarás una aplicación llamada &lt;em&gt;Terminal&lt;/em&gt;. Si trabajas en Windows, entonces puedes usar algo como PowerShell.&lt;/p&gt;

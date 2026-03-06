@@ -1460,7 +1460,7 @@ RootWidget:
 &lt;h2 id="instalando-tkinter"&gt;Instalando Tkinter&lt;/h2&gt;
 &lt;p&gt;La mayoría de las distribuciones de Python ya incluyen Tkinter por defecto. Por lo tanto, es muy probable que no necesites instalarlo por separado. Sin embargo, si resulta que Tkinter no está disponible en tu sistema, puedes instalarlo de manera rápida.&lt;/p&gt;
 &lt;h3 id="en-windows-y-macos"&gt;En Windows y macOS&lt;/h3&gt;
-&lt;p&gt;Si instalaste Python empleando el instalador oficial para &lt;a href="https://pythonscouts.com/instalar-python-windows/"&gt;Windows&lt;/a&gt; y &lt;a href="https://pythonscouts.com/instalar-python-macos/"&gt;macOS&lt;/a&gt;, entonces Tkinter ya estará instalado. Si no está disponible, puedes reinstalar Python asegurándote de que la opción de instalación de Tkinter esté habilitada.&lt;/p&gt;
+&lt;p&gt;Si instalaste Python empleando el instalador oficial para &lt;a href="/instalar-python-windows/"&gt;Windows&lt;/a&gt; y &lt;a href="/instalar-python-macos/"&gt;macOS&lt;/a&gt;, entonces Tkinter ya estará instalado. Si no está disponible, puedes reinstalar Python asegurándote de que la opción de instalación de Tkinter esté habilitada.&lt;/p&gt;
 &lt;p&gt;En macOS, podría ser necesario instalar &lt;em&gt;Xcode&lt;/em&gt; o &lt;em&gt;Xcode Command Line Tools&lt;/em&gt; para que Tkinter funcione correctamente.&lt;/p&gt;
 &lt;h3 id="en-linux"&gt;En Linux&lt;/h3&gt;
 &lt;p&gt;En sistemas Linux basados en Debian, como Ubuntu, puede que al instalar Python desde los repositorios oficiales de la distribución, Tkinter no venga en el paquete. En estos casos, puedes instalar Tkinter usando el siguiente comando:&lt;/p&gt;
@@ -1468,7 +1468,7 @@ RootWidget:
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Este comando descargará e instalará Tkinter en tu sistema. Es decir, Tkinter estará disponible en la instalación global de Python.&lt;/p&gt;
 &lt;h2 id="creando-una-aplicacion-tkinter"&gt;Creando una aplicación Tkinter&lt;/h2&gt;
-&lt;p&gt;Con Tkinter disponible, estás listo para crear tu primera aplicación GUI. Para comenzar, crearás una aplicación &lt;a href="https://pythonscouts.com/python-hola-mundo/"&gt;&lt;code&gt;"Hola, mundo!"&lt;/code&gt;&lt;/a&gt;. Aquí están los pasos a seguir:&lt;/p&gt;
+&lt;p&gt;Con Tkinter disponible, estás listo para crear tu primera aplicación GUI. Para comenzar, crearás una aplicación &lt;a href="/python-hola-mundo/"&gt;&lt;code&gt;"Hola, mundo!"&lt;/code&gt;&lt;/a&gt;. Aquí están los pasos a seguir:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Importa &lt;code&gt;tkinter&lt;/code&gt; como &lt;code&gt;tk&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;Crea una instancia de la clase &lt;code&gt;Tk&lt;/code&gt;.&lt;/li&gt;
@@ -1499,7 +1499,7 @@ RootWidget:
 &lt;p&gt;En este código, el método &lt;code&gt;.title()&lt;/code&gt; te permite establecer el título de la ventana de tu aplicación. En este ejemplo, la ventana de la aplicación mostrará &lt;code&gt;Tkinter Demo&lt;/code&gt; en su barra de título.&lt;/p&gt;
 &lt;p&gt;Puedes usar el método &lt;code&gt;.geometry()&lt;/code&gt; para definir el tamaño de la ventana. El argumento es una cadena que especifica el ancho y alto de la ventana en píxeles.&lt;/p&gt;
 &lt;p&gt;Cada aplicación GUI necesita widgets. Estos son los componentes gráficos que conforman la GUI de la aplicación. En este ejemplo, usas un widget &lt;code&gt;Label&lt;/code&gt; llamado &lt;code&gt;hello&lt;/code&gt; que te permitirá mostrar el mensaje &lt;code&gt;"Hola, mundo!"&lt;/code&gt; en la ventana de tu aplicación.&lt;/p&gt;
-&lt;p&gt;El método &lt;code&gt;.pack()&lt;/code&gt; es un &lt;a href="https://pythonscouts.com/iniciando-con-tkinter-python/#usando-gestores-de-geometria"&gt;gestor de geometría&lt;/a&gt; se utiliza para colocar el widget en la ventana. El argumento &lt;code&gt;pady&lt;/code&gt; agrega un poco de espacio vertical alrededor del widget.&lt;/p&gt;
+&lt;p&gt;El método &lt;code&gt;.pack()&lt;/code&gt; es un &lt;a href="/iniciando-con-tkinter-python/#usando-gestores-de-geometria"&gt;gestor de geometría&lt;/a&gt; se utiliza para colocar el widget en la ventana. El argumento &lt;code&gt;pady&lt;/code&gt; agrega un poco de espacio vertical alrededor del widget.&lt;/p&gt;
 &lt;p&gt;Has finalizado el tercer paso, así que puedes continuar con el último paso y preparar tu aplicación Tkinter para su ejecución:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
 

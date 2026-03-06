@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts - Guías</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/guias.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2025-10-05T22:55:00+02:00</updated><subtitle>Aprende Python en Español.</subtitle><entry><title>Cómo gestionar un proyecto Python con uv?</title><link href="https://pythonscouts.com/gestionar-proyecto-python-uv/" rel="alternate"/><published>2025-10-05T22:55:00+02:00</published><updated>2025-10-05T22:55:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-10-05:/gestionar-proyecto-python-uv/</id><summary type="html">&lt;p&gt;La herramienta de línea de comandos &lt;code&gt;uv&lt;/code&gt; te permite gestionar proyectos Python y sus dependencias de manera eficiente y precisa.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Esta herramienta ofrece una alternativa rápida y completa a otras como &lt;code&gt;pip&lt;/code&gt;, &lt;code&gt;pip-tools&lt;/code&gt; o &lt;code&gt;poetry&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Con &lt;code&gt;uv&lt;/code&gt; puedes instalar diferentes versiones de Python, crear proyectos desde cero, gestionar &lt;a href="https://pythonscouts.com/entorno-virtual-python/"&gt;entornos virtuales&lt;/a&gt;, añadir y remover dependencias garantizando reproducibilidad, e incluso construir y publicar tus proyectos en PyPI. Todo desde un único flujo de trabajo.&lt;/p&gt;
+&lt;p&gt;Con &lt;code&gt;uv&lt;/code&gt; puedes instalar diferentes versiones de Python, crear proyectos desde cero, gestionar &lt;a href="/entorno-virtual-python/"&gt;entornos virtuales&lt;/a&gt;, añadir y remover dependencias garantizando reproducibilidad, e incluso construir y publicar tus proyectos en PyPI. Todo desde un único flujo de trabajo.&lt;/p&gt;
 &lt;p&gt;En esta guía aprenderás lo básico de cómo usar &lt;code&gt;uv&lt;/code&gt; para ejecutar las tareas más comunes de gestión de proyectos Python, desde la instalación hasta la distribución.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#instalar-uv-en-tu-sistema"&gt;Instalar uv en tu sistema&lt;/a&gt;&lt;/li&gt;
@@ -178,7 +178,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;A continuación una discusión más detallada de cada uno de estos pasos y su código Python asociado.&lt;/p&gt;
 &lt;h2 id="paso-1-importar-el-modulo-zipfile"&gt;Paso 1: Importar el módulo &lt;code&gt;zipfile&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;Primero, necesitas importar el módulo &lt;code&gt;zipfile&lt;/code&gt; en tu &lt;a href="https://pythonscouts.com/ejecutar-script-python/"&gt;script&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;Primero, necesitas importar el módulo &lt;code&gt;zipfile&lt;/code&gt; en tu &lt;a href="/ejecutar-script-python/"&gt;script&lt;/a&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;zipfile&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id="paso-2-instanciar-la-clase-zipfile"&gt;Paso 2: Instanciar la clase &lt;code&gt;ZipFile&lt;/code&gt;&lt;/h2&gt;
@@ -257,7 +257,7 @@
 &lt;h2 id="crear-un-entorno-virtual-python-en-windows"&gt;Crear un entorno virtual Python en Windows&lt;/h2&gt;
 &lt;p&gt;Los requisitos previos para crear un entorno virtual de Python en Windows son los siguientes:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Tener &lt;a href="https://pythonscouts.com/instalar-python-windows/"&gt;instalado&lt;/a&gt; Python.&lt;/li&gt;
+&lt;li&gt;Tener &lt;a href="/instalar-python-windows/"&gt;instalado&lt;/a&gt; Python.&lt;/li&gt;
 &lt;li&gt;Asegurarse de que &lt;code&gt;python&lt;/code&gt; y &lt;code&gt;pip&lt;/code&gt; funcionan correctamente.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Una vez que tu sistema cumple los requisitos previos, puedes crear un entorno virtual de Python siguiendo los pasos que a continuación se describen.&lt;/p&gt;
@@ -291,7 +291,7 @@
 &lt;p&gt;Usar &lt;code&gt;venv&lt;/code&gt; como nombre de un entorno virtual de Python es una práctica común. Sin embargo, no es obligatorio hacerlo, puedes emplear el nombre que desees.&lt;/p&gt;
 &lt;/div&gt;
 &lt;h2 id="crear-un-entorno-virtual-python-en-macos"&gt;Crear un entorno virtual Python en macOS&lt;/h2&gt;
-&lt;p&gt;En macOS, para crear un entorno virtual de Python, solo necesitas tener Python correctamente &lt;a href="https://pythonscouts.com/instalar-python-macos/"&gt;instalado&lt;/a&gt; en tu sistema. Una vez instalado, puedes seguir los siguientes pasos para crear un entorno virtual de Python:&lt;/p&gt;
+&lt;p&gt;En macOS, para crear un entorno virtual de Python, solo necesitas tener Python correctamente &lt;a href="/instalar-python-macos/"&gt;instalado&lt;/a&gt; en tu sistema. Una vez instalado, puedes seguir los siguientes pasos para crear un entorno virtual de Python:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Abrir la Terminal.&lt;/p&gt;
@@ -321,7 +321,7 @@
 &lt;h2 id="crear-un-entorno-virtual-python-en-linux-debianubuntu"&gt;Crear un entorno virtual Python en Linux (Debian/Ubuntu)&lt;/h2&gt;
 &lt;p&gt;Si tienes un sistema Linux basado en Debian o Ubuntu, entonces los requisitos son los siguientes:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Tener &lt;a href="http://localhost:8000/instalar-python-linux-debian-ubuntu/"&gt;instalado&lt;/a&gt; Python&lt;/li&gt;
+&lt;li&gt;Tener &lt;a href="/instalar-python-linux-debian-ubuntu/"&gt;instalado&lt;/a&gt; Python&lt;/li&gt;
 &lt;li&gt;Tener el módulo &lt;code&gt;venv&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;En Ubuntu, el módulo &lt;code&gt;venv&lt;/code&gt; no viene instalado por defecto. Si ese es tu sistema, entonces puedes instalar &lt;code&gt;venv&lt;/code&gt; con el siguiente comando:&lt;/p&gt;
@@ -396,19 +396,19 @@
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;python3
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Este comando descarga Python desde los repos y lo instala en tu ordenador. Esta será la instalación Python del sistema.&lt;/p&gt;
-&lt;p&gt;En Ubuntu, el paquete &lt;code&gt;python3&lt;/code&gt; no incluye todas las funcionalidades que vienen con el instalador oficial de Python para otros sistemas operativos como &lt;a href="https://pythonscouts.com/instalar-python-windows/"&gt;Windows&lt;/a&gt; y &lt;a href="https://pythonscouts.com/instalar-python-macos/"&gt;macOS&lt;/a&gt;. Por ejemplo, si necesitas trabajar con entornos virtuales, deberás instalar &lt;code&gt;python3-venv&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;En Ubuntu, el paquete &lt;code&gt;python3&lt;/code&gt; no incluye todas las funcionalidades que vienen con el instalador oficial de Python para otros sistemas operativos como &lt;a href="/instalar-python-windows/"&gt;Windows&lt;/a&gt; y &lt;a href="/instalar-python-macos/"&gt;macOS&lt;/a&gt;. Por ejemplo, si necesitas trabajar con entornos virtuales, deberás instalar &lt;code&gt;python3-venv&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;De modo similar, si deseas usar &lt;a href="https://pip.pypa.io/en/stable/"&gt;&lt;code&gt;pip&lt;/code&gt;&lt;/a&gt;, que es el instalador de paquetes para Python, deberás instalar el paquete &lt;code&gt;python3-pip&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Puedes disponer de estas dos herramientas al ejecutar el siguiente comando:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;python3-venv&lt;span class="w"&gt; &lt;/span&gt;python3-pip
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Al concluir la ejecución de este comando, tendrás acceso a crear nuevos entornos virtuales e instalar paquetes Python usando &lt;code&gt;pip&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Finalmente, si planeas crear aplicaciones con &lt;a href="https://pythonscouts.com/iniciando-con-tkinter-python/"&gt;interfaz gráfica (GUI) basada en Tkinter&lt;/a&gt;, debes instalar el paquete &lt;code&gt;python3-tk&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Finalmente, si planeas crear aplicaciones con &lt;a href="/iniciando-con-tkinter-python/"&gt;interfaz gráfica (GUI) basada en Tkinter&lt;/a&gt;, debes instalar el paquete &lt;code&gt;python3-tk&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="paso-3-verificar-la-instalacion"&gt;Paso 3: Verificar la instalación&lt;/h2&gt;
 &lt;p&gt;Una vez que hayas ejecutado los pasos anteriores, Python estará instalado en tu sistema operativo. Para confirmar que lo tienes, ejecuta el comando siguiente:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;python3&lt;span class="w"&gt; &lt;/span&gt;--version&lt;span class="w"&gt; &lt;/span&gt;
 &lt;span class="go"&gt;Python 3.10.12&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Este comando imprime la versión de Python que tienes instalada por defecto. Con esto has concluido la instalación de Python usando el gestor de paquetes de tu distribución Linux. Ahora estás listo para escribir tu &lt;a href="https://pythonscouts.com/python-hola-mundo/"&gt;primer programa&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Este comando imprime la versión de Python que tienes instalada por defecto. Con esto has concluido la instalación de Python usando el gestor de paquetes de tu distribución Linux. Ahora estás listo para escribir tu &lt;a href="/python-hola-mundo/"&gt;primer programa&lt;/a&gt;.&lt;/p&gt;
 &lt;div class="admonition note"&gt;
 &lt;p&gt;Es importante que sepas que la versión de Python disponible en los repositorios oficiales de Debian, Ubuntu y derivados puede estar relativamente actualizada con respecto a las últimas versiones liberadas. Para instalar la última versión de Python, deberás compilarla desde sus &lt;a href="https://www.python.org/downloads/source/"&gt;fuentes&lt;/a&gt; o emplear herramientas como &lt;a href="https://github.com/pyenv/pyenv"&gt;&lt;code&gt;pyenv&lt;/code&gt;&lt;/a&gt; que te permiten gestionar varias versiones de Python en tu computadora.&lt;/p&gt;
 &lt;/div&gt;
@@ -453,7 +453,7 @@
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;all&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;letters&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;letters&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:])&lt;/span&gt;
 &lt;span class="kc"&gt;False&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Esta técnica para determinar si todos los elementos de una lista son iguales emplea una expresión generadora que produce &lt;a href="https://pythonscouts.com/valores-python/"&gt;valores&lt;/a&gt; booleanos que resultan de evaluar la &lt;a href="https://pythonscouts.com/expresiones-python/"&gt;expresión&lt;/a&gt; &lt;code&gt;item == letters[0]&lt;/code&gt;. Luego, &lt;code&gt;all()&lt;/code&gt; verifica si todos los elementos resultantes son &lt;code&gt;True&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Esta técnica para determinar si todos los elementos de una lista son iguales emplea una expresión generadora que produce &lt;a href="/valores-python/"&gt;valores&lt;/a&gt; booleanos que resultan de evaluar la &lt;a href="/expresiones-python/"&gt;expresión&lt;/a&gt; &lt;code&gt;item == letters[0]&lt;/code&gt;. Luego, &lt;code&gt;all()&lt;/code&gt; verifica si todos los elementos resultantes son &lt;code&gt;True&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="ordenar-la-lista-y-comparar-el-primer-y-el-ultimo-elemento"&gt;Ordenar la lista y comparar el primer y el último elemento&lt;/h2&gt;
 &lt;p&gt;Otra manera de saber si todos los elementos de una lista son iguales es ordenar la lista y comparar el primer y el último elemento.&lt;/p&gt;
 &lt;div class="admonition note"&gt;
@@ -503,7 +503,7 @@
 &lt;p&gt;Probablemente la manera más comúnmente empleada para ejecutar un script Python es usando el comando &lt;code&gt;python&lt;/code&gt; desde la línea de comandos o terminal del sistema operativo. Antes de entrar en el comando específico, abre tu editor de texto favorito, crea un nuevo archivo &lt;code&gt;.py&lt;/code&gt; y escribe el código siguiente en él:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Hola, Mundo!&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Este script es el típico programa &lt;a href="https://pythonscouts.com/python-hola-mundo/"&gt;&lt;code&gt;"Hola, Mundo!"&lt;/code&gt;&lt;/a&gt; que generalmente escribes cuando comienzas a aprender un lenguaje de programación. Guarda el archivo en tu directorio de trabajo y llámalo &lt;code&gt;script.py&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Este script es el típico programa &lt;a href="/python-hola-mundo/"&gt;&lt;code&gt;"Hola, Mundo!"&lt;/code&gt;&lt;/a&gt; que generalmente escribes cuando comienzas a aprender un lenguaje de programación. Guarda el archivo en tu directorio de trabajo y llámalo &lt;code&gt;script.py&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Abre una ventana de terminal en tu directorio de trabajo actual y ejecuta el siguiente comando:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;script.py
 &lt;span class="go"&gt;Hola, Mundo!&lt;/span&gt;
@@ -533,7 +533,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Listo! Tu script ahora funciona como si fuese un comando. Si deseas que tu script se parezca aún más a un comando estándar, puedes remover de su nombre la extensión &lt;code&gt;.py&lt;/code&gt;. Adicionalmente, puedes añadir el directorio que contiene tu script en el &lt;a href="https://es.wikipedia.org/wiki/PATH_(inform%C3%A1tica)"&gt;&lt;code&gt;PATH&lt;/code&gt;&lt;/a&gt; de tu sistema y lo tendrás disponible como un comando real desde cualquier directorio de trabajo.&lt;/p&gt;
 &lt;h3 id="en-sistemas-windows"&gt;En sistemas Windows&lt;/h3&gt;
-&lt;p&gt;En sistemas Windows con Python &lt;a href="https://pythonscouts.com/instalar-python-windows/"&gt;instalado&lt;/a&gt;, puedes ejecutar un script directamente desde una ventana de PowerShell abierta en el directorio que contiene el script:&lt;/p&gt;
+&lt;p&gt;En sistemas Windows con Python &lt;a href="/instalar-python-windows/"&gt;instalado&lt;/a&gt;, puedes ejecutar un script directamente desde una ventana de PowerShell abierta en el directorio que contiene el script:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;.\&lt;/span&gt;&lt;span class="n"&gt;script&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
 &lt;span class="n"&gt;Hola&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Mundo&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -652,7 +652,7 @@
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="n"&gt;-version&lt;/span&gt;
 &lt;span class="n"&gt;Python&lt;/span&gt; &lt;span class="n"&gt;3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;11&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;5&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Este comando imprime la versión de Python que tienes instalada por defecto. Con esto has concluido la instalación de Python usando el instalador oficial para Windows. Ahora estás listo para escribir tu &lt;a href="https://pythonscouts.com/python-hola-mundo/"&gt;primer programa&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Este comando imprime la versión de Python que tienes instalada por defecto. Con esto has concluido la instalación de Python usando el instalador oficial para Windows. Ahora estás listo para escribir tu &lt;a href="/python-hola-mundo/"&gt;primer programa&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="instalar-python-desde-microsoft-store"&gt;Instalar Python desde Microsoft Store&lt;/h2&gt;
 &lt;p&gt;Para los usuarios que comienzan con Python en un sistema operativo Windows, Microsoft recomienda instalar la aplicación desde su tienda de aplicaciones. Si prefieres instalar Python de esta forma, entonces puedes seguir los pasos siguientes:&lt;/p&gt;
 &lt;ol&gt;
@@ -772,7 +772,7 @@
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;--version&lt;span class="w"&gt; &lt;/span&gt;
 &lt;span class="go"&gt;Python 3.11.5&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Este comando imprime la versión de Python que tienes instalada por defecto. Con esto has concluido la instalación de Python usando el instalador oficial para masOS. Ahora estás listo para escribir tu &lt;a href="https://pythonscouts.com/python-hola-mundo/"&gt;primer programa&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Este comando imprime la versión de Python que tienes instalada por defecto. Con esto has concluido la instalación de Python usando el instalador oficial para masOS. Ahora estás listo para escribir tu &lt;a href="/python-hola-mundo/"&gt;primer programa&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
 &lt;p&gt;Instalar Python en tu ordenador es el primer paso en tu empeño de aprender a programar con el lenguaje. Nuevamente, recuerda que los pasos a seguir para completar la instalación son los siguientes:&lt;/p&gt;
 &lt;ol&gt;
@@ -826,7 +826,7 @@
 &lt;li&gt;Script&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;El modo &lt;strong&gt;interactivo&lt;/strong&gt; consiste en ejecutar el interprete Python desde tu línea de comandos o terminal usando el comando &lt;code&gt;python&lt;/code&gt;. Este modo de trabajo es útil cuando deseas probar ideas y fragmentos de código de manera rápida.&lt;/p&gt;
-&lt;p&gt;Por otro lado, el modo &lt;a href="https://pythonscouts.com/ejecutar-script-python/"&gt;script&lt;/a&gt; es cuando pones tu código en un archivo con extensión &lt;code&gt;.py&lt;/code&gt; y corres este archivo en tu ordenador como un programa ejecutable.&lt;/p&gt;
+&lt;p&gt;Por otro lado, el modo &lt;a href="/ejecutar-script-python/"&gt;script&lt;/a&gt; es cuando pones tu código en un archivo con extensión &lt;code&gt;.py&lt;/code&gt; y corres este archivo en tu ordenador como un programa ejecutable.&lt;/p&gt;
 &lt;p&gt;En las secciones siguientes, aprenderás a crear tu &lt;em&gt;Hola, mundo!&lt;/em&gt; usando Python en los dos modos de trabajo descritos.&lt;/p&gt;
 &lt;h3 id="hola-mundo-desde-una-sesion-interactiva"&gt;&lt;code&gt;Hola, mundo!&lt;/code&gt; desde una sesión interactiva&lt;/h3&gt;
 &lt;p&gt;Para comenzar una sesión interactiva de Python, abre una ventana de línea de comandos o terminal en tu computadora. Los pasos para abrir una terminal variarán en dependencia de tu sistema operativo. En macOS y Linux, generalmente encontrarás una aplicación llamada &lt;em&gt;Terminal&lt;/em&gt;. Si trabajas en Windows, entonces puedes usar algo como PowerShell.&lt;/p&gt;
