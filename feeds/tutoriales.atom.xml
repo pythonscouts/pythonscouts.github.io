@@ -280,7 +280,7 @@ INFO:     Application startup complete.
 &lt;li&gt;Prefieres un enfoque declarativo para la interfaz y dejar la lógica de negocio en Python&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="instalando-kivy"&gt;Instalando Kivy&lt;/h2&gt;
-&lt;p&gt;La forma recomendada de instalar Kivy es usar un &lt;a href="/entorno-virtual-python/"&gt;entorno virtual&lt;/a&gt; y luego instalar el framework desde &lt;a href="https://pypi.org/project/Kivy/"&gt;PyPI&lt;/a&gt;. Los comandos necesarios pueden variar un poco según tu sistema operativo.&lt;/p&gt;
+&lt;p&gt;La forma recomendada de instalar Kivy es usar un &lt;a href="/entorno-virtual-python/"&gt;entorno virtual&lt;/a&gt; y luego instalar el framework desde &lt;a href="https://pypi.org/project/Kivy/" target="_blank"&gt;PyPI&lt;/a&gt;. Los comandos necesarios pueden variar un poco según tu sistema operativo.&lt;/p&gt;
 &lt;h3 id="en-windows"&gt;En Windows&lt;/h3&gt;
 &lt;p&gt;En Windows, puedes crear el entorno virtual e instalar Kivy ejecutando los comandos siguientes:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;-m&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt;
@@ -763,7 +763,7 @@ RootWidget:
 &lt;/ol&gt;
 &lt;h2 id="conclusion"&gt;Conclusión&lt;/h2&gt;
 &lt;p&gt;Con Kivy, puedes construir aplicaciones de interfaz gráfica con un conjunto sólido de widgets y layouts. También puedes separar la lógica y el diseño de la interfaz en archivos &lt;code&gt;.kv&lt;/code&gt; a medida que tu aplicación crece.&lt;/p&gt;
-&lt;p&gt;A partir de aquí, prueba a combinar widgets y layouts para crear aplicaciones multiplataforma, crear tus interfaces con KV language para mantener tu proyecto organizado.&lt;/p&gt;</content><category term="Tutoriales"/><category term="kivy"/><category term="python"/><category term="gui"/></entry><entry><title>Iniciando con PySide6 para desarrollo GUI</title><link href="https://pythonscouts.com/iniciando-con-pyside6-python/" rel="alternate"/><published>2025-01-21T21:40:00+01:00</published><updated>2025-01-21T21:40:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-01-21:/iniciando-con-pyside6-python/</id><summary type="html">&lt;p&gt;En Python, PySide6 es una biblioteca que proporciona el enlace oficial de Python con Qt, que es un framework de desarrollo de aplicaciones de interfaz gráfica de usuario (GUI).&lt;/p&gt;</summary><content type="html">&lt;p&gt;Para desarrollar este tipo de aplicaciones en Python, puedes emplear una amplia variedad de bibliotecas y frameworks, incluyendo &lt;a href="https://docs.python.org/3/library/tkinter.html"&gt;Tkinter&lt;/a&gt;, &lt;a href="https://realpython.com/python-gui-with-wxpython/"&gt;wxPython&lt;/a&gt;, &lt;a href="https://www.riverbankcomputing.com/software/pyqt/intro"&gt;PyQt&lt;/a&gt;, entre otras. Sin embargo, &lt;a href="https://wiki.qt.io/Qt_for_Python"&gt;PySide6&lt;/a&gt; es una de las bibliotecas más populares y sólidas disponibles.&lt;/p&gt;
+&lt;p&gt;A partir de aquí, prueba a combinar widgets y layouts para crear aplicaciones multiplataforma, crear tus interfaces con KV language para mantener tu proyecto organizado.&lt;/p&gt;</content><category term="Tutoriales"/><category term="kivy"/><category term="python"/><category term="gui"/></entry><entry><title>Iniciando con PySide6 para desarrollo GUI</title><link href="https://pythonscouts.com/iniciando-con-pyside6-python/" rel="alternate"/><published>2025-01-21T21:40:00+01:00</published><updated>2025-01-21T21:40:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-01-21:/iniciando-con-pyside6-python/</id><summary type="html">&lt;p&gt;En Python, PySide6 es una biblioteca que proporciona el enlace oficial de Python con Qt, que es un framework de desarrollo de aplicaciones de interfaz gráfica de usuario (GUI).&lt;/p&gt;</summary><content type="html">&lt;p&gt;Para desarrollar este tipo de aplicaciones en Python, puedes emplear una amplia variedad de bibliotecas y frameworks, incluyendo &lt;a href="https://docs.python.org/3/library/tkinter.html" target="_blank"&gt;Tkinter&lt;/a&gt;, &lt;a href="https://realpython.com/python-gui-with-wxpython/" target="_blank"&gt;wxPython&lt;/a&gt;, &lt;a href="https://www.riverbankcomputing.com/software/pyqt/intro" target="_blank"&gt;PyQt&lt;/a&gt;, entre otras. Sin embargo, &lt;a href="https://wiki.qt.io/Qt_for_Python" target="_blank"&gt;PySide6&lt;/a&gt; es una de las bibliotecas más populares y sólidas disponibles.&lt;/p&gt;
 &lt;p&gt;En este tutorial, aprenderás los conceptos básicos para construir aplicaciones GUI usando Python y PySide6.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;En este tutorial, aprenderás cómo:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -805,11 +805,11 @@ RootWidget:
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;h2 id="conociendo-pyside6"&gt;Conociendo PySide6&lt;/h2&gt;
-&lt;p&gt;PySide6 es una biblioteca que proporciona el enlace oficial entre Python y &lt;a href="https://wiki.qt.io/About_Qt"&gt;Qt&lt;/a&gt;, el cual es un framework de desarrollo en &lt;a href="https://realpython.com/python-vs-cpp/"&gt;C++&lt;/a&gt; para crear interfaces gráficas de usuario (GUIs). Proporciona &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets.html"&gt;clases&lt;/a&gt; y herramientas para la creación de GUIs, manejo de &lt;a href="https://realpython.com/python-xml-parser/"&gt;XML&lt;/a&gt;, comunicación de red, expresiones regulares, hilos, bases de datos SQL, navegación web y otras tecnologías disponibles en Qt.&lt;/p&gt;
-&lt;p&gt;PySide6, también conocida como &lt;a href="https://doc.qt.io/qtforpython-6/"&gt;Qt for Python&lt;/a&gt;, es compatible con Windows, Linux y macOS, por lo que puedes emplearla para desarrollar aplicaciones multiplataforma que tengan una apariencia nativa en cada plataforma.&lt;/p&gt;
-&lt;p&gt;Puedes usar PySide6 con una licencia comercial y en proyectos de código abierto con una licencia compatible con la licencia de Qt que estés empleando ya sea &lt;a href="https://tldrlegal.com/license/gnu-lesser-general-public-license-v3-(lgpl-3)"&gt;LGPLv3&lt;/a&gt; o &lt;a href="https://tldrlegal.com/license/gnu-general-public-license-v2"&gt;GPLv2&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;PySide6 es una biblioteca que proporciona el enlace oficial entre Python y &lt;a href="https://wiki.qt.io/About_Qt" target="_blank"&gt;Qt&lt;/a&gt;, el cual es un framework de desarrollo en &lt;a href="https://realpython.com/python-vs-cpp/" target="_blank"&gt;C++&lt;/a&gt; para crear interfaces gráficas de usuario (GUIs). Proporciona &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets.html" target="_blank"&gt;clases&lt;/a&gt; y herramientas para la creación de GUIs, manejo de &lt;a href="https://realpython.com/python-xml-parser/" target="_blank"&gt;XML&lt;/a&gt;, comunicación de red, expresiones regulares, hilos, bases de datos SQL, navegación web y otras tecnologías disponibles en Qt.&lt;/p&gt;
+&lt;p&gt;PySide6, también conocida como &lt;a href="https://doc.qt.io/qtforpython-6/" target="_blank"&gt;Qt for Python&lt;/a&gt;, es compatible con Windows, Linux y macOS, por lo que puedes emplearla para desarrollar aplicaciones multiplataforma que tengan una apariencia nativa en cada plataforma.&lt;/p&gt;
+&lt;p&gt;Puedes usar PySide6 con una licencia comercial y en proyectos de código abierto con una licencia compatible con la licencia de Qt que estés empleando ya sea &lt;a href="https://tldrlegal.com/license/gnu-lesser-general-public-license-v3-(lgpl-3)" target="_blank"&gt;LGPLv3&lt;/a&gt; o &lt;a href="https://tldrlegal.com/license/gnu-general-public-license-v2" target="_blank"&gt;GPLv2&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="instalando-pyside6"&gt;Instalando PySide6&lt;/h2&gt;
-&lt;p&gt;Para instalar PySide6 en tu computadora, la opción recomendada es instalar desde el índice de paquetes de Python, &lt;a href="https://realpython.com/pypi-publish-python-package/"&gt;PyPI&lt;/a&gt;, usando el comando &lt;code&gt;pip&lt;/code&gt;. Para esto, puedes crear un &lt;a href="https://docs.python.org/es/3.13/glossary.html#term-virtual-environment"&gt;entorno virtual de Python&lt;/a&gt; y luego instalar el paquete &lt;code&gt;pyside6&lt;/code&gt;, ejecuta lo siguiente en tu línea de comandos, dependiendo de tu sistema operativo.&lt;/p&gt;
+&lt;p&gt;Para instalar PySide6 en tu computadora, la opción recomendada es instalar desde el índice de paquetes de Python, &lt;a href="https://realpython.com/pypi-publish-python-package/" target="_blank"&gt;PyPI&lt;/a&gt;, usando el comando &lt;code&gt;pip&lt;/code&gt;. Para esto, puedes crear un &lt;a href="https://docs.python.org/es/3.13/glossary.html#term-virtual-environment" target="_blank"&gt;entorno virtual de Python&lt;/a&gt; y luego instalar el paquete &lt;code&gt;pyside6&lt;/code&gt;, ejecuta lo siguiente en tu línea de comandos, dependiendo de tu sistema operativo.&lt;/p&gt;
 &lt;h3 id="en-windows"&gt;En Windows&lt;/h3&gt;
 &lt;p&gt;En Windows, puedes instalar PySide6 ejecutando los comandos:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;-m&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt;
@@ -827,16 +827,16 @@ RootWidget:
 &lt;h2 id="creando-una-aplicacion-pyside6"&gt;Creando una aplicación PySide6&lt;/h2&gt;
 &lt;p&gt;Con PySide6 instalado, estás listo para crear tu primera aplicación GUI. Para comenzar, crearás una aplicación de &lt;code&gt;Hola, Mundo!&lt;/code&gt;. Aquí están los pasos a seguir:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Importa &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QApplication.html"&gt;&lt;code&gt;QApplication&lt;/code&gt;&lt;/a&gt; y todos los widgets necesarios desde &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/index.html#module-PySide6.QtWidgets"&gt;&lt;code&gt;PySide6.QtWidgets&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Importa &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QApplication.html" target="_blank"&gt;&lt;code&gt;QApplication&lt;/code&gt;&lt;/a&gt; y todos los widgets necesarios desde &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/index.html#module-PySide6.QtWidgets" target="_blank"&gt;&lt;code&gt;PySide6.QtWidgets&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Crea una instancia de &lt;code&gt;QApplication&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;Define la GUI de la aplicación.&lt;/li&gt;
 &lt;li&gt;Muestra la GUI de la aplicación.&lt;/li&gt;
-&lt;li&gt;Ejecuta el &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtCore/QCoreApplication.html#PySide6.QtCore.PySide6.QtCore.QCoreApplication.exec"&gt;bucle de eventos&lt;/a&gt; de la aplicación.&lt;/li&gt;
+&lt;li&gt;Ejecuta el &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtCore/QCoreApplication.html#PySide6.QtCore.PySide6.QtCore.QCoreApplication.exec" target="_blank"&gt;bucle de eventos&lt;/a&gt; de la aplicación.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Crea un nuevo archivo Python llamado &lt;code&gt;app.py&lt;/code&gt; en tu directorio de trabajo actual:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En esta línea de código, importas &lt;code&gt;QApplication&lt;/code&gt;, &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QLabel.html"&gt;&lt;code&gt;QLabel&lt;/code&gt;&lt;/a&gt;, y &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QWidget.html"&gt;&lt;code&gt;QWidget&lt;/code&gt;&lt;/a&gt; desde &lt;code&gt;QtWidgets&lt;/code&gt;. Con esto, has cumplido con el primer paso.&lt;/p&gt;
+&lt;p&gt;En esta línea de código, importas &lt;code&gt;QApplication&lt;/code&gt;, &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QLabel.html" target="_blank"&gt;&lt;code&gt;QLabel&lt;/code&gt;&lt;/a&gt;, y &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QWidget.html" target="_blank"&gt;&lt;code&gt;QWidget&lt;/code&gt;&lt;/a&gt; desde &lt;code&gt;QtWidgets&lt;/code&gt;. Con esto, has cumplido con el primer paso.&lt;/p&gt;
 &lt;p&gt;Para completar el segundo paso, necesitas crear una instancia de &lt;code&gt;QApplication&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;
 
@@ -859,7 +859,7 @@ RootWidget:
 &lt;p&gt;Como su nombre sugiere, el método &lt;code&gt;.setWindowTitle()&lt;/code&gt; te permite establecer el título de la ventana en tu aplicación. En este ejemplo, la ventana de la app mostrará &lt;code&gt;PySide6 Demo&lt;/code&gt; en su barra de título.&lt;/p&gt;
 &lt;p&gt;Puedes usar &lt;code&gt;.setGeometry()&lt;/code&gt; para definir el tamaño de la ventana y la posición en la pantalla. Los dos primeros argumentos son las coordenadas de pantalla &lt;code&gt;x&lt;/code&gt; y &lt;code&gt;y&lt;/code&gt; donde se colocará la ventana. El tercer y cuarto argumentos son el ancho y alto de la ventana.&lt;/p&gt;
 &lt;p&gt;Cada aplicación GUI necesita &lt;strong&gt;widgets&lt;/strong&gt;. Estos son los componentes gráficos que conforman la GUI de la app. En este ejemplo, usas un widget &lt;code&gt;QLabel&lt;/code&gt; llamado&lt;code&gt;hello&lt;/code&gt; que te permitirá mostrar el mensaje &lt;code&gt;Hola, Mundo!&lt;/code&gt; en la ventana de tu aplicación.&lt;/p&gt;
-&lt;p&gt;Los objetos &lt;code&gt;QLabel&lt;/code&gt; pueden mostrar texto formateado en HTML, por lo que puedes usar el elemento &lt;a href="https://es.wikipedia.org/wiki/HTML"&gt;HTML&lt;/a&gt; &lt;code&gt;"&amp;lt;h1&amp;gt;Hola, Mundo!&amp;lt;/h1&amp;gt;"&lt;/code&gt; para proporcionar el texto deseado como un encabezado &lt;code&gt;h1&lt;/code&gt;. Finalmente, usas el método &lt;code&gt;.move()&lt;/code&gt; para colocar el mensaje en las coordenadas &lt;code&gt;(60, 15)&lt;/code&gt; en la ventana de la aplicación.&lt;/p&gt;
+&lt;p&gt;Los objetos &lt;code&gt;QLabel&lt;/code&gt; pueden mostrar texto formateado en HTML, por lo que puedes usar el elemento &lt;a href="https://es.wikipedia.org/wiki/HTML" target="_blank"&gt;HTML&lt;/a&gt; &lt;code&gt;"&amp;lt;h1&amp;gt;Hola, Mundo!&amp;lt;/h1&amp;gt;"&lt;/code&gt; para proporcionar el texto deseado como un encabezado &lt;code&gt;h1&lt;/code&gt;. Finalmente, usas el método &lt;code&gt;.move()&lt;/code&gt; para colocar el mensaje en las coordenadas &lt;code&gt;(60, 15)&lt;/code&gt; en la ventana de la aplicación.&lt;/p&gt;
 &lt;p&gt;Has finalizado el tercer paso, así que puedes continuar con los dos últimos pasos y preparar tu aplicación GUI PySide6 para ejecutarse:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;
 
@@ -888,7 +888,7 @@ RootWidget:
 &lt;p&gt;Los widgets también detectan clics del mouse, pulsaciones de teclas y otros eventos del usuario, el sistema de ventanas y otras fuentes. Cada vez que un widget captura un evento, emite una señal para anunciar su cambio de estado.&lt;/p&gt;
 &lt;p&gt;PySide6 tiene una colección variada de widgets, cada uno de los cuales tiene un propósito diferente. Algunos de los widgets más comunes incluyen botones, etiquetas o labels, campos de entrada de texto, listas desplegables, y botones radiales.&lt;/p&gt;
 &lt;h3 id="botones"&gt;Botones&lt;/h3&gt;
-&lt;p&gt;Puedes crear un botón con la clase &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QPushButton.html"&gt;&lt;code&gt;QPushButton&lt;/code&gt;&lt;/a&gt;, la cual proporciona un botón de comando clásico. Algunos botones típicos son &lt;em&gt;Ok&lt;/em&gt;, &lt;em&gt;Cancelar&lt;/em&gt;, &lt;em&gt;Aplicar&lt;/em&gt;, &lt;em&gt;Sí&lt;/em&gt;, &lt;em&gt;No&lt;/em&gt;, &lt;em&gt;Cerrar&lt;/em&gt;, similares.&lt;/p&gt;
+&lt;p&gt;Puedes crear un botón con la clase &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QPushButton.html" target="_blank"&gt;&lt;code&gt;QPushButton&lt;/code&gt;&lt;/a&gt;, la cual proporciona un botón de comando clásico. Algunos botones típicos son &lt;em&gt;Ok&lt;/em&gt;, &lt;em&gt;Cancelar&lt;/em&gt;, &lt;em&gt;Aplicar&lt;/em&gt;, &lt;em&gt;Sí&lt;/em&gt;, &lt;em&gt;No&lt;/em&gt;, &lt;em&gt;Cerrar&lt;/em&gt;, similares.&lt;/p&gt;
 &lt;p&gt;Crea un archivo llamado &lt;code&gt;buttons.py&lt;/code&gt; y pon el siguiente código en él:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -921,7 +921,7 @@ RootWidget:
 &lt;p&gt;En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; que representa un gestor de disposición que permite organizar los widgets con una orientación vertical. Más sobre gestores de disposición en un momento.&lt;/p&gt;
 &lt;/div&gt;
 &lt;h3 id="campos-de-entrada-de-texto"&gt;Campos de entrada de texto&lt;/h3&gt;
-&lt;p&gt;Los &lt;strong&gt;campos de entrada de texto&lt;/strong&gt; son widgets comunes también. Estos widgets te permite ingresar una sola línea de texto y puedes crearlos con la clase &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QLineEdit.html"&gt;&lt;code&gt;QLineEdit&lt;/code&gt;&lt;/a&gt;. Los campos de entrada de texto son útiles cuando necesitas obtener información del usuario como texto simple.&lt;/p&gt;
+&lt;p&gt;Los &lt;strong&gt;campos de entrada de texto&lt;/strong&gt; son widgets comunes también. Estos widgets te permite ingresar una sola línea de texto y puedes crearlos con la clase &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QLineEdit.html" target="_blank"&gt;&lt;code&gt;QLineEdit&lt;/code&gt;&lt;/a&gt;. Los campos de entrada de texto son útiles cuando necesitas obtener información del usuario como texto simple.&lt;/p&gt;
 &lt;p&gt;Para un ejemplo, crea un archivo &lt;code&gt;line_edits.py&lt;/code&gt; y escribe el siguiente código en él:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -952,7 +952,7 @@ RootWidget:
 
 &lt;p&gt;Campos de texto como estos proporcionan funcionalidades estándar como copiar, pegar, deshacer, rehacer, arrastrar, soltar, y similares. En la imagen, puedes notar que los campos muestran texto de marcador de posición para informar al usuario qué tipo de información debe introducir.&lt;/p&gt;
 &lt;h3 id="listas-desplegables"&gt;Listas desplegables&lt;/h3&gt;
-&lt;p&gt;Las &lt;strong&gt;listas desplegables&lt;/strong&gt; son otro tipo fundamental de widget en aplicaciones GUI. Puedes crearlas usando la clase &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QComboBox.html"&gt;&lt;code&gt;QComboBox&lt;/code&gt;&lt;/a&gt;. Una lista desplegable presenta al usuario una serie de opciones de una manera que ocupa un espacio mínimo en la pantalla.&lt;/p&gt;
+&lt;p&gt;Las &lt;strong&gt;listas desplegables&lt;/strong&gt; son otro tipo fundamental de widget en aplicaciones GUI. Puedes crearlas usando la clase &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QComboBox.html" target="_blank"&gt;&lt;code&gt;QComboBox&lt;/code&gt;&lt;/a&gt;. Una lista desplegable presenta al usuario una serie de opciones de una manera que ocupa un espacio mínimo en la pantalla.&lt;/p&gt;
 &lt;p&gt;A continuación, un ejemplo de cómo emplear una lista desplegable en PySide6:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -980,9 +980,9 @@ RootWidget:
 &lt;p&gt;&lt;img src="../images/articles/iniciando-con-pyside6-python/pyside6-lista-desplegable.png" class="mx-auto d-block mt-2" alt="Lista desplegable en PySide6"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Lista desplegable en PySide6&lt;/em&gt;&lt;/div&gt;
 
-&lt;p&gt;Al hacer clic sobre esta lista desplegable, los usuarios pueden seleccionar una de las opciones desplegadas. Las listas desplegables también pueden ser de solo lectura o editables y además de texto, también pueden contener &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtGui/QBitmap.html"&gt;pixmaps&lt;/a&gt; o ambos.&lt;/p&gt;
+&lt;p&gt;Al hacer clic sobre esta lista desplegable, los usuarios pueden seleccionar una de las opciones desplegadas. Las listas desplegables también pueden ser de solo lectura o editables y además de texto, también pueden contener &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtGui/QBitmap.html" target="_blank"&gt;pixmaps&lt;/a&gt; o ambos.&lt;/p&gt;
 &lt;h3 id="botones-radiales"&gt;Botones radiales&lt;/h3&gt;
-&lt;p&gt;El último widget que estudiarás es el &lt;strong&gt;botón radial&lt;/strong&gt;, que puedes crear con la clase &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QRadioButton.html"&gt;&lt;code&gt;QRadioButton&lt;/code&gt;&lt;/a&gt;. Se trata de un botón circular de opción que puedes seleccionar al hacer clic sobre él. Los botones radiales son útiles cuando necesitas que el usuario seleccione una entre varias opciones.&lt;/p&gt;
+&lt;p&gt;El último widget que estudiarás es el &lt;strong&gt;botón radial&lt;/strong&gt;, que puedes crear con la clase &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QRadioButton.html" target="_blank"&gt;&lt;code&gt;QRadioButton&lt;/code&gt;&lt;/a&gt;. Se trata de un botón circular de opción que puedes seleccionar al hacer clic sobre él. Los botones radiales son útiles cuando necesitas que el usuario seleccione una entre varias opciones.&lt;/p&gt;
 &lt;p&gt;Todas las opciones en un grupo de botones radiales son visibles al mismo tiempo, pero el usuario solo puede seleccionar una de ellas. Es decir, la selección es excluyente. Considera el siguiente ejemplo:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -1014,17 +1014,17 @@ RootWidget:
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Botones radiales en PySide6&lt;/em&gt;&lt;/div&gt;
 
 &lt;p&gt;En este grupo de botones radiales, solo un botón puede estar seleccionado a la vez. Si seleccionas otro botón del grupo, entonces el botón previamente seleccionado se deseleccionará automáticamente.&lt;/p&gt;
-&lt;p&gt;PySide6 tiene una amplia colección de widgets. Actualmente hay más de cuarenta &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QWidget.html"&gt;widgets&lt;/a&gt; disponibles. Aquí, has estudiado solo una pequeña muestra. Sin embargo, esta es suficiente para mostrarte el poder y la flexibilidad de este framework GUI.&lt;/p&gt;
+&lt;p&gt;PySide6 tiene una amplia colección de widgets. Actualmente hay más de cuarenta &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QWidget.html" target="_blank"&gt;widgets&lt;/a&gt; disponibles. Aquí, has estudiado solo una pequeña muestra. Sin embargo, esta es suficiente para mostrarte el poder y la flexibilidad de este framework GUI.&lt;/p&gt;
 &lt;p&gt;En la siguiente sección, aprenderás cómo organizar diferentes widgets para construir GUIs modernas y completamente funcionales para tus aplicaciones.&lt;/p&gt;
 &lt;h2 id="usando-gestores-de-disposicion"&gt;Usando gestores de disposición&lt;/h2&gt;
 &lt;p&gt;Para construir GUI app, necesitas saber cómo organizar un conjunto de widgets para que tu GUI sea intuitiva y funcional. En PySide6, las herramientas para este fin son los llamados &lt;strong&gt;gestores de disposición&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Se trata de clases que te permiten dimensionar y posicionar tus widgets en la ventana o formulario de la aplicación. Se adaptan automáticamente a eventos de cambio de tamaño y otros cambios en la GUI, controlando el tamaño y posición de todos sus widgets.&lt;/p&gt;
 &lt;p&gt;PySide6 proporciona cuatro clases básicas de gestores de disposición:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QHBoxLayout.html"&gt;&lt;code&gt;QHBoxLayout&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QVBoxLayout.html"&gt;&lt;code&gt;QVBoxLayout&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QGridLayout.html"&gt;&lt;code&gt;QGridLayout&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QFormLayout.html"&gt;&lt;code&gt;QFormLayout&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QHBoxLayout.html" target="_blank"&gt;&lt;code&gt;QHBoxLayout&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QVBoxLayout.html" target="_blank"&gt;&lt;code&gt;QVBoxLayout&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QGridLayout.html" target="_blank"&gt;&lt;code&gt;QGridLayout&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QFormLayout.html" target="_blank"&gt;&lt;code&gt;QFormLayout&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;En las secciones siguientes, aprenderás lo básico de cómo emplear estas clases y crear GUIs ordenadas y funcionales.&lt;/p&gt;
 &lt;h3 id="disposicion-horizontal"&gt;Disposición horizontal&lt;/h3&gt;
@@ -1088,7 +1088,7 @@ RootWidget:
 
 &lt;p&gt;Esta captura muestra tres botones en un arreglo vertical, uno debajo del otro. Los botones aparecen en el mismo orden en que los agregaste a tu código, de arriba a abajo.&lt;/p&gt;
 &lt;h3 id="disposicion-en-cuadricula"&gt;Disposición en cuadrícula&lt;/h3&gt;
-&lt;p&gt;El tercer gestor de disposición que estudiarás es &lt;strong&gt;&lt;code&gt;QGridLayout&lt;/code&gt;&lt;/strong&gt;. Esta clase te permite organizar los widgets en una cuadrícula de filas y columnas. Cada widget tendrá una posición relativa en la cuadrícula. Puedes definir la posición de un widget con un par de coordenadas como &lt;code&gt;(fila, columna)&lt;/code&gt;. Cada coordenada debe ser un &lt;a href="https://realpython.com/python-numbers/"&gt;número&lt;/a&gt; entero. Estos pares de coordenadas definen qué celda en la cuadrícula ocupará un widget determinado.&lt;/p&gt;
+&lt;p&gt;El tercer gestor de disposición que estudiarás es &lt;strong&gt;&lt;code&gt;QGridLayout&lt;/code&gt;&lt;/strong&gt;. Esta clase te permite organizar los widgets en una cuadrícula de filas y columnas. Cada widget tendrá una posición relativa en la cuadrícula. Puedes definir la posición de un widget con un par de coordenadas como &lt;code&gt;(fila, columna)&lt;/code&gt;. Cada coordenada debe ser un &lt;a href="https://realpython.com/python-numbers/" target="_blank"&gt;número&lt;/a&gt; entero. Estos pares de coordenadas definen qué celda en la cuadrícula ocupará un widget determinado.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;QGridLayout&lt;/code&gt; toma el espacio disponible, lo divide en &lt;code&gt;filas&lt;/code&gt; y &lt;code&gt;columnas&lt;/code&gt;, y coloca cada widget hijo en su propia celda.&lt;/p&gt;
 &lt;p&gt;A continuación, se muestra un ejemplo de cómo organizar una GUI con este gestor de disposición:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
@@ -1137,7 +1137,7 @@ RootWidget:
 
 &lt;p&gt;En esta figura, puedes ver tus botones organizados en una cuadrícula de filas y columnas. El último botón ocupa dos columnas en la cuadrícula.&lt;/p&gt;
 &lt;h3 id="disposicion-de-formulario"&gt;Disposición de formulario&lt;/h3&gt;
-&lt;p&gt;El último gestor de disposición que estudiarás es el &lt;strong&gt;&lt;code&gt;QFormLayout&lt;/code&gt;&lt;/strong&gt;. Con esta clase, puedes organizar los widgets en un diseño de dos columnas. La primera columna generalmente muestra texto en etiquetas, mientras que la segunda columna pueden contener widgets de entrada de datos como &lt;code&gt;QLineEdit&lt;/code&gt;, &lt;code&gt;QComboBox&lt;/code&gt;, &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QSpinBox.html"&gt;&lt;code&gt;QSpinBox&lt;/code&gt;&lt;/a&gt;, entre otros.&lt;/p&gt;
+&lt;p&gt;El último gestor de disposición que estudiarás es el &lt;strong&gt;&lt;code&gt;QFormLayout&lt;/code&gt;&lt;/strong&gt;. Con esta clase, puedes organizar los widgets en un diseño de dos columnas. La primera columna generalmente muestra texto en etiquetas, mientras que la segunda columna pueden contener widgets de entrada de datos como &lt;code&gt;QLineEdit&lt;/code&gt;, &lt;code&gt;QComboBox&lt;/code&gt;, &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QSpinBox.html" target="_blank"&gt;&lt;code&gt;QSpinBox&lt;/code&gt;&lt;/a&gt;, entre otros.&lt;/p&gt;
 &lt;p&gt;El siguiente ejemplo muestra cómo crear una aplicación que utiliza un objeto &lt;code&gt;QFormLayout&lt;/code&gt; para organizar sus widgets:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -1175,7 +1175,7 @@ RootWidget:
 &lt;/ol&gt;
 &lt;p&gt;En las secciones siguientes, aprenderás sobre ambos tipos de ventanas y cómo crearlas en PySide6 de manera que puedas construir aplicaciones funcionales y atractivas.&lt;/p&gt;
 &lt;h3 id="ventanas-principales"&gt;Ventanas principales&lt;/h3&gt;
-&lt;p&gt;La mayoría de las veces, tus aplicaciones tendrán una ventana que incluye &lt;a href="https://realpython.com/python-menus-toolbars/"&gt;barra de menú&lt;/a&gt;, algunas barras de herramientas, una barra de estado y un widget central que será el elemento principal de la GUI. Para crear este tipo de ventana en PySide6, puedes heredar de la clase &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QMainWindow.html"&gt;&lt;code&gt;QMainWindow&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;La mayoría de las veces, tus aplicaciones tendrán una ventana que incluye &lt;a href="https://realpython.com/python-menus-toolbars/" target="_blank"&gt;barra de menú&lt;/a&gt;, algunas barras de herramientas, una barra de estado y un widget central que será el elemento principal de la GUI. Para crear este tipo de ventana en PySide6, puedes heredar de la clase &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QMainWindow.html" target="_blank"&gt;&lt;code&gt;QMainWindow&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Una instancia de una clase que deriva de &lt;code&gt;QMainWindow&lt;/code&gt; se considera la &lt;strong&gt;ventana principal&lt;/strong&gt; de la aplicación y debe ser única.&lt;/p&gt;
 &lt;p&gt;La clase &lt;code&gt;QMainWindow&lt;/code&gt; proporciona un marco para construir la GUI de tu aplicación rápidamente. Esta clase tiene su propio diseño incorporado, que acepta los siguientes componentes gráficos:&lt;/p&gt;
 &lt;table&gt;
@@ -1188,14 +1188,14 @@ RootWidget:
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;Una &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QMenuBar.html"&gt;barra de menú&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Una &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QMenuBar.html" target="_blank"&gt;barra de menú&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Arriba&lt;/td&gt;
 &lt;td&gt;Contiene el menú principal de la aplicación&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Una o más &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QToolBar.html"&gt;barras de herramientas&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Una o más &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QToolBar.html" target="_blank"&gt;barras de herramientas&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Cualquiera de los lados&lt;/td&gt;
-&lt;td&gt;Puede contener &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QToolButton.html"&gt;botones de herramienta&lt;/a&gt; y otros widgets, como &lt;code&gt;QComboBox&lt;/code&gt;, &lt;code&gt;QSpinBox&lt;/code&gt;, y más&lt;/td&gt;
+&lt;td&gt;Puede contener &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QToolButton.html" target="_blank"&gt;botones de herramienta&lt;/a&gt; y otros widgets, como &lt;code&gt;QComboBox&lt;/code&gt;, &lt;code&gt;QSpinBox&lt;/code&gt;, y más&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Un widget central&lt;/td&gt;
@@ -1203,12 +1203,12 @@ RootWidget:
 &lt;td&gt;Contiene el widget central de la ventana, que puede ser de cualquier tipo, incluyendo un widget compuesto&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Uno o más widgets &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QDockWidget.html"&gt;acoplables&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Uno o más widgets &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QDockWidget.html" target="_blank"&gt;acoplables&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Alrededor del widget central&lt;/td&gt;
 &lt;td&gt;Son ventanas pequeñas, movibles y ocultables&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Una &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QStatusBar.html"&gt;barra de estado&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Una &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QStatusBar.html" target="_blank"&gt;barra de estado&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Abajo&lt;/td&gt;
 &lt;td&gt;Contiene la barra de estado de la app, que muestra información de estado&lt;/td&gt;
 &lt;/tr&gt;
@@ -1269,7 +1269,7 @@ RootWidget:
 &lt;/ul&gt;
 &lt;p&gt;¡Eso es todo! Has aprendido a construir una aplicación con ventana principal usando Python y PySide6. Lo siguiente es aprender un poco sobre cómo crear diálogos.&lt;/p&gt;
 &lt;h3 id="dialogos-y-formularios"&gt;Diálogos y formularios&lt;/h3&gt;
-&lt;p&gt;También es común que tus aplicaciones tengan varios diálogos para llevar a cabo acciones secundarias que dependen de la entrada del usuario. Para crear un diálogo, necesitas crear una clase que herede de &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QDialog.html"&gt;&lt;code&gt;QDialog&lt;/code&gt;&lt;/a&gt;, que es la clase base de todas las ventanas de diálogo en PySide6.&lt;/p&gt;
+&lt;p&gt;También es común que tus aplicaciones tengan varios diálogos para llevar a cabo acciones secundarias que dependen de la entrada del usuario. Para crear un diálogo, necesitas crear una clase que herede de &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QDialog.html" target="_blank"&gt;&lt;code&gt;QDialog&lt;/code&gt;&lt;/a&gt;, que es la clase base de todas las ventanas de diálogo en PySide6.&lt;/p&gt;
 &lt;p&gt;En PySide6, los diálogos pueden ser:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Modal:&lt;/strong&gt; Bloquea la entrada a cualquier otra ventana visible en la misma aplicación. Puedes mostrar un diálogo modal llamando a su método &lt;code&gt;.exec()&lt;/code&gt;.&lt;/li&gt;
@@ -1404,7 +1404,7 @@ RootWidget:
 &lt;p&gt;Los cuadros de mensaje y los diálogos estándar son herramientas esenciales para cualquier aplicación PySide6 que requiera interacción con el usuario.&lt;/p&gt;
 &lt;h2 id="conclusion"&gt;Conclusión&lt;/h2&gt;
 &lt;p&gt;Las aplicaciones con &lt;strong&gt;interfaz gráfica de usuario (GUI)&lt;/strong&gt; representan una parte sustancial en el desarrollo de software. Python ofrece varios frameworks y bibliotecas que pueden ayudarte a desarrollar aplicaciones GUI modernas y robustas.&lt;/p&gt;
-&lt;p&gt;En este tutorial, aprendiste cómo usar &lt;strong&gt;PySide6&lt;/strong&gt;, que es una de las bibliotecas más populares y sólidas para el desarrollo de aplicaciones GUI en Python. Es además, el enlace oficial de Python con &lt;a href="https://doc.qt.io/"&gt;Qt&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;En este tutorial, aprendiste cómo usar &lt;strong&gt;PySide6&lt;/strong&gt;, que es una de las bibliotecas más populares y sólidas para el desarrollo de aplicaciones GUI en Python. Es además, el enlace oficial de Python con &lt;a href="https://doc.qt.io/" target="_blank"&gt;Qt&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;En este tutorial, has aprendido a:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Instalar&lt;/strong&gt; PySide6 y configurarlo en tu computadora&lt;/li&gt;
@@ -1453,7 +1453,7 @@ RootWidget:
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;h2 id="conociendo-tkinter"&gt;Conociendo Tkinter&lt;/h2&gt;
-&lt;p&gt;Tkinter es un paquete que forma parte de la biblioteca estándar de Python y está diseñado para crear interfaces gráficas de usuario (GUI). Provee acceso a las clases y objetos de la biblioteca &lt;a href="https://www.tcl.tk/"&gt;Tcl/Tk&lt;/a&gt; y proporciona una manera rápida y sencilla de crear aplicaciones GUI en Python.&lt;/p&gt;
+&lt;p&gt;Tkinter es un paquete que forma parte de la biblioteca estándar de Python y está diseñado para crear interfaces gráficas de usuario (GUI). Provee acceso a las clases y objetos de la biblioteca &lt;a href="https://www.tcl.tk/" target="_blank"&gt;Tcl/Tk&lt;/a&gt; y proporciona una manera rápida y sencilla de crear aplicaciones GUI en Python.&lt;/p&gt;
 &lt;p&gt;Tkinter es compatible con Windows, macOS y Linux, lo que te permite desarrollar aplicaciones multiplataforma sin preocuparte por las diferencias entre sistemas operativos.&lt;/p&gt;
 &lt;p&gt;Tkinter ofrece una variada gama de widgets y herramientas que puedes usar para crear interfaces de usuario interactivas. Desde botones y etiquetas hasta cuadros de texto y menús. Tkinter tiene todo lo que necesitas para desarrollar aplicaciones de escritorio en Python.&lt;/p&gt;
 &lt;p&gt;Sin embargo, a diferencia de otros frameworks y bibliotecas GUI que ofrecen componentes gráficos (widgets) y otras herramientas tales como clases para manipulación de bases de datos, trabajo con redes, y similares, Tkinter se enfoca en los componentes gráficos, la gestión de eventos y el soporte para menus y diálogos.&lt;/p&gt;
@@ -1869,7 +1869,7 @@ RootWidget:
 &lt;li&gt;Organizar una GUI usando &lt;strong&gt;gestores de geometría&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;Crear &lt;strong&gt;ventanas principales&lt;/strong&gt; y &lt;strong&gt;diálogos&lt;/strong&gt; en tus aplicaciones Tkinter&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Ahora puedes usar tus conocimientos de Python y Tkinter para dar vida a tus propias aplicaciones GUI de escritorio.&lt;/p&gt;</content><category term="Tutoriales"/><category term="gui"/><category term="tkinter"/></entry><entry><title>Iniciando con PyQt para desarrollo GUI</title><link href="https://pythonscouts.com/iniciando-con-pyqt-python/" rel="alternate"/><published>2024-12-31T06:00:00+01:00</published><updated>2024-12-31T06:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2024-12-31:/iniciando-con-pyqt-python/</id><summary type="html">&lt;p&gt;En Python, PyQt es una biblioteca que proporciona un enlace con Qt, que es un framework de desarrollo de aplicaciones de interfaz gráfica de usuario (GUI).&lt;/p&gt;</summary><content type="html">&lt;p&gt;Para desarrollar este tipo de aplicaciones en Python, puedes emplear una amplia variedad de bibliotecas y frameworks, incluyendo &lt;a href="https://docs.python.org/3/library/tkinter.html"&gt;Tkinter&lt;/a&gt;, &lt;a href="https://realpython.com/python-gui-with-wxpython/"&gt;wxPython&lt;/a&gt;, &lt;a href="https://www.riverbankcomputing.com/software/pyqt/intro"&gt;PyQt&lt;/a&gt;, &lt;a href="https://wiki.qt.io/Qt_for_Python"&gt;PySide6&lt;/a&gt;, entre otras. Sin embargo, PyQt es una de las bibliotecas más populares y sólidas disponibles.&lt;/p&gt;
+&lt;p&gt;Ahora puedes usar tus conocimientos de Python y Tkinter para dar vida a tus propias aplicaciones GUI de escritorio.&lt;/p&gt;</content><category term="Tutoriales"/><category term="gui"/><category term="tkinter"/></entry><entry><title>Iniciando con PyQt para desarrollo GUI</title><link href="https://pythonscouts.com/iniciando-con-pyqt-python/" rel="alternate"/><published>2024-12-31T06:00:00+01:00</published><updated>2024-12-31T06:00:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2024-12-31:/iniciando-con-pyqt-python/</id><summary type="html">&lt;p&gt;En Python, PyQt es una biblioteca que proporciona un enlace con Qt, que es un framework de desarrollo de aplicaciones de interfaz gráfica de usuario (GUI).&lt;/p&gt;</summary><content type="html">&lt;p&gt;Para desarrollar este tipo de aplicaciones en Python, puedes emplear una amplia variedad de bibliotecas y frameworks, incluyendo &lt;a href="https://docs.python.org/3/library/tkinter.html" target="_blank"&gt;Tkinter&lt;/a&gt;, &lt;a href="https://realpython.com/python-gui-with-wxpython/" target="_blank"&gt;wxPython&lt;/a&gt;, &lt;a href="https://www.riverbankcomputing.com/software/pyqt/intro" target="_blank"&gt;PyQt&lt;/a&gt;, &lt;a href="https://wiki.qt.io/Qt_for_Python" target="_blank"&gt;PySide6&lt;/a&gt;, entre otras. Sin embargo, PyQt es una de las bibliotecas más populares y sólidas disponibles.&lt;/p&gt;
 &lt;p&gt;En este tutorial, aprenderás los conceptos básicos para construir aplicaciones GUI usando Python y PyQt.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;En este tutorial, aprenderás cómo:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -1911,11 +1911,11 @@ RootWidget:
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;h2 id="conociendo-pyqt"&gt;Conociendo PyQt&lt;/h2&gt;
-&lt;p&gt;PyQt es una biblioteca que proporciona un enlace entre Python y &lt;a href="https://wiki.qt.io/About_Qt"&gt;Qt&lt;/a&gt;, el cual es un framework de desarrollo en &lt;a href="https://realpython.com/python-vs-cpp/"&gt;C++&lt;/a&gt; para crear interfaces gráficas de usuario (GUIs). Proporciona &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/sip-classes.html"&gt;clases&lt;/a&gt; y herramientas para la creación de GUIs, manejo de &lt;a href="https://realpython.com/python-xml-parser/"&gt;XML&lt;/a&gt;, comunicación de red, expresiones regulares, hilos, bases de datos SQL, navegación web y otras tecnologías disponibles en Qt.&lt;/p&gt;
+&lt;p&gt;PyQt es una biblioteca que proporciona un enlace entre Python y &lt;a href="https://wiki.qt.io/About_Qt" target="_blank"&gt;Qt&lt;/a&gt;, el cual es un framework de desarrollo en &lt;a href="https://realpython.com/python-vs-cpp/" target="_blank"&gt;C++&lt;/a&gt; para crear interfaces gráficas de usuario (GUIs). Proporciona &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/sip-classes.html" target="_blank"&gt;clases&lt;/a&gt; y herramientas para la creación de GUIs, manejo de &lt;a href="https://realpython.com/python-xml-parser/" target="_blank"&gt;XML&lt;/a&gt;, comunicación de red, expresiones regulares, hilos, bases de datos SQL, navegación web y otras tecnologías disponibles en Qt.&lt;/p&gt;
 &lt;p&gt;PyQt es compatible con Windows, Unix, Linux, macOS, iOS y Android, por lo que puedes emplearla para desarrollar aplicaciones multiplataforma que tengan una apariencia nativa en cada plataforma.&lt;/p&gt;
 &lt;p&gt;Si deseas usar PyQt para crear aplicaciones comerciales, entonces necesitas una licencia comercial. También puedes emplear PyQt para proyectos de código abierto, en cuyo caso la licencia de tu proyecto debe ser compatible con la licencia de Qt que estés empleando.&lt;/p&gt;
 &lt;h2 id="instalando-pyqt"&gt;Instalando PyQt&lt;/h2&gt;
-&lt;p&gt;Para instalar PyQt en tu computadora, la opción recomendada es instalar desde el índice de paquetes de Python, &lt;a href="https://realpython.com/pypi-publish-python-package/"&gt;PyPI&lt;/a&gt;, usando el comando &lt;code&gt;pip&lt;/code&gt;. Para esto, puedes crear un &lt;a href="https://docs.python.org/es/3.13/glossary.html#term-virtual-environment"&gt;entorno virtual de Python&lt;/a&gt; y luego instalar el paquete &lt;code&gt;pyqt6&lt;/code&gt;, ejecuta lo siguiente en tu línea de comandos, dependiendo de tu sistema operativo.&lt;/p&gt;
+&lt;p&gt;Para instalar PyQt en tu computadora, la opción recomendada es instalar desde el índice de paquetes de Python, &lt;a href="https://realpython.com/pypi-publish-python-package/" target="_blank"&gt;PyPI&lt;/a&gt;, usando el comando &lt;code&gt;pip&lt;/code&gt;. Para esto, puedes crear un &lt;a href="https://docs.python.org/es/3.13/glossary.html#term-virtual-environment" target="_blank"&gt;entorno virtual de Python&lt;/a&gt; y luego instalar el paquete &lt;code&gt;pyqt6&lt;/code&gt;, ejecuta lo siguiente en tu línea de comandos, dependiendo de tu sistema operativo.&lt;/p&gt;
 &lt;h3 id="en-windows"&gt;En Windows&lt;/h3&gt;
 &lt;p&gt;En Windows, puedes instalar PyQt ejecutando los comandos:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;-m&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt;
@@ -1933,16 +1933,16 @@ RootWidget:
 &lt;h2 id="creando-una-aplicacion-pyqt"&gt;Creando una aplicación PyQt&lt;/h2&gt;
 &lt;p&gt;Con PyQt instalado, estás listo para crear tu primera aplicación GUI. Para comenzar, crearás una aplicación de &lt;code&gt;Hola, Mundo!&lt;/code&gt;. Aquí están los pasos a seguir:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Importa &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qapplication.html"&gt;&lt;code&gt;QApplication&lt;/code&gt;&lt;/a&gt; y todos los widgets necesarios desde &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qtwidgets-module.html"&gt;&lt;code&gt;PyQt6.QtWidgets&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Importa &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qapplication.html" target="_blank"&gt;&lt;code&gt;QApplication&lt;/code&gt;&lt;/a&gt; y todos los widgets necesarios desde &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qtwidgets-module.html" target="_blank"&gt;&lt;code&gt;PyQt6.QtWidgets&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Crea una instancia de &lt;code&gt;QApplication&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;Define la GUI de la aplicación.&lt;/li&gt;
 &lt;li&gt;Muestra la GUI de la aplicación.&lt;/li&gt;
-&lt;li&gt;Ejecuta el &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtcore/qcoreapplication.html?highlight=main%20loop#the-event-loop-and-event-handling"&gt;bucle de eventos&lt;/a&gt; de la aplicación.&lt;/li&gt;
+&lt;li&gt;Ejecuta el &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtcore/qcoreapplication.html?highlight=main%20loop#the-event-loop-and-event-handling" target="_blank"&gt;bucle de eventos&lt;/a&gt; de la aplicación.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Crea un nuevo archivo Python llamado &lt;code&gt;app.py&lt;/code&gt; en tu directorio de trabajo actual:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En esta línea de código, importas &lt;code&gt;QApplication&lt;/code&gt;, &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qlabel.html"&gt;&lt;code&gt;QLabel&lt;/code&gt;&lt;/a&gt;, y &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qwidget.html"&gt;&lt;code&gt;QWidget&lt;/code&gt;&lt;/a&gt; desde &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qtwidgets-module.html"&gt;&lt;code&gt;QtWidgets&lt;/code&gt;&lt;/a&gt;. Con esto, has cumplido con el primer paso.&lt;/p&gt;
+&lt;p&gt;En esta línea de código, importas &lt;code&gt;QApplication&lt;/code&gt;, &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qlabel.html" target="_blank"&gt;&lt;code&gt;QLabel&lt;/code&gt;&lt;/a&gt;, y &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qwidget.html" target="_blank"&gt;&lt;code&gt;QWidget&lt;/code&gt;&lt;/a&gt; desde &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qtwidgets-module.html" target="_blank"&gt;&lt;code&gt;QtWidgets&lt;/code&gt;&lt;/a&gt;. Con esto, has cumplido con el primer paso.&lt;/p&gt;
 &lt;p&gt;Para completar el segundo paso, necesitas crear una instancia de &lt;code&gt;QApplication&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;
 
@@ -1965,7 +1965,7 @@ RootWidget:
 &lt;p&gt;Como su nombre sugiere, el método &lt;code&gt;.setWindowTitle()&lt;/code&gt; te permite establecer el título de la ventana en tu aplicación. En este ejemplo, la ventana de la app mostrará &lt;code&gt;PyQt Demo&lt;/code&gt; en su barra de título.&lt;/p&gt;
 &lt;p&gt;Puedes usar &lt;code&gt;.setGeometry()&lt;/code&gt; para definir el tamaño de la ventana y la posición en la pantalla. Los dos primeros argumentos son las coordenadas de pantalla &lt;code&gt;x&lt;/code&gt; y &lt;code&gt;y&lt;/code&gt; donde se colocará la ventana. El tercer y cuarto argumentos son el ancho y alto de la ventana.&lt;/p&gt;
 &lt;p&gt;Cada aplicación GUI necesita &lt;strong&gt;widgets&lt;/strong&gt;. Estos son los componentes gráficos que conforman la GUI de la app. En este ejemplo, usas un widget &lt;code&gt;QLabel&lt;/code&gt; llamado&lt;code&gt;hello&lt;/code&gt; que te permitirá mostrar el mensaje &lt;code&gt;Hola, Mundo!&lt;/code&gt; en la ventana de tu aplicación.&lt;/p&gt;
-&lt;p&gt;Los objetos &lt;code&gt;QLabel&lt;/code&gt; pueden mostrar texto formateado en HTML, por lo que puedes usar el elemento &lt;a href="https://es.wikipedia.org/wiki/HTML"&gt;HTML&lt;/a&gt; &lt;code&gt;"&amp;lt;h1&amp;gt;Hola, Mundo!&amp;lt;/h1&amp;gt;"&lt;/code&gt; para proporcionar el texto deseado como un encabezado &lt;code&gt;h1&lt;/code&gt;. Finalmente, usas el método &lt;code&gt;.move()&lt;/code&gt; para colocar el mensaje en las coordenadas &lt;code&gt;(60, 15)&lt;/code&gt; en la ventana de la aplicación.&lt;/p&gt;
+&lt;p&gt;Los objetos &lt;code&gt;QLabel&lt;/code&gt; pueden mostrar texto formateado en HTML, por lo que puedes usar el elemento &lt;a href="https://es.wikipedia.org/wiki/HTML" target="_blank"&gt;HTML&lt;/a&gt; &lt;code&gt;"&amp;lt;h1&amp;gt;Hola, Mundo!&amp;lt;/h1&amp;gt;"&lt;/code&gt; para proporcionar el texto deseado como un encabezado &lt;code&gt;h1&lt;/code&gt;. Finalmente, usas el método &lt;code&gt;.move()&lt;/code&gt; para colocar el mensaje en las coordenadas &lt;code&gt;(60, 15)&lt;/code&gt; en la ventana de la aplicación.&lt;/p&gt;
 &lt;p&gt;Has finalizado el tercer paso, así que puedes continuar con los dos últimos pasos y preparar tu aplicación GUI PyQt para ejecutarse:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;
 
@@ -1994,7 +1994,7 @@ RootWidget:
 &lt;p&gt;Los widgets también detectan clics del mouse, pulsaciones de teclas y otros eventos del usuario, el sistema de ventanas y otras fuentes. Cada vez que un widget captura un evento, emite una señal para anunciar su cambio de estado.&lt;/p&gt;
 &lt;p&gt;PyQt tiene una colección variada de widgets, cada uno de los cuales tiene un propósito diferente. Algunos de los widgets más comunes incluyen botones, etiquetas o labels, campos de entrada de texto, listas desplegables, y botones radiales.&lt;/p&gt;
 &lt;h3 id="botones"&gt;Botones&lt;/h3&gt;
-&lt;p&gt;Puedes crear un botón con la clase &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qpushbutton.html"&gt;&lt;code&gt;QPushButton&lt;/code&gt;&lt;/a&gt;, la cual proporciona un botón de comando clásico. Algunos botones típicos son &lt;em&gt;Ok&lt;/em&gt;, &lt;em&gt;Cancelar&lt;/em&gt;, &lt;em&gt;Aplicar&lt;/em&gt;, &lt;em&gt;Sí&lt;/em&gt;, &lt;em&gt;No&lt;/em&gt;, &lt;em&gt;Cerrar&lt;/em&gt;, similares.&lt;/p&gt;
+&lt;p&gt;Puedes crear un botón con la clase &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qpushbutton.html" target="_blank"&gt;&lt;code&gt;QPushButton&lt;/code&gt;&lt;/a&gt;, la cual proporciona un botón de comando clásico. Algunos botones típicos son &lt;em&gt;Ok&lt;/em&gt;, &lt;em&gt;Cancelar&lt;/em&gt;, &lt;em&gt;Aplicar&lt;/em&gt;, &lt;em&gt;Sí&lt;/em&gt;, &lt;em&gt;No&lt;/em&gt;, &lt;em&gt;Cerrar&lt;/em&gt;, similares.&lt;/p&gt;
 &lt;p&gt;Crea un archivo llamado &lt;code&gt;buttons.py&lt;/code&gt; y pon el siguiente código en él:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -2027,7 +2027,7 @@ RootWidget:
 &lt;p&gt;En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; que representa un gestor de disposición que permite organizar los widgets con una orientación vertical. Más sobre gestores de disposición en un momento.&lt;/p&gt;
 &lt;/div&gt;
 &lt;h3 id="campos-de-entrada-de-texto"&gt;Campos de entrada de texto&lt;/h3&gt;
-&lt;p&gt;Los &lt;strong&gt;campos de entrada de texto&lt;/strong&gt; son widgets comunes también. Estos widgets te permite ingresar una sola línea de texto y puedes crearlos con la clase &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qlineedit.html"&gt;&lt;code&gt;QLineEdit&lt;/code&gt;&lt;/a&gt;. Los campos de entrada de texto son útiles cuando necesitas obtener información del usuario como texto simple.&lt;/p&gt;
+&lt;p&gt;Los &lt;strong&gt;campos de entrada de texto&lt;/strong&gt; son widgets comunes también. Estos widgets te permite ingresar una sola línea de texto y puedes crearlos con la clase &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qlineedit.html" target="_blank"&gt;&lt;code&gt;QLineEdit&lt;/code&gt;&lt;/a&gt;. Los campos de entrada de texto son útiles cuando necesitas obtener información del usuario como texto simple.&lt;/p&gt;
 &lt;p&gt;Para un ejemplo, crea un archivo &lt;code&gt;line_edits.py&lt;/code&gt; y escribe el siguiente código:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -2058,7 +2058,7 @@ RootWidget:
 
 &lt;p&gt;Campos de texto como estos proporcionan funcionalidades estándar como copiar, pegar, deshacer, rehacer, arrastrar, soltar, y similares. En la imagen, puedes notar que los campos muestran texto de marcador de posición para informar al usuario qué tipo de información debe introducir.&lt;/p&gt;
 &lt;h3 id="listas-desplegables"&gt;Listas desplegables&lt;/h3&gt;
-&lt;p&gt;Las &lt;strong&gt;listas desplegables&lt;/strong&gt; son otro tipo fundamental de widget en aplicaciones GUI. Puedes crearlas usando la clase &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qcombobox.html"&gt;&lt;code&gt;QComboBox&lt;/code&gt;&lt;/a&gt;. Una lista desplegable presenta al usuario una serie de opciones de una manera que ocupa un espacio mínimo en la pantalla.&lt;/p&gt;
+&lt;p&gt;Las &lt;strong&gt;listas desplegables&lt;/strong&gt; son otro tipo fundamental de widget en aplicaciones GUI. Puedes crearlas usando la clase &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qcombobox.html" target="_blank"&gt;&lt;code&gt;QComboBox&lt;/code&gt;&lt;/a&gt;. Una lista desplegable presenta al usuario una serie de opciones de una manera que ocupa un espacio mínimo en la pantalla.&lt;/p&gt;
 &lt;p&gt;A continuación, un ejemplo de cómo emplear una lista desplegable en PyQt:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -2088,9 +2088,9 @@ RootWidget:
 &lt;p&gt;&lt;img src="../images/articles/iniciando-con-pyqt-python/pyqt-lista-desplegable.png" class="mx-auto d-block mt-2" alt="Lista desplegable en PyQt"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Lista desplegable en PyQt&lt;/em&gt;&lt;/div&gt;
 
-&lt;p&gt;Al hacer clic sobre esta lista desplegable, los usuarios pueden seleccionar una de las opciones desplegadas. Las listas desplegables también pueden ser de solo lectura o editables y además de texto, también pueden contener &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtgui/qbitmap.html"&gt;pixmaps&lt;/a&gt; o ambos.&lt;/p&gt;
+&lt;p&gt;Al hacer clic sobre esta lista desplegable, los usuarios pueden seleccionar una de las opciones desplegadas. Las listas desplegables también pueden ser de solo lectura o editables y además de texto, también pueden contener &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtgui/qbitmap.html" target="_blank"&gt;pixmaps&lt;/a&gt; o ambos.&lt;/p&gt;
 &lt;h3 id="botones-radiales"&gt;Botones radiales&lt;/h3&gt;
-&lt;p&gt;El último widget que estudiarás es el &lt;strong&gt;botón radial&lt;/strong&gt;, que puedes crear con la clase &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qradiobutton.html"&gt;&lt;code&gt;QRadioButton&lt;/code&gt;&lt;/a&gt;. Se trata de un botón circular de opción que puedes seleccionar al hacer clic sobre él. Los botones radiales son útiles cuando necesitas que el usuario seleccione una entre varias opciones.&lt;/p&gt;
+&lt;p&gt;El último widget que estudiarás es el &lt;strong&gt;botón radial&lt;/strong&gt;, que puedes crear con la clase &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qradiobutton.html" target="_blank"&gt;&lt;code&gt;QRadioButton&lt;/code&gt;&lt;/a&gt;. Se trata de un botón circular de opción que puedes seleccionar al hacer clic sobre él. Los botones radiales son útiles cuando necesitas que el usuario seleccione una entre varias opciones.&lt;/p&gt;
 &lt;p&gt;Todas las opciones en un grupo de botones radiales son visibles al mismo tiempo, pero el usuario solo puede seleccionar una de ellas. Es decir, la selección es excluyente. Considera el siguiente ejemplo:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -2122,17 +2122,17 @@ RootWidget:
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Botones radiales en PyQt&lt;/em&gt;&lt;/div&gt;
 
 &lt;p&gt;En este grupo de botones radiales, solo un botón puede estar seleccionado a la vez. Si seleccionas otro botón del grupo, entonces el botón previamente seleccionado se deseleccionará automáticamente.&lt;/p&gt;
-&lt;p&gt;PyQt tiene una amplia colección de widgets. Actualmente hay más de cuarenta &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qwidget.html"&gt;widgets&lt;/a&gt; disponibles. Aquí, has estudiado solo una pequeña muestra. Sin embargo, esta es suficiente para mostrarte el poder y la flexibilidad de este framework GUI.&lt;/p&gt;
+&lt;p&gt;PyQt tiene una amplia colección de widgets. Actualmente hay más de cuarenta &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qwidget.html" target="_blank"&gt;widgets&lt;/a&gt; disponibles. Aquí, has estudiado solo una pequeña muestra. Sin embargo, esta es suficiente para mostrarte el poder y la flexibilidad de este framework GUI.&lt;/p&gt;
 &lt;p&gt;En la siguiente sección, aprenderás cómo organizar diferentes widgets para construir GUIs modernas y completamente funcionales para tus aplicaciones.&lt;/p&gt;
 &lt;h2 id="usando-gestores-de-disposicion"&gt;Usando gestores de disposición&lt;/h2&gt;
 &lt;p&gt;Para construir GUI app, necesitas saber cómo organizar un conjunto de widgets para que tu GUI sea intuitiva y funcional. En PyQt, las herramientas para este fin son los llamados &lt;strong&gt;gestores de disposición&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Se trata de clases que te permiten dimensionar y posicionar tus widgets en la ventana o formulario de la aplicación. Se adaptan automáticamente a eventos de cambio de tamaño y otros cambios en la GUI, controlando el tamaño y posición de todos sus widgets.&lt;/p&gt;
 &lt;p&gt;PyQt proporciona cuatro clases básicas de gestores de disposición:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qhboxlayout.html"&gt;&lt;code&gt;QHBoxLayout&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qvboxlayout.html"&gt;&lt;code&gt;QVBoxLayout&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qgridlayout.html"&gt;&lt;code&gt;QGridLayout&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qformlayout.html"&gt;&lt;code&gt;QFormLayout&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qhboxlayout.html" target="_blank"&gt;&lt;code&gt;QHBoxLayout&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qvboxlayout.html" target="_blank"&gt;&lt;code&gt;QVBoxLayout&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qgridlayout.html" target="_blank"&gt;&lt;code&gt;QGridLayout&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qformlayout.html" target="_blank"&gt;&lt;code&gt;QFormLayout&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;En las secciones siguientes, aprenderás lo básico de cómo emplear estas clases y crear GUIs ordenadas y funcionales.&lt;/p&gt;
 &lt;h3 id="disposicion-horizontal"&gt;Disposición horizontal&lt;/h3&gt;
@@ -2196,7 +2196,7 @@ RootWidget:
 
 &lt;p&gt;Esta captura muestra tres botones en un arreglo vertical, uno debajo del otro. Los botones aparecen en el mismo orden en que los agregaste a tu código, de arriba a abajo.&lt;/p&gt;
 &lt;h3 id="disposicion-en-cuadricula"&gt;Disposición en cuadrícula&lt;/h3&gt;
-&lt;p&gt;El tercer gestor de disposición que estudiarás es &lt;strong&gt;&lt;code&gt;QGridLayout&lt;/code&gt;&lt;/strong&gt;. Esta clase te permite organizar los widgets en una cuadrícula de filas y columnas. Cada widget tendrá una posición relativa en la cuadrícula. Puedes definir la posición de un widget con un par de coordenadas como &lt;code&gt;(fila, columna)&lt;/code&gt;. Cada coordenada debe ser un &lt;a href="https://realpython.com/python-numbers/"&gt;número&lt;/a&gt; entero. Estos pares de coordenadas definen qué celda en la cuadrícula ocupará un widget determinado.&lt;/p&gt;
+&lt;p&gt;El tercer gestor de disposición que estudiarás es &lt;strong&gt;&lt;code&gt;QGridLayout&lt;/code&gt;&lt;/strong&gt;. Esta clase te permite organizar los widgets en una cuadrícula de filas y columnas. Cada widget tendrá una posición relativa en la cuadrícula. Puedes definir la posición de un widget con un par de coordenadas como &lt;code&gt;(fila, columna)&lt;/code&gt;. Cada coordenada debe ser un &lt;a href="https://realpython.com/python-numbers/" target="_blank"&gt;número&lt;/a&gt; entero. Estos pares de coordenadas definen qué celda en la cuadrícula ocupará un widget determinado.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;QGridLayout&lt;/code&gt; toma el espacio disponible, lo divide en &lt;code&gt;filas&lt;/code&gt; y &lt;code&gt;columnas&lt;/code&gt;, y coloca cada widget hijo en su propia celda.&lt;/p&gt;
 &lt;p&gt;A continuación, se muestra un ejemplo de cómo organizar una GUI con este gestor de disposición:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
@@ -2245,7 +2245,7 @@ RootWidget:
 
 &lt;p&gt;En esta figura, puedes ver tus botones organizados en una cuadrícula de filas y columnas. El último botón ocupa dos columnas en la cuadrícula.&lt;/p&gt;
 &lt;h3 id="disposicion-de-formulario"&gt;Disposición de formulario&lt;/h3&gt;
-&lt;p&gt;El último gestor de disposición que estudiarás es el &lt;strong&gt;&lt;code&gt;QFormLayout&lt;/code&gt;&lt;/strong&gt;. Con esta clase, puedes organizar los widgets en un diseño de dos columnas. La primera columna generalmente muestra texto en etiquetas, mientras que la segunda columna pueden contener widgets de entrada de datos como &lt;code&gt;QLineEdit&lt;/code&gt;, &lt;code&gt;QComboBox&lt;/code&gt;, &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qspinbox.html"&gt;&lt;code&gt;QSpinBox&lt;/code&gt;&lt;/a&gt;, entre otros.&lt;/p&gt;
+&lt;p&gt;El último gestor de disposición que estudiarás es el &lt;strong&gt;&lt;code&gt;QFormLayout&lt;/code&gt;&lt;/strong&gt;. Con esta clase, puedes organizar los widgets en un diseño de dos columnas. La primera columna generalmente muestra texto en etiquetas, mientras que la segunda columna pueden contener widgets de entrada de datos como &lt;code&gt;QLineEdit&lt;/code&gt;, &lt;code&gt;QComboBox&lt;/code&gt;, &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qspinbox.html" target="_blank"&gt;&lt;code&gt;QSpinBox&lt;/code&gt;&lt;/a&gt;, entre otros.&lt;/p&gt;
 &lt;p&gt;El siguiente ejemplo muestra cómo crear una aplicación que utiliza un objeto &lt;code&gt;QFormLayout&lt;/code&gt; para organizar sus widgets:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -2283,7 +2283,7 @@ RootWidget:
 &lt;/ol&gt;
 &lt;p&gt;En las secciones siguientes, aprenderás sobre ambos tipos de ventanas y cómo crearlas en PyQt de manera que puedas construir aplicaciones funcionales y atractivas.&lt;/p&gt;
 &lt;h3 id="ventanas-principales"&gt;Ventanas principales&lt;/h3&gt;
-&lt;p&gt;La mayoría de las veces, tus aplicaciones tendrán una ventana que incluye &lt;a href="https://realpython.com/python-menus-toolbars/"&gt;barra de menú&lt;/a&gt;, algunas barras de herramientas, una barra de estado y un widget central que será el elemento principal de la GUI. Para crear este tipo de ventana en PyQt, puedes heredar de la clase &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qmainwindow.html"&gt;&lt;code&gt;QMainWindow&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;La mayoría de las veces, tus aplicaciones tendrán una ventana que incluye &lt;a href="https://realpython.com/python-menus-toolbars/" target="_blank"&gt;barra de menú&lt;/a&gt;, algunas barras de herramientas, una barra de estado y un widget central que será el elemento principal de la GUI. Para crear este tipo de ventana en PyQt, puedes heredar de la clase &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qmainwindow.html" target="_blank"&gt;&lt;code&gt;QMainWindow&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Una instancia de una clase que deriva de &lt;code&gt;QMainWindow&lt;/code&gt; se considera la &lt;strong&gt;ventana principal&lt;/strong&gt; de la aplicación y debe ser única.&lt;/p&gt;
 &lt;p&gt;La clase &lt;code&gt;QMainWindow&lt;/code&gt; proporciona un marco para construir la GUI de tu aplicación rápidamente. Esta clase tiene su propio diseño incorporado, que acepta los siguientes componentes gráficos:&lt;/p&gt;
 &lt;table&gt;
@@ -2296,14 +2296,14 @@ RootWidget:
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;Una &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qmenubar.html"&gt;barra de menú&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Una &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qmenubar.html" target="_blank"&gt;barra de menú&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Arriba&lt;/td&gt;
 &lt;td&gt;Contiene el menú principal de la aplicación&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Una o más &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qtoolbar.html"&gt;barras de herramientas&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Una o más &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qtoolbar.html" target="_blank"&gt;barras de herramientas&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Cualquiera de los lados&lt;/td&gt;
-&lt;td&gt;Puede contener &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qtoolbutton.html"&gt;botones de herramienta&lt;/a&gt; y otros widgets, como &lt;code&gt;QComboBox&lt;/code&gt;, &lt;code&gt;QSpinBox&lt;/code&gt;, y más&lt;/td&gt;
+&lt;td&gt;Puede contener &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qtoolbutton.html" target="_blank"&gt;botones de herramienta&lt;/a&gt; y otros widgets, como &lt;code&gt;QComboBox&lt;/code&gt;, &lt;code&gt;QSpinBox&lt;/code&gt;, y más&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Un widget central&lt;/td&gt;
@@ -2311,12 +2311,12 @@ RootWidget:
 &lt;td&gt;Contiene el widget central de la ventana, que puede ser de cualquier tipo, incluyendo un widget compuesto&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Uno o más widgets &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qdockwidget.html"&gt;acoplables&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Uno o más widgets &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qdockwidget.html" target="_blank"&gt;acoplables&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Alrededor del widget central&lt;/td&gt;
 &lt;td&gt;Son ventanas pequeñas, movibles y ocultables&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Una &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qstatusbar.html"&gt;barra de estado&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Una &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qstatusbar.html" target="_blank"&gt;barra de estado&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Abajo&lt;/td&gt;
 &lt;td&gt;Contiene la barra de estado de la app, que muestra información de estado&lt;/td&gt;
 &lt;/tr&gt;
@@ -2377,7 +2377,7 @@ RootWidget:
 &lt;/ul&gt;
 &lt;p&gt;¡Eso es todo! Has aprendido a construir una aplicación con ventana principal usando Python y PyQt. Lo siguiente es aprender un poco sobre cómo crear diálogos.&lt;/p&gt;
 &lt;h3 id="dialogos-y-formularios"&gt;Diálogos y formularios&lt;/h3&gt;
-&lt;p&gt;También es común que tus aplicaciones tengan varios diálogos para llevar a cabo acciones secundarias que dependen de la entrada del usuario. Para crear un diálogo, necesitas crear una clase que herede de &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qdialog.html"&gt;&lt;code&gt;QDialog&lt;/code&gt;&lt;/a&gt;, que es la clase base de todas las ventanas de diálogo en PyQt.&lt;/p&gt;
+&lt;p&gt;También es común que tus aplicaciones tengan varios diálogos para llevar a cabo acciones secundarias que dependen de la entrada del usuario. Para crear un diálogo, necesitas crear una clase que herede de &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qdialog.html" target="_blank"&gt;&lt;code&gt;QDialog&lt;/code&gt;&lt;/a&gt;, que es la clase base de todas las ventanas de diálogo en PyQt.&lt;/p&gt;
 &lt;p&gt;En PyQt, los diálogos pueden ser:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Modal:&lt;/strong&gt; Bloquea la entrada a cualquier otra ventana visible en la misma aplicación. Puedes mostrar un diálogo modal llamando a su método &lt;code&gt;.exec()&lt;/code&gt;.&lt;/li&gt;

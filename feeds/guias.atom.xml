@@ -103,7 +103,7 @@
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;h2 id="1-la-documentacion-oficial-de-python"&gt;1. La documentación oficial de Python&lt;/h2&gt;
-&lt;p&gt;La &lt;a href="https://docs.python.org/es/3/"&gt;documentación&lt;/a&gt; oficial de Python es la fuente primaria de información actualizada sobre el lenguaje y sus últimas actualizaciones. La estructura de la documentación incluye secciones como las siguientes:&lt;/p&gt;
+&lt;p&gt;La &lt;a href="https://docs.python.org/es/3/" target="_blank"&gt;documentación&lt;/a&gt; oficial de Python es la fuente primaria de información actualizada sobre el lenguaje y sus últimas actualizaciones. La estructura de la documentación incluye secciones como las siguientes:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://docs.python.org/es/3/whatsnew/3.13.html" target="_blank"&gt;¿Qué hay de nuevo en Python?&lt;/a&gt;: Novedades en cada versión&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://docs.python.org/es/3/tutorial/index.html" target="_blank"&gt;Tutorial&lt;/a&gt;: Guía escrita por Guido Van Rossum&lt;/li&gt;
@@ -147,7 +147,7 @@
 &lt;p&gt;Con este comando, puedes iniciar un servidor web con la documentación de Python.&lt;/p&gt;
 &lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
 &lt;p&gt;Contar con buenas fuentes de información es clave para aprender Python eficazmente. La documentación oficial, la función integrada &lt;code&gt;help()&lt;/code&gt; y la herramienta &lt;code&gt;pydoc&lt;/code&gt; te permitirán encontrar respuestas rápidamente mientras trabajas en tu código.&lt;/p&gt;
-&lt;p&gt;Explora estas opciones y podrás resolver rápidamente tus dudas sobre Python.&lt;/p&gt;</content><category term="Guías"/><category term="python"/><category term="ayuda"/></entry><entry><title>Cómo comprimir archivos con zipfile en Python?</title><link href="https://pythonscouts.com/comprimir-archivos-zipfile-python/" rel="alternate"/><published>2025-02-11T22:15:00+01:00</published><updated>2025-02-11T22:15:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-02-11:/comprimir-archivos-zipfile-python/</id><summary type="html">&lt;p&gt;Comprimir una serie de archivos con el fin de ahorrar espacio en disco puede ser una tarea necesaria en tu trabajo diario con Python. En esta guía rápida, aprenderás cómo hacerlo.&lt;/p&gt;</summary><content type="html">&lt;p&gt;El módulo &lt;a href="https://docs.python.org/es/3.13/library/zipfile.html#module-zipfile"&gt;&lt;code&gt;zipfile&lt;/code&gt;&lt;/a&gt; de la biblioteca estándar de Python permite manipular archivos en formato &lt;a href="https://en.wikipedia.org/wiki/ZIP_(file_format)"&gt;ZIP&lt;/a&gt; que es un formato estándar para comprimir y archivar datos. Con este módulo, puedes crear, leer, escribir, extraer y listar archivos contenidos dentro de archivos ZIP.&lt;/p&gt;
+&lt;p&gt;Explora estas opciones y podrás resolver rápidamente tus dudas sobre Python.&lt;/p&gt;</content><category term="Guías"/><category term="python"/><category term="ayuda"/></entry><entry><title>Cómo comprimir archivos con zipfile en Python?</title><link href="https://pythonscouts.com/comprimir-archivos-zipfile-python/" rel="alternate"/><published>2025-02-11T22:15:00+01:00</published><updated>2025-02-11T22:15:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-02-11:/comprimir-archivos-zipfile-python/</id><summary type="html">&lt;p&gt;Comprimir una serie de archivos con el fin de ahorrar espacio en disco puede ser una tarea necesaria en tu trabajo diario con Python. En esta guía rápida, aprenderás cómo hacerlo.&lt;/p&gt;</summary><content type="html">&lt;p&gt;El módulo &lt;a href="https://docs.python.org/es/3.13/library/zipfile.html#module-zipfile" target="_blank"&gt;&lt;code&gt;zipfile&lt;/code&gt;&lt;/a&gt; de la biblioteca estándar de Python permite manipular archivos en formato &lt;a href="https://en.wikipedia.org/wiki/ZIP_(file_format)" target="_blank"&gt;ZIP&lt;/a&gt; que es un formato estándar para comprimir y archivar datos. Con este módulo, puedes crear, leer, escribir, extraer y listar archivos contenidos dentro de archivos ZIP.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#pasos-resumidos"&gt;Pasos resumidos&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#paso-1-importar-el-modulo-zipfile"&gt;Paso 1: Importar el módulo zipfile&lt;/a&gt;&lt;/li&gt;
@@ -161,7 +161,7 @@
 &lt;p&gt;Para comprimir archivos usando el módulo &lt;code&gt;zipfile&lt;/code&gt; en Python, puedes seguir los siguientes pasos:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Importar el módulo &lt;code&gt;zipfile&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Instanciar la clase &lt;a href="https://docs.python.org/es/3.13/library/zipfile.html#zipfile.ZipFile"&gt;&lt;code&gt;ZipFile&lt;/code&gt;&lt;/a&gt; en modo de escritura (&lt;code&gt;"w"&lt;/code&gt;) para crear un nuevo archivo ZIP.&lt;/li&gt;
+&lt;li&gt;Instanciar la clase &lt;a href="https://docs.python.org/es/3.13/library/zipfile.html#zipfile.ZipFile" target="_blank"&gt;&lt;code&gt;ZipFile&lt;/code&gt;&lt;/a&gt; en modo de escritura (&lt;code&gt;"w"&lt;/code&gt;) para crear un nuevo archivo ZIP.&lt;/li&gt;
 &lt;li&gt;Elegir el método de compresión.&lt;/li&gt;
 &lt;li&gt;Comprimir los archivos en el archivo ZIP usando el método &lt;code&gt;.write()&lt;/code&gt;.&lt;/li&gt;
 &lt;/ol&gt;
@@ -233,7 +233,7 @@
 &lt;p&gt;Para comprimir archivos usando el módulo &lt;code&gt;zipfile&lt;/code&gt; en Python, puedes seguir los siguientes pasos:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Importar el módulo &lt;code&gt;zipfile&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Instanciar la clase &lt;a href="https://docs.python.org/es/3.13/library/zipfile.html#zipfile.ZipFile"&gt;&lt;code&gt;ZipFile&lt;/code&gt;&lt;/a&gt; en modo de escritura (&lt;code&gt;"w"&lt;/code&gt;) para crear un nuevo archivo ZIP.&lt;/li&gt;
+&lt;li&gt;Instanciar la clase &lt;a href="https://docs.python.org/es/3.13/library/zipfile.html#zipfile.ZipFile" target="_blank"&gt;&lt;code&gt;ZipFile&lt;/code&gt;&lt;/a&gt; en modo de escritura (&lt;code&gt;"w"&lt;/code&gt;) para crear un nuevo archivo ZIP.&lt;/li&gt;
 &lt;li&gt;Elegir el método de compresión.&lt;/li&gt;
 &lt;li&gt;Comprimir los archivos en el archivo ZIP usando el método &lt;code&gt;.write()&lt;/code&gt;.&lt;/li&gt;
 &lt;/ol&gt;
@@ -250,7 +250,7 @@
 &lt;p&gt;Los &lt;strong&gt;entornos virtuales&lt;/strong&gt; de Python te sirven para gestionar dependencias de manera independiente para cada uno de tus proyectos. Esto te evita conflictos entre diferentes versiones de bibliotecas.&lt;/p&gt;
 &lt;p&gt;En la práctica, un entorno virtual:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Crea una copia aislada de Python y &lt;a href="https://pip.pypa.io/en/stable/"&gt;&lt;code&gt;pip&lt;/code&gt;&lt;/a&gt; dentro de un directorio específico.&lt;/li&gt;
+&lt;li&gt;Crea una copia aislada de Python y &lt;a href="https://pip.pypa.io/en/stable/" target="_blank"&gt;&lt;code&gt;pip&lt;/code&gt;&lt;/a&gt; dentro de un directorio específico.&lt;/li&gt;
 &lt;li&gt;Permite instalar paquetes sin interferir con otros proyectos o con el sistema operativo.&lt;/li&gt;
 &lt;li&gt;Facilita la replicación de entornos en distintos dispositivos o servidores.&lt;/li&gt;
 &lt;/ul&gt;
@@ -397,7 +397,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Este comando descarga Python desde los repos y lo instala en tu ordenador. Esta será la instalación Python del sistema.&lt;/p&gt;
 &lt;p&gt;En Ubuntu, el paquete &lt;code&gt;python3&lt;/code&gt; no incluye todas las funcionalidades que vienen con el instalador oficial de Python para otros sistemas operativos como &lt;a href="/instalar-python-windows/"&gt;Windows&lt;/a&gt; y &lt;a href="/instalar-python-macos/"&gt;macOS&lt;/a&gt;. Por ejemplo, si necesitas trabajar con entornos virtuales, deberás instalar &lt;code&gt;python3-venv&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;De modo similar, si deseas usar &lt;a href="https://pip.pypa.io/en/stable/"&gt;&lt;code&gt;pip&lt;/code&gt;&lt;/a&gt;, que es el instalador de paquetes para Python, deberás instalar el paquete &lt;code&gt;python3-pip&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;De modo similar, si deseas usar &lt;a href="https://pip.pypa.io/en/stable/" target="_blank"&gt;&lt;code&gt;pip&lt;/code&gt;&lt;/a&gt;, que es el instalador de paquetes para Python, deberás instalar el paquete &lt;code&gt;python3-pip&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Puedes disponer de estas dos herramientas al ejecutar el siguiente comando:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;python3-venv&lt;span class="w"&gt; &lt;/span&gt;python3-pip
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -410,7 +410,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Este comando imprime la versión de Python que tienes instalada por defecto. Con esto has concluido la instalación de Python usando el gestor de paquetes de tu distribución Linux. Ahora estás listo para escribir tu &lt;a href="/python-hola-mundo/"&gt;primer programa&lt;/a&gt;.&lt;/p&gt;
 &lt;div class="admonition note"&gt;
-&lt;p&gt;Es importante que sepas que la versión de Python disponible en los repositorios oficiales de Debian, Ubuntu y derivados puede estar relativamente actualizada con respecto a las últimas versiones liberadas. Para instalar la última versión de Python, deberás compilarla desde sus &lt;a href="https://www.python.org/downloads/source/"&gt;fuentes&lt;/a&gt; o emplear herramientas como &lt;a href="https://github.com/pyenv/pyenv"&gt;&lt;code&gt;pyenv&lt;/code&gt;&lt;/a&gt; que te permiten gestionar varias versiones de Python en tu computadora.&lt;/p&gt;
+&lt;p&gt;Es importante que sepas que la versión de Python disponible en los repositorios oficiales de Debian, Ubuntu y derivados puede estar relativamente actualizada con respecto a las últimas versiones liberadas. Para instalar la última versión de Python, deberás compilarla desde sus &lt;a href="https://www.python.org/downloads/source/" target="_blank"&gt;fuentes&lt;/a&gt; o emplear herramientas como &lt;a href="https://github.com/pyenv/pyenv" target="_blank"&gt;&lt;code&gt;pyenv&lt;/code&gt;&lt;/a&gt; que te permiten gestionar varias versiones de Python en tu computadora.&lt;/p&gt;
 &lt;/div&gt;
 &lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
 &lt;p&gt;Instalar Python en tu ordenador es el primer paso en tu empeño de aprender a programar con el lenguaje. Nuevamente, recuerda que los pasos a seguir para completar la instalación en tu distribución Linux basada en Debian o Ubuntu son los siguientes:&lt;/p&gt;
@@ -428,7 +428,7 @@
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;h2 id="convertir-la-lista-en-un-conjunto-y-comprobar-si-contiene-un-unico-elemento"&gt;Convertir la lista en un conjunto y comprobar si contiene un único elemento&lt;/h2&gt;
-&lt;p&gt;Una vía rápida para determinar si todos los elementos de una lista son iguales es convertir la lista en un conjunto usando la clase &lt;a href="https://docs.python.org/es/3/library/functions.html#func-set"&gt;&lt;code&gt;set()&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Una vía rápida para determinar si todos los elementos de una lista son iguales es convertir la lista en un conjunto usando la clase &lt;a href="https://docs.python.org/es/3/library/functions.html#func-set" target="_blank"&gt;&lt;code&gt;set()&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;div class="admonition note"&gt;
 &lt;p&gt;Como premisa y en aras de la simplicidad, asumiremos que se trata de una lista no vacía que contiene elementos del mismo tipo de dato, ya sea números, cadenas, u otros.&lt;/p&gt;
 &lt;/div&gt;
@@ -441,9 +441,9 @@
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;letters&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
 &lt;span class="kc"&gt;False&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En estos ejemplos, combinas las funciones &lt;code&gt;set()&lt;/code&gt; y &lt;a href="https://docs.python.org/es/3/library/functions.html#len"&gt;&lt;code&gt;len()&lt;/code&gt;&lt;/a&gt;. Si terminas con un conjunto de uno solo elemento, entonces sabes que todos los elementos de tu lista original son iguales.&lt;/p&gt;
+&lt;p&gt;En estos ejemplos, combinas las funciones &lt;code&gt;set()&lt;/code&gt; y &lt;a href="https://docs.python.org/es/3/library/functions.html#len" target="_blank"&gt;&lt;code&gt;len()&lt;/code&gt;&lt;/a&gt;. Si terminas con un conjunto de uno solo elemento, entonces sabes que todos los elementos de tu lista original son iguales.&lt;/p&gt;
 &lt;h2 id="usar-la-funcion-all-para-comparar-el-primer-elemento-con-los-restantes"&gt;Usar la función &lt;code&gt;all()&lt;/code&gt; para comparar el primer elemento con los restantes&lt;/h2&gt;
-&lt;p&gt;Puedes emplear la función &lt;a href="https://docs.python.org/es/3/library/functions.html#all"&gt;&lt;code&gt;all()&lt;/code&gt;&lt;/a&gt; para determinar si todos los elementos de una lista son iguales. Esta función te permite comprobar si todos los elementos de un iterable son verdaderos. Para cumplir con tu tarea, puedes comparar el primer elemento de tu lista con el resto de los elementos.&lt;/p&gt;
+&lt;p&gt;Puedes emplear la función &lt;a href="https://docs.python.org/es/3/library/functions.html#all" target="_blank"&gt;&lt;code&gt;all()&lt;/code&gt;&lt;/a&gt; para determinar si todos los elementos de una lista son iguales. Esta función te permite comprobar si todos los elementos de un iterable son verdaderos. Para cumplir con tu tarea, puedes comparar el primer elemento de tu lista con el resto de los elementos.&lt;/p&gt;
 &lt;p&gt;A continuación el código que te permite hacerlo:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;numbers&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;all&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;numbers&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;numbers&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:])&lt;/span&gt;
@@ -472,7 +472,7 @@
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;letters&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;letters&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="kc"&gt;False&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En este ejemplo, ordenas la lista con el método &lt;a href="https://docs.python.org/es/3/library/stdtypes.html#list.sort"&gt;&lt;code&gt;.sort()&lt;/code&gt;&lt;/a&gt; y luego comparas el primer y el último elemento usando una comparación de igualdad. Si estos elementos son iguales, entonces todos los elementos de tu lista son iguales.&lt;/p&gt;
+&lt;p&gt;En este ejemplo, ordenas la lista con el método &lt;a href="https://docs.python.org/es/3/library/stdtypes.html#list.sort" target="_blank"&gt;&lt;code&gt;.sort()&lt;/code&gt;&lt;/a&gt; y luego comparas el primer y el último elemento usando una comparación de igualdad. Si estos elementos son iguales, entonces todos los elementos de tu lista son iguales.&lt;/p&gt;
 &lt;h2 id="en-resumen"&gt;En resumen&lt;/h2&gt;
 &lt;p&gt;En esta guía, has aprendido tres técnicas diferentes para determinar si todos los elementos en una lista de Python son iguales:&lt;/p&gt;
 &lt;ol&gt;
@@ -496,7 +496,7 @@
 &lt;/div&gt;
 &lt;h2 id="scripts-y-programas-en-python"&gt;Scripts y programas en Python&lt;/h2&gt;
 &lt;p&gt;En informática, el término &lt;strong&gt;script&lt;/strong&gt; se emplea para designar un archivo que contiene una secuencia lógica de órdenes o comandos que un ordenador puede ejecutar. Con esto en mente, puedes definir un &lt;strong&gt;script Python&lt;/strong&gt; como una secuencia de instrucciones escritas en este lenguaje y que se almacena en un archivo de texto plano. Este archivo está diseñado para ser ejecutado directamente por el usuario.&lt;/p&gt;
-&lt;p&gt;El término script también suele emplearse para designar archivos que contienen código &lt;strong&gt;interpretado&lt;/strong&gt;. Es decir, código que requiere un intérprete que lo ejecute. Por ejemplo, los scripts que regularmente se emplean en sistemas Unix y que son escritos en lenguaje &lt;a href="https://es.wikipedia.org/wiki/Bash"&gt;Bash&lt;/a&gt; u otro lenguaje &lt;a href="https://es.wikipedia.org/wiki/Shell_de_Unix"&gt;shell&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;El término script también suele emplearse para designar archivos que contienen código &lt;strong&gt;interpretado&lt;/strong&gt;. Es decir, código que requiere un intérprete que lo ejecute. Por ejemplo, los scripts que regularmente se emplean en sistemas Unix y que son escritos en lenguaje &lt;a href="https://es.wikipedia.org/wiki/Bash" target="_blank"&gt;Bash&lt;/a&gt; u otro lenguaje &lt;a href="https://es.wikipedia.org/wiki/Shell_de_Unix" target="_blank"&gt;shell&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Los scripts pueden categorizarse como programas ejecutables. La diferencia es que los scripts son más simples que los programas o aplicaciones. Generalmente, se encargan de tareas específicas y poco complejas. Por ejemplo, puedes tener scripts para renombrar archivos en tu disco duro, automatizar la descarga de archivos, actualizar tu sistema, u otras tareas similares.&lt;/p&gt;
 &lt;p&gt;En contraste, los programas suelen ser más complejos y tener muchas más funcionalidades. Un editor de texto, un navegador, un particionador de discos son todos ejemplos de programas o aplicaciones. En cualquier caso, si usas Python para crear proyectos complejos como estos, tendrás un script de entrada (entry-point script) que te permite ejecutar el programa en cuestión.&lt;/p&gt;
 &lt;h2 id="ejecutar-scripts-con-el-comando-python"&gt;Ejecutar scripts con el comando &lt;code&gt;python&lt;/code&gt;&lt;/h2&gt;
@@ -509,7 +509,7 @@
 &lt;span class="go"&gt;Hola, Mundo!&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Inmediatamente después de presionar &lt;em&gt;Enter&lt;/em&gt;, verás en pantalla la frase &lt;code&gt;Hola, Mundo!&lt;/code&gt;. Con eso acabas de ejecutar tu primer script Python! Es muy probable que uses esta forma de ejecutar scripts a menudo en tu ciclo de desarrollo o incluso en tus tareas diarias.&lt;/p&gt;
-&lt;p&gt;En sistemas Windows, además del comando &lt;code&gt;python&lt;/code&gt;, también puedes emplear el lanzador &lt;code&gt;py&lt;/code&gt; desde &lt;a href="https://es.wikipedia.org/wiki/PowerShell"&gt;PowerSell&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;En sistemas Windows, además del comando &lt;code&gt;python&lt;/code&gt;, también puedes emplear el lanzador &lt;code&gt;py&lt;/code&gt; desde &lt;a href="https://es.wikipedia.org/wiki/PowerShell" target="_blank"&gt;PowerSell&lt;/a&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="n"&gt;script&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
 &lt;span class="n"&gt;Hola&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Mundo&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -523,7 +523,7 @@
 
 &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Hola, Mundo!&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Este comentario especial es conocido como &lt;a href="https://es.wikipedia.org/wiki/Shebang"&gt;shebang&lt;/a&gt; y lo puede incluir en tu código fuente para decirle al shell de tu sistema operativo dónde puede encontrar el intérprete requerido para ejecutar el código del archivo.&lt;/p&gt;
+&lt;p&gt;Este comentario especial es conocido como &lt;a href="https://es.wikipedia.org/wiki/Shebang" target="_blank"&gt;shebang&lt;/a&gt; y lo puede incluir en tu código fuente para decirle al shell de tu sistema operativo dónde puede encontrar el intérprete requerido para ejecutar el código del archivo.&lt;/p&gt;
 &lt;p&gt;Para ejecutar un script Python que ya incluye el shebang apropiado, debes también asignarle permisos de ejecución con el siguiente comando:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;chmod&lt;span class="w"&gt; &lt;/span&gt;+x&lt;span class="w"&gt; &lt;/span&gt;script.py
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -531,7 +531,7 @@
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;./script.py
 &lt;span class="go"&gt;Hola, Mundo!&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Listo! Tu script ahora funciona como si fuese un comando. Si deseas que tu script se parezca aún más a un comando estándar, puedes remover de su nombre la extensión &lt;code&gt;.py&lt;/code&gt;. Adicionalmente, puedes añadir el directorio que contiene tu script en el &lt;a href="https://es.wikipedia.org/wiki/PATH_(inform%C3%A1tica)"&gt;&lt;code&gt;PATH&lt;/code&gt;&lt;/a&gt; de tu sistema y lo tendrás disponible como un comando real desde cualquier directorio de trabajo.&lt;/p&gt;
+&lt;p&gt;Listo! Tu script ahora funciona como si fuese un comando. Si deseas que tu script se parezca aún más a un comando estándar, puedes remover de su nombre la extensión &lt;code&gt;.py&lt;/code&gt;. Adicionalmente, puedes añadir el directorio que contiene tu script en el &lt;a href="https://es.wikipedia.org/wiki/PATH_(inform%C3%A1tica)" target="_blank"&gt;&lt;code&gt;PATH&lt;/code&gt;&lt;/a&gt; de tu sistema y lo tendrás disponible como un comando real desde cualquier directorio de trabajo.&lt;/p&gt;
 &lt;h3 id="en-sistemas-windows"&gt;En sistemas Windows&lt;/h3&gt;
 &lt;p&gt;En sistemas Windows con Python &lt;a href="/instalar-python-windows/"&gt;instalado&lt;/a&gt;, puedes ejecutar un script directamente desde una ventana de PowerShell abierta en el directorio que contiene el script:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;.\&lt;/span&gt;&lt;span class="n"&gt;script&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
@@ -539,11 +539,11 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Esta técnica funciona gracias a que Windows automáticamente asocia los archivos &lt;code&gt;.py&lt;/code&gt; y &lt;code&gt;.pyw&lt;/code&gt; con los programas &lt;code&gt;python.exe&lt;/code&gt; y &lt;code&gt;pythonw.exe&lt;/code&gt;, respectivamente.&lt;/p&gt;
 &lt;h2 id="ejecutar-scripts-desde-un-ide-o-editor-de-texto"&gt;Ejecutar scripts desde un IDE o editor de texto&lt;/h2&gt;
-&lt;p&gt;Otra vía que puedes emplear para ejecutar tus scripts Python es usar un IDE (Integrated Development Environment, por sus siglas en inglés) como &lt;a href="https://www.jetbrains.com/es-es/pycharm/"&gt;PyCharm&lt;/a&gt; o un editor de código avanzado, como puede ser &lt;a href="https://code.visualstudio.com/"&gt;Visual Studio Code&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Otra vía que puedes emplear para ejecutar tus scripts Python es usar un IDE (Integrated Development Environment, por sus siglas en inglés) como &lt;a href="https://www.jetbrains.com/es-es/pycharm/" target="_blank"&gt;PyCharm&lt;/a&gt; o un editor de código avanzado, como puede ser &lt;a href="https://code.visualstudio.com/" target="_blank"&gt;Visual Studio Code&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Existe una amplia variedad de estos programas, muchos de ellos disponibles para las distintas plataformas (Windows, Linux, macOS) y que además, se pueden descargar libremente desde Internet.&lt;/p&gt;
-&lt;p&gt;El IDE por defecto incluido en cualquier instalación estándar de Python es &lt;a href="https://docs.python.org/es/3/library/idle.html#idle"&gt;IDLE&lt;/a&gt; y lo puedes emplear para escribir, ejecutar, depurar y modificar tus scripts.&lt;/p&gt;
+&lt;p&gt;El IDE por defecto incluido en cualquier instalación estándar de Python es &lt;a href="https://docs.python.org/es/3/library/idle.html#idle" target="_blank"&gt;IDLE&lt;/a&gt; y lo puedes emplear para escribir, ejecutar, depurar y modificar tus scripts.&lt;/p&gt;
 &lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
-&lt;p&gt;Ya sabes como correr o ejecutar scripts Python por diferentes vías y en diferentes plataformas. Ahora puedes ejecutar tus scripts desde la línea de comandos o terminal de tu sistema, ya sea usando el comando &lt;code&gt;python&lt;/code&gt; o usando el script directamente como un programa ejecutable. También aprendiste que los IDEs y editor de código generalmente incluyen opciones para la ejecución de tus scripts y programas.&lt;/p&gt;</content><category term="Guías"/><category term="python"/></entry><entry><title>Cómo instalar Python en tu sistema operativo Windows?</title><link href="https://pythonscouts.com/instalar-python-windows/" rel="alternate"/><published>2023-09-25T17:30:00+02:00</published><updated>2023-09-25T17:30:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2023-09-25:/instalar-python-windows/</id><summary type="html">&lt;p&gt;Instalar Python en tu computador es el primer paso para aprender el lenguaje. Si usas Windows 10 o superior, aquí encontrarás los pasos necesarios para hacerlo.&lt;/p&gt;</summary><content type="html">&lt;p&gt;En esta guía, emplearás el &lt;strong&gt;instalador oficial&lt;/strong&gt; para Windows que puedes descargar desde &lt;a href="https://www.python.org/"&gt;&lt;code&gt;Python.org&lt;/code&gt;&lt;/a&gt;. También conocerás como Instalar Python desde la tienda de aplicaciones &lt;strong&gt;Microsoft Store&lt;/strong&gt;. Esta última opción es la recomendada por Microsoft, aunque el instalador oficial funciona perfectamente.&lt;/p&gt;
+&lt;p&gt;Ya sabes como correr o ejecutar scripts Python por diferentes vías y en diferentes plataformas. Ahora puedes ejecutar tus scripts desde la línea de comandos o terminal de tu sistema, ya sea usando el comando &lt;code&gt;python&lt;/code&gt; o usando el script directamente como un programa ejecutable. También aprendiste que los IDEs y editor de código generalmente incluyen opciones para la ejecución de tus scripts y programas.&lt;/p&gt;</content><category term="Guías"/><category term="python"/></entry><entry><title>Cómo instalar Python en tu sistema operativo Windows?</title><link href="https://pythonscouts.com/instalar-python-windows/" rel="alternate"/><published>2023-09-25T17:30:00+02:00</published><updated>2023-09-25T17:30:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2023-09-25:/instalar-python-windows/</id><summary type="html">&lt;p&gt;Instalar Python en tu computador es el primer paso para aprender el lenguaje. Si usas Windows 10 o superior, aquí encontrarás los pasos necesarios para hacerlo.&lt;/p&gt;</summary><content type="html">&lt;p&gt;En esta guía, emplearás el &lt;strong&gt;instalador oficial&lt;/strong&gt; para Windows que puedes descargar desde &lt;a href="https://www.python.org/" target="_blank"&gt;&lt;code&gt;Python.org&lt;/code&gt;&lt;/a&gt;. También conocerás como Instalar Python desde la tienda de aplicaciones &lt;strong&gt;Microsoft Store&lt;/strong&gt;. Esta última opción es la recomendada por Microsoft, aunque el instalador oficial funciona perfectamente.&lt;/p&gt;
 &lt;p&gt;Para seguir esta guía de instalación de Python, es recomendable que tengas experiencia de trabajo en Windows. Es también importante que tengas experiencia de trabajo con la terminal del sistema, PowerShell.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#prerequisitos"&gt;Prerequisitos&lt;/a&gt;&lt;/li&gt;
@@ -561,16 +561,16 @@
 &lt;p&gt;Para completar los pasos de esta guía de instalación de Python en Windows, necesitas una computadora con Windows 10 o superior y conexión a Internet. Además, puedes requerir privilegios administrativos en dependencia del tipo de instalación que decidas hacer.&lt;/p&gt;
 &lt;p&gt;Lo demás es seguir las instrucciones debajo, las cuales te guiarán en la instalación tanto usando el instalador oficial como el que está disponible en la tienda de aplicaciones de Microsoft.&lt;/p&gt;
 &lt;h2 id="instalar-python-en-windows-usando-el-instalador-oficial"&gt;Instalar Python en Windows usando el instalador oficial&lt;/h2&gt;
-&lt;p&gt;En general, la manera recomendada para instalar Python en una computadora con Windows es emplear el instalador oficial que provee la &lt;a href="https://www.python.org/psf-landing/"&gt;Python Software Foundation (PSF)&lt;/a&gt; en el sitio web del lenguaje, &lt;a href="https://www.python.org/"&gt;&lt;code&gt;Python.org&lt;/code&gt;&lt;/a&gt;. Los pasos para completar la instalación son los siguientes:&lt;/p&gt;
+&lt;p&gt;En general, la manera recomendada para instalar Python en una computadora con Windows es emplear el instalador oficial que provee la &lt;a href="https://www.python.org/psf-landing/" target="_blank"&gt;Python Software Foundation (PSF)&lt;/a&gt; en el sitio web del lenguaje, &lt;a href="https://www.python.org/" target="_blank"&gt;&lt;code&gt;Python.org&lt;/code&gt;&lt;/a&gt;. Los pasos para completar la instalación son los siguientes:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Descargar el instalador de Python para Windows desde la &lt;a href="https://www.python.org/downloads/"&gt;página de descargas&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Descargar el instalador de Python para Windows desde la &lt;a href="https://www.python.org/downloads/" target="_blank"&gt;página de descargas&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Ejecutar el instalador y seguir las instrucciones en pantalla.&lt;/li&gt;
 &lt;li&gt;Verificar que la instalación se completó con éxito.&lt;/li&gt;
 &lt;li&gt;🐍&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;A continuación encontrarás una explicación detallada de estos pasos. Presta especial atención al paso número dos, pues de él depende el éxito de la instalación.&lt;/p&gt;
 &lt;h3 id="paso-1-descargar-el-instalador-de-python-para-windows"&gt;Paso 1: Descargar el instalador de Python para Windows&lt;/h3&gt;
-&lt;p&gt;El primer paso para instalar Python en Windows es descargar el &lt;a href="https://www.python.org/downloads/windows/"&gt;instalador&lt;/a&gt; desde la página oficial de descargas de &lt;a href="https://www.python.org/"&gt;&lt;code&gt;Python.org&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;El primer paso para instalar Python en Windows es descargar el &lt;a href="https://www.python.org/downloads/windows/" target="_blank"&gt;instalador&lt;/a&gt; desde la página oficial de descargas de &lt;a href="https://www.python.org/" target="_blank"&gt;&lt;code&gt;Python.org&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/instalar-python-windows/sitio-python.org.png" class="img-fluid mt-2" alt="Sitio oficial de Python"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Sitio oficial de Python&lt;/em&gt;&lt;/div&gt;
 
@@ -646,7 +646,7 @@
 &lt;p&gt;&lt;img src="../images/articles/instalar-python-windows/instalador-python-quinta-ventana-resumen.png" class="mx-auto d-block mt-2" alt="Instalador de Python - Ventana de resumen"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Instalador de Python - Ventana de resumen&lt;/em&gt;&lt;/div&gt;
 
-&lt;p&gt;Esta ventana es la confirmación de que ha concluido la instalación de Python en tu sistema operativo Windows. Es recomendable que visites el link a la página sobre &lt;a href="https://docs.python.org/es/3.11/using/windows.html"&gt;cómo usar Python en Windows&lt;/a&gt;. Allí encontrarás información valiosa que puede servirte de mucho.&lt;/p&gt;
+&lt;p&gt;Esta ventana es la confirmación de que ha concluido la instalación de Python en tu sistema operativo Windows. Es recomendable que visites el link a la página sobre &lt;a href="https://docs.python.org/es/3.11/using/windows.html" target="_blank"&gt;cómo usar Python en Windows&lt;/a&gt;. Allí encontrarás información valiosa que puede servirte de mucho.&lt;/p&gt;
 &lt;h3 id="paso-3-verificar-la-instalacion-de-python"&gt;Paso 3: Verificar la instalación de Python&lt;/h3&gt;
 &lt;p&gt;Una vez que hayas ejecutado los pasos anteriores, Python estará instalado en tu sistema operativo. Para confirmar que lo tienes, abre una ventana de PowerShell y ejecuta el comando siguiente:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="n"&gt;-version&lt;/span&gt;
@@ -666,16 +666,16 @@
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;PS&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt; &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="n"&gt;-version&lt;/span&gt;
 &lt;span class="n"&gt;Python&lt;/span&gt; &lt;span class="n"&gt;3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;11&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;5&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;El instalador de Python disponible en la tienda de aplicaciones Microsoft Store también incluye &lt;a href="https://pip.pypa.io/en/stable/"&gt;&lt;code&gt;pip&lt;/code&gt;&lt;/a&gt;, el gestor de paquetes por defecto de Python. Puedes confirmar que &lt;code&gt;pip&lt;/code&gt; también está instalado ejecutando &lt;code&gt;pip --version&lt;/code&gt; en tu sesión de PowerShell.&lt;/p&gt;
+&lt;p&gt;El instalador de Python disponible en la tienda de aplicaciones Microsoft Store también incluye &lt;a href="https://pip.pypa.io/en/stable/" target="_blank"&gt;&lt;code&gt;pip&lt;/code&gt;&lt;/a&gt;, el gestor de paquetes por defecto de Python. Puedes confirmar que &lt;code&gt;pip&lt;/code&gt; también está instalado ejecutando &lt;code&gt;pip --version&lt;/code&gt; en tu sesión de PowerShell.&lt;/p&gt;
 &lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
 &lt;p&gt;Instalar Python en tu ordenador es el primer paso en tu empeño de aprender a programar con el lenguaje. Nuevamente, recuerda que los pasos a seguir para completar la instalación con el instalador oficial para Windows son los siguientes:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Descargar el instalador de Python para Windows desde la &lt;a href="https://www.python.org/downloads/"&gt;página de descargas&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Descargar el instalador de Python para Windows desde la &lt;a href="https://www.python.org/downloads/" target="_blank"&gt;página de descargas&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Ejecutar el instalador y seguir las instrucciones en pantalla.&lt;/li&gt;
 &lt;li&gt;Verificar que la instalación se completó con éxito.&lt;/li&gt;
 &lt;li&gt;🐍&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Luego de completados estos pasos, estás listo para comenzar a explorar las bondades de Python como lenguaje de programación.&lt;/p&gt;</content><category term="Guías"/><category term="python"/><category term="windows"/></entry><entry><title>Cómo instalar Python en tu sistema operativo macOS?</title><link href="https://pythonscouts.com/instalar-python-macos/" rel="alternate"/><published>2023-08-29T19:00:00+02:00</published><updated>2023-08-29T19:00:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2023-08-29:/instalar-python-macos/</id><summary type="html">&lt;p&gt;Instalar Python en tu computadora es el primer paso para aprender el lenguaje. Si tienes una computadora Mac, aquí aprenderás los pasos necesarios para instalar Python de manera rápida y confiable en el sistema operativo macOS.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Para instalar Python, emplearás el &lt;strong&gt;instalador oficial&lt;/strong&gt; para macOS que puedes descargar desde &lt;a href="https://www.python.org/"&gt;&lt;code&gt;Python.org&lt;/code&gt;&lt;/a&gt;. Es recomendable que tengas experiencia de trabajo en sistemas macOS para poder seguir esta guía de instalación de Python. Es especialmente importante tener conocimientos básicos sobre la terminal del sistema y cómo emplearla.&lt;/p&gt;
+&lt;p&gt;Luego de completados estos pasos, estás listo para comenzar a explorar las bondades de Python como lenguaje de programación.&lt;/p&gt;</content><category term="Guías"/><category term="python"/><category term="windows"/></entry><entry><title>Cómo instalar Python en tu sistema operativo macOS?</title><link href="https://pythonscouts.com/instalar-python-macos/" rel="alternate"/><published>2023-08-29T19:00:00+02:00</published><updated>2023-08-29T19:00:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2023-08-29:/instalar-python-macos/</id><summary type="html">&lt;p&gt;Instalar Python en tu computadora es el primer paso para aprender el lenguaje. Si tienes una computadora Mac, aquí aprenderás los pasos necesarios para instalar Python de manera rápida y confiable en el sistema operativo macOS.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Para instalar Python, emplearás el &lt;strong&gt;instalador oficial&lt;/strong&gt; para macOS que puedes descargar desde &lt;a href="https://www.python.org/" target="_blank"&gt;&lt;code&gt;Python.org&lt;/code&gt;&lt;/a&gt;. Es recomendable que tengas experiencia de trabajo en sistemas macOS para poder seguir esta guía de instalación de Python. Es especialmente importante tener conocimientos básicos sobre la terminal del sistema y cómo emplearla.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#prerequisitos"&gt;Prerequisitos&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#instalar-python-en-macos-usando-el-instalador-oficial"&gt;Instalar Python en macOS usando el instalador oficial&lt;/a&gt;&lt;/li&gt;
@@ -689,16 +689,16 @@
 &lt;p&gt;Para completar los pasos de esta guía de instalación de Python en macOS, necesitas una computadora con este sistema operativo. Además, requieres tener privilegios root y una conexión a Internet.&lt;/p&gt;
 &lt;p&gt;Lo demás es solo seguir las instrucciones más abajo!&lt;/p&gt;
 &lt;h2 id="instalar-python-en-macos-usando-el-instalador-oficial"&gt;Instalar Python en macOS usando el instalador oficial&lt;/h2&gt;
-&lt;p&gt;La manera recomendada para instalar Python en una computadora Mac es emplear el instalador oficial que provee la &lt;a href="https://www.python.org/psf-landing/"&gt;Python Software Foundation (PSF)&lt;/a&gt; en el sitio web del lenguaje, &lt;a href="https://www.python.org/"&gt;&lt;code&gt;Python.org&lt;/code&gt;&lt;/a&gt;. Los pasos para completar la instalación son los siguientes:&lt;/p&gt;
+&lt;p&gt;La manera recomendada para instalar Python en una computadora Mac es emplear el instalador oficial que provee la &lt;a href="https://www.python.org/psf-landing/" target="_blank"&gt;Python Software Foundation (PSF)&lt;/a&gt; en el sitio web del lenguaje, &lt;a href="https://www.python.org/" target="_blank"&gt;&lt;code&gt;Python.org&lt;/code&gt;&lt;/a&gt;. Los pasos para completar la instalación son los siguientes:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Descargar el instalador de Python para macOS desde la &lt;a href="https://www.python.org/downloads/"&gt;página de descargas&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Descargar el instalador de Python para macOS desde la &lt;a href="https://www.python.org/downloads/" target="_blank"&gt;página de descargas&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Ejecutar el instalador y seguir las instrucciones en pantalla.&lt;/li&gt;
 &lt;li&gt;Verificar que la instalación se completó con éxito.&lt;/li&gt;
 &lt;li&gt;🐍&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;A continuación encontrarás una explicación detallada de estos pasos. Presta especial atención al paso número dos. De él dependerá el éxito de la instalación.&lt;/p&gt;
 &lt;h2 id="paso-1-descargar-el-instalador-de-python-para-macos"&gt;Paso 1: Descargar el instalador de Python para macOS&lt;/h2&gt;
-&lt;p&gt;Lo primero que debes hacer es descargar el instalador de Python para macOS desde el sitio oficial del lenguaje, &lt;a href="https://www.python.org/"&gt;Python.org&lt;/a&gt;, que luce de la manera siguiente:&lt;/p&gt;
+&lt;p&gt;Lo primero que debes hacer es descargar el instalador de Python para macOS desde el sitio oficial del lenguaje, &lt;a href="https://www.python.org/" target="_blank"&gt;Python.org&lt;/a&gt;, que luce de la manera siguiente:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/instalar-python-macos/sitio-python.org.png" class="img-fluid mt-2" alt="Sitio oficial de Python"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Sitio oficial de Python&lt;/em&gt;&lt;/div&gt;
 
@@ -728,7 +728,7 @@
 &lt;p&gt;&lt;img src="../images/articles/instalar-python-macos/instalador-python-tercera-ventana-licencia.png" class="img-fluid mt-2" alt="Instalador de Python, tercera ventana: Licencia"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Instalador de Python, tercera ventana: Licencia&lt;/em&gt;&lt;/div&gt;
 
-&lt;p&gt;Aquí encontrarás información sobre la licencia de software bajo la cual se distribuye Python. Nuevamente, puedes leerla si es un tema que te interesa. Para tu tranquilidad, la licencia de Python permite el uso del lenguaje tanto en aplicaciones de &lt;a href="https://es.wikipedia.org/wiki/C%C3%B3digo_abierto"&gt;código abierto&lt;/a&gt;, como en proyectos comerciales.&lt;/p&gt;
+&lt;p&gt;Aquí encontrarás información sobre la licencia de software bajo la cual se distribuye Python. Nuevamente, puedes leerla si es un tema que te interesa. Para tu tranquilidad, la licencia de Python permite el uso del lenguaje tanto en aplicaciones de &lt;a href="https://es.wikipedia.org/wiki/C%C3%B3digo_abierto" target="_blank"&gt;código abierto&lt;/a&gt;, como en proyectos comerciales.&lt;/p&gt;
 &lt;p&gt;Haz click en el botón &lt;em&gt;Continue&lt;/em&gt; y acepta los términos de la licencia para proseguir. La siguiente ventana te permitirá seleccionar el disco de tu Mac donde deseas instalar Python. Si tu Mac tiene la configuración de discos por defecto, entonces el disco destino será &lt;strong&gt;Macintosh HD&lt;/strong&gt;:&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/articles/instalar-python-macos/instalador-python-cuarta-ventana-hd-destino.png" class="img-fluid mt-2" alt="Instalador de Python, cuarta ventana: Disco destino"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Instalador de Python, cuarta ventana: Disco destino&lt;/em&gt;&lt;/div&gt;
@@ -765,7 +765,7 @@
 &lt;p&gt;&lt;img src="../images/articles/instalar-python-macos/instalador-python-septima-ventana-resumen.png" class="img-fluid mt-2" alt="Instalador de Python, séptima ventana: Resumen instalación"&gt;&lt;/p&gt;
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Instalador de Python, séptima ventana: Resumen instalación&lt;/em&gt;&lt;/div&gt;
 
-&lt;p&gt;Esta ventana es la confirmación de que ha concluido la instalación de Python en tu sistema operativo macOS. Es importante que instales los &lt;a href="https://es.wikipedia.org/wiki/Seguridad_de_la_capa_de_transporte"&gt;certificados SSL&lt;/a&gt; para evitar problemas de conexión cuando emplees algunas de las herramientas de Python.&lt;/p&gt;
+&lt;p&gt;Esta ventana es la confirmación de que ha concluido la instalación de Python en tu sistema operativo macOS. Es importante que instales los &lt;a href="https://es.wikipedia.org/wiki/Seguridad_de_la_capa_de_transporte" target="_blank"&gt;certificados SSL&lt;/a&gt; para evitar problemas de conexión cuando emplees algunas de las herramientas de Python.&lt;/p&gt;
 &lt;p&gt;Para instalar los certificados, ve a la carpeta de aplicaciones de tu Mac, localiza la carpeta Python 3.11, has click derecho sobre el archivo &lt;code&gt;Install Certificates.command&lt;/code&gt; y selecciona la opción &lt;code&gt;Abrir con -&amp;gt; Terminal.app&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="paso-3-verificar-la-instalacion"&gt;Paso 3: Verificar la instalación&lt;/h2&gt;
 &lt;p&gt;Una vez que hayas ejecutados los pasos anteriores, Python estará instalado en tu sistema operativo. Para confirmar que lo tienes, abre una ventana de Terminal y ejecuta el comando siguiente:&lt;/p&gt;
@@ -776,7 +776,7 @@
 &lt;h2 id="resumiendo"&gt;Resumiendo&lt;/h2&gt;
 &lt;p&gt;Instalar Python en tu ordenador es el primer paso en tu empeño de aprender a programar con el lenguaje. Nuevamente, recuerda que los pasos a seguir para completar la instalación son los siguientes:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Descargar el instalador de Python para macOS desde la &lt;a href="https://www.python.org/downloads/"&gt;página de descargas&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Descargar el instalador de Python para macOS desde la &lt;a href="https://www.python.org/downloads/" target="_blank"&gt;página de descargas&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Ejecutar el instalador y seguir las instrucciones en pantalla.&lt;/li&gt;
 &lt;li&gt;Verificar que la instalación se completó con éxito.&lt;/li&gt;
 &lt;li&gt;🐍&lt;/li&gt;
@@ -799,9 +799,9 @@
 &lt;/div&gt;
 &lt;h2 id="que-es-python"&gt;Qué es Python?&lt;/h2&gt;
 &lt;p&gt;Python es un lenguaje de programación de alto nivel. Su sintaxis es muy clara y legible. Sus construcciones sintácticas se asemejan mucho al idioma inglés. Estas, y otras características, han propiciado que Python se convierta en un lenguaje muy popular, llegando a convertirse en una herramienta imprescindible para muchos profesionales de distintas disciplinas e industrias.&lt;/p&gt;
-&lt;p&gt;He aquí como la &lt;a href="https://docs.python.org/es/3/index.html"&gt;documentación oficial&lt;/a&gt; define a Python:&lt;/p&gt;
+&lt;p&gt;He aquí como la &lt;a href="https://docs.python.org/es/3/index.html" target="_blank"&gt;documentación oficial&lt;/a&gt; define a Python:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Python es un lenguaje interpretado, interactivo y orientado a objetos. Incorpora módulos, excepciones, tipado dinámico, tipos de datos de muy alto nivel y clases. Python combina un poder destacado con una sintaxis muy clara. Tiene interfaces a muchas llamadas de sistema y bibliotecas, así como a varios sistemas de ventana, y es extensible en C o C++. También es usable como un lenguaje de extensión para aplicaciones que necesitan una interfaz programable. Por último, Python es portable: corre en muchas variantes de Unix, en Mac y en Windows 2000 y posteriores. (&lt;a href="https://docs.python.org/es/3/faq/general.html#what-is-python"&gt;Fuente&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Python es un lenguaje interpretado, interactivo y orientado a objetos. Incorpora módulos, excepciones, tipado dinámico, tipos de datos de muy alto nivel y clases. Python combina un poder destacado con una sintaxis muy clara. Tiene interfaces a muchas llamadas de sistema y bibliotecas, así como a varios sistemas de ventana, y es extensible en C o C++. También es usable como un lenguaje de extensión para aplicaciones que necesitan una interfaz programable. Por último, Python es portable: corre en muchas variantes de Unix, en Mac y en Windows 2000 y posteriores. (&lt;a href="https://docs.python.org/es/3/faq/general.html#what-is-python" target="_blank"&gt;Fuente&lt;/a&gt;)&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Como puedes ver, Python es un lenguaje de programación con mucho potencial. Puede que no sea apropiado para escribir un sistema operativo, pero puedes usarlo en casi todo lo demás. Las aplicaciones prácticas de Python incluyen las siguientes:&lt;/p&gt;
 &lt;ul&gt;
@@ -841,7 +841,7 @@
 &lt;span class="n"&gt;Hola&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;mundo&lt;/span&gt;&lt;span class="err"&gt;!&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Al presionar enter, Python ejecuta el código que has introducido e inmediatamente imprime &lt;em&gt;Hola, mundo!&lt;/em&gt; en la siguiente línea. Y eso es todo! Ya escribiste tu &lt;em&gt;Hola, mundo!&lt;/em&gt; en Python.&lt;/p&gt;
-&lt;p&gt;Hay dos cosas fundamentales que debes saber sobre esta línea de código. Primeramente, se trata de una llamada a la función integrada (&lt;em&gt;built-in&lt;/em&gt;) &lt;a href="https://docs.python.org/3/library/functions.html#print"&gt;&lt;code&gt;print()&lt;/code&gt;&lt;/a&gt;. Como su nombre sugiere, esta función te permite imprimir texto en la salida estándar de tú computadora. Esta salida es tu pantalla por defecto.&lt;/p&gt;
+&lt;p&gt;Hay dos cosas fundamentales que debes saber sobre esta línea de código. Primeramente, se trata de una llamada a la función integrada (&lt;em&gt;built-in&lt;/em&gt;) &lt;a href="https://docs.python.org/3/library/functions.html#print" target="_blank"&gt;&lt;code&gt;print()&lt;/code&gt;&lt;/a&gt;. Como su nombre sugiere, esta función te permite imprimir texto en la salida estándar de tú computadora. Esta salida es tu pantalla por defecto.&lt;/p&gt;
 &lt;p&gt;Como argumento a la función &lt;code&gt;print()&lt;/code&gt;, empleas la frase o mensaje que deseas imprimir en pantalla. En este caso, el habitual saludo &lt;em&gt;Hola, mundo!&lt;/em&gt; Y con eso ya escribiste tu primer programa Python.&lt;/p&gt;
 &lt;h3 id="hola-mundo-desde-un-archivo-py"&gt;&lt;code&gt;Hola, mundo!&lt;/code&gt; desde un archivo &lt;code&gt;.py&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;Para escribir tu programa &lt;em&gt;Hola, mundo!&lt;/em&gt; y ejecutarlo desde un archivo Python, abre tu editor de código preferido y crea un nuevo archivo llamado &lt;code&gt;hola.py&lt;/code&gt; en tu carpeta de trabajo. Luego añade el mismo código de la sección anterior y salva los cambios:&lt;/p&gt;

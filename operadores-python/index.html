@@ -50,8 +50,8 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://pythonscouts.com/operadores-python/">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202603061932">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202603061932">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202603062007">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202603062007">
     <!-- Preconnect to CDNs -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
@@ -64,9 +64,9 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202603061932">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202603062007">
     <!-- Stork Search - Deferred -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202603061932">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202603062007">
 
 
     <!-- Article tags -->
@@ -111,13 +111,13 @@
     <meta name="twitter:image:alt" content="Python a través de ejemplos: Operadores">
 
     <!-- Custom CSS for article -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202603061932">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202603062007">
 </head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
 <script
-    src="https://pythonscouts.com/theme/js/analytics.js?v=202603061932"
+    src="https://pythonscouts.com/theme/js/analytics.js?v=202603062007"
     defer
     data-analytics-id="G-R3C5PFSQ1S">
 </script>
@@ -483,14 +483,14 @@
 <span class="o">&gt;&gt;&gt;</span> <span class="ow">not</span> <span class="kc">False</span>
 <span class="kc">True</span>
 </code></pre></div>
-<p>Estos ejemplos expresan lo que se conoce como <a href="https://es.wikipedia.org/wiki/Tabla_de_verdad">tabla de verdad</a> de los operadores lógicos. Esta tabla resume los <a href="https://es.wikipedia.org/wiki/Valor_de_verdad">valores de verdad</a> que retornan los operadores en función del valor de verdad de los operandos.</p>
+<p>Estos ejemplos expresan lo que se conoce como <a href="https://es.wikipedia.org/wiki/Tabla_de_verdad" target="_blank">tabla de verdad</a> de los operadores lógicos. Esta tabla resume los <a href="https://es.wikipedia.org/wiki/Valor_de_verdad" target="_blank">valores de verdad</a> que retornan los operadores en función del valor de verdad de los operandos.</p>
 <p>Los operadores lógicos en Python también funcionan con objetos distintos de <code>True</code> and <code>False</code>. Todos los objetos tienen un valor de verdad en Python. Las reglas para determinar estos valores de verdad son las siguientes:</p>
 <blockquote>
 <p>Por defecto, un objeto se considera verdadero a menos que su clase defina un método <code>.__bool__()</code> que devuelva <code>False</code> o un método <code>.__len__()</code> que devuelva cero cuando se llama con el objeto. A continuación, se muestran la mayoría de los objetos incorporados considerados como falsos:</p>
 <ul>
 <li>Constantes definidas como falsas: <code>None</code> y <code>False</code></li>
 <li>Cero en cualquiera de los diferentes tipos numéricos: <code>0</code>, <code>0.0</code>, <code>0j</code>, <code>Decimal(0)</code>, <code>Fraction(0, 1)</code></li>
-<li>Cualquier colección o secuencia vacía: <code>''</code>, <code>()</code>, <code>[]</code>, <code>{}</code>, <code>set()</code>, <code>range(0)</code> (<a href="https://docs.python.org/es/3.13/library/stdtypes.html#truth-value-testing">Fuente</a>)</li>
+<li>Cualquier colección o secuencia vacía: <code>''</code>, <code>()</code>, <code>[]</code>, <code>{}</code>, <code>set()</code>, <code>range(0)</code> (<a href="https://docs.python.org/es/3.13/library/stdtypes.html#truth-value-testing" target="_blank">Fuente</a>)</li>
 </ul>
 </blockquote>
 <p>Cuando empleas los operadores <code>and</code> y <code>or</code> con objetos distintos de <code>True</code> o <code>False</code>, obtienes uno de los objetos como resultado en lugar de un valor booleano.</p>
@@ -504,7 +504,7 @@
 <span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;Hola&quot;</span> <span class="ow">or</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="s1">&#39;Hola&#39;</span>
 </code></pre></div>
-<p>El operador <code>and</code> retorna el operando derecho si el izquierdo es verdadero. Si el operando izquierdo es falso, entonces <code>and</code> lo retorna inmediatamente sin evaluar el operando derecho. Esto se <a href="https://es.wikipedia.org/wiki/Evaluaci%C3%B3n_de_cortocircuito">denomina evaluación de cortocircuito</a>.</p>
+<p>El operador <code>and</code> retorna el operando derecho si el izquierdo es verdadero. Si el operando izquierdo es falso, entonces <code>and</code> lo retorna inmediatamente sin evaluar el operando derecho. Esto se <a href="https://es.wikipedia.org/wiki/Evaluaci%C3%B3n_de_cortocircuito" target="_blank">denomina evaluación de cortocircuito</a>.</p>
 <p>En contraste, <code>or</code> retorna el operando derecho si el izquierdo es falso. Si el operando izquierdo es verdadero, entonces <code>or</code> lo retorna inmediatamente.</p>
 <h2 id="pertenencia">Pertenencia</h2>
 <p>Los operadores de pertenencia se emplean cuando necesitas determinar si un valor u objeto determinado forma parte de una serie de valores o colección. Python tiene dos operadores de pertenencia: <code>in</code> y <code>not in</code>.</p>
@@ -568,7 +568,7 @@
 </code></pre></div>
 <p>Los operadores de pertenencia funcionan con diferentes colecciones de datos como listas, duplas, conjuntos y diccionarios. Sin embargo, cuando necesitas realizar pruebas de pertenencia repetidamente, la opción más eficiente es emplear conjuntos.</p>
 <h2 id="identidad">Identidad</h2>
-<p>En Python, cada objeto que se crea tiene una identidad única. En <a href="https://es.wikipedia.org/wiki/CPython">CPython</a>, esta identidad es un número entero que se corresponde con la dirección de memoria donde el objeto está almacenado.</p>
+<p>En Python, cada objeto que se crea tiene una identidad única. En <a href="https://es.wikipedia.org/wiki/CPython" target="_blank">CPython</a>, esta identidad es un número entero que se corresponde con la dirección de memoria donde el objeto está almacenado.</p>
 <p>Python tiene dos operadores que permiten verificar si dos objetos tienen la misma identidad o no. Estos operadores son <code>is</code> e <code>is not</code> y se conocen como operadores de identidad.</p>
 <p>El operador <code>is</code> devuelve <code>True</code> si dos variables hacen referencia al mismo objeto, es decir, si apuntan a la misma ubicación en memoria:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
@@ -761,12 +761,12 @@
     <!-- JS Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
     <!-- Stork and site scripts -->
-    <script src="https://pythonscouts.com/theme/js/stork.js?v=202603061932" defer></script>
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202603062007" defer></script>
     <script
-        src="https://pythonscouts.com/theme/js/site.js?v=202603061932"
+        src="https://pythonscouts.com/theme/js/site.js?v=202603062007"
         defer
         data-stork-name="sitesearch"
-        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202603061932"
+        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202603062007"
         data-stork-index="https://pythonscouts.com/search-index.st">
     </script>
 
