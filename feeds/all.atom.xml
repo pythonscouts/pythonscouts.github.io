@@ -1,5 +1,283 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2026-03-05T19:15:00+01:00</updated><subtitle>Aprende Python en Español.</subtitle><entry><title>Palabras clave en Python: await</title><link href="https://pythonscouts.com/python-await/" rel="alternate"/><published>2026-03-05T19:15:00+01:00</published><updated>2026-03-05T19:15:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2026-03-05:/python-await/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;await&lt;/code&gt; se utiliza para pausar la ejecución de una función asíncrona hasta que una tarea asíncrona se complete.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Esta &lt;a href="/python-palabras-clave/"&gt;palabra clave&lt;/a&gt; es una parte fundamental del manejo de la programación asíncrona en Python, permitiendo que tu código espere de manera eficiente a que se resuelvan las operaciones sin bloquear el hilo de ejecución.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/all.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2026-03-18T21:35:00+01:00</updated><subtitle>Aprende Python en Español.</subtitle><entry><title>Python a través de ejemplos: Ciclos o bucles while</title><link href="https://pythonscouts.com/ciclos-while-python/" rel="alternate"/><published>2026-03-18T21:35:00+01:00</published><updated>2026-03-18T21:35:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2026-03-18:/ciclos-while-python/</id><summary type="html">&lt;p&gt;En Python, los ciclos &lt;code&gt;while&lt;/code&gt; te permiten ejecutar un bloque de código repetidamente mientras una condición se evalúe como verdadera.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Estos ciclos son especialmente útiles cuando no conoces de antemano cuántas repeticiones necesitas. En este tutorial, aprenderás lo esencial sobre el funcionamiento de los ciclos &lt;code&gt;while&lt;/code&gt; y cómo utilizarlos de forma efectiva en tus programas.&lt;/p&gt;
+&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#conociendo-los-ciclos-while"&gt;Conociendo los ciclos while&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#iterando-con-ciclos-while-en-python"&gt;Iterando con ciclos while en Python&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#acumulando-con-un-ciclo-while"&gt;Acumulando con un ciclo while&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#procesando-datos-de-entrada-del-usuario"&gt;Procesando datos de entrada del usuario&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#recorriendo-colecciones-con-un-ciclo-while"&gt;Recorriendo colecciones con un ciclo while&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#controlando-la-iteracion-con-break-y-continue"&gt;Controlando la iteración con break y continue&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#implementando-ciclos-infinitos-con-while-true"&gt;Implementando ciclos infinitos con while True&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#usando-la-clausula-else-en-ciclos-while"&gt;Usando la cláusula else en ciclos while&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#usando-ciclos-while-anidados"&gt;Usando ciclos while anidados&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#conclusiones"&gt;Conclusiones&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="conociendo-los-ciclos-while"&gt;Conociendo los ciclos &lt;code&gt;while&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Un ciclo o bucle &lt;strong&gt;&lt;code&gt;while&lt;/code&gt;&lt;/strong&gt; te permite ejecutar repetidamente un bloque de código mientras una &lt;a href="/condicionales-python/"&gt;condición&lt;/a&gt; sea verdadera. A diferencia de los &lt;a href="/ciclos-for-python/"&gt;ciclos &lt;code&gt;for&lt;/code&gt;&lt;/a&gt;, que iteran sobre una secuencia de elementos como una lista, los ciclos &lt;code&gt;while&lt;/code&gt; dependen de una condición que se evalúa antes de cada iteración.&lt;/p&gt;
+&lt;p&gt;La sintaxis básica de un ciclo &lt;code&gt;while&lt;/code&gt; en Python es la siguiente:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;condition&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;condition&lt;/code&gt;&lt;/strong&gt;: &lt;a href="/expresiones-python/"&gt;expresión&lt;/a&gt; que se evalúa antes de cada iteración. Si es &lt;a href="/python-true/"&gt;True&lt;/a&gt;, el ciclo continúa. Si es &lt;a href="/python-false/"&gt;False&lt;/a&gt;, se detiene y la ejecución pasa al siguiente bloque de código.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;&amp;lt;block&amp;gt;&lt;/code&gt;&lt;/strong&gt;: bloque de código con las instrucciones que se ejecutan o repiten en cada iteración&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Aquí tienes un ejemplo básico:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;counter&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;counter&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Contador: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;counter&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="n"&gt;counter&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Contador&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="n"&gt;Contador&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="n"&gt;Contador&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="n"&gt;Contador&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="n"&gt;Contador&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;En este ejemplo, se inicia con &lt;code&gt;counter = 0&lt;/code&gt;. Mientras la condición &lt;code&gt;counter &amp;lt; 5&lt;/code&gt; devuelva &lt;code&gt;True&lt;/code&gt;, el ciclo imprime el valor actual y le suma &lt;code&gt;1&lt;/code&gt; a la &lt;a href="/variables-python/"&gt;variable&lt;/a&gt; &lt;code&gt;counter&lt;/code&gt;. El ciclo se detiene cuando &lt;code&gt;counter&lt;/code&gt; alcanza &lt;code&gt;5&lt;/code&gt;, pues la condición se evalúa como &lt;code&gt;False&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="iterando-con-ciclos-while-en-python"&gt;Iterando con ciclos &lt;code&gt;while&lt;/code&gt; en Python&lt;/h2&gt;
+&lt;p&gt;Los ciclos &lt;code&gt;while&lt;/code&gt; son versátiles y puedes emplearlos en diversas situaciones. En las secciones siguientes, explorarás algunos patrones de uso comunes.&lt;/p&gt;
+&lt;h3 id="acumulando-con-un-ciclo-while"&gt;Acumulando con un ciclo &lt;code&gt;while&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Uno de los usos más básicos de un ciclo &lt;code&gt;while&lt;/code&gt; es acumular valores en una variable. Aunque en muchos casos puedes usar un ciclo &lt;code&gt;for&lt;/code&gt; con &lt;code&gt;range()&lt;/code&gt; para esto, el ciclo &lt;code&gt;while&lt;/code&gt; te ofrece más control sobre la condición de parada:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;total&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="n"&gt;total&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;total&lt;/span&gt;
+&lt;span class="mi"&gt;55&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;En este ejemplo, el ciclo suma los números del &lt;code&gt;1&lt;/code&gt; al &lt;code&gt;10&lt;/code&gt;. La variable &lt;code&gt;total&lt;/code&gt; acumula la suma, y &lt;code&gt;number&lt;/code&gt; se incrementa en cada iteración hasta que supera &lt;code&gt;10&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id="procesando-datos-de-entrada-del-usuario"&gt;Procesando datos de entrada del usuario&lt;/h3&gt;
+&lt;p&gt;Los ciclos &lt;code&gt;while&lt;/code&gt; son ideales para solicitar datos al usuario de forma repetida hasta que este proporcione una entrada válida:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# user_input.py&lt;/span&gt;
+
+&lt;span class="n"&gt;user_input&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;user_input&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;lower&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;salir&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;user_input&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Escribe algo (o &amp;#39;salir&amp;#39; para terminar): &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;user_input&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;lower&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;salir&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Escribiste: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;user_input&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;¡Hasta luego!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;!-- markdownlint-disable MD046 MD013 --&gt;
+&lt;div class="admonition note"&gt;
+&lt;p&gt;Puedes usar el &lt;a href="/operadores-python/"&gt;operador&lt;/a&gt; walrus (&lt;code&gt;:=&lt;/code&gt;) para simplificar este tipo de ciclos, permitiéndote asignar la entrada del usuario a una variable y evaluarla en la misma línea:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;msg&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Escribe algo (o &amp;#39;salir&amp;#39; para terminar): &amp;quot;&lt;/span&gt;
+
+&lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;user_input&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nb"&gt;input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;lower&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;salir&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Escribiste: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;user_input&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Esta versión es más eficiente y compacta, pues elimina la necesidad de inicializar &lt;code&gt;user_input&lt;/code&gt; fuera del ciclo y de repetir la lógica de validación.&lt;/p&gt;
+&lt;/div&gt;
+&lt;!-- markdownlint-enable MD046 MD013 --&gt;
+
+&lt;p&gt;Si ejecutas este programa, podrás interactuar con él de la siguiente manera:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Escribe algo (o &amp;#39;salir&amp;#39; para terminar): hola
+Escribiste: hola
+Escribe algo (o &amp;#39;salir&amp;#39; para terminar): Python
+Escribiste: Python
+Escribe algo (o &amp;#39;salir&amp;#39; para terminar): salir
+¡Hasta luego!
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Este patrón es frecuente en programas interactivos que necesitan mantener un ciclo de ejecución hasta que el usuario decida salir.&lt;/p&gt;
+&lt;h3 id="recorriendo-colecciones-con-un-ciclo-while"&gt;Recorriendo colecciones con un ciclo &lt;code&gt;while&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Otro uso común de &lt;code&gt;while&lt;/code&gt; es consumir los elementos de una lista con el método &lt;code&gt;.pop()&lt;/code&gt;. En este ejemplo, el siguiente ciclo se ejecuta hasta que la lista &lt;code&gt;tasks&lt;/code&gt; esté vacía:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;tasks&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Comprar pan&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Estudiar Python&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Hacer ejercicios&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;tasks&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="n"&gt;task&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tasks&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Completada: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;task&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Completada&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Hacer&lt;/span&gt; &lt;span class="n"&gt;ejercicios&lt;/span&gt;
+&lt;span class="n"&gt;Completada&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Estudiar&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt;
+&lt;span class="n"&gt;Completada&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Comprar&lt;/span&gt; &lt;span class="n"&gt;pan&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Aquí, el ciclo &lt;code&gt;while&lt;/code&gt; utiliza la lista &lt;code&gt;tasks&lt;/code&gt; directamente como condición. Cuando la lista queda vacía, se evalúa como &lt;code&gt;False&lt;/code&gt; y el ciclo termina. El método &lt;code&gt;.pop()&lt;/code&gt; elimina y devuelve el último elemento de la lista en cada iteración.&lt;/p&gt;
+&lt;h2 id="controlando-la-iteracion-con-break-y-continue"&gt;Controlando la iteración con &lt;code&gt;break&lt;/code&gt; y &lt;code&gt;continue&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;En Python, las sentencias &lt;a href="/python-break/"&gt;&lt;code&gt;break&lt;/code&gt;&lt;/a&gt; y &lt;a href="/python-continue/"&gt;&lt;code&gt;continue&lt;/code&gt;&lt;/a&gt; te permiten controlar el flujo de ejecución en los ciclos &lt;code&gt;while&lt;/code&gt;. La función de estas sentencias es la siguiente:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;break&lt;/code&gt;&lt;/strong&gt;: termina el ciclo anticipadamente y salta a la sentencia inmediatamente después del ciclo&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;continue&lt;/code&gt;&lt;/strong&gt;: salta a la siguiente iteración, sin ejecutar el código que le sigue en el bloque del ciclo&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A continuación, un ejemplo de cómo usar &lt;code&gt;break&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;counter&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;counter&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;counter&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;         &lt;span class="k"&gt;break&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;counter&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="n"&gt;counter&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;El ciclo se detiene cuando &lt;code&gt;counter&lt;/code&gt; llega a &lt;code&gt;3&lt;/code&gt;, aunque la condición original &lt;code&gt;counter &amp;lt; 10&lt;/code&gt; siga siendo &lt;code&gt;True&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Considera el siguiente ejemplo de cómo funciona &lt;code&gt;continue&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;counter&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;counter&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="n"&gt;counter&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;counter&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;         &lt;span class="k"&gt;continue&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;counter&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="mi"&gt;4&lt;/span&gt;
+&lt;span class="mi"&gt;5&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Cuando &lt;code&gt;counter&lt;/code&gt; es &lt;code&gt;3&lt;/code&gt;, la sentencia &lt;code&gt;continue&lt;/code&gt; evita la ejecución de &lt;code&gt;print()&lt;/code&gt;, saltando directamente a la siguiente iteración del ciclo.&lt;/p&gt;
+&lt;h2 id="implementando-ciclos-infinitos-con-while-true"&gt;Implementando ciclos infinitos con &lt;code&gt;while True&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Si la condición de un ciclo &lt;code&gt;while&lt;/code&gt; nunca se vuelve &lt;code&gt;False&lt;/code&gt;, el ciclo se repite indefinidamente. Esto se conoce como un &lt;strong&gt;ciclo infinito&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Esto se repite para siempre&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Este puede ser un error de lógica importante en tu código. Asegúrate siempre de que la condición se vuelva falsa en algún momento para evitar ciclos infinitos involuntarios.&lt;/p&gt;
+&lt;p&gt;Si en algún momento te encuentras en un ciclo infinito, puedes detenerlo presionando &lt;code&gt;Ctrl+C&lt;/code&gt; en tu terminal. Esta combinación genera una excepción de tipo &lt;code&gt;KeyboardInterrupt&lt;/code&gt; y detiene la ejecución del programa.&lt;/p&gt;
+&lt;p&gt;A pesar de que los ciclos infinitos pueden ser el resultado de un error, en muchas ocasiones son una herramienta poderosa y necesaria cuando los diseñas intencionalmente.&lt;/p&gt;
+&lt;p&gt;Estos ciclos intencionados son la base de los &lt;strong&gt;ciclos de eventos&lt;/strong&gt; (&lt;strong&gt;event loops&lt;/strong&gt;) en aplicaciones con interfaz gráfica de usuario (GUI por sus siglas en inglés) y juegos, donde el programa debe esperar acciones del usuario o eventos externos en todo momento. También los encontrarás en servidores de red que escuchan peticiones de forma permanente.&lt;/p&gt;
+&lt;p&gt;Para implementar este tipo de lógica de manera efectiva, puedes usar el patrón &lt;code&gt;while True&lt;/code&gt; combinado con una sentencia &lt;code&gt;break&lt;/code&gt;. De esta forma, podrás controlar con total precisión cuándo debe terminar el ciclo según los eventos que ocurran.&lt;/p&gt;
+&lt;p&gt;Aquí tienes un ejemplo de un juego de adivinanza:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# guessing_game.py&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;random&lt;/span&gt;
+
+&lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;randint&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;  &lt;span class="c1"&gt;# Ciclo infinito intencional&lt;/span&gt;
+    &lt;span class="n"&gt;guess&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Adivina el número (1-10): &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;guess&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;¡Correcto!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;break&lt;/span&gt;  &lt;span class="c1"&gt;# Termina el ciclo cuando adivinas el número&lt;/span&gt;
+    &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;guess&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Muy bajo, intenta de nuevo.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Muy alto, intenta de nuevo.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Si ejecutas este programa, podrás jugar a adivinar un número:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;guessing_game.py
+&lt;span class="go"&gt;Adivina el número (1-10): 5&lt;/span&gt;
+&lt;span class="go"&gt;Muy bajo, intenta de nuevo.&lt;/span&gt;
+&lt;span class="go"&gt;Adivina el número (1-10): 8&lt;/span&gt;
+&lt;span class="go"&gt;Muy alto, intenta de nuevo.&lt;/span&gt;
+&lt;span class="go"&gt;Adivina el número (1-10): 7&lt;/span&gt;
+&lt;span class="go"&gt;¡Correcto!&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;En este ejemplo, el patrón &lt;code&gt;while True&lt;/code&gt; crea un ciclo que se ejecuta indefinidamente. La sentencia &lt;code&gt;break&lt;/code&gt; termina el ciclo cuando el usuario adivina el número correcto.&lt;/p&gt;
+&lt;h2 id="usando-la-clausula-else-en-ciclos-while"&gt;Usando la cláusula &lt;code&gt;else&lt;/code&gt; en ciclos &lt;code&gt;while&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Como las sentencias condicionales, los ciclos &lt;code&gt;while&lt;/code&gt; pueden tener una cláusula &lt;a href="/python-else/"&gt;&lt;code&gt;else&lt;/code&gt;&lt;/a&gt;. Esta cláusula se ejecuta únicamente cuando la condición se evalúa como &lt;code&gt;False&lt;/code&gt; sin que se haya ejecutado una sentencia &lt;code&gt;break&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;counter&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;counter&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;counter&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="n"&gt;counter&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Ciclo terminado&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="n"&gt;Ciclo&lt;/span&gt; &lt;span class="n"&gt;terminado&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Este ciclo termina naturalmente luego de que &lt;code&gt;counter&lt;/code&gt; alcanza el valor de &lt;code&gt;3&lt;/code&gt;. Entonces, el &lt;code&gt;else&lt;/code&gt; se ejecuta y ves el mensaje &lt;code&gt;Ciclo terminado&lt;/code&gt; en la pantalla. Este tipo de &lt;code&gt;else&lt;/code&gt; sin un &lt;code&gt;break&lt;/code&gt; no es muy útil, pues es equivalente a poner el mensaje fuera del ciclo.&lt;/p&gt;
+&lt;p&gt;En contraste, si usas una instrucción &lt;code&gt;break&lt;/code&gt;, el bloque &lt;code&gt;else&lt;/code&gt; no se ejecuta:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;counter&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;counter&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;counter&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;         &lt;span class="k"&gt;break&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;counter&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="n"&gt;counter&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Ciclo terminado&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;En este caso, el ciclo termina prematuramente cuando &lt;code&gt;counter&lt;/code&gt; es &lt;code&gt;1&lt;/code&gt;, y la cláusula &lt;code&gt;else&lt;/code&gt; se omite por completo.&lt;/p&gt;
+&lt;p&gt;La cláusula &lt;code&gt;else&lt;/code&gt; te permite manejar de forma elegante situaciones donde la condición del ciclo se vuelve falsa después de varios intentos. Es particularmente útil en escenarios como los siguientes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Implementar mecanismos de reintento en operaciones de red o archivos&lt;/li&gt;
+&lt;li&gt;Esperar a que un recurso externo alcance un estado específico o se agote el tiempo de espera&lt;/li&gt;
+&lt;li&gt;Procesar flujos de datos continuos hasta que aparezca una señal de parada&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Al emplear &lt;code&gt;else&lt;/code&gt;, evitas el uso de variables de control adicionales para saber si la operación tuvo éxito o no después de agotar los intentos. A continuación, verás un ejemplo más realista que simula una conexión:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# retry_connection.py&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;random&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="c1"&gt;# Simula un intento de conexión aleatorio&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;choice&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="n"&gt;attempts&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="n"&gt;max_attempts&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
+
+&lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;attempts&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;max_attempts&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;attempts&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Intento &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;attempts&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;: Conectando...&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+        &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;¡Conexión establecida con éxito!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;break&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;No se pudo establecer la conexión.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;En este ejemplo, la función &lt;code&gt;connect()&lt;/code&gt; simula el resultado de una operación que puede fallar. Si el intento tiene éxito, el &lt;code&gt;break&lt;/code&gt; detiene el ciclo y el programa continúa normalmente. Si el ciclo se completa porque se alcanzaron los tres intentos sin éxito, el bloque &lt;code&gt;else&lt;/code&gt; se activa para manejar el fallo definitivo.&lt;/p&gt;
+&lt;p&gt;Dependiendo de la aleatoriedad, al ejecutar este programa podrías ver una salida exitosa:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;retry_connection.py
+&lt;span class="go"&gt;Intento 1: Conectando...&lt;/span&gt;
+&lt;span class="go"&gt;Intento 2: Conectando...&lt;/span&gt;
+&lt;span class="go"&gt;¡Conexión establecida con éxito!&lt;/span&gt;
+
+&lt;span class="gp"&gt;$ &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;retry_connection.py
+&lt;span class="go"&gt;Intento 1: Conectando...&lt;/span&gt;
+&lt;span class="go"&gt;Intento 2: Conectando...&lt;/span&gt;
+&lt;span class="go"&gt;Intento 3: Conectando...&lt;/span&gt;
+&lt;span class="go"&gt;No se pudo establecer la conexión.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Si el ciclo se interrumpe mediante una sentencia &lt;code&gt;break&lt;/code&gt;, el bloque &lt;code&gt;else&lt;/code&gt; no se ejecutará y verás el mensaje de &lt;code&gt;¡Conexión establecida con éxito!&lt;/code&gt;. En caso contrario, verás el mensaje de &lt;code&gt;No se pudo establecer la conexión.&lt;/code&gt; que indica que el &lt;code&gt;else&lt;/code&gt; se ejecutó.&lt;/p&gt;
+&lt;h2 id="usando-ciclos-while-anidados"&gt;Usando ciclos &lt;code&gt;while&lt;/code&gt; anidados&lt;/h2&gt;
+&lt;p&gt;Puedes anidar un ciclo &lt;code&gt;while&lt;/code&gt; dentro de otro. Al anidar ciclos, el ciclo interno se ejecuta por completo en cada iteración del ciclo externo.&lt;/p&gt;
+&lt;p&gt;Este patrón es común en aplicaciones que gestionan menús jerárquicos:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# menu.py&lt;/span&gt;
+
+&lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;--- Menú Principal ---&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;1. Entrar a Configuración&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;2. Salir&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;menu_choice&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Selecciona una opción: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;menu_choice&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;1&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;--- Configuración ---&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;1. Cambiar Idioma&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;2. Volver&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="n"&gt;config_choice&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Selecciona una opción: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;config_choice&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;1&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Idioma cambiado con éxito.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;config_choice&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;2&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="k"&gt;break&lt;/span&gt;  &lt;span class="c1"&gt;# Sale del ciclo interno hacia el menú principal&lt;/span&gt;
+    &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;menu_choice&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;2&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Saliendo del sistema...&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;break&lt;/span&gt;  &lt;span class="c1"&gt;# Sale del ciclo externo y termina el programa&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;En este esquema, el primer ciclo mantiene la aplicación en ejecución de forma indefinida. Cuando el usuario elige la opción 1, se ejecuta el ciclo interno, presentando un nuevo menú.&lt;/p&gt;
+&lt;p&gt;Esta estructura te permite crear interfaces interactivas que se adaptan al ritmo del usuario. Sin embargo, debes tener en cuenta que anidar demasiados niveles puede hacer que el código sea difícil de entender, en cuyo caso, considera extraer las subtareas en funciones independientes.&lt;/p&gt;
+&lt;h2 id="conclusiones"&gt;Conclusiones&lt;/h2&gt;
+&lt;p&gt;Los ciclos o bucles &lt;strong&gt;&lt;code&gt;while&lt;/code&gt;&lt;/strong&gt; son esenciales en Python cuando necesitas ejecutar un bloque de código un número indeterminado de veces, basándote en una condición dinámica.&lt;/p&gt;
+&lt;p&gt;Estos ciclos son ideales para procesar datos de entrada del usuario, implementar menús interactivos y manejar situaciones donde no conoces de antemano el número de iteraciones.&lt;/p&gt;
+&lt;p&gt;También puedes combinar &lt;code&gt;while&lt;/code&gt; con &lt;code&gt;break&lt;/code&gt;, &lt;code&gt;continue&lt;/code&gt; y &lt;code&gt;else&lt;/code&gt; para controlar el flujo de ejecución de tu código de una manera mucho más precisa. El patrón &lt;code&gt;while True&lt;/code&gt; (ciclo infinito) con &lt;code&gt;break&lt;/code&gt; es especialmente útil para ciclos que dependen de eventos externos.&lt;/p&gt;
+&lt;p&gt;Dominar los ciclos &lt;code&gt;while&lt;/code&gt; es fundamental para escribir código más limpio e idiomático en Python. ¡Practica con tus propios ejemplos y experimenta con diferentes patrones para afianzar tu comprensión!&lt;/p&gt;</content><category term="Series"/><category term="python"/></entry><entry><title>Palabras clave en Python: await</title><link href="https://pythonscouts.com/python-await/" rel="alternate"/><published>2026-03-05T19:15:00+01:00</published><updated>2026-03-05T19:15:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2026-03-05:/python-await/</id><summary type="html">&lt;p&gt;En Python, la palabra clave &lt;code&gt;await&lt;/code&gt; se utiliza para pausar la ejecución de una función asíncrona hasta que una tarea asíncrona se complete.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Esta &lt;a href="/python-palabras-clave/"&gt;palabra clave&lt;/a&gt; es una parte fundamental del manejo de la programación asíncrona en Python, permitiendo que tu código espere de manera eficiente a que se resuelvan las operaciones sin bloquear el hilo de ejecución.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#sintaxis"&gt;Sintaxis&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#ejemplos-practicos"&gt;Ejemplos prácticos&lt;/a&gt;&lt;/li&gt;
