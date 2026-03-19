@@ -50,8 +50,8 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://pythonscouts.com/patron-mvc-python/">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202603182136">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202603182136">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202603191733">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202603191733">
     <!-- Preconnect to CDNs -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
@@ -64,9 +64,9 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202603182136">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202603191733">
     <!-- Stork Search - Deferred -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202603182136">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202603191733">
 
 
     <!-- Article tags -->
@@ -111,13 +111,13 @@
     <meta name="twitter:image:alt" content="Patrones de diseño en Python: Modelo-Vista-Controlador (MVC)">
 
     <!-- Custom CSS for article -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202603182136">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202603191733">
 </head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
 <script
-    src="https://pythonscouts.com/theme/js/analytics.js?v=202603182136"
+    src="https://pythonscouts.com/theme/js/analytics.js?v=202603191733"
     defer
     data-analytics-id="G-R3C5PFSQ1S">
 </script>
@@ -362,7 +362,7 @@
 <p>Para este ejemplo, desarrollarás una aplicación sencilla que te permitirá mostrar saludos aleatorios en una ventana.</p>
 <h3 id="el-modelo">El modelo</h3>
 <p>Lo primero que debes definir es el modelo de tu aplicación. Crea un archivo Python llamado <code>model.py</code> y escribe el siguiente código en él:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
 
 <span class="k">class</span> <span class="nc">Model</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -380,7 +380,7 @@
 <h3 id="la-vista">La vista</h3>
 <p>La vista es la representación gráfica de tu aplicación. Es lo que el usuario ve y con lo que interactúa directamente. La vista recibe las acciones del usuario, las notifica al controlador y luego refleja los cambios del modelo que resultan de las acciones del usuario.</p>
 <p>Crea un archivo llamado <code>view.py</code> y pon en él el siguiente código:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
 
 <span class="k">class</span> <span class="nc">Window</span><span class="p">(</span><span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -399,7 +399,7 @@
 <h3 id="el-controlador">El controlador</h3>
 <p>El controlador permite conectar la vista y el modelo. Es el único que debe tener conocimiento del resto de los componentes, vista y modelo. El controlador debe encargarse de guiar y gestionar las operaciones de acceso, modificación y actualización del modelo y de la vista.</p>
 <p>Para el controlador, crea un archivo con el nombre <code>app.py</code> y escribe el siguiente código en él:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">model</span> <span class="kn">import</span> <span class="n">Model</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="kn">from</span> <span class="nn">model</span> <span class="kn">import</span> <span class="n">Model</span>
 <span class="kn">from</span> <span class="nn">view</span> <span class="kn">import</span> <span class="n">Window</span>
 
 <span class="k">class</span> <span class="nc">Controller</span><span class="p">:</span>
@@ -423,7 +423,7 @@
 <p>Fíjate que el controlador usa los métodos del modelo o de la vista en función de la tarea a realizar. El controlador no debe implemente lógica de negocio o manipule directamente los datos del modelo. Su papel es coordinar las interacciones entre la vista y el modelo.</p>
 <p>Además, debes notar que el controlador solo tiene un método público, <code>.run()</code>. El resto de sus métodos y atributos no son públicos pues sus nombres comienzan con un guión bajo.</p>
 <p>Una vez definido el controlador, viene el código cliente donde creas una instancia del controlador y llamas el método <code>.run()</code> para ejecutar la aplicación. Para probar cómo funciona tu aplicación, ejecuta el siguiente comando en una ventana del terminal. Asegúrate de estar en el directorio que contiene el archivo <code>app.py</code> de tu aplicación:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>python<span class="w"> </span>app.py
+<div class="highlight"><span class="filename">Terminal</span><pre><span></span><code><span class="gp">$ </span>python<span class="w"> </span>app.py
 </code></pre></div>
 <p>Al presionar <em>Enter</em>, verás en pantalla una ventana similar a la siguiente:</p>
 <p><img src="../images/articles/patron-mvc-python/mvc-demo-python-tkinter.png" class="mx-auto d-block mt-2" alt="MVC demo app with Tkinter and Python"></p>
@@ -578,12 +578,12 @@
     <!-- JS Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
     <!-- Stork and site scripts -->
-    <script src="https://pythonscouts.com/theme/js/stork.js?v=202603182136" defer></script>
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202603191733" defer></script>
     <script
-        src="https://pythonscouts.com/theme/js/site.js?v=202603182136"
+        src="https://pythonscouts.com/theme/js/site.js?v=202603191733"
         defer
         data-stork-name="sitesearch"
-        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202603182136"
+        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202603191733"
         data-stork-index="https://pythonscouts.com/search-index.st">
     </script>
 

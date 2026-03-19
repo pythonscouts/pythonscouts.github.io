@@ -51,8 +51,8 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://pythonscouts.com/python-async/">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202603182136">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202603182136">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202603191733">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202603191733">
     <!-- Preconnect to CDNs -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
@@ -65,9 +65,9 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202603182136">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202603191733">
     <!-- Stork Search - Deferred -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202603182136">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202603191733">
 
 
     <!-- Article tags -->
@@ -113,13 +113,13 @@
     <meta name="twitter:image:alt" content="Palabras clave en Python: async">
 
     <!-- Custom CSS for article -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202603182136">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202603191733">
 </head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
 <script
-    src="https://pythonscouts.com/theme/js/analytics.js?v=202603182136"
+    src="https://pythonscouts.com/theme/js/analytics.js?v=202603191733"
     defer
     data-analytics-id="G-R3C5PFSQ1S">
 </script>
@@ -285,20 +285,20 @@
 </div>
 <h2 id="sintaxis">Sintaxis</h2>
 <p>La sintaxis básica para definir una función asíncrona con <a href="/python-def/"><code>def</code></a> es la siguiente:</p>
-<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">def</span> <span class="nf">function_name</span><span class="p">():</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="k">async</span> <span class="k">def</span> <span class="nf">function_name</span><span class="p">():</span>
     <span class="o">&lt;</span><span class="n">block</span><span class="o">&gt;</span>  <span class="c1"># Async code here</span>
 </code></pre></div>
 <p>También puedes usar <code>async</code> con la sentencia <a href="/python-with/"><code>with</code></a> para crear gestores de contexto asíncronos:</p>
-<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">with</span> <span class="n">resource</span> <span class="k">as</span> <span class="n">alias</span><span class="p">:</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="k">async</span> <span class="k">with</span> <span class="n">resource</span> <span class="k">as</span> <span class="n">alias</span><span class="p">:</span>
     <span class="o">&lt;</span><span class="n">block</span><span class="o">&gt;</span>  <span class="c1"># Async code here</span>
 </code></pre></div>
 <p>Y con ciclos <a href="/python-for/"><code>for</code></a> para iterar de forma asíncrona:</p>
-<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">async_iterable</span><span class="p">:</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="k">async</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">async_iterable</span><span class="p">:</span>
     <span class="o">&lt;</span><span class="n">block</span><span class="o">&gt;</span>  <span class="c1"># Async code here</span>
 </code></pre></div>
 <h2 id="ejemplos-practicos">Ejemplos prácticos</h2>
 <p>Aquí tienes algunos ejemplos que ilustran cómo se usa <code>async</code> en Python:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">asyncio</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">asyncio</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="k">async</span> <span class="k">def</span> <span class="nf">greeting</span><span class="p">():</span>
 <span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola&quot;</span><span class="p">)</span>
@@ -313,12 +313,10 @@
 <p>En este ejemplo, la función <code>greeting()</code> utiliza <code>async</code> y <code>await</code> para pausar la ejecución durante un segundo entre las dos impresiones. La función <code>asyncio.run()</code> se utiliza para ejecutar la función asíncrona.</p>
 <p>El siguiente ejemplo muestra cómo <code>async</code> te permite ejecutar varias solicitudes de red de forma concurrente. Para ello, usarás la biblioteca <code>aiohttp</code> junto con la API pública <a href="https://jsonplaceholder.typicode.com" target="_blank">JSONPlaceholder</a> para obtener la información de varios usuarios al mismo tiempo.</p>
 <p>Antes de ejecutar el ejemplo, instala <code>aiohttp</code> en tu <a href="/entorno-virtual-python/">entorno virtual</a> con el siguiente comando:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>aiohttp
+<div class="highlight"><span class="filename">Terminal</span><pre><span></span><code><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>aiohttp
 </code></pre></div>
 <p>Una vez instalada la biblioteca, crea un archivo con el siguiente código:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># fetch_users.py</span>
-
-<span class="kn">import</span> <span class="nn">asyncio</span>
+<div class="highlight"><span class="filename">Python - fetch_users.py</span><pre><span></span><code><span class="kn">import</span> <span class="nn">asyncio</span>
 <span class="kn">import</span> <span class="nn">aiohttp</span>
 
 <span class="k">async</span> <span class="k">def</span> <span class="nf">fetch_user</span><span class="p">(</span><span class="n">session</span><span class="p">,</span> <span class="n">user_id</span><span class="p">):</span>
@@ -346,24 +344,25 @@
 <span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
 </code></pre></div>
 <p>Si ejecutas este script, obtendrás la siguiente salida:</p>
-<div class="highlight"><pre><span></span><code>Usuario 2 recibido
-Usuario 3 recibido
-Usuario 1 recibido
+<div class="highlight"><span class="filename">Terminal</span><pre><span></span><code><span class="gp">$ </span>python<span class="w"> </span>fetch_users.py
+<span class="go">Usuario 2 recibido</span>
+<span class="go">Usuario 3 recibido</span>
+<span class="go">Usuario 1 recibido</span>
 
-Usuario 1:
-  Nombre: Leanne Graham
-  Email: Sincere@april.biz
-  Empresa: Romaguera-Crona
+<span class="go">Usuario 1:</span>
+<span class="go">  Nombre: Leanne Graham</span>
+<span class="go">  Email: Sincere@april.biz</span>
+<span class="go">  Empresa: Romaguera-Crona</span>
 
-Usuario 2:
-  Nombre: Ervin Howell
-  Email: Shanna@melissa.tv
-  Empresa: Deckow-Crist
+<span class="go">Usuario 2:</span>
+<span class="go">  Nombre: Ervin Howell</span>
+<span class="go">  Email: Shanna@melissa.tv</span>
+<span class="go">  Empresa: Deckow-Crist</span>
 
-Usuario 3:
-  Nombre: Clementine Bauch
-  Email: Nathan@yesenia.net
-  Empresa: Romaguera-Jacobson
+<span class="go">Usuario 3:</span>
+<span class="go">  Nombre: Clementine Bauch</span>
+<span class="go">  Email: Nathan@yesenia.net</span>
+<span class="go">  Empresa: Romaguera-Jacobson</span>
 </code></pre></div>
 <p>En este ejemplo, las tres llamadas a <code>fetch_user()</code> se lanzan de forma concurrente con <code>asyncio.gather()</code>. Las solicitudes se realizan al mismo tiempo en lugar de esperar a que cada una termine antes de iniciar la siguiente. Esto ilustra la ventaja principal de la programación asíncrona: aprovechar los tiempos de espera en operaciones de red para realizar otras solicitudes de forma simultánea.</p>
 <h2 id="uso-de-async">Uso de <code>async</code></h2>
@@ -496,12 +495,12 @@ Usuario 3:
     <!-- JS Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
     <!-- Stork and site scripts -->
-    <script src="https://pythonscouts.com/theme/js/stork.js?v=202603182136" defer></script>
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202603191733" defer></script>
     <script
-        src="https://pythonscouts.com/theme/js/site.js?v=202603182136"
+        src="https://pythonscouts.com/theme/js/site.js?v=202603191733"
         defer
         data-stork-name="sitesearch"
-        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202603182136"
+        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202603191733"
         data-stork-index="https://pythonscouts.com/search-index.st">
     </script>
 

@@ -50,8 +50,8 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://pythonscouts.com/ciclos-while-python/">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202603182136">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202603182136">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202603191733">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202603191733">
     <!-- Preconnect to CDNs -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
@@ -64,9 +64,9 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202603182136">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202603191733">
     <!-- Stork Search - Deferred -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202603182136">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202603191733">
 
 
     <!-- Article tags -->
@@ -111,13 +111,13 @@
     <meta name="twitter:image:alt" content="Python a través de ejemplos: Ciclos o bucles while">
 
     <!-- Custom CSS for article -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202603182136">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202603191733">
 </head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
 <script
-    src="https://pythonscouts.com/theme/js/analytics.js?v=202603182136"
+    src="https://pythonscouts.com/theme/js/analytics.js?v=202603191733"
     defer
     data-analytics-id="G-R3C5PFSQ1S">
 </script>
@@ -288,7 +288,7 @@
 <h2 id="conociendo-los-ciclos-while">Conociendo los ciclos <code>while</code></h2>
 <p>Un ciclo o bucle <strong><code>while</code></strong> te permite ejecutar repetidamente un bloque de código mientras una <a href="/condicionales-python/">condición</a> sea verdadera. A diferencia de los <a href="/ciclos-for-python/">ciclos <code>for</code></a>, que iteran sobre una secuencia de elementos como una lista, los ciclos <code>while</code> dependen de una condición que se evalúa antes de cada iteración.</p>
 <p>La sintaxis básica de un ciclo <code>while</code> en Python es la siguiente:</p>
-<div class="highlight"><pre><span></span><code><span class="k">while</span> <span class="n">condition</span><span class="p">:</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="k">while</span> <span class="n">condition</span><span class="p">:</span>
     <span class="o">&lt;</span><span class="n">block</span><span class="o">&gt;</span>
 </code></pre></div>
 <ul>
@@ -296,7 +296,7 @@
 <li><strong><code>&lt;block&gt;</code></strong>: bloque de código con las instrucciones que se ejecutan o repiten en cada iteración</li>
 </ul>
 <p>Aquí tienes un ejemplo básico:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="k">while</span> <span class="n">counter</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
 <span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Contador: </span><span class="si">{</span><span class="n">counter</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -313,7 +313,7 @@
 <p>Los ciclos <code>while</code> son versátiles y puedes emplearlos en diversas situaciones. En las secciones siguientes, explorarás algunos patrones de uso comunes.</p>
 <h3 id="acumulando-con-un-ciclo-while">Acumulando con un ciclo <code>while</code></h3>
 <p>Uno de los usos más básicos de un ciclo <code>while</code> es acumular valores en una variable. Aunque en muchos casos puedes usar un ciclo <code>for</code> con <code>range()</code> para esto, el ciclo <code>while</code> te ofrece más control sobre la condición de parada:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">number</span> <span class="o">=</span> <span class="mi">1</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="k">while</span> <span class="n">number</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">:</span>
@@ -327,9 +327,7 @@
 <p>En este ejemplo, el ciclo suma los números del <code>1</code> al <code>10</code>. La variable <code>total</code> acumula la suma, y <code>number</code> se incrementa en cada iteración hasta que supera <code>10</code>.</p>
 <h3 id="procesando-datos-de-entrada-del-usuario">Procesando datos de entrada del usuario</h3>
 <p>Los ciclos <code>while</code> son ideales para solicitar datos al usuario de forma repetida hasta que este proporcione una entrada válida:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># user_input.py</span>
-
-<span class="n">user_input</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<div class="highlight"><span class="filename">Python - user_input.py</span><pre><span></span><code><span class="n">user_input</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 <span class="k">while</span> <span class="n">user_input</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">!=</span> <span class="s2">&quot;salir&quot;</span><span class="p">:</span>
     <span class="n">user_input</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Escribe algo (o &#39;salir&#39; para terminar): &quot;</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">user_input</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">!=</span> <span class="s2">&quot;salir&quot;</span><span class="p">:</span>
@@ -340,7 +338,7 @@
 <!-- markdownlint-disable MD046 MD013 -->
 <div class="admonition note">
 <p>Puedes usar el <a href="/operadores-python/">operador</a> walrus (<code>:=</code>) para simplificar este tipo de ciclos, permitiéndote asignar la entrada del usuario a una variable y evaluarla en la misma línea:</p>
-<div class="highlight"><pre><span></span><code><span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Escribe algo (o &#39;salir&#39; para terminar): &quot;</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Escribe algo (o &#39;salir&#39; para terminar): &quot;</span>
 
 <span class="k">while</span> <span class="p">(</span><span class="n">user_input</span> <span class="o">:=</span> <span class="nb">input</span><span class="p">(</span><span class="n">msg</span><span class="p">))</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">!=</span> <span class="s2">&quot;salir&quot;</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Escribiste: </span><span class="si">{</span><span class="n">user_input</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -350,17 +348,18 @@
 <!-- markdownlint-enable MD046 MD013 -->
 
 <p>Si ejecutas este programa, podrás interactuar con él de la siguiente manera:</p>
-<div class="highlight"><pre><span></span><code>Escribe algo (o &#39;salir&#39; para terminar): hola
-Escribiste: hola
-Escribe algo (o &#39;salir&#39; para terminar): Python
-Escribiste: Python
-Escribe algo (o &#39;salir&#39; para terminar): salir
-¡Hasta luego!
+<div class="highlight"><span class="filename">Terminal</span><pre><span></span><code><span class="gp">$ </span>python<span class="w"> </span>user_input.py
+<span class="go">Escribe algo (o &#39;salir&#39; para terminar): hola</span>
+<span class="go">Escribiste: hola</span>
+<span class="go">Escribe algo (o &#39;salir&#39; para terminar): Python</span>
+<span class="go">Escribiste: Python</span>
+<span class="go">Escribe algo (o &#39;salir&#39; para terminar): salir</span>
+<span class="go">¡Hasta luego!</span>
 </code></pre></div>
 <p>Este patrón es frecuente en programas interactivos que necesitan mantener un ciclo de ejecución hasta que el usuario decida salir.</p>
 <h3 id="recorriendo-colecciones-con-un-ciclo-while">Recorriendo colecciones con un ciclo <code>while</code></h3>
 <p>Otro uso común de <code>while</code> es consumir los elementos de una lista con el método <code>.pop()</code>. En este ejemplo, el siguiente ciclo se ejecuta hasta que la lista <code>tasks</code> esté vacía:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tasks</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Comprar pan&quot;</span><span class="p">,</span> <span class="s2">&quot;Estudiar Python&quot;</span><span class="p">,</span> <span class="s2">&quot;Hacer ejercicios&quot;</span><span class="p">]</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tasks</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Comprar pan&quot;</span><span class="p">,</span> <span class="s2">&quot;Estudiar Python&quot;</span><span class="p">,</span> <span class="s2">&quot;Hacer ejercicios&quot;</span><span class="p">]</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="k">while</span> <span class="n">tasks</span><span class="p">:</span>
 <span class="o">...</span>     <span class="n">task</span> <span class="o">=</span> <span class="n">tasks</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
@@ -378,7 +377,7 @@ Escribe algo (o &#39;salir&#39; para terminar): salir
 <li><strong><code>continue</code></strong>: salta a la siguiente iteración, sin ejecutar el código que le sigue en el bloque del ciclo</li>
 </ul>
 <p>A continuación, un ejemplo de cómo usar <code>break</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="k">while</span> <span class="n">counter</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
 <span class="o">...</span>     <span class="k">if</span> <span class="n">counter</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
@@ -392,7 +391,7 @@ Escribe algo (o &#39;salir&#39; para terminar): salir
 </code></pre></div>
 <p>El ciclo se detiene cuando <code>counter</code> llega a <code>3</code>, aunque la condición original <code>counter &lt; 10</code> siga siendo <code>True</code>.</p>
 <p>Considera el siguiente ejemplo de cómo funciona <code>continue</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="k">while</span> <span class="n">counter</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
 <span class="o">...</span>     <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
@@ -408,7 +407,7 @@ Escribe algo (o &#39;salir&#39; para terminar): salir
 <p>Cuando <code>counter</code> es <code>3</code>, la sentencia <code>continue</code> evita la ejecución de <code>print()</code>, saltando directamente a la siguiente iteración del ciclo.</p>
 <h2 id="implementando-ciclos-infinitos-con-while-true">Implementando ciclos infinitos con <code>while True</code></h2>
 <p>Si la condición de un ciclo <code>while</code> nunca se vuelve <code>False</code>, el ciclo se repite indefinidamente. Esto se conoce como un <strong>ciclo infinito</strong>:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
 <span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Esto se repite para siempre&quot;</span><span class="p">)</span>
 <span class="o">...</span>
 </code></pre></div>
@@ -418,9 +417,7 @@ Escribe algo (o &#39;salir&#39; para terminar): salir
 <p>Estos ciclos intencionados son la base de los <strong>ciclos de eventos</strong> (<strong>event loops</strong>) en aplicaciones con interfaz gráfica de usuario (GUI por sus siglas en inglés) y juegos, donde el programa debe esperar acciones del usuario o eventos externos en todo momento. También los encontrarás en servidores de red que escuchan peticiones de forma permanente.</p>
 <p>Para implementar este tipo de lógica de manera efectiva, puedes usar el patrón <code>while True</code> combinado con una sentencia <code>break</code>. De esta forma, podrás controlar con total precisión cuándo debe terminar el ciclo según los eventos que ocurran.</p>
 <p>Aquí tienes un ejemplo de un juego de adivinanza:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># guessing_game.py</span>
-
-<span class="kn">import</span> <span class="nn">random</span>
+<div class="highlight"><span class="filename">Python - guessing_game.py</span><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
 
 <span class="n">target</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 
@@ -435,7 +432,7 @@ Escribe algo (o &#39;salir&#39; para terminar): salir
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Muy alto, intenta de nuevo.&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>Si ejecutas este programa, podrás jugar a adivinar un número:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>python<span class="w"> </span>guessing_game.py
+<div class="highlight"><span class="filename">Terminal</span><pre><span></span><code><span class="gp">$ </span>python<span class="w"> </span>guessing_game.py
 <span class="go">Adivina el número (1-10): 5</span>
 <span class="go">Muy bajo, intenta de nuevo.</span>
 <span class="go">Adivina el número (1-10): 8</span>
@@ -446,7 +443,7 @@ Escribe algo (o &#39;salir&#39; para terminar): salir
 <p>En este ejemplo, el patrón <code>while True</code> crea un ciclo que se ejecuta indefinidamente. La sentencia <code>break</code> termina el ciclo cuando el usuario adivina el número correcto.</p>
 <h2 id="usando-la-clausula-else-en-ciclos-while">Usando la cláusula <code>else</code> en ciclos <code>while</code></h2>
 <p>Como las sentencias condicionales, los ciclos <code>while</code> pueden tener una cláusula <a href="/python-else/"><code>else</code></a>. Esta cláusula se ejecuta únicamente cuando la condición se evalúa como <code>False</code> sin que se haya ejecutado una sentencia <code>break</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="k">while</span> <span class="n">counter</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
 <span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span>
@@ -461,7 +458,7 @@ Escribe algo (o &#39;salir&#39; para terminar): salir
 </code></pre></div>
 <p>Este ciclo termina naturalmente luego de que <code>counter</code> alcanza el valor de <code>3</code>. Entonces, el <code>else</code> se ejecuta y ves el mensaje <code>Ciclo terminado</code> en la pantalla. Este tipo de <code>else</code> sin un <code>break</code> no es muy útil, pues es equivalente a poner el mensaje fuera del ciclo.</p>
 <p>En contraste, si usas una instrucción <code>break</code>, el bloque <code>else</code> no se ejecuta:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="k">while</span> <span class="n">counter</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
 <span class="o">...</span>     <span class="k">if</span> <span class="n">counter</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
@@ -481,9 +478,7 @@ Escribe algo (o &#39;salir&#39; para terminar): salir
 <li>Procesar flujos de datos continuos hasta que aparezca una señal de parada</li>
 </ul>
 <p>Al emplear <code>else</code>, evitas el uso de variables de control adicionales para saber si la operación tuvo éxito o no después de agotar los intentos. A continuación, verás un ejemplo más realista que simula una conexión:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># retry_connection.py</span>
-
-<span class="kn">import</span> <span class="nn">random</span>
+<div class="highlight"><span class="filename">Python - retry_connection.py</span><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
 
 <span class="k">def</span> <span class="nf">connect</span><span class="p">():</span>
     <span class="c1"># Simula un intento de conexión aleatorio</span>
@@ -503,7 +498,7 @@ Escribe algo (o &#39;salir&#39; para terminar): salir
 </code></pre></div>
 <p>En este ejemplo, la función <code>connect()</code> simula el resultado de una operación que puede fallar. Si el intento tiene éxito, el <code>break</code> detiene el ciclo y el programa continúa normalmente. Si el ciclo se completa porque se alcanzaron los tres intentos sin éxito, el bloque <code>else</code> se activa para manejar el fallo definitivo.</p>
 <p>Dependiendo de la aleatoriedad, al ejecutar este programa podrías ver una salida exitosa:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>python<span class="w"> </span>retry_connection.py
+<div class="highlight"><span class="filename">Terminal</span><pre><span></span><code><span class="gp">$ </span>python<span class="w"> </span>retry_connection.py
 <span class="go">Intento 1: Conectando...</span>
 <span class="go">Intento 2: Conectando...</span>
 <span class="go">¡Conexión establecida con éxito!</span>
@@ -518,9 +513,7 @@ Escribe algo (o &#39;salir&#39; para terminar): salir
 <h2 id="usando-ciclos-while-anidados">Usando ciclos <code>while</code> anidados</h2>
 <p>Puedes anidar un ciclo <code>while</code> dentro de otro. Al anidar ciclos, el ciclo interno se ejecuta por completo en cada iteración del ciclo externo.</p>
 <p>Este patrón es común en aplicaciones que gestionan menús jerárquicos:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># menu.py</span>
-
-<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<div class="highlight"><span class="filename">Python - menu.py</span><pre><span></span><code><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Menú Principal ---&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1. Entrar a Configuración&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2. Salir&quot;</span><span class="p">)</span>
@@ -660,12 +653,12 @@ Escribe algo (o &#39;salir&#39; para terminar): salir
     <!-- JS Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
     <!-- Stork and site scripts -->
-    <script src="https://pythonscouts.com/theme/js/stork.js?v=202603182136" defer></script>
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202603191733" defer></script>
     <script
-        src="https://pythonscouts.com/theme/js/site.js?v=202603182136"
+        src="https://pythonscouts.com/theme/js/site.js?v=202603191733"
         defer
         data-stork-name="sitesearch"
-        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202603182136"
+        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202603191733"
         data-stork-index="https://pythonscouts.com/search-index.st">
     </script>
 

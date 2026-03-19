@@ -50,8 +50,8 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://pythonscouts.com/python-array/">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202603182136">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202603182136">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202603191733">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202603191733">
     <!-- Preconnect to CDNs -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
@@ -64,9 +64,9 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202603182136">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202603191733">
     <!-- Stork Search - Deferred -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202603182136">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202603191733">
 
 
     <!-- Article tags -->
@@ -111,13 +111,13 @@
     <meta name="twitter:image:alt" content="Estructuras de datos en Python: Arreglos (arrays)">
 
     <!-- Custom CSS for article -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202603182136">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202603191733">
 </head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
 <script
-    src="https://pythonscouts.com/theme/js/analytics.js?v=202603182136"
+    src="https://pythonscouts.com/theme/js/analytics.js?v=202603191733"
     defer
     data-analytics-id="G-R3C5PFSQ1S">
 </script>
@@ -341,7 +341,7 @@
 </table>
 <h2 id="implementacion-de-un-arreglo-en-python">Implementación de un arreglo en Python</h2>
 <p>A continuación encontrarás la implementación del arreglo en Python:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">ctypes</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">ctypes</span>
 <span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Generator</span><span class="p">,</span> <span class="n">Optional</span>
 
 <span class="k">class</span> <span class="nc">Array</span><span class="p">:</span>
@@ -419,18 +419,18 @@
 <p>En esta sección verás ejemplos prácticos de cómo crear, inicializar y manipular instancias de tu clase <code>Array</code>.</p>
 <h3 id="inicializacion">Inicialización</h3>
 <p>Para crear un <code>Array</code>, solo necesitas indicar su tamaño. Todos los elementos se inicializan con <code>None</code> por defecto:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Array</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># Crea un arreglo con 5 elementos</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Array</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># Crea un arreglo con 5 elementos</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="n">Array</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="acceso-y-modificacion-de-elementos">Acceso y modificación de elementos</h3>
 <p>Puedes leer y escribir elementos con el operador de indexado <code>[index]</code>, igual que en una lista:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">42</span>  <span class="c1"># Establece el primer elemento a 42</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">42</span>  <span class="c1"># Establece el primer elemento a 42</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="mi">42</span>
 </code></pre></div>
 <p>Si intentas asignar un valor de un tipo de dato diferente al que ya tiene el arreglo, o usar un índice fuera del rango válido, obtendrás errores claros:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Array</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Array</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
@@ -447,7 +447,7 @@
 </code></pre></div>
 <h3 id="limpiar-el-arreglo">Limpiar el arreglo</h3>
 <p>El método <code>.clear()</code> restablece todos los elementos asignándoles el valor especificado. El valor predeterminado es <code>None</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Array</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Array</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">clear</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># Establece todos los elementos a 0</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
@@ -455,7 +455,7 @@
 </code></pre></div>
 <h3 id="longitud-y-pertenencia">Longitud y pertenencia</h3>
 <p>El método <code>.__len__()</code> devuelve el tamaño del arreglo, mientras que <code>.__contains__()</code> verifica si un elemento existe en el arreglo:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Array</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Array</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="mi">5</span>
@@ -468,7 +468,7 @@
 </code></pre></div>
 <h3 id="iteracion">Iteración</h3>
 <p>Los métodos <code>.__iter__()</code> y <code>.__reversed__()</code> permiten iterar sobre el arreglo tanto hacia adelante como hacia atrás:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Array</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Array</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
@@ -495,7 +495,7 @@
 </code></pre></div>
 <h3 id="representacion-en-cadena">Representación en cadena</h3>
 <p>Los métodos <code>.__str__()</code> y <code>.__repr__()</code> son más bien utilitarios y proporcionan representaciones legibles para humanos y amigables para desarrolladores:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Array</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Array</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">clear</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
@@ -626,12 +626,12 @@
     <!-- JS Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
     <!-- Stork and site scripts -->
-    <script src="https://pythonscouts.com/theme/js/stork.js?v=202603182136" defer></script>
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202603191733" defer></script>
     <script
-        src="https://pythonscouts.com/theme/js/site.js?v=202603182136"
+        src="https://pythonscouts.com/theme/js/site.js?v=202603191733"
         defer
         data-stork-name="sitesearch"
-        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202603182136"
+        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202603191733"
         data-stork-index="https://pythonscouts.com/search-index.st">
     </script>
 

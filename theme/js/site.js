@@ -109,10 +109,11 @@
     }
 
     function setupCopyButtons() {
-        const blocks = document.querySelectorAll(".highlight");
+        // Target only the outermost highlight container
+        const blocks = document.querySelectorAll(".highlight:not(td .highlight)");
 
         blocks.forEach(function (block) {
-            const pre = block.querySelector("pre");
+            const pre = block.querySelector("td.code pre") || block.querySelector("pre");
             if (!pre) {
                 return;
             }
@@ -193,5 +194,22 @@
         setupStickyToc();
         setupCopyButtons();
         setupSearchToggle();
+        setupFilenameMono();
     });
+
+    /**
+     * Setup code block titles with mixed font (Sans-serif for Lang, Monospace for Filename)
+     */
+    function setupFilenameMono() {
+        const filenames = document.querySelectorAll(".filename");
+        filenames.forEach(el => {
+            const text = el.textContent;
+            if (text.includes(" - ")) {
+                const parts = text.split(" - ");
+                const lang = parts[0];
+                const file = parts[1];
+                el.innerHTML = `${lang} - <span class="filename-mono">${file}</span>`;
+            }
+        });
+    }
 })();

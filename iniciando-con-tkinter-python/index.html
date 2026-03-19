@@ -51,8 +51,8 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://pythonscouts.com/iniciando-con-tkinter-python/">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202603182136">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202603182136">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202603191733">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202603191733">
     <!-- Preconnect to CDNs -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
@@ -65,9 +65,9 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202603182136">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202603191733">
     <!-- Stork Search - Deferred -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202603182136">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202603191733">
 
 
     <!-- Article tags -->
@@ -113,13 +113,13 @@
     <meta name="twitter:image:alt" content="Iniciando con Tkinter para desarrollo GUI">
 
     <!-- Custom CSS for article -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202603182136">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202603191733">
 </head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
 <script
-    src="https://pythonscouts.com/theme/js/analytics.js?v=202603182136"
+    src="https://pythonscouts.com/theme/js/analytics.js?v=202603191733"
     defer
     data-analytics-id="G-R3C5PFSQ1S">
 </script>
@@ -327,7 +327,7 @@
 <p>En macOS, podría ser necesario instalar <em>Xcode</em> o <em>Xcode Command Line Tools</em> para que Tkinter funcione correctamente.</p>
 <h3 id="en-linux">En Linux</h3>
 <p>En sistemas Linux basados en Debian, como Ubuntu, puede que al instalar Python desde los repositorios oficiales de la distribución, Tkinter no venga en el paquete. En estos casos, puedes instalar Tkinter usando el siguiente comando:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-tk
+<div class="highlight"><span class="filename">Terminal</span><pre><span></span><code><span class="gp">$ </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-tk
 </code></pre></div>
 <p>Este comando descargará e instalará Tkinter en tu sistema. Es decir, Tkinter estará disponible en la instalación global de Python.</p>
 <h2 id="creando-una-aplicacion-tkinter">Creando una aplicación Tkinter</h2>
@@ -339,18 +339,18 @@
 <li>Ejecuta el bucle de eventos de la aplicación con <code>.mainloop()</code>.</li>
 </ol>
 <p>Crea un nuevo archivo Python llamado <code>app.py</code> en tu directorio de trabajo actual y escribe el siguiente código:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
 </code></pre></div>
 <p>En esta línea de código, importas el módulo <code>tkinter</code> y lo renombras como <code>tk</code> para facilitar su uso. Con esto, has cumplido con el primer paso.</p>
 <p>Para completar el segundo paso, necesitas crear una instancia de <code>Tk</code>, la cual usualmente llamarás <code>root</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
 
 <span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
 </code></pre></div>
 <p>En esta línea de código, creas la instancia de <code>Tk</code>. Esto inicializa la aplicación y prepara el entorno para comenzar a añadir widgets a la GUI de tu aplicación.</p>
 <p>El tercer paso consiste en crear la ventana principal de la aplicación con los elementos gráficos deseados. Para este ejemplo, la GUI se basará en un widget <code>Label</code> que mostrará el mensaje <code>"Hola, mundo!"</code>.</p>
 <p>Así es como puedes crear la GUI de la aplicación:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
 
 <span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
 <span class="n">root</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Tkinter Demo&quot;</span><span class="p">)</span>
@@ -364,7 +364,7 @@
 <p>Cada aplicación GUI necesita widgets. Estos son los componentes gráficos que conforman la GUI de la aplicación. En este ejemplo, usas un widget <code>Label</code> llamado <code>hello</code> que te permitirá mostrar el mensaje <code>"Hola, mundo!"</code> en la ventana de tu aplicación.</p>
 <p>El método <code>.pack()</code> es un <a href="/iniciando-con-tkinter-python/#usando-gestores-de-geometria">gestor de geometría</a> se utiliza para colocar el widget en la ventana. El argumento <code>pady</code> agrega un poco de espacio vertical alrededor del widget.</p>
 <p>Has finalizado el tercer paso, así que puedes continuar con el último paso y preparar tu aplicación Tkinter para su ejecución:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
 
 <span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
 <span class="n">root</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Tkinter Demo&quot;</span><span class="p">)</span>
@@ -376,7 +376,7 @@
 <span class="n">root</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
 </code></pre></div>
 <p>En la última línea, inicias el bucle de eventos de la aplicación ejecutando el método <code>.mainloop()</code>. Eso es todo. Ahora puedes ejecutar tu primera aplicación Tkinter con el siguiente comando:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>python<span class="w"> </span>app.py
+<div class="highlight"><span class="filename">Terminal</span><pre><span></span><code><span class="gp">$ </span>python<span class="w"> </span>app.py
 </code></pre></div>
 <p>Al ejecutar este comando, verás una ventana que lucirá como la siguiente:</p>
 <p><img src="../images/articles/iniciando-con-tkinter-python/tkinter-demo-app.png" class="mx-auto d-block mt-2" alt="Aplicación 'Hola, Mundo!' con Tkinter y Python"></p>
@@ -389,7 +389,7 @@
 <h3 id="botones">Botones</h3>
 <p>Puedes crear un botón con la clase <code>Button</code>, la cual proporciona un botón de comando clásico. Algunos botones típicos son <em>Ok</em>, <em>Cancelar</em>, <em>Aplicar</em>, <em>Sí</em>, <em>No</em>, <em>Cerrar</em>, similares.</p>
 <p>Crea un archivo llamado <code>buttons.py</code> y pon el siguiente código en él:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
 
 <span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
 <span class="n">root</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Botones Tkinter&quot;</span><span class="p">)</span>
@@ -410,7 +410,7 @@
 <h3 id="campos-de-entrada-de-texto">Campos de entrada de texto</h3>
 <p>Los <strong>campos de entrada de texto</strong> son widgets comunes también. Estos widgets te permiten ingresar una sola línea de texto y puedes crearlos con la clase <code>Entry</code> de Tkinter. Los campos de entrada de texto son útiles cuando necesitas obtener información del usuario en forma de texto.</p>
 <p>Como ejemplo, crea un archivo <code>entries.py</code> y escribe el siguiente código en él:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
 
 <span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
 <span class="n">root</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Campos de texto Tkinter&quot;</span><span class="p">)</span>
@@ -434,7 +434,7 @@
 <h3 id="listas-desplegables">Listas desplegables</h3>
 <p>Las <strong>listas desplegables</strong> son otro tipo fundamental de widget en aplicaciones GUI. Puedes crearlas usando la clase <code>Combobox</code> del módulo <code>ttk</code>, el cual contiene una serie mejorada de widgets para Tkinter. Una lista desplegable presenta al usuario una serie de opciones de una manera que ocupa un espacio mínimo en la pantalla.</p>
 <p>A continuación, un ejemplo de cómo emplear una lista desplegable en Tkinter:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
 <span class="kn">from</span> <span class="nn">tkinter</span> <span class="kn">import</span> <span class="n">ttk</span>
 
 <span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
@@ -464,7 +464,7 @@
 <p>El último widget que estudiarás es el <strong>botón radial</strong>, que puedes crear con la clase <code>Radiobutton</code>. Se trata de un botón circular de opción que puedes seleccionar al hacer clic sobre él. Los botones radiales son útiles cuando necesitas que el usuario seleccione una entre varias opciones.</p>
 <p>Todas las opciones en un grupo de botones radiales son visibles al mismo tiempo, pero el usuario solo puede seleccionar una de ellas. Es decir, la selección es excluyente.</p>
 <p>Considera el siguiente ejemplo:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
 
 <span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
 <span class="n">root</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Botones radiales Tkinter&quot;</span><span class="p">)</span>
@@ -509,7 +509,7 @@
 <h3 id="disposicion-por-empaquetado-con-pack">Disposición por empaquetado con <code>.pack()</code></h3>
 <p>El método <code>.pack()</code> organiza los widgets en bloques antes o después de los widgets ya empaquetados. Puedes especificar las opciones <code>side</code>, <code>fill</code> y <code>expand</code> para controlar cómo se comportan los widgets empaquetados.</p>
 <p>A continuación se muestra un ejemplo de uso de <code>.pack()</code> para gestionar la geometría de una GUI ordenada verticalmente:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
 
 <span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
 <span class="n">root</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Disposición vertical&quot;</span><span class="p">)</span>
@@ -528,7 +528,7 @@
 
 <p>Nota como el orden de los botones en la GUI coincide con el orden de aparición de los botones en el código.</p>
 <p>También puedes emplear <code>.pack()</code> para disponer los widgets horizontalmente:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
 
 <span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
 <span class="n">root</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Disposición horizontal&quot;</span><span class="p">)</span>
@@ -549,7 +549,7 @@
 <h3 id="disposicion-en-cuadricula-con-grid">Disposición en cuadrícula con <code>.grid()</code></h3>
 <p>El método <code>.grid()</code> es otro gestor de geometría en Tkinter. Con él, puedes organizar los widgets en una cuadrícula de filas y columnas. Puedes especificar la fila y la columna para cada widget usando índices, lo que te permite controlar su posición exacta en la ventana.</p>
 <p>A continuación se muestra un ejemplo de uso de <code>.grid()</code> para posicionar un grupo de botones:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
 
 <span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
 <span class="n">root</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Disposición en cuadrícula&quot;</span><span class="p">)</span>
@@ -571,7 +571,7 @@
 <p>Los primeros cuatro botones ocupan una sola celda en la cuadrícula. La celda está definida por coordenadas enteras en la forma <code>(fila, columna)</code>. El último botón ocupa dos celdas en la cuadricula. Para lograr esto, empleas el argumento <code>columnspan</code> con un valor de <code>2</code>.</p>
 <h3 id="disposicion-por-posicion-con-place">Disposición por posición con <code>.place()</code></h3>
 <p>El método <code>.place()</code> te permite organizar los widgets en posiciones absolutas y relativas dentro de la ventana. Puedes especificar las coordenadas <code>x</code> e <code>y</code> para cada widget, lo que te permite un control preciso sobre su ubicación:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
 
 <span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
 <span class="n">root</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Disposición por posición&quot;</span><span class="p">)</span>
@@ -600,7 +600,7 @@
 <h3 id="ventanas-principales">Ventanas principales</h3>
 <p>La mayoría de tus aplicaciones tendrán una ventana que puede incluir elementos como menús, botones y cuadros de texto. Para crear este tipo de ventana en Tkinter, utilizarás una instancia de la clase <code>Tk</code>.</p>
 <p>La siguiente aplicación muestra cómo crear una ventana principal con un menú:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
 
 <span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
 <span class="n">root</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Ventana Principal Tkinter&quot;</span><span class="p">)</span>
@@ -668,7 +668,7 @@
 </tbody>
 </table>
 <p>Un ejemplo común es el cuadro de diálogo de mensaje, que puedes crear usando <code>messagebox.showinfo()</code>. El siguiente código crea una aplicación con un botón que muestra un mensaje de información al usuario:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
 <span class="kn">from</span> <span class="nn">tkinter</span> <span class="kn">import</span> <span class="n">messagebox</span>
 
 <span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
@@ -701,7 +701,7 @@
 </li>
 </ul>
 <p>El siguiente ejemplo muestra cómo usar un diálogo estándar para selecionar un archivo en tu sistema:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
 <span class="kn">from</span> <span class="nn">tkinter</span> <span class="kn">import</span> <span class="n">filedialog</span><span class="p">,</span> <span class="n">messagebox</span>
 
 <span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
@@ -853,12 +853,12 @@
     <!-- JS Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
     <!-- Stork and site scripts -->
-    <script src="https://pythonscouts.com/theme/js/stork.js?v=202603182136" defer></script>
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202603191733" defer></script>
     <script
-        src="https://pythonscouts.com/theme/js/site.js?v=202603182136"
+        src="https://pythonscouts.com/theme/js/site.js?v=202603191733"
         defer
         data-stork-name="sitesearch"
-        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202603182136"
+        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202603191733"
         data-stork-index="https://pythonscouts.com/search-index.st">
     </script>
 

@@ -115,34 +115,119 @@ thead {
 }
 
 /* Syntax highlighter for code */
-/* pre { line-height: 125%; white-space: pre-wrap; } */
-td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
-span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
-td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
-span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
-.highlight .hll { background-color: #ffffcc }
+.highlighttable {
+    width: 100%;
+    margin: 0;
+}
+
+td.linenos {
+    width: 1px;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    user-select: none;
+    border-right: 1px solid var(--ps-green-subtle);
+    color: var(--ps-gray-light);
+    text-align: right;
+    vertical-align: top;
+}
+
+td.code {
+    padding-left: 0.5rem !important;
+    vertical-align: top;
+}
+
+.linenos pre {
+    margin: 0;
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    line-height: 1.5;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 0.95rem;
+}
+
+.highlight .hll { 
+    background-color: #ffffcc;
+    display: block;
+    margin: 0 -1.5rem;
+    padding: 0 1.5rem;
+}
+
 .highlight { 
     background: linear-gradient(135deg, var(--ps-gray-pale) 0%, var(--ps-white) 100%);
     border: 1px solid #e9ecef;
     border-radius: 16px;
-    padding: 1.5rem;
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-    font-size: 1em;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    overflow-x: auto;
+    overflow: hidden; /* To clip the title header */
     position: relative;
 }
 
-.highlight::before {
-    content: "</>";
+/* Code block title / filename */
+.highlight th.filename,
+.highlight > span.filename {
     position: absolute;
-    top: 0.75rem;
-    right: 1rem;
-    color: var(--ps-green);
-    font-size: 1.2em;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background: var(--ps-green-light);
+    color: var(--ps-green-dark);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.85em;
     font-weight: 600;
-    opacity: 0.4;
+    padding: 0.5rem 1rem;
+    display: block;
+    text-align: left;
+    border-bottom: 1px solid var(--ps-green-subtle);
+    margin: 0;
+    z-index: 1;
+}
+
+.filename-mono {
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 1.05em;
+    padding: 0.1rem 0.3rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+/* Clear any duplicated styles on the inner span */
+.highlight th.filename span.filename {
+    background: transparent;
+    color: inherit;
+    font-family: inherit;
+    font-size: 1em;
+    font-weight: inherit;
+    padding: 0;
+    display: inline;
+    border: none;
+}
+
+/* Make space for the absolute header */
+.highlight:has(.filename) .highlighttable {
+    margin-top: 2.2rem;
+}
+
+.highlight pre {
+    padding: 1.5rem;
+    margin: 0;
+    overflow-x: auto;
+    line-height: 1.5;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 0.95rem;
+}
+
+/* Specific styling for when titles are present */
+.highlight:has(.filename) > pre {
+    padding-top: 3.2rem;
+}
+
+.highlight .code {
+    width: 100%;
 }
 .highlight .c { color: #8f5902; font-style: italic } /* Comment */
 .highlight .err { color: #a40000; border: 1px solid #ef2929 } /* Error */
@@ -164,7 +249,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .gr { color: #ef2929 } /* Generic.Error */
 .highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
 .highlight .gi { color: var(--ps-green) } /* Generic.Inserted */
-.highlight .go { color: #000000; font-style: italic } /* Generic.Output */
+.highlight .go { color: #000000; font-style: normal } /* Generic.Output */
 .highlight .gp { color: #8f5902 } /* Generic.Prompt */
 .highlight .gs { color: #000000; font-weight: bold } /* Generic.Strong */
 .highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
@@ -297,6 +382,14 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
 .highlight {
     position: relative;
+}
+
+.highlight .copy-btn {
+    top: 0.35rem; /* Adjusted for filename header */
+}
+
+.highlight:has(.filename) .copy-btn {
+    top: 0.25rem;
 }
 
 .copy-btn {
