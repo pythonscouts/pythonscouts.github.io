@@ -48,7 +48,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id="creando-una-aplicacion-fastapi"&gt;Creando una aplicación FastAPI&lt;/h2&gt;
 &lt;p&gt;Con FastAPI instalado, estás listo para crear tu primera API. Para comenzar, crearás una aplicación de &lt;a href="/python-hola-mundo/"&gt;Hola, Mundo!&lt;/a&gt; Crea un archivo llamado &lt;code&gt;main.py&lt;/code&gt; con el siguiente contenido:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;fastapi&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;FastAPI&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - main.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;fastapi&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;FastAPI&lt;/span&gt;
 
 &lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;FastAPI&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 
@@ -91,16 +91,16 @@ INFO:     Application startup complete.
 &lt;p&gt;Para construir APIs efectivas, es importante entender cómo funcionan las peticiones HTTP. Cuando un cliente, como un navegador o una app móvil, quiere interactuar con tu API, envía una petición o &lt;em&gt;request&lt;/em&gt;, y tu servidor devuelve una respuesta o &lt;em&gt;response&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;En FastAPI, cada operación de ruta corresponde a un método HTTP específico:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;GET&lt;/strong&gt;: Leer datos&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;POST&lt;/strong&gt;: Crear datos&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;PUT&lt;/strong&gt;: Actualizar datos&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;DELETE&lt;/strong&gt;: Borrar datos&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;GET&lt;/code&gt;&lt;/strong&gt;: Leer datos&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;POST&lt;/code&gt;&lt;/strong&gt;: Crear datos&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;PUT&lt;/code&gt;&lt;/strong&gt;: Actualizar datos&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;DELETE&lt;/code&gt;&lt;/strong&gt;: Borrar datos&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Por eso usas &lt;code&gt;@app.get("/")&lt;/code&gt; para leer la raíz. Si quisieras crear un elemento, usarías &lt;code&gt;@app.post("/")&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="usando-parametros-de-ruta"&gt;Usando parámetros de ruta&lt;/h2&gt;
 &lt;p&gt;A menudo necesitarás obtener un elemento específico de tu API, por ejemplo, un usuario por su ID. FastAPI te permite hacer esto definiendo parámetros en la ruta.&lt;/p&gt;
 &lt;p&gt;Añade la siguiente función a tu archivo &lt;code&gt;main.py&lt;/code&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nd"&gt;@app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/items/&lt;/span&gt;&lt;span class="si"&gt;{item_id}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - main.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nd"&gt;@app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/items/&lt;/span&gt;&lt;span class="si"&gt;{item_id}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;read_item&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;item_id&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;item_id&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;item_id&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -111,7 +111,7 @@ INFO:     Application startup complete.
 &lt;p&gt;Pero si intentas ir a &lt;code&gt;http://127.0.0.1:8000/items/foo&lt;/code&gt;, verás un error HTTP indicando que el valor no es un entero válido. FastAPI se encarga de esta validación automáticamente.&lt;/p&gt;
 &lt;h2 id="usando-parametros-de-query"&gt;Usando parámetros de &lt;em&gt;query&lt;/em&gt;&lt;/h2&gt;
 &lt;p&gt;Cuando declaras otros parámetros en la función que no son parte de la ruta, FastAPI los interpreta automáticamente como parámetros de &lt;em&gt;query&lt;/em&gt;, es decir, los que van después del signo de interrogación, &lt;code&gt;?&lt;/code&gt;, en la URL:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nd"&gt;@app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/items/&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - main.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nd"&gt;@app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/items/&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;read_items&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;skip&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;limit&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;fake_items_db&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[{&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;item_name&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Foo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;item_name&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Bar&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;}]}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -120,7 +120,7 @@ INFO:     Application startup complete.
 &lt;h2 id="validando-datos-con-modelos-pydantic"&gt;Validando datos con modelos Pydantic&lt;/h2&gt;
 &lt;p&gt;Para enviar datos a tu API, por ejemplo para crear un item, necesitas usar el cuerpo de la petición. FastAPI usa &lt;strong&gt;Pydantic&lt;/strong&gt; para esto, lo cual es una de sus mayores fortalezas.&lt;/p&gt;
 &lt;p&gt;Primero, importa &lt;code&gt;BaseModel&lt;/code&gt; de &lt;code&gt;pydantic&lt;/code&gt; y define tu modelo de datos con los campos necesarios:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pydantic&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;BaseModel&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - main.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pydantic&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;BaseModel&lt;/span&gt;
 
 &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Item&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;BaseModel&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;
@@ -129,7 +129,7 @@ INFO:     Application startup complete.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En este modelo, &lt;code&gt;name&lt;/code&gt; y &lt;code&gt;price&lt;/code&gt; son campos obligatorios pues no tienen valor por defecto. En contraste, &lt;code&gt;is_offer&lt;/code&gt; es opcional y su valor por defecto es &lt;a href="/python-false/"&gt;&lt;code&gt;False&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Ahora, usa una &lt;code&gt;Item&lt;/code&gt; como un parámetro en tu operación POST para crear un nuevo item:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nd"&gt;@app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/items/&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - main.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nd"&gt;@app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/items/&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;create_item&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Item&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
         &lt;span class="s2"&gt;&amp;quot;item_name&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -157,7 +157,7 @@ INFO:     Application startup complete.
 &lt;h2 id="demo-api-con-fastapi-autos"&gt;Demo API con FastAPI: Autos&lt;/h2&gt;
 &lt;p&gt;Ahora que conoces las bases de FastAPI, es momento de reunir todo en un ejemplo más completo. Crearás una pequeña API para gestionar un catálogo de autos que incluye operaciones GET y POST.&lt;/p&gt;
 &lt;p&gt;Crea un archivo llamado &lt;code&gt;cars.py&lt;/code&gt; con el siguiente contenido:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;fastapi&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;FastAPI&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - cars.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;fastapi&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;FastAPI&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pydantic&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;BaseModel&lt;/span&gt;
 
 &lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;FastAPI&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
@@ -168,17 +168,14 @@ INFO:     Application startup complete.
     &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;id&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;brand&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Honda&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;model&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Civic&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;year&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2023&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
 &lt;span class="p"&gt;]&lt;/span&gt;
 
-
 &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Car&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;BaseModel&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="n"&gt;brand&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;
     &lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;
     &lt;span class="n"&gt;year&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;
 
-
 &lt;span class="nd"&gt;@app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/cars/&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;get_cars&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;cars_db&lt;/span&gt;
-
 
 &lt;span class="nd"&gt;@app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/cars/&lt;/span&gt;&lt;span class="si"&gt;{car_id}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;get_car&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;car_id&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
@@ -186,7 +183,6 @@ INFO:     Application startup complete.
         &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;car&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;id&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;car_id&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
             &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;car&lt;/span&gt;
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;error&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Auto no encontrado&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-
 
 &lt;span class="nd"&gt;@app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/cars/&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;create_car&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;car&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Car&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
@@ -303,7 +299,7 @@ INFO:     Application startup complete.
 &lt;li&gt;Crear una instancia de la clase y llamar su método &lt;code&gt;.run()&lt;/code&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Para traducir estos pasos a código Python, guarda el código siguiente como &lt;code&gt;hello.py&lt;/code&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.app&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;App&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - hello.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.app&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;App&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.uix.label&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Label&lt;/span&gt;
 
 &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;HelloApp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;App&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
@@ -326,7 +322,7 @@ INFO:     Application startup complete.
 &lt;p&gt;En las siguientes secciones, encontrarás una selección de widgets básicos que te ayudarán a comprender conceptos fundamentales para empezar a crear tus GUIs con Kivy.&lt;/p&gt;
 &lt;h3 id="botones-clicables"&gt;Botones clicables&lt;/h3&gt;
 &lt;p&gt;La clase &lt;code&gt;Button&lt;/code&gt; ofrece un widget clicable en forma rectangular. Algunos botones típicos incluyen &lt;em&gt;Ok&lt;/em&gt;, &lt;em&gt;Cancelar&lt;/em&gt;, &lt;em&gt;Aplicar&lt;/em&gt;, &lt;em&gt;Sí&lt;/em&gt;, &lt;em&gt;No&lt;/em&gt;, &lt;em&gt;Cerrar&lt;/em&gt;, entre otros. He aquí un ejemplo que crea estos botones:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.app&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;App&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - buttons.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.app&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;App&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.core.window&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Window&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.uix.boxlayout&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;BoxLayout&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.uix.button&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Button&lt;/span&gt;
@@ -355,7 +351,7 @@ INFO:     Application startup complete.
 &lt;p&gt;Estos botones todavía no ejecutan ninguna acción al hacer clic en ellos, pues aún no están vinculados o enlazados a una función o método. Aprenderás sobre esto en la sección &lt;a href="#conectando-eventos-con-callbacks-en-kivy"&gt;"Conectando eventos con callbacks en Kivy"&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id="campos-de-entrada-de-texto"&gt;Campos de entrada de texto&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;TextInput&lt;/code&gt; permite que el usuario escriba texto. Considera el siguiente ejemplo que crea un formulario para entrada de credenciales de usuario:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.app&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;App&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - text_inputs.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.app&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;App&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.core.window&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Window&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.uix.boxlayout&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;BoxLayout&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.uix.textinput&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;TextInput&lt;/span&gt;
@@ -384,7 +380,7 @@ INFO:     Application startup complete.
 &lt;p&gt;Prueba a introducir texto en cada campo. También podrás copiar y pegar texto con las combinaciones de teclas &lt;code&gt;Ctrl+C&lt;/code&gt; y &lt;code&gt;Ctrl+V&lt;/code&gt;, respectivamente.&lt;/p&gt;
 &lt;h3 id="botones-de-opcion"&gt;Botones de opción&lt;/h3&gt;
 &lt;p&gt;La clase &lt;code&gt;CheckBox&lt;/code&gt; representa una opción booleana que te permite activar o desactivar características, funcionalidades, configuraciones y similares:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.app&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;App&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - checkboxes.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.app&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;App&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.core.window&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Window&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.uix.boxlayout&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;BoxLayout&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.uix.checkbox&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;CheckBox&lt;/span&gt;
@@ -433,7 +429,7 @@ INFO:     Application startup complete.
 &lt;p&gt;Cuando haces clic en las casillas, las activas o desactivas alternativamente. Puedes usar la propiedad &lt;code&gt;.active&lt;/code&gt; para comprobar el estado actual de cada casilla y tomar acciones en consecuencia.&lt;/p&gt;
 &lt;h3 id="selectores-deslizantes"&gt;Selectores deslizantes&lt;/h3&gt;
 &lt;p&gt;La clase &lt;code&gt;Slider&lt;/code&gt; proporciona un selector deslizante que es útil para seleccionar un valor dentro de un rango predeterminado:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.app&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;App&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - sliders.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.app&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;App&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.core.window&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Window&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.uix.boxlayout&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;BoxLayout&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.uix.label&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Label&lt;/span&gt;
@@ -469,7 +465,7 @@ INFO:     Application startup complete.
 &lt;p&gt;Prueba a mover el selector del slider y verás cómo el &lt;code&gt;Label&lt;/code&gt; se actualiza, lo que logra una interfaz reactiva que refleja el valor seleccionado en tiempo real.&lt;/p&gt;
 &lt;h3 id="listas-desplegables"&gt;Listas desplegables&lt;/h3&gt;
 &lt;p&gt;La clase &lt;code&gt;Spinner&lt;/code&gt; ofrece un selector compacto que muestra el valor actual y, al presionarlo, despliega una lista de opciones:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.app&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;App&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - spinners.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.app&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;App&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.core.window&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Window&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.uix.boxlayout&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;BoxLayout&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.uix.spinner&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Spinner&lt;/span&gt;
@@ -506,7 +502,7 @@ INFO:     Application startup complete.
 &lt;p&gt;Los &lt;strong&gt;layouts&lt;/strong&gt; o &lt;strong&gt;gestores de disposición&lt;/strong&gt; son contenedores que controlan la distribución de los widgets en la ventana de la aplicación. En Kivy, es habitual empezar con un layout mínimo y luego refinar la interfaz a medida que avanzas en el desarrollo de tu aplicación.&lt;/p&gt;
 &lt;h3 id="disponer-widgets-en-vertical-u-horizontal"&gt;Disponer widgets en vertical u horizontal&lt;/h3&gt;
 &lt;p&gt;La clase &lt;code&gt;BoxLayout&lt;/code&gt; te permite organizar los widgets de forma secuencial, ya sea en orientación vertical (uno encima de otro) u horizontal (uno al lado del otro). El ejemplo siguiente demuestra la forma básica de usar este tipo de layout para disponer los widgets horizontalmente:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.app&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;App&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - box_layout_horizontal.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.app&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;App&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.core.window&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Window&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.uix.boxlayout&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;BoxLayout&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.uix.button&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Button&lt;/span&gt;
@@ -532,7 +528,7 @@ INFO:     Application startup complete.
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Disposición horizontal de widgets en Kivy&lt;/em&gt;&lt;/div&gt;
 
 &lt;p&gt;Para ordenar los widgets de manera vertical, solo tienes que hacer &lt;code&gt;orientation="vertical"&lt;/code&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.app&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;App&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - box_layout_vertical.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.app&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;App&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.core.window&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Window&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.uix.boxlayout&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;BoxLayout&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.uix.button&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Button&lt;/span&gt;
@@ -558,7 +554,7 @@ INFO:     Application startup complete.
 &lt;p&gt;Como puedes apreciar, ahora los botones se muestran en una sola columna, manteniendo el orden en que los añadiste en el código.&lt;/p&gt;
 &lt;h3 id="organizar-widgets-en-cuadriculas"&gt;Organizar widgets en cuadrículas&lt;/h3&gt;
 &lt;p&gt;La clase &lt;code&gt;GridLayout&lt;/code&gt; te permite distribuir los widgets en una cuadrícula de filas y columnas. Para usarlo, debes especificar al menos una dimensión, por ejemplo, &lt;code&gt;cols&lt;/code&gt; o &lt;code&gt;rows&lt;/code&gt; para columnas o filas respectivamente:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.app&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;App&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - grid_layout.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.app&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;App&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.core.window&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Window&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.uix.button&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Button&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.uix.gridlayout&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;GridLayout&lt;/span&gt;
@@ -586,7 +582,7 @@ INFO:     Application startup complete.
 &lt;p&gt;Cada botón muestra el índice con el que fue creado, y &lt;code&gt;GridLayout&lt;/code&gt; lo coloca en la cuadrícula según el orden en que lo agregas con &lt;code&gt;.add_widget()&lt;/code&gt;.&lt;/p&gt;
 &lt;h3 id="colocar-widgets-en-posiciones-especificas"&gt;Colocar widgets en posiciones específicas&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;FloatLayout&lt;/code&gt; te da más libertad para posicionar los widgets. Este layout respeta las propiedades &lt;code&gt;pos_hint&lt;/code&gt; y &lt;code&gt;size_hint&lt;/code&gt; de sus widgets hijos. Considera el siguiente ejemplo:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.app&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;App&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - float_layout.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.app&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;App&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.core.window&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Window&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.uix.button&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Button&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.uix.floatlayout&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;FloatLayout&lt;/span&gt;
@@ -624,19 +620,23 @@ INFO:     Application startup complete.
 &lt;p&gt;Como puedes ver, el layout renderiza los botones en las posiciones correspondientes sin necesidad de calcular las coordenadas manualmente. Al redimensionar la ventana, notarás que los botones se mantienen en sus posiciones.&lt;/p&gt;
 &lt;h2 id="conectando-eventos-con-callbacks-en-kivy"&gt;Conectando eventos con callbacks en Kivy&lt;/h2&gt;
 &lt;p&gt;En Kivy, la mayoría de los widgets te permiten vincular eventos y propiedades con funciones de callback mediante el método &lt;code&gt;.bind()&lt;/code&gt;. Esta es la base para reaccionar a eventos del usuario, como clics, selecciones y entradas de texto.&lt;/p&gt;
+&lt;!-- markdownlint-disable MD046 MD013 --&gt;
 &lt;div class="admonition note"&gt;
 &lt;p&gt;Es importante que sepas que no es lo mismo enlazar un evento que enlazar una propiedad. Por ejemplo, &lt;code&gt;on_press&lt;/code&gt; (evento) suele llamar un callback con un solo argumento: la instancia del widget. En contraste, &lt;code&gt;.text&lt;/code&gt;, &lt;code&gt;.active&lt;/code&gt; o &lt;code&gt;.value&lt;/code&gt; (propiedades) invocan un callback con dos argumentos: la instancia y el nuevo valor.&lt;/p&gt;
 &lt;/div&gt;
+&lt;!-- markdownlint-enable MD046 MD013 --&gt;
+
 &lt;h3 id="enlazar-eventos"&gt;Enlazar eventos&lt;/h3&gt;
 &lt;p&gt;Cuando quieres ejecutar una acción al pulsar un botón, puedes enlazar el evento &lt;code&gt;on_press&lt;/code&gt; (al presionar) u &lt;code&gt;on_release&lt;/code&gt; (al soltar) a una función o método. En la función (callback), el parámetro &lt;code&gt;instance&lt;/code&gt; te permite identificar qué botón disparó o generó el evento.&lt;/p&gt;
 &lt;p&gt;Considera el siguiente ejemplo:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.app&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;App&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - button_callbacks.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.app&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;App&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.core.window&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Window&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.uix.boxlayout&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;BoxLayout&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.uix.button&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Button&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.uix.label&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Label&lt;/span&gt;
 
 &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ButtonsCallbacksApp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;App&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;build&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
         &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Enlazar eventos Kivy&amp;quot;&lt;/span&gt;
         &lt;span class="n"&gt;Window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;size&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;220&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;220&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
@@ -647,7 +647,6 @@ INFO:     Application startup complete.
         &lt;span class="p"&gt;)&lt;/span&gt;
         &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_widget&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;label&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;build&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
         &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;on_press&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;instance&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;  &lt;span class="c1"&gt;# Callback&lt;/span&gt;
             &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;label&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Presionaste: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;instance&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
 
@@ -670,7 +669,7 @@ INFO:     Application startup complete.
 &lt;h3 id="enlazar-propiedades"&gt;Enlazar propiedades&lt;/h3&gt;
 &lt;p&gt;Además de eventos, puedes enlazar propiedades. Por ejemplo, en un &lt;code&gt;TextInput&lt;/code&gt; puedes reaccionar a los cambios en la propiedad &lt;code&gt;.text&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Considera el siguiente ejemplo:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.app&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;App&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - bind_properties.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.app&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;App&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.core.window&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Window&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.uix.boxlayout&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;BoxLayout&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.uix.label&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Label&lt;/span&gt;
@@ -707,19 +706,19 @@ INFO:     Application startup complete.
 &lt;p&gt;Como ves, &lt;code&gt;.text&lt;/code&gt; es una propiedad que cambia mientras escribes. Enlazar propiedades con &lt;code&gt;.bind()&lt;/code&gt; es una forma directa de construir interfaces reactivas, en las que la UI se actualiza automáticamente en respuesta a cambios de estado.&lt;/p&gt;
 &lt;h2 id="separando-la-interfaz-de-la-logica-con-kv-language"&gt;Separando la interfaz de la lógica con KV language&lt;/h2&gt;
 &lt;p&gt;Una de las características más poderosas de Kivy es el &lt;em&gt;KV language&lt;/em&gt;. Se trata de un lenguaje dedicado que te permite definir la interfaz de forma declarativa en un archivo &lt;code&gt;.kv&lt;/code&gt; y dejar la lógica en Python.&lt;/p&gt;
-&lt;p&gt;Kivy puede cargar automáticamente un archivo &lt;code&gt;.kv&lt;/code&gt; por convención de nombres, usando el nombre de la subclase de &lt;code&gt;App&lt;/code&gt;. Por ejemplo, si tu clase de app se llama &lt;code&gt;ContadorApp&lt;/code&gt;, Kivy buscará y cargará un archivo llamado &lt;code&gt;contador.kv&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Kivy puede cargar automáticamente un archivo &lt;code&gt;.kv&lt;/code&gt; por convención de nombres, usando el nombre de la subclase de &lt;code&gt;App&lt;/code&gt;. Por ejemplo, si tu clase de app se llama &lt;code&gt;CounterApp&lt;/code&gt;, Kivy buscará y cargará un archivo llamado &lt;code&gt;counter.kv&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Supón que tu app tiene la estructura siguiente:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Texto&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;contador/
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Texto&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;counter/
 ├── main.py
-└── contador.kv
+└── counter.kv
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;El archivo &lt;code&gt;main.py&lt;/code&gt; define la aplicación y el widget raíz con la lógica de la aplicación:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.app&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;App&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - main.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.app&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;App&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.core.window&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Window&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.properties&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;NumericProperty&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.uix.boxlayout&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;BoxLayout&lt;/span&gt;
 
-&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ContadorApp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;App&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;CounterApp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;App&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;build&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
         &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;KV language Kivy&amp;quot;&lt;/span&gt;
         &lt;span class="n"&gt;Window&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;size&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;300&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;200&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -732,10 +731,10 @@ INFO:     Application startup complete.
     &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;increment&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
         &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;count&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
 
-&lt;span class="n"&gt;ContadorApp&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;CounterApp&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Este código no define elementos gráficos para la UI de tu aplicación. Puedes hacer este trabajo en &lt;code&gt;contador.kv&lt;/code&gt;. Para este ejemplo, añadirás un label y un botón:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Kv&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;RootWidget&amp;gt;:
+&lt;p&gt;Este código no define elementos gráficos para la UI de tu aplicación. Puedes hacer este trabajo en &lt;code&gt;counter.kv&lt;/code&gt;. Para este ejemplo, añadirás un label y un botón:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Kv - counter.kv&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;RootWidget&amp;gt;:
     orientation: &amp;quot;vertical&amp;quot;
     padding: 20
     spacing: 10
@@ -758,7 +757,7 @@ RootWidget:
 
 &lt;p&gt;Fíjate en dos ventajas importantes de esa manera de construir tus aplicaciones Kivy:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;La UI queda definida en &lt;code&gt;contador.kv&lt;/code&gt;, lo que facilita iterar sobre el diseño.&lt;/li&gt;
+&lt;li&gt;La UI queda definida en &lt;code&gt;counter.kv&lt;/code&gt;, lo que facilita iterar sobre el diseño.&lt;/li&gt;
 &lt;li&gt;La lógica de la app (incrementar el contador) se encuentra en tus archivos de Python, lo que desacopla el frontend del backend.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id="conclusion"&gt;Conclusión&lt;/h2&gt;
@@ -834,18 +833,18 @@ RootWidget:
 &lt;li&gt;Ejecuta el &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtCore/QCoreApplication.html#PySide6.QtCore.PySide6.QtCore.QCoreApplication.exec" target="_blank"&gt;bucle de eventos&lt;/a&gt; de la aplicación.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Crea un nuevo archivo Python llamado &lt;code&gt;app.py&lt;/code&gt; en tu directorio de trabajo actual:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - app.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En esta línea de código, importas &lt;code&gt;QApplication&lt;/code&gt;, &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QLabel.html" target="_blank"&gt;&lt;code&gt;QLabel&lt;/code&gt;&lt;/a&gt;, y &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QWidget.html" target="_blank"&gt;&lt;code&gt;QWidget&lt;/code&gt;&lt;/a&gt; desde &lt;code&gt;QtWidgets&lt;/code&gt;. Con esto, has cumplido con el primer paso.&lt;/p&gt;
 &lt;p&gt;Para completar el segundo paso, necesitas crear una instancia de &lt;code&gt;QApplication&lt;/code&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - app.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;
 
 &lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;([])&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En esta línea de código, creas la instancia de &lt;code&gt;QApplication&lt;/code&gt;. Es necesario crear esta instancia antes de crear cualquier objeto GUI en PySide6.&lt;/p&gt;
 &lt;p&gt;El tercer paso consiste en crear la GUI o ventana principal de la aplicación. Para este ejemplo, la GUI se basará en la clase &lt;code&gt;QWidget&lt;/code&gt;, que es la clase base de todos los objetos de interfaz de usuario en PySide6.&lt;/p&gt;
 &lt;p&gt;Así es como puedes crear la GUI de la app:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - app.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;
 
 &lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;([])&lt;/span&gt;
 
@@ -861,7 +860,7 @@ RootWidget:
 &lt;p&gt;Cada aplicación GUI necesita &lt;strong&gt;widgets&lt;/strong&gt;. Estos son los componentes gráficos que conforman la GUI de la app. En este ejemplo, usas un widget &lt;code&gt;QLabel&lt;/code&gt; llamado&lt;code&gt;hello&lt;/code&gt; que te permitirá mostrar el mensaje &lt;code&gt;Hola, Mundo!&lt;/code&gt; en la ventana de tu aplicación.&lt;/p&gt;
 &lt;p&gt;Los objetos &lt;code&gt;QLabel&lt;/code&gt; pueden mostrar texto formateado en HTML, por lo que puedes usar el elemento &lt;a href="https://es.wikipedia.org/wiki/HTML" target="_blank"&gt;HTML&lt;/a&gt; &lt;code&gt;"&amp;lt;h1&amp;gt;Hola, Mundo!&amp;lt;/h1&amp;gt;"&lt;/code&gt; para proporcionar el texto deseado como un encabezado &lt;code&gt;h1&lt;/code&gt;. Finalmente, usas el método &lt;code&gt;.move()&lt;/code&gt; para colocar el mensaje en las coordenadas &lt;code&gt;(60, 15)&lt;/code&gt; en la ventana de la aplicación.&lt;/p&gt;
 &lt;p&gt;Has finalizado el tercer paso, así que puedes continuar con los dos últimos pasos y preparar tu aplicación GUI PySide6 para ejecutarse:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - app.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;
 
 &lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;([])&lt;/span&gt;
 
@@ -890,7 +889,7 @@ RootWidget:
 &lt;h3 id="botones"&gt;Botones&lt;/h3&gt;
 &lt;p&gt;Puedes crear un botón con la clase &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QPushButton.html" target="_blank"&gt;&lt;code&gt;QPushButton&lt;/code&gt;&lt;/a&gt;, la cual proporciona un botón de comando clásico. Algunos botones típicos son &lt;em&gt;Ok&lt;/em&gt;, &lt;em&gt;Cancelar&lt;/em&gt;, &lt;em&gt;Aplicar&lt;/em&gt;, &lt;em&gt;Sí&lt;/em&gt;, &lt;em&gt;No&lt;/em&gt;, &lt;em&gt;Cerrar&lt;/em&gt;, similares.&lt;/p&gt;
 &lt;p&gt;Crea un archivo llamado &lt;code&gt;buttons.py&lt;/code&gt; y pon el siguiente código en él:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - buttons.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QPushButton&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QVBoxLayout&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -917,13 +916,16 @@ RootWidget:
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Botones en PySide6&lt;/em&gt;&lt;/div&gt;
 
 &lt;p&gt;Botones como estos son quizás los widgets más utilizados en cualquier GUI. Cuando alguien hace clic en ellos, tu aplicación ordena a la computadora realizar acciones. Así es como puedes ejecutar cálculos cuando un usuario hace clic en un botón.&lt;/p&gt;
+&lt;!-- markdownlint-disable MD046 MD013 --&gt;
 &lt;div class="admonition note"&gt;
 &lt;p&gt;En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; que representa un gestor de disposición que permite organizar los widgets con una orientación vertical. Más sobre gestores de disposición en un momento.&lt;/p&gt;
 &lt;/div&gt;
+&lt;!-- markdownlint-enable MD046 MD013 --&gt;
+
 &lt;h3 id="campos-de-entrada-de-texto"&gt;Campos de entrada de texto&lt;/h3&gt;
 &lt;p&gt;Los &lt;strong&gt;campos de entrada de texto&lt;/strong&gt; son widgets comunes también. Estos widgets te permite ingresar una sola línea de texto y puedes crearlos con la clase &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QLineEdit.html" target="_blank"&gt;&lt;code&gt;QLineEdit&lt;/code&gt;&lt;/a&gt;. Los campos de entrada de texto son útiles cuando necesitas obtener información del usuario como texto simple.&lt;/p&gt;
 &lt;p&gt;Para un ejemplo, crea un archivo &lt;code&gt;line_edits.py&lt;/code&gt; y escribe el siguiente código en él:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - line_edits.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QLineEdit&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QVBoxLayout&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -954,7 +956,7 @@ RootWidget:
 &lt;h3 id="listas-desplegables"&gt;Listas desplegables&lt;/h3&gt;
 &lt;p&gt;Las &lt;strong&gt;listas desplegables&lt;/strong&gt; son otro tipo fundamental de widget en aplicaciones GUI. Puedes crearlas usando la clase &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QComboBox.html" target="_blank"&gt;&lt;code&gt;QComboBox&lt;/code&gt;&lt;/a&gt;. Una lista desplegable presenta al usuario una serie de opciones de una manera que ocupa un espacio mínimo en la pantalla.&lt;/p&gt;
 &lt;p&gt;A continuación, un ejemplo de cómo emplear una lista desplegable en PySide6:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - combo_boxes.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QComboBox&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QVBoxLayout&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -984,7 +986,7 @@ RootWidget:
 &lt;h3 id="botones-radiales"&gt;Botones radiales&lt;/h3&gt;
 &lt;p&gt;El último widget que estudiarás es el &lt;strong&gt;botón radial&lt;/strong&gt;, que puedes crear con la clase &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QRadioButton.html" target="_blank"&gt;&lt;code&gt;QRadioButton&lt;/code&gt;&lt;/a&gt;. Se trata de un botón circular de opción que puedes seleccionar al hacer clic sobre él. Los botones radiales son útiles cuando necesitas que el usuario seleccione una entre varias opciones.&lt;/p&gt;
 &lt;p&gt;Todas las opciones en un grupo de botones radiales son visibles al mismo tiempo, pero el usuario solo puede seleccionar una de ellas. Es decir, la selección es excluyente. Considera el siguiente ejemplo:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - radio_buttons.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QRadioButton&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -1029,7 +1031,7 @@ RootWidget:
 &lt;p&gt;En las secciones siguientes, aprenderás lo básico de cómo emplear estas clases y crear GUIs ordenadas y funcionales.&lt;/p&gt;
 &lt;h3 id="disposicion-horizontal"&gt;Disposición horizontal&lt;/h3&gt;
 &lt;p&gt;La primera clase de gestor de disposición que estudiarás es &lt;strong&gt;&lt;code&gt;QHBoxLayout&lt;/code&gt;&lt;/strong&gt;. Esta te permite organizar los widgets horizontalmente de izquierda a derecha. El ejemplo a continuación muestra cómo usar &lt;code&gt;QHBoxLayout&lt;/code&gt; para organizar tres botones horizontalmente:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - horizontal_layout.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QHBoxLayout&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QPushButton&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -1059,7 +1061,7 @@ RootWidget:
 &lt;h3 id="disposicion-vertical"&gt;Disposición vertical&lt;/h3&gt;
 &lt;p&gt;La siguiente clase de gestor de disposición es &lt;strong&gt;&lt;code&gt;QVBoxLayout&lt;/code&gt;&lt;/strong&gt;. Esta clase te permite organizar los widgets verticalmente de arriba a abajo, facilitando la construcción de diseños verticales en tu GUI.&lt;/p&gt;
 &lt;p&gt;A continuación, un ejemplo de cómo puedes usar &lt;code&gt;QVBoxLayout&lt;/code&gt; para organizar tres botones verticalmente:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - vertical_layout.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QPushButton&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QVBoxLayout&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -1091,7 +1093,7 @@ RootWidget:
 &lt;p&gt;El tercer gestor de disposición que estudiarás es &lt;strong&gt;&lt;code&gt;QGridLayout&lt;/code&gt;&lt;/strong&gt;. Esta clase te permite organizar los widgets en una cuadrícula de filas y columnas. Cada widget tendrá una posición relativa en la cuadrícula. Puedes definir la posición de un widget con un par de coordenadas como &lt;code&gt;(fila, columna)&lt;/code&gt;. Cada coordenada debe ser un &lt;a href="https://realpython.com/python-numbers/" target="_blank"&gt;número&lt;/a&gt; entero. Estos pares de coordenadas definen qué celda en la cuadrícula ocupará un widget determinado.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;QGridLayout&lt;/code&gt; toma el espacio disponible, lo divide en &lt;code&gt;filas&lt;/code&gt; y &lt;code&gt;columnas&lt;/code&gt;, y coloca cada widget hijo en su propia celda.&lt;/p&gt;
 &lt;p&gt;A continuación, se muestra un ejemplo de cómo organizar una GUI con este gestor de disposición:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - grid_layout.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QGridLayout&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QPushButton&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -1139,7 +1141,7 @@ RootWidget:
 &lt;h3 id="disposicion-de-formulario"&gt;Disposición de formulario&lt;/h3&gt;
 &lt;p&gt;El último gestor de disposición que estudiarás es el &lt;strong&gt;&lt;code&gt;QFormLayout&lt;/code&gt;&lt;/strong&gt;. Con esta clase, puedes organizar los widgets en un diseño de dos columnas. La primera columna generalmente muestra texto en etiquetas, mientras que la segunda columna pueden contener widgets de entrada de datos como &lt;code&gt;QLineEdit&lt;/code&gt;, &lt;code&gt;QComboBox&lt;/code&gt;, &lt;a href="https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QSpinBox.html" target="_blank"&gt;&lt;code&gt;QSpinBox&lt;/code&gt;&lt;/a&gt;, entre otros.&lt;/p&gt;
 &lt;p&gt;El siguiente ejemplo muestra cómo crear una aplicación que utiliza un objeto &lt;code&gt;QFormLayout&lt;/code&gt; para organizar sus widgets:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - form_layout.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QFormLayout&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QLineEdit&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -1216,7 +1218,7 @@ RootWidget:
 &lt;/table&gt;
 &lt;p&gt;No puedes crear una ventana principal sin un widget central. Puedes establecer el widget central de la ventana con el método &lt;code&gt;.setCentralWidget()&lt;/code&gt;. El diseño de la ventana principal te permitirá tener un único widget central, que puede ser simple o compuesto.&lt;/p&gt;
 &lt;p&gt;El siguiente ejemplo muestra cómo usar &lt;code&gt;QMainWindow&lt;/code&gt; para crear una aplicación con ventana principal:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - main_window.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QMainWindow&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -1278,7 +1280,7 @@ RootWidget:
 &lt;p&gt;Puedes emplear diálogos como formularios de entrada de datos, ventanas de configuración, entre otras. Por esto, los diálogos también pueden proporcionar un valor de retorno y tener botones predeterminados, como &lt;em&gt;Aplicar&lt;/em&gt;, &lt;em&gt;Ok&lt;/em&gt; y &lt;em&gt;Cancelar&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Un diálogo es siempre una ventana independiente. Si un diálogo tiene un widget padre (&lt;code&gt;parent&lt;/code&gt;), entonces se mostrará centrado sobre dicho widget.&lt;/p&gt;
 &lt;p&gt;A continuación un ejemplo de cómo emplear &lt;code&gt;QDialog&lt;/code&gt; para desarrollar una diálogo:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - dialog_form.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QDialog&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QDialogButtonBox&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -1352,7 +1354,7 @@ RootWidget:
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;A continuación, un ejemplo que muestra algunos de elementos en acción:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - standard_dialogs.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PySide6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QColorDialog&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QFileDialog&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -1456,7 +1458,7 @@ RootWidget:
 &lt;p&gt;Tkinter es un paquete que forma parte de la biblioteca estándar de Python y está diseñado para crear interfaces gráficas de usuario (GUI). Provee acceso a las clases y objetos de la biblioteca &lt;a href="https://www.tcl.tk/" target="_blank"&gt;Tcl/Tk&lt;/a&gt; y proporciona una manera rápida y sencilla de crear aplicaciones GUI en Python.&lt;/p&gt;
 &lt;p&gt;Tkinter es compatible con Windows, macOS y Linux, lo que te permite desarrollar aplicaciones multiplataforma sin preocuparte por las diferencias entre sistemas operativos.&lt;/p&gt;
 &lt;p&gt;Tkinter ofrece una variada gama de widgets y herramientas que puedes usar para crear interfaces de usuario interactivas. Desde botones y etiquetas hasta cuadros de texto y menús. Tkinter tiene todo lo que necesitas para desarrollar aplicaciones de escritorio en Python.&lt;/p&gt;
-&lt;p&gt;Sin embargo, a diferencia de otros frameworks y bibliotecas GUI que ofrecen componentes gráficos (widgets) y otras herramientas tales como clases para manipulación de bases de datos, trabajo con redes, y similares, Tkinter se enfoca en los componentes gráficos, la gestión de eventos y el soporte para menus y diálogos.&lt;/p&gt;
+&lt;p&gt;Sin embargo, a diferencia de otros frameworks y bibliotecas GUI que ofrecen componentes gráficos (widgets) y otras herramientas tales como clases para manipulación de bases de datos, trabajo con redes, y similares, Tkinter se enfoca en los componentes gráficos, la gestión de eventos y el soporte para menús y diálogos.&lt;/p&gt;
 &lt;h2 id="instalando-tkinter"&gt;Instalando Tkinter&lt;/h2&gt;
 &lt;p&gt;La mayoría de las distribuciones de Python ya incluyen Tkinter por defecto. Por lo tanto, es muy probable que no necesites instalarlo por separado. Sin embargo, si resulta que Tkinter no está disponible en tu sistema, puedes instalarlo de manera rápida.&lt;/p&gt;
 &lt;h3 id="en-windows-y-macos"&gt;En Windows y macOS&lt;/h3&gt;
@@ -1476,18 +1478,18 @@ RootWidget:
 &lt;li&gt;Ejecuta el bucle de eventos de la aplicación con &lt;code&gt;.mainloop()&lt;/code&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Crea un nuevo archivo Python llamado &lt;code&gt;app.py&lt;/code&gt; en tu directorio de trabajo actual y escribe el siguiente código:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - app.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En esta línea de código, importas el módulo &lt;code&gt;tkinter&lt;/code&gt; y lo renombras como &lt;code&gt;tk&lt;/code&gt; para facilitar su uso. Con esto, has cumplido con el primer paso.&lt;/p&gt;
 &lt;p&gt;Para completar el segundo paso, necesitas crear una instancia de &lt;code&gt;Tk&lt;/code&gt;, la cual usualmente llamarás &lt;code&gt;root&lt;/code&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - app.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
 
 &lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Tk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En esta línea de código, creas la instancia de &lt;code&gt;Tk&lt;/code&gt;. Esto inicializa la aplicación y prepara el entorno para comenzar a añadir widgets a la GUI de tu aplicación.&lt;/p&gt;
 &lt;p&gt;El tercer paso consiste en crear la ventana principal de la aplicación con los elementos gráficos deseados. Para este ejemplo, la GUI se basará en un widget &lt;code&gt;Label&lt;/code&gt; que mostrará el mensaje &lt;code&gt;"Hola, mundo!"&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Así es como puedes crear la GUI de la aplicación:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - app.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
 
 &lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Tk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Tkinter Demo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1501,7 +1503,7 @@ RootWidget:
 &lt;p&gt;Cada aplicación GUI necesita widgets. Estos son los componentes gráficos que conforman la GUI de la aplicación. En este ejemplo, usas un widget &lt;code&gt;Label&lt;/code&gt; llamado &lt;code&gt;hello&lt;/code&gt; que te permitirá mostrar el mensaje &lt;code&gt;"Hola, mundo!"&lt;/code&gt; en la ventana de tu aplicación.&lt;/p&gt;
 &lt;p&gt;El método &lt;code&gt;.pack()&lt;/code&gt; es un &lt;a href="/iniciando-con-tkinter-python/#usando-gestores-de-geometria"&gt;gestor de geometría&lt;/a&gt; se utiliza para colocar el widget en la ventana. El argumento &lt;code&gt;pady&lt;/code&gt; agrega un poco de espacio vertical alrededor del widget.&lt;/p&gt;
 &lt;p&gt;Has finalizado el tercer paso, así que puedes continuar con el último paso y preparar tu aplicación Tkinter para su ejecución:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - app.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
 
 &lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Tk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Tkinter Demo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1526,7 +1528,7 @@ RootWidget:
 &lt;h3 id="botones"&gt;Botones&lt;/h3&gt;
 &lt;p&gt;Puedes crear un botón con la clase &lt;code&gt;Button&lt;/code&gt;, la cual proporciona un botón de comando clásico. Algunos botones típicos son &lt;em&gt;Ok&lt;/em&gt;, &lt;em&gt;Cancelar&lt;/em&gt;, &lt;em&gt;Aplicar&lt;/em&gt;, &lt;em&gt;Sí&lt;/em&gt;, &lt;em&gt;No&lt;/em&gt;, &lt;em&gt;Cerrar&lt;/em&gt;, similares.&lt;/p&gt;
 &lt;p&gt;Crea un archivo llamado &lt;code&gt;buttons.py&lt;/code&gt; y pon el siguiente código en él:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - buttons.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
 
 &lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Tk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Botones Tkinter&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1547,7 +1549,7 @@ RootWidget:
 &lt;h3 id="campos-de-entrada-de-texto"&gt;Campos de entrada de texto&lt;/h3&gt;
 &lt;p&gt;Los &lt;strong&gt;campos de entrada de texto&lt;/strong&gt; son widgets comunes también. Estos widgets te permiten ingresar una sola línea de texto y puedes crearlos con la clase &lt;code&gt;Entry&lt;/code&gt; de Tkinter. Los campos de entrada de texto son útiles cuando necesitas obtener información del usuario en forma de texto.&lt;/p&gt;
 &lt;p&gt;Como ejemplo, crea un archivo &lt;code&gt;entries.py&lt;/code&gt; y escribe el siguiente código en él:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - entries.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
 
 &lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Tk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Campos de texto Tkinter&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1571,7 +1573,7 @@ RootWidget:
 &lt;h3 id="listas-desplegables"&gt;Listas desplegables&lt;/h3&gt;
 &lt;p&gt;Las &lt;strong&gt;listas desplegables&lt;/strong&gt; son otro tipo fundamental de widget en aplicaciones GUI. Puedes crearlas usando la clase &lt;code&gt;Combobox&lt;/code&gt; del módulo &lt;code&gt;ttk&lt;/code&gt;, el cual contiene una serie mejorada de widgets para Tkinter. Una lista desplegable presenta al usuario una serie de opciones de una manera que ocupa un espacio mínimo en la pantalla.&lt;/p&gt;
 &lt;p&gt;A continuación, un ejemplo de cómo emplear una lista desplegable en Tkinter:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - combo_boxes.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;ttk&lt;/span&gt;
 
 &lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Tk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
@@ -1601,7 +1603,7 @@ RootWidget:
 &lt;p&gt;El último widget que estudiarás es el &lt;strong&gt;botón radial&lt;/strong&gt;, que puedes crear con la clase &lt;code&gt;Radiobutton&lt;/code&gt;. Se trata de un botón circular de opción que puedes seleccionar al hacer clic sobre él. Los botones radiales son útiles cuando necesitas que el usuario seleccione una entre varias opciones.&lt;/p&gt;
 &lt;p&gt;Todas las opciones en un grupo de botones radiales son visibles al mismo tiempo, pero el usuario solo puede seleccionar una de ellas. Es decir, la selección es excluyente.&lt;/p&gt;
 &lt;p&gt;Considera el siguiente ejemplo:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - radio_buttons.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
 
 &lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Tk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Botones radiales Tkinter&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1646,7 +1648,7 @@ RootWidget:
 &lt;h3 id="disposicion-por-empaquetado-con-pack"&gt;Disposición por empaquetado con &lt;code&gt;.pack()&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;El método &lt;code&gt;.pack()&lt;/code&gt; organiza los widgets en bloques antes o después de los widgets ya empaquetados. Puedes especificar las opciones &lt;code&gt;side&lt;/code&gt;, &lt;code&gt;fill&lt;/code&gt; y &lt;code&gt;expand&lt;/code&gt; para controlar cómo se comportan los widgets empaquetados.&lt;/p&gt;
 &lt;p&gt;A continuación se muestra un ejemplo de uso de &lt;code&gt;.pack()&lt;/code&gt; para gestionar la geometría de una GUI ordenada verticalmente:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - pack_vertical.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
 
 &lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Tk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Disposición vertical&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1665,7 +1667,7 @@ RootWidget:
 
 &lt;p&gt;Nota como el orden de los botones en la GUI coincide con el orden de aparición de los botones en el código.&lt;/p&gt;
 &lt;p&gt;También puedes emplear &lt;code&gt;.pack()&lt;/code&gt; para disponer los widgets horizontalmente:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - pack_horizontal.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
 
 &lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Tk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Disposición horizontal&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1686,7 +1688,7 @@ RootWidget:
 &lt;h3 id="disposicion-en-cuadricula-con-grid"&gt;Disposición en cuadrícula con &lt;code&gt;.grid()&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;El método &lt;code&gt;.grid()&lt;/code&gt; es otro gestor de geometría en Tkinter. Con él, puedes organizar los widgets en una cuadrícula de filas y columnas. Puedes especificar la fila y la columna para cada widget usando índices, lo que te permite controlar su posición exacta en la ventana.&lt;/p&gt;
 &lt;p&gt;A continuación se muestra un ejemplo de uso de &lt;code&gt;.grid()&lt;/code&gt; para posicionar un grupo de botones:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - grid_layout.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
 
 &lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Tk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Disposición en cuadrícula&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1708,7 +1710,7 @@ RootWidget:
 &lt;p&gt;Los primeros cuatro botones ocupan una sola celda en la cuadrícula. La celda está definida por coordenadas enteras en la forma &lt;code&gt;(fila, columna)&lt;/code&gt;. El último botón ocupa dos celdas en la cuadricula. Para lograr esto, empleas el argumento &lt;code&gt;columnspan&lt;/code&gt; con un valor de &lt;code&gt;2&lt;/code&gt;.&lt;/p&gt;
 &lt;h3 id="disposicion-por-posicion-con-place"&gt;Disposición por posición con &lt;code&gt;.place()&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;El método &lt;code&gt;.place()&lt;/code&gt; te permite organizar los widgets en posiciones absolutas y relativas dentro de la ventana. Puedes especificar las coordenadas &lt;code&gt;x&lt;/code&gt; e &lt;code&gt;y&lt;/code&gt; para cada widget, lo que te permite un control preciso sobre su ubicación:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - place_layout.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
 
 &lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Tk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Disposición por posición&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1737,7 +1739,7 @@ RootWidget:
 &lt;h3 id="ventanas-principales"&gt;Ventanas principales&lt;/h3&gt;
 &lt;p&gt;La mayoría de tus aplicaciones tendrán una ventana que puede incluir elementos como menús, botones y cuadros de texto. Para crear este tipo de ventana en Tkinter, utilizarás una instancia de la clase &lt;code&gt;Tk&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;La siguiente aplicación muestra cómo crear una ventana principal con un menú:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - main_window.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
 
 &lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Tk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Ventana Principal Tkinter&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1805,7 +1807,7 @@ RootWidget:
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;Un ejemplo común es el cuadro de diálogo de mensaje, que puedes crear usando &lt;code&gt;messagebox.showinfo()&lt;/code&gt;. El siguiente código crea una aplicación con un botón que muestra un mensaje de información al usuario:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - message_boxes.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;messagebox&lt;/span&gt;
 
 &lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Tk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
@@ -1838,7 +1840,7 @@ RootWidget:
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;El siguiente ejemplo muestra cómo usar un diálogo estándar para selecionar un archivo en tu sistema:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - file_dialog.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;tk&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;tkinter&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;filedialog&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;messagebox&lt;/span&gt;
 
 &lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Tk&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
@@ -1940,18 +1942,18 @@ RootWidget:
 &lt;li&gt;Ejecuta el &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtcore/qcoreapplication.html?highlight=main%20loop#the-event-loop-and-event-handling" target="_blank"&gt;bucle de eventos&lt;/a&gt; de la aplicación.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Crea un nuevo archivo Python llamado &lt;code&gt;app.py&lt;/code&gt; en tu directorio de trabajo actual:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - app.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En esta línea de código, importas &lt;code&gt;QApplication&lt;/code&gt;, &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qlabel.html" target="_blank"&gt;&lt;code&gt;QLabel&lt;/code&gt;&lt;/a&gt;, y &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qwidget.html" target="_blank"&gt;&lt;code&gt;QWidget&lt;/code&gt;&lt;/a&gt; desde &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qtwidgets-module.html" target="_blank"&gt;&lt;code&gt;QtWidgets&lt;/code&gt;&lt;/a&gt;. Con esto, has cumplido con el primer paso.&lt;/p&gt;
 &lt;p&gt;Para completar el segundo paso, necesitas crear una instancia de &lt;code&gt;QApplication&lt;/code&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - app.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;
 
 &lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;([])&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En esta línea de código, creas la instancia de &lt;code&gt;QApplication&lt;/code&gt;. Es necesario crear esta instancia antes de crear cualquier objeto GUI en PyQt.&lt;/p&gt;
 &lt;p&gt;El tercer paso consiste en crear la GUI o ventana principal de la aplicación. Para este ejemplo, la GUI se basará en la clase &lt;code&gt;QWidget&lt;/code&gt;, que es la clase base de todos los objetos de interfaz de usuario en PyQt.&lt;/p&gt;
 &lt;p&gt;Así es como puedes crear la GUI de la app:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - app.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;
 
 &lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;([])&lt;/span&gt;
 
@@ -1967,7 +1969,7 @@ RootWidget:
 &lt;p&gt;Cada aplicación GUI necesita &lt;strong&gt;widgets&lt;/strong&gt;. Estos son los componentes gráficos que conforman la GUI de la app. En este ejemplo, usas un widget &lt;code&gt;QLabel&lt;/code&gt; llamado&lt;code&gt;hello&lt;/code&gt; que te permitirá mostrar el mensaje &lt;code&gt;Hola, Mundo!&lt;/code&gt; en la ventana de tu aplicación.&lt;/p&gt;
 &lt;p&gt;Los objetos &lt;code&gt;QLabel&lt;/code&gt; pueden mostrar texto formateado en HTML, por lo que puedes usar el elemento &lt;a href="https://es.wikipedia.org/wiki/HTML" target="_blank"&gt;HTML&lt;/a&gt; &lt;code&gt;"&amp;lt;h1&amp;gt;Hola, Mundo!&amp;lt;/h1&amp;gt;"&lt;/code&gt; para proporcionar el texto deseado como un encabezado &lt;code&gt;h1&lt;/code&gt;. Finalmente, usas el método &lt;code&gt;.move()&lt;/code&gt; para colocar el mensaje en las coordenadas &lt;code&gt;(60, 15)&lt;/code&gt; en la ventana de la aplicación.&lt;/p&gt;
 &lt;p&gt;Has finalizado el tercer paso, así que puedes continuar con los dos últimos pasos y preparar tu aplicación GUI PyQt para ejecutarse:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - app.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;QWidget&lt;/span&gt;
 
 &lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;([])&lt;/span&gt;
 
@@ -1996,7 +1998,7 @@ RootWidget:
 &lt;h3 id="botones"&gt;Botones&lt;/h3&gt;
 &lt;p&gt;Puedes crear un botón con la clase &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qpushbutton.html" target="_blank"&gt;&lt;code&gt;QPushButton&lt;/code&gt;&lt;/a&gt;, la cual proporciona un botón de comando clásico. Algunos botones típicos son &lt;em&gt;Ok&lt;/em&gt;, &lt;em&gt;Cancelar&lt;/em&gt;, &lt;em&gt;Aplicar&lt;/em&gt;, &lt;em&gt;Sí&lt;/em&gt;, &lt;em&gt;No&lt;/em&gt;, &lt;em&gt;Cerrar&lt;/em&gt;, similares.&lt;/p&gt;
 &lt;p&gt;Crea un archivo llamado &lt;code&gt;buttons.py&lt;/code&gt; y pon el siguiente código en él:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - buttons.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QPushButton&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QVBoxLayout&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -2023,13 +2025,16 @@ RootWidget:
 &lt;div class="text-center mb-5 lead"&gt;&lt;em&gt;Botones en PyQt&lt;/em&gt;&lt;/div&gt;
 
 &lt;p&gt;Botones como estos son quizás los widgets más utilizados en cualquier GUI. Cuando alguien hace clic en ellos, tu aplicación ordena a la computadora realizar acciones. Así es como puedes ejecutar cálculos cuando un usuario hace clic en un botón.&lt;/p&gt;
+&lt;!-- markdownlint-disable MD046 MD013 --&gt;
 &lt;div class="admonition note"&gt;
 &lt;p&gt;En este ejemplo, empleas una clase llamada &lt;code&gt;QVBoxLayout&lt;/code&gt; que representa un gestor de disposición que permite organizar los widgets con una orientación vertical. Más sobre gestores de disposición en un momento.&lt;/p&gt;
 &lt;/div&gt;
+&lt;!-- markdownlint-enable MD046 MD013 --&gt;
+
 &lt;h3 id="campos-de-entrada-de-texto"&gt;Campos de entrada de texto&lt;/h3&gt;
 &lt;p&gt;Los &lt;strong&gt;campos de entrada de texto&lt;/strong&gt; son widgets comunes también. Estos widgets te permite ingresar una sola línea de texto y puedes crearlos con la clase &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qlineedit.html" target="_blank"&gt;&lt;code&gt;QLineEdit&lt;/code&gt;&lt;/a&gt;. Los campos de entrada de texto son útiles cuando necesitas obtener información del usuario como texto simple.&lt;/p&gt;
 &lt;p&gt;Para un ejemplo, crea un archivo &lt;code&gt;line_edits.py&lt;/code&gt; y escribe el siguiente código:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - line_edits.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QLineEdit&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QVBoxLayout&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -2060,7 +2065,7 @@ RootWidget:
 &lt;h3 id="listas-desplegables"&gt;Listas desplegables&lt;/h3&gt;
 &lt;p&gt;Las &lt;strong&gt;listas desplegables&lt;/strong&gt; son otro tipo fundamental de widget en aplicaciones GUI. Puedes crearlas usando la clase &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qcombobox.html" target="_blank"&gt;&lt;code&gt;QComboBox&lt;/code&gt;&lt;/a&gt;. Una lista desplegable presenta al usuario una serie de opciones de una manera que ocupa un espacio mínimo en la pantalla.&lt;/p&gt;
 &lt;p&gt;A continuación, un ejemplo de cómo emplear una lista desplegable en PyQt:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - combo_boxes.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QComboBox&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QVBoxLayout&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -2092,7 +2097,7 @@ RootWidget:
 &lt;h3 id="botones-radiales"&gt;Botones radiales&lt;/h3&gt;
 &lt;p&gt;El último widget que estudiarás es el &lt;strong&gt;botón radial&lt;/strong&gt;, que puedes crear con la clase &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qradiobutton.html" target="_blank"&gt;&lt;code&gt;QRadioButton&lt;/code&gt;&lt;/a&gt;. Se trata de un botón circular de opción que puedes seleccionar al hacer clic sobre él. Los botones radiales son útiles cuando necesitas que el usuario seleccione una entre varias opciones.&lt;/p&gt;
 &lt;p&gt;Todas las opciones en un grupo de botones radiales son visibles al mismo tiempo, pero el usuario solo puede seleccionar una de ellas. Es decir, la selección es excluyente. Considera el siguiente ejemplo:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - radio_buttons.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QRadioButton&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -2137,7 +2142,7 @@ RootWidget:
 &lt;p&gt;En las secciones siguientes, aprenderás lo básico de cómo emplear estas clases y crear GUIs ordenadas y funcionales.&lt;/p&gt;
 &lt;h3 id="disposicion-horizontal"&gt;Disposición horizontal&lt;/h3&gt;
 &lt;p&gt;La primera clase de gestor de disposición que estudiarás es &lt;strong&gt;&lt;code&gt;QHBoxLayout&lt;/code&gt;&lt;/strong&gt;. Esta te permite organizar los widgets horizontalmente de izquierda a derecha. El ejemplo a continuación muestra cómo usar &lt;code&gt;QHBoxLayout&lt;/code&gt; para organizar tres botones horizontalmente:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - horizontal_layout.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QHBoxLayout&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QPushButton&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -2167,7 +2172,7 @@ RootWidget:
 &lt;h3 id="disposicion-vertical"&gt;Disposición vertical&lt;/h3&gt;
 &lt;p&gt;La siguiente clase de gestor de disposición es &lt;strong&gt;&lt;code&gt;QVBoxLayout&lt;/code&gt;&lt;/strong&gt;. Esta clase te permite organizar los widgets verticalmente de arriba a abajo, facilitando la construcción de diseños verticales en tu GUI.&lt;/p&gt;
 &lt;p&gt;A continuación, un ejemplo de cómo puedes usar &lt;code&gt;QVBoxLayout&lt;/code&gt; para organizar tres botones verticalmente:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - vertical_layout.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QPushButton&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QVBoxLayout&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -2199,7 +2204,7 @@ RootWidget:
 &lt;p&gt;El tercer gestor de disposición que estudiarás es &lt;strong&gt;&lt;code&gt;QGridLayout&lt;/code&gt;&lt;/strong&gt;. Esta clase te permite organizar los widgets en una cuadrícula de filas y columnas. Cada widget tendrá una posición relativa en la cuadrícula. Puedes definir la posición de un widget con un par de coordenadas como &lt;code&gt;(fila, columna)&lt;/code&gt;. Cada coordenada debe ser un &lt;a href="https://realpython.com/python-numbers/" target="_blank"&gt;número&lt;/a&gt; entero. Estos pares de coordenadas definen qué celda en la cuadrícula ocupará un widget determinado.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;QGridLayout&lt;/code&gt; toma el espacio disponible, lo divide en &lt;code&gt;filas&lt;/code&gt; y &lt;code&gt;columnas&lt;/code&gt;, y coloca cada widget hijo en su propia celda.&lt;/p&gt;
 &lt;p&gt;A continuación, se muestra un ejemplo de cómo organizar una GUI con este gestor de disposición:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - grid_layout.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QGridLayout&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QPushButton&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -2247,7 +2252,7 @@ RootWidget:
 &lt;h3 id="disposicion-de-formulario"&gt;Disposición de formulario&lt;/h3&gt;
 &lt;p&gt;El último gestor de disposición que estudiarás es el &lt;strong&gt;&lt;code&gt;QFormLayout&lt;/code&gt;&lt;/strong&gt;. Con esta clase, puedes organizar los widgets en un diseño de dos columnas. La primera columna generalmente muestra texto en etiquetas, mientras que la segunda columna pueden contener widgets de entrada de datos como &lt;code&gt;QLineEdit&lt;/code&gt;, &lt;code&gt;QComboBox&lt;/code&gt;, &lt;a href="https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtwidgets/qspinbox.html" target="_blank"&gt;&lt;code&gt;QSpinBox&lt;/code&gt;&lt;/a&gt;, entre otros.&lt;/p&gt;
 &lt;p&gt;El siguiente ejemplo muestra cómo crear una aplicación que utiliza un objeto &lt;code&gt;QFormLayout&lt;/code&gt; para organizar sus widgets:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - form_layout.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QFormLayout&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QLineEdit&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -2324,7 +2329,7 @@ RootWidget:
 &lt;/table&gt;
 &lt;p&gt;No puedes crear una ventana principal sin un widget central. Puedes establecer el widget central de la ventana con el método &lt;code&gt;.setCentralWidget()&lt;/code&gt;. El diseño de la ventana principal te permitirá tener un único widget central, que puede ser simple o compuesto.&lt;/p&gt;
 &lt;p&gt;El siguiente ejemplo muestra cómo usar &lt;code&gt;QMainWindow&lt;/code&gt; para crear una aplicación con ventana principal:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - main_window.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QLabel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QMainWindow&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -2386,7 +2391,7 @@ RootWidget:
 &lt;p&gt;Puedes emplear diálogos como formularios de entrada de datos, ventanas de configuración, entre otras. Por esto, los diálogos también pueden proporcionar un valor de retorno y tener botones predeterminados, como &lt;em&gt;Aplicar&lt;/em&gt;, &lt;em&gt;Ok&lt;/em&gt; y &lt;em&gt;Cancelar&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Un diálogo es siempre una ventana independiente. Si un diálogo tiene un widget padre (&lt;code&gt;parent&lt;/code&gt;), entonces se mostrará centrado sobre dicho widget.&lt;/p&gt;
 &lt;p&gt;A continuación un ejemplo de cómo emplear &lt;code&gt;QDialog&lt;/code&gt; para desarrollar una diálogo:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - dialog_form.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QDialog&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QDialogButtonBox&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -2460,7 +2465,7 @@ RootWidget:
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;A continuación, un ejemplo que muestra algunos de elementos en acción:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - standard_dialogs.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PyQt6.QtWidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;QApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QColorDialog&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;QFileDialog&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;

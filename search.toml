@@ -175,7 +175,7 @@ title = "Palabras clave en Python: while"
 [[input.files]]
 path = "gestionar-proyecto-python-uv/index.html"
 url = "/gestionar-proyecto-python-uv/"
-title = "Cómo gestionar un proyecto Python con uv?"
+title = "¿Cómo gestionar un proyecto Python con uv?"
 
 [[input.files]]
 path = "python-for/index.html"
@@ -215,7 +215,7 @@ title = "Palabras clave en Python: False"
 [[input.files]]
 path = "obtener-ayuda-python/index.html"
 url = "/obtener-ayuda-python/"
-title = "Cómo obtener ayuda en Python?"
+title = "¿Cómo obtener ayuda en Python?"
 
 [[input.files]]
 path = "ciclos-for-python/index.html"
@@ -225,12 +225,12 @@ title = "Python a través de ejemplos: Ciclos o bucles for"
 [[input.files]]
 path = "comprimir-archivos-zipfile-python/index.html"
 url = "/comprimir-archivos-zipfile-python/"
-title = "Cómo comprimir archivos con zipfile en Python?"
+title = "¿Cómo comprimir archivos con zipfile en Python?"
 
 [[input.files]]
 path = "entorno-virtual-python/index.html"
 url = "/entorno-virtual-python/"
-title = "Cómo crear un entorno virtual de Python?"
+title = "¿Cómo crear un entorno virtual de Python?"
 
 [[input.files]]
 path = "iniciando-con-pyside6-python/index.html"
@@ -245,7 +245,7 @@ title = "Python a través de ejemplos: Sentencias condicionales"
 [[input.files]]
 path = "instalar-python-linux-debian-ubuntu/index.html"
 url = "/instalar-python-linux-debian-ubuntu/"
-title = "Cómo instalar Python en tu sistema operativo Debian o Ubuntu Linux?"
+title = "¿Cómo instalar Python en tu sistema operativo Debian o Ubuntu Linux?"
 
 [[input.files]]
 path = "iniciando-con-tkinter-python/index.html"
@@ -275,7 +275,7 @@ title = "Python a través de ejemplos: Operadores"
 [[input.files]]
 path = "elementos-iguales-lista-python/index.html"
 url = "/elementos-iguales-lista-python/"
-title = "Cómo saber si todos los elementos en una lista son iguales en Python?"
+title = "¿Cómo saber si todos los elementos en una lista son iguales en Python?"
 
 [[input.files]]
 path = "constantes-python/index.html"
@@ -295,17 +295,17 @@ title = "Python a través de ejemplos: Valores"
 [[input.files]]
 path = "ejecutar-script-python/index.html"
 url = "/ejecutar-script-python/"
-title = "Cómo ejecutar un script Python?"
+title = "¿Cómo ejecutar un script Python?"
 
 [[input.files]]
 path = "instalar-python-windows/index.html"
 url = "/instalar-python-windows/"
-title = "Cómo instalar Python en tu sistema operativo Windows?"
+title = "¿Cómo instalar Python en tu sistema operativo Windows?"
 
 [[input.files]]
 path = "instalar-python-macos/index.html"
 url = "/instalar-python-macos/"
-title = "Cómo instalar Python en tu sistema operativo macOS?"
+title = "¿Cómo instalar Python en tu sistema operativo macOS?"
 
 [[input.files]]
 path = "python-hola-mundo/index.html"

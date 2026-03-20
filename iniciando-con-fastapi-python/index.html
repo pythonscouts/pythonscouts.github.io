@@ -53,8 +53,8 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://pythonscouts.com/iniciando-con-fastapi-python/">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202603191733">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202603191733">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202603201946">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202603201946">
     <!-- Preconnect to CDNs -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
@@ -67,9 +67,9 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202603191733">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202603201946">
     <!-- Stork Search - Deferred -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202603191733">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202603201946">
 
 
     <!-- Article tags -->
@@ -117,13 +117,13 @@
     <meta name="twitter:image:alt" content="Iniciando con FastAPI para desarrollo de APIs">
 
     <!-- Custom CSS for article -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202603191733">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202603201946">
 </head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
 <script
-    src="https://pythonscouts.com/theme/js/analytics.js?v=202603191733"
+    src="https://pythonscouts.com/theme/js/analytics.js?v=202603201946"
     defer
     data-analytics-id="G-R3C5PFSQ1S">
 </script>
@@ -336,7 +336,7 @@
 </code></pre></div>
 <h2 id="creando-una-aplicacion-fastapi">Creando una aplicación FastAPI</h2>
 <p>Con FastAPI instalado, estás listo para crear tu primera API. Para comenzar, crearás una aplicación de <a href="/python-hola-mundo/">Hola, Mundo!</a> Crea un archivo llamado <code>main.py</code> con el siguiente contenido:</p>
-<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+<div class="highlight"><span class="filename">Python - main.py</span><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
 
 <span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
 
@@ -379,16 +379,16 @@ INFO:     Application startup complete.
 <p>Para construir APIs efectivas, es importante entender cómo funcionan las peticiones HTTP. Cuando un cliente, como un navegador o una app móvil, quiere interactuar con tu API, envía una petición o <em>request</em>, y tu servidor devuelve una respuesta o <em>response</em>.</p>
 <p>En FastAPI, cada operación de ruta corresponde a un método HTTP específico:</p>
 <ul>
-<li><strong>GET</strong>: Leer datos</li>
-<li><strong>POST</strong>: Crear datos</li>
-<li><strong>PUT</strong>: Actualizar datos</li>
-<li><strong>DELETE</strong>: Borrar datos</li>
+<li><strong><code>GET</code></strong>: Leer datos</li>
+<li><strong><code>POST</code></strong>: Crear datos</li>
+<li><strong><code>PUT</code></strong>: Actualizar datos</li>
+<li><strong><code>DELETE</code></strong>: Borrar datos</li>
 </ul>
 <p>Por eso usas <code>@app.get("/")</code> para leer la raíz. Si quisieras crear un elemento, usarías <code>@app.post("/")</code>.</p>
 <h2 id="usando-parametros-de-ruta">Usando parámetros de ruta</h2>
 <p>A menudo necesitarás obtener un elemento específico de tu API, por ejemplo, un usuario por su ID. FastAPI te permite hacer esto definiendo parámetros en la ruta.</p>
 <p>Añade la siguiente función a tu archivo <code>main.py</code>:</p>
-<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/items/</span><span class="si">{item_id}</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class="highlight"><span class="filename">Python - main.py</span><pre><span></span><code><span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/items/</span><span class="si">{item_id}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">read_item</span><span class="p">(</span><span class="n">item_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
     <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;item_id&quot;</span><span class="p">:</span> <span class="n">item_id</span><span class="p">}</span>
 </code></pre></div>
@@ -399,7 +399,7 @@ INFO:     Application startup complete.
 <p>Pero si intentas ir a <code>http://127.0.0.1:8000/items/foo</code>, verás un error HTTP indicando que el valor no es un entero válido. FastAPI se encarga de esta validación automáticamente.</p>
 <h2 id="usando-parametros-de-query">Usando parámetros de <em>query</em></h2>
 <p>Cuando declaras otros parámetros en la función que no son parte de la ruta, FastAPI los interpreta automáticamente como parámetros de <em>query</em>, es decir, los que van después del signo de interrogación, <code>?</code>, en la URL:</p>
-<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/items/&quot;</span><span class="p">)</span>
+<div class="highlight"><span class="filename">Python - main.py</span><pre><span></span><code><span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/items/&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">read_items</span><span class="p">(</span><span class="n">skip</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">limit</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">):</span>
     <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;fake_items_db&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;item_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Foo&quot;</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;item_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Bar&quot;</span><span class="p">}]}</span>
 </code></pre></div>
@@ -408,7 +408,7 @@ INFO:     Application startup complete.
 <h2 id="validando-datos-con-modelos-pydantic">Validando datos con modelos Pydantic</h2>
 <p>Para enviar datos a tu API, por ejemplo para crear un item, necesitas usar el cuerpo de la petición. FastAPI usa <strong>Pydantic</strong> para esto, lo cual es una de sus mayores fortalezas.</p>
 <p>Primero, importa <code>BaseModel</code> de <code>pydantic</code> y define tu modelo de datos con los campos necesarios:</p>
-<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span>
+<div class="highlight"><span class="filename">Python - main.py</span><pre><span></span><code><span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span>
 
 <span class="k">class</span> <span class="nc">Item</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
     <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
@@ -417,7 +417,7 @@ INFO:     Application startup complete.
 </code></pre></div>
 <p>En este modelo, <code>name</code> y <code>price</code> son campos obligatorios pues no tienen valor por defecto. En contraste, <code>is_offer</code> es opcional y su valor por defecto es <a href="/python-false/"><code>False</code></a>.</p>
 <p>Ahora, usa una <code>Item</code> como un parámetro en tu operación POST para crear un nuevo item:</p>
-<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="nd">@app</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/items/&quot;</span><span class="p">)</span>
+<div class="highlight"><span class="filename">Python - main.py</span><pre><span></span><code><span class="nd">@app</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/items/&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">create_item</span><span class="p">(</span><span class="n">item</span><span class="p">:</span> <span class="n">Item</span><span class="p">):</span>
     <span class="k">return</span> <span class="p">{</span>
         <span class="s2">&quot;item_name&quot;</span><span class="p">:</span> <span class="n">item</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
@@ -445,7 +445,7 @@ INFO:     Application startup complete.
 <h2 id="demo-api-con-fastapi-autos">Demo API con FastAPI: Autos</h2>
 <p>Ahora que conoces las bases de FastAPI, es momento de reunir todo en un ejemplo más completo. Crearás una pequeña API para gestionar un catálogo de autos que incluye operaciones GET y POST.</p>
 <p>Crea un archivo llamado <code>cars.py</code> con el siguiente contenido:</p>
-<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+<div class="highlight"><span class="filename">Python - cars.py</span><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
 <span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span>
 
 <span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
@@ -456,17 +456,14 @@ INFO:     Application startup complete.
     <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;brand&quot;</span><span class="p">:</span> <span class="s2">&quot;Honda&quot;</span><span class="p">,</span> <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;Civic&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="mi">2023</span><span class="p">},</span>
 <span class="p">]</span>
 
-
 <span class="k">class</span> <span class="nc">Car</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
     <span class="n">brand</span><span class="p">:</span> <span class="nb">str</span>
     <span class="n">model</span><span class="p">:</span> <span class="nb">str</span>
     <span class="n">year</span><span class="p">:</span> <span class="nb">int</span>
 
-
 <span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/cars/&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">get_cars</span><span class="p">():</span>
     <span class="k">return</span> <span class="n">cars_db</span>
-
 
 <span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/cars/</span><span class="si">{car_id}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">get_car</span><span class="p">(</span><span class="n">car_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
@@ -474,7 +471,6 @@ INFO:     Application startup complete.
         <span class="k">if</span> <span class="n">car</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">car_id</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">car</span>
     <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;error&quot;</span><span class="p">:</span> <span class="s2">&quot;Auto no encontrado&quot;</span><span class="p">}</span>
-
 
 <span class="nd">@app</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/cars/&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">create_car</span><span class="p">(</span><span class="n">car</span><span class="p">:</span> <span class="n">Car</span><span class="p">):</span>
@@ -648,12 +644,12 @@ INFO:     Application startup complete.
     <!-- JS Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
     <!-- Stork and site scripts -->
-    <script src="https://pythonscouts.com/theme/js/stork.js?v=202603191733" defer></script>
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202603201946" defer></script>
     <script
-        src="https://pythonscouts.com/theme/js/site.js?v=202603191733"
+        src="https://pythonscouts.com/theme/js/site.js?v=202603201946"
         defer
         data-stork-name="sitesearch"
-        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202603191733"
+        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202603201946"
         data-stork-index="https://pythonscouts.com/search-index.st">
     </script>
 

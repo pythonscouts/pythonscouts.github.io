@@ -50,8 +50,8 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://pythonscouts.com/operadores-python/">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202603191733">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202603191733">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202603201946">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202603201946">
     <!-- Preconnect to CDNs -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
@@ -64,9 +64,9 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202603191733">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202603201946">
     <!-- Stork Search - Deferred -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202603191733">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202603201946">
 
 
     <!-- Article tags -->
@@ -111,13 +111,13 @@
     <meta name="twitter:image:alt" content="Python a través de ejemplos: Operadores">
 
     <!-- Custom CSS for article -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202603191733">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202603201946">
 </head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
 <script
-    src="https://pythonscouts.com/theme/js/analytics.js?v=202603191733"
+    src="https://pythonscouts.com/theme/js/analytics.js?v=202603201946"
     defer
     data-analytics-id="G-R3C5PFSQ1S">
 </script>
@@ -285,203 +285,203 @@
 </div>
 <h2 id="aritmeticos">Aritméticos</h2>
 <p>Los operadores aritméticos son probablemente los más conocidos y empleados. Ellos permiten realizar operaciones aritméticas básicas entre <a href="/valores-python/">valores</a> numéricos:</p>
-<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="c1"># Adición</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">5</span>
-<span class="mi">15</span>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Adición</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">10</span> <span class="o">+</span> <span class="mi">5</span>
+<span class="go">15</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="c1"># Sustracción</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">10</span> <span class="o">-</span> <span class="mi">5</span>
-<span class="mi">5</span>
- 
-<span class="o">&gt;&gt;&gt;</span> <span class="c1"># Multiplicación</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">10</span> <span class="o">*</span> <span class="mi">5</span>
-<span class="mi">50</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Sustracción</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">10</span> <span class="o">-</span> <span class="mi">5</span>
+<span class="go">5</span>
+<span class="go"> </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Multiplicación</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">10</span> <span class="o">*</span> <span class="mi">5</span>
+<span class="go">50</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="c1"># División</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">10</span> <span class="o">/</span> <span class="mi">3</span>
-<span class="mf">3.3333333333333335</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># División</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">10</span> <span class="o">/</span> <span class="mi">3</span>
+<span class="go">3.3333333333333335</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="c1"># Módulo</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">10</span> <span class="o">%</span> <span class="mi">3</span>
-<span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Módulo</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">10</span> <span class="o">%</span> <span class="mi">3</span>
+<span class="go">1</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="c1"># Exponenciación</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span><span class="o">**</span><span class="mi">3</span>
-<span class="mi">8</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Exponenciación</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span><span class="o">**</span><span class="mi">3</span>
+<span class="go">8</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="c1"># División entera</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">10</span> <span class="o">//</span> <span class="mi">3</span>
-<span class="mi">3</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="o">-</span><span class="mi">10</span> <span class="o">//</span> <span class="mi">3</span>  <span class="c1"># No -3, porque -4 es el mayor entero &lt;= -3.333</span>
-<span class="o">-</span><span class="mi">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># División entera</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">10</span> <span class="o">//</span> <span class="mi">3</span>
+<span class="go">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="o">-</span><span class="mi">10</span> <span class="o">//</span> <span class="mi">3</span>  <span class="c1"># No -3, porque -4 es el mayor entero &lt;= -3.333</span>
+<span class="go">-4</span>
 </code></pre></div>
 <p>Los operadores de adición, sustracción, multiplicación y división son casi idénticos a los que empleas en matemáticas.</p>
 <p>El operador de módulo (<code>%</code>) devuelve el resto de la división entera. El operador de exponenciación o potenciación te permite elevar números a una determinada potencia. Finalmente, el operador de división entera realiza una división que devuelve el mayor entero menor o igual al resultado de la división normal. Esto se conoce como división de piso.</p>
 <h2 id="asignacion">Asignación</h2>
 <p>Los operadores de asignación se emplean para asignar valores u objetos a variables o nombres:</p>
-<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="c1"># Asignación</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">number</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">number</span>
-<span class="mi">5</span>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Asignación</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">number</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">number</span>
+<span class="go">5</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="c1"># Suma aumentada</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">number</span> <span class="o">+=</span> <span class="mi">5</span>  <span class="c1"># Equivale a number = number + 5</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">number</span>
-<span class="mi">10</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Suma aumentada</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">number</span> <span class="o">+=</span> <span class="mi">5</span>  <span class="c1"># Equivale a number = number + 5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">number</span>
+<span class="go">10</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="c1"># Resta aumentada</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">number</span> <span class="o">-=</span> <span class="mi">5</span>  <span class="c1"># Equivale a number = number - 5</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">number</span>
-<span class="mi">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Resta aumentada</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">number</span> <span class="o">-=</span> <span class="mi">5</span>  <span class="c1"># Equivale a number = number - 5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">number</span>
+<span class="go">5</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="c1"># Multiplicación aumentada</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">number</span> <span class="o">*=</span> <span class="mi">3</span>  <span class="c1"># Equivale a number = number * 3</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">number</span>
-<span class="mi">15</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Multiplicación aumentada</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">number</span> <span class="o">*=</span> <span class="mi">3</span>  <span class="c1"># Equivale a number = number * 3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">number</span>
+<span class="go">15</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="c1"># División aumentada</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">number</span> <span class="o">/=</span> <span class="mi">3</span>  <span class="c1"># Equivale a number = number / 3</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">number</span>
-<span class="mf">5.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># División aumentada</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">number</span> <span class="o">/=</span> <span class="mi">3</span>  <span class="c1"># Equivale a number = number / 3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">number</span>
+<span class="go">5.0</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="c1"># Módulo aumentado</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">number</span> <span class="o">%=</span> <span class="mi">3</span>  <span class="c1"># Equivale a number = number % 3</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">number</span>
-<span class="mf">2.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Módulo aumentado</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">number</span> <span class="o">%=</span> <span class="mi">3</span>  <span class="c1"># Equivale a number = number % 3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">number</span>
+<span class="go">2.0</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="c1"># Potencia aumentada</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">number</span> <span class="o">**=</span> <span class="mi">3</span>  <span class="c1"># Equivale a number = number ** 3</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">number</span>
-<span class="mf">8.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Potencia aumentada</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">number</span> <span class="o">**=</span> <span class="mi">3</span>  <span class="c1"># Equivale a number = number ** 3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">number</span>
+<span class="go">8.0</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="c1"># División entera aumentada</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">number</span> <span class="o">//=</span> <span class="mi">3</span>  <span class="c1"># Equivale a number = number // 3</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">number</span>
-<span class="mf">2.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># División entera aumentada</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">number</span> <span class="o">//=</span> <span class="mi">3</span>  <span class="c1"># Equivale a number = number // 3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">number</span>
+<span class="go">2.0</span>
 </code></pre></div>
 <p>En la práctica, Python tiene un operador de asignación (<code>=</code>) y varios operadores de asignación aumentada. Los operadores de asignación aumentada son atajos que permiten actualizar el valor de una variable de forma rápida y concisa.</p>
 <h2 id="concatenacion">Concatenación</h2>
 <p>Los operadores de concatenación te permiten unir cadenas de caracteres, listas y otros tipos de datos:</p>
-<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="c1"># Concatenación de cadenas</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;Hola, &quot;</span> <span class="o">+</span> <span class="s2">&quot;mundo!&quot;</span>
-<span class="s1">&#39;Hola, mundo!&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;Python &quot;</span> <span class="o">+</span> <span class="s2">&quot;es &quot;</span> <span class="o">+</span> <span class="s2">&quot;genial&quot;</span>
-<span class="s1">&#39;Python es genial&#39;</span>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Concatenación de cadenas</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;Hola, &quot;</span> <span class="o">+</span> <span class="s2">&quot;mundo!&quot;</span>
+<span class="go">&#39;Hola, mundo!&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;Python &quot;</span> <span class="o">+</span> <span class="s2">&quot;es &quot;</span> <span class="o">+</span> <span class="s2">&quot;genial&quot;</span>
+<span class="go">&#39;Python es genial&#39;</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="c1"># Concatenación aumentada en cadenas</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">greeting</span> <span class="o">=</span> <span class="s2">&quot;Hola&quot;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">greeting</span> <span class="o">+=</span> <span class="s2">&quot;, mundo!&quot;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">greeting</span>
-<span class="s1">&#39;Hola, mundo!&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Python&quot;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">message</span> <span class="o">+=</span> <span class="s2">&quot; es genial&quot;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">message</span>
-<span class="s1">&#39;Python es genial&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Concatenación aumentada en cadenas</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">greeting</span> <span class="o">=</span> <span class="s2">&quot;Hola&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">greeting</span> <span class="o">+=</span> <span class="s2">&quot;, mundo!&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">greeting</span>
+<span class="go">&#39;Hola, mundo!&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Python&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">message</span> <span class="o">+=</span> <span class="s2">&quot; es genial&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">message</span>
+<span class="go">&#39;Python es genial&#39;</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="c1"># Concatenación de listas</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
-<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">]</span>
-<span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Concatenación de listas</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="go">[1, 2, 3, 4, 5, 6]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">]</span>
+<span class="go">[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;]</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="c1"># Concatenación aumentada en listas</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">numbers</span> <span class="o">+=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">numbers</span>
-<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">letters</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">letters</span> <span class="o">+=</span> <span class="p">[</span><span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">letters</span>
-<span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Concatenación aumentada en listas</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numbers</span> <span class="o">+=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numbers</span>
+<span class="go">[1, 2, 3, 4, 5, 6]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">letters</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">letters</span> <span class="o">+=</span> <span class="p">[</span><span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">letters</span>
+<span class="go">[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;]</span>
 </code></pre></div>
 <p>Nuevamente, Python tiene un operador de concatenación (<code>+</code>) y varios operadores de concatenación aumentada.</p>
 <h2 id="repeticion">Repetición</h2>
 <p>Puedes usar los operadores de repetición para repetir un valor un número determinado de veces:</p>
-<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="c1"># Repetición de cadenas</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;Hola &quot;</span> <span class="o">*</span> <span class="mi">3</span>
-<span class="s1">&#39;Hola Hola Hola &#39;</span>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Repetición de cadenas</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;Hola &quot;</span> <span class="o">*</span> <span class="mi">3</span>
+<span class="go">&#39;Hola Hola Hola &#39;</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="o">*</span> <span class="s2">&quot;Python! &quot;</span>
-<span class="s1">&#39;Python! Python! &#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span> <span class="o">*</span> <span class="s2">&quot;Python! &quot;</span>
+<span class="go">&#39;Python! Python! &#39;</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="c1"># Repetición de listas</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span>
-<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Repetición de listas</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="go">[1, 2, 3, 1, 2, 3]</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">3</span> <span class="o">*</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">]</span>
-<span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">3</span> <span class="o">*</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">]</span>
+<span class="go">[&#39;a&#39;, &#39;b&#39;, &#39;a&#39;, &#39;b&#39;, &#39;a&#39;, &#39;b&#39;]</span>
 </code></pre></div>
 <p>El operador de repetición comúnmente se emplea con cadenas de caracteres cuando queremos repetir una determinada cadena. Nota que este operador requiere de un operando entero que representa el número de repeticiones y que puede estar a la derecha o izquierda del operador.</p>
 <h2 id="comparacion">Comparación</h2>
 <p>Cuando necesitas comparar valores u objetos, puedes utilizar los operadores de comparación:</p>
-<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="c1"># Igual a</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">5</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">10</span>
-<span class="kc">False</span>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Igual a</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="o">==</span> <span class="mi">5</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="o">==</span> <span class="mi">10</span>
+<span class="go">False</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="c1"># Mayor que</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">10</span> <span class="o">&gt;</span> <span class="mi">5</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">10</span>
-<span class="kc">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Mayor que</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">10</span> <span class="o">&gt;</span> <span class="mi">5</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">10</span>
+<span class="go">False</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="c1"># Menor que</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">10</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">10</span> <span class="o">&lt;</span> <span class="mi">5</span>
-<span class="kc">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Menor que</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">10</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">10</span> <span class="o">&lt;</span> <span class="mi">5</span>
+<span class="go">False</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="c1"># Mayor o igual que</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">10</span> <span class="o">&gt;=</span> <span class="mi">5</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">&gt;=</span> <span class="mi">5</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">&gt;=</span> <span class="mi">10</span>
-<span class="kc">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Mayor o igual que</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">10</span> <span class="o">&gt;=</span> <span class="mi">5</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="o">&gt;=</span> <span class="mi">5</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="o">&gt;=</span> <span class="mi">10</span>
+<span class="go">False</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="c1"># Menor o igual que</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">&lt;=</span> <span class="mi">10</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">&lt;=</span> <span class="mi">5</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">10</span> <span class="o">&lt;=</span> <span class="mi">5</span>
-<span class="kc">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Menor o igual que</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="o">&lt;=</span> <span class="mi">10</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="o">&lt;=</span> <span class="mi">5</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">10</span> <span class="o">&lt;=</span> <span class="mi">5</span>
+<span class="go">False</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="c1"># Diferente de</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">10</span> <span class="o">!=</span> <span class="mi">5</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">!=</span> <span class="mi">5</span>
-<span class="kc">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Diferente de</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">10</span> <span class="o">!=</span> <span class="mi">5</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="o">!=</span> <span class="mi">5</span>
+<span class="go">False</span>
 </code></pre></div>
 <p>Estos operadores son casi idénticos a los que usamos en las matemáticas. El operador de igualdad que se representa con dos símbolos de igualdad (<code>==</code>) para diferenciarlo del operador de asignación. El operador de desigualdad se representa como <code>!=</code>.</p>
 <h2 id="logicos">Lógicos</h2>
 <p>Los operadores lógicos o booleanos permiten crear <a href="/expresiones-python/">expresiones</a> lógicas que generalmente se utilizan en <a href="/condicionales-python/">condiciones</a>. Python tiene tres operadores booleanos: <code>and</code>, <code>or</code>, y <code>not</code>. Los siguientes ejemplos muestran el funcionamiento de cada operador:</p>
-<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="c1"># Operador and (y)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="kc">True</span> <span class="ow">and</span> <span class="kc">True</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="kc">True</span> <span class="ow">and</span> <span class="kc">False</span>
-<span class="kc">False</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="kc">False</span> <span class="ow">and</span> <span class="kc">True</span>
-<span class="kc">False</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="kc">False</span> <span class="ow">and</span> <span class="kc">False</span>
-<span class="kc">False</span>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Operador and (y)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kc">True</span> <span class="ow">and</span> <span class="kc">True</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kc">True</span> <span class="ow">and</span> <span class="kc">False</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kc">False</span> <span class="ow">and</span> <span class="kc">True</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kc">False</span> <span class="ow">and</span> <span class="kc">False</span>
+<span class="go">False</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="c1"># Operador or (o)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="kc">True</span> <span class="ow">or</span> <span class="kc">False</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="kc">False</span> <span class="ow">or</span> <span class="kc">True</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="kc">False</span> <span class="ow">or</span> <span class="kc">False</span>
-<span class="kc">False</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="kc">True</span> <span class="ow">or</span> <span class="kc">True</span>
-<span class="kc">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Operador or (o)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kc">True</span> <span class="ow">or</span> <span class="kc">False</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kc">False</span> <span class="ow">or</span> <span class="kc">True</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kc">False</span> <span class="ow">or</span> <span class="kc">False</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kc">True</span> <span class="ow">or</span> <span class="kc">True</span>
+<span class="go">True</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="c1"># Operador not (no)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="ow">not</span> <span class="kc">True</span>
-<span class="kc">False</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="ow">not</span> <span class="kc">False</span>
-<span class="kc">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Operador not (no)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="ow">not</span> <span class="kc">True</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="ow">not</span> <span class="kc">False</span>
+<span class="go">True</span>
 </code></pre></div>
 <p>Estos ejemplos expresan lo que se conoce como <a href="https://es.wikipedia.org/wiki/Tabla_de_verdad" target="_blank">tabla de verdad</a> de los operadores lógicos. Esta tabla resume los <a href="https://es.wikipedia.org/wiki/Valor_de_verdad" target="_blank">valores de verdad</a> que retornan los operadores en función del valor de verdad de los operandos.</p>
 <p>Los operadores lógicos en Python también funcionan con objetos distintos de <code>True</code> and <code>False</code>. Todos los objetos tienen un valor de verdad en Python. Las reglas para determinar estos valores de verdad son las siguientes:</p>
@@ -494,147 +494,147 @@
 </ul>
 </blockquote>
 <p>Cuando empleas los operadores <code>and</code> y <code>or</code> con objetos distintos de <code>True</code> o <code>False</code>, obtienes uno de los objetos como resultado en lugar de un valor booleano.</p>
-<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;Hola&quot;</span> <span class="ow">and</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;&quot;</span> <span class="ow">and</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="s1">&#39;&#39;</span>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;Hola&quot;</span> <span class="ow">and</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="go">[1, 2, 3]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;&quot;</span> <span class="ow">and</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="go">&#39;&#39;</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;&quot;</span> <span class="ow">or</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;Hola&quot;</span> <span class="ow">or</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="s1">&#39;Hola&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;&quot;</span> <span class="ow">or</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="go">[1, 2, 3]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;Hola&quot;</span> <span class="ow">or</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="go">&#39;Hola&#39;</span>
 </code></pre></div>
 <p>El operador <code>and</code> retorna el operando derecho si el izquierdo es verdadero. Si el operando izquierdo es falso, entonces <code>and</code> lo retorna inmediatamente sin evaluar el operando derecho. Esto se <a href="https://es.wikipedia.org/wiki/Evaluaci%C3%B3n_de_cortocircuito" target="_blank">denomina evaluación de cortocircuito</a>.</p>
 <p>En contraste, <code>or</code> retorna el operando derecho si el izquierdo es falso. Si el operando izquierdo es verdadero, entonces <code>or</code> lo retorna inmediatamente.</p>
 <h2 id="pertenencia">Pertenencia</h2>
 <p>Los operadores de pertenencia se emplean cuando necesitas determinar si un valor u objeto determinado forma parte de una serie de valores o colección. Python tiene dos operadores de pertenencia: <code>in</code> y <code>not in</code>.</p>
 <p>El operador <code>in</code> devuelve <code>True</code> si el objeto está presente en la colección de valores, de lo contrario devuelve <code>False</code>:</p>
-<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="c1"># Verificar si un elemento está en una lista</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;manzana&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;cereza&quot;</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;banana&quot;</span> <span class="ow">in</span> <span class="n">fruits</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;naranja&quot;</span> <span class="ow">in</span> <span class="n">fruits</span>
-<span class="kc">False</span>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Verificar si un elemento está en una lista</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;manzana&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;cereza&quot;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;banana&quot;</span> <span class="ow">in</span> <span class="n">fruits</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;naranja&quot;</span> <span class="ow">in</span> <span class="n">fruits</span>
+<span class="go">False</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="c1"># Verificar si una subcadena está en una cadena</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">texto</span> <span class="o">=</span> <span class="s2">&quot;Hola, mundo!&quot;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;Hola&quot;</span> <span class="ow">in</span> <span class="n">texto</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;adiós&quot;</span> <span class="ow">in</span> <span class="n">texto</span>
-<span class="kc">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Verificar si una subcadena está en una cadena</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">texto</span> <span class="o">=</span> <span class="s2">&quot;Hola, mundo!&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;Hola&quot;</span> <span class="ow">in</span> <span class="n">texto</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;adiós&quot;</span> <span class="ow">in</span> <span class="n">texto</span>
+<span class="go">False</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="c1"># Verificar si un elemento está en un conjunto</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">numbers</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">3</span> <span class="ow">in</span> <span class="n">numbers</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">6</span> <span class="ow">in</span> <span class="n">numbers</span>
-<span class="kc">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Verificar si un elemento está en un conjunto</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numbers</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">3</span> <span class="ow">in</span> <span class="n">numbers</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">6</span> <span class="ow">in</span> <span class="n">numbers</span>
+<span class="go">False</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="c1"># Verificar si una clave está en un diccionario</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">person</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Juan&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">}</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;name&quot;</span> <span class="ow">in</span> <span class="n">person</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;address&quot;</span> <span class="ow">in</span> <span class="n">person</span>
-<span class="kc">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Verificar si una clave está en un diccionario</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">person</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Juan&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;name&quot;</span> <span class="ow">in</span> <span class="n">person</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;address&quot;</span> <span class="ow">in</span> <span class="n">person</span>
+<span class="go">False</span>
 </code></pre></div>
 <p>Por otro lado, el operador <code>not in</code> permite determinar si un valor no pertenece a una serie de valores. Este operador devuelve <code>True</code> cuando el valor no es parte de la colección de valores:</p>
-<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="c1"># Verificar si un elemento NO está en una lista</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;manzana&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;cereza&quot;</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;naranja&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">fruits</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;banana&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">fruits</span>
-<span class="kc">False</span>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Verificar si un elemento NO está en una lista</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;manzana&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;cereza&quot;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;naranja&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">fruits</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;banana&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">fruits</span>
+<span class="go">False</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="c1"># Verificar si una subcadena NO está en una cadena</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">texto</span> <span class="o">=</span> <span class="s2">&quot;Hola, mundo!&quot;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;adiós&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">texto</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;Hola&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">texto</span>
-<span class="kc">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Verificar si una subcadena NO está en una cadena</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">texto</span> <span class="o">=</span> <span class="s2">&quot;Hola, mundo!&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;adiós&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">texto</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;Hola&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">texto</span>
+<span class="go">False</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="c1"># Verificar si un elemento NO está en un conjunto</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">numbers</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">6</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">numbers</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">3</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">numbers</span>
-<span class="kc">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Verificar si un elemento NO está en un conjunto</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numbers</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">6</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">numbers</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">3</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">numbers</span>
+<span class="go">False</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="c1"># Verificar si una clave NO está en un diccionario</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">person</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Juan&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">}</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;address&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">person</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;name&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">person</span>
-<span class="kc">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Verificar si una clave NO está en un diccionario</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">person</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Juan&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;address&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">person</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;name&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">person</span>
+<span class="go">False</span>
 </code></pre></div>
 <p>Los operadores de pertenencia funcionan con diferentes colecciones de datos como listas, duplas, conjuntos y diccionarios. Sin embargo, cuando necesitas realizar pruebas de pertenencia repetidamente, la opción más eficiente es emplear conjuntos.</p>
 <h2 id="identidad">Identidad</h2>
 <p>En Python, cada objeto que se crea tiene una identidad única. En <a href="https://es.wikipedia.org/wiki/CPython" target="_blank">CPython</a>, esta identidad es un número entero que se corresponde con la dirección de memoria donde el objeto está almacenado.</p>
 <p>Python tiene dos operadores que permiten verificar si dos objetos tienen la misma identidad o no. Estos operadores son <code>is</code> e <code>is not</code> y se conocen como operadores de identidad.</p>
 <p>El operador <code>is</code> devuelve <code>True</code> si dos variables hacen referencia al mismo objeto, es decir, si apuntan a la misma ubicación en memoria:</p>
-<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="ow">is</span> <span class="n">b</span>  <span class="c1"># True, b se refiere a la misma lista que a</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="ow">is</span> <span class="n">c</span>  <span class="c1"># False, c es una lista independiente con el mismo contenido</span>
-<span class="kc">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="ow">is</span> <span class="n">b</span>  <span class="c1"># True, b se refiere a la misma lista que a</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="ow">is</span> <span class="n">c</span>  <span class="c1"># False, c es una lista independiente con el mismo contenido</span>
+<span class="go">False</span>
 </code></pre></div>
 <p>El operador <code>is not</code> devuelve <code>True</code> si dos variables no hacen referencia al mismo objeto en memoria:</p>
-<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">b</span>
-<span class="kc">False</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">c</span>
-<span class="kc">True</span>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">b</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">c</span>
+<span class="go">True</span>
 </code></pre></div>
 <p>Python realiza el caché de valores enteros en el rango de <code>-5</code> a <code>256</code>. Esto significa que cualquier número en este rango siempre apunta al mismo objeto en memoria:</p>
-<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="ow">is</span> <span class="n">y</span>  <span class="c1"># True, por estar en el rango de valores en caché</span>
-<span class="kc">True</span>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="ow">is</span> <span class="n">y</span>  <span class="c1"># True, por estar en el rango de valores en caché</span>
+<span class="go">True</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">400</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">400</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">n</span> <span class="ow">is</span> <span class="n">m</span>  <span class="c1"># False, por NO estar en el rango de valores en caché</span>
-<span class="kc">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">n</span> <span class="o">=</span> <span class="mi">400</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">m</span> <span class="o">=</span> <span class="mi">400</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">n</span> <span class="ow">is</span> <span class="n">m</span>  <span class="c1"># False, por NO estar en el rango de valores en caché</span>
+<span class="go">False</span>
 </code></pre></div>
 <p>Esta comportamiento de Python es una optimización de uso de memoria y se basa en el hecho de que posiblemente los enteros más comúnmente empleados están en ese rango de valores.</p>
 <h2 id="bitwise">Bitwise</h2>
 <p>Los operadores de bits permiten manipular los bits de los números enteros directamente. Python cuenta con seis operadores de bit o bitwise. A continuación, algunos ejemplos que muestran cómo funcionan estos operadores:</p>
-<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="c1"># AND bit a bit</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">&amp;</span> <span class="mi">3</span>  <span class="c1"># (En binario: 5 = 101 y 3 = 011, 101 &amp; 011 = 001)</span>
-<span class="mi">1</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">6</span> <span class="o">&amp;</span> <span class="mi">2</span>  <span class="c1"># (En binario: 6 = 110 y 2 = 010, 110 &amp; 010 = 010)</span>
-<span class="mi">2</span>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="c1"># AND bit a bit</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="o">&amp;</span> <span class="mi">3</span>  <span class="c1"># (En binario: 5 = 101 y 3 = 011, 101 &amp; 011 = 001)</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">6</span> <span class="o">&amp;</span> <span class="mi">2</span>  <span class="c1"># (En binario: 6 = 110 y 2 = 010, 110 &amp; 010 = 010)</span>
+<span class="go">2</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="c1"># OR bit a bit</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">|</span> <span class="mi">3</span>  <span class="c1"># (En binario: 5 = 101 y 3 = 011, 101 | 011 = 111)</span>
-<span class="mi">7</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">6</span> <span class="o">|</span> <span class="mi">2</span>  <span class="c1"># (En binario: 6 = 110 y 2 = 010, 110 | 010 = 110)</span>
-<span class="mi">6</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># OR bit a bit</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="o">|</span> <span class="mi">3</span>  <span class="c1"># (En binario: 5 = 101 y 3 = 011, 101 | 011 = 111)</span>
+<span class="go">7</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">6</span> <span class="o">|</span> <span class="mi">2</span>  <span class="c1"># (En binario: 6 = 110 y 2 = 010, 110 | 010 = 110)</span>
+<span class="go">6</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="c1"># XOR bit a bit</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">^</span> <span class="mi">3</span>  <span class="c1"># (En binario: 5 = 101 y 3 = 011, 101 ^ 011 = 110)</span>
-<span class="mi">6</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">6</span> <span class="o">^</span> <span class="mi">2</span>  <span class="c1"># (En binario: 6 = 110 y 2 = 010, 110 ^ 010 = 100)</span>
-<span class="mi">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># XOR bit a bit</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="o">^</span> <span class="mi">3</span>  <span class="c1"># (En binario: 5 = 101 y 3 = 011, 101 ^ 011 = 110)</span>
+<span class="go">6</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">6</span> <span class="o">^</span> <span class="mi">2</span>  <span class="c1"># (En binario: 6 = 110 y 2 = 010, 110 ^ 010 = 100)</span>
+<span class="go">4</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="c1"># NOT bit a bit</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="o">~</span><span class="mi">5</span>  <span class="c1"># (En binario: 5 = 0000 0101, ~5 = 1111 1010 que es -6 en complemento a dos)</span>
-<span class="o">-</span><span class="mi">6</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="o">~</span><span class="mi">1</span>  <span class="c1"># (En binario: 1 = 0000 0001, ~1 = 1111 1110 que es -2 en complemento a dos)</span>
-<span class="o">-</span><span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># NOT bit a bit</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="o">~</span><span class="mi">5</span>  <span class="c1"># (En binario: 5 = 0000 0101, ~5 = 1111 1010 que es -6 en complemento a dos)</span>
+<span class="go">-6</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="o">~</span><span class="mi">1</span>  <span class="c1"># (En binario: 1 = 0000 0001, ~1 = 1111 1110 que es -2 en complemento a dos)</span>
+<span class="go">-2</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="c1"># Desplazamiento a la izquierda</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span>  <span class="c1"># (En binario: 5 = 0000 0101, 5 &lt;&lt; 1 = 0000 1010 que es 10)</span>
-<span class="mi">10</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">3</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span>  <span class="c1"># (En binario: 3 = 0000 0011, 3 &lt;&lt; 2 = 0000 1100 que es 12)</span>
-<span class="mi">12</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Desplazamiento a la izquierda</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span>  <span class="c1"># (En binario: 5 = 0000 0101, 5 &lt;&lt; 1 = 0000 1010 que es 10)</span>
+<span class="go">10</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">3</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span>  <span class="c1"># (En binario: 3 = 0000 0011, 3 &lt;&lt; 2 = 0000 1100 que es 12)</span>
+<span class="go">12</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="c1"># Desplazamiento a la derecha</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span>  <span class="c1"># (En binario: 5 = 0000 0101, 5 &gt;&gt; 1 = 0000 0010 que es 2)</span>
-<span class="mi">2</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">12</span> <span class="o">&gt;&gt;</span> <span class="mi">2</span>  <span class="c1"># (En binario: 12 = 0000 1100, 12 &gt;&gt; 2 = 0000 0011 que es 3)</span>
-<span class="mi">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Desplazamiento a la derecha</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span>  <span class="c1"># (En binario: 5 = 0000 0101, 5 &gt;&gt; 1 = 0000 0010 que es 2)</span>
+<span class="go">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">12</span> <span class="o">&gt;&gt;</span> <span class="mi">2</span>  <span class="c1"># (En binario: 12 = 0000 1100, 12 &gt;&gt; 2 = 0000 0011 que es 3)</span>
+<span class="go">3</span>
 </code></pre></div>
 <p>Los operadores a nivel de bits no son tan comunes en el desarrollo de aplicaciones de alto nivel. Sin embargo, son muy útiles en aplicaciones que requieren manipulación de datos a nivel de bits, incluidas la programación de sistemas, el procesamiento de señales, la criptografía, las redes, y los gráficos.</p>
 <h2 id="conclusiones">Conclusiones</h2>
@@ -653,7 +653,7 @@
                                 <i class="bi bi-arrow-left me-1"></i> Anterior
                             </span>
                             <span class="article-nav-title fw-semibold">
-                                Cómo saber si todos los elementos en una lista son...
+                                ¿Cómo saber si todos los elementos en una lista son...
                             </span>
                         </a>
                     </div>
@@ -761,12 +761,12 @@
     <!-- JS Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
     <!-- Stork and site scripts -->
-    <script src="https://pythonscouts.com/theme/js/stork.js?v=202603191733" defer></script>
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202603201946" defer></script>
     <script
-        src="https://pythonscouts.com/theme/js/site.js?v=202603191733"
+        src="https://pythonscouts.com/theme/js/site.js?v=202603201946"
         defer
         data-stork-name="sitesearch"
-        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202603191733"
+        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202603201946"
         data-stork-index="https://pythonscouts.com/search-index.st">
     </script>
 
