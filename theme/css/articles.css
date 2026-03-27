@@ -45,6 +45,38 @@ blockquote:before {
     margin-bottom: 0.5rem;
 }
 
+/* Code Link */
+.code-link {
+    background: linear-gradient(135deg, var(--ps-gold-light) 0%, #fffbeb 100%);
+    border: 1px solid #fde68a;
+    border-left: 4px solid var(--ps-gold);
+    border-radius: 0 12px 12px 0;
+    color: var(--ps-gray);
+    padding: 1.5rem 1.5rem 1.5rem 2rem;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    font-style: normal;
+    box-shadow: 0 2px 4px rgba(245, 158, 11, 0.1);
+}
+.code-link:before {
+    content: "📦 Código: ";
+    color: #b45309;
+    font-size: 1em;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.code-link a {
+    color: #b45309;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 2px;
+}
+.code-link a:hover {
+    color: #92400e;
+    text-decoration-style: solid;
+}
+
 /* Tables */
 table {
     border-collapse: collapse;
