@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es-es" class="h-100">
+
+<head>
+        <title>
+  Palabras clave en Python: case - Python Scouts
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Leodanis Pozo Ramos">
+    <meta name="description" content="En Python, la palabra clave suave case es el componente principal de la estructura match ... case, diseñada para implementar coincidencias de patrones de...">
+    <meta name="keywords" content="python, palabras clave">
+    <meta name="article:published_time" content="2026-04-05T22:05:00+02:00">
+    <meta name="article:modified_time" content="2026-04-05T22:05:00+02:00">
+    <meta name="article:author" content="Leodanis Pozo Ramos">
+    <meta name="article:section" content="Series">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="language" content="Spanish">
+    <meta name="generator" content="Pelican">
+    
+    <meta name="dcterms.rights" content="https://creativecommons.org/licenses/by-sa/4.0/">
+    <meta name="dcterms.rightsHolder" content="Leodanis Pozo Ramos">
+    <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Palabras clave en Python: case">
+    <meta property="og:description" content="En Python, la palabra clave suave case es el componente principal de la estructura match ... case, diseñada para implementar coincidencias de patrones de forma expresiva y moderna.">
+    <meta property="og:url" content="https://pythonscouts.com/python-case/">
+    <meta property="og:site_name" content="Python Scouts">
+    <meta property="og:image" content="https://pythonscouts.com/images/articles/python-case/social.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Palabras clave en Python: case">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:locale" content="es_ES">
+    <meta property="article:published_time" content="2026-04-05T22:05:00+02:00">
+    <meta property="article:author" content="Leodanis Pozo Ramos">
+    <meta property="article:section" content="Series">
+    <meta property="article:tag" content="python">
+    <meta property="article:tag" content="palabras clave">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lpozo78">
+    <meta name="twitter:creator" content="@lpozo78">
+    <meta name="twitter:title" content="Palabras clave en Python: case">
+    <meta name="twitter:description" content="En Python, la palabra clave suave case es el componente principal de la estructura match ... case, diseñada para implementar coincidencias de patrones de forma expresiva y moderna.">
+    <meta name="twitter:image" content="https://pythonscouts.com/images/articles/python-case/social.webp">
+    <meta name="twitter:image:alt" content="Palabras clave en Python: case">
+    <!-- RSS feeds -->
+    <link href="https://pythonscouts.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Full Atom Feed" />
+    <link href="https://pythonscouts.com/feeds/series.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Categories Atom Feed" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://pythonscouts.com/python-case/">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202604042204">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202604042204">
+    <!-- Preconnect to CDNs -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <!-- Bootstrap CSS (deferred) -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+          crossorigin="anonymous">
+    <!-- Bootstrap Icons (self-hosted, deferred) -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202604042204">
+    <!-- Stork Search - Deferred -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202604042204">
+
+
+    <!-- Article tags -->
+    <meta name="article:tag" content="python" />
+    <meta name="article:tag" content="palabras clave" />
+    <meta name="article:tag" content="fastapi" />
+    <meta name="article:tag" content="web" />
+    <meta name="article:tag" content="api" />
+    <meta name="article:tag" content="kivy" />
+    <meta name="article:tag" content="gui" />
+    <meta name="article:tag" content="ayuda" />
+    <meta name="article:tag" content="pyside6" />
+    <meta name="article:tag" content="linux" />
+    <meta name="article:tag" content="tkinter" />
+    <meta name="article:tag" content="pyqt" />
+    <meta name="article:tag" content="windows" />
+    <meta name="article:tag" content="macos" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Palabras clave en Python: case">
+    <meta property="og:description" content="En Python, la palabra clave suave case es el componente principal de la estructura match ... case, diseñada para implementar coincidencias de patrones de forma expresiva y moderna.">
+    <meta property="og:url" content="https://pythonscouts.com/python-case/">
+    <meta property="og:site_name" content="Python Scouts">
+    <meta property="og:image" content="https://pythonscouts.com/images/articles/python-case/social.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Palabras clave en Python: case">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:locale" content="es_ES">
+    <meta property="article:published_time" content="2026-04-05T22:05:00+02:00">
+    <meta property="article:author" content="Leodanis Pozo Ramos">
+    <meta property="article:section" content="Series">
+    <meta property="article:tag" content="python">
+    <meta property="article:tag" content="palabras clave">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lpozo78">
+    <meta name="twitter:creator" content="@lpozo78">
+    <meta name="twitter:title" content="Palabras clave en Python: case">
+    <meta name="twitter:description" content="En Python, la palabra clave suave case es el componente principal de la estructura match ... case, diseñada para implementar coincidencias de patrones de forma expresiva y moderna.">
+    <meta name="twitter:image" content="https://pythonscouts.com/images/articles/python-case/social.webp">
+    <meta name="twitter:image:alt" content="Palabras clave en Python: case">
+
+    <!-- Custom CSS for article -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202604042204">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
+<script
+    src="https://pythonscouts.com/theme/js/analytics.js?v=202604042204"
+    defer
+    data-analytics-id="G-R3C5PFSQ1S">
+</script>
+
+<body class="d-flex flex-column h-100">
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-md bg-white fixed-top border-bottom">
+        <div class="container-md content-px">
+            <a class="navbar-brand" href="/">
+            <img
+            src="https://pythonscouts.com/images/identity/header.webp"
+            alt="Python Scouts"
+            width="150"
+            height="50"
+            >
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Menú de Navegación">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav m-auto nav-link">
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/guias/" aria-current="page">
+                    Guías
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/series/" aria-current="page">
+                    Series
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/tutoriales/" aria-current="page">
+                    Tutoriales
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/acerca/" aria-current="page">
+                    Acerca
+                </a>
+                </li>
+            </ul>
+            <form class="d-flex search-form" role="search">
+                <button type="button" class="search-toggle btn btn-link p-0 me-2 d-none d-md-inline-flex" aria-label="Buscar">
+                    <i class="bi bi-search text-muted-strong"></i>
+                </button>
+                <div class="search-input-wrapper">
+                    <div class="stork-wrapper">
+                        <input
+                        class="stork-input"
+                        type="search"
+                        id="site-search"
+                        name="q"
+                        placeholder="Buscar"
+                        aria-label="Search"
+                        data-stork="sitesearch"
+                        >
+                    </div>
+                </div>
+            </form>
+            </div>
+        </div>
+    </nav>
+    <main id="main-content" class="container-md content-px py-3" tabindex="-1">
+        <div class="stork-wrapper">
+            <div data-stork="sitesearch-output" class="stork-output"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+            </div>
+        </div>
+
+    <!-- Article Header - Magazine Style -->
+    <header class="article-header mb-5">
+        <div class="row g-4 align-items-center">
+            <!-- Content Column -->
+            <div class="col-lg-6 order-lg-1">
+                <!-- Breadcrumbs -->
+                <nav aria-label="breadcrumb" class="mb-3">
+                    <ol class="breadcrumb mb-0 small">
+                        <li class="breadcrumb-item"><a href="https://pythonscouts.com">Inicio</a></li>
+                        <li class="breadcrumb-item"><a href="https://pythonscouts.com/series/">Series</a></li>
+                    </ol>
+                </nav>
+                
+                <!-- Category -->
+                <div class="mb-3">
+                    <span class="badge bg-success-subtle text-success border border-success px-3 py-2 text-uppercase fw-semibold">
+                        Series
+                    </span>
+                </div>
+                
+                <!-- Title -->
+                <h1 class="display-5 fw-bold mb-4">
+                    Palabras clave en Python: case
+                </h1>
+                
+                <!-- Author & Meta -->
+                <div class="d-flex align-items-center gap-3 mb-4">
+                    <img src="https://pythonscouts.com/images/authors/leodanis-pozo-ramos.webp" 
+                         class="rounded-circle border" 
+                         width="60" height="60" 
+                         alt="Leodanis Pozo Ramos">
+                    <div>
+                        <div class="fw-semibold">Leodanis Pozo Ramos</div>
+                        <div class="text-muted-strong small">
+                            <i class="bi bi-calendar-event me-1"></i>
+                            05 abr 2026
+                            <span class="mx-2">•</span>
+                            <i class="bi bi-clock me-1"></i>
+                            2 min
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tags -->
+                <div class="d-flex gap-2 flex-wrap">
+                    <a href="https://pythonscouts.com/tag/python.html" 
+                       class="badge bg-light text-dark border text-decoration-none">
+                        python
+                    </a>
+                    <a href="https://pythonscouts.com/tag/palabras-clave.html" 
+                       class="badge bg-light text-dark border text-decoration-none">
+                        palabras clave
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Image Column -->
+            <div class="col-lg-6 order-lg-2">
+                <img src="https://pythonscouts.com/images/articles/python-case/article.webp" 
+                     class="img-fluid w-100 rounded-4 shadow-lg" 
+                     alt="Palabras clave en Python: case"
+                     style="max-height: 600px; object-fit: cover;">
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Content -->
+    <div class="row">
+        <!-- Article Body -->
+        <div class="col-lg-8">
+            <article class="article-body" itemscope itemtype="https://schema.org/BlogPosting">
+                <meta itemprop="headline" content="Palabras clave en Python: case">
+                <meta itemprop="description" content="En Python, la palabra clave suave case es el componente principal de la estructura match ... case, diseñada para implementar coincidencias de patrones de forma expresiva y moderna.">
+                <meta itemprop="datePublished" content="2026-04-05T22:05:00+02:00">
+                <meta itemprop="dateModified" content="2026-04-05T22:05:00+02:00">
+                <meta itemprop="author" content="Leodanis Pozo Ramos">
+                <meta itemprop="image" content="https://pythonscouts.com/images/articles/python-case/social.webp">
+                <div itemprop="articleBody">
+                    <p class="lead text-muted-strong mb-4">
+                        <p>En Python, la palabra clave suave <code>case</code> es el componente principal de la estructura <code>match</code> ... <code>case</code>, diseñada para implementar coincidencias de patrones de forma expresiva y moderna.</p>
+                    </p>
+                    <p>Esta estructura de <a href="/condicionales-python/">control de flujo</a> te permite comparar una <a href="/expresiones-python/">expresión</a> con múltiples patrones de datos de manera explícita, facilitando la escritura de programas más legibles y menos propensos a errores en comparación con otros métodos de control de flujo.</p>
+<div class="code-link"><p>Puedes encontrar el código Python de este artículo en el <a href="https://github.com/pythonscouts/ps-ejemplos/tree/main/Series/case-python" target="_blank" rel="noopener noreferrer">repositorio de ejemplos de Python Scouts</a>. ¡Te agradeceríamos mucho si nos dejas una estrella (⭐) en el repositorio!</p></div>
+<div class="toc"><span class="toctitle">Contenidos</span><ul>
+<li><a href="#sintaxis">Sintaxis</a></li>
+<li><a href="#ejemplos-practicos">Ejemplos prácticos</a></li>
+<li><a href="#uso-de-case">Uso de case</a></li>
+<li><a href="#resumiendo">Resumiendo</a></li>
+</ul>
+</div>
+<h2 id="sintaxis">Sintaxis</h2>
+<p>Para utilizar <code>case</code>, necesitas una sentencia <a href="/python-match/"><code>match</code></a> que proporcione el <a href="/valores-python/">valor</a> a evaluar. Cada bloque <code>case</code> define un patrón con el que se comparará dicho valor.</p>
+<p>La sintaxis básica es la siguiente:</p>
+<div class="highlight"><span class="filename">Sintaxis de Python</span><pre><span></span><code><span class="k">match</span> <span class="n">expression</span><span class="p">:</span>
+    <span class="k">case</span> <span class="n">pattern1</span><span class="p">:</span>
+        <span class="c1"># Código si expression coincide con pattern1</span>
+    <span class="k">case</span> <span class="n">pattern2</span><span class="p">:</span>
+        <span class="c1"># Código si expression coincide con pattern2</span>
+    <span class="o">...</span>
+    <span class="k">case</span><span class="w"> </span><span class="k">_</span><span class="p">:</span>
+        <span class="c1"># Patrón comodín para manejar cualquier otro caso</span>
+</code></pre></div>
+<p>En este flujo de ejecución, el intérprete evalúa cada <code>case</code> de arriba abajo. Cuando encuentra la primera coincidencia, ejecuta su bloque de código y sale de la estructura.</p>
+<p>El uso de un guion bajo (<code>_</code>) al final actúa como un <strong>comodín</strong> (<em>catch-all</em>) para capturar cualquier valor que no haya coincidido con los patrones anteriores.</p>
+<div class="admonition note">
+<p>Las <strong>palabras clave suaves</strong> (<em>soft keywords</em>) como <code>case</code> se diferencian de las <a href="/python-palabras-clave/">palabras clave</a> normales en que pueden ser usadas como identificadores, lo que incluye nombres de <a href="/variables-python/">variables</a>, <a href="/python-def/">funciones</a> o <a href="/python-class/">clases</a>.</p>
+</div>
+<h2 id="ejemplos-practicos">Ejemplos prácticos</h2>
+<p>Observa el siguiente ejemplo de una función que clasifica edades:</p>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">classify_age</span><span class="p">(</span><span class="n">age</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">match</span> <span class="n">age</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">case</span> <span class="n">n</span> <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">13</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="s2">&quot;Eres un niño&quot;</span>
+<span class="gp">... </span>        <span class="k">case</span> <span class="n">n</span> <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="s2">&quot;Eres un adolescente&quot;</span>
+<span class="gp">... </span>        <span class="k">case</span><span class="w"> </span><span class="k">_</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="k">return</span> <span class="s2">&quot;Eres un adulto&quot;</span>
+<span class="gp">...</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">classify_age</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="go">&#39;Eres un niño&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">classify_age</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+<span class="go">&#39;Eres un adolescente&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">classify_age</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="go">&#39;Eres un adulto&#39;</span>
+</code></pre></div>
+<p>Como puedes ver, <strong><code>match</code> ... <code>case</code></strong> te ofrece una vía directa para tomar decisiones basadas en <a href="/valores-python/">valores</a> específicos de tus objetos de forma más declarativa que las sentencias <a href="/condicionales-python/">condicionales</a> tradicionales.</p>
+<h2 id="uso-de-case">Uso de <code>case</code></h2>
+<p>Los casos de uso más comunes de la palabra clave <code>case</code> incluyen los siguientes:</p>
+<ul>
+<li>Ramificar la lógica de tus aplicaciones según el contenido específico o la estructura de tus datos</li>
+<li>Simplificar la lectura y mantenimiento de programas que dependen de múltiples condiciones de decisión</li>
+<li>Evaluar y desestructurar de forma segura estructuras de datos complejas mediante la coincidencia de patrones</li>
+<li>Sustituir cadenas extensas de sentencias <a href="/python-if/"><code>if</code></a> - <a href="/python-elif/"><code>elif</code></a> - <a href="/python-else/"><code>else</code></a> cuando comparas una sola variable contra múltiples opciones posibles</li>
+<li>Manejar respuestas de <a href="/iniciando-con-fastapi-python/">APIs</a> o eventos de manera más clara y declarativa</li>
+</ul>
+<h2 id="resumiendo">Resumiendo</h2>
+<p>La palabra clave <code>case</code> constituye una adición esencial a Python para realizar coincidencias de patrones eficaces.</p>
+<p>Conocer y emplear esta herramienta te permitirá desarrollar aplicaciones más claras, fáciles de mantener y con un control de flujo mucho más potente.</p>
+<div class="code-link"><p>Puedes encontrar el código Python de este artículo en el <a href="https://github.com/pythonscouts/ps-ejemplos/tree/main/Series/case-python" target="_blank" rel="noopener noreferrer">repositorio de ejemplos de Python Scouts</a>. ¡Te agradeceríamos mucho si nos dejas una estrella (⭐) en el repositorio!</p></div>
+                </div>
+            </article>
+
+            <!-- Previous / Next Article Navigation -->
+            <nav class="article-nav my-5 pt-4 border-top" aria-label="Navegación entre artículos">
+                <div class="row g-3">
+                    <div class="col-6">
+                        <a href="https://pythonscouts.com/python-match/" class="article-nav-link article-nav-prev text-decoration-none">
+                            <span class="article-nav-label text-muted-strong small d-block mb-1">
+                                <i class="bi bi-arrow-left me-1"></i> Anterior
+                            </span>
+                            <span class="article-nav-title fw-semibold">
+                                Palabras clave en Python: match
+                            </span>
+                        </a>
+                    </div>
+                    <div class="col-6 text-end">
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Sticky TOC Sidebar (desktop only, populated by JS) -->
+        <aside class="col-lg-4 d-none d-lg-block">
+            <div id="toc-sidebar" class="toc-sidebar"></div>
+        </aside>
+    </div>
+
+    </main>
+
+<footer class="site-footer mt-auto">
+    <div class="footer-primary border-top border-success-subtle py-3">
+        <div class="container-md content-px">
+            <div class="row gy-3 align-items-center justify-content-between">
+                <div class="col-lg-6 col-md-7">
+                    <div class="d-flex flex-column flex-sm-row align-items-center align-items-sm-start gap-3 text-center text-sm-start">
+                        <a href="https://pythonscouts.com" class="d-inline-flex align-items-center text-decoration-none">
+                            <img src="https://pythonscouts.com/images/identity/logo-title.png" alt="Python Scouts" width="160" height="48" class="img-fluid footer-logo">
+                        </a>
+                        <p class="text-muted-strong footer-description mb-0">
+                            Python Scouts es tu espacio para aprender Python en español.
+                        </p>
+                        <div class="d-flex align-items-center gap-3 mt-1">
+                            <a href="https://github.com/lpozo" target="_blank" rel="noopener noreferrer" class="text-muted-strong text-decoration-none article-nav-link p-2 border-0 bg-transparent" aria-label="GitHub" style="transition: color 0.2s;">
+                                <i class="bi bi-github fs-5"></i>
+                            </a>
+                            <a href="https://twitter.com/lpozo78" target="_blank" rel="noopener noreferrer" class="text-muted-strong text-decoration-none article-nav-link p-2 border-0 bg-transparent" aria-label="Twitter" style="transition: color 0.2s;">
+                                <i class="bi bi-twitter-x fs-5"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/lpozor78" target="_blank" rel="noopener noreferrer" class="text-muted-strong text-decoration-none article-nav-link p-2 border-0 bg-transparent" aria-label="LinkedIn" style="transition: color 0.2s;">
+                                <i class="bi bi-linkedin fs-5"></i>
+                            </a>
+                            <a href="https://pythonscouts.com/feeds/all.atom.xml" target="_blank" rel="alternate" class="text-muted-strong text-decoration-none article-nav-link p-2 border-0 bg-transparent" aria-label="RSS Feed" style="transition: color 0.2s;">
+                                <i class="bi bi-rss-fill fs-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-5 text-center text-md-start">
+                    <h3 class="h6 text-uppercase text-success fw-semibold mb-2">Explora</h3>
+                    <nav aria-label="Footer navigation">
+                        <ul class="footer-links list-unstyled d-inline-flex flex-column gap-2 mb-0 text-start">
+                            <li><a href="https://pythonscouts.com/guias/">Guías</a></li>
+                            <li><a href="https://pythonscouts.com/series/">Series</a></li>
+                            <li><a href="https://pythonscouts.com/tutoriales/">Tutoriales</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-secondary py-3">
+        <div class="container-md content-px">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <div class="d-flex flex-column flex-sm-row align-items-center gap-2 text-center text-sm-start">
+                    <span class="text-white-50 small">
+                        &copy; 2023-2026 Leodanis Pozo Ramos.
+                    </span>
+                    <div class="d-flex align-items-center gap-2">
+                        <a href="https://creativecommons.org/licenses/by-sa/4.0/" 
+                           target="_blank" 
+                           rel="license noopener noreferrer"
+                           class="d-inline-block"
+                           style="background: white; padding: 4px 8px; border-radius: 4px;">
+                            <img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" 
+                                 alt="CC BY-SA 4.0" 
+                                 width="88" 
+                                 height="31"
+                                 style="border-width:0; display: block;">
+                        </a>
+                        <span class="text-white-50 small">
+                            Contenido licenciado bajo 
+                            <a href="https://creativecommons.org/licenses/by-sa/4.0/" 
+                               target="_blank" 
+                               rel="license noopener noreferrer"
+                               class="text-white text-decoration-none">
+                                CC BY-SA 4.0
+                                <i class="bi bi-box-arrow-up-right ms-1"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <span class="text-white-50 small">
+                    Imágenes cortesía de <a href="https://picsum.photos/" target="_blank" rel="noopener" class="text-white text-decoration-none">Picsum</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</footer>
+    <!-- JS Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
+    <!-- Stork and site scripts -->
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202604042204" defer></script>
+    <script
+        src="https://pythonscouts.com/theme/js/site.js?v=202604042204"
+        defer
+        data-stork-name="sitesearch"
+        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202604042204"
+        data-stork-index="https://pythonscouts.com/search-index.st">
+    </script>
+
+</body>
+</html>
