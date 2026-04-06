@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="es-es" class="h-100">
+
+<head>
+        <title>
+  Estructuras de datos en Python: Conjuntos (sets) - Python Scouts
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Leodanis Pozo Ramos">
+    <meta name="description" content="Los conjuntos o sets almacenan colecciones de valores únicos sin orden definido. Son muy útiles para pruebas de pertenencia y operaciones matemáticas.">
+    <meta name="keywords" content="python, data structures">
+    <meta name="article:published_time" content="2026-04-23T22:50:00+02:00">
+    <meta name="article:modified_time" content="2026-04-23T22:50:00+02:00">
+    <meta name="article:author" content="Leodanis Pozo Ramos">
+    <meta name="article:section" content="Series">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="language" content="Spanish">
+    <meta name="generator" content="Pelican">
+    
+    <meta name="dcterms.rights" content="https://creativecommons.org/licenses/by-sa/4.0/">
+    <meta name="dcterms.rightsHolder" content="Leodanis Pozo Ramos">
+    <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Estructuras de datos en Python: Conjuntos (sets)">
+    <meta property="og:description" content="Los conjuntos o sets almacenan colecciones de valores únicos sin orden definido. Son muy útiles para pruebas de pertenencia y operaciones matemáticas.">
+    <meta property="og:url" content="https://pythonscouts.com/drafts/python-set.html">
+    <meta property="og:site_name" content="Python Scouts">
+    <meta property="og:image" content="https://pythonscouts.com/images/articles/python-set/social.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Estructuras de datos en Python: Conjuntos (sets)">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:locale" content="es_ES">
+    <meta property="article:published_time" content="2026-04-23T22:50:00+02:00">
+    <meta property="article:author" content="Leodanis Pozo Ramos">
+    <meta property="article:section" content="Series">
+    <meta property="article:tag" content="python">
+    <meta property="article:tag" content="data structures">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lpozo78">
+    <meta name="twitter:creator" content="@lpozo78">
+    <meta name="twitter:title" content="Estructuras de datos en Python: Conjuntos (sets)">
+    <meta name="twitter:description" content="Los conjuntos o sets almacenan colecciones de valores únicos sin orden definido. Son muy útiles para pruebas de pertenencia y operaciones matemáticas.">
+    <meta name="twitter:image" content="https://pythonscouts.com/images/articles/python-set/social.webp">
+    <meta name="twitter:image:alt" content="Estructuras de datos en Python: Conjuntos (sets)">
+    <!-- RSS feeds -->
+    <link href="https://pythonscouts.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Full Atom Feed" />
+    <link href="https://pythonscouts.com/feeds/series.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Categories Atom Feed" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://pythonscouts.com/drafts/python-set.html">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202604062216">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202604062216">
+    <!-- Preconnect to CDNs -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <!-- Bootstrap CSS (deferred) -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+          crossorigin="anonymous">
+    <!-- Bootstrap Icons (self-hosted, deferred) -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202604062216">
+    <!-- Stork Search - Deferred -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202604062216">
+
+
+    <!-- Article tags -->
+    <meta name="article:tag" content="python" />
+    <meta name="article:tag" content="data structures" />
+    <meta name="article:tag" content="palabras clave" />
+    <meta name="article:tag" content="fastapi" />
+    <meta name="article:tag" content="web" />
+    <meta name="article:tag" content="api" />
+    <meta name="article:tag" content="kivy" />
+    <meta name="article:tag" content="gui" />
+    <meta name="article:tag" content="ayuda" />
+    <meta name="article:tag" content="pyside6" />
+    <meta name="article:tag" content="linux" />
+    <meta name="article:tag" content="tkinter" />
+    <meta name="article:tag" content="pyqt" />
+    <meta name="article:tag" content="windows" />
+    <meta name="article:tag" content="macos" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Estructuras de datos en Python: Conjuntos (sets)">
+    <meta property="og:description" content="Los conjuntos o sets almacenan colecciones de valores únicos sin orden definido. Son muy útiles para pruebas de pertenencia y operaciones matemáticas.">
+    <meta property="og:url" content="https://pythonscouts.com/drafts/python-set.html">
+    <meta property="og:site_name" content="Python Scouts">
+    <meta property="og:image" content="https://pythonscouts.com/images/articles/python-set/social.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Estructuras de datos en Python: Conjuntos (sets)">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:locale" content="es_ES">
+    <meta property="article:published_time" content="2026-04-23T22:50:00+02:00">
+    <meta property="article:author" content="Leodanis Pozo Ramos">
+    <meta property="article:section" content="Series">
+    <meta property="article:tag" content="python">
+    <meta property="article:tag" content="data structures">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lpozo78">
+    <meta name="twitter:creator" content="@lpozo78">
+    <meta name="twitter:title" content="Estructuras de datos en Python: Conjuntos (sets)">
+    <meta name="twitter:description" content="Los conjuntos o sets almacenan colecciones de valores únicos sin orden definido. Son muy útiles para pruebas de pertenencia y operaciones matemáticas.">
+    <meta name="twitter:image" content="https://pythonscouts.com/images/articles/python-set/social.webp">
+    <meta name="twitter:image:alt" content="Estructuras de datos en Python: Conjuntos (sets)">
+
+    <!-- Custom CSS for article -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202604062216">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
+<script
+    src="https://pythonscouts.com/theme/js/analytics.js?v=202604062216"
+    defer
+    data-analytics-id="G-R3C5PFSQ1S">
+</script>
+
+<body class="d-flex flex-column h-100">
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-md bg-white fixed-top border-bottom">
+        <div class="container-md content-px">
+            <a class="navbar-brand" href="/">
+            <img
+            src="https://pythonscouts.com/images/identity/header.webp"
+            alt="Python Scouts"
+            width="150"
+            height="50"
+            >
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Menú de Navegación">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav m-auto nav-link">
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/guias/" aria-current="page">
+                    Guías
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/series/" aria-current="page">
+                    Series
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/tutoriales/" aria-current="page">
+                    Tutoriales
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/acerca/" aria-current="page">
+                    Acerca
+                </a>
+                </li>
+            </ul>
+            <form class="d-flex search-form" role="search">
+                <button type="button" class="search-toggle btn btn-link p-0 me-2 d-none d-md-inline-flex" aria-label="Buscar">
+                    <i class="bi bi-search text-muted-strong"></i>
+                </button>
+                <div class="search-input-wrapper">
+                    <div class="stork-wrapper">
+                        <input
+                        class="stork-input"
+                        type="search"
+                        id="site-search"
+                        name="q"
+                        placeholder="Buscar"
+                        aria-label="Search"
+                        data-stork="sitesearch"
+                        >
+                    </div>
+                </div>
+            </form>
+            </div>
+        </div>
+    </nav>
+    <main id="main-content" class="container-md content-px py-3" tabindex="-1">
+        <div class="stork-wrapper">
+            <div data-stork="sitesearch-output" class="stork-output"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+            </div>
+        </div>
+
+    <!-- Article Header - Magazine Style -->
+    <header class="article-header mb-5">
+        <div class="row g-4 align-items-center">
+            <!-- Content Column -->
+            <div class="col-lg-6 order-lg-1">
+                <!-- Breadcrumbs -->
+                <nav aria-label="breadcrumb" class="mb-3">
+                    <ol class="breadcrumb mb-0 small">
+                        <li class="breadcrumb-item"><a href="https://pythonscouts.com">Inicio</a></li>
+                        <li class="breadcrumb-item"><a href="https://pythonscouts.com/series/">Series</a></li>
+                    </ol>
+                </nav>
+                
+                <!-- Category -->
+                <div class="mb-3">
+                    <span class="badge bg-success-subtle text-success border border-success px-3 py-2 text-uppercase fw-semibold">
+                        Series
+                    </span>
+                </div>
+                
+                <!-- Title -->
+                <h1 class="display-5 fw-bold mb-4">
+                    Estructuras de datos en Python: Conjuntos (sets)
+                </h1>
+                
+                <!-- Author & Meta -->
+                <div class="d-flex align-items-center gap-3 mb-4">
+                    <img src="https://pythonscouts.com/images/authors/leodanis-pozo-ramos.webp" 
+                         class="rounded-circle border" 
+                         width="60" height="60" 
+                         alt="Leodanis Pozo Ramos">
+                    <div>
+                        <div class="fw-semibold">Leodanis Pozo Ramos</div>
+                        <div class="text-muted-strong small">
+                            <i class="bi bi-calendar-event me-1"></i>
+                            23 abr 2026
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tags -->
+                <div class="d-flex gap-2 flex-wrap">
+                    <a href="https://pythonscouts.com/tag/python.html" 
+                       class="badge bg-light text-dark border text-decoration-none">
+                        python
+                    </a>
+                    <a href="https://pythonscouts.com/tag/data-structures.html" 
+                       class="badge bg-light text-dark border text-decoration-none">
+                        data structures
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Image Column -->
+            <div class="col-lg-6 order-lg-2">
+                <img src="https://pythonscouts.com/images/articles/python-set/article.webp" 
+                     class="img-fluid w-100 rounded-4 shadow-lg" 
+                     alt="Estructuras de datos en Python: Conjuntos (sets)"
+                     style="max-height: 600px; object-fit: cover;">
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Content -->
+    <div class="row">
+        <!-- Article Body -->
+        <div class="col-lg-8">
+            <article class="article-body" itemscope itemtype="https://schema.org/BlogPosting">
+                <meta itemprop="headline" content="Estructuras de datos en Python: Conjuntos (sets)">
+                <meta itemprop="description" content="Los conjuntos o sets almacenan colecciones de valores únicos sin orden definido. Son muy útiles para pruebas de pertenencia y operaciones matemáticas.">
+                <meta itemprop="datePublished" content="2026-04-23T22:50:00+02:00">
+                <meta itemprop="dateModified" content="2026-04-23T22:50:00+02:00">
+                <meta itemprop="author" content="Leodanis Pozo Ramos">
+                <meta itemprop="image" content="https://pythonscouts.com/images/articles/python-set/social.webp">
+                <div itemprop="articleBody">
+                    <p class="lead text-muted-strong mb-4">
+                        <p>Los conjuntos o sets almacenan colecciones de valores únicos sin orden definido. Son muy útiles para pruebas de pertenencia y operaciones matemáticas.</p>
+                    </p>
+                    <p>En este artículo, aprenderás cómo implementar un conjunto en Python, incluyendo sus operaciones y características principales.</p>
+<div class="toc"><span class="toctitle">Contenidos</span><ul>
+<li><a href="#que-es-un-conjunto-o-set">¿Qué es un conjunto o set?</a></li>
+<li><a href="#operaciones-comunes-en-un-conjunto">Operaciones comunes en un conjunto</a></li>
+<li><a href="#implementacion-de-un-conjunto-en-python">Implementación de un conjunto en Python</a></li>
+<li><a href="#ejemplo-de-uso-del-conjunto">Ejemplo de uso del conjunto</a><ul>
+<li><a href="#inicializacion">Inicialización</a></li>
+<li><a href="#anadir-y-eliminar-elementos">Añadir y eliminar elementos</a></li>
+<li><a href="#operaciones-de-conjuntos">Operaciones de conjuntos</a></li>
+<li><a href="#relaciones-entre-conjuntos">Relaciones entre conjuntos</a></li>
+<li><a href="#longitud-y-pertenencia">Longitud y pertenencia</a></li>
+<li><a href="#iteracion">Iteración</a></li>
+</ul>
+</li>
+<li><a href="#conclusion">Conclusión</a></li>
+</ul>
+</div>
+<h2 id="que-es-un-conjunto-o-set">¿Qué es un conjunto o set?</h2>
+<p>Un <a href="https://es.wikipedia.org/wiki/Conjunto_(inform%C3%A1tica)">conjunto</a> es un contenedor que almacena una colección de valores únicos sin un orden particular. Los conjuntos implementan las mismas operaciones que sus equivalentes matemáticos. Son especialmente útiles para pruebas de pertenencia, donde necesitas saber si un valor está o no en el contenedor.</p>
+<p>Las características fundamentales de un conjunto incluyen las siguientes:</p>
+<ul>
+<li><strong>Unicidad</strong>: No permite elementos duplicados. Si intentas añadir un valor que ya existe, se ignora.</li>
+<li><strong>Sin orden definido</strong>: Los elementos no tienen una posición específica.</li>
+<li><strong>Valores hashables</strong>: Solo acepta elementos que sean <em>hashables</em>, lo que garantiza la unicidad.</li>
+</ul>
+<p>En Python, los conjuntos están integrados como el tipo <code>set</code>, pero en este artículo implementarás tu propio conjunto usando una lista como estructura subyacente para comprender su funcionamiento interno.</p>
+<h2 id="operaciones-comunes-en-un-conjunto">Operaciones comunes en un conjunto</h2>
+<p>A continuación, un resumen de las operaciones que soportará tu conjunto:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Operación</strong></th>
+<th><strong>Descripción</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>s = Set()</code></td>
+<td>Construye un conjunto vacío.</td>
+</tr>
+<tr>
+<td><code>s = Set(iterable)</code></td>
+<td>Construye un conjunto con elementos únicos de <code>iterable</code>.</td>
+</tr>
+<tr>
+<td><code>s.add(element)</code></td>
+<td>Añade <code>element</code> al conjunto.</td>
+</tr>
+<tr>
+<td><code>s.remove(element)</code></td>
+<td>Elimina <code>element</code> del conjunto. Lanza <code>KeyError</code> si no existe.</td>
+</tr>
+<tr>
+<td><code>s.discard(element)</code></td>
+<td>Elimina <code>element</code> del conjunto si está presente. No lanza error si no existe.</td>
+</tr>
+<tr>
+<td><code>s.pop()</code></td>
+<td>Extrae un elemento del conjunto.</td>
+</tr>
+<tr>
+<td><code>s.clear()</code></td>
+<td>Elimina todos los elementos del conjunto.</td>
+</tr>
+<tr>
+<td><code>s.update(other)</code></td>
+<td>Actualiza el conjunto con los elementos de <code>other</code>.</td>
+</tr>
+<tr>
+<td><code>s.is_subset(other)</code></td>
+<td>Devuelve <code>True</code> si el conjunto es subconjunto de <code>other</code>.</td>
+</tr>
+<tr>
+<td><code>s.is_superset(other)</code></td>
+<td>Devuelve <code>True</code> si el conjunto es superconjunto de <code>other</code>.</td>
+</tr>
+<tr>
+<td><code>s.is_disjoint(other)</code></td>
+<td>Devuelve <code>True</code> si el conjunto no tiene elementos en común con <code>other</code>.</td>
+</tr>
+<tr>
+<td><code>s.union(other)</code></td>
+<td>Devuelve un nuevo conjunto con la unión de ambos.</td>
+</tr>
+<tr>
+<td><code>s.intersection(other)</code></td>
+<td>Devuelve un nuevo conjunto con la intersección de ambos.</td>
+</tr>
+<tr>
+<td><code>s.difference(other)</code></td>
+<td>Devuelve un nuevo conjunto con la diferencia entre ambos.</td>
+</tr>
+<tr>
+<td><code>s == other</code></td>
+<td>Devuelve <code>True</code> si ambos conjuntos contienen los mismos elementos.</td>
+</tr>
+<tr>
+<td><code>len(s)</code></td>
+<td>Devuelve el número de elementos en el conjunto.</td>
+</tr>
+<tr>
+<td><code>element in s</code></td>
+<td>Devuelve <code>True</code> si <code>element</code> está en el conjunto, <code>False</code> en caso contrario.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="implementacion-de-un-conjunto-en-python">Implementación de un conjunto en Python</h2>
+<p>A continuación encontrarás la implementación del conjunto en Python:</p>
+<div class="highlight"><span class="filename">Python - set_adt.py</span><pre><span></span><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Iterator</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Sequence</span>
+
+
+<span class="k">class</span> <span class="nc">Set</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Implement a Set abstract data type.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">iterable</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Sequence</span><span class="p">[</span><span class="n">Any</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">/</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="n">iterable</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">iterable</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">__add</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">element</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add element to set.&quot;&quot;&quot;</span>
+        <span class="nb">hash</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">element</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+
+    <span class="n">__add</span> <span class="o">=</span> <span class="n">add</span>  <span class="c1"># Avoid breaking the class by a subclasser</span>
+
+    <span class="k">def</span> <span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">element</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Remove an element from set.&quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">element</span><span class="si">}</span><span class="s2"> not in set&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">discard</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">element</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Remove element from set if present.&quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">pop</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Pop an element from set.&quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="s2">&quot;pop from an empty set&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Remove all the elements from set.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="s2">&quot;Set&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Update set with elements from other.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_validate_other</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">other</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__add</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_validate_other</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="s2">&quot;Set&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">other</span><span class="o">.</span><span class="vm">__class__</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Set object expected&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">is_subset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="s2">&quot;Set&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return True if set is subset of other, False otherwise.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_validate_other</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">element</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">other</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="kc">True</span>
+
+    <span class="k">def</span> <span class="nf">is_superset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="s2">&quot;Set&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return True if set is superset of other, False otherwise.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_validate_other</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">other</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">element</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="kc">True</span>
+
+    <span class="k">def</span> <span class="nf">is_disjoint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="s2">&quot;Set&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return True if set has no elements in common with other.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_validate_other</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">other</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="kc">True</span>
+
+    <span class="k">def</span> <span class="nf">union</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="s2">&quot;Set&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Set&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return a new set that is the union of set and other.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_validate_other</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+        <span class="n">new_set</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)()</span>
+        <span class="n">new_set</span><span class="o">.</span><span class="n">_data</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">other</span><span class="p">:</span>
+            <span class="n">new_set</span><span class="o">.</span><span class="n">__add</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">new_set</span>
+
+    <span class="k">def</span> <span class="nf">intersection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="s2">&quot;Set&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Set&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return a new set that is the intersection of set with other.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_validate_other</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+        <span class="n">new_set</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)()</span>
+        <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">other</span><span class="p">:</span>
+                <span class="n">new_set</span><span class="o">.</span><span class="n">__add</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">new_set</span>
+
+    <span class="k">def</span> <span class="nf">difference</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="s2">&quot;Set&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Set&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return a new set with the difference between set and other.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_validate_other</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+        <span class="n">new_set</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)()</span>
+        <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">element</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">other</span><span class="p">:</span>
+                <span class="n">new_set</span><span class="o">.</span><span class="n">__add</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">new_set</span>
+
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="s2">&quot;Set&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_validate_other</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">)</span> <span class="o">==</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">other</span><span class="o">.</span><span class="n">_data</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__contains__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">element</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">element</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span>
+
+    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">:</span>
+        <span class="k">yield from</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="si">}</span><span class="s2">)&quot;</span>
+
+    <span class="fm">__str__</span> <span class="o">=</span> <span class="fm">__repr__</span>
+</code></pre></div>
+<p>El atributo <code>._data</code> es una lista que almacena los elementos del conjunto. Aunque esta implementación usa una lista internamente, garantiza la unicidad de los elementos al verificar su presencia antes de añadir nuevos valores.</p>
+<p>Los métodos principales te permiten ofrecer las siguientes funcionalidades:</p>
+<ul>
+<li><strong><code>.add()</code></strong>: añade un elemento al conjunto solo si no existe previamente. Verifica que el elemento sea <em>hashable</em> llamando a <code>hash()</code>.</li>
+<li><strong><code>.remove()</code></strong>: elimina un elemento del conjunto. Lanza <code>KeyError</code> si el elemento no existe.</li>
+<li><strong><code>.discard()</code></strong>: elimina un elemento si está presente, sin lanzar error si no existe.</li>
+<li><strong><code>.pop()</code></strong>: extrae un elemento del conjunto. Lanza <code>KeyError</code> si el conjunto está vacío.</li>
+<li><strong><code>.clear()</code></strong>: elimina todos los elementos.</li>
+<li><strong><code>.update()</code></strong>: actualiza el conjunto con los elementos de otro conjunto.</li>
+</ul>
+<p>Las operaciones de conjuntos matemáticos son las siguientes:</p>
+<ul>
+<li><strong><code>.is_subset()</code></strong>: comprueba si todos los elementos están contenidos en otro conjunto.</li>
+<li><strong><code>.is_superset()</code></strong>: comprueba si el conjunto contiene todos los elementos de otro.</li>
+<li><strong><code>.is_disjoint()</code></strong>: comprueba si no hay elementos en común con otro conjunto.</li>
+<li><strong><code>.union()</code></strong>: devuelve un nuevo conjunto con todos los elementos de ambos.</li>
+<li><strong><code>.intersection()</code></strong>: devuelve un nuevo conjunto con los elementos comunes.</li>
+<li><strong><code>.difference()</code></strong>: devuelve un nuevo conjunto con los elementos que no están en el otro.</li>
+</ul>
+<p>Los métodos especiales te permiten ofrecer las siguientes funcionalidades:</p>
+<ul>
+<li><strong><code>.__eq__()</code></strong>: compara dos conjuntos por igualdad, ordenando los elementos para comparar.</li>
+<li><strong><code>.__len__()</code></strong>: devuelve el número de elementos en el conjunto.</li>
+<li><strong><code>.__contains__()</code></strong>: comprueba si un elemento está en el conjunto.</li>
+<li><strong><code>.__iter__()</code></strong>: permite iterar sobre los elementos del conjunto.</li>
+<li><strong><code>.__repr__()</code></strong> y <strong><code>.__str__()</code></strong>: devuelven representaciones de cadena legibles.</li>
+</ul>
+<h2 id="ejemplo-de-uso-del-conjunto">Ejemplo de uso del conjunto</h2>
+<p>En esta sección verás ejemplos prácticos de cómo crear y manipular instancias de tu clase <code>Set</code>.</p>
+<h3 id="inicializacion">Inicialización</h3>
+<p>Para crear un <code>Set</code>, puedes hacerlo sin argumentos o pasando un iterable. Los duplicados se eliminan automáticamente:</p>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">numbers</span> <span class="o">=</span> <span class="n">Set</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numbers</span>
+<span class="go">Set([])</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numbers</span> <span class="o">=</span> <span class="n">Set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numbers</span>
+<span class="go">Set([1, 2, 3])</span>
+</code></pre></div>
+<h3 id="anadir-y-eliminar-elementos">Añadir y eliminar elementos</h3>
+<p>Puedes añadir elementos y eliminarlos por su valor:</p>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">numbers</span> <span class="o">=</span> <span class="n">Set</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numbers</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numbers</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numbers</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># Duplicado: se ignora</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numbers</span>
+<span class="go">Set([1, 2])</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numbers</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numbers</span>
+<span class="go">Set([2])</span>
+</code></pre></div>
+<p>Si intentas añadir un elemento que no sea <em>hashable</em>, obtendrás un error:</p>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">numbers</span> <span class="o">=</span> <span class="n">Set</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numbers</span><span class="o">.</span><span class="n">add</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="gt">Traceback (most recent call last):</span>
+<span class="w">    </span><span class="o">...</span>
+<span class="gr">TypeError</span>: <span class="n">unhashable type: &#39;list&#39;</span>
+</code></pre></div>
+<h3 id="operaciones-de-conjuntos">Operaciones de conjuntos</h3>
+<p>Puedes realizar las operaciones clásicas de conjuntos matemáticos:</p>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">set_a</span> <span class="o">=</span> <span class="n">Set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">set_b</span> <span class="o">=</span> <span class="n">Set</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">set_a</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">set_b</span><span class="p">)</span>
+<span class="go">Set([1, 2, 3, 4, 5])</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">set_a</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">set_b</span><span class="p">)</span>
+<span class="go">Set([2, 3])</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">set_a</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">set_b</span><span class="p">)</span>
+<span class="go">Set([1])</span>
+</code></pre></div>
+<h3 id="relaciones-entre-conjuntos">Relaciones entre conjuntos</h3>
+<p>Puedes verificar relaciones como subconjunto, superconjunto y disyunción:</p>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">set_a</span> <span class="o">=</span> <span class="n">Set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">set_b</span> <span class="o">=</span> <span class="n">Set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">set_a</span><span class="o">.</span><span class="n">is_subset</span><span class="p">(</span><span class="n">set_b</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">set_b</span><span class="o">.</span><span class="n">is_superset</span><span class="p">(</span><span class="n">set_a</span><span class="p">)</span>
+<span class="go">True</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">set_c</span> <span class="o">=</span> <span class="n">Set</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">set_a</span><span class="o">.</span><span class="n">is_disjoint</span><span class="p">(</span><span class="n">set_c</span><span class="p">)</span>
+<span class="go">True</span>
+</code></pre></div>
+<h3 id="longitud-y-pertenencia">Longitud y pertenencia</h3>
+<p>Puedes consultar la longitud del conjunto y verificar si un elemento está contenido en él:</p>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">numbers</span> <span class="o">=</span> <span class="n">Set</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">])</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+<span class="go">3</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">20</span> <span class="ow">in</span> <span class="n">numbers</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">99</span> <span class="ow">in</span> <span class="n">numbers</span>
+<span class="go">False</span>
+</code></pre></div>
+<h3 id="iteracion">Iteración</h3>
+<p>El método <code>.__iter__()</code> permite iterar sobre los elementos del conjunto:</p>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">numbers</span> <span class="o">=</span> <span class="n">Set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">1</span>
+<span class="go">2</span>
+<span class="go">3</span>
+</code></pre></div>
+<h2 id="conclusion">Conclusión</h2>
+<p>Has aprendido cómo implementar un conjunto que garantiza la unicidad de sus elementos y proporciona operaciones de conjuntos matemáticos como unión, intersección y diferencia. Este conocimiento te permite comprender cómo funcionan internamente los conjuntos y cuándo son la estructura más adecuada para resolver problemas que involucren colecciones de valores únicos y pruebas de pertenencia.</p>
+                </div>
+            </article>
+
+            <!-- Previous / Next Article Navigation -->
+        </div>
+
+        <!-- Sticky TOC Sidebar (desktop only, populated by JS) -->
+        <aside class="col-lg-4 d-none d-lg-block">
+            <div id="toc-sidebar" class="toc-sidebar"></div>
+        </aside>
+    </div>
+
+    </main>
+
+<footer class="site-footer mt-auto">
+    <div class="footer-primary border-top border-success-subtle py-3">
+        <div class="container-md content-px">
+            <div class="row gy-3 align-items-center justify-content-between">
+                <div class="col-lg-6 col-md-7">
+                    <div class="d-flex flex-column flex-sm-row align-items-center align-items-sm-start gap-3 text-center text-sm-start">
+                        <a href="https://pythonscouts.com" class="d-inline-flex align-items-center text-decoration-none">
+                            <img src="https://pythonscouts.com/images/identity/logo-title.png" alt="Python Scouts" width="160" height="48" class="img-fluid footer-logo">
+                        </a>
+                        <p class="text-muted-strong footer-description mb-0">
+                            Python Scouts es tu espacio para aprender Python en español.
+                        </p>
+                        <div class="d-flex align-items-center gap-3 mt-1">
+                            <a href="https://github.com/lpozo" target="_blank" rel="noopener noreferrer" class="text-muted-strong text-decoration-none article-nav-link p-2 border-0 bg-transparent" aria-label="GitHub" style="transition: color 0.2s;">
+                                <i class="bi bi-github fs-5"></i>
+                            </a>
+                            <a href="https://twitter.com/lpozo78" target="_blank" rel="noopener noreferrer" class="text-muted-strong text-decoration-none article-nav-link p-2 border-0 bg-transparent" aria-label="Twitter" style="transition: color 0.2s;">
+                                <i class="bi bi-twitter-x fs-5"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/lpozor78" target="_blank" rel="noopener noreferrer" class="text-muted-strong text-decoration-none article-nav-link p-2 border-0 bg-transparent" aria-label="LinkedIn" style="transition: color 0.2s;">
+                                <i class="bi bi-linkedin fs-5"></i>
+                            </a>
+                            <a href="https://pythonscouts.com/feeds/all.atom.xml" target="_blank" rel="alternate" class="text-muted-strong text-decoration-none article-nav-link p-2 border-0 bg-transparent" aria-label="RSS Feed" style="transition: color 0.2s;">
+                                <i class="bi bi-rss-fill fs-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-5 text-center text-md-start">
+                    <h3 class="h6 text-uppercase text-success fw-semibold mb-2">Explora</h3>
+                    <nav aria-label="Footer navigation">
+                        <ul class="footer-links list-unstyled d-inline-flex flex-column gap-2 mb-0 text-start">
+                            <li><a href="https://pythonscouts.com/guias/">Guías</a></li>
+                            <li><a href="https://pythonscouts.com/series/">Series</a></li>
+                            <li><a href="https://pythonscouts.com/tutoriales/">Tutoriales</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-secondary py-3">
+        <div class="container-md content-px">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <div class="d-flex flex-column flex-sm-row align-items-center gap-2 text-center text-sm-start">
+                    <span class="text-white-50 small">
+                        &copy; 2023-2026 Leodanis Pozo Ramos.
+                    </span>
+                    <div class="d-flex align-items-center gap-2">
+                        <a href="https://creativecommons.org/licenses/by-sa/4.0/" 
+                           target="_blank" 
+                           rel="license noopener noreferrer"
+                           class="d-inline-block"
+                           style="background: white; padding: 4px 8px; border-radius: 4px;">
+                            <img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" 
+                                 alt="CC BY-SA 4.0" 
+                                 width="88" 
+                                 height="31"
+                                 style="border-width:0; display: block;">
+                        </a>
+                        <span class="text-white-50 small">
+                            Contenido licenciado bajo 
+                            <a href="https://creativecommons.org/licenses/by-sa/4.0/" 
+                               target="_blank" 
+                               rel="license noopener noreferrer"
+                               class="text-white text-decoration-none">
+                                CC BY-SA 4.0
+                                <i class="bi bi-box-arrow-up-right ms-1"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <span class="text-white-50 small">
+                    Imágenes cortesía de <a href="https://picsum.photos/" target="_blank" rel="noopener" class="text-white text-decoration-none">Picsum</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</footer>
+    <!-- JS Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
+    <!-- Stork and site scripts -->
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202604062216" defer></script>
+    <script
+        src="https://pythonscouts.com/theme/js/site.js?v=202604062216"
+        defer
+        data-stork-name="sitesearch"
+        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202604062216"
+        data-stork-index="https://pythonscouts.com/search-index.st">
+    </script>
+
+</body>
+</html>

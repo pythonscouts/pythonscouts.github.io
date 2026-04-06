@@ -6,56 +6,56 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://pythonscouts.com/</loc>
-<lastmod>2026-04-04T22:04:39-00:00</lastmod>
+<lastmod>2026-04-06T22:16:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/2/</loc>
-<lastmod>2026-04-04T22:04:39-00:00</lastmod>
+<lastmod>2026-04-06T22:16:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/3/</loc>
-<lastmod>2026-04-04T22:04:39-00:00</lastmod>
+<lastmod>2026-04-06T22:16:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/4/</loc>
-<lastmod>2026-04-04T22:04:39-00:00</lastmod>
+<lastmod>2026-04-06T22:16:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/5/</loc>
-<lastmod>2026-04-04T22:04:39-00:00</lastmod>
+<lastmod>2026-04-06T22:16:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/6/</loc>
-<lastmod>2026-04-04T22:04:39-00:00</lastmod>
+<lastmod>2026-04-06T22:16:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/7/</loc>
-<lastmod>2026-04-04T22:04:39-00:00</lastmod>
+<lastmod>2026-04-06T22:16:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/8/</loc>
-<lastmod>2026-04-04T22:04:39-00:00</lastmod>
+<lastmod>2026-04-06T22:16:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -460,6 +460,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://pythonscouts.com/python-stack/</loc>
+<lastmod>2026-04-07T22:20:00+02:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+
+<url>
 <loc>https://pythonscouts.com/python-true/</loc>
 <lastmod>2025-04-12T11:00:00+02:00</lastmod>
 <changefreq>weekly</changefreq>
@@ -503,98 +510,98 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://pythonscouts.com/series/</loc>
-<lastmod>2026-04-04T22:04:39-00:00</lastmod>
+<lastmod>2026-04-06T22:16:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/series/2/</loc>
-<lastmod>2026-04-04T22:04:39-00:00</lastmod>
+<lastmod>2026-04-06T22:16:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/series/3/</loc>
-<lastmod>2026-04-04T22:04:39-00:00</lastmod>
+<lastmod>2026-04-06T22:16:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/series/4/</loc>
-<lastmod>2026-04-04T22:04:39-00:00</lastmod>
+<lastmod>2026-04-06T22:16:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/series/5/</loc>
-<lastmod>2026-04-04T22:04:39-00:00</lastmod>
+<lastmod>2026-04-06T22:16:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/series/6/</loc>
-<lastmod>2026-04-04T22:04:39-00:00</lastmod>
+<lastmod>2026-04-06T22:16:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/series/estructuras-de-datos-en-python/</loc>
-<lastmod>2026-04-04T22:04:39-00:00</lastmod>
+<lastmod>2026-04-06T22:16:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/series/palabras-clave-en-python/</loc>
-<lastmod>2026-04-04T22:04:39-00:00</lastmod>
+<lastmod>2026-04-06T22:16:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/series/palabras-clave-en-python/2/</loc>
-<lastmod>2026-04-04T22:04:39-00:00</lastmod>
+<lastmod>2026-04-06T22:16:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/series/palabras-clave-en-python/3/</loc>
-<lastmod>2026-04-04T22:04:39-00:00</lastmod>
+<lastmod>2026-04-06T22:16:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/series/palabras-clave-en-python/4/</loc>
-<lastmod>2026-04-04T22:04:39-00:00</lastmod>
+<lastmod>2026-04-06T22:16:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/series/palabras-clave-en-python/5/</loc>
-<lastmod>2026-04-04T22:04:39-00:00</lastmod>
+<lastmod>2026-04-06T22:16:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/series/patrones-de-diseno-en-python/</loc>
-<lastmod>2026-04-04T22:04:39-00:00</lastmod>
+<lastmod>2026-04-06T22:16:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://pythonscouts.com/series/python-a-traves-de-ejemplos/</loc>
-<lastmod>2026-04-04T22:04:39-00:00</lastmod>
+<lastmod>2026-04-06T22:16:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

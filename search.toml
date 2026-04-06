@@ -8,6 +8,11 @@ url = "/acerca/"
 title = "Acerca"
 
 [[input.files]]
+path = "python-stack/index.html"
+url = "/python-stack/"
+title = "Estructuras de datos en Python: Pilas (stacks)"
+
+[[input.files]]
 path = "python-case/index.html"
 url = "/python-case/"
 title = "Palabras clave en Python: case"

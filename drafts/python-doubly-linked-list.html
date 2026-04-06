@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="es-es" class="h-100">
+
+<head>
+        <title>
+  Estructuras de datos en Python: Listas doblemente enlazadas - Python Scouts
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Leodanis Pozo Ramos">
+    <meta name="description" content="Las listas doblemente enlazadas conectan nodos en ambas direcciones, permitiendo recorrer la lista hacia adelante y hacia atrás de manera eficiente.">
+    <meta name="keywords" content="python, data structures">
+    <meta name="article:published_time" content="2026-04-16T22:50:00+02:00">
+    <meta name="article:modified_time" content="2026-04-16T22:50:00+02:00">
+    <meta name="article:author" content="Leodanis Pozo Ramos">
+    <meta name="article:section" content="Series">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="language" content="Spanish">
+    <meta name="generator" content="Pelican">
+    
+    <meta name="dcterms.rights" content="https://creativecommons.org/licenses/by-sa/4.0/">
+    <meta name="dcterms.rightsHolder" content="Leodanis Pozo Ramos">
+    <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Estructuras de datos en Python: Listas doblemente enlazadas">
+    <meta property="og:description" content="Las listas doblemente enlazadas conectan nodos en ambas direcciones, permitiendo recorrer la lista hacia adelante y hacia atrás de manera eficiente.">
+    <meta property="og:url" content="https://pythonscouts.com/drafts/python-doubly-linked-list.html">
+    <meta property="og:site_name" content="Python Scouts">
+    <meta property="og:image" content="https://pythonscouts.com/images/articles/python-doubly-linked-list/social.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Estructuras de datos en Python: Listas doblemente enlazadas">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:locale" content="es_ES">
+    <meta property="article:published_time" content="2026-04-16T22:50:00+02:00">
+    <meta property="article:author" content="Leodanis Pozo Ramos">
+    <meta property="article:section" content="Series">
+    <meta property="article:tag" content="python">
+    <meta property="article:tag" content="data structures">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lpozo78">
+    <meta name="twitter:creator" content="@lpozo78">
+    <meta name="twitter:title" content="Estructuras de datos en Python: Listas doblemente enlazadas">
+    <meta name="twitter:description" content="Las listas doblemente enlazadas conectan nodos en ambas direcciones, permitiendo recorrer la lista hacia adelante y hacia atrás de manera eficiente.">
+    <meta name="twitter:image" content="https://pythonscouts.com/images/articles/python-doubly-linked-list/social.webp">
+    <meta name="twitter:image:alt" content="Estructuras de datos en Python: Listas doblemente enlazadas">
+    <!-- RSS feeds -->
+    <link href="https://pythonscouts.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Full Atom Feed" />
+    <link href="https://pythonscouts.com/feeds/series.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Categories Atom Feed" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://pythonscouts.com/drafts/python-doubly-linked-list.html">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202604062216">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202604062216">
+    <!-- Preconnect to CDNs -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <!-- Bootstrap CSS (deferred) -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+          crossorigin="anonymous">
+    <!-- Bootstrap Icons (self-hosted, deferred) -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202604062216">
+    <!-- Stork Search - Deferred -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202604062216">
+
+
+    <!-- Article tags -->
+    <meta name="article:tag" content="python" />
+    <meta name="article:tag" content="data structures" />
+    <meta name="article:tag" content="palabras clave" />
+    <meta name="article:tag" content="fastapi" />
+    <meta name="article:tag" content="web" />
+    <meta name="article:tag" content="api" />
+    <meta name="article:tag" content="kivy" />
+    <meta name="article:tag" content="gui" />
+    <meta name="article:tag" content="ayuda" />
+    <meta name="article:tag" content="pyside6" />
+    <meta name="article:tag" content="linux" />
+    <meta name="article:tag" content="tkinter" />
+    <meta name="article:tag" content="pyqt" />
+    <meta name="article:tag" content="windows" />
+    <meta name="article:tag" content="macos" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Estructuras de datos en Python: Listas doblemente enlazadas">
+    <meta property="og:description" content="Las listas doblemente enlazadas conectan nodos en ambas direcciones, permitiendo recorrer la lista hacia adelante y hacia atrás de manera eficiente.">
+    <meta property="og:url" content="https://pythonscouts.com/drafts/python-doubly-linked-list.html">
+    <meta property="og:site_name" content="Python Scouts">
+    <meta property="og:image" content="https://pythonscouts.com/images/articles/python-doubly-linked-list/social.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Estructuras de datos en Python: Listas doblemente enlazadas">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:locale" content="es_ES">
+    <meta property="article:published_time" content="2026-04-16T22:50:00+02:00">
+    <meta property="article:author" content="Leodanis Pozo Ramos">
+    <meta property="article:section" content="Series">
+    <meta property="article:tag" content="python">
+    <meta property="article:tag" content="data structures">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lpozo78">
+    <meta name="twitter:creator" content="@lpozo78">
+    <meta name="twitter:title" content="Estructuras de datos en Python: Listas doblemente enlazadas">
+    <meta name="twitter:description" content="Las listas doblemente enlazadas conectan nodos en ambas direcciones, permitiendo recorrer la lista hacia adelante y hacia atrás de manera eficiente.">
+    <meta name="twitter:image" content="https://pythonscouts.com/images/articles/python-doubly-linked-list/social.webp">
+    <meta name="twitter:image:alt" content="Estructuras de datos en Python: Listas doblemente enlazadas">
+
+    <!-- Custom CSS for article -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202604062216">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
+<script
+    src="https://pythonscouts.com/theme/js/analytics.js?v=202604062216"
+    defer
+    data-analytics-id="G-R3C5PFSQ1S">
+</script>
+
+<body class="d-flex flex-column h-100">
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-md bg-white fixed-top border-bottom">
+        <div class="container-md content-px">
+            <a class="navbar-brand" href="/">
+            <img
+            src="https://pythonscouts.com/images/identity/header.webp"
+            alt="Python Scouts"
+            width="150"
+            height="50"
+            >
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Menú de Navegación">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav m-auto nav-link">
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/guias/" aria-current="page">
+                    Guías
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/series/" aria-current="page">
+                    Series
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/tutoriales/" aria-current="page">
+                    Tutoriales
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/acerca/" aria-current="page">
+                    Acerca
+                </a>
+                </li>
+            </ul>
+            <form class="d-flex search-form" role="search">
+                <button type="button" class="search-toggle btn btn-link p-0 me-2 d-none d-md-inline-flex" aria-label="Buscar">
+                    <i class="bi bi-search text-muted-strong"></i>
+                </button>
+                <div class="search-input-wrapper">
+                    <div class="stork-wrapper">
+                        <input
+                        class="stork-input"
+                        type="search"
+                        id="site-search"
+                        name="q"
+                        placeholder="Buscar"
+                        aria-label="Search"
+                        data-stork="sitesearch"
+                        >
+                    </div>
+                </div>
+            </form>
+            </div>
+        </div>
+    </nav>
+    <main id="main-content" class="container-md content-px py-3" tabindex="-1">
+        <div class="stork-wrapper">
+            <div data-stork="sitesearch-output" class="stork-output"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+            </div>
+        </div>
+
+    <!-- Article Header - Magazine Style -->
+    <header class="article-header mb-5">
+        <div class="row g-4 align-items-center">
+            <!-- Content Column -->
+            <div class="col-lg-6 order-lg-1">
+                <!-- Breadcrumbs -->
+                <nav aria-label="breadcrumb" class="mb-3">
+                    <ol class="breadcrumb mb-0 small">
+                        <li class="breadcrumb-item"><a href="https://pythonscouts.com">Inicio</a></li>
+                        <li class="breadcrumb-item"><a href="https://pythonscouts.com/series/">Series</a></li>
+                    </ol>
+                </nav>
+                
+                <!-- Category -->
+                <div class="mb-3">
+                    <span class="badge bg-success-subtle text-success border border-success px-3 py-2 text-uppercase fw-semibold">
+                        Series
+                    </span>
+                </div>
+                
+                <!-- Title -->
+                <h1 class="display-5 fw-bold mb-4">
+                    Estructuras de datos en Python: Listas doblemente enlazadas
+                </h1>
+                
+                <!-- Author & Meta -->
+                <div class="d-flex align-items-center gap-3 mb-4">
+                    <img src="https://pythonscouts.com/images/authors/leodanis-pozo-ramos.webp" 
+                         class="rounded-circle border" 
+                         width="60" height="60" 
+                         alt="Leodanis Pozo Ramos">
+                    <div>
+                        <div class="fw-semibold">Leodanis Pozo Ramos</div>
+                        <div class="text-muted-strong small">
+                            <i class="bi bi-calendar-event me-1"></i>
+                            16 abr 2026
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tags -->
+                <div class="d-flex gap-2 flex-wrap">
+                    <a href="https://pythonscouts.com/tag/python.html" 
+                       class="badge bg-light text-dark border text-decoration-none">
+                        python
+                    </a>
+                    <a href="https://pythonscouts.com/tag/data-structures.html" 
+                       class="badge bg-light text-dark border text-decoration-none">
+                        data structures
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Image Column -->
+            <div class="col-lg-6 order-lg-2">
+                <img src="https://pythonscouts.com/images/articles/python-doubly-linked-list/article.webp" 
+                     class="img-fluid w-100 rounded-4 shadow-lg" 
+                     alt="Estructuras de datos en Python: Listas doblemente enlazadas"
+                     style="max-height: 600px; object-fit: cover;">
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Content -->
+    <div class="row">
+        <!-- Article Body -->
+        <div class="col-lg-8">
+            <article class="article-body" itemscope itemtype="https://schema.org/BlogPosting">
+                <meta itemprop="headline" content="Estructuras de datos en Python: Listas doblemente enlazadas">
+                <meta itemprop="description" content="Las listas doblemente enlazadas conectan nodos en ambas direcciones, permitiendo recorrer la lista hacia adelante y hacia atrás de manera eficiente.">
+                <meta itemprop="datePublished" content="2026-04-16T22:50:00+02:00">
+                <meta itemprop="dateModified" content="2026-04-16T22:50:00+02:00">
+                <meta itemprop="author" content="Leodanis Pozo Ramos">
+                <meta itemprop="image" content="https://pythonscouts.com/images/articles/python-doubly-linked-list/social.webp">
+                <div itemprop="articleBody">
+                    <p class="lead text-muted-strong mb-4">
+                        <p>Las listas doblemente enlazadas conectan nodos en ambas direcciones, permitiendo recorrer la lista hacia adelante y hacia atrás de manera eficiente.</p>
+                    </p>
+                    <p>En este artículo, aprenderás cómo implementar una lista doblemente enlazada en Python, incluyendo sus operaciones y características principales.</p>
+<div class="toc"><span class="toctitle">Contenidos</span><ul>
+<li><a href="#que-es-una-lista-doblemente-enlazada">¿Qué es una lista doblemente enlazada?</a></li>
+<li><a href="#operaciones-comunes-en-una-lista-doblemente-enlazada">Operaciones comunes en una lista doblemente enlazada</a></li>
+<li><a href="#implementacion-de-una-lista-doblemente-enlazada-en-python">Implementación de una lista doblemente enlazada en Python</a></li>
+<li><a href="#ejemplo-de-uso-de-la-lista-doblemente-enlazada">Ejemplo de uso de la lista doblemente enlazada</a><ul>
+<li><a href="#inicializacion">Inicialización</a></li>
+<li><a href="#acceder-a-la-cabeza-y-la-cola">Acceder a la cabeza y la cola</a></li>
+<li><a href="#anadir-elementos">Añadir elementos</a></li>
+<li><a href="#insertar-en-una-posicion-especifica">Insertar en una posición específica</a></li>
+<li><a href="#eliminar-elementos">Eliminar elementos</a></li>
+<li><a href="#longitud-e-iteracion">Longitud e iteración</a></li>
+</ul>
+</li>
+<li><a href="#conclusion">Conclusión</a></li>
+</ul>
+</div>
+<h2 id="que-es-una-lista-doblemente-enlazada">¿Qué es una lista doblemente enlazada?</h2>
+<p>Una <a href="https://es.wikipedia.org/wiki/Lista_doblemente_enlazada">lista doblemente enlazada</a> es una colección lineal de datos donde cada elemento se almacena en un <a href="https://es.wikipedia.org/wiki/Nodo_(inform%C3%A1tica)">nodo</a> independiente. A diferencia de una <a href="/python-singly-linked-list/">lista enlazada simple</a>, cada nodo almacena tres piezas de información: un dato, una referencia al siguiente nodo (<code>.next</code>) y una referencia al nodo anterior (<code>.previous</code>).</p>
+<p>Las características fundamentales de una lista doblemente enlazada incluyen las siguientes:</p>
+<ul>
+<li><strong>Doble enlace</strong>: Cada nodo tiene referencias tanto al siguiente como al anterior.</li>
+<li><strong>Cabeza y cola</strong>: La lista mantiene referencias al primer nodo (<code>.head</code>) y al último (<code>.tail</code>).</li>
+<li><strong>Recorrido bidireccional</strong>: Puedes recorrer la lista en ambas direcciones, hacia adelante y hacia atrás.</li>
+<li><strong>Inserción y eliminación eficientes</strong>: Igual que en la lista enlazada simple, no necesitas reorganizar los demás nodos.</li>
+</ul>
+<p>En Python, las listas doblemente enlazadas no están integradas como una estructura de datos primitiva, pero puedes implementarlas usando clases para representar los nodos y la propia lista.</p>
+<h2 id="operaciones-comunes-en-una-lista-doblemente-enlazada">Operaciones comunes en una lista doblemente enlazada</h2>
+<p>A continuación, un resumen de las operaciones que soportará tu lista doblemente enlazada:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Operación</strong></th>
+<th><strong>Descripción</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dllist = DoublyLinkedList()</code></td>
+<td>Construye una lista doblemente enlazada vacía.</td>
+</tr>
+<tr>
+<td><code>dllist = DoublyLinkedList(iterable)</code></td>
+<td>Construye una lista doblemente enlazada con elementos de <code>iterable</code>.</td>
+</tr>
+<tr>
+<td><code>dllist.append_left(value)</code></td>
+<td>Añade un nodo con <code>value</code> al inicio de la lista.</td>
+</tr>
+<tr>
+<td><code>dllist.append(value)</code></td>
+<td>Añade un nodo con <code>value</code> al final de la lista.</td>
+</tr>
+<tr>
+<td><code>dllist.insert(index, value)</code></td>
+<td>Inserta un nodo con <code>value</code> en la posición <code>index</code>.</td>
+</tr>
+<tr>
+<td><code>dllist.remove(value)</code></td>
+<td>Elimina el nodo que contiene <code>value</code>.</td>
+</tr>
+<tr>
+<td><code>len(dllist)</code></td>
+<td>Devuelve el número de nodos en la lista.</td>
+</tr>
+<tr>
+<td><code>for node in dllist: ...</code></td>
+<td>Itera sobre los nodos hacia adelante.</td>
+</tr>
+<tr>
+<td><code>for node in reversed(dllist): ...</code></td>
+<td>Itera sobre los nodos hacia atrás.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="implementacion-de-una-lista-doblemente-enlazada-en-python">Implementación de una lista doblemente enlazada en Python</h2>
+<p>A continuación encontrarás la implementación de la lista doblemente enlazada en Python:</p>
+<div class="highlight"><span class="filename">Python - doubly_linked_list.py</span><pre><span></span><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Iterator</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Sequence</span>
+
+
+<span class="k">class</span> <span class="nc">Node</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Node of a doubly linked list.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">previous</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Node</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">next</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Node</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">(data=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="si">}</span><span class="s2">)&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="s2">&quot;Node&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">other</span><span class="o">.</span><span class="vm">__class__</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Node object expected&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">data</span>
+
+
+<span class="k">class</span> <span class="nc">DoublyLinkedList</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Implement a doubly linked list abstract data type.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">iterable</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Sequence</span><span class="p">[</span><span class="n">Any</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">/</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Node</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tail</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Node</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_length</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="n">iterable</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="p">(</span><span class="n">length</span> <span class="o">:=</span> <span class="nb">len</span><span class="p">(</span><span class="n">iterable</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">head</span><span class="p">,</span> <span class="o">*</span><span class="n">rest</span> <span class="o">=</span> <span class="n">iterable</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_length</span> <span class="o">=</span> <span class="n">length</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">head</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">head</span><span class="p">)</span>
+            <span class="n">current</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span>
+            <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">rest</span><span class="p">:</span>
+                <span class="n">current</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">value</span><span class="p">)</span>
+                <span class="n">previous</span> <span class="o">=</span> <span class="n">current</span>
+                <span class="n">current</span> <span class="o">=</span> <span class="n">current</span><span class="o">.</span><span class="n">next</span>
+                <span class="n">current</span><span class="o">.</span><span class="n">previous</span> <span class="o">=</span> <span class="n">previous</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tail</span> <span class="o">=</span> <span class="n">current</span>
+
+    <span class="k">def</span> <span class="nf">append_left</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add a node holding value to the left end of the list.&quot;&quot;&quot;</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">node</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="o">.</span><span class="n">previous</span> <span class="o">=</span> <span class="n">node</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tail</span> <span class="o">=</span> <span class="n">node</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">head</span> <span class="o">=</span> <span class="n">node</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_length</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="k">def</span> <span class="nf">append</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add a node holding value to the right end of the list.&quot;&quot;&quot;</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">tail</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">node</span><span class="o">.</span><span class="n">previous</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tail</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tail</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">node</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">head</span> <span class="o">=</span> <span class="n">node</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tail</span> <span class="o">=</span> <span class="n">node</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_length</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="k">def</span> <span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Remove the node holding value.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="n">value</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">head</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="o">.</span><span class="n">next</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="o">.</span><span class="n">previous</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">tail</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_length</span> <span class="o">-=</span> <span class="mi">1</span>
+            <span class="k">return</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">tail</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="n">value</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tail</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tail</span><span class="o">.</span><span class="n">previous</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">tail</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">tail</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_length</span> <span class="o">-=</span> <span class="mi">1</span>
+            <span class="k">return</span>
+        <span class="n">previous_node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span>
+        <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="n">value</span><span class="p">:</span>
+                <span class="n">next_node</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">next</span>
+                <span class="n">previous_node</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">next_node</span>
+                <span class="k">if</span> <span class="n">next_node</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">next_node</span><span class="o">.</span><span class="n">previous</span> <span class="o">=</span> <span class="n">previous_node</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_length</span> <span class="o">-=</span> <span class="mi">1</span>
+                <span class="k">return</span>
+            <span class="n">previous_node</span> <span class="o">=</span> <span class="n">node</span>
+        <span class="k">raise</span> <span class="ne">IndexError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2"> doesn&#39;t exist&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">insert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Insert a node holding value at index.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">index</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">append_left</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+            <span class="k">return</span>
+        <span class="n">previous_node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">current</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">index</span><span class="p">:</span>
+                <span class="n">node</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">value</span><span class="p">)</span>
+                <span class="n">previous_node</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">node</span>
+                <span class="n">node</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">current</span>
+                <span class="n">node</span><span class="o">.</span><span class="n">previous</span> <span class="o">=</span> <span class="n">previous_node</span>
+                <span class="n">current</span><span class="o">.</span><span class="n">previous</span> <span class="o">=</span> <span class="n">node</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_length</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="k">return</span>
+            <span class="n">previous_node</span> <span class="o">=</span> <span class="n">current</span>
+        <span class="k">raise</span> <span class="ne">IndexError</span><span class="p">(</span><span class="s2">&quot;index out of range&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">node</span><span class="o">.</span><span class="n">data</span> <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">]</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="n">data</span><span class="si">}</span><span class="s2">)&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">data</span><span class="p">)</span> <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">]</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;None&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;HEAD(</span><span class="si">{</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">)&quot;</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;HEAD(</span><span class="si">{</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">) &lt;-&gt; &quot;</span> <span class="o">+</span> <span class="s2">&quot; &lt;-&gt; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+
+    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">:</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span>
+        <span class="k">while</span> <span class="n">node</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">yield</span> <span class="n">node</span>
+            <span class="n">node</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">next</span>
+
+    <span class="k">def</span> <span class="fm">__reversed__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">:</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tail</span>
+        <span class="k">while</span> <span class="n">node</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">yield</span> <span class="n">node</span>
+            <span class="n">node</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">previous</span>
+
+    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_length</span>
+</code></pre></div>
+<p>La implementación consta de dos clases. La clase <code>Node</code> representa un nodo individual con atributos <code>.data</code>, <code>.next</code> y <code>.previous</code>. La clase <code>DoublyLinkedList</code> gestiona la cadena de nodos a través de <code>.head</code> (primer nodo), <code>.tail</code> (último nodo) y <code>._length</code> (número total de nodos).</p>
+<p>Los métodos principales te permiten ofrecer las siguientes funcionalidades:</p>
+<ul>
+<li><strong><code>.append_left()</code></strong>: añade un nodo al inicio de la lista. Si la lista está vacía, el nuevo nodo se convierte tanto en cabeza como en cola.</li>
+<li><strong><code>.append()</code></strong>: añade un nodo al final de la lista. Si la lista está vacía, el nuevo nodo se convierte tanto en cabeza como en cola.</li>
+<li><strong><code>.insert()</code></strong>: inserta un nodo en una posición específica, actualizando las referencias <code>.next</code> y <code>.previous</code> de los nodos vecinos.</li>
+<li><strong><code>.remove()</code></strong>: elimina el primer nodo que contiene el valor indicado. Maneja correctamente la eliminación de la cabeza, la cola y nodos intermedios.</li>
+</ul>
+<p>Los métodos especiales te permiten ofrecer las siguientes funcionalidades:</p>
+<ul>
+<li><strong><code>.__iter__()</code></strong>: permite iterar hacia adelante recorriendo las referencias <code>.next</code> desde la cabeza.</li>
+<li><strong><code>.__reversed__()</code></strong>: permite iterar hacia atrás recorriendo las referencias <code>.previous</code> desde la cola.</li>
+<li><strong><code>.__len__()</code></strong>: devuelve el número de nodos en la lista.</li>
+<li><strong><code>.__repr__()</code></strong>: devuelve una representación que muestra los datos como una lista.</li>
+<li><strong><code>.__str__()</code></strong>: devuelve una representación visual que muestra los dobles enlaces entre nodos con <code>&lt;-&gt;</code>.</li>
+</ul>
+<h2 id="ejemplo-de-uso-de-la-lista-doblemente-enlazada">Ejemplo de uso de la lista doblemente enlazada</h2>
+<p>En esta sección verás ejemplos prácticos de cómo crear y manipular instancias de tu clase <code>DoublyLinkedList</code>.</p>
+<h3 id="inicializacion">Inicialización</h3>
+<p>Para crear una <code>DoublyLinkedList</code>, puedes hacerlo sin argumentos o pasando una secuencia de datos:</p>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">dllist</span> <span class="o">=</span> <span class="n">DoublyLinkedList</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dllist</span>
+<span class="go">DoublyLinkedList([])</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dllist</span> <span class="o">=</span> <span class="n">DoublyLinkedList</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dllist</span>
+<span class="go">DoublyLinkedList([1, 2, 3])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">dllist</span><span class="p">)</span>
+<span class="go">HEAD(1) &lt;-&gt; 2 &lt;-&gt; 3 &lt;-&gt; None</span>
+</code></pre></div>
+<h3 id="acceder-a-la-cabeza-y-la-cola">Acceder a la cabeza y la cola</h3>
+<p>La lista mantiene referencias directas al primer y último nodo:</p>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">dllist</span> <span class="o">=</span> <span class="n">DoublyLinkedList</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dllist</span><span class="o">.</span><span class="n">head</span>
+<span class="go">Node(data=1)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dllist</span><span class="o">.</span><span class="n">tail</span>
+<span class="go">Node(data=3)</span>
+</code></pre></div>
+<h3 id="anadir-elementos">Añadir elementos</h3>
+<p>Puedes añadir elementos al inicio o al final de la lista:</p>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">dllist</span> <span class="o">=</span> <span class="n">DoublyLinkedList</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dllist</span><span class="o">.</span><span class="n">append_left</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dllist</span>
+<span class="go">DoublyLinkedList([1, 2, 3])</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dllist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dllist</span>
+<span class="go">DoublyLinkedList([1, 2, 3, 4])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">dllist</span><span class="p">)</span>
+<span class="go">HEAD(1) &lt;-&gt; 2 &lt;-&gt; 3 &lt;-&gt; 4 &lt;-&gt; None</span>
+</code></pre></div>
+<h3 id="insertar-en-una-posicion-especifica">Insertar en una posición específica</h3>
+<p>El método <code>.insert()</code> permite colocar un nodo en una posición determinada:</p>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">dllist</span> <span class="o">=</span> <span class="n">DoublyLinkedList</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dllist</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dllist</span>
+<span class="go">DoublyLinkedList([1, 2, 3])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">dllist</span><span class="p">)</span>
+<span class="go">3</span>
+</code></pre></div>
+<h3 id="eliminar-elementos">Eliminar elementos</h3>
+<p>El método <code>.remove()</code> elimina el primer nodo que contiene el valor indicado:</p>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">dllist</span> <span class="o">=</span> <span class="n">DoublyLinkedList</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dllist</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dllist</span>
+<span class="go">DoublyLinkedList([1, 3])</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dllist</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dllist</span>
+<span class="go">DoublyLinkedList([3])</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dllist</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dllist</span>
+<span class="go">DoublyLinkedList([])</span>
+</code></pre></div>
+<p>Si el valor no existe, obtendrás un error:</p>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">dllist</span> <span class="o">=</span> <span class="n">DoublyLinkedList</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dllist</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">99</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+<span class="w">    </span><span class="o">...</span>
+<span class="gr">IndexError</span>: <span class="n">99 doesn&#39;t exist</span>
+</code></pre></div>
+<h3 id="longitud-e-iteracion">Longitud e iteración</h3>
+<p>Puedes consultar la longitud de la lista e iterar en ambas direcciones:</p>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">dllist</span> <span class="o">=</span> <span class="n">DoublyLinkedList</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">dllist</span><span class="p">)</span>
+<span class="go">3</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">dllist</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">Node(data=1)</span>
+<span class="go">Node(data=2)</span>
+<span class="go">Node(data=3)</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="n">dllist</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">Node(data=3)</span>
+<span class="go">Node(data=2)</span>
+<span class="go">Node(data=1)</span>
+</code></pre></div>
+<h2 id="conclusion">Conclusión</h2>
+<p>Has aprendido cómo implementar una lista doblemente enlazada que proporciona enlaces bidireccionales y operaciones esenciales como añadir, insertar y eliminar nodos. Este conocimiento te permite comprender las ventajas de las listas doblemente enlazadas frente a las <a href="/python-singly-linked-list/">listas enlazadas simples</a>, especialmente cuando necesitas recorrer los datos en ambas direcciones o acceder eficientemente al último elemento.</p>
+                </div>
+            </article>
+
+            <!-- Previous / Next Article Navigation -->
+        </div>
+
+        <!-- Sticky TOC Sidebar (desktop only, populated by JS) -->
+        <aside class="col-lg-4 d-none d-lg-block">
+            <div id="toc-sidebar" class="toc-sidebar"></div>
+        </aside>
+    </div>
+
+    </main>
+
+<footer class="site-footer mt-auto">
+    <div class="footer-primary border-top border-success-subtle py-3">
+        <div class="container-md content-px">
+            <div class="row gy-3 align-items-center justify-content-between">
+                <div class="col-lg-6 col-md-7">
+                    <div class="d-flex flex-column flex-sm-row align-items-center align-items-sm-start gap-3 text-center text-sm-start">
+                        <a href="https://pythonscouts.com" class="d-inline-flex align-items-center text-decoration-none">
+                            <img src="https://pythonscouts.com/images/identity/logo-title.png" alt="Python Scouts" width="160" height="48" class="img-fluid footer-logo">
+                        </a>
+                        <p class="text-muted-strong footer-description mb-0">
+                            Python Scouts es tu espacio para aprender Python en español.
+                        </p>
+                        <div class="d-flex align-items-center gap-3 mt-1">
+                            <a href="https://github.com/lpozo" target="_blank" rel="noopener noreferrer" class="text-muted-strong text-decoration-none article-nav-link p-2 border-0 bg-transparent" aria-label="GitHub" style="transition: color 0.2s;">
+                                <i class="bi bi-github fs-5"></i>
+                            </a>
+                            <a href="https://twitter.com/lpozo78" target="_blank" rel="noopener noreferrer" class="text-muted-strong text-decoration-none article-nav-link p-2 border-0 bg-transparent" aria-label="Twitter" style="transition: color 0.2s;">
+                                <i class="bi bi-twitter-x fs-5"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/lpozor78" target="_blank" rel="noopener noreferrer" class="text-muted-strong text-decoration-none article-nav-link p-2 border-0 bg-transparent" aria-label="LinkedIn" style="transition: color 0.2s;">
+                                <i class="bi bi-linkedin fs-5"></i>
+                            </a>
+                            <a href="https://pythonscouts.com/feeds/all.atom.xml" target="_blank" rel="alternate" class="text-muted-strong text-decoration-none article-nav-link p-2 border-0 bg-transparent" aria-label="RSS Feed" style="transition: color 0.2s;">
+                                <i class="bi bi-rss-fill fs-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-5 text-center text-md-start">
+                    <h3 class="h6 text-uppercase text-success fw-semibold mb-2">Explora</h3>
+                    <nav aria-label="Footer navigation">
+                        <ul class="footer-links list-unstyled d-inline-flex flex-column gap-2 mb-0 text-start">
+                            <li><a href="https://pythonscouts.com/guias/">Guías</a></li>
+                            <li><a href="https://pythonscouts.com/series/">Series</a></li>
+                            <li><a href="https://pythonscouts.com/tutoriales/">Tutoriales</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-secondary py-3">
+        <div class="container-md content-px">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <div class="d-flex flex-column flex-sm-row align-items-center gap-2 text-center text-sm-start">
+                    <span class="text-white-50 small">
+                        &copy; 2023-2026 Leodanis Pozo Ramos.
+                    </span>
+                    <div class="d-flex align-items-center gap-2">
+                        <a href="https://creativecommons.org/licenses/by-sa/4.0/" 
+                           target="_blank" 
+                           rel="license noopener noreferrer"
+                           class="d-inline-block"
+                           style="background: white; padding: 4px 8px; border-radius: 4px;">
+                            <img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" 
+                                 alt="CC BY-SA 4.0" 
+                                 width="88" 
+                                 height="31"
+                                 style="border-width:0; display: block;">
+                        </a>
+                        <span class="text-white-50 small">
+                            Contenido licenciado bajo 
+                            <a href="https://creativecommons.org/licenses/by-sa/4.0/" 
+                               target="_blank" 
+                               rel="license noopener noreferrer"
+                               class="text-white text-decoration-none">
+                                CC BY-SA 4.0
+                                <i class="bi bi-box-arrow-up-right ms-1"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <span class="text-white-50 small">
+                    Imágenes cortesía de <a href="https://picsum.photos/" target="_blank" rel="noopener" class="text-white text-decoration-none">Picsum</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</footer>
+    <!-- JS Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
+    <!-- Stork and site scripts -->
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202604062216" defer></script>
+    <script
+        src="https://pythonscouts.com/theme/js/site.js?v=202604062216"
+        defer
+        data-stork-name="sitesearch"
+        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202604062216"
+        data-stork-index="https://pythonscouts.com/search-index.st">
+    </script>
+
+</body>
+</html>
