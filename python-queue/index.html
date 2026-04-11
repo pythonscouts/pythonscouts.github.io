@@ -8,10 +8,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Leodanis Pozo Ramos">
-    <meta name="description" content="Las colas o queues organizan los datos según el principio FIFO (primero en entrar, primero en salir). Son esenciales en la gestión de tareas y recursos.">
+    <meta name="description" content="Las colas o queues te permiten organizar los datos según el principio FIFO (primero en entrar, primero en salir). Son esenciales en la gestión de tareas y recursos.">
     <meta name="keywords" content="python, data structures">
-    <meta name="article:published_time" content="2026-04-09T22:50:00+02:00">
-    <meta name="article:modified_time" content="2026-04-09T22:50:00+02:00">
+    <meta name="article:published_time" content="2026-04-11T12:55:00+02:00">
+    <meta name="article:modified_time" content="2026-04-11T12:55:00+02:00">
     <meta name="article:author" content="Leodanis Pozo Ramos">
     <meta name="article:section" content="Series">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -23,8 +23,8 @@
     <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
     <meta property="og:title" content="Estructuras de datos en Python: Colas (queues)">
-    <meta property="og:description" content="Las colas o queues organizan los datos según el principio FIFO (primero en entrar, primero en salir). Son esenciales en la gestión de tareas y recursos.">
-    <meta property="og:url" content="https://pythonscouts.com/drafts/python-queue.html">
+    <meta property="og:description" content="Las colas o queues te permiten organizar los datos según el principio FIFO (primero en entrar, primero en salir). Son esenciales en la gestión de tareas y recursos.">
+    <meta property="og:url" content="https://pythonscouts.com/python-queue/">
     <meta property="og:site_name" content="Python Scouts">
     <meta property="og:image" content="https://pythonscouts.com/images/articles/python-queue/social.webp">
     <meta property="og:image:width" content="1200">
@@ -32,7 +32,7 @@
     <meta property="og:image:alt" content="Estructuras de datos en Python: Colas (queues)">
     <meta property="og:image:type" content="image/webp">
     <meta property="og:locale" content="es_ES">
-    <meta property="article:published_time" content="2026-04-09T22:50:00+02:00">
+    <meta property="article:published_time" content="2026-04-11T12:55:00+02:00">
     <meta property="article:author" content="Leodanis Pozo Ramos">
     <meta property="article:section" content="Series">
     <meta property="article:tag" content="python">
@@ -42,17 +42,17 @@
     <meta name="twitter:site" content="@lpozo78">
     <meta name="twitter:creator" content="@lpozo78">
     <meta name="twitter:title" content="Estructuras de datos en Python: Colas (queues)">
-    <meta name="twitter:description" content="Las colas o queues organizan los datos según el principio FIFO (primero en entrar, primero en salir). Son esenciales en la gestión de tareas y recursos.">
+    <meta name="twitter:description" content="Las colas o queues te permiten organizar los datos según el principio FIFO (primero en entrar, primero en salir). Son esenciales en la gestión de tareas y recursos.">
     <meta name="twitter:image" content="https://pythonscouts.com/images/articles/python-queue/social.webp">
     <meta name="twitter:image:alt" content="Estructuras de datos en Python: Colas (queues)">
     <!-- RSS feeds -->
     <link href="https://pythonscouts.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Full Atom Feed" />
     <link href="https://pythonscouts.com/feeds/series.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Categories Atom Feed" />
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://pythonscouts.com/drafts/python-queue.html">
+    <link rel="canonical" href="https://pythonscouts.com/python-queue/">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202604062216">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202604062216">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202604111253">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202604111253">
     <!-- Preconnect to CDNs -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
@@ -65,9 +65,9 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202604062216">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202604111253">
     <!-- Stork Search - Deferred -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202604062216">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202604111253">
 
 
     <!-- Article tags -->
@@ -90,8 +90,8 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
     <meta property="og:title" content="Estructuras de datos en Python: Colas (queues)">
-    <meta property="og:description" content="Las colas o queues organizan los datos según el principio FIFO (primero en entrar, primero en salir). Son esenciales en la gestión de tareas y recursos.">
-    <meta property="og:url" content="https://pythonscouts.com/drafts/python-queue.html">
+    <meta property="og:description" content="Las colas o queues te permiten organizar los datos según el principio FIFO (primero en entrar, primero en salir). Son esenciales en la gestión de tareas y recursos.">
+    <meta property="og:url" content="https://pythonscouts.com/python-queue/">
     <meta property="og:site_name" content="Python Scouts">
     <meta property="og:image" content="https://pythonscouts.com/images/articles/python-queue/social.webp">
     <meta property="og:image:width" content="1200">
@@ -99,7 +99,7 @@
     <meta property="og:image:alt" content="Estructuras de datos en Python: Colas (queues)">
     <meta property="og:image:type" content="image/webp">
     <meta property="og:locale" content="es_ES">
-    <meta property="article:published_time" content="2026-04-09T22:50:00+02:00">
+    <meta property="article:published_time" content="2026-04-11T12:55:00+02:00">
     <meta property="article:author" content="Leodanis Pozo Ramos">
     <meta property="article:section" content="Series">
     <meta property="article:tag" content="python">
@@ -109,18 +109,18 @@
     <meta name="twitter:site" content="@lpozo78">
     <meta name="twitter:creator" content="@lpozo78">
     <meta name="twitter:title" content="Estructuras de datos en Python: Colas (queues)">
-    <meta name="twitter:description" content="Las colas o queues organizan los datos según el principio FIFO (primero en entrar, primero en salir). Son esenciales en la gestión de tareas y recursos.">
+    <meta name="twitter:description" content="Las colas o queues te permiten organizar los datos según el principio FIFO (primero en entrar, primero en salir). Son esenciales en la gestión de tareas y recursos.">
     <meta name="twitter:image" content="https://pythonscouts.com/images/articles/python-queue/social.webp">
     <meta name="twitter:image:alt" content="Estructuras de datos en Python: Colas (queues)">
 
     <!-- Custom CSS for article -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202604062216">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202604111253">
 </head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
 <script
-    src="https://pythonscouts.com/theme/js/analytics.js?v=202604062216"
+    src="https://pythonscouts.com/theme/js/analytics.js?v=202604111253"
     defer
     data-analytics-id="G-R3C5PFSQ1S">
 </script>
@@ -230,7 +230,10 @@
                         <div class="fw-semibold">Leodanis Pozo Ramos</div>
                         <div class="text-muted-strong small">
                             <i class="bi bi-calendar-event me-1"></i>
-                            09 abr 2026
+                            11 abr 2026
+                            <span class="mx-2">•</span>
+                            <i class="bi bi-clock me-1"></i>
+                            6 min
                         </div>
                     </div>
                 </div>
@@ -264,16 +267,17 @@
         <div class="col-lg-8">
             <article class="article-body" itemscope itemtype="https://schema.org/BlogPosting">
                 <meta itemprop="headline" content="Estructuras de datos en Python: Colas (queues)">
-                <meta itemprop="description" content="Las colas o queues organizan los datos según el principio FIFO (primero en entrar, primero en salir). Son esenciales en la gestión de tareas y recursos.">
-                <meta itemprop="datePublished" content="2026-04-09T22:50:00+02:00">
-                <meta itemprop="dateModified" content="2026-04-09T22:50:00+02:00">
+                <meta itemprop="description" content="Las colas o queues te permiten organizar los datos según el principio FIFO (primero en entrar, primero en salir). Son esenciales en la gestión de tareas y recursos.">
+                <meta itemprop="datePublished" content="2026-04-11T12:55:00+02:00">
+                <meta itemprop="dateModified" content="2026-04-11T12:55:00+02:00">
                 <meta itemprop="author" content="Leodanis Pozo Ramos">
                 <meta itemprop="image" content="https://pythonscouts.com/images/articles/python-queue/social.webp">
                 <div itemprop="articleBody">
                     <p class="lead text-muted-strong mb-4">
-                        <p>Las colas o queues organizan los datos según el principio FIFO (primero en entrar, primero en salir). Son esenciales en la gestión de tareas y recursos.</p>
+                        <p>Las colas o <em>queues</em> te permiten organizar los datos según el principio FIFO (primero en entrar, primero en salir). Son esenciales en la gestión de tareas y recursos.</p>
                     </p>
                     <p>En este artículo, aprenderás cómo implementar una cola en Python, incluyendo sus operaciones y características principales.</p>
+<div class="code-link"><p>Puedes encontrar el código Python de este artículo en el <a href="https://github.com/pythonscouts/ps-ejemplos/tree/main/Series/queue-python" target="_blank" rel="noopener noreferrer">repositorio de ejemplos de Python Scouts</a>. ¡Te agradeceríamos mucho si nos dejas una estrella (⭐) en el repositorio!</p></div>
 <div class="toc"><span class="toctitle">Contenidos</span><ul>
 <li><a href="#que-es-una-cola-o-queue">¿Qué es una cola o queue?</a></li>
 <li><a href="#operaciones-comunes-en-una-cola">Operaciones comunes en una cola</a></li>
@@ -291,14 +295,17 @@
 </ul>
 </div>
 <h2 id="que-es-una-cola-o-queue">¿Qué es una cola o queue?</h2>
-<p>Una <a href="https://es.wikipedia.org/wiki/Cola_(inform%C3%A1tica)">cola</a> es una colección de elementos que permite añadir elementos por un extremo y retirarlos por el extremo opuesto. Las colas son muy utilizadas en programación para gestionar tareas, recursos compartidos y flujos de datos.</p>
+<p>Una <a href="https://es.wikipedia.org/wiki/Cola_(inform%C3%A1tica)">cola</a> es una colección de elementos que permite añadir elementos por un extremo y retirarlos por el extremo opuesto.</p>
+<p>Esta estructura de datos es ampliamente utilizada en la gestión de tareas, la programación de procesos, la simulación de eventos y los algoritmos.</p>
 <p>Las características fundamentales de una cola incluyen las siguientes:</p>
 <ul>
 <li><strong>FIFO</strong> (<em>First In, First Out</em>): El primer elemento que entró es el primero que sale.</li>
 <li><strong>Dos extremos</strong>: Los elementos se añaden por la parte trasera (<em>enqueue</em>) y se retiran por la parte delantera (<em>dequeue</em>).</li>
 <li><strong>Tamaño dinámico</strong>: La cola crece o decrece conforme añades o eliminas elementos.</li>
 </ul>
-<p>En Python, las colas no están integradas como una estructura de datos primitiva, pero puedes implementarla usando el tipo <code>collections.deque</code>, que proporciona operaciones eficientes de inserción y eliminación en ambos extremos.</p>
+<div class="admonition note">
+<p>En Python, las colas no están disponibles como una estructura de datos integrada. La librería estándar incluye el módulo <a href="https://docs.python.org/3/library/queue.html#module-queue"><code>queue</code></a> que está orientado sobre todo a la comunicación entre hilos (<strong>threads</strong>). Para implementar tu propia cola, también puedes usar <code>collections.deque</code>, que suele ser una opción práctica porque ofrece inserciones y eliminaciones eficientes en ambos extremos.</p>
+</div>
 <h2 id="operaciones-comunes-en-una-cola">Operaciones comunes en una cola</h2>
 <p>A continuación, un resumen de las operaciones que soportará tu cola:</p>
 <table>
@@ -335,7 +342,7 @@
 </tr>
 <tr>
 <td><code>queue.is_empty()</code></td>
-<td>Devuelve <code>True</code> si la cola está vacía, <code>False</code> en caso contrario.</td>
+<td>Devuelve <a href="/python-true/"><code>True</code></a> si la cola está vacía, <a href="/python-false/"><code>False</code></a> en caso contrario.</td>
 </tr>
 <tr>
 <td><code>len(queue)</code></td>
@@ -347,7 +354,7 @@
 </tr>
 <tr>
 <td><code>for item in queue: ...</code></td>
-<td>Itera sobre los elementos de la cola.</td>
+<td><a href="/ciclos-for-python/">Itera</a> sobre los elementos de la cola.</td>
 </tr>
 <tr>
 <td><code>for item in reversed(queue): ...</code></td>
@@ -356,15 +363,19 @@
 </tbody>
 </table>
 <h2 id="implementacion-de-una-cola-en-python">Implementación de una cola en Python</h2>
-<p>A continuación encontrarás la implementación de la cola en Python:</p>
-<div class="highlight"><span class="filename">Python - queue_adt.py</span><pre><span></span><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">deque</span>
+<p>Para implementar tu propia cola en Python, utilizarás la <a href="/python-class/">clase</a> <code>Queue</code> que encapsula la funcionalidad descrita anteriormente con el soporte de <code>collections.deque</code> para almacenar los elementos de la cola.</p>
+<p>A continuación, la implementación completa de la clase <code>Queue</code>:</p>
+<div class="highlight"><span class="filename">Python - queue.py</span><pre><span></span><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">deque</span>
 <span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">,</span> <span class="n">Iterator</span><span class="p">,</span> <span class="n">Optional</span>
-
 
 <span class="k">class</span> <span class="nc">Queue</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Implement a Queue (FIFO) abstract data type.&quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Iterable</span><span class="p">[</span><span class="n">Any</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">/</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">data</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Iterable</span><span class="p">[</span><span class="n">Any</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="o">/</span>
+        <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">:</span> <span class="n">deque</span> <span class="o">=</span> <span class="n">deque</span><span class="p">()</span>
         <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
@@ -417,26 +428,26 @@
     <span class="k">def</span> <span class="fm">__reversed__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">:</span>
         <span class="k">yield from</span> <span class="nb">reversed</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">)</span>
 </code></pre></div>
-<p>El atributo <code>._data</code> es un objeto <code>deque</code> del módulo <code>collections</code> que almacena los elementos de la cola. La clase <code>deque</code> proporciona operaciones de inserción y eliminación en tiempo constante O(1) en ambos extremos, lo que la hace ideal para implementar colas.</p>
+<p>El atributo <code>._data</code> es un objeto <code>deque</code> que almacena los elementos de la cola. La clase <code>deque</code> proporciona operaciones de inserción y eliminación en tiempo constante O(1) en ambos extremos, lo que la hace apropiada para implementar colas.</p>
 <p>Los métodos principales te permiten ofrecer las siguientes funcionalidades:</p>
 <ul>
 <li><strong><code>.enqueue()</code></strong>: añade un elemento al final de la cola usando <code>.append()</code>.</li>
-<li><strong><code>.dequeue()</code></strong>: elimina y devuelve el elemento del frente de la cola usando <code>.popleft()</code>. Lanza <code>IndexError</code> si la cola está vacía.</li>
-<li><strong><code>.front()</code></strong>: devuelve el elemento del frente sin eliminarlo. Lanza <code>IndexError</code> si la cola está vacía.</li>
+<li><strong><code>.dequeue()</code></strong>: devuelve y elimina el elemento del frente de la cola usando <code>.popleft()</code> y lanza <code>IndexError</code> si la cola está vacía.</li>
+<li><strong><code>.front()</code></strong>: devuelve el elemento del frente sin eliminarlo y lanza <code>IndexError</code> si la cola está vacía.</li>
 <li><strong><code>.remove()</code></strong>: elimina la primera aparición de un elemento. Lanza <code>ValueError</code> si el elemento no existe.</li>
 <li><strong><code>.is_empty()</code></strong>: comprueba si la cola está vacía.</li>
 </ul>
 <p>Los métodos especiales te permiten ofrecer las siguientes funcionalidades:</p>
 <ul>
 <li><strong><code>.__len__()</code></strong>: devuelve el número de elementos en la cola.</li>
-<li><strong><code>.__contains__()</code></strong>: comprueba si un elemento está en la cola y devuelve <code>True</code> o <code>False</code>.</li>
+<li><strong><code>.__contains__()</code></strong>: comprueba si un elemento está en la cola y devuelve <code>True</code> o <code>False</code> según corresponda.</li>
 <li><strong><code>.__iter__()</code></strong> y <strong><code>.__reversed__()</code></strong>: permiten iterar sobre los elementos de la cola en orden normal o inverso.</li>
-<li><strong><code>.__repr__()</code></strong> y <strong><code>.__str__()</code></strong>: devuelven representaciones de cadena legibles.</li>
+<li><strong><code>.__repr__()</code></strong> y <strong><code>.__str__()</code></strong>: devuelven representaciones de cadena de la cola.</li>
 </ul>
 <h2 id="ejemplo-de-uso-de-la-cola">Ejemplo de uso de la cola</h2>
 <p>En esta sección verás ejemplos prácticos de cómo crear y manipular instancias de tu clase <code>Queue</code>.</p>
 <h3 id="inicializacion">Inicialización</h3>
-<p>Para crear una <code>Queue</code>, puedes hacerlo sin argumentos o pasando un iterable:</p>
+<p>Para crear una <code>Queue</code>, puedes hacerlo sin argumentos o pasando un iterable como una lista:</p>
 <div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">queue</span> <span class="o">=</span> <span class="n">Queue</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">queue</span>
 <span class="go">Queue([])</span>
@@ -461,7 +472,7 @@
 <span class="gp">&gt;&gt;&gt; </span><span class="n">queue</span>
 <span class="go">Queue([3])</span>
 </code></pre></div>
-<p>Si intentas desencolar un elemento de una cola vacía, obtendrás un error:</p>
+<p>Si intentas extraer un elemento de una cola vacía, obtendrás un error:</p>
 <div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">queue</span> <span class="o">=</span> <span class="n">Queue</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">queue</span><span class="o">.</span><span class="n">dequeue</span><span class="p">()</span>
 <span class="gt">Traceback (most recent call last):</span>
@@ -477,7 +488,7 @@
 <span class="go">Queue([1, 2, 3])</span>
 </code></pre></div>
 <h3 id="eliminar-un-elemento-especifico">Eliminar un elemento específico</h3>
-<p>El método <code>.remove()</code> elimina la primera aparición de un elemento de la cola:</p>
+<p>El método <code>.remove()</code> elimina la primera aparición de un elemento de la cola y lanza un <code>ValueError</code> si el elemento no se encuentra:</p>
 <div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">queue</span> <span class="o">=</span> <span class="n">Queue</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">queue</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">queue</span>
@@ -489,7 +500,7 @@
 <span class="gr">ValueError</span>: <span class="n">Queue.remove(x): x not found</span>
 </code></pre></div>
 <h3 id="longitud-y-pertenencia">Longitud y pertenencia</h3>
-<p>Puedes consultar la longitud de la cola y verificar si un elemento está contenido en ella:</p>
+<p>Puedes consultar la longitud de la cola con <code>len()</code> y verificar si un elemento está contenido en ella con el operador <a href="/python-in/"><code>in</code></a>:</p>
 <div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">queue</span> <span class="o">=</span> <span class="n">Queue</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">])</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">queue</span><span class="p">)</span>
@@ -521,11 +532,29 @@
 <span class="go">1</span>
 </code></pre></div>
 <h2 id="conclusion">Conclusión</h2>
-<p>Has aprendido cómo implementar una cola que proporciona operaciones esenciales como encolar y desencolar elementos siguiendo el principio FIFO, consultar el frente, eliminar elementos específicos y verificar pertenencia. Este conocimiento te sirve de base para entender algoritmos que dependen de colas, como la búsqueda en anchura, la gestión de tareas en sistemas operativos y los <em>buffers</em> de datos.</p>
+<p>Has aprendido cómo implementar una cola (<em>queue</em>) que proporciona operaciones esenciales como añadir y eliminar elementos siguiendo el principio FIFO, consultar el primer elemento, eliminar elementos específicos y verificar si un elemento pertenece a la cola.</p>
+<p>Este conocimiento te sirve de base para entender algoritmos que dependen de colas, como la búsqueda en anchura, la gestión de tareas en sistemas operativos y los <em>buffers</em> de datos.</p>
+<div class="code-link"><p>Puedes encontrar el código Python de este artículo en el <a href="https://github.com/pythonscouts/ps-ejemplos/tree/main/Series/queue-python" target="_blank" rel="noopener noreferrer">repositorio de ejemplos de Python Scouts</a>. ¡Te agradeceríamos mucho si nos dejas una estrella (⭐) en el repositorio!</p></div>
                 </div>
             </article>
 
             <!-- Previous / Next Article Navigation -->
+            <nav class="article-nav my-5 pt-4 border-top" aria-label="Navegación entre artículos">
+                <div class="row g-3">
+                    <div class="col-6">
+                        <a href="https://pythonscouts.com/python-stack/" class="article-nav-link article-nav-prev text-decoration-none">
+                            <span class="article-nav-label text-muted-strong small d-block mb-1">
+                                <i class="bi bi-arrow-left me-1"></i> Anterior
+                            </span>
+                            <span class="article-nav-title fw-semibold">
+                                Estructuras de datos en Python: Pilas (stacks)
+                            </span>
+                        </a>
+                    </div>
+                    <div class="col-6 text-end">
+                    </div>
+                </div>
+            </nav>
         </div>
 
         <!-- Sticky TOC Sidebar (desktop only, populated by JS) -->
@@ -618,12 +647,12 @@
     <!-- JS Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
     <!-- Stork and site scripts -->
-    <script src="https://pythonscouts.com/theme/js/stork.js?v=202604062216" defer></script>
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202604111253" defer></script>
     <script
-        src="https://pythonscouts.com/theme/js/site.js?v=202604062216"
+        src="https://pythonscouts.com/theme/js/site.js?v=202604111253"
         defer
         data-stork-name="sitesearch"
-        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202604062216"
+        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202604111253"
         data-stork-index="https://pythonscouts.com/search-index.st">
     </script>
 
