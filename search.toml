@@ -8,6 +8,11 @@ url = "/acerca/"
 title = "Acerca"
 
 [[input.files]]
+path = "python-singly-linked-list/index.html"
+url = "/python-singly-linked-list/"
+title = "Estructuras de datos en Python: Listas enlazadas simples"
+
+[[input.files]]
 path = "python-queue/index.html"
 url = "/python-queue/"
 title = "Estructuras de datos en Python: Colas (queues)"

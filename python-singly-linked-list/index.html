@@ -10,8 +10,8 @@
     <meta name="author" content="Leodanis Pozo Ramos">
     <meta name="description" content="Las listas enlazadas simples almacenan datos en nodos conectados por referencias. Son útiles cuando necesitas insertar o eliminar elementos eficientemente.">
     <meta name="keywords" content="python, data structures">
-    <meta name="article:published_time" content="2026-04-14T22:50:00+02:00">
-    <meta name="article:modified_time" content="2026-04-14T22:50:00+02:00">
+    <meta name="article:published_time" content="2026-04-17T16:25:00+02:00">
+    <meta name="article:modified_time" content="2026-04-17T16:25:00+02:00">
     <meta name="article:author" content="Leodanis Pozo Ramos">
     <meta name="article:section" content="Series">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -24,7 +24,7 @@
     <meta property="og:type" content="article">
     <meta property="og:title" content="Estructuras de datos en Python: Listas enlazadas simples">
     <meta property="og:description" content="Las listas enlazadas simples almacenan datos en nodos conectados por referencias. Son útiles cuando necesitas insertar o eliminar elementos eficientemente.">
-    <meta property="og:url" content="https://pythonscouts.com/drafts/python-singly-linked-list.html">
+    <meta property="og:url" content="https://pythonscouts.com/python-singly-linked-list/">
     <meta property="og:site_name" content="Python Scouts">
     <meta property="og:image" content="https://pythonscouts.com/images/articles/python-singly-linked-list/social.webp">
     <meta property="og:image:width" content="1200">
@@ -32,7 +32,7 @@
     <meta property="og:image:alt" content="Estructuras de datos en Python: Listas enlazadas simples">
     <meta property="og:image:type" content="image/webp">
     <meta property="og:locale" content="es_ES">
-    <meta property="article:published_time" content="2026-04-14T22:50:00+02:00">
+    <meta property="article:published_time" content="2026-04-17T16:25:00+02:00">
     <meta property="article:author" content="Leodanis Pozo Ramos">
     <meta property="article:section" content="Series">
     <meta property="article:tag" content="python">
@@ -49,10 +49,10 @@
     <link href="https://pythonscouts.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Full Atom Feed" />
     <link href="https://pythonscouts.com/feeds/series.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Categories Atom Feed" />
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://pythonscouts.com/drafts/python-singly-linked-list.html">
+    <link rel="canonical" href="https://pythonscouts.com/python-singly-linked-list/">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202604111253">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202604111253">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202604171620">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202604171620">
     <!-- Preconnect to CDNs -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
@@ -65,9 +65,9 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202604111253">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202604171620">
     <!-- Stork Search - Deferred -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202604111253">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202604171620">
 
 
     <!-- Article tags -->
@@ -91,7 +91,7 @@
     <meta property="og:type" content="article">
     <meta property="og:title" content="Estructuras de datos en Python: Listas enlazadas simples">
     <meta property="og:description" content="Las listas enlazadas simples almacenan datos en nodos conectados por referencias. Son útiles cuando necesitas insertar o eliminar elementos eficientemente.">
-    <meta property="og:url" content="https://pythonscouts.com/drafts/python-singly-linked-list.html">
+    <meta property="og:url" content="https://pythonscouts.com/python-singly-linked-list/">
     <meta property="og:site_name" content="Python Scouts">
     <meta property="og:image" content="https://pythonscouts.com/images/articles/python-singly-linked-list/social.webp">
     <meta property="og:image:width" content="1200">
@@ -99,7 +99,7 @@
     <meta property="og:image:alt" content="Estructuras de datos en Python: Listas enlazadas simples">
     <meta property="og:image:type" content="image/webp">
     <meta property="og:locale" content="es_ES">
-    <meta property="article:published_time" content="2026-04-14T22:50:00+02:00">
+    <meta property="article:published_time" content="2026-04-17T16:25:00+02:00">
     <meta property="article:author" content="Leodanis Pozo Ramos">
     <meta property="article:section" content="Series">
     <meta property="article:tag" content="python">
@@ -114,13 +114,13 @@
     <meta name="twitter:image:alt" content="Estructuras de datos en Python: Listas enlazadas simples">
 
     <!-- Custom CSS for article -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202604111253">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202604171620">
 </head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
 <script
-    src="https://pythonscouts.com/theme/js/analytics.js?v=202604111253"
+    src="https://pythonscouts.com/theme/js/analytics.js?v=202604171620"
     defer
     data-analytics-id="G-R3C5PFSQ1S">
 </script>
@@ -230,7 +230,10 @@
                         <div class="fw-semibold">Leodanis Pozo Ramos</div>
                         <div class="text-muted-strong small">
                             <i class="bi bi-calendar-event me-1"></i>
-                            14 abr 2026
+                            17 abr 2026
+                            <span class="mx-2">•</span>
+                            <i class="bi bi-clock me-1"></i>
+                            7 min
                         </div>
                     </div>
                 </div>
@@ -265,8 +268,8 @@
             <article class="article-body" itemscope itemtype="https://schema.org/BlogPosting">
                 <meta itemprop="headline" content="Estructuras de datos en Python: Listas enlazadas simples">
                 <meta itemprop="description" content="Las listas enlazadas simples almacenan datos en nodos conectados por referencias. Son útiles cuando necesitas insertar o eliminar elementos eficientemente.">
-                <meta itemprop="datePublished" content="2026-04-14T22:50:00+02:00">
-                <meta itemprop="dateModified" content="2026-04-14T22:50:00+02:00">
+                <meta itemprop="datePublished" content="2026-04-17T16:25:00+02:00">
+                <meta itemprop="dateModified" content="2026-04-17T16:25:00+02:00">
                 <meta itemprop="author" content="Leodanis Pozo Ramos">
                 <meta itemprop="image" content="https://pythonscouts.com/images/articles/python-singly-linked-list/social.webp">
                 <div itemprop="articleBody">
@@ -274,6 +277,7 @@
                         <p>Las listas enlazadas simples almacenan datos en nodos conectados por referencias. Son útiles cuando necesitas insertar o eliminar elementos eficientemente.</p>
                     </p>
                     <p>En este artículo, aprenderás cómo implementar una lista enlazada simple en Python, incluyendo sus operaciones y características principales.</p>
+<div class="code-link"><p>Puedes encontrar el código Python de este artículo en el <a href="https://github.com/pythonscouts/ps-ejemplos/tree/main/Series/singly-llist-python" target="_blank" rel="noopener noreferrer">repositorio de ejemplos de Python Scouts</a>. ¡Te agradeceríamos mucho si nos dejas una estrella (⭐) en el repositorio!</p></div>
 <div class="toc"><span class="toctitle">Contenidos</span><ul>
 <li><a href="#que-es-una-lista-enlazada-simple">¿Qué es una lista enlazada simple?</a></li>
 <li><a href="#operaciones-comunes-en-una-lista-enlazada-simple">Operaciones comunes en una lista enlazada simple</a></li>
@@ -350,8 +354,7 @@
 </table>
 <h2 id="implementacion-de-una-lista-enlazada-simple-en-python">Implementación de una lista enlazada simple en Python</h2>
 <p>A continuación encontrarás la implementación de la lista enlazada simple en Python:</p>
-<div class="highlight"><span class="filename">Python - linked_list.py</span><pre><span></span><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Iterator</span><span class="p">,</span> <span class="n">Optional</span>
-
+<div class="highlight"><span class="filename">Python - linked_list.py</span><pre><span></span><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">,</span> <span class="n">Iterator</span><span class="p">,</span> <span class="n">Optional</span>
 
 <span class="k">class</span> <span class="nc">Node</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Node of a linked list.&quot;&quot;&quot;</span>
@@ -362,7 +365,6 @@
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
-
 
 <span class="k">class</span> <span class="nc">LinkedList</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Implement a singly linked list abstract data type.&quot;&quot;&quot;</span>
@@ -488,7 +490,9 @@
 <p>En esta sección verás ejemplos prácticos de cómo crear y manipular instancias de tu clase <code>LinkedList</code>.</p>
 <h3 id="inicializacion">Inicialización</h3>
 <p>Para crear una <code>LinkedList</code>, puedes hacerlo sin argumentos o pasando una lista de datos:</p>
-<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">llist</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="p">()</span>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">linked_list</span> <span class="kn">import</span> <span class="n">LinkedList</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">llist</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">llist</span>
 <span class="go">LinkedList([])</span>
 
@@ -500,7 +504,9 @@
 </code></pre></div>
 <h3 id="anadir-elementos">Añadir elementos</h3>
 <p>Puedes añadir elementos al inicio o al final de la lista:</p>
-<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">llist</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">linked_list</span> <span class="kn">import</span> <span class="n">LinkedList</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">llist</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">llist</span><span class="o">.</span><span class="n">append_left</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">llist</span>
@@ -514,13 +520,17 @@
 </code></pre></div>
 <h3 id="insertar-en-una-posicion-especifica">Insertar en una posición específica</h3>
 <p>El método <code>.insert()</code> permite colocar un nodo en una posición determinada:</p>
-<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">llist</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">linked_list</span> <span class="kn">import</span> <span class="n">LinkedList</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">llist</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">llist</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">llist</span>
 <span class="go">LinkedList([1, 2, 3])</span>
 </code></pre></div>
 <p>Si el índice está fuera de rango, obtendrás un error:</p>
-<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">llist</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">linked_list</span> <span class="kn">import</span> <span class="n">LinkedList</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">llist</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">llist</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 <span class="gt">Traceback (most recent call last):</span>
 <span class="w">    </span><span class="o">...</span>
@@ -528,7 +538,9 @@
 </code></pre></div>
 <h3 id="eliminar-elementos">Eliminar elementos</h3>
 <p>El método <code>.remove()</code> elimina el primer nodo que contiene el valor indicado:</p>
-<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">llist</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">linked_list</span> <span class="kn">import</span> <span class="n">LinkedList</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">llist</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">llist</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">llist</span>
@@ -539,7 +551,9 @@
 <span class="go">LinkedList([3])</span>
 </code></pre></div>
 <p>Si el valor no existe, obtendrás un error:</p>
-<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">llist</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">linked_list</span> <span class="kn">import</span> <span class="n">LinkedList</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">llist</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">llist</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">99</span><span class="p">)</span>
 <span class="gt">Traceback (most recent call last):</span>
 <span class="w">    </span><span class="o">...</span>
@@ -547,7 +561,9 @@
 </code></pre></div>
 <h3 id="invertir-la-lista">Invertir la lista</h3>
 <p>El método <code>.reverse()</code> invierte el orden de los nodos en su lugar:</p>
-<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">llist</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">linked_list</span> <span class="kn">import</span> <span class="n">LinkedList</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">llist</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">llist</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">llist</span>
 <span class="go">LinkedList([3, 2, 1])</span>
@@ -556,7 +572,9 @@
 </code></pre></div>
 <h3 id="longitud-e-iteracion">Longitud e iteración</h3>
 <p>Puedes consultar la longitud de la lista e iterar sobre sus nodos:</p>
-<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">llist</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">linked_list</span> <span class="kn">import</span> <span class="n">LinkedList</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">llist</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">llist</span><span class="p">)</span>
 <span class="go">3</span>
@@ -569,11 +587,29 @@
 <span class="go">3</span>
 </code></pre></div>
 <h2 id="conclusion">Conclusión</h2>
-<p>Has aprendido cómo implementar una lista enlazada simple que proporciona operaciones esenciales como añadir, insertar, eliminar e invertir nodos. Este conocimiento te sirve de base para comprender cómo funcionan las estructuras de datos que no dependen de memoria contigua y cuándo es preferible usarlas frente a <a href="/python-array/">arreglos</a> o listas de Python.</p>
+<p>Has aprendido cómo implementar una lista enlazada simple que proporciona operaciones esenciales como añadir, insertar, eliminar e invertir nodos.</p>
+<p>Este conocimiento te sirve de base para comprender cómo funcionan las estructuras de datos que no dependen de memoria contigua y cuándo es preferible usarlas frente a <a href="/python-array/">arreglos</a> o listas de Python.</p>
+<div class="code-link"><p>Puedes encontrar el código Python de este artículo en el <a href="https://github.com/pythonscouts/ps-ejemplos/tree/main/Series/singly-llist-python" target="_blank" rel="noopener noreferrer">repositorio de ejemplos de Python Scouts</a>. ¡Te agradeceríamos mucho si nos dejas una estrella (⭐) en el repositorio!</p></div>
                 </div>
             </article>
 
             <!-- Previous / Next Article Navigation -->
+            <nav class="article-nav my-5 pt-4 border-top" aria-label="Navegación entre artículos">
+                <div class="row g-3">
+                    <div class="col-6">
+                        <a href="https://pythonscouts.com/python-queue/" class="article-nav-link article-nav-prev text-decoration-none">
+                            <span class="article-nav-label text-muted-strong small d-block mb-1">
+                                <i class="bi bi-arrow-left me-1"></i> Anterior
+                            </span>
+                            <span class="article-nav-title fw-semibold">
+                                Estructuras de datos en Python: Colas (queues)
+                            </span>
+                        </a>
+                    </div>
+                    <div class="col-6 text-end">
+                    </div>
+                </div>
+            </nav>
         </div>
 
         <!-- Sticky TOC Sidebar (desktop only, populated by JS) -->
@@ -666,12 +702,12 @@
     <!-- JS Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
     <!-- Stork and site scripts -->
-    <script src="https://pythonscouts.com/theme/js/stork.js?v=202604111253" defer></script>
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202604171620" defer></script>
     <script
-        src="https://pythonscouts.com/theme/js/site.js?v=202604111253"
+        src="https://pythonscouts.com/theme/js/site.js?v=202604171620"
         defer
         data-stork-name="sitesearch"
-        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202604111253"
+        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202604171620"
         data-stork-index="https://pythonscouts.com/search-index.st">
     </script>
 
