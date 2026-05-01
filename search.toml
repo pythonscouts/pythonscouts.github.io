@@ -8,6 +8,11 @@ url = "/acerca/"
 title = "Acerca"
 
 [[input.files]]
+path = "python-bag/index.html"
+url = "/python-bag/"
+title = "Estructuras de datos en Python: Bolsas (bags)"
+
+[[input.files]]
 path = "python-doubly-linked-list/index.html"
 url = "/python-doubly-linked-list/"
 title = "Estructuras de datos en Python: Listas doblemente enlazadas"
