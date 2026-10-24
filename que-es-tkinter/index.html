@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="es-es" class="h-100">
+
+<head>
+        <title>
+  Qué es Tkinter y por qué usarlo para GUI en Python - Python Scouts
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Leodanis Pozo Ramos">
+    <meta name="description" content="Tkinter es la biblioteca estándar de Python para crear interfaces gráficas de usuario (GUI). Viene incluida en la biblioteca estándar, es multiplataforma y...">
+    <meta name="keywords" content="tkinter, gui, python">
+    <meta name="article:published_time" content="2026-10-24T10:00:00+02:00">
+    <meta name="article:modified_time" content="2026-10-24T10:00:00+02:00">
+    <meta name="article:author" content="Leodanis Pozo Ramos">
+    <meta name="article:section" content="Tutoriales">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="language" content="Spanish">
+    <meta name="generator" content="Pelican">
+    
+    <meta name="dcterms.rights" content="https://creativecommons.org/licenses/by-sa/4.0/">
+    <meta name="dcterms.rightsHolder" content="Leodanis Pozo Ramos">
+    <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Qué es Tkinter y por qué usarlo para GUI en Python">
+    <meta property="og:description" content="Tkinter es la biblioteca estándar de Python para crear interfaces gráficas de usuario (GUI). Viene incluida en la biblioteca estándar, es multiplataforma y no requiere instalaciones adicionales.">
+    <meta property="og:url" content="https://pythonscouts.com/que-es-tkinter/">
+    <meta property="og:site_name" content="Python Scouts">
+    <meta property="og:image" content="https://pythonscouts.com/images/articles/que-es-tkinter/article.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Qué es Tkinter y por qué usarlo para GUI en Python">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:locale" content="es_ES">
+    <meta property="article:published_time" content="2026-10-24T10:00:00+02:00">
+    <meta property="article:author" content="Leodanis Pozo Ramos">
+    <meta property="article:section" content="Tutoriales">
+    <meta property="article:tag" content="tkinter">
+    <meta property="article:tag" content="gui">
+    <meta property="article:tag" content="python">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lpozo78">
+    <meta name="twitter:creator" content="@lpozo78">
+    <meta name="twitter:title" content="Qué es Tkinter y por qué usarlo para GUI en Python">
+    <meta name="twitter:description" content="Tkinter es la biblioteca estándar de Python para crear interfaces gráficas de usuario (GUI). Viene incluida en la biblioteca estándar, es multiplataforma y no requiere instalaciones adicionales.">
+    <meta name="twitter:image" content="https://pythonscouts.com/images/articles/que-es-tkinter/article.webp">
+    <meta name="twitter:image:alt" content="Qué es Tkinter y por qué usarlo para GUI en Python">
+    <!-- RSS feeds -->
+    <link href="https://pythonscouts.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Full Atom Feed" />
+    <link href="https://pythonscouts.com/feeds/tutoriales.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Categories Atom Feed" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://pythonscouts.com/que-es-tkinter/">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202610241129">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202610241129">
+    <!-- Preconnect to CDNs -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <!-- Bootstrap CSS (deferred) -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+          crossorigin="anonymous">
+    <!-- Bootstrap Icons (self-hosted, deferred) -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202610241129">
+    <!-- Stork Search - Deferred -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202610241129">
+
+
+    <!-- Article tags -->
+    <meta name="article:tag" content="tkinter" />
+    <meta name="article:tag" content="gui" />
+    <meta name="article:tag" content="python" />
+    <meta name="article:tag" content="data structures" />
+    <meta name="article:tag" content="estructuras de datos" />
+    <meta name="article:tag" content="palabras clave" />
+    <meta name="article:tag" content="fastapi" />
+    <meta name="article:tag" content="web" />
+    <meta name="article:tag" content="api" />
+    <meta name="article:tag" content="kivy" />
+    <meta name="article:tag" content="ayuda" />
+    <meta name="article:tag" content="pyside6" />
+    <meta name="article:tag" content="linux" />
+    <meta name="article:tag" content="pyqt" />
+    <meta name="article:tag" content="windows" />
+    <meta name="article:tag" content="macos" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Qué es Tkinter y por qué usarlo para GUI en Python">
+    <meta property="og:description" content="Tkinter es la biblioteca estándar de Python para crear interfaces gráficas de usuario (GUI). Viene incluida en la biblioteca estándar, es multiplataforma y no requiere instalaciones adicionales.">
+    <meta property="og:url" content="https://pythonscouts.com/que-es-tkinter/">
+    <meta property="og:site_name" content="Python Scouts">
+    <meta property="og:image" content="https://pythonscouts.com/images/articles/que-es-tkinter/article.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Qué es Tkinter y por qué usarlo para GUI en Python">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:locale" content="es_ES">
+    <meta property="article:published_time" content="2026-10-24T10:00:00+02:00">
+    <meta property="article:author" content="Leodanis Pozo Ramos">
+    <meta property="article:section" content="Tutoriales">
+    <meta property="article:tag" content="tkinter">
+    <meta property="article:tag" content="gui">
+    <meta property="article:tag" content="python">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lpozo78">
+    <meta name="twitter:creator" content="@lpozo78">
+    <meta name="twitter:title" content="Qué es Tkinter y por qué usarlo para GUI en Python">
+    <meta name="twitter:description" content="Tkinter es la biblioteca estándar de Python para crear interfaces gráficas de usuario (GUI). Viene incluida en la biblioteca estándar, es multiplataforma y no requiere instalaciones adicionales.">
+    <meta name="twitter:image" content="https://pythonscouts.com/images/articles/que-es-tkinter/article.webp">
+    <meta name="twitter:image:alt" content="Qué es Tkinter y por qué usarlo para GUI en Python">
+
+    <!-- Custom CSS for article -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202610241129">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
+<script
+    src="https://pythonscouts.com/theme/js/analytics.js?v=202610241129"
+    defer
+    data-analytics-id="G-R3C5PFSQ1S">
+</script>
+
+<body class="d-flex flex-column h-100">
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-md bg-white fixed-top border-bottom">
+        <div class="container-md content-px">
+            <a class="navbar-brand" href="/">
+            <img
+            src="https://pythonscouts.com/images/identity/header.webp"
+            alt="Python Scouts"
+            width="150"
+            height="50"
+            >
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Menú de Navegación">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav m-auto nav-link">
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/guias/" aria-current="page">
+                    Guías
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/series/" aria-current="page">
+                    Series
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/tutoriales/" aria-current="page">
+                    Tutoriales
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/acerca/" aria-current="page">
+                    Acerca
+                </a>
+                </li>
+            </ul>
+            <form class="d-flex search-form" role="search">
+                <button type="button" class="search-toggle btn btn-link p-0 me-2 d-none d-md-inline-flex" aria-label="Buscar">
+                    <i class="bi bi-search text-muted-strong"></i>
+                </button>
+                <div class="search-input-wrapper">
+                    <div class="stork-wrapper">
+                        <input
+                        class="stork-input"
+                        type="search"
+                        id="site-search"
+                        name="q"
+                        placeholder="Buscar"
+                        aria-label="Search"
+                        data-stork="sitesearch"
+                        >
+                    </div>
+                </div>
+            </form>
+            </div>
+        </div>
+    </nav>
+    <main id="main-content" class="container-md content-px py-3" tabindex="-1">
+        <div class="stork-wrapper">
+            <div data-stork="sitesearch-output" class="stork-output"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+            </div>
+        </div>
+
+    <!-- Article Header - Magazine Style -->
+    <header class="article-header mb-5">
+        <div class="row g-4 align-items-center">
+            <!-- Content Column -->
+            <div class="col-lg-6 order-lg-1">
+                <!-- Breadcrumbs -->
+                <nav aria-label="breadcrumb" class="mb-3">
+                    <ol class="breadcrumb mb-0 small">
+                        <li class="breadcrumb-item"><a href="https://pythonscouts.com">Inicio</a></li>
+                        <li class="breadcrumb-item"><a href="https://pythonscouts.com/tutoriales/">Tutoriales</a></li>
+                    </ol>
+                </nav>
+                
+                <!-- Category -->
+                <div class="mb-3">
+                    <span class="badge bg-success-subtle text-success border border-success px-3 py-2 text-uppercase fw-semibold">
+                        Tutoriales
+                    </span>
+                </div>
+                
+                <!-- Title -->
+                <h1 class="display-5 fw-bold mb-4">
+                    Qué es Tkinter y por qué usarlo para GUI en Python
+                </h1>
+                
+                <!-- Author & Meta -->
+                <div class="d-flex align-items-center gap-3 mb-4">
+                    <img src="https://pythonscouts.com/images/authors/leodanis-pozo-ramos.webp" 
+                         class="rounded-circle border" 
+                         width="60" height="60" 
+                         alt="Leodanis Pozo Ramos">
+                    <div>
+                        <div class="fw-semibold">Leodanis Pozo Ramos</div>
+                        <div class="text-muted-strong small">
+                            <i class="bi bi-calendar-event me-1"></i>
+                            24 oct. 2026
+                            <span class="mx-2">•</span>
+                            <i class="bi bi-clock me-1"></i>
+                            10 min
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tags -->
+                <div class="d-flex gap-2 flex-wrap">
+                    <a href="https://pythonscouts.com/tag/tkinter.html" 
+                       class="badge bg-light text-dark border text-decoration-none">
+                        tkinter
+                    </a>
+                    <a href="https://pythonscouts.com/tag/gui.html" 
+                       class="badge bg-light text-dark border text-decoration-none">
+                        gui
+                    </a>
+                    <a href="https://pythonscouts.com/tag/python.html" 
+                       class="badge bg-light text-dark border text-decoration-none">
+                        python
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Image Column -->
+            <div class="col-lg-6 order-lg-2">
+                <img src="https://pythonscouts.com/images/articles/que-es-tkinter/article.webp" 
+                     class="img-fluid w-100 rounded-4 shadow-lg" 
+                     alt="Qué es Tkinter y por qué usarlo para GUI en Python"
+                     style="max-height: 600px; object-fit: cover;">
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Content -->
+    <div class="row">
+        <!-- Article Body -->
+        <div class="col-lg-8">
+            <article class="article-body" itemscope itemtype="https://schema.org/BlogPosting">
+                <meta itemprop="headline" content="Qué es Tkinter y por qué usarlo para GUI en Python">
+                <meta itemprop="description" content="Tkinter es la biblioteca estándar de Python para crear interfaces gráficas de usuario (GUI). Viene incluida en la biblioteca estándar, es multiplataforma y no requiere instalaciones adicionales.">
+                <meta itemprop="datePublished" content="2026-10-24T10:00:00+02:00">
+                <meta itemprop="dateModified" content="2026-10-24T10:00:00+02:00">
+                <meta itemprop="author" content="Leodanis Pozo Ramos">
+                <meta itemprop="image" content="https://pythonscouts.com/images/articles/que-es-tkinter/article.webp">
+                <div itemprop="articleBody">
+                    <p class="lead text-muted-strong mb-4">
+                        <p>Tkinter es la biblioteca estándar de Python para crear interfaces gráficas de usuario (GUI). Viene incluida en la biblioteca estándar, es multiplataforma y no requiere instalaciones adicionales.</p>
+                    </p>
+                    <p>Cuando comienzas a aprender Python, es natural que quieras crear aplicaciones de escritorio o interfaces gráficas de usuario (GUI). Tras investigar un poco, encontrarás varias bibliotecas y frameworks para Python, como PyQt, PySide, Kivy y otros.</p>
+<p>La mayoría de estos frameworks, sin embargo, requieren instalaciones adicionales y son algo complejos de entender. Buscas algo que funcione directamente, sin complicaciones. No piensas en convertirte en desarrollador GUI. Solo quieres algo simple, fácil de aprender y práctico. Algo que puedas usar en tus proyectos personales de principiante.</p>
+<p>Continuaste explorando el ecosistema de Python y descubriste Tkinter, allí mismo en la biblioteca estándar del lenguaje. ¡Fue una grata sorpresa! Por fin podías empezar a crear aplicaciones GUI sin instalar nada extra. Era exactamente lo que buscabas para iniciarte en el desarrollo GUI con Python.</p>
+<p>En este tutorial, <strong>aprenderás qué es Tkinter y por qué es la biblioteca GUI estándar en Python</strong>, cómo ejecutar su aplicación de demostración integrada y cómo crear tu primera aplicación GUI. También <strong>explorarás las características principales de Tkinter</strong>, sus limitaciones más importantes y cómo sortearlas. Finalmente, <strong>conocerás cuándo tiene sentido elegir Tkinter frente a otros frameworks GUI</strong>.</p>
+<div class="code-link"><p>Puedes encontrar el código Python de este artículo en el <a href="https://github.com/pythonscouts/ps-ejemplos/tree/main/Tutoriales/que-es-tkinter" target="_blank" rel="noopener noreferrer">repositorio de ejemplos de Python Scouts</a>. ¡Te agradeceríamos mucho si nos dejas una estrella (⭐) en el repositorio!</p></div>
+<div class="toc"><span class="toctitle">Contenidos</span><ul>
+<li><a href="#tkinter-la-biblioteca-gui-estandar-para-python">Tkinter: la biblioteca GUI estándar para Python</a></li>
+<li><a href="#una-primera-aplicacion-con-tkinter">Una primera aplicación con Tkinter</a></li>
+<li><a href="#caracteristicas-principales-de-tkinter">Características principales de Tkinter</a></li>
+<li><a href="#limitaciones-y-consideraciones">Limitaciones y consideraciones</a><ul>
+<li><a href="#estilo-y-apariencia">Estilo y apariencia</a></li>
+<li><a href="#widgets-compuestos">Widgets compuestos</a></li>
+<li><a href="#complejidad-con-hilos-y-asincronia">Complejidad con hilos y asincronía</a></li>
+</ul>
+</li>
+<li><a href="#casos-de-uso-practicos-para-tkinter">Casos de uso prácticos para Tkinter</a></li>
+<li><a href="#conclusion">Conclusión</a></li>
+</ul>
+</div>
+<h2 id="tkinter-la-biblioteca-gui-estandar-para-python">Tkinter: la biblioteca GUI estándar para Python</h2>
+<p>Tkinter es una biblioteca GUI que permite crear aplicaciones de escritorio en Python. Es relativamente sencilla de usar y proporciona un conjunto decente de widgets para construir interfaces de usuario. Puedes decir que Tkinter es la biblioteca GUI <strong>estándar</strong> para Python porque forma parte de la biblioteca estándar del lenguaje. Por tanto, para usar Tkinter no necesitas instalar un paquete externo. Solo tienes que importarlo en tu espacio de nombres y listo:</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
+</code></pre></div>
+<p>Esta instrucción <code>import</code> te da acceso al módulo <a href="https://docs.python.org/3/library/tkinter.html#module-tkinter" target="_blank"><code>tkinter</code></a> y a todos sus componentes. Es común asignarle el alias <code>tk</code> para facilitar su referencia en el código.</p>
+<p>Las aplicaciones Tkinter son multiplataforma, lo que significa que se ejecutan en Windows, macOS y Linux con cambios mínimos en el código.</p>
+<p>Por debajo, Tkinter es una capa de Python sobre <a href="https://www.tcl.tk/" target="_blank">Tcl/Tk</a>, que es un popular toolkit GUI. Tcl (Tool Command Language) es un lenguaje de scripting y Tk es su toolkit GUI asociado.</p>
+<div class="admonition note">
+<p>En desarrollo GUI, un <strong>widget</strong> es un elemento gráfico que sirve como bloque de construcción para la interfaz de usuario. Los widgets permiten a los usuarios interactuar con la aplicación, proporcionando entrada, ejecutando acciones o recibiendo salida.</p>
+</div>
+<p>Como Tkinter está incluido en la biblioteca estándar, permite la distribución rápida de herramientas ligeras en entornos diversos sin requerir una gestión compleja de dependencias. Sin embargo, la disponibilidad de la biblioteca está sujeta a matices específicos de cada plataforma:</p>
+<ul>
+<li><strong>Windows y macOS:</strong> Los instaladores oficiales de Python.org suelen incluir versiones precompiladas de Tcl/Tk, garantizando funcionalidad inmediata.</li>
+<li><strong>Linux:</strong> En Debian y Ubuntu, Tkinter a menudo se elimina del paquete base de Python para minimizar la huella. Para acceder a la biblioteca, debes instalar manualmente el paquete <code>python3-tk</code>. Compilar Python desde el código fuente requiere que los encabezados de Tcl/Tk estén instalados en tu sistema.</li>
+<li><strong>macOS:</strong> Surgen algunos desafíos al instalar Python mediante Homebrew o compilarlo desde el código fuente. Homebrew gestiona esto vinculando automáticamente sus paquetes principales de Python a su fórmula independiente <code>tcl-tk</code>, pero las compilaciones personalizadas requieren banderas de entorno explícitas durante la compilación.</li>
+</ul>
+<p>Si estás acostumbrado a trabajar con <code>uv</code> como gestor de paquetes y proyectos de Python, puedes tener múltiples versiones de Python. Todas incluyen una versión precompilada de Tcl/Tk.</p>
+<p>Como ya sabes, la biblioteca Tkinter está disponible en la biblioteca estándar de Python. Así que no tienes que instalar paquetes adicionales. Para disfrutar de una demostración rápida de Tkinter, abre una terminal o línea de comandos y ejecuta el siguiente comando:</p>
+<div class="highlight"><span class="filename">Sh</span><pre><span></span><code>$<span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>tkinter
+</code></pre></div>
+<p>Este comando lanza una pequeña aplicación Tkinter que se ve más o menos así:</p>
+<p><img src="../../images/articles/que-es-tkinter/tkinter-demo.png" class="mx-auto d-block mt-2" alt="Aplicación de demostración de Tkinter"></p>
+<p><em>Aplicación de demostración de Tkinter lanzada con <code>python -m tkinter</code>.</em></p>
+<p>Al hacer clic en el botón <em>Click me!</em>, su etiqueta cambiará a <em>[Click me!]</em> entre corchetes. Si vuelves a hacer clic en el botón, obtendrás <em>[[Click me!]]</em> con corchetes dobles y así sucesivamente. Finalmente, al hacer clic en el botón <em>QUIT</em> se cerrará la ventana y terminará la aplicación.</p>
+<h2 id="una-primera-aplicacion-con-tkinter">Una primera aplicación con Tkinter</h2>
+<p>Tkinter te permite crear aplicaciones usando ventanas, diálogos, botones, campos de entrada de texto y muchos otros elementos GUI.</p>
+<p>Aquí tienes cómo escribir una rápida aplicación <code>"¡Hola, Mundo!"</code> con Tkinter:</p>
+<div class="highlight"><span class="filename">Python - hola_mundo.py</span><pre><span></span><code><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
+
+<span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
+<span class="n">root</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;¡Hola, Tkinter!&quot;</span><span class="p">)</span>
+<span class="n">label</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;¡Hola, Mundo!&quot;</span><span class="p">)</span>
+<span class="n">label</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+
+<span class="n">root</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</code></pre></div>
+<p>Tras importar el paquete <code>tkinter</code>, creas una instancia de <code>Tk</code>. Esta clase representa el widget raíz de una aplicación Tkinter, por eso solemos llamarla <code>root</code>. Luego, estableces un título para tu aplicación. Este título se mostrará en la barra de título de la ventana principal al ejecutar la app.</p>
+<p>La clase <code>Label</code> permite añadir etiquetas de texto a la interfaz de usuario de la app. En este ejemplo, pasas el widget raíz como padre de la etiqueta y añades el clásico texto <code>"¡Hola, Mundo!"</code>. Una vez lista la instancia, usas el método <code>.pack()</code> para empaquetar el widget y mostrarlo en la ventana de la aplicación.</p>
+<p>La última línea lanza la aplicación e inicia su bucle principal o <em>event loop</em>. En la siguiente sección, hablaremos de esto y otras características fundamentales que son la base de la mayoría de aplicaciones Tkinter.</p>
+<p>Ejecuta la aplicación desde tu línea de comandos. Obtendrás una ventana como la siguiente:</p>
+<p><img src="../../images/articles/que-es-tkinter/tkinter-app.png" class="mx-auto d-block mt-2" alt="App ¡Hola, Mundo! en Tkinter"></p>
+<p><em>Ventana de la app "¡Hola, Mundo!" ejecutando el bucle principal de Tkinter.</em></p>
+<p>Para simplificar, mantuvimos el código de la app corto y directo. Al ejecutarla, la ventana en tu pantalla puede ser más pequeña. Arrastra la esquina inferior derecha para redimensionarla.</p>
+<h2 id="caracteristicas-principales-de-tkinter">Características principales de Tkinter</h2>
+<p>En primer lugar, debes saber que Tkinter es solo una <strong>biblioteca GUI</strong>, no un framework GUI completo. ¿Qué significa esto? Significa que Tkinter proporciona un kit de widgets y otras herramientas básicas para crear aplicaciones GUI.</p>
+<p>Sin embargo, Tkinter no ofrece herramientas para interactuar con bases de datos, manejar comunicaciones de red, trabajar con multimedia ni ninguna otra funcionalidad que encontrarías en un framework GUI. Cuando necesitas ese tipo de funcionalidad empaquetada en un solo paquete, recurres a un framework completo como <a href="https://riverbankcomputing.com/software/pyqt/intro" target="_blank">PyQt</a>, <a href="https://doc.qt.io/qtforpython-6/index.html" target="_blank">PySide</a> o <a href="https://kivy.org/" target="_blank">Kivy</a>.</p>
+<p>Esto es lo que encontrarás en Tkinter:</p>
+<ul>
+<li><strong>Widgets:</strong> Elementos gráficos que incluyen botones, etiquetas, cuadros de texto, casillas de verificación, botones de radio, menús y más. Vienen en dos variantes: widgets clásicos y widgets temáticos del módulo <code>ttk</code>.</li>
+<li><strong>Gestor de geometría:</strong> Los gestores de geometría como <code>.pack()</code>, <code>.grid()</code> y <code>.place()</code> controlan la disposición de los widgets dentro de una ventana.</li>
+<li><strong>Manejo de eventos:</strong> Los eventos representan interacciones del usuario con la interfaz de la app, como clics en botones, pulsaciones de teclas, movimientos del ratón, etc. Puedes enlazar funciones (<em>callbacks</em>) a eventos para realizar acciones reales.</li>
+<li><strong>Canvas:</strong> El widget <code>Canvas</code> permite dibujar formas, crear widgets personalizados y realizar operaciones gráficas complejas.</li>
+<li><strong>Diálogos:</strong> Diálogos estándar son ventanas emergentes para selección de archivos y colores, cuadros de mensaje, configuración de la app y más.</li>
+<li><strong>Bucle de eventos:</strong> Un bucle de eventos que inicia la aplicación, espera eventos del usuario y los gestiona para su procesamiento.</li>
+</ul>
+<p>Con estos componentes, puedes crear interfaces gráficas de usuario interesantes en Python. Ten en cuenta que, como Tkinter es solo una biblioteca GUI, necesitarás usar paquetes de la biblioteca estándar o de terceros para trabajar con bases de datos, servicios de red, multimedia, etc.</p>
+<h2 id="limitaciones-y-consideraciones">Limitaciones y consideraciones</h2>
+<p>Como biblioteca GUI relativamente antigua y simple, Tkinter tiene varias limitaciones que debes conocer. Uno de los problemas más conocidos concierte a cómo se ven las aplicaciones.</p>
+<h3 id="estilo-y-apariencia">Estilo y apariencia</h3>
+<p>El conjunto de widgets clásicos parece componentes de UI de 1995 en algunas plataformas. Con los años, el aspecto de los widgets ha evolucionado hacia diseños nativos de cada plataforma. La introducción de widgets temáticos con el módulo <code>ttk</code> marcó un cambio técnico en cómo se renderizan los widgets, permitiendo que las aplicaciones imiten el aspecto nativo del sistema operativo anfitrión.</p>
+<p>Así se ven algunos de los widgets más comunes de ambos conjuntos, clásico y temático:</p>
+<p><img src="../../images/articles/que-es-tkinter/classic-themed-widgets-windows.png" class="mx-auto d-block mt-2" alt="Widgets clásicos y temáticos de Tkinter en Windows"></p>
+<p><em>Conjuntos de widgets clásicos y temáticos lado a lado en Windows.</em></p>
+<p>Los widgets suelen ofrecer varias opciones de personalización para ajustar su estilo. Sin embargo, en algún momento esas opciones no son suficientes para construir una GUI moderna.</p>
+<p>Cuando necesitas un aspecto más moderno sin abandonar la API de Tkinter, recurres a <a href="https://customtkinter.tomschimansky.com/" target="_blank">CustomTkinter</a>. Esta biblioteca evita por completo la estética de 1995 proporcionando widgets modernos y totalmente personalizables. Te permite mantener la simplicidad de la API de Tkinter mientras ofrecen una experiencia visual contemporánea.</p>
+<h3 id="widgets-compuestos">Widgets compuestos</h3>
+<p>Aunque Tkinter proporciona varios widgets principales, como <a href="https://tkdocs.com/tutorial/widgets.html#label" target="_blank"><code>Label</code></a>, <a href="https://tkdocs.com/tutorial/widgets.html#button" target="_blank"><code>Button</code></a>, <a href="https://tkdocs.com/tutorial/widgets.html#entry" target="_blank"><code>Entry</code></a>, <a href="https://tkdocs.com/tutorial/widgets.html#checkbutton" target="_blank"><code>Checkbutton</code></a> y otros, carece de widgets compuestos dedicados, como barras de estado y barras de herramientas.</p>
+<p>Si quieres widgets compuestos en Tkinter, tienes que construirlos manualmente. El enfoque típico consiste en subclasificar un widget contenedor, como <code>Frame</code> o <code>LabelFrame</code>, para encapsular un grupo de controles hijos estándar en una unidad reutilizable.</p>
+<p>Esto resulta en más código repetitivo inicial y requiere un diseño arquitectónico riguroso si construyes interfaces de grado profesional.</p>
+<h3 id="complejidad-con-hilos-y-asincronia">Complejidad con hilos y asincronía</h3>
+<p>Tkinter usa un bucle de eventos de un solo hilo, que inicializamos con <code>.mainloop()</code>, como ya aprendiste. Este bucle es responsable tanto del redibujado de pantalla como del procesamiento de la entrada del usuario. Si una tarea de larga duración bloquea este bucle, la interfaz de la app se congela inmediatamente, resultando en una mala experiencia de usuario.</p>
+<p>Para manejar este tipo de problema, podrías usar algunas de estas técnicas:</p>
+<ul>
+<li><strong>Eventos temporizados con <code>root.after()</code></strong>: Ideal cuando puedes dividir el trabajo en trozos. Cada paso hace un poco de trabajo y luego programa el siguiente.</li>
+<li><strong>E/S asíncrona</strong>: Ideal para llamadas de red, archivos y bases de datos que no pueden garantizar rapidez. El bucle <code>asyncio</code> de Python y el bucle de Tkinter no pueden compartir un hilo. Mantén Tkinter en el hilo principal y ejecuta <code>asyncio</code> en otro.</li>
+<li><strong>Hilos y procesos</strong>: Ideal cuando no puedes dividir el trabajo en trozos. Ejecuta el trabajo lento en un <em>worker</em> (hilo o subproceso), mantén todas las actualizaciones de widgets en el hilo principal y haz que el <em>worker</em> envíe resultados en lugar de tocar la GUI directamente.</li>
+</ul>
+<p>Estos enfoques son necesarios porque Tkinter no proporciona un framework integrado para manejo de hilos. Recuerda, es una biblioteca GUI.</p>
+<h2 id="casos-de-uso-practicos-para-tkinter">Casos de uso prácticos para Tkinter</h2>
+<p>Tkinter sigue siendo una opción dominante en nichos específicos donde la huella de despliegue es un factor decisivo. Mientras que otros frameworks GUI, como PyQt o PySide, pueden requerir binarios que superan los 100 MB, el tamaño de una aplicación Tkinter se limita esencialmente al script en sí.</p>
+<p>También será tu biblioteca de referencia para utilidades personales, como la <a href="https://github.com/lpozo/pomodoro" target="_blank">app Pomodoro</a> que armé para controlar mis sesiones de trabajo:</p>
+<p><img src="../../images/articles/que-es-tkinter/pomodoro-app-tkinter.png" class="mx-auto d-block mt-2" alt="Una app Pomodoro en Tkinter y Python"></p>
+<p><em>Mi app Pomodoro, una utilidad personal construida con Tkinter.</em></p>
+<p>La tabla siguiente resume rápidamente cuándo preferir Tkinter sobre otras bibliotecas y frameworks GUI:</p>
+<table>
+<thead>
+<tr>
+<th>Caso de uso</th>
+<th>Justificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Herramientas de utilidad para automatizar tareas y flujos personales</td>
+<td>Crear una app GUI rápida para gestionar tareas personales en tu entorno local.</td>
+</tr>
+<tr>
+<td>GUIs ligeras para envolver herramientas de línea de comandos (CLI)</td>
+<td>Añade una GUI a herramientas CLI existentes con aumento casi nulo en el tamaño del paquete.</td>
+</tr>
+<tr>
+<td>Sistemas portátiles de entrada/diálogos</td>
+<td>Aprovecha diálogos nativos del SO con código mínimo para utilidad multiplataforma.</td>
+</tr>
+<tr>
+<td>Prototipado rápido de apps GUI</td>
+<td>Construye layouts funcionales en minutos con los gestores de geometría <code>.pack()</code> y <code>.grid()</code>.</td>
+</tr>
+<tr>
+<td>Visualizaciones científicas</td>
+<td>Interactúa nativamente con librerías de gráficos y procesamiento de imágenes, como <a href="https://matplotlib.org/" target="_blank">Matplotlib</a> y <a href="https://pillow.readthedocs.io/en/stable/" target="_blank">Pillow</a>.</td>
+</tr>
+</tbody>
+</table>
+<p>En estos escenarios, la menor sobrecarga y los requisitos de cero instalación de Tkinter superan los conjuntos de características más amplios de frameworks de escala empresarial como PyQt, PySide y Kivy.</p>
+<h2 id="conclusion">Conclusión</h2>
+<p>Tkinter ha logrado la transición de una biblioteca heredada de aspecto extraño a un contendiente moderno para el desarrollo de escritorio. Ha dejado atrás su reputación de los 90 manteniendo la simplicidad accesible que define la biblioteca estándar de Python.</p>
+<p>Tkinter sirve como puerta de entrada para desarrolladores que entran en el mundo de las apps de escritorio. Proporciona el entorno adecuado para aprender los principios fundamentales de la arquitectura orientada a eventos, la gestión de layouts y la separación de responsabilidades.</p>
+<p>Es una gran opción si buscas una biblioteca para construir utilidades ligeras y multiplataforma con una huella de despliegue mínima.</p>
+<div class="code-link"><p>Puedes encontrar el código Python de este artículo en el <a href="https://github.com/pythonscouts/ps-ejemplos/tree/main/Tutoriales/que-es-tkinter" target="_blank" rel="noopener noreferrer">repositorio de ejemplos de Python Scouts</a>. ¡Te agradeceríamos mucho si nos dejas una estrella (⭐) en el repositorio!</p></div>
+                </div>
+            </article>
+
+            <!-- Previous / Next Article Navigation -->
+            <nav class="article-nav my-5 pt-4 border-top" aria-label="Navegación entre artículos">
+                <div class="row g-3">
+                    <div class="col-6">
+                        <a href="https://pythonscouts.com/python-matrix/" class="article-nav-link article-nav-prev text-decoration-none">
+                            <span class="article-nav-label text-muted-strong small d-block mb-1">
+                                <i class="bi bi-arrow-left me-1"></i> Anterior
+                            </span>
+                            <span class="article-nav-title fw-semibold">
+                                Estructuras de datos en Python: Matrices
+                            </span>
+                        </a>
+                    </div>
+                    <div class="col-6 text-end">
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Sticky TOC Sidebar (desktop only, populated by JS) -->
+        <aside class="col-lg-4 d-none d-lg-block">
+            <div id="toc-sidebar" class="toc-sidebar"></div>
+        </aside>
+    </div>
+
+    </main>
+
+<footer class="site-footer mt-auto">
+    <div class="footer-primary border-top border-success-subtle py-3">
+        <div class="container-md content-px">
+            <div class="row gy-3 align-items-center justify-content-between">
+                <div class="col-lg-6 col-md-7">
+                    <div class="d-flex flex-column flex-sm-row align-items-center align-items-sm-start gap-3 text-center text-sm-start">
+                        <a href="https://pythonscouts.com" class="d-inline-flex align-items-center text-decoration-none">
+                            <img src="https://pythonscouts.com/images/identity/logo-title.png" alt="Python Scouts" width="160" height="48" class="img-fluid footer-logo">
+                        </a>
+                        <p class="text-muted-strong footer-description mb-0">
+                            Python Scouts es tu espacio para aprender Python en español.
+                        </p>
+                        <div class="d-flex align-items-center gap-3 mt-1">
+                            <a href="https://github.com/lpozo" target="_blank" rel="noopener noreferrer" class="text-muted-strong text-decoration-none article-nav-link p-2 border-0 bg-transparent" aria-label="GitHub" style="transition: color 0.2s;">
+                                <i class="bi bi-github fs-5"></i>
+                            </a>
+                            <a href="https://twitter.com/lpozo78" target="_blank" rel="noopener noreferrer" class="text-muted-strong text-decoration-none article-nav-link p-2 border-0 bg-transparent" aria-label="Twitter" style="transition: color 0.2s;">
+                                <i class="bi bi-twitter-x fs-5"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/lpozor78" target="_blank" rel="noopener noreferrer" class="text-muted-strong text-decoration-none article-nav-link p-2 border-0 bg-transparent" aria-label="LinkedIn" style="transition: color 0.2s;">
+                                <i class="bi bi-linkedin fs-5"></i>
+                            </a>
+                            <a href="https://pythonscouts.com/feeds/all.atom.xml" target="_blank" rel="alternate" class="text-muted-strong text-decoration-none article-nav-link p-2 border-0 bg-transparent" aria-label="RSS Feed" style="transition: color 0.2s;">
+                                <i class="bi bi-rss-fill fs-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-5 text-center text-md-start">
+                    <h3 class="h6 text-uppercase text-success fw-semibold mb-2">Explora</h3>
+                    <nav aria-label="Footer navigation">
+                        <ul class="footer-links list-unstyled d-inline-flex flex-column gap-2 mb-0 text-start">
+                            <li><a href="https://pythonscouts.com/guias/">Guías</a></li>
+                            <li><a href="https://pythonscouts.com/series/">Series</a></li>
+                            <li><a href="https://pythonscouts.com/tutoriales/">Tutoriales</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-secondary py-3">
+        <div class="container-md content-px">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <div class="d-flex flex-column flex-sm-row align-items-center gap-2 text-center text-sm-start">
+                    <span class="text-white-50 small">
+                        &copy; 2023-2026 Leodanis Pozo Ramos.
+                    </span>
+                    <div class="d-flex align-items-center gap-2">
+                        <a href="https://creativecommons.org/licenses/by-sa/4.0/" 
+                           target="_blank" 
+                           rel="license noopener noreferrer"
+                           class="d-inline-block"
+                           style="background: white; padding: 4px 8px; border-radius: 4px;">
+                            <img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" 
+                                 alt="CC BY-SA 4.0" 
+                                 width="88" 
+                                 height="31"
+                                 style="border-width:0; display: block;">
+                        </a>
+                        <span class="text-white-50 small">
+                            Contenido licenciado bajo 
+                            <a href="https://creativecommons.org/licenses/by-sa/4.0/" 
+                               target="_blank" 
+                               rel="license noopener noreferrer"
+                               class="text-white text-decoration-none">
+                                CC BY-SA 4.0
+                                <i class="bi bi-box-arrow-up-right ms-1"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <span class="text-white-50 small">
+                    Imágenes cortesía de <a href="https://picsum.photos/" target="_blank" rel="noopener" class="text-white text-decoration-none">Picsum</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</footer>
+    <!-- JS Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
+    <!-- Stork and site scripts -->
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202610241129" defer></script>
+    <script
+        src="https://pythonscouts.com/theme/js/site.js?v=202610241129"
+        defer
+        data-stork-name="sitesearch"
+        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202610241129"
+        data-stork-index="https://pythonscouts.com/search-index.st">
+    </script>
+
+</body>
+</html>

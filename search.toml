@@ -8,6 +8,11 @@ url = "/acerca/"
 title = "Acerca"
 
 [[input.files]]
+path = "que-es-tkinter/index.html"
+url = "/que-es-tkinter/"
+title = "Qué es Tkinter y por qué usarlo para GUI en Python"
+
+[[input.files]]
 path = "python-matrix/index.html"
 url = "/python-matrix/"
 title = "Estructuras de datos en Python: Matrices"

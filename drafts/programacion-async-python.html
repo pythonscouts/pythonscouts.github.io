@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="es-es" class="h-100">
+
+<head>
+        <title>
+  Cómo crear programas asíncronos en Python: la forma correcta - Python Scouts
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Leodanis Pozo Ramos">
+    <meta name="description" content="La programación asíncrona permite suspender y reanudar tareas. En Python, la librería asyncio implementa un bucle de eventos que permite para ejecutar...">
+    <meta name="keywords" content="python">
+    <meta name="article:published_time" content="2026-10-30T10:00:00+01:00">
+    <meta name="article:modified_time" content="2026-10-30T10:00:00+01:00">
+    <meta name="article:author" content="Leodanis Pozo Ramos">
+    <meta name="article:section" content="Guías">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="language" content="Spanish">
+    <meta name="generator" content="Pelican">
+    
+    <meta name="dcterms.rights" content="https://creativecommons.org/licenses/by-sa/4.0/">
+    <meta name="dcterms.rightsHolder" content="Leodanis Pozo Ramos">
+    <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Cómo crear programas asíncronos en Python: la forma correcta">
+    <meta property="og:description" content="La programación asíncrona permite suspender y reanudar tareas. En Python, la librería asyncio implementa un bucle de eventos que permite para ejecutar varias tareas concurrentemente.">
+    <meta property="og:url" content="https://pythonscouts.com/drafts/programacion-async-python.html">
+    <meta property="og:site_name" content="Python Scouts">
+    <meta property="og:image" content="https://pythonscouts.com/images/articles/programacion-async-python/social.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Cómo crear programas asíncronos en Python: la forma correcta">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:locale" content="es_ES">
+    <meta property="article:published_time" content="2026-10-30T10:00:00+01:00">
+    <meta property="article:author" content="Leodanis Pozo Ramos">
+    <meta property="article:section" content="Guías">
+    <meta property="article:tag" content="python">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lpozo78">
+    <meta name="twitter:creator" content="@lpozo78">
+    <meta name="twitter:title" content="Cómo crear programas asíncronos en Python: la forma correcta">
+    <meta name="twitter:description" content="La programación asíncrona permite suspender y reanudar tareas. En Python, la librería asyncio implementa un bucle de eventos que permite para ejecutar varias tareas concurrentemente.">
+    <meta name="twitter:image" content="https://pythonscouts.com/images/articles/programacion-async-python/social.webp">
+    <meta name="twitter:image:alt" content="Cómo crear programas asíncronos en Python: la forma correcta">
+    <!-- RSS feeds -->
+    <link href="https://pythonscouts.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Full Atom Feed" />
+    <link href="https://pythonscouts.com/feeds/guias.atom.xml" type="application/atom+xml" rel="alternate" title="Python Scouts Categories Atom Feed" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://pythonscouts.com/drafts/programacion-async-python.html">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202610241129">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202610241129">
+    <!-- Preconnect to CDNs -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <!-- Bootstrap CSS (deferred) -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+          crossorigin="anonymous">
+    <!-- Bootstrap Icons (self-hosted, deferred) -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202610241129">
+    <!-- Stork Search - Deferred -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202610241129">
+
+
+    <!-- Article tags -->
+    <meta name="article:tag" content="tkinter" />
+    <meta name="article:tag" content="gui" />
+    <meta name="article:tag" content="python" />
+    <meta name="article:tag" content="data structures" />
+    <meta name="article:tag" content="estructuras de datos" />
+    <meta name="article:tag" content="palabras clave" />
+    <meta name="article:tag" content="fastapi" />
+    <meta name="article:tag" content="web" />
+    <meta name="article:tag" content="api" />
+    <meta name="article:tag" content="kivy" />
+    <meta name="article:tag" content="ayuda" />
+    <meta name="article:tag" content="pyside6" />
+    <meta name="article:tag" content="linux" />
+    <meta name="article:tag" content="pyqt" />
+    <meta name="article:tag" content="windows" />
+    <meta name="article:tag" content="macos" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Cómo crear programas asíncronos en Python: la forma correcta">
+    <meta property="og:description" content="La programación asíncrona permite suspender y reanudar tareas. En Python, la librería asyncio implementa un bucle de eventos que permite para ejecutar varias tareas concurrentemente.">
+    <meta property="og:url" content="https://pythonscouts.com/drafts/programacion-async-python.html">
+    <meta property="og:site_name" content="Python Scouts">
+    <meta property="og:image" content="https://pythonscouts.com/images/articles/programacion-async-python/social.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Cómo crear programas asíncronos en Python: la forma correcta">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:locale" content="es_ES">
+    <meta property="article:published_time" content="2026-10-30T10:00:00+01:00">
+    <meta property="article:author" content="Leodanis Pozo Ramos">
+    <meta property="article:section" content="Guías">
+    <meta property="article:tag" content="python">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lpozo78">
+    <meta name="twitter:creator" content="@lpozo78">
+    <meta name="twitter:title" content="Cómo crear programas asíncronos en Python: la forma correcta">
+    <meta name="twitter:description" content="La programación asíncrona permite suspender y reanudar tareas. En Python, la librería asyncio implementa un bucle de eventos que permite para ejecutar varias tareas concurrentemente.">
+    <meta name="twitter:image" content="https://pythonscouts.com/images/articles/programacion-async-python/social.webp">
+    <meta name="twitter:image:alt" content="Cómo crear programas asíncronos en Python: la forma correcta">
+
+    <!-- Custom CSS for article -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/articles.css?v=202610241129">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
+<script
+    src="https://pythonscouts.com/theme/js/analytics.js?v=202610241129"
+    defer
+    data-analytics-id="G-R3C5PFSQ1S">
+</script>
+
+<body class="d-flex flex-column h-100">
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-md bg-white fixed-top border-bottom">
+        <div class="container-md content-px">
+            <a class="navbar-brand" href="/">
+            <img
+            src="https://pythonscouts.com/images/identity/header.webp"
+            alt="Python Scouts"
+            width="150"
+            height="50"
+            >
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Menú de Navegación">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav m-auto nav-link">
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/guias/" aria-current="page">
+                    Guías
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/series/" aria-current="page">
+                    Series
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/tutoriales/" aria-current="page">
+                    Tutoriales
+                </a>
+                </li>
+                <li class="nav-item px-3">
+                <a href="https://pythonscouts.com/acerca/" aria-current="page">
+                    Acerca
+                </a>
+                </li>
+            </ul>
+            <form class="d-flex search-form" role="search">
+                <button type="button" class="search-toggle btn btn-link p-0 me-2 d-none d-md-inline-flex" aria-label="Buscar">
+                    <i class="bi bi-search text-muted-strong"></i>
+                </button>
+                <div class="search-input-wrapper">
+                    <div class="stork-wrapper">
+                        <input
+                        class="stork-input"
+                        type="search"
+                        id="site-search"
+                        name="q"
+                        placeholder="Buscar"
+                        aria-label="Search"
+                        data-stork="sitesearch"
+                        >
+                    </div>
+                </div>
+            </form>
+            </div>
+        </div>
+    </nav>
+    <main id="main-content" class="container-md content-px py-3" tabindex="-1">
+        <div class="stork-wrapper">
+            <div data-stork="sitesearch-output" class="stork-output"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+            </div>
+        </div>
+
+    <!-- Article Header - Magazine Style -->
+    <header class="article-header mb-5">
+        <div class="row g-4 align-items-center">
+            <!-- Content Column -->
+            <div class="col-lg-6 order-lg-1">
+                <!-- Breadcrumbs -->
+                <nav aria-label="breadcrumb" class="mb-3">
+                    <ol class="breadcrumb mb-0 small">
+                        <li class="breadcrumb-item"><a href="https://pythonscouts.com">Inicio</a></li>
+                        <li class="breadcrumb-item"><a href="https://pythonscouts.com/guias/">Guías</a></li>
+                    </ol>
+                </nav>
+                
+                <!-- Category -->
+                <div class="mb-3">
+                    <span class="badge bg-success-subtle text-success border border-success px-3 py-2 text-uppercase fw-semibold">
+                        Guías
+                    </span>
+                </div>
+                
+                <!-- Title -->
+                <h1 class="display-5 fw-bold mb-4">
+                    Cómo crear programas asíncronos en Python: la forma correcta
+                </h1>
+                
+                <!-- Author & Meta -->
+                <div class="d-flex align-items-center gap-3 mb-4">
+                    <img src="https://pythonscouts.com/images/authors/leodanis-pozo-ramos.webp" 
+                         class="rounded-circle border" 
+                         width="60" height="60" 
+                         alt="Leodanis Pozo Ramos">
+                    <div>
+                        <div class="fw-semibold">Leodanis Pozo Ramos</div>
+                        <div class="text-muted-strong small">
+                            <i class="bi bi-calendar-event me-1"></i>
+                            30 oct. 2026
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tags -->
+                <div class="d-flex gap-2 flex-wrap">
+                    <a href="https://pythonscouts.com/tag/python.html" 
+                       class="badge bg-light text-dark border text-decoration-none">
+                        python
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Image Column -->
+            <div class="col-lg-6 order-lg-2">
+                <img src="https://pythonscouts.com/images/articles/programacion-async-python/article.webp" 
+                     class="img-fluid w-100 rounded-4 shadow-lg" 
+                     alt="Cómo crear programas asíncronos en Python: la forma correcta"
+                     style="max-height: 600px; object-fit: cover;">
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Content -->
+    <div class="row">
+        <!-- Article Body -->
+        <div class="col-lg-8">
+            <article class="article-body" itemscope itemtype="https://schema.org/BlogPosting">
+                <meta itemprop="headline" content="Cómo crear programas asíncronos en Python: la forma correcta">
+                <meta itemprop="description" content="La programación asíncrona permite suspender y reanudar tareas. En Python, la librería asyncio implementa un bucle de eventos que permite para ejecutar varias tareas concurrentemente.">
+                <meta itemprop="datePublished" content="2026-10-30T10:00:00+01:00">
+                <meta itemprop="dateModified" content="2026-10-30T10:00:00+01:00">
+                <meta itemprop="author" content="Leodanis Pozo Ramos">
+                <meta itemprop="image" content="https://pythonscouts.com/images/articles/programacion-async-python/social.webp">
+                <div itemprop="articleBody">
+                    <p class="lead text-muted-strong mb-4">
+                        <p>La programación asíncrona permite suspender y reanudar tareas. En Python, la librería <code>asyncio</code> implementa un bucle de eventos que permite para ejecutar varias tareas concurrentemente.</p>
+                    </p>
+                    <p>Como complemento, Python incluye las palabras clave <a href="/python-async/"><code>async</code></a> y <a href="/python-await/"><code>await</code></a> para definir y esperar funciones asíncronas, respectivamente.</p>
+<p>Parece simple, pero este set de herramientas de Python puede ser fácil de malinterpretar. Una función definida con <code>async</code> puede parecer asíncrona, y <code>asyncio.run()</code> inicia un bucle de eventos. Ninguno de esos hechos garantiza que el programa realice varias operaciones de forma concurrente.</p>
+<p>En esta guía aprenderás qué hace falta para que las tareas cedan el control y compartan el tiempo de espera.</p>
+<div class="toc"><span class="toctitle">Contenidos</span><ul>
+<li><a href="#una-funcion-asincrona-no-se-ejecuta-al-llamarla">Una función asíncrona no se ejecuta al llamarla</a></li>
+<li><a href="#el-bucle-de-eventos-asincronos">El bucle de eventos asíncronos</a></li>
+<li><a href="#la-espera-secuencial-no-es-concurrencia">La espera secuencial no es concurrencia</a></li>
+<li><a href="#crear-tareas-realmente-concurrentes-el-ingrediente-que-falta">Crear tareas realmente concurrentes: el ingrediente que falta</a><ul>
+<li><a href="#uso-de-taskgroup">Uso de TaskGroup</a></li>
+<li><a href="#uso-de-gather">Uso de gather()</a></li>
+<li><a href="#uso-de-as_completed">Uso de as_completed()</a></li>
+</ul>
+</li>
+<li><a href="#las-llamadas-bloqueantes-impiden-la-concurrencia">Las llamadas bloqueantes impiden la concurrencia</a></li>
+<li><a href="#un-modelo-mental-practico">Un modelo mental práctico</a></li>
+<li><a href="#conclusion">Conclusión</a></li>
+</ul>
+</div>
+<h2 id="una-funcion-asincrona-no-se-ejecuta-al-llamarla">Una función asíncrona no se ejecuta al llamarla</h2>
+<p>Definir una función con <code>async def</code> crea una función <strong>corrutina</strong>. Llamar a esa función no ejecuta su cuerpo de inmediato. En su lugar, la llamada devuelve un objeto corrutina:</p>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="k">async</span> <span class="k">def</span> <span class="nf">fetch_data</span><span class="p">():</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="mi">42</span>
+<span class="gp">...</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">coroutine</span> <span class="o">=</span> <span class="n">fetch_data</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">coroutine</span>
+<span class="go">&lt;coroutine object fetch_data at 0x...&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">coroutine</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+<p>Al llamar a <code>fetch_data()</code>, obtienes un objeto corrutina. El cuerpo de la función todavía no se ejecuta. En este ejemplo, <code>coroutine.close()</code> cierra el objeto sin ejecutarlo para evitar una advertencia al salir del entorno interactivo de Python (<em>Read-Eval-Print Loop</em>, REPL por sus siglas en inglés).</p>
+<p>Para ejecutar una corrutina, debes esperarla desde otra función asíncrona con <code>await</code> o pasarla a <code>asyncio.run()</code>.</p>
+<h2 id="el-bucle-de-eventos-asincronos">El bucle de eventos asíncronos</h2>
+<p>La función <code>asyncio.run()</code> es fundamental en la programación asíncrona en Python. Esta función inicia el <strong>bucle de eventos</strong> y ejecuta la corrutina desde un contexto síncrono.</p>
+<p>Como continuación del ejemplo anterior, puedes pasar la corrutina directamente a <code>asyncio.run()</code> para ejecutarla y obtener el valor que devuelve:</p>
+<div class="highlight"><span class="filename">Python REPL</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">asyncio</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">async</span> <span class="k">def</span> <span class="nf">fetch_data</span><span class="p">():</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="mi">42</span>
+<span class="gp">...</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">fetch_data</span><span class="p">())</span>
+<span class="go">42</span>
+</code></pre></div>
+<p>La llamada a <code>asyncio.run()</code> espera a que la corrutina termine y devuelve su resultado. En este caso, el resultado es <code>42</code>.</p>
+<p>El bucle de eventos no es un motor mágico de ejecución paralela. Ejecuta una pieza de código Python a la vez. Cuando el bucle de eventos está ejecutando una corrutina, ninguna otra puede avanzar hasta que la actual se suspenda con <code>await</code>.</p>
+<p>El proceso funciona así:</p>
+<ol>
+<li><code>asyncio.run()</code> pone en marcha el bucle de eventos y ejecuta la corrutina principal.</li>
+<li>La corrutina principal llega a un <code>await</code> y espera otra corrutina. Si esta termina enseguida, el programa continúa.</li>
+<li>Si la corrutina tiene que esperar, por ejemplo, una respuesta de la red, en ese momento se pausa y el control vuelve al bucle de eventos.</li>
+<li>El bucle de eventos recibe el control y puede avanzar otras corrutinas que estén listas para ejecutarse.</li>
+<li>Cuando termina la espera de la corrutina pausada, la tarea continúa desde donde se pausó hasta completar su ejecución.</li>
+</ol>
+<p>Al terminar la corrutina principal, <code>asyncio.run()</code> devuelve su resultado y cierra el bucle de eventos. Si la corrutina no devuelve un valor, el resultado es <code>None</code>.</p>
+<h2 id="la-espera-secuencial-no-es-concurrencia">La espera secuencial no es concurrencia</h2>
+<p>Considera dos operaciones llamadas A y B que demoran un segundo en ejecutarse cada una:</p>
+<div class="highlight"><span class="filename">Python - sequential_awaits.py</span><pre><span></span><code><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">fetch</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">delay</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">: iniciada&quot;</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">delay</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">: finalizada&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;resultado de </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+    <span class="k">await</span> <span class="n">fetch</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">fetch</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">sequential_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Tiempo secuencial: </span><span class="si">{</span><span class="n">sequential_time</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> segundos&quot;</span><span class="p">)</span>
+
+<span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+</code></pre></div>
+<p>La operación B no comienza hasta que la operación A ha terminado. Puedes comprobarlo observando la salida del script y el tiempo total de ejecución con el siguiente comando:</p>
+<div class="highlight"><span class="filename">Terminal</span><pre><span></span><code><span class="gp">$ </span>python<span class="w"> </span>sequential_awaits.py
+<span class="go">A: iniciada</span>
+<span class="go">A: finalizada</span>
+<span class="go">B: iniciada</span>
+<span class="go">B: finalizada</span>
+<span class="go">Tiempo secuencial: 2.0 segundos</span>
+</code></pre></div>
+<p>Tu programa tarda unos dos segundos en ejecutarse porque espera a que termine la primera operación antes de iniciar la segunda. Aunque <code>fetch()</code> es asíncrona, estas dos llamadas se ejecutan secuencialmente.</p>
+<p>La llamada <code>await fetch("A", 1)</code> ejecuta la operación, mientras el programa espera a que termine para continuar con la siguiente línea de código, es decir, la llamada a <code>fetch("B", 1)</code>. Por sí sola, una espera con <code>await</code> no inicia otras operaciones al mismo tiempo.</p>
+<h2 id="crear-tareas-realmente-concurrentes-el-ingrediente-que-falta">Crear tareas realmente concurrentes: el ingrediente que falta</h2>
+<p>Para que una programación en Python sea realmente concurrente, necesitas crear tareas que puedan ejecutarse de manera independiente, sin depender unas de otras. Estas tareas deben poder ejecutarse, pausarse y reanudarse, es decir, deben ser corutinas.</p>
+<p>Luego, necesitas crear y lanzar estas tareas de manera asíncrona. Esto lo puedes hacer con <code>TaskGroup</code> y <code>gather()</code>.</p>
+<h3 id="uso-de-taskgroup">Uso de <code>TaskGroup</code></h3>
+<p>La clase <code>TaskGroup</code> es un manejdor de contexto que se utiliza para la ejecución concurrente de un grupo de tareas asíncronas dentro de un bloque <code>async with</code>. Un grupo de tareas hace dos cosas importantes:</p>
+<ol>
+<li>Crea una tarea para cada corrutina que se pasa a <code>group.create_task()</code>.</li>
+<li>Espera a todas las tareas antes de salir del bloque <code>async with</code>.</li>
+</ol>
+<p>Veamos un ejemplo de cómo usar <code>TaskGroup</code>:</p>
+<div class="highlight"><span class="filename">Python - taskgroup_example.py</span><pre><span></span><code><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">fetch</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">delay</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">: iniciada&quot;</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">delay</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">: finalizada&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;resultado de </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+
+    <span class="k">async</span> <span class="k">with</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">TaskGroup</span><span class="p">()</span> <span class="k">as</span> <span class="n">group</span><span class="p">:</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">fetch</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">fetch</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+
+    <span class="n">elapsed</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Tiempo transcurrido: </span><span class="si">{</span><span class="n">elapsed</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> segundos&quot;</span><span class="p">)</span>
+
+<span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+</code></pre></div>
+<p>En este ejemplo, ambas tareas, A y B, se inician casi al mismo tiempo y se ejecutan de manera concurrente dentro del bloque <code>async with</code>.</p>
+<p>Ejecuta el script con el siguiente comando:</p>
+<div class="highlight"><span class="filename">Terminal</span><pre><span></span><code><span class="gp">$ </span>python<span class="w"> </span>taskgroup_example.py
+<span class="go">A: iniciada</span>
+<span class="go">B: iniciada</span>
+<span class="go">A: finalizada</span>
+<span class="go">B: finalizada</span>
+<span class="go">Tiempo transcurrido: 1.0 segundos</span>
+</code></pre></div>
+<p>El tiempo total es de aproximadamente un segundo porque las esperas de ambas tareas se solapan. Las tareas se ejecutan de forma concurrente dentro del grupo, que espera a que ambas finalicen antes de terminar y pasar a la siguiente instrucción del programa.</p>
+<h3 id="uso-de-gather">Uso de <code>gather()</code></h3>
+<p>Para situaciones donde realmente solo necesitas recolectar resultados de varias corrutinas, <code>gather()</code> es una herramienta útil:</p>
+<div class="highlight"><span class="filename">Python - gather_example.py</span><pre><span></span><code><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">fetch</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">delay</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">: iniciada&quot;</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">delay</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">: finalizada&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;resultado de </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+    <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span>
+        <span class="n">fetch</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+        <span class="n">fetch</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">)</span>
+    <span class="n">elapsed</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Tiempo transcurrido: </span><span class="si">{</span><span class="n">elapsed</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> segundos&quot;</span><span class="p">)</span>
+
+<span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+</code></pre></div>
+<p>En este ejemplo, <code>asyncio.gather()</code> te permite ejecutar las tareas A y B de manera concurrente y esperar a que ambas finalicen antes de continuar.</p>
+<p>Ejecuta el script con este comando:</p>
+<div class="highlight"><span class="filename">Terminal</span><pre><span></span><code><span class="gp">$ </span>python<span class="w"> </span>gather_example.py
+<span class="go">A: iniciada</span>
+<span class="go">B: iniciada</span>
+<span class="go">A: finalizada</span>
+<span class="go">B: finalizada</span>
+<span class="go">Tiempo transcurrido: 1.0 segundos</span>
+</code></pre></div>
+<p>En la práctica, <code>gather()</code> es conveniente cuando tu objetivo principal es recolectar resultados. Devuelve los resultados en el mismo orden en que se proporcionaron los objetos que admiten <code>await</code>, aunque las tareas terminen en otro orden.</p>
+<p><code>TaskGroup</code> ofrece un control más estructurado sobre el ciclo de vida de las tareas. Las agrupa y espera a que todas terminen. Si una tarea lanza una excepción distinta de <code>CancelledError</code>, cancela las demás y luego propaga las excepciones en un grupo. Por eso suele ser una buena opción para código nuevo cuando las tareas deben gestionarse como una unidad.</p>
+<p>El patrón esencial es el mismo en ambos casos: crear o recibir varias corrutinas, ponerlas en marcha como tareas y luego esperar a que todas terminen.</p>
+<h3 id="uso-de-as_completed">Uso de <code>as_completed()</code></h3>
+<p>Mientras que <code>gather()</code> devuelve los resultados en el orden de entrada, <code>as_completed()</code> te permite procesarlos en el orden en que terminan las tareas. Esto es útil cuando quieres manejar los resultados tan pronto como estén disponibles.</p>
+<p>Considera el siguiente ejemplo:</p>
+<div class="highlight"><span class="filename">Python - as_completed_example.py</span><pre><span></span><code><span class="kn">import</span> <span class="nn">asyncio</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">fetch</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">delay</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">: iniciada&quot;</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">delay</span><span class="p">)</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;resultado de </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">tasks</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">asyncio</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">fetch</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)),</span>
+        <span class="n">asyncio</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">fetch</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span>
+        <span class="n">asyncio</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">fetch</span><span class="p">(</span><span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)),</span>
+    <span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">completed</span> <span class="ow">in</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">as_completed</span><span class="p">(</span><span class="n">tasks</span><span class="p">):</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">completed</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+<span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+</code></pre></div>
+<p>Ejecuta el script con este comando:</p>
+<div class="highlight"><span class="filename">Terminal</span><pre><span></span><code><span class="gp">$ </span>python<span class="w"> </span>as_completed_example.py
+<span class="go">A: iniciada</span>
+<span class="go">B: iniciada</span>
+<span class="go">C: iniciada</span>
+<span class="go">resultado de B</span>
+<span class="go">resultado de C</span>
+<span class="go">resultado de A</span>
+</code></pre></div>
+<p>En este ejemplo, la tarea B termina primero, luego la C y finalmente la A, y sus resultados se procesan en ese mismo orden.</p>
+<h2 id="las-llamadas-bloqueantes-impiden-la-concurrencia">Las llamadas bloqueantes impiden la concurrencia</h2>
+<p>El código asíncrono también depende del uso de operaciones no bloqueantes. Reemplazar una llamada síncrona con <code>async def</code> no hace que la llamada deje de bloquear.</p>
+<p>Por ejemplo, <code>time.sleep()</code> bloquea el bucle de eventos completo:</p>
+<div class="highlight"><span class="filename">Python - blocking_task.py</span><pre><span></span><code><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">bad_task</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">: iniciada&quot;</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># Bloquea el bucle de eventos</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">: finalizada&quot;</span><span class="p">)</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">async</span> <span class="k">with</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">TaskGroup</span><span class="p">()</span> <span class="k">as</span> <span class="n">group</span><span class="p">:</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">bad_task</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">))</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">bad_task</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">))</span>
+
+<span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+</code></pre></div>
+<p>Aunque ambas tareas están listas para ejecutarse, la tarea B no puede avanzar mientras la tarea A está dentro de <code>time.sleep()</code>. El bucle de eventos queda atascado esperando a que la llamada bloqueante retorne.</p>
+<p>Para las demostraciones, <code>await asyncio.sleep()</code> simula una espera no bloqueante. En aplicaciones reales, el mismo principio se aplica a las bibliotecas que usas: elige clientes de base de datos, clientes del protocolo de transferencia de hipertexto (HTTP), colas y operaciones de archivos compatibles con programación asíncrona cuando quieras que el bucle de eventos siga siendo receptivo.</p>
+<p>Si una operación bloqueante es inevitable, puede que necesites moverla a un hilo o proceso de trabajo en lugar de ejecutarla directamente dentro del bucle de eventos.</p>
+<h2 id="un-modelo-mental-practico">Un modelo mental práctico</h2>
+<p>Una forma fiable de razonar sobre Python asíncrono es hacerte cuatro preguntas:</p>
+<ol>
+<li><strong>¿Cuál es la corrutina?</strong> Una llamada <code>async def</code> produce un objeto corrutina.</li>
+<li><strong>¿Quién la está ejecutando?</strong> La corrutina debe esperarse o iniciarse como tarea en un bucle de eventos.</li>
+<li><strong>¿Dónde puede ceder?</strong> Busca expresiones <code>await</code> que esperan operaciones incompletas y no bloqueantes.</li>
+<li><strong>¿Qué otro trabajo está listo?</strong> Sin otras tareas listas, ceder puede simplemente dejar el bucle de eventos inactivo. La concurrencia requiere múltiples tareas que puedan turnarse.</li>
+</ol>
+<p>Este modelo también explica por qué una aplicación puede contener muchas funciones asíncronas y aun así comportarse de forma síncrona. Puede esperar cada operación una a una, realizar trabajo intensivo del procesador sin ceder, o llamar a funciones bloqueantes dentro de corrutinas.</p>
+<h2 id="conclusion">Conclusión</h2>
+<p>La programación asíncrona en Python no consiste en añadir <code>async</code> a cada función ni en envolver un programa en <code>asyncio.run()</code>. Esas características establecen la maquinaria, pero no producen concurrencia de forma automática.</p>
+<p>El código asíncrono funciona como se pretende cuando:</p>
+<ul>
+<li>varias corrutinas se ponen en marcha como tareas</li>
+<li>las tareas ceden en puntos <code>await</code> no bloqueantes</li>
+<li>el bucle de eventos tiene otro trabajo listo para ejecutar</li>
+<li>las operaciones bloqueantes se mantienen fuera del bucle de eventos</li>
+</ul>
+<p>En resumen:</p>
+<blockquote>
+<p><code>async def</code> define una corrutina, <code>asyncio.run()</code> inicia el bucle de eventos, <code>await</code> brinda oportunidades para ceder y poner varias tareas en marcha crea el trabajo concurrente.</p>
+</blockquote>
+<p>Una vez que esa distinción queda clara, el comportamiento de <code>asyncio</code> resulta mucho menos misterioso: el código sigue ejecutando una instrucción a la vez, pero varias tareas pueden solapar sus períodos de espera en lugar de hacer que el programa espere por cada operación de forma independiente.</p>
+                </div>
+            </article>
+
+            <!-- Previous / Next Article Navigation -->
+        </div>
+
+        <!-- Sticky TOC Sidebar (desktop only, populated by JS) -->
+        <aside class="col-lg-4 d-none d-lg-block">
+            <div id="toc-sidebar" class="toc-sidebar"></div>
+        </aside>
+    </div>
+
+    </main>
+
+<footer class="site-footer mt-auto">
+    <div class="footer-primary border-top border-success-subtle py-3">
+        <div class="container-md content-px">
+            <div class="row gy-3 align-items-center justify-content-between">
+                <div class="col-lg-6 col-md-7">
+                    <div class="d-flex flex-column flex-sm-row align-items-center align-items-sm-start gap-3 text-center text-sm-start">
+                        <a href="https://pythonscouts.com" class="d-inline-flex align-items-center text-decoration-none">
+                            <img src="https://pythonscouts.com/images/identity/logo-title.png" alt="Python Scouts" width="160" height="48" class="img-fluid footer-logo">
+                        </a>
+                        <p class="text-muted-strong footer-description mb-0">
+                            Python Scouts es tu espacio para aprender Python en español.
+                        </p>
+                        <div class="d-flex align-items-center gap-3 mt-1">
+                            <a href="https://github.com/lpozo" target="_blank" rel="noopener noreferrer" class="text-muted-strong text-decoration-none article-nav-link p-2 border-0 bg-transparent" aria-label="GitHub" style="transition: color 0.2s;">
+                                <i class="bi bi-github fs-5"></i>
+                            </a>
+                            <a href="https://twitter.com/lpozo78" target="_blank" rel="noopener noreferrer" class="text-muted-strong text-decoration-none article-nav-link p-2 border-0 bg-transparent" aria-label="Twitter" style="transition: color 0.2s;">
+                                <i class="bi bi-twitter-x fs-5"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/lpozor78" target="_blank" rel="noopener noreferrer" class="text-muted-strong text-decoration-none article-nav-link p-2 border-0 bg-transparent" aria-label="LinkedIn" style="transition: color 0.2s;">
+                                <i class="bi bi-linkedin fs-5"></i>
+                            </a>
+                            <a href="https://pythonscouts.com/feeds/all.atom.xml" target="_blank" rel="alternate" class="text-muted-strong text-decoration-none article-nav-link p-2 border-0 bg-transparent" aria-label="RSS Feed" style="transition: color 0.2s;">
+                                <i class="bi bi-rss-fill fs-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-5 text-center text-md-start">
+                    <h3 class="h6 text-uppercase text-success fw-semibold mb-2">Explora</h3>
+                    <nav aria-label="Footer navigation">
+                        <ul class="footer-links list-unstyled d-inline-flex flex-column gap-2 mb-0 text-start">
+                            <li><a href="https://pythonscouts.com/guias/">Guías</a></li>
+                            <li><a href="https://pythonscouts.com/series/">Series</a></li>
+                            <li><a href="https://pythonscouts.com/tutoriales/">Tutoriales</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-secondary py-3">
+        <div class="container-md content-px">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <div class="d-flex flex-column flex-sm-row align-items-center gap-2 text-center text-sm-start">
+                    <span class="text-white-50 small">
+                        &copy; 2023-2026 Leodanis Pozo Ramos.
+                    </span>
+                    <div class="d-flex align-items-center gap-2">
+                        <a href="https://creativecommons.org/licenses/by-sa/4.0/" 
+                           target="_blank" 
+                           rel="license noopener noreferrer"
+                           class="d-inline-block"
+                           style="background: white; padding: 4px 8px; border-radius: 4px;">
+                            <img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" 
+                                 alt="CC BY-SA 4.0" 
+                                 width="88" 
+                                 height="31"
+                                 style="border-width:0; display: block;">
+                        </a>
+                        <span class="text-white-50 small">
+                            Contenido licenciado bajo 
+                            <a href="https://creativecommons.org/licenses/by-sa/4.0/" 
+                               target="_blank" 
+                               rel="license noopener noreferrer"
+                               class="text-white text-decoration-none">
+                                CC BY-SA 4.0
+                                <i class="bi bi-box-arrow-up-right ms-1"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <span class="text-white-50 small">
+                    Imágenes cortesía de <a href="https://picsum.photos/" target="_blank" rel="noopener" class="text-white text-decoration-none">Picsum</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</footer>
+    <!-- JS Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
+    <!-- Stork and site scripts -->
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202610241129" defer></script>
+    <script
+        src="https://pythonscouts.com/theme/js/site.js?v=202610241129"
+        defer
+        data-stork-name="sitesearch"
+        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202610241129"
+        data-stork-index="https://pythonscouts.com/search-index.st">
+    </script>
+
+</body>
+</html>
