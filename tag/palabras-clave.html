@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="es-es" class="h-100">
+<html lang="es-es" class="h-100" data-bs-theme="light">
 
 <head>
-            <title>
+        <title>
     Python Scouts - Etiqueta: "palabras clave"
     </title>
     <meta charset="utf-8">
@@ -16,16 +16,42 @@
     
     <meta name="dcterms.rights" content="https://creativecommons.org/licenses/by-sa/4.0/">
     <meta name="dcterms.rightsHolder" content="Leodanis Pozo Ramos">
-    <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">    <!-- Open Graph / Facebook -->
+    <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#ffffff">
+    <script>
+      (function () {
+        var root = document.documentElement;
+        var store = null;
+        try { store = window.localStorage; } catch (error) { store = null; }
+        function read(key) { try { return store ? store.getItem(key) : null; } catch (error) { return null; } }
+        function write(key, value) { try { if (store) { store.setItem(key, value); } } catch (error) {} }
+        var params = new URLSearchParams(window.location.search);
+        var theme = params.get("theme");
+        if (theme === "light" || theme === "dark") {
+          write("ps-theme", theme);
+        } else {
+          theme = read("ps-theme");
+        }
+        if (theme !== "light" && theme !== "dark") {
+          theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        root.setAttribute("data-bs-theme", theme);
+      })();
+    </script>    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Python Scouts - Aprende Python en Español.">
     <meta property="og:description" content="Python Scouts es tu guía completa para aprender a programar en Python. Encuentra tutoriales, guías prácticas y series educativas en español.">
     <meta property="og:url" content="https://pythonscouts.com">
     <meta property="og:site_name" content="Python Scouts">
     <meta property="og:locale" content="es_ES">
-    
+    <meta property="og:image" content="https://pythonscouts.com/images/identity/og-default.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Python Scouts: Aprende Python en Español.">
+
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://pythonscouts.com/images/identity/og-default.webp">
     <meta name="twitter:site" content="@lpozo78">
     <meta name="twitter:title" content="Python Scouts - Aprende Python en Español.">
     <meta name="twitter:description" content="Python Scouts es tu guía completa para aprender a programar en Python. Encuentra tutoriales, guías prácticas y series educativas en español.">
@@ -34,102 +60,95 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://pythonscouts.com/tag/palabras-clave.html">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=202610241129">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=202610241129">
+    <link rel="icon" href="/favicon.ico?v=202611201354" sizes="32x32">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=202611201354">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=202611201354">
     <!-- Preconnect to CDNs -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-    <!-- Bootstrap CSS (deferred) -->
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
           integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
           crossorigin="anonymous">
-    <!-- Bootstrap Icons (self-hosted, deferred) -->
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202610241129">
-    <!-- Stork Search - Deferred -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202610241129">
-
-            <link rel="preload"
-                  as="image"
-                  href="https://pythonscouts.com/images/articles/python-underscore/article.webp"
-                  imagesrcset="
-https://pythonscouts.com/images/articles/python-underscore/article.webp 900w, https://pythonscouts.com/images/articles/python-underscore/thumbnail.webp 300w                  "
-                  imagesizes="(min-width: 992px) 66vw, 100vw"
-                  fetchpriority="high">
-
-    <!-- Inline Code CSS -->
-    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/inline_code.css?v=202610241129">
-</head>
+    <!-- Preload the main text font (self-hosted) -->
+    <link rel="preload" href="https://pythonscouts.com/theme/fonts/plus-jakarta-sans/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Theme CSS: fonts, design tokens, components -->
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/fonts.css?v=202611201354">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/tokens.css?v=202611201354">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/global.css?v=202611201354">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/inline_code.css?v=202611201354">
+    <link rel="stylesheet" href="https://pythonscouts.com/theme/css/stork.css?v=202611201354">
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R3C5PFSQ1S"></script>
 <script
-    src="https://pythonscouts.com/theme/js/analytics.js?v=202610241129"
+    src="https://pythonscouts.com/theme/js/analytics.js?v=202611201354"
     defer
     data-analytics-id="G-R3C5PFSQ1S">
-</script>
+</script></head>
+
 
 <body class="d-flex flex-column h-100">
     <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
     
-    <!-- Navigation bar -->
-    <nav class="navbar navbar-expand-md bg-white fixed-top border-bottom">
+    <nav class="navbar navbar-expand-md fixed-top site-nav" aria-label="Navegación principal">
         <div class="container-md content-px">
-            <a class="navbar-brand" href="/">
-            <img
-            src="https://pythonscouts.com/images/identity/header.webp"
-            alt="Python Scouts"
-            width="150"
-            height="50"
-            >
+            <a class="navbar-brand brand" href="https://pythonscouts.com/" aria-label="Python Scouts: inicio">
+<svg class="ps-mark" viewBox="10 8 92 84" aria-hidden="true" focusable="false">
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" transform="skewX(-8) translate(7 0)">
+    <path class="ps-mark-body" stroke="currentColor" stroke-width="16" d="M60 18H42a16 16 0 0 0 0 32h28a16 16 0 0 1 0 32H52"/>
+    <path class="ps-mark-trail" stroke-width="7" d="M76 13.5h14M78 22.5h6M36 86.5H22M34 77.5h-6"/>
+  </g>
+</svg>                <span class="brand-wordmark" aria-hidden="true">Python<span class="brand-wordmark-accent">Scouts</span></span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Menú de Navegación">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarToggler">
-            <ul class="navbar-nav m-auto nav-link">
-                <li class="nav-item px-3">
-                <a href="https://pythonscouts.com/guias/" aria-current="page">
-                    Guías
-                </a>
-                </li>
-                <li class="nav-item px-3">
-                <a href="https://pythonscouts.com/series/" aria-current="page">
-                    Series
-                </a>
-                </li>
-                <li class="nav-item px-3">
-                <a href="https://pythonscouts.com/tutoriales/" aria-current="page">
-                    Tutoriales
-                </a>
-                </li>
-                <li class="nav-item px-3">
-                <a href="https://pythonscouts.com/acerca/" aria-current="page">
-                    Acerca
-                </a>
-                </li>
-            </ul>
-            <form class="d-flex search-form" role="search">
-                <button type="button" class="search-toggle btn btn-link p-0 me-2 d-none d-md-inline-flex" aria-label="Buscar">
-                    <i class="bi bi-search text-muted-strong"></i>
+
+            <div class="nav-actions order-md-last">
+                <button type="button" class="icon-button theme-toggle" data-theme-toggle aria-label="Activar tema oscuro" title="Cambiar tema">
+                    <i class="bi bi-moon-stars theme-toggle-dark" aria-hidden="true"></i>
+                    <i class="bi bi-sun theme-toggle-light" aria-hidden="true"></i>
                 </button>
-                <div class="search-input-wrapper">
-                    <div class="stork-wrapper">
-                        <input
-                        class="stork-input"
-                        type="search"
-                        id="site-search"
-                        name="q"
-                        placeholder="Buscar"
-                        aria-label="Search"
-                        data-stork="sitesearch"
-                        >
+                <button class="navbar-toggler icon-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Abrir menú de navegación">
+                    <i class="bi bi-list" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav mx-auto site-nav-links">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://pythonscouts.com/guias/">Guías</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://pythonscouts.com/series/">Series</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://pythonscouts.com/tutoriales/">Tutoriales</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://pythonscouts.com/acerca/">Acerca</a>
+                    </li>
+                </ul>
+                <form class="search-form" role="search" onsubmit="return false;">
+                    <button type="button" class="search-toggle icon-button d-none d-md-inline-flex" aria-label="Buscar" title="Buscar">
+                        <i class="bi bi-search" aria-hidden="true"></i>
+                    </button>
+                    <div class="search-input-wrapper">
+                        <div class="stork-wrapper">
+                            <label class="visually-hidden" for="site-search">Buscar en Python Scouts</label>
+                            <input
+                                class="stork-input"
+                                type="search"
+                                id="site-search"
+                                name="q"
+                                placeholder="Buscar artículos"
+                                autocomplete="off"
+                                data-stork="sitesearch">
+                        </div>
                     </div>
-                </div>
-            </form>
+                </form>
             </div>
         </div>
     </nav>
@@ -137,472 +156,323 @@ https://pythonscouts.com/images/articles/python-underscore/article.webp 900w, ht
         <div class="stork-wrapper">
             <div data-stork="sitesearch-output" class="stork-output"></div>
         </div>
-        <div class="row">
-            <div class="col">
-                <h1>Artículos etiquetados con <code>palabras clave</code></h1>
-            </div>
+
+
+<header class="page-header">
+    <nav aria-label="Ruta de navegación">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="https://pythonscouts.com/">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="https://pythonscouts.com/etiquetas/">Etiquetas</a></li>
+            <li class="breadcrumb-item active" aria-current="page">palabras clave</li>
+        </ol>
+    </nav>
+    <h1 class="page-title">palabras clave</h1>
+    <p class="page-meta">40 artículos con esta etiqueta</p>
+</header>
+<section aria-label="Artículos con la etiqueta palabras clave">
+<div class="post-grid">
+    <article class="post-card">
+        <div class="post-card-media">
+            <img
+                src="https://pythonscouts.com/images/articles/python-underscore/article.webp"
+                width="300"
+                height="200"
+                alt=""
+                loading="lazy">
         </div>
-
-
-
-<section>
-    <!-- List of Articles -->
-<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5">
-    <div class="col">
-        <article class="card h-100 border-0 shadow-sm">
-            <a href="https://pythonscouts.com/python-underscore/" class="position-relative d-block">
-                <img
-                    class="card-img-top img-fluid w-100 rounded-top"
-                    src="https://pythonscouts.com/images/articles/python-underscore/article.webp"
-                    width="300"
-                    height="200"
-                    alt="Palabras clave en Python: _"
-                    loading="lazy">
-                <span class="badge bg-success text-white position-absolute top-0 end-0 m-3 shadow-sm" style="font-size: 0.75rem;">
-                    Series
-                </span>
-            </a>
-            <div class="py-3 px-1">
-                <a href="https://pythonscouts.com/python-underscore/">
-                    <p class="card-title h5 mb-0">Palabras clave en Python: _</p>
-                </a>
-                <div class="text-muted-strong pt-3 h6">
-                    <a href="https://pythonscouts.com/author/leodanis-pozo-ramos/">Leodanis Pozo Ramos</a>
-                </div>
-                <time class="text-muted-strong small d-flex align-items-center gap-2 mt-2"
-                      datetime="2026-04-24T19:20:00+02:00">
-                    <span class="d-inline-flex align-items-center gap-1">
-                        <i class="bi bi-calendar-event" aria-hidden="true"></i>
-                        24 abr. 2026
-                    </span>
-                    <span class="d-inline-flex align-items-center gap-1">
-                        <i class="bi bi-clock" aria-hidden="true"></i>
-                        2 min
-                    </span>
-                </time>
-            </div>
-        </article>
-    </div>
-    <div class="col">
-        <article class="card h-100 border-0 shadow-sm">
-            <a href="https://pythonscouts.com/python-case/" class="position-relative d-block">
-                <img
-                    class="card-img-top img-fluid w-100 rounded-top"
-                    src="https://pythonscouts.com/images/articles/python-case/article.webp"
-                    width="300"
-                    height="200"
-                    alt="Palabras clave en Python: case"
-                    loading="lazy">
-                <span class="badge bg-success text-white position-absolute top-0 end-0 m-3 shadow-sm" style="font-size: 0.75rem;">
-                    Series
-                </span>
-            </a>
-            <div class="py-3 px-1">
-                <a href="https://pythonscouts.com/python-case/">
-                    <p class="card-title h5 mb-0">Palabras clave en Python: case</p>
-                </a>
-                <div class="text-muted-strong pt-3 h6">
-                    <a href="https://pythonscouts.com/author/leodanis-pozo-ramos/">Leodanis Pozo Ramos</a>
-                </div>
-                <time class="text-muted-strong small d-flex align-items-center gap-2 mt-2"
-                      datetime="2026-04-05T22:05:00+02:00">
-                    <span class="d-inline-flex align-items-center gap-1">
-                        <i class="bi bi-calendar-event" aria-hidden="true"></i>
-                        05 abr. 2026
-                    </span>
-                    <span class="d-inline-flex align-items-center gap-1">
-                        <i class="bi bi-clock" aria-hidden="true"></i>
-                        2 min
-                    </span>
-                </time>
-            </div>
-        </article>
-    </div>
-    <div class="col">
-        <article class="card h-100 border-0 shadow-sm">
-            <a href="https://pythonscouts.com/python-match/" class="position-relative d-block">
-                <img
-                    class="card-img-top img-fluid w-100 rounded-top"
-                    src="https://pythonscouts.com/images/articles/python-match/article.webp"
-                    width="300"
-                    height="200"
-                    alt="Palabras clave en Python: match"
-                    loading="lazy">
-                <span class="badge bg-success text-white position-absolute top-0 end-0 m-3 shadow-sm" style="font-size: 0.75rem;">
-                    Series
-                </span>
-            </a>
-            <div class="py-3 px-1">
-                <a href="https://pythonscouts.com/python-match/">
-                    <p class="card-title h5 mb-0">Palabras clave en Python: match</p>
-                </a>
-                <div class="text-muted-strong pt-3 h6">
-                    <a href="https://pythonscouts.com/author/leodanis-pozo-ramos/">Leodanis Pozo Ramos</a>
-                </div>
-                <time class="text-muted-strong small d-flex align-items-center gap-2 mt-2"
-                      datetime="2026-03-29T21:50:00+02:00">
-                    <span class="d-inline-flex align-items-center gap-1">
-                        <i class="bi bi-calendar-event" aria-hidden="true"></i>
-                        29 mar. 2026
-                    </span>
-                    <span class="d-inline-flex align-items-center gap-1">
-                        <i class="bi bi-clock" aria-hidden="true"></i>
-                        2 min
-                    </span>
-                </time>
-            </div>
-        </article>
-    </div>
-    <div class="col">
-        <article class="card h-100 border-0 shadow-sm">
-            <a href="https://pythonscouts.com/python-type/" class="position-relative d-block">
-                <img
-                    class="card-img-top img-fluid w-100 rounded-top"
-                    src="https://pythonscouts.com/images/articles/python-type/article.webp"
-                    width="300"
-                    height="200"
-                    alt="Palabras clave en Python: type"
-                    loading="lazy">
-                <span class="badge bg-success text-white position-absolute top-0 end-0 m-3 shadow-sm" style="font-size: 0.75rem;">
-                    Series
-                </span>
-            </a>
-            <div class="py-3 px-1">
-                <a href="https://pythonscouts.com/python-type/">
-                    <p class="card-title h5 mb-0">Palabras clave en Python: type</p>
-                </a>
-                <div class="text-muted-strong pt-3 h6">
-                    <a href="https://pythonscouts.com/author/leodanis-pozo-ramos/">Leodanis Pozo Ramos</a>
-                </div>
-                <time class="text-muted-strong small d-flex align-items-center gap-2 mt-2"
-                      datetime="2026-03-27T18:15:00+01:00">
-                    <span class="d-inline-flex align-items-center gap-1">
-                        <i class="bi bi-calendar-event" aria-hidden="true"></i>
-                        27 mar. 2026
-                    </span>
-                    <span class="d-inline-flex align-items-center gap-1">
-                        <i class="bi bi-clock" aria-hidden="true"></i>
-                        2 min
-                    </span>
-                </time>
-            </div>
-        </article>
-    </div>
-    <div class="col">
-        <article class="card h-100 border-0 shadow-sm">
-            <a href="https://pythonscouts.com/python-await/" class="position-relative d-block">
-                <img
-                    class="card-img-top img-fluid w-100 rounded-top"
-                    src="https://pythonscouts.com/images/articles/python-await/article.webp"
-                    width="300"
-                    height="200"
-                    alt="Palabras clave en Python: await"
-                    loading="lazy">
-                <span class="badge bg-success text-white position-absolute top-0 end-0 m-3 shadow-sm" style="font-size: 0.75rem;">
-                    Series
-                </span>
-            </a>
-            <div class="py-3 px-1">
-                <a href="https://pythonscouts.com/python-await/">
-                    <p class="card-title h5 mb-0">Palabras clave en Python: await</p>
-                </a>
-                <div class="text-muted-strong pt-3 h6">
-                    <a href="https://pythonscouts.com/author/leodanis-pozo-ramos/">Leodanis Pozo Ramos</a>
-                </div>
-                <time class="text-muted-strong small d-flex align-items-center gap-2 mt-2"
-                      datetime="2026-03-05T19:15:00+01:00">
-                    <span class="d-inline-flex align-items-center gap-1">
-                        <i class="bi bi-calendar-event" aria-hidden="true"></i>
-                        05 mar. 2026
-                    </span>
-                    <span class="d-inline-flex align-items-center gap-1">
-                        <i class="bi bi-clock" aria-hidden="true"></i>
-                        3 min
-                    </span>
-                </time>
-            </div>
-        </article>
-    </div>
-    <div class="col">
-        <article class="card h-100 border-0 shadow-sm">
-            <a href="https://pythonscouts.com/python-async/" class="position-relative d-block">
-                <img
-                    class="card-img-top img-fluid w-100 rounded-top"
-                    src="https://pythonscouts.com/images/articles/python-async/article.webp"
-                    width="300"
-                    height="200"
-                    alt="Palabras clave en Python: async"
-                    loading="lazy">
-                <span class="badge bg-success text-white position-absolute top-0 end-0 m-3 shadow-sm" style="font-size: 0.75rem;">
-                    Series
-                </span>
-            </a>
-            <div class="py-3 px-1">
-                <a href="https://pythonscouts.com/python-async/">
-                    <p class="card-title h5 mb-0">Palabras clave en Python: async</p>
-                </a>
-                <div class="text-muted-strong pt-3 h6">
-                    <a href="https://pythonscouts.com/author/leodanis-pozo-ramos/">Leodanis Pozo Ramos</a>
-                </div>
-                <time class="text-muted-strong small d-flex align-items-center gap-2 mt-2"
-                      datetime="2026-03-03T21:30:00+01:00">
-                    <span class="d-inline-flex align-items-center gap-1">
-                        <i class="bi bi-calendar-event" aria-hidden="true"></i>
-                        03 mar. 2026
-                    </span>
-                    <span class="d-inline-flex align-items-center gap-1">
-                        <i class="bi bi-clock" aria-hidden="true"></i>
-                        3 min
-                    </span>
-                </time>
-            </div>
-        </article>
-    </div>
-    <div class="col">
-        <article class="card h-100 border-0 shadow-sm">
-            <a href="https://pythonscouts.com/python-nonlocal/" class="position-relative d-block">
-                <img
-                    class="card-img-top img-fluid w-100 rounded-top"
-                    src="https://pythonscouts.com/images/articles/python-nonlocal/article.webp"
-                    width="300"
-                    height="200"
-                    alt="Palabras clave en Python: nonlocal"
-                    loading="lazy">
-                <span class="badge bg-success text-white position-absolute top-0 end-0 m-3 shadow-sm" style="font-size: 0.75rem;">
-                    Series
-                </span>
-            </a>
-            <div class="py-3 px-1">
-                <a href="https://pythonscouts.com/python-nonlocal/">
-                    <p class="card-title h5 mb-0">Palabras clave en Python: nonlocal</p>
-                </a>
-                <div class="text-muted-strong pt-3 h6">
-                    <a href="https://pythonscouts.com/author/leodanis-pozo-ramos/">Leodanis Pozo Ramos</a>
-                </div>
-                <time class="text-muted-strong small d-flex align-items-center gap-2 mt-2"
-                      datetime="2026-03-02T19:10:00+01:00">
-                    <span class="d-inline-flex align-items-center gap-1">
-                        <i class="bi bi-calendar-event" aria-hidden="true"></i>
-                        02 mar. 2026
-                    </span>
-                    <span class="d-inline-flex align-items-center gap-1">
-                        <i class="bi bi-clock" aria-hidden="true"></i>
-                        2 min
-                    </span>
-                </time>
-            </div>
-        </article>
-    </div>
-    <div class="col">
-        <article class="card h-100 border-0 shadow-sm">
-            <a href="https://pythonscouts.com/python-global/" class="position-relative d-block">
-                <img
-                    class="card-img-top img-fluid w-100 rounded-top"
-                    src="https://pythonscouts.com/images/articles/python-global/article.webp"
-                    width="300"
-                    height="200"
-                    alt="Palabras clave en Python: global"
-                    loading="lazy">
-                <span class="badge bg-success text-white position-absolute top-0 end-0 m-3 shadow-sm" style="font-size: 0.75rem;">
-                    Series
-                </span>
-            </a>
-            <div class="py-3 px-1">
-                <a href="https://pythonscouts.com/python-global/">
-                    <p class="card-title h5 mb-0">Palabras clave en Python: global</p>
-                </a>
-                <div class="text-muted-strong pt-3 h6">
-                    <a href="https://pythonscouts.com/author/leodanis-pozo-ramos/">Leodanis Pozo Ramos</a>
-                </div>
-                <time class="text-muted-strong small d-flex align-items-center gap-2 mt-2"
-                      datetime="2026-02-25T21:30:00+01:00">
-                    <span class="d-inline-flex align-items-center gap-1">
-                        <i class="bi bi-calendar-event" aria-hidden="true"></i>
-                        25 feb. 2026
-                    </span>
-                    <span class="d-inline-flex align-items-center gap-1">
-                        <i class="bi bi-clock" aria-hidden="true"></i>
-                        2 min
-                    </span>
-                </time>
-            </div>
-        </article>
-    </div>
-    <div class="col">
-        <article class="card h-100 border-0 shadow-sm">
-            <a href="https://pythonscouts.com/python-finally/" class="position-relative d-block">
-                <img
-                    class="card-img-top img-fluid w-100 rounded-top"
-                    src="https://pythonscouts.com/images/articles/python-finally/article.webp"
-                    width="300"
-                    height="200"
-                    alt="Palabras clave en Python: finally"
-                    loading="lazy">
-                <span class="badge bg-success text-white position-absolute top-0 end-0 m-3 shadow-sm" style="font-size: 0.75rem;">
-                    Series
-                </span>
-            </a>
-            <div class="py-3 px-1">
-                <a href="https://pythonscouts.com/python-finally/">
-                    <p class="card-title h5 mb-0">Palabras clave en Python: finally</p>
-                </a>
-                <div class="text-muted-strong pt-3 h6">
-                    <a href="https://pythonscouts.com/author/leodanis-pozo-ramos/">Leodanis Pozo Ramos</a>
-                </div>
-                <time class="text-muted-strong small d-flex align-items-center gap-2 mt-2"
-                      datetime="2026-02-21T19:30:00+01:00">
-                    <span class="d-inline-flex align-items-center gap-1">
-                        <i class="bi bi-calendar-event" aria-hidden="true"></i>
-                        21 feb. 2026
-                    </span>
-                    <span class="d-inline-flex align-items-center gap-1">
-                        <i class="bi bi-clock" aria-hidden="true"></i>
-                        2 min
-                    </span>
-                </time>
-            </div>
-        </article>
-    </div>
+        <div class="post-card-body">
+            <a class="chip post-card-chip" href="https://pythonscouts.com/series/">Series</a>
+            <h2 class="post-card-title">
+                <a href="https://pythonscouts.com/python-underscore/" class="stretched-link">Palabras clave en Python: _</a>
+            </h2>
+            <p class="post-card-summary">En Python, _ funciona como patrón comodín en sentencias match ... case y te permite definir una rama por defecto.</p>
+            <p class="post-card-meta">
+                <time datetime="2026-04-24T19:20:00+02:00">24 abr. 2026</time>
+                <span>2 min</span>
+            </p>
+        </div>
+    </article>
+    <article class="post-card">
+        <div class="post-card-media">
+            <img
+                src="https://pythonscouts.com/images/articles/python-case/article.webp"
+                width="300"
+                height="200"
+                alt=""
+                loading="lazy">
+        </div>
+        <div class="post-card-body">
+            <a class="chip post-card-chip" href="https://pythonscouts.com/series/">Series</a>
+            <h2 class="post-card-title">
+                <a href="https://pythonscouts.com/python-case/" class="stretched-link">Palabras clave en Python: case</a>
+            </h2>
+            <p class="post-card-summary">En Python, la palabra clave suave case es el componente principal de la estructura match ... case, diseñada para implementar coincidencias de...</p>
+            <p class="post-card-meta">
+                <time datetime="2026-04-05T22:05:00+02:00">05 abr. 2026</time>
+                <span>2 min</span>
+            </p>
+        </div>
+    </article>
+    <article class="post-card">
+        <div class="post-card-media">
+            <img
+                src="https://pythonscouts.com/images/articles/python-match/article.webp"
+                width="300"
+                height="200"
+                alt=""
+                loading="lazy">
+        </div>
+        <div class="post-card-body">
+            <a class="chip post-card-chip" href="https://pythonscouts.com/series/">Series</a>
+            <h2 class="post-card-title">
+                <a href="https://pythonscouts.com/python-match/" class="stretched-link">Palabras clave en Python: match</a>
+            </h2>
+            <p class="post-card-summary">En Python, la palabra clave suave match te permite evaluar expresiones mediante coincidencia de patrones, lo que facilita la escritura de...</p>
+            <p class="post-card-meta">
+                <time datetime="2026-03-29T21:50:00+02:00">29 mar. 2026</time>
+                <span>2 min</span>
+            </p>
+        </div>
+    </article>
+    <article class="post-card">
+        <div class="post-card-media">
+            <img
+                src="https://pythonscouts.com/images/articles/python-type/article.webp"
+                width="300"
+                height="200"
+                alt=""
+                loading="lazy">
+        </div>
+        <div class="post-card-body">
+            <a class="chip post-card-chip" href="https://pythonscouts.com/series/">Series</a>
+            <h2 class="post-card-title">
+                <a href="https://pythonscouts.com/python-type/" class="stretched-link">Palabras clave en Python: type</a>
+            </h2>
+            <p class="post-card-summary">En Python, la palabra clave suave type se utiliza para declarar alias de tipos. Esta funcionalidad te permite asignar nombres descriptivos a tipos...</p>
+            <p class="post-card-meta">
+                <time datetime="2026-03-27T18:15:00+01:00">27 mar. 2026</time>
+                <span>2 min</span>
+            </p>
+        </div>
+    </article>
+    <article class="post-card">
+        <div class="post-card-media">
+            <img
+                src="https://pythonscouts.com/images/articles/python-await/article.webp"
+                width="300"
+                height="200"
+                alt=""
+                loading="lazy">
+        </div>
+        <div class="post-card-body">
+            <a class="chip post-card-chip" href="https://pythonscouts.com/series/">Series</a>
+            <h2 class="post-card-title">
+                <a href="https://pythonscouts.com/python-await/" class="stretched-link">Palabras clave en Python: await</a>
+            </h2>
+            <p class="post-card-summary">En Python, la palabra clave await se utiliza para pausar la ejecución de una función asíncrona hasta que una tarea asíncrona se complete.</p>
+            <p class="post-card-meta">
+                <time datetime="2026-03-05T19:15:00+01:00">05 mar. 2026</time>
+                <span>3 min</span>
+            </p>
+        </div>
+    </article>
+    <article class="post-card">
+        <div class="post-card-media">
+            <img
+                src="https://pythonscouts.com/images/articles/python-async/article.webp"
+                width="300"
+                height="200"
+                alt=""
+                loading="lazy">
+        </div>
+        <div class="post-card-body">
+            <a class="chip post-card-chip" href="https://pythonscouts.com/series/">Series</a>
+            <h2 class="post-card-title">
+                <a href="https://pythonscouts.com/python-async/" class="stretched-link">Palabras clave en Python: async</a>
+            </h2>
+            <p class="post-card-summary">En Python, la palabra clave async se utiliza para definir funciones y bloques de código que se ejecutan de manera asíncrona sin bloquear el...</p>
+            <p class="post-card-meta">
+                <time datetime="2026-03-03T21:30:00+01:00">03 mar. 2026</time>
+                <span>3 min</span>
+            </p>
+        </div>
+    </article>
+    <article class="post-card">
+        <div class="post-card-media">
+            <img
+                src="https://pythonscouts.com/images/articles/python-nonlocal/article.webp"
+                width="300"
+                height="200"
+                alt=""
+                loading="lazy">
+        </div>
+        <div class="post-card-body">
+            <a class="chip post-card-chip" href="https://pythonscouts.com/series/">Series</a>
+            <h2 class="post-card-title">
+                <a href="https://pythonscouts.com/python-nonlocal/" class="stretched-link">Palabras clave en Python: nonlocal</a>
+            </h2>
+            <p class="post-card-summary">En Python, la palabra clave nonlocal te permite modificar variables de la función externa desde funciones anidadas para gestionar clausuras y...</p>
+            <p class="post-card-meta">
+                <time datetime="2026-03-02T19:10:00+01:00">02 mar. 2026</time>
+                <span>2 min</span>
+            </p>
+        </div>
+    </article>
+    <article class="post-card">
+        <div class="post-card-media">
+            <img
+                src="https://pythonscouts.com/images/articles/python-global/article.webp"
+                width="300"
+                height="200"
+                alt=""
+                loading="lazy">
+        </div>
+        <div class="post-card-body">
+            <a class="chip post-card-chip" href="https://pythonscouts.com/series/">Series</a>
+            <h2 class="post-card-title">
+                <a href="https://pythonscouts.com/python-global/" class="stretched-link">Palabras clave en Python: global</a>
+            </h2>
+            <p class="post-card-summary">En Python, la palabra clave global te permite modificar variables globales desde funciones y gestionar el estado global de tu programa de forma controlada.</p>
+            <p class="post-card-meta">
+                <time datetime="2026-02-25T21:30:00+01:00">25 feb. 2026</time>
+                <span>2 min</span>
+            </p>
+        </div>
+    </article>
+    <article class="post-card">
+        <div class="post-card-media">
+            <img
+                src="https://pythonscouts.com/images/articles/python-finally/article.webp"
+                width="300"
+                height="200"
+                alt=""
+                loading="lazy">
+        </div>
+        <div class="post-card-body">
+            <a class="chip post-card-chip" href="https://pythonscouts.com/series/">Series</a>
+            <h2 class="post-card-title">
+                <a href="https://pythonscouts.com/python-finally/" class="stretched-link">Palabras clave en Python: finally</a>
+            </h2>
+            <p class="post-card-summary">En Python, la palabra clave finally se utiliza junto con try para garantizar que un bloque de código se ejecute sin importar si ocurre una excepción.</p>
+            <p class="post-card-meta">
+                <time datetime="2026-02-21T19:30:00+01:00">21 feb. 2026</time>
+                <span>2 min</span>
+            </p>
+        </div>
+    </article>
 </div>
-
-    <!-- Pagination -->
-
-<div class="row">
-    <div class="col-md-9 pb-2">
-        <nav aria-label="Paginación de artículos">
-            <ul class="pagination custom-pagination justify-content-center">
-                <li class="page-item active">
-                  <a class="page-link" href="https://pythonscouts.com/tag/palabras-clave.html">
-                    1
-                  </a>
-                </li>
-                <li class="page-item ">
-                  <a class="page-link" href="https://pythonscouts.com/tag/palabras-clave/2/">
-                    2
-                  </a>
-                </li>
-                <li class="page-item ">
-                  <a class="page-link" href="https://pythonscouts.com/tag/palabras-clave/3/">
-                    3
-                  </a>
-                </li>
-                <li class="page-item ">
-                  <a class="page-link" href="https://pythonscouts.com/tag/palabras-clave/4/">
-                    4
-                  </a>
-                </li>
-                <li class="page-item ">
-                  <a class="page-link" href="https://pythonscouts.com/tag/palabras-clave/5/">
-                    5
-                  </a>
-                </li>
-
-                <li class="page-item">
-                  <a class="page-link" href="https://pythonscouts.com/tag/palabras-clave/2/" aria-label="Página siguiente">
-                    <span aria-hidden="true">&rsaquo;</span>
-                  </a>
-                </li>
-                <li class="page-item">
-                  <a class="page-link" href="https://pythonscouts.com/tag/palabras-clave/5/" aria-label="Última página">
-                    <span aria-hidden="true">&raquo;</span>
-                  </a>
-                </li>
-            </ul>
-          </nav>
-    </div>
-</div></section>
+<nav class="pager" aria-label="Paginación de artículos">
+    <ul class="pager-list">
+        <li>
+            <span class="pager-link is-current" aria-current="page">1</span>
+        </li>
+        <li>
+            <a class="pager-link" href="https://pythonscouts.com/tag/palabras-clave/2/" aria-label="Página 2">2</a>
+        </li>
+        <li>
+            <a class="pager-link" href="https://pythonscouts.com/tag/palabras-clave/3/" aria-label="Página 3">3</a>
+        </li>
+        <li>
+            <a class="pager-link" href="https://pythonscouts.com/tag/palabras-clave/4/" aria-label="Página 4">4</a>
+        </li>
+        <li>
+            <a class="pager-link" href="https://pythonscouts.com/tag/palabras-clave/5/" aria-label="Página 5">5</a>
+        </li>
+        <li>
+            <a class="pager-link" href="https://pythonscouts.com/tag/palabras-clave/2/" aria-label="Página siguiente">
+                <i class="bi bi-chevron-right" aria-hidden="true"></i>
+            </a>
+        </li>
+        <li>
+            <a class="pager-link" href="https://pythonscouts.com/tag/palabras-clave/5/" aria-label="Última página">
+                <i class="bi bi-chevron-double-right" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</nav>
+</section>
     </main>
 
 <footer class="site-footer mt-auto">
-    <div class="footer-primary border-top border-success-subtle py-3">
-        <div class="container-md content-px">
-            <div class="row gy-3 align-items-center justify-content-between">
-                <div class="col-lg-6 col-md-7">
-                    <div class="d-flex flex-column flex-sm-row align-items-center align-items-sm-start gap-3 text-center text-sm-start">
-                        <a href="https://pythonscouts.com" class="d-inline-flex align-items-center text-decoration-none">
-                            <img src="https://pythonscouts.com/images/identity/logo-title.png" alt="Python Scouts" width="160" height="48" class="img-fluid footer-logo">
+    <div class="container-md content-px">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="https://pythonscouts.com/" class="brand brand-footer" aria-label="Python Scouts: inicio">
+<svg class="ps-mark" viewBox="10 8 92 84" aria-hidden="true" focusable="false">
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" transform="skewX(-8) translate(7 0)">
+    <path class="ps-mark-body" stroke="currentColor" stroke-width="16" d="M60 18H42a16 16 0 0 0 0 32h28a16 16 0 0 1 0 32H52"/>
+    <path class="ps-mark-trail" stroke-width="7" d="M76 13.5h14M78 22.5h6M36 86.5H22M34 77.5h-6"/>
+  </g>
+</svg>                    <span class="brand-wordmark" aria-hidden="true">Python<span class="brand-wordmark-accent">Scouts</span></span>
+                </a>
+                <p class="footer-description">
+                    Tutoriales, guías y series para aprender Python en español, desde tu primer script hasta proyectos completos.
+                </p>
+                <ul class="footer-social list-unstyled" aria-label="Redes sociales">
+                    <li>
+                        <a href="https://github.com/lpozo" target="_blank" rel="noopener noreferrer" class="icon-button" aria-label="GitHub" title="GitHub">
+                            <i class="bi bi-github" aria-hidden="true"></i>
                         </a>
-                        <p class="text-muted-strong footer-description mb-0">
-                            Python Scouts es tu espacio para aprender Python en español.
-                        </p>
-                        <div class="d-flex align-items-center gap-3 mt-1">
-                            <a href="https://github.com/lpozo" target="_blank" rel="noopener noreferrer" class="text-muted-strong text-decoration-none article-nav-link p-2 border-0 bg-transparent" aria-label="GitHub" style="transition: color 0.2s;">
-                                <i class="bi bi-github fs-5"></i>
-                            </a>
-                            <a href="https://twitter.com/lpozo78" target="_blank" rel="noopener noreferrer" class="text-muted-strong text-decoration-none article-nav-link p-2 border-0 bg-transparent" aria-label="Twitter" style="transition: color 0.2s;">
-                                <i class="bi bi-twitter-x fs-5"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/lpozor78" target="_blank" rel="noopener noreferrer" class="text-muted-strong text-decoration-none article-nav-link p-2 border-0 bg-transparent" aria-label="LinkedIn" style="transition: color 0.2s;">
-                                <i class="bi bi-linkedin fs-5"></i>
-                            </a>
-                            <a href="https://pythonscouts.com/feeds/all.atom.xml" target="_blank" rel="alternate" class="text-muted-strong text-decoration-none article-nav-link p-2 border-0 bg-transparent" aria-label="RSS Feed" style="transition: color 0.2s;">
-                                <i class="bi bi-rss-fill fs-5"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-5 text-center text-md-start">
-                    <h3 class="h6 text-uppercase text-success fw-semibold mb-2">Explora</h3>
-                    <nav aria-label="Footer navigation">
-                        <ul class="footer-links list-unstyled d-inline-flex flex-column gap-2 mb-0 text-start">
-                            <li><a href="https://pythonscouts.com/guias/">Guías</a></li>
-                            <li><a href="https://pythonscouts.com/series/">Series</a></li>
-                            <li><a href="https://pythonscouts.com/tutoriales/">Tutoriales</a></li>
-                        </ul>
-                    </nav>
-                </div>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/lpozo78" target="_blank" rel="noopener noreferrer" class="icon-button" aria-label="Twitter" title="Twitter">
+                            <i class="bi bi-twitter-x" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/lpozor78" target="_blank" rel="noopener noreferrer" class="icon-button" aria-label="LinkedIn" title="LinkedIn">
+                            <i class="bi bi-linkedin" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pythonscouts.com/feeds/all.atom.xml" rel="alternate" class="icon-button" aria-label="Feed RSS" title="Feed RSS">
+                            <i class="bi bi-rss-fill" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
+
+            <nav class="footer-column" aria-labelledby="footer-explore">
+                <h2 class="footer-heading" id="footer-explore">Aprende</h2>
+                <ul class="footer-links list-unstyled">
+                    <li><a href="https://pythonscouts.com/guias/">Guías</a></li>
+                    <li><a href="https://pythonscouts.com/series/">Series</a></li>
+                    <li><a href="https://pythonscouts.com/tutoriales/">Tutoriales</a></li>
+                </ul>
+            </nav>
+
+            <nav class="footer-column" aria-labelledby="footer-site">
+                <h2 class="footer-heading" id="footer-site">Sitio</h2>
+                <ul class="footer-links list-unstyled">
+                    <li><a href="https://pythonscouts.com/acerca/">Acerca</a></li>
+                    <li><a href="https://pythonscouts.com/autores/">Autores</a></li>
+                    <li><a href="https://pythonscouts.com/etiquetas/">Etiquetas</a></li>
+                    <li><a href="https://pythonscouts.com/archivos/">Archivo</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
-    <div class="footer-secondary py-3">
-        <div class="container-md content-px">
-            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
-                <div class="d-flex flex-column flex-sm-row align-items-center gap-2 text-center text-sm-start">
-                    <span class="text-white-50 small">
-                        &copy; 2023-2026 Leodanis Pozo Ramos.
-                    </span>
-                    <div class="d-flex align-items-center gap-2">
-                        <a href="https://creativecommons.org/licenses/by-sa/4.0/" 
-                           target="_blank" 
-                           rel="license noopener noreferrer"
-                           class="d-inline-block"
-                           style="background: white; padding: 4px 8px; border-radius: 4px;">
-                            <img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" 
-                                 alt="CC BY-SA 4.0" 
-                                 width="88" 
-                                 height="31"
-                                 style="border-width:0; display: block;">
-                        </a>
-                        <span class="text-white-50 small">
-                            Contenido licenciado bajo 
-                            <a href="https://creativecommons.org/licenses/by-sa/4.0/" 
-                               target="_blank" 
-                               rel="license noopener noreferrer"
-                               class="text-white text-decoration-none">
-                                CC BY-SA 4.0
-                                <i class="bi bi-box-arrow-up-right ms-1"></i>
-                            </a>
-                        </span>
-                    </div>
-                </div>
-                <span class="text-white-50 small">
-                    Imágenes cortesía de <a href="https://picsum.photos/" target="_blank" rel="noopener" class="text-white text-decoration-none">Picsum</a>
-                </span>
-            </div>
+
+        <div class="footer-legal">
+            <p class="mb-0">&copy; 2023–2026 Leodanis Pozo Ramos.</p>
+            <p class="mb-0">
+                <i class="bi bi-cc-circle" aria-hidden="true"></i>
+                Contenido bajo licencia
+                <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="license noopener noreferrer">CC BY-SA 4.0</a>.
+                Imágenes de <a href="https://picsum.photos/" target="_blank" rel="noopener">Picsum</a>.
+            </p>
         </div>
     </div>
 </footer>
     <!-- JS Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
     <!-- Stork and site scripts -->
-    <script src="https://pythonscouts.com/theme/js/stork.js?v=202610241129" defer></script>
+    <script src="https://pythonscouts.com/theme/js/stork.js?v=202611201354" defer></script>
     <script
-        src="https://pythonscouts.com/theme/js/site.js?v=202610241129"
+        src="https://pythonscouts.com/theme/js/site.js?v=202611201354"
         defer
         data-stork-name="sitesearch"
-        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202610241129"
+        data-stork-wasm="https://pythonscouts.com/theme/js/stork.wasm?v=202611201354"
         data-stork-index="https://pythonscouts.com/search-index.st">
     </script>
-
 </body>
 </html>

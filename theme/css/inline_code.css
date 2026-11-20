@@ -1,19 +1,21 @@
-/* Inline code - not inside code blocks */
+/* Inline code (not inside code blocks). Loaded on every page. */
 :not(pre) > code {
-    font-family: "Source Code Pro", monospace;
-    font-size: 0.9em;
-    background-color: var(--ps-gray-pale);
-    padding: 0.2em 0.4em;
-    border-radius: 6px;
-    color: var(--ps-gray);
+    padding: 0.125em 0.375em;
+    border-radius: calc(var(--ps-radius-sm) * 0.6);
+    background-color: var(--ps-inline-code-bg);
+    color: var(--ps-inline-code-text);
+    font-family: var(--ps-font-mono);
+    font-size: var(--ps-code-size);
+    font-weight: 500;
+    overflow-wrap: break-word;
 }
 
 /* Code blocks */
 pre code {
-    background: none;
     padding: 0;
     border: none;
-    color: inherit;
-    font-size: 0.95em;
     border-radius: 0;
+    background: none;
+    color: inherit;
+    font-size: inherit;
 }

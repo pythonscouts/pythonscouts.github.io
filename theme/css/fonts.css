@@ -1,0 +1,37 @@
+/*
+ * Self-hosted variable fonts (latin subset, SIL Open Font License 1.1).
+ * Plus Jakarta Sans (text, headings) and JetBrains Mono (code).
+ * License files live next to each font in theme/static/fonts/<family>/.
+ */
+
+@font-face {
+    font-family: "Plus Jakarta Sans Variable";
+    font-style: normal;
+    font-weight: 200 800;
+    font-display: swap;
+    src: url("../fonts/plus-jakarta-sans/plus-jakarta-sans-latin-wght-normal.woff2") format("woff2-variations");
+}
+
+@font-face {
+    font-family: "Plus Jakarta Sans Variable";
+    font-style: italic;
+    font-weight: 200 800;
+    font-display: swap;
+    src: url("../fonts/plus-jakarta-sans/plus-jakarta-sans-latin-wght-italic.woff2") format("woff2-variations");
+}
+
+@font-face {
+    font-family: "JetBrains Mono Variable";
+    font-style: normal;
+    font-weight: 100 800;
+    font-display: swap;
+    src: url("../fonts/jetbrains-mono/jetbrains-mono-latin-wght-normal.woff2") format("woff2-variations");
+}
+
+@font-face {
+    font-family: "JetBrains Mono Variable";
+    font-style: italic;
+    font-weight: 100 800;
+    font-display: swap;
+    src: url("../fonts/jetbrains-mono/jetbrains-mono-latin-wght-italic.woff2") format("woff2-variations");
+}

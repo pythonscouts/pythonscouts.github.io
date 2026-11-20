@@ -1,0 +1,338 @@
+/*
+ * Design tokens.
+ *
+ * Every visual value used by the theme comes from a --ps-* variable. The
+ * <html> element carries data-bs-theme (light | dark); the blocks below
+ * resolve the tokens for each theme. Components must only reference tokens,
+ * never raw colors.
+ *
+ * Sections:
+ *   1. Shared tokens
+ *   2. Shape and typography
+ *   3. Color per theme (WCAG AA: every text/background pair is >= 4.5:1)
+ *   4. Bootstrap 5.3 bridge (maps --ps-* onto --bs-* and component variables)
+ *
+ * Brand: Cielo. Light blue is primary; yellow (--ps-secondary) is reserved for
+ * small details. On light backgrounds yellow is decorative only (logo speed
+ * lines, bars, lines), never text; use --ps-secondary-text on
+ * --ps-secondary-soft for readable yellow content.
+ */
+
+/* 1. Shared tokens ------------------------------------------------------- */
+:root {
+    --ps-nav-height: 4.25rem;
+    --ps-container-max: 1200px;
+    --ps-measure: 44rem;
+    --ps-ease: cubic-bezier(0.2, 0, 0, 1);
+    --ps-duration: 180ms;
+    --ps-font-fallback-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --ps-font-fallback-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+/* 2. Shape and typography ---------------------------------------------- */
+html:root {
+    --ps-font-sans: "Plus Jakarta Sans Variable", var(--ps-font-fallback-sans);
+    --ps-font-heading: var(--ps-font-sans);
+    --ps-font-mono: "JetBrains Mono Variable", var(--ps-font-fallback-mono);
+    --ps-font-size-base: 1.0625rem;
+    --ps-font-size-prose: 1.125rem;
+    --ps-line-height-prose: 1.75;
+    --ps-code-size: 0.875em;
+    --ps-heading-weight: 750;
+    --ps-heading-tracking: -0.025em;
+    --ps-heading-line-height: 1.15;
+    --ps-display-size: clamp(2.25rem, 1.6rem + 2.6vw, 3.5rem);
+
+    --ps-radius-sm: 10px;
+    --ps-radius: 16px;
+    --ps-radius-lg: 24px;
+    --ps-radius-button: 999px;
+    --ps-radius-chip: 999px;
+
+    --ps-shadow-sm: 0 1px 2px rgba(var(--ps-shadow-rgb), calc(0.05 * var(--ps-shadow-k))),
+        0 2px 8px rgba(var(--ps-shadow-rgb), calc(0.04 * var(--ps-shadow-k)));
+    --ps-shadow: 0 2px 4px rgba(var(--ps-shadow-rgb), calc(0.04 * var(--ps-shadow-k))),
+        0 12px 32px -8px rgba(var(--ps-shadow-rgb), calc(0.12 * var(--ps-shadow-k)));
+    --ps-shadow-lg: 0 4px 8px rgba(var(--ps-shadow-rgb), calc(0.05 * var(--ps-shadow-k))),
+        0 24px 48px -12px rgba(var(--ps-shadow-rgb), calc(0.18 * var(--ps-shadow-k)));
+    --ps-nav-blur: 14px;
+}
+
+/* 3. Color per theme ----------------------------------------------------- */
+
+html:root {
+    --ps-bg: #f6fafd;
+    --ps-surface: #ffffff;
+    --ps-surface-2: #edf5fb;
+    --ps-surface-3: #e1eef8;
+    --ps-border: #d9e6f0;
+    --ps-border-strong: #bcd2e3;
+    --ps-card-border: #e6eff6;
+    --ps-text: #2b3b4c;
+    --ps-text-strong: #0b2337;
+    --ps-text-muted: #55687b;
+    --ps-primary: #0369a1;
+    --ps-primary-hover: #075985;
+    --ps-primary-soft: #e0f2fe;
+    --ps-primary-soft-border: #b9e2fb;
+    --ps-primary-text: #075985;
+    --ps-on-primary: #ffffff;
+    --ps-link: #0369a1;
+    --ps-link-hover: #0c4a6e;
+    --ps-accent: #38bdf8;
+    --ps-accent-soft: #e6f6fe;
+    --ps-secondary: #f5b800;
+    --ps-secondary-soft: #fff6d1;
+    --ps-secondary-text: #6e5000;
+    --ps-highlight: #f5b800;
+    --ps-highlight-soft: #fff6d1;
+    --ps-highlight-border: #f3d36b;
+    --ps-highlight-text: #6e5000;
+    --ps-code-bg: #f3f8fc;
+    --ps-code-border: #dbe7f1;
+    --ps-code-header-bg: #e8f2fa;
+    --ps-code-text: #1d2f40;
+    --ps-inline-code-bg: #e8f1f8;
+    --ps-inline-code-text: #0b3a5c;
+    --ps-syn-comment: #5d7184;
+    --ps-syn-keyword: #0369a1;
+    --ps-syn-builtin: #0e7490;
+    --ps-syn-string: #0f766e;
+    --ps-syn-number: #b4440b;
+    --ps-syn-function: #6d28d9;
+    --ps-syn-class: #6d28d9;
+    --ps-syn-decorator: #9a5b00;
+    --ps-syn-operator: #4b5c6d;
+    --ps-syn-punct: #4b5c6d;
+    --ps-syn-prompt: #5d7184;
+    --ps-syn-output: #2b3b4c;
+    --ps-syn-error: #b91c1c;
+    --ps-syn-inserted: #0f766e;
+    --ps-syn-deleted: #b91c1c;
+    --ps-syn-hll: #fdf3c4;
+    --ps-bg-rgb: 246, 250, 253;
+    --ps-text-rgb: 43, 59, 76;
+    --ps-text-strong-rgb: 11, 35, 55;
+    --ps-text-muted-rgb: 85, 104, 123;
+    --ps-primary-rgb: 3, 105, 161;
+    --ps-link-rgb: 3, 105, 161;
+    --ps-link-hover-rgb: 12, 74, 110;
+    --ps-accent-rgb: 56, 189, 248;
+    --ps-highlight-rgb: 245, 184, 0;
+    --ps-secondary-rgb: 245, 184, 0;
+    --ps-nav-bg: rgba(246, 250, 253, 0.82);
+    --ps-shadow-rgb: 11, 35, 55;
+    --ps-shadow-k: 1;
+    color-scheme: light;
+}
+
+html:root[data-bs-theme="dark"] {
+    --ps-bg: #0a1622;
+    --ps-surface: #0f1f2e;
+    --ps-surface-2: #13283a;
+    --ps-surface-3: #183248;
+    --ps-border: #1e3a52;
+    --ps-border-strong: #2a4d6b;
+    --ps-card-border: #1a3247;
+    --ps-text: #cfdde9;
+    --ps-text-strong: #f0f6fb;
+    --ps-text-muted: #93aabd;
+    --ps-primary: #38bdf8;
+    --ps-primary-hover: #7dd3fc;
+    --ps-primary-soft: #0c2b42;
+    --ps-primary-soft-border: #134a6e;
+    --ps-primary-text: #7dd3fc;
+    --ps-on-primary: #062437;
+    --ps-link: #7dd3fc;
+    --ps-link-hover: #bae6fd;
+    --ps-accent: #38bdf8;
+    --ps-accent-soft: #0c2b42;
+    --ps-secondary: #ffd43b;
+    --ps-secondary-soft: #2b2611;
+    --ps-secondary-text: #ffe17a;
+    --ps-highlight: #ffd43b;
+    --ps-highlight-soft: #2b2611;
+    --ps-highlight-border: #5a4c14;
+    --ps-highlight-text: #ffe17a;
+    --ps-code-bg: #0d1b28;
+    --ps-code-border: #1e3a52;
+    --ps-code-header-bg: #13283a;
+    --ps-code-text: #dbe7f1;
+    --ps-inline-code-bg: #15304a;
+    --ps-inline-code-text: #bae6fd;
+    --ps-syn-comment: #8aa2b6;
+    --ps-syn-keyword: #7dd3fc;
+    --ps-syn-builtin: #67e8f9;
+    --ps-syn-string: #5eead4;
+    --ps-syn-number: #fdba74;
+    --ps-syn-function: #c4b5fd;
+    --ps-syn-class: #c4b5fd;
+    --ps-syn-decorator: #fcd34d;
+    --ps-syn-operator: #b8c9d8;
+    --ps-syn-punct: #93aabd;
+    --ps-syn-prompt: #8aa2b6;
+    --ps-syn-output: #cfdde9;
+    --ps-syn-error: #fca5a5;
+    --ps-syn-inserted: #5eead4;
+    --ps-syn-deleted: #fca5a5;
+    --ps-syn-hll: #2a2a14;
+    --ps-bg-rgb: 10, 22, 34;
+    --ps-text-rgb: 207, 221, 233;
+    --ps-text-strong-rgb: 240, 246, 251;
+    --ps-text-muted-rgb: 147, 170, 189;
+    --ps-primary-rgb: 56, 189, 248;
+    --ps-link-rgb: 125, 211, 252;
+    --ps-link-hover-rgb: 186, 230, 253;
+    --ps-accent-rgb: 56, 189, 248;
+    --ps-highlight-rgb: 255, 212, 59;
+    --ps-secondary-rgb: 255, 212, 59;
+    --ps-nav-bg: rgba(10, 22, 34, 0.82);
+    --ps-shadow-rgb: 0, 0, 0;
+    --ps-shadow-k: 3;
+    color-scheme: dark;
+}
+
+/* 4. Bootstrap 5.3 bridge ------------------------------------------------ */
+/* Bootstrap declares its variables on :root and [data-bs-theme]; html:root is
+   more specific, so these always win in both themes. */
+html:root {
+    --bs-body-font-family: var(--ps-font-sans);
+    --bs-body-font-size: var(--ps-font-size-base);
+    --bs-body-line-height: 1.6;
+    --bs-body-color: var(--ps-text);
+    --bs-body-color-rgb: var(--ps-text-rgb);
+    --bs-body-bg: var(--ps-bg);
+    --bs-body-bg-rgb: var(--ps-bg-rgb);
+    --bs-emphasis-color: var(--ps-text-strong);
+    --bs-emphasis-color-rgb: var(--ps-text-strong-rgb);
+    --bs-secondary-color: var(--ps-text-muted);
+    --bs-secondary-color-rgb: var(--ps-text-muted-rgb);
+    --bs-secondary-bg: var(--ps-surface-2);
+    --bs-tertiary-color: var(--ps-text-muted);
+    --bs-tertiary-bg: var(--ps-surface-2);
+    --bs-heading-color: var(--ps-text-strong);
+    --bs-link-color: var(--ps-link);
+    --bs-link-color-rgb: var(--ps-link-rgb);
+    --bs-link-hover-color: var(--ps-link-hover);
+    --bs-link-hover-color-rgb: var(--ps-link-hover-rgb);
+    --bs-code-color: var(--ps-inline-code-text);
+    --bs-highlight-bg: var(--ps-highlight-soft);
+    --bs-highlight-color: var(--ps-highlight-text);
+    --bs-border-color: var(--ps-border);
+    --bs-border-color-translucent: var(--ps-border);
+    --bs-border-radius: var(--ps-radius-sm);
+    --bs-border-radius-sm: var(--ps-radius-sm);
+    --bs-border-radius-lg: var(--ps-radius);
+    --bs-border-radius-xl: var(--ps-radius-lg);
+    --bs-border-radius-xxl: var(--ps-radius-lg);
+    --bs-box-shadow-sm: var(--ps-shadow-sm);
+    --bs-box-shadow: var(--ps-shadow);
+    --bs-box-shadow-lg: var(--ps-shadow-lg);
+    --bs-focus-ring-color: rgba(var(--ps-primary-rgb), 0.35);
+
+    --bs-primary: var(--ps-primary);
+    --bs-primary-rgb: var(--ps-primary-rgb);
+    --bs-primary-bg-subtle: var(--ps-primary-soft);
+    --bs-primary-border-subtle: var(--ps-primary-soft-border);
+    --bs-primary-text-emphasis: var(--ps-primary-text);
+}
+
+.btn {
+    --bs-btn-font-family: var(--ps-font-sans);
+    --bs-btn-font-weight: 600;
+    --bs-btn-padding-x: 1.125rem;
+    --bs-btn-padding-y: 0.5rem;
+    --bs-btn-border-radius: var(--ps-radius-button);
+    --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--ps-primary-rgb), 0.3);
+    transition: background-color var(--ps-duration) var(--ps-ease),
+        border-color var(--ps-duration) var(--ps-ease),
+        color var(--ps-duration) var(--ps-ease);
+}
+
+.btn-sm {
+    --bs-btn-padding-x: 0.875rem;
+    --bs-btn-padding-y: 0.375rem;
+    --bs-btn-border-radius: var(--ps-radius-button);
+}
+
+.btn-lg {
+    --bs-btn-padding-x: 1.5rem;
+    --bs-btn-padding-y: 0.75rem;
+    --bs-btn-border-radius: var(--ps-radius-button);
+}
+
+.btn-primary {
+    --bs-btn-color: var(--ps-on-primary);
+    --bs-btn-bg: var(--ps-primary);
+    --bs-btn-border-color: var(--ps-primary);
+    --bs-btn-hover-color: var(--ps-on-primary);
+    --bs-btn-hover-bg: var(--ps-primary-hover);
+    --bs-btn-hover-border-color: var(--ps-primary-hover);
+    --bs-btn-focus-shadow-rgb: var(--ps-primary-rgb);
+    --bs-btn-active-color: var(--ps-on-primary);
+    --bs-btn-active-bg: var(--ps-primary-hover);
+    --bs-btn-active-border-color: var(--ps-primary-hover);
+    --bs-btn-disabled-color: var(--ps-on-primary);
+    --bs-btn-disabled-bg: var(--ps-primary);
+    --bs-btn-disabled-border-color: var(--ps-primary);
+}
+
+.btn-outline-primary {
+    --bs-btn-color: var(--ps-primary-text);
+    --bs-btn-border-color: var(--ps-primary-soft-border);
+    --bs-btn-hover-color: var(--ps-primary-text);
+    --bs-btn-hover-bg: var(--ps-primary-soft);
+    --bs-btn-hover-border-color: var(--ps-primary);
+    --bs-btn-focus-shadow-rgb: var(--ps-primary-rgb);
+    --bs-btn-active-color: var(--ps-primary-text);
+    --bs-btn-active-bg: var(--ps-primary-soft);
+    --bs-btn-active-border-color: var(--ps-primary);
+    --bs-btn-disabled-color: var(--ps-text-muted);
+    --bs-btn-disabled-border-color: var(--ps-border);
+}
+
+.text-bg-primary,
+.badge.bg-primary {
+    color: var(--ps-on-primary) !important;
+}
+
+.alert-info {
+    --bs-alert-color: var(--ps-primary-text);
+    --bs-alert-bg: var(--ps-primary-soft);
+    --bs-alert-border-color: var(--ps-primary-soft-border);
+    --bs-alert-link-color: var(--ps-primary-text);
+    border-radius: var(--ps-radius);
+}
+
+.card {
+    --bs-card-bg: var(--ps-surface);
+    --bs-card-color: var(--ps-text);
+    --bs-card-border-color: var(--ps-card-border);
+    --bs-card-border-radius: var(--ps-radius-lg);
+    --bs-card-inner-border-radius: calc(var(--ps-radius-lg) - 1px);
+}
+
+.form-control,
+.form-select {
+    background-color: var(--ps-surface);
+    border-color: var(--ps-border-strong);
+    border-radius: var(--ps-radius-sm);
+    color: var(--ps-text);
+}
+
+.form-control::placeholder {
+    color: var(--ps-text-muted);
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: var(--ps-surface);
+    border-color: var(--ps-primary);
+    box-shadow: 0 0 0 0.25rem rgba(var(--ps-primary-rgb), 0.2);
+    color: var(--ps-text);
+}
+
+.breadcrumb {
+    --bs-breadcrumb-divider-color: var(--ps-text-muted);
+    --bs-breadcrumb-item-active-color: var(--ps-text-muted);
+}
