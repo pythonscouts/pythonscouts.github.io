@@ -1,5 +1,241 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts - Guías</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/guias.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2025-10-05T22:55:00+02:00</updated><subtitle>Aprende Python en Español.</subtitle><entry><title>¿Cómo gestionar un proyecto Python con uv?</title><link href="https://pythonscouts.com/gestionar-proyecto-python-uv/" rel="alternate"/><published>2025-10-05T22:55:00+02:00</published><updated>2025-10-05T22:55:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-10-05:/gestionar-proyecto-python-uv/</id><summary type="html">&lt;p&gt;La herramienta de línea de comandos &lt;code&gt;uv&lt;/code&gt; te permite gestionar proyectos Python y sus dependencias de manera eficiente y precisa.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Esta herramienta ofrece una alternativa rápida y completa a otras como &lt;code&gt;pip&lt;/code&gt;, &lt;code&gt;pip-tools&lt;/code&gt; o &lt;code&gt;poetry&lt;/code&gt;.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Python Scouts - Guías</title><link href="https://pythonscouts.com/" rel="alternate"/><link href="https://pythonscouts.com/feeds/guias.atom.xml" rel="self"/><id>https://pythonscouts.com/</id><updated>2026-11-21T20:37:00+01:00</updated><subtitle>Aprende Python en Español.</subtitle><entry><title>Cómo crear programas asíncronos en Python: la forma correcta</title><link href="https://pythonscouts.com/programacion-async-python/" rel="alternate"/><published>2026-11-21T20:37:00+01:00</published><updated>2026-11-21T20:37:00+01:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2026-11-21:/programacion-async-python/</id><summary type="html">&lt;p&gt;La programación asíncrona permite suspender y reanudar tareas. En Python, se logra con &lt;code&gt;asyncio&lt;/code&gt; y las palabras clave &lt;code&gt;async&lt;/code&gt; y &lt;code&gt;await&lt;/code&gt;.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Una corrutina puede pausarse mientras espera una respuesta de red o de una base de datos y dejar que otra tarea avance en ese tiempo. Las palabras clave &lt;a href="/python-async/"&gt;&lt;code&gt;async&lt;/code&gt;&lt;/a&gt; y &lt;a href="/python-await/"&gt;&lt;code&gt;await&lt;/code&gt;&lt;/a&gt; son la base de este mecanismo en Python.&lt;/p&gt;
+&lt;p&gt;Parece simple, pero este conjunto de herramientas puede emplearse fácilmente de forma incorrecta. Una función definida con &lt;code&gt;async&lt;/code&gt; puede parecer asíncrona, y &lt;code&gt;asyncio.run()&lt;/code&gt; efectivamente inicia un bucle de eventos. Ninguno de esos hechos garantiza que el programa realice varias operaciones de forma concurrente.&lt;/p&gt;
+&lt;p&gt;En esta guía aprenderás qué hace falta para que las tareas cedan el control al bucle de eventos y compartan el tiempo de espera, logrando así concurrencia efectiva en Python.&lt;/p&gt;
+&lt;div class="code-link"&gt;&lt;p&gt;Puedes encontrar el código Python de este artículo en el &lt;a href="https://github.com/pythonscouts/ps-ejemplos/tree/main/Guías/programacion-async-python" target="_blank" rel="noopener noreferrer"&gt;repositorio de ejemplos de Python Scouts&lt;/a&gt;. ¡Te agradeceríamos mucho si nos dejas una estrella (⭐) en el repositorio!&lt;/p&gt;&lt;/div&gt;
+&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#una-funcion-asincrona-no-se-ejecuta-al-llamarla"&gt;Una función asíncrona no se ejecuta al llamarla&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#el-bucle-de-eventos-asincrono"&gt;El bucle de eventos asíncrono&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#la-espera-secuencial-no-es-concurrencia"&gt;La espera secuencial no es concurrencia&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#crear-tareas-realmente-concurrentes-el-ingrediente-que-falta"&gt;Crear tareas realmente concurrentes: el ingrediente que falta&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#uso-de-taskgroup"&gt;Uso de TaskGroup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#uso-de-gather"&gt;Uso de gather()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#uso-de-as_completed"&gt;Uso de as_completed()&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#las-llamadas-bloqueantes-impiden-la-concurrencia"&gt;Las llamadas bloqueantes impiden la concurrencia&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#conclusion"&gt;Conclusión&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="una-funcion-asincrona-no-se-ejecuta-al-llamarla"&gt;Una función asíncrona no se ejecuta al llamarla&lt;/h2&gt;
+&lt;p&gt;Definir una función con &lt;code&gt;async&lt;/code&gt; y &lt;a href="/python-def/"&gt;&lt;code&gt;def&lt;/code&gt;&lt;/a&gt; crea una función &lt;strong&gt;corrutina&lt;/strong&gt;. Llamar a esa función no ejecuta su cuerpo de inmediato. En su lugar, la llamada devuelve un objeto corrutina:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python REPL&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="k"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;fetch_data&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+&lt;span class="gp"&gt;... &lt;/span&gt;    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;42&lt;/span&gt;
+&lt;span class="gp"&gt;...&lt;/span&gt;
+
+&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="n"&gt;coroutine&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;fetch_data&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="n"&gt;coroutine&lt;/span&gt;
+&lt;span class="go"&gt;&amp;lt;coroutine object fetch_data at 0x...&amp;gt;&lt;/span&gt;
+&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="n"&gt;coroutine&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Al llamar a &lt;code&gt;fetch_data()&lt;/code&gt;, obtienes un objeto corrutina. El cuerpo de la función todavía no se ejecuta. En este ejemplo, &lt;code&gt;coroutine.close()&lt;/code&gt; cierra el objeto sin ejecutarlo para evitar una advertencia al salir del entorno interactivo de Python.&lt;/p&gt;
+&lt;p&gt;Para ejecutar una corrutina, debes &lt;em&gt;esperarla&lt;/em&gt; desde otra función asíncrona con &lt;code&gt;await&lt;/code&gt; o pasarla directamente a &lt;code&gt;asyncio.run()&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="el-bucle-de-eventos-asincrono"&gt;El bucle de eventos asíncrono&lt;/h2&gt;
+&lt;p&gt;La función &lt;code&gt;asyncio.run()&lt;/code&gt; es fundamental en la programación asíncrona en Python. Esta función inicia el &lt;strong&gt;bucle de eventos&lt;/strong&gt; y ejecuta la corrutina que se le pasa como argumento desde un contexto síncrono.&lt;/p&gt;
+&lt;p&gt;Como continuación del ejemplo anterior, puedes pasar la corrutina directamente a &lt;code&gt;asyncio.run()&lt;/code&gt; para ejecutarla y obtener el valor que devuelve:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python REPL&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;asyncio&lt;/span&gt;
+
+&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="k"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;fetch_data&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+&lt;span class="gp"&gt;... &lt;/span&gt;    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;42&lt;/span&gt;
+&lt;span class="gp"&gt;...&lt;/span&gt;
+
+&lt;span class="hll"&gt;&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="n"&gt;asyncio&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fetch_data&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;/span&gt;&lt;span class="go"&gt;42&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;La llamada a &lt;code&gt;asyncio.run()&lt;/code&gt; espera a que la corrutina termine y devuelve su resultado. En este caso, el resultado es &lt;code&gt;42&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;El bucle de eventos no es un motor mágico de ejecución paralela. Ejecuta una pieza de código Python a la vez. Cuando el bucle de eventos está ejecutando una corrutina, ninguna otra puede avanzar hasta que la actual se suspenda con &lt;code&gt;await&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;El proceso funciona de la siguiente manera:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;asyncio.run()&lt;/code&gt; pone en marcha el bucle de eventos y ejecuta la corrutina principal.&lt;/li&gt;
+&lt;li&gt;La corrutina principal llega a un &lt;code&gt;await&lt;/code&gt; y espera otra corrutina. Si esta termina enseguida, el programa continúa.&lt;/li&gt;
+&lt;li&gt;Si la corrutina tiene que esperar, por ejemplo, una respuesta de la red, en ese momento se pausa y el control vuelve al bucle de eventos.&lt;/li&gt;
+&lt;li&gt;El bucle de eventos recibe el control y puede avanzar otras corrutinas que estén listas para ejecutarse.&lt;/li&gt;
+&lt;li&gt;Cuando termina la espera de la corrutina pausada, la tarea continúa desde donde se pausó hasta completar su ejecución.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Al terminar la corrutina principal, &lt;code&gt;asyncio.run()&lt;/code&gt; devuelve su resultado y cierra el bucle de eventos. Si la corrutina no devuelve un valor, el resultado es &lt;a href="/python-none/"&gt;&lt;code&gt;None&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="la-espera-secuencial-no-es-concurrencia"&gt;La espera secuencial no es concurrencia&lt;/h2&gt;
+&lt;p&gt;Considera dos operaciones llamadas A y B que demoran un segundo en ejecutarse cada una:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - sequential_awaits.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;asyncio&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt;
+
+&lt;span class="k"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;delay&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;: iniciada&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;await&lt;/span&gt; &lt;span class="n"&gt;asyncio&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;delay&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;: finalizada&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;resultado de &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+
+&lt;span class="k"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;start&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;perf_counter&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="hll"&gt;    &lt;span class="k"&gt;await&lt;/span&gt; &lt;span class="n"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;A&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;span class="hll"&gt;    &lt;span class="k"&gt;await&lt;/span&gt; &lt;span class="n"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;B&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;    &lt;span class="n"&gt;sequential_time&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;perf_counter&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;start&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Tiempo secuencial: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;sequential_time&lt;/span&gt;&lt;span class="si"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;.1f&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt; segundos&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;asyncio&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;La operación B no comienza hasta que la operación A ha terminado. Puedes comprobarlo observando la salida del script y el tiempo total de ejecución con el siguiente comando:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Terminal&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;sequential_awaits.py
+&lt;span class="go"&gt;A: iniciada&lt;/span&gt;
+&lt;span class="go"&gt;A: finalizada&lt;/span&gt;
+&lt;span class="go"&gt;B: iniciada&lt;/span&gt;
+&lt;span class="go"&gt;B: finalizada&lt;/span&gt;
+&lt;span class="go"&gt;Tiempo secuencial: 2.0 segundos&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Tu programa tarda unos dos segundos en ejecutarse porque espera a que termine la primera operación antes de iniciar la segunda. Aunque &lt;code&gt;fetch()&lt;/code&gt; es asíncrona, las dos llamadas se ejecutan secuencialmente, por lo que tu código no es asíncrono sino síncrono.&lt;/p&gt;
+&lt;p&gt;La llamada &lt;code&gt;await fetch("A", 1)&lt;/code&gt; ejecuta la operación, mientras el programa espera a que termine para continuar con la siguiente línea de código, es decir, la llamada a &lt;code&gt;fetch("B", 1)&lt;/code&gt;. Por sí sola, una espera con &lt;code&gt;await&lt;/code&gt; no inicia otras operaciones al mismo tiempo.&lt;/p&gt;
+&lt;h2 id="crear-tareas-realmente-concurrentes-el-ingrediente-que-falta"&gt;Crear tareas realmente concurrentes: el ingrediente que falta&lt;/h2&gt;
+&lt;p&gt;Para que un programa en Python sea realmente concurrente, necesitas crear tareas que puedan ejecutarse de manera independiente, sin depender unas de otras. Estas tareas deben poder ejecutarse, pausarse y reanudarse, es decir, deben ser corrutinas.&lt;/p&gt;
+&lt;p&gt;Luego, necesitas crear y lanzar estas tareas de manera asíncrona. Esto lo puedes hacer con &lt;code&gt;asyncio.TaskGroup&lt;/code&gt;, &lt;code&gt;asyncio.gather()&lt;/code&gt; y &lt;code&gt;asyncio.as_completed()&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id="uso-de-taskgroup"&gt;Uso de &lt;code&gt;TaskGroup&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;La &lt;a href="/python-class/"&gt;clase&lt;/a&gt; &lt;code&gt;TaskGroup&lt;/code&gt; es un manejador de contexto que se usa para la ejecución concurrente de un grupo de tareas asíncronas dentro de un bloque &lt;code&gt;async with&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Un grupo de tareas hace dos cosas importantes:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Crea una tarea para cada corrutina que se pasa a &lt;code&gt;group.create_task()&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Espera a todas las tareas antes de salir del bloque &lt;code&gt;async with&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Observa un ejemplo de cómo usar &lt;code&gt;TaskGroup&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - taskgroup_example.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;asyncio&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt;
+
+&lt;span class="k"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;delay&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;: iniciada&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;await&lt;/span&gt; &lt;span class="n"&gt;asyncio&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;delay&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;: finalizada&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;resultado de &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+
+&lt;span class="k"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;start&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;perf_counter&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="hll"&gt;    &lt;span class="k"&gt;async&lt;/span&gt; &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;asyncio&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;TaskGroup&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;group&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;span class="hll"&gt;        &lt;span class="n"&gt;group&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;create_task&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;A&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;span class="hll"&gt;        &lt;span class="n"&gt;group&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;create_task&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;B&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/span&gt;
+    &lt;span class="n"&gt;elapsed&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;perf_counter&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;start&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Tiempo transcurrido: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;elapsed&lt;/span&gt;&lt;span class="si"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;.1f&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt; segundos&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;asyncio&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;En este ejemplo, ambas tareas, A y B, se inician casi al mismo tiempo y se ejecutan de manera concurrente dentro del bloque &lt;code&gt;async with&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Ejecuta el script con el siguiente comando para ver la ejecución concurrente de las tareas:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Terminal&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;taskgroup_example.py
+&lt;span class="go"&gt;A: iniciada&lt;/span&gt;
+&lt;span class="go"&gt;B: iniciada&lt;/span&gt;
+&lt;span class="go"&gt;A: finalizada&lt;/span&gt;
+&lt;span class="go"&gt;B: finalizada&lt;/span&gt;
+&lt;span class="go"&gt;Tiempo transcurrido: 1.0 segundos&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;El tiempo total es de aproximadamente un segundo porque las esperas de ambas tareas se solapan. Las tareas se ejecutan de forma concurrente dentro del grupo, que espera a que ambas finalicen antes de terminar y pasar a la siguiente instrucción del programa.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;TaskGroup&lt;/code&gt; ofrece un control más estructurado sobre el ciclo de vida de las tareas. Las agrupa y espera a que todas terminen. Si una tarea lanza una excepción distinta de &lt;code&gt;CancelledError&lt;/code&gt;, cancela las demás y luego propaga las &lt;a href="/python-except/"&gt;excepciones&lt;/a&gt; como un grupo. Por eso suele ser una buena opción para código nuevo cuando las tareas deben gestionarse como una unidad.&lt;/p&gt;
+&lt;h3 id="uso-de-gather"&gt;Uso de &lt;code&gt;gather()&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Para situaciones donde solo necesitas recolectar resultados de varias corrutinas, &lt;code&gt;gather()&lt;/code&gt; es la herramienta ideal:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - gather_example.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;asyncio&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt;
+
+&lt;span class="k"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;delay&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;: iniciada&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;await&lt;/span&gt; &lt;span class="n"&gt;asyncio&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;delay&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;: finalizada&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;resultado de &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+
+&lt;span class="k"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;start&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;perf_counter&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="hll"&gt;    &lt;span class="k"&gt;await&lt;/span&gt; &lt;span class="n"&gt;asyncio&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gather&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;span class="hll"&gt;        &lt;span class="n"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;A&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;span class="hll"&gt;        &lt;span class="n"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;B&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;span class="hll"&gt;    &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;
+    &lt;span class="n"&gt;elapsed&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;perf_counter&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;start&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Tiempo transcurrido: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;elapsed&lt;/span&gt;&lt;span class="si"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;.1f&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt; segundos&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;asyncio&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;En este ejemplo, &lt;code&gt;asyncio.gather()&lt;/code&gt; te permite ejecutar las tareas A y B de manera concurrente y esperar a que ambas finalicen antes de continuar.&lt;/p&gt;
+&lt;p&gt;Ejecuta el script con este comando:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Terminal&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;gather_example.py
+&lt;span class="go"&gt;A: iniciada&lt;/span&gt;
+&lt;span class="go"&gt;B: iniciada&lt;/span&gt;
+&lt;span class="go"&gt;A: finalizada&lt;/span&gt;
+&lt;span class="go"&gt;B: finalizada&lt;/span&gt;
+&lt;span class="go"&gt;Tiempo transcurrido: 1.0 segundos&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;En la práctica, &lt;code&gt;gather()&lt;/code&gt; es conveniente cuando tu objetivo principal es recolectar resultados. La función devuelve los resultados en el mismo orden en que se proporcionaron los objetos que admiten &lt;code&gt;await&lt;/code&gt;, aunque las tareas terminen en otro orden.&lt;/p&gt;
+&lt;p&gt;El patrón esencial es el mismo en &lt;code&gt;TaskGroup&lt;/code&gt; y &lt;code&gt;gather()&lt;/code&gt;: crear o recibir varias corrutinas, ponerlas en marcha como tareas y luego esperar a que todas terminen.&lt;/p&gt;
+&lt;h3 id="uso-de-as_completed"&gt;Uso de &lt;code&gt;as_completed()&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Mientras que &lt;code&gt;gather()&lt;/code&gt; devuelve los resultados en el orden de entrada, &lt;code&gt;as_completed()&lt;/code&gt; los devuelve en el orden en que terminan las tareas. Esto es útil cuando quieres manejar los resultados tan pronto como estén disponibles.&lt;/p&gt;
+&lt;p&gt;Considera el siguiente ejemplo:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - as_completed_example.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;asyncio&lt;/span&gt;
+
+&lt;span class="k"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;delay&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;: iniciada&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;await&lt;/span&gt; &lt;span class="n"&gt;asyncio&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;delay&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;resultado de &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+
+&lt;span class="k"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;tasks&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+        &lt;span class="n"&gt;asyncio&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;create_task&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;A&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)),&lt;/span&gt;
+        &lt;span class="n"&gt;asyncio&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;create_task&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;B&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)),&lt;/span&gt;
+        &lt;span class="n"&gt;asyncio&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;create_task&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;C&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)),&lt;/span&gt;
+    &lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="hll"&gt;    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;completed&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;asyncio&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;as_completed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tasks&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;span class="hll"&gt;        &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;await&lt;/span&gt; &lt;span class="n"&gt;completed&lt;/span&gt;
+&lt;/span&gt;&lt;span class="hll"&gt;        &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;
+&lt;span class="n"&gt;asyncio&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Ejecuta el script con este comando:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Terminal&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;as_completed_example.py
+&lt;span class="go"&gt;A: iniciada&lt;/span&gt;
+&lt;span class="go"&gt;B: iniciada&lt;/span&gt;
+&lt;span class="go"&gt;C: iniciada&lt;/span&gt;
+&lt;span class="go"&gt;resultado de B&lt;/span&gt;
+&lt;span class="go"&gt;resultado de C&lt;/span&gt;
+&lt;span class="go"&gt;resultado de A&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;En este ejemplo, la tarea B termina primero, luego la C y finalmente la A, y sus resultados se procesan en ese mismo orden.&lt;/p&gt;
+&lt;h2 id="las-llamadas-bloqueantes-impiden-la-concurrencia"&gt;Las llamadas bloqueantes impiden la concurrencia&lt;/h2&gt;
+&lt;p&gt;El código asíncrono también es afectado por el uso de operaciones &lt;strong&gt;bloqueantes&lt;/strong&gt;, que son aquellas que detienen el bucle de eventos hasta que se completan.&lt;/p&gt;
+&lt;p&gt;Declarar una función síncrona con &lt;code&gt;async def&lt;/code&gt; no hace que deje de ser bloqueante. Para eso, también se necesita un &lt;code&gt;await&lt;/code&gt; sobre una operación no bloqueante, como una solicitud a un servidor de red o el acceso a una base de datos.&lt;/p&gt;
+&lt;p&gt;Por ejemplo, &lt;code&gt;time.sleep()&lt;/code&gt; bloquea el bucle de eventos por completo pues no puede esperarse con &lt;code&gt;await&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Python - blocking_task.py&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;asyncio&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt;
+
+&lt;span class="k"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;bad_task&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;: iniciada&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="hll"&gt;    &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# Bloquea el bucle de eventos&lt;/span&gt;
+&lt;/span&gt;    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;: finalizada&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;start&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;perf_counter&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;async&lt;/span&gt; &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;asyncio&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;TaskGroup&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;group&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;group&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;create_task&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;bad_task&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;A&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+        &lt;span class="n"&gt;group&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;create_task&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;bad_task&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;B&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="n"&gt;elapsed&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;perf_counter&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;start&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Tiempo transcurrido: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;elapsed&lt;/span&gt;&lt;span class="si"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;.1f&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt; segundos&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;asyncio&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Ejecuta el script con el siguiente comando:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;span class="filename"&gt;Terminal&lt;/span&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;blocking_task.py
+&lt;span class="go"&gt;A: iniciada&lt;/span&gt;
+&lt;span class="go"&gt;A: finalizada&lt;/span&gt;
+&lt;span class="go"&gt;B: iniciada&lt;/span&gt;
+&lt;span class="go"&gt;B: finalizada&lt;/span&gt;
+&lt;span class="go"&gt;Tiempo transcurrido: 2.0 segundos&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Aunque ambas tareas están listas para ejecutarse, la tarea B no puede avanzar mientras la tarea A ejecuta la llamada bloqueante &lt;code&gt;time.sleep()&lt;/code&gt;. El bucle de eventos queda atascado esperando a que la llamada retorne, por lo que el programa tarda unos dos segundos en lugar de uno.&lt;/p&gt;
+&lt;h2 id="conclusion"&gt;Conclusión&lt;/h2&gt;
+&lt;p&gt;La programación asíncrona en Python no consiste en añadir &lt;code&gt;async&lt;/code&gt; a cada función ni en envolver un programa en &lt;code&gt;asyncio.run()&lt;/code&gt;. Esas características establecen la maquinaria, pero no producen concurrencia de forma automática.&lt;/p&gt;
+&lt;p&gt;El código asíncrono funciona como se pretende cuando:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Varias corrutinas se ponen en marcha como tareas.&lt;/li&gt;
+&lt;li&gt;Las tareas ceden el control al bucle de eventos en puntos &lt;code&gt;await&lt;/code&gt; no bloqueantes.&lt;/li&gt;
+&lt;li&gt;El bucle de eventos tiene otro trabajo listo para ejecutar cuando una tarea cede el control.&lt;/li&gt;
+&lt;li&gt;Las operaciones bloqueantes se mantienen fuera del bucle de eventos.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Una vez que estas reglas quedan claras, el comportamiento de &lt;code&gt;asyncio&lt;/code&gt; resulta mucho menos misterioso.&lt;/p&gt;
+&lt;div class="code-link"&gt;&lt;p&gt;Puedes encontrar el código Python de este artículo en el &lt;a href="https://github.com/pythonscouts/ps-ejemplos/tree/main/Guías/programacion-async-python" target="_blank" rel="noopener noreferrer"&gt;repositorio de ejemplos de Python Scouts&lt;/a&gt;. ¡Te agradeceríamos mucho si nos dejas una estrella (⭐) en el repositorio!&lt;/p&gt;&lt;/div&gt;</content><category term="Guías"/><category term="python"/></entry><entry><title>¿Cómo gestionar un proyecto Python con uv?</title><link href="https://pythonscouts.com/gestionar-proyecto-python-uv/" rel="alternate"/><published>2025-10-05T22:55:00+02:00</published><updated>2025-10-05T22:55:00+02:00</updated><author><name>Leodanis Pozo Ramos</name></author><id>tag:pythonscouts.com,2025-10-05:/gestionar-proyecto-python-uv/</id><summary type="html">&lt;p&gt;La herramienta de línea de comandos &lt;code&gt;uv&lt;/code&gt; te permite gestionar proyectos Python y sus dependencias de manera eficiente y precisa.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Esta herramienta ofrece una alternativa rápida y completa a otras como &lt;code&gt;pip&lt;/code&gt;, &lt;code&gt;pip-tools&lt;/code&gt; o &lt;code&gt;poetry&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Con &lt;code&gt;uv&lt;/code&gt; puedes instalar diferentes versiones de Python, crear proyectos desde cero, gestionar &lt;a href="/entorno-virtual-python/"&gt;entornos virtuales&lt;/a&gt;, añadir y remover dependencias garantizando reproducibilidad, e incluso construir y publicar tus proyectos en PyPI. Todo desde un único flujo de trabajo.&lt;/p&gt;
 &lt;p&gt;En esta guía aprenderás lo básico de cómo usar &lt;code&gt;uv&lt;/code&gt; para ejecutar las tareas más comunes de gestión de proyectos Python, desde la instalación hasta la distribución.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Contenidos&lt;/span&gt;&lt;ul&gt;
